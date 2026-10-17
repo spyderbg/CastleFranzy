@@ -15,6 +15,7 @@ endif()
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CASTLE_ASSET_DIR "${CMAKE_CURRENT_SOURCE_DIR}/Build/bin" CACHE PATH "Game resource directory")
 
 find_package(OpenGL REQUIRED)
 find_package(OpenAL REQUIRED)
@@ -23,6 +24,9 @@ find_library(XXF86VM_LIBRARY Xxf86vm REQUIRED)
 
 set(IRR_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/Lib/Irrlicht")
 set(IRR_SRC "${IRR_ROOT}/source/Irrlicht")
+add_executable(PvrDecode EXCLUDE_FROM_ALL tools/linux/pvr_decode.cpp "${IRR_SRC}/PVRT/PVRTDecompress.cpp")
+target_include_directories(PvrDecode PRIVATE "${IRR_ROOT}/include" "${IRR_SRC}")
+set_target_properties(PvrDecode PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 file(GLOB ENGINE_SOURCES CONFIGURE_DEPENDS "${IRR_SRC}/*.cpp")
 file(GLOB ZLIB_SOURCES CONFIGURE_DEPENDS "${IRR_SRC}/zlib/*.c")
 file(GLOB PNG_SOURCES CONFIGURE_DEPENDS "${IRR_SRC}/libpng/png*.c")
@@ -55,7 +59,7 @@ target_compile_definitions(FortressDefender PRIVATE OS_LINUX)
 target_link_libraries(FortressDefender PRIVATE SoundLib)
 set_target_properties(FortressDefender PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 # The default asset location works regardless of the process working directory.
-target_compile_definitions(FortressDefender PRIVATE CASTLE_ASSET_DIR="${CMAKE_CURRENT_SOURCE_DIR}/Build/bin")
+target_compile_definitions(FortressDefender PRIVATE CASTLE_ASSET_DIR="${CASTLE_ASSET_DIR}")
 if(EXISTS "${CASTLE_DEPS}/usr/lib/i386-linux-gnu/dri")
     target_compile_definitions(FortressDefender PRIVATE
         CASTLE_LOCAL_DRI_DIR="${CASTLE_DEPS}/usr/lib/i386-linux-gnu/dri"

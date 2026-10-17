@@ -39,7 +39,42 @@ ready to use; the old Windows/Java asset tools are not needed.
    Save data goes to $XDG_DATA_HOME/castle-frenzy/ or, by default,
    ~/.local/share/castle-frenzy/.
 
-3. VS Code:
+3. Full Linux rebuild and resource format:
+
+   ./rebuild_Linux.sh
+
+   RESOURCE_TEXTURE_FORMAT at the beginning of rebuild_Linux.sh selects "png"
+   (default) or "pvr". It can also be overridden for one invocation:
+
+   RESOURCE_TEXTURE_FORMAT=pvr ./rebuild_Linux.sh
+
+   PNG mode requires Pillow (sudo apt install python3-pil). It prefers matching
+   PNGs in Data/Sprites, Data/Fonts, Data/Scenes and Data/Effects; otherwise it
+   decodes exported PVR textures or converts TGA/BMP images. PNG atlases must
+   retain the dimensions used by their exported .bsprite files. The PNG output
+   contains no PVR/TGA/BMP textures. Existing model/effect texture references
+   resolve to the corresponding PNGs at runtime. PVR mode retains the original
+   PVR textures and TGA fallbacks, as in the Windows build.
+
+   The script reads the version from config.bat, prepares resources, performs a
+   clean Release build, and creates build/packages/CastleFrenzy_Linux_v*_*.zip.
+   Use --debug for Debug, --incremental to skip cleaning, --no-package to skip
+   the ZIP, or --resources-only to update assets without compiling the game.
+   Each preset's generated assets live in build/linux-{release,debug}/assets;
+   CMake configures that build's executable to find them automatically.
+   Build/bin and the source images are preserved. Logs are in the preset's
+   build directory as rebuild.log. Run the ZIP's run.sh after extracting it.
+
+   The resource step reuses checked-in .bsprite/.bdae exports, string tables,
+   generated sprite/string IDs, and configuration XML. It rebuilds texture
+   files and WAV sound packs natively. Changes to .sprite/.dae or spreadsheet
+   layouts still require the legacy exporters and matching generated headers;
+   this script does not run AuroraGT or ColladaConverter through Wine.
+   Packages built with the rootless .deps setup retain absolute dependency
+   paths to this project. Use system-installed dependencies when building
+   packages for other machines.
+
+4. VS Code:
 
    Open this project root and install the recommended Microsoft C/C++ and
    CMake Tools extensions. Select "Castle Frenzy: Ubuntu Debug" in Run and

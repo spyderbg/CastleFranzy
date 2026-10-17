@@ -163,6 +163,10 @@ bool ASprite::Load( const char *name )
 	if (!LoadSprite(fileName.c_str()))
 		return false;
 
+	fileName = file_base + ".png";
+	if (__IRR_FILE_SYSTEM()->existFile(fileName.c_str()))
+		return LoadTexture(fileName.c_str());
+
 	fileName = file_base + ".pvr";
 	if (__IRR_FILE_SYSTEM()->existFile(fileName.c_str()))
 		return LoadTexture(fileName.c_str());
