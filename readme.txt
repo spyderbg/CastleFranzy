@@ -33,6 +33,9 @@ ready to use; the old Windows/Java asset tools are not needed.
    Launch from a graphical desktop with DISPLAY available (X11 or XWayland).
    The executable locates Build/bin automatically, independent of the current
    working directory. Override with --assets /path/to/assets if needed.
+   The window starts at 960x640 (2x the original 480x320 layout). Menus,
+   fonts, gameplay and mouse input scale together; no asset rebuild is needed.
+   Use --scale 1 for 480x320, --scale 3 for 1440x960, or --scale 4 for 1920x1280.
    Save data goes to $XDG_DATA_HOME/castle-frenzy/ or, by default,
    ~/.local/share/castle-frenzy/.
 

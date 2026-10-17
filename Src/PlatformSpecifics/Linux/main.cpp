@@ -2,6 +2,7 @@
 #include "Core/irrlicht.h"
 #include "IO/TouchScreen/TouchPad.h"
 #include "PlatformSpecifics/Win32/CImageLoaderPVR.h"
+#include "CCommonGLDriver.h"
 #include <cstdlib>
 #include <cstring>
 #include <string>
@@ -12,7 +13,10 @@ extern "C" void startGLLive() {}
 class DesktopInput : public IEventReceiver
 {
     bool down[2] = {false, false};
+    video::CCommonGLDriver* driver;
 public:
+    explicit DesktopInput(video::CCommonGLDriver* videoDriver) : driver(videoDriver) {}
+
     bool OnEvent(const SEvent& event)
     {
         if (event.EventType == EET_KEY_INPUT_EVENT && !event.KeyInput.PressedDown)
@@ -22,7 +26,11 @@ public:
             if (event.KeyInput.Key == KEY_F3) os::Timer::setSpeed(os::Timer::getSpeed() * 2.0f);
         }
         if (event.EventType != EET_MOUSE_INPUT_EVENT) return false;
-        const int x = event.MouseInput.X, y = event.MouseInput.Y;
+        // Touch areas and 3D picking use the original game coordinates.
+        const dimension2d<s32>& window = driver->getPhysicalScreenSize();
+        const dimension2d<s32>& game = driver->getScreenSize();
+        const int x = event.MouseInput.X * game.Width / window.Width;
+        const int y = event.MouseInput.Y * game.Height / window.Height;
         switch (event.MouseInput.Event)
         {
         case EMIE_LMOUSE_PRESSED_DOWN: down[0] = true; CTouchPad::EventTouchDown(0,x,y); break;
@@ -59,11 +67,15 @@ int main(int argc, char** argv)
 #endif
     const char* assets = CASTLE_ASSET_DIR;
     int frames = 0;
+    int scale = 2;
     for (int i=1; i<argc; ++i)
     {
         if (!strcmp(argv[i], "--assets") && i+1<argc) assets = argv[++i];
         else if (!strcmp(argv[i], "--frames") && i+1<argc) frames = atoi(argv[++i]);
-        else { fprintf(stderr, "Usage: %s [--assets directory] [--frames count]\n", argv[0]); return 2; }
+        else if (!strcmp(argv[i], "--scale") && i+1<argc &&
+                 argv[i+1][0] >= '1' && argv[i+1][0] <= '4' && argv[i+1][1] == '\0')
+            scale = argv[++i][0] - '0';
+        else { fprintf(stderr, "Usage: %s [--assets directory] [--frames count] [--scale 1|2|3|4]\n", argv[0]); return 2; }
     }
     if (chdir(assets) != 0) { perror(assets); return 1; }
     const char* dataHome = getenv("XDG_DATA_HOME");
@@ -73,8 +85,11 @@ int main(int argc, char** argv)
     save += "/castle-frenzy/";
     for (size_t i=1; i<save.size(); ++i) if (save[i]=='/') mkdir(save.substr(0,i).c_str(),0700);
 
-    IrrlichtDevice* device = createDevice(video::EDT_OPENGL, dimension2d<s32>(480,320),32,false,false,false,0);
+    const dimension2d<s32> gameSize(OS_SCREEN_W, OS_SCREEN_H);
+    IrrlichtDevice* device = createDevice(video::EDT_OPENGL, gameSize * scale,32,false,false,false,0);
     if (!device) { fprintf(stderr,"Could not create an OpenGL window. Check DISPLAY and graphics drivers.\n"); return 1; }
+    video::CCommonGLDriver* driver = static_cast<video::CCommonGLDriver*>(device->getVideoDriver());
+    driver->setLogicalScreenSize(gameSize);
     device->setWindowCaption(L"Castle Frenzy - Ubuntu");
     device->setResizeAble(false);
     CImageLoaderPVR* loader = new CImageLoaderPVR();
@@ -83,7 +98,7 @@ int main(int argc, char** argv)
     Application* app = __APP();
     app->setFilePaths("", "./", save.c_str());
     app->InitLinux(device);
-    DesktopInput input;
+    DesktopInput input(driver);
     app->RegisterForIrrlichtEvents(&input);
     int count = 0;
     while (device->run())

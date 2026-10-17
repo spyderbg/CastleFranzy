@@ -3408,20 +3408,44 @@ CCommonGLDriver::setAmbientLight(const SColorf& color)
 }
 
 
+void
+CCommonGLDriver::setLogicalScreenSize(const core::dimension2d<s32>& size)
+{
+	flush();
+	LogicalScreenSize = size.Width > 0 && size.Height > 0 ? size : core::dimension2d<s32>();
+	setViewPort(core::rect<s32>(core::position2d<s32>(0,0), getScreenSize()));
+}
+
+const core::dimension2d<s32>&
+CCommonGLDriver::getScreenSize() const
+{
+	return LogicalScreenSize.Width > 0 ? LogicalScreenSize : ScreenSize;
+}
+
+
 // this code was sent in by Oliver Klems, thank you! (I modified the glViewport
 // method just a bit.
 void
 CCommonGLDriver::setViewPort(const core::rect<s32>& area)
 {
+	flush();
 	core::rect<s32> vp = area;
-	core::rect<s32> rendert(0,0, getCurrentRenderTargetSize().Width, getCurrentRenderTargetSize().Height);
+	const core::dimension2d<s32>& logical = getCurrentRenderTargetSize();
+	core::rect<s32> rendert(0,0, logical.Width, logical.Height);
 	vp.clipAgainst(rendert);
 
+	// Render targets retain their own pixel coordinates. Only the window scales.
+	const core::dimension2d<s32>& physical = RenderTargetTexture ? logical : ScreenSize;
 	if (vp.getHeight()>0 && vp.getWidth()>0)
-		glViewport(vp.UpperLeftCorner.X,
-				getCurrentRenderTargetSize().Height - vp.UpperLeftCorner.Y - vp.getHeight(),
-				vp.getWidth(), vp.getHeight());
+	{
+		const s32 left = vp.UpperLeftCorner.X * physical.Width / logical.Width;
+		const s32 right = vp.LowerRightCorner.X * physical.Width / logical.Width;
+		const s32 top = vp.UpperLeftCorner.Y * physical.Height / logical.Height;
+		const s32 bottom = vp.LowerRightCorner.Y * physical.Height / logical.Height;
+		glViewport(left, physical.Height - bottom, right - left, bottom - top);
+	}
 
+	// Projection, hit testing and camera shake continue to use game coordinates.
 	ViewPort = vp;
 	testGlErrorParanoid();
 }
@@ -3501,7 +3525,7 @@ void
 CCommonGLDriver::OnResize(const core::dimension2d<s32>& size)
 {
 	CNullDriver::OnResize(size);
-	glViewport(0, 0, size.Width, size.Height);
+	setViewPort(core::rect<s32>(core::position2d<s32>(0,0), getScreenSize()));
 }
 
 
@@ -3649,7 +3673,7 @@ const core::dimension2d<s32>&
 CCommonGLDriver::getCurrentRenderTargetSize() const
 {
 	if ( CurrentRendertargetSize.Width == 0 )
-		return ScreenSize;
+		return getScreenSize();
 	else
 		return CurrentRendertargetSize;
 }
@@ -3864,6 +3888,15 @@ CCommonGLDriver::setScissor(const core::rect<s32>& scissorRect)
 	else
 	{
 		y = rh - y - h;
+	}
+	if (!RenderTargetTexture)
+	{
+		const s32 right = (x + w) * ScreenSize.Width / rw;
+		const s32 top = (y + h) * ScreenSize.Height / rh;
+		x = x * ScreenSize.Width / rw;
+		y = y * ScreenSize.Height / rh;
+		w = right - x;
+		h = top - y;
 	}
 	glScissor(x, y, w, h);
 	testGlErrorParanoid();

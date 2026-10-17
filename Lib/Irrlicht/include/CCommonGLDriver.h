@@ -290,6 +290,12 @@ public:
 								   video::SColor leftDownEdge = video::SColor(0,0,0,0),
 								   video::SColor rightDownEdge = video::SColor(0,0,0,0)) = 0;
 
+	//! Keep game coordinates independent of the physical window resolution.
+	//! An empty size restores one logical unit per window pixel.
+	void setLogicalScreenSize(const core::dimension2d<s32>& size);
+	virtual const core::dimension2d<s32>& getScreenSize() const;
+	const core::dimension2d<s32>& getPhysicalScreenSize() const { return ScreenSize; }
+
 	//! sets a viewport
 	virtual void setViewPort(const core::rect<s32>& area);
 
@@ -683,6 +689,7 @@ protected:
 	core::array<bool> UserClipPlaneEnabled;
 
 	core::dimension2d<s32> CurrentRendertargetSize;
+	core::dimension2d<s32> LogicalScreenSize;
 
 	core::stringc vendorName;
 
