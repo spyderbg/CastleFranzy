@@ -1,0 +1,10 @@
+// 0.0.0.324
+#define VER_MAJOR 0
+#define VER_MINOR 0
+#define VER_BUILD 0
+#define VER_REVISION 324
+
+#define FILEVER 0,0,0,324
+#define PRODUCTVER 0,0,0,324
+#define STRFILEVER "0,0,0,324"
+#define STRPRODUCTVER "0,0,0,324"

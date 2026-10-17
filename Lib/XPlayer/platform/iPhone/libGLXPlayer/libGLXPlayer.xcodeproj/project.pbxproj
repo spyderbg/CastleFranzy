@@ -1,0 +1,1782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B0D5B361039022D00BC1A70 /* GLXPlayerUserFriend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B351039022D00BC1A70 /* GLXPlayerUserFriend.cpp */; };
+		8B0D5B381039024300BC1A70 /* GLXPlayerUserFriend.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5B371039024300BC1A70 /* GLXPlayerUserFriend.h */; };
+		8B0D5B85103902E700BC1A70 /* adhoc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B3B103902E700BC1A70 /* adhoc.cpp */; };
+		8B0D5B86103902E700BC1A70 /* annotations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B3C103902E700BC1A70 /* annotations.cpp */; };
+		8B0D5B87103902E700BC1A70 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B3D103902E700BC1A70 /* base64.cpp */; };
+		8B0D5B88103902E700BC1A70 /* bookmarkstorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B3E103902E700BC1A70 /* bookmarkstorage.cpp */; };
+		8B0D5B89103902E700BC1A70 /* chatstatefilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B3F103902E700BC1A70 /* chatstatefilter.cpp */; };
+		8B0D5B8A103902E700BC1A70 /* client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B40103902E700BC1A70 /* client.cpp */; };
+		8B0D5B8B103902E700BC1A70 /* clientbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B41103902E700BC1A70 /* clientbase.cpp */; };
+		8B0D5B8C103902E700BC1A70 /* component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B42103902E700BC1A70 /* component.cpp */; };
+		8B0D5B8D103902E700BC1A70 /* compressionzlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B43103902E700BC1A70 /* compressionzlib.cpp */; };
+		8B0D5B8E103902E700BC1A70 /* connectionhttpproxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B44103902E700BC1A70 /* connectionhttpproxy.cpp */; };
+		8B0D5B8F103902E700BC1A70 /* connectionsocks5proxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B45103902E700BC1A70 /* connectionsocks5proxy.cpp */; };
+		8B0D5B90103902E700BC1A70 /* connectiontcpbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B46103902E700BC1A70 /* connectiontcpbase.cpp */; };
+		8B0D5B91103902E700BC1A70 /* connectiontcpclient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B47103902E700BC1A70 /* connectiontcpclient.cpp */; };
+		8B0D5B92103902E700BC1A70 /* connectiontcpserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B48103902E700BC1A70 /* connectiontcpserver.cpp */; };
+		8B0D5B93103902E700BC1A70 /* dataform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B49103902E700BC1A70 /* dataform.cpp */; };
+		8B0D5B94103902E700BC1A70 /* dataformbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B4A103902E700BC1A70 /* dataformbase.cpp */; };
+		8B0D5B95103902E700BC1A70 /* dataformfield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B4B103902E700BC1A70 /* dataformfield.cpp */; };
+		8B0D5B96103902E700BC1A70 /* dataformitem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B4C103902E700BC1A70 /* dataformitem.cpp */; };
+		8B0D5B97103902E700BC1A70 /* dataformreported.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B4D103902E700BC1A70 /* dataformreported.cpp */; };
+		8B0D5B98103902E700BC1A70 /* delayeddelivery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B4E103902E700BC1A70 /* delayeddelivery.cpp */; };
+		8B0D5B99103902E700BC1A70 /* disco.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B4F103902E700BC1A70 /* disco.cpp */; };
+		8B0D5B9A103902E700BC1A70 /* dns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B50103902E700BC1A70 /* dns.cpp */; };
+		8B0D5B9B103902E700BC1A70 /* flexoff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B51103902E700BC1A70 /* flexoff.cpp */; };
+		8B0D5B9C103902E700BC1A70 /* gloox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B52103902E700BC1A70 /* gloox.cpp */; };
+		8B0D5B9D103902E700BC1A70 /* gpgencrypted.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B53103902E700BC1A70 /* gpgencrypted.cpp */; };
+		8B0D5B9E103902E700BC1A70 /* gpgsigned.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B54103902E700BC1A70 /* gpgsigned.cpp */; };
+		8B0D5B9F103902E700BC1A70 /* inbandbytestream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B55103902E700BC1A70 /* inbandbytestream.cpp */; };
+		8B0D5BA0103902E700BC1A70 /* inbandbytestreammanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B56103902E700BC1A70 /* inbandbytestreammanager.cpp */; };
+		8B0D5BA1103902E700BC1A70 /* instantmucroom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B57103902E700BC1A70 /* instantmucroom.cpp */; };
+		8B0D5BA2103902E700BC1A70 /* jid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B58103902E700BC1A70 /* jid.cpp */; };
+		8B0D5BA3103902E700BC1A70 /* lastactivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B59103902E700BC1A70 /* lastactivity.cpp */; };
+		8B0D5BA4103902E700BC1A70 /* logsink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B5A103902E700BC1A70 /* logsink.cpp */; };
+		8B0D5BA5103902E700BC1A70 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B5D103902E700BC1A70 /* md5.cpp */; };
+		8B0D5BA6103902E700BC1A70 /* messageeventfilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B5E103902E700BC1A70 /* messageeventfilter.cpp */; };
+		8B0D5BA7103902E700BC1A70 /* messagefilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B5F103902E700BC1A70 /* messagefilter.cpp */; };
+		8B0D5BA8103902E700BC1A70 /* messagesession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B60103902E700BC1A70 /* messagesession.cpp */; };
+		8B0D5BA9103902E700BC1A70 /* mucmessagesession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B61103902E700BC1A70 /* mucmessagesession.cpp */; };
+		8B0D5BAA103902E700BC1A70 /* mucroom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B62103902E700BC1A70 /* mucroom.cpp */; };
+		8B0D5BAB103902E700BC1A70 /* mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B63103902E700BC1A70 /* mutex.cpp */; };
+		8B0D5BAC103902E700BC1A70 /* nonsaslauth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B64103902E700BC1A70 /* nonsaslauth.cpp */; };
+		8B0D5BAD103902E700BC1A70 /* oob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B65103902E700BC1A70 /* oob.cpp */; };
+		8B0D5BAE103902E700BC1A70 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B66103902E700BC1A70 /* parser.cpp */; };
+		8B0D5BAF103902E700BC1A70 /* prep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B67103902E700BC1A70 /* prep.cpp */; };
+		8B0D5BB0103902E700BC1A70 /* privacyitem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B68103902E700BC1A70 /* privacyitem.cpp */; };
+		8B0D5BB1103902E700BC1A70 /* privacymanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B69103902E700BC1A70 /* privacymanager.cpp */; };
+		8B0D5BB2103902E700BC1A70 /* privatexml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B6A103902E700BC1A70 /* privatexml.cpp */; };
+		8B0D5BB3103902E700BC1A70 /* registration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B6B103902E700BC1A70 /* registration.cpp */; };
+		8B0D5BB4103902E700BC1A70 /* rosteritem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B6C103902E700BC1A70 /* rosteritem.cpp */; };
+		8B0D5BB5103902E700BC1A70 /* rostermanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B6D103902E700BC1A70 /* rostermanager.cpp */; };
+		8B0D5BB6103902E700BC1A70 /* search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B6E103902E700BC1A70 /* search.cpp */; };
+		8B0D5BB7103902E700BC1A70 /* sha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B6F103902E700BC1A70 /* sha.cpp */; };
+		8B0D5BB8103902E700BC1A70 /* simanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B70103902E700BC1A70 /* simanager.cpp */; };
+		8B0D5BB9103902E700BC1A70 /* siprofileft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B71103902E700BC1A70 /* siprofileft.cpp */; };
+		8B0D5BBA103902E700BC1A70 /* socks5bytestream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B72103902E700BC1A70 /* socks5bytestream.cpp */; };
+		8B0D5BBB103902E700BC1A70 /* socks5bytestreammanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B73103902E700BC1A70 /* socks5bytestreammanager.cpp */; };
+		8B0D5BBC103902E700BC1A70 /* socks5bytestreamserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B74103902E700BC1A70 /* socks5bytestreamserver.cpp */; };
+		8B0D5BBD103902E700BC1A70 /* stanza.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B75103902E700BC1A70 /* stanza.cpp */; };
+		8B0D5BBE103902E700BC1A70 /* stanzaextensionfactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B76103902E700BC1A70 /* stanzaextensionfactory.cpp */; };
+		8B0D5BBF103902E700BC1A70 /* tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B77103902E700BC1A70 /* tag.cpp */; };
+		8B0D5BC0103902E700BC1A70 /* tlsdefault.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B78103902E700BC1A70 /* tlsdefault.cpp */; };
+		8B0D5BC1103902E700BC1A70 /* tlsgnutlsbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B79103902E700BC1A70 /* tlsgnutlsbase.cpp */; };
+		8B0D5BC2103902E700BC1A70 /* tlsgnutlsclient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B7A103902E700BC1A70 /* tlsgnutlsclient.cpp */; };
+		8B0D5BC3103902E700BC1A70 /* tlsgnutlsclientanon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B7B103902E700BC1A70 /* tlsgnutlsclientanon.cpp */; };
+		8B0D5BC4103902E700BC1A70 /* tlsgnutlsserveranon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B7C103902E700BC1A70 /* tlsgnutlsserveranon.cpp */; };
+		8B0D5BC5103902E700BC1A70 /* tlsopenssl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B7D103902E700BC1A70 /* tlsopenssl.cpp */; };
+		8B0D5BC6103902E700BC1A70 /* tlsschannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B7E103902E700BC1A70 /* tlsschannel.cpp */; };
+		8B0D5BC7103902E700BC1A70 /* uniquemucroom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B7F103902E700BC1A70 /* uniquemucroom.cpp */; };
+		8B0D5BC8103902E700BC1A70 /* vcard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B80103902E700BC1A70 /* vcard.cpp */; };
+		8B0D5BC9103902E700BC1A70 /* vcardmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B81103902E700BC1A70 /* vcardmanager.cpp */; };
+		8B0D5BCA103902E700BC1A70 /* vcardupdate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B82103902E700BC1A70 /* vcardupdate.cpp */; };
+		8B0D5BCB103902E700BC1A70 /* xdelayeddelivery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5B84103902E700BC1A70 /* xdelayeddelivery.cpp */; };
+		8B0D5C441039030A00BC1A70 /* adhoc.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BCC1039030A00BC1A70 /* adhoc.h */; };
+		8B0D5C451039030A00BC1A70 /* adhoccommandprovider.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BCD1039030A00BC1A70 /* adhoccommandprovider.h */; };
+		8B0D5C461039030A00BC1A70 /* adhochandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BCE1039030A00BC1A70 /* adhochandler.h */; };
+		8B0D5C471039030A00BC1A70 /* annotations.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BCF1039030A00BC1A70 /* annotations.h */; };
+		8B0D5C481039030A00BC1A70 /* annotationshandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BD01039030A00BC1A70 /* annotationshandler.h */; };
+		8B0D5C491039030A00BC1A70 /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BD11039030A00BC1A70 /* base64.h */; };
+		8B0D5C4A1039030A00BC1A70 /* bookmarkhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BD21039030A00BC1A70 /* bookmarkhandler.h */; };
+		8B0D5C4B1039030A00BC1A70 /* bookmarkstorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BD31039030A00BC1A70 /* bookmarkstorage.h */; };
+		8B0D5C4C1039030A00BC1A70 /* chatstatefilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BD41039030A00BC1A70 /* chatstatefilter.h */; };
+		8B0D5C4D1039030A00BC1A70 /* chatstatehandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BD51039030A00BC1A70 /* chatstatehandler.h */; };
+		8B0D5C4E1039030A00BC1A70 /* client.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BD61039030A00BC1A70 /* client.h */; };
+		8B0D5C4F1039030A00BC1A70 /* clientbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BD71039030A00BC1A70 /* clientbase.h */; };
+		8B0D5C501039030A00BC1A70 /* component.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BD81039030A00BC1A70 /* component.h */; };
+		8B0D5C511039030A00BC1A70 /* compressionbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BD91039030A00BC1A70 /* compressionbase.h */; };
+		8B0D5C521039030A00BC1A70 /* compressiondatahandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BDA1039030A00BC1A70 /* compressiondatahandler.h */; };
+		8B0D5C531039030A00BC1A70 /* compressionzlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BDB1039030A00BC1A70 /* compressionzlib.h */; };
+		8B0D5C541039030A00BC1A70 /* connectionbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BDC1039030A00BC1A70 /* connectionbase.h */; };
+		8B0D5C551039030A00BC1A70 /* connectiondatahandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BDD1039030A00BC1A70 /* connectiondatahandler.h */; };
+		8B0D5C561039030A00BC1A70 /* connectionhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BDE1039030A00BC1A70 /* connectionhandler.h */; };
+		8B0D5C571039030A00BC1A70 /* connectionhttpproxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BDF1039030A00BC1A70 /* connectionhttpproxy.h */; };
+		8B0D5C581039030A00BC1A70 /* connectionlistener.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BE01039030A00BC1A70 /* connectionlistener.h */; };
+		8B0D5C591039030A00BC1A70 /* connectionsocks5proxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BE11039030A00BC1A70 /* connectionsocks5proxy.h */; };
+		8B0D5C5A1039030A00BC1A70 /* connectiontcpbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BE21039030A00BC1A70 /* connectiontcpbase.h */; };
+		8B0D5C5B1039030A00BC1A70 /* connectiontcpclient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BE31039030A00BC1A70 /* connectiontcpclient.h */; };
+		8B0D5C5C1039030A00BC1A70 /* connectiontcpserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BE41039030A00BC1A70 /* connectiontcpserver.h */; };
+		8B0D5C5D1039030A00BC1A70 /* dataform.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BE51039030A00BC1A70 /* dataform.h */; };
+		8B0D5C5E1039030A00BC1A70 /* dataformbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BE61039030A00BC1A70 /* dataformbase.h */; };
+		8B0D5C5F1039030A00BC1A70 /* dataformfield.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BE71039030A00BC1A70 /* dataformfield.h */; };
+		8B0D5C601039030A00BC1A70 /* dataformitem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BE81039030A00BC1A70 /* dataformitem.h */; };
+		8B0D5C611039030A00BC1A70 /* dataformreported.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BE91039030A00BC1A70 /* dataformreported.h */; };
+		8B0D5C621039030A00BC1A70 /* delayeddelivery.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BEA1039030A00BC1A70 /* delayeddelivery.h */; };
+		8B0D5C631039030A00BC1A70 /* disco.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BEB1039030A00BC1A70 /* disco.h */; };
+		8B0D5C641039030A00BC1A70 /* discohandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BEC1039030A00BC1A70 /* discohandler.h */; };
+		8B0D5C651039030A00BC1A70 /* disconodehandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BED1039030A00BC1A70 /* disconodehandler.h */; };
+		8B0D5C661039030A00BC1A70 /* dns.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BEE1039030A00BC1A70 /* dns.h */; };
+		8B0D5C671039030A00BC1A70 /* flexoff.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BEF1039030A00BC1A70 /* flexoff.h */; };
+		8B0D5C681039030A00BC1A70 /* flexoffhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BF01039030A00BC1A70 /* flexoffhandler.h */; };
+		8B0D5C691039030A00BC1A70 /* gloox.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BF11039030A00BC1A70 /* gloox.h */; };
+		8B0D5C6A1039030A00BC1A70 /* gpgencrypted.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BF21039030A00BC1A70 /* gpgencrypted.h */; };
+		8B0D5C6B1039030A00BC1A70 /* gpgsigned.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BF31039030A00BC1A70 /* gpgsigned.h */; };
+		8B0D5C6C1039030A00BC1A70 /* inbandbytestream.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BF41039030A00BC1A70 /* inbandbytestream.h */; };
+		8B0D5C6D1039030A00BC1A70 /* inbandbytestreamdatahandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BF51039030A00BC1A70 /* inbandbytestreamdatahandler.h */; };
+		8B0D5C6E1039030A00BC1A70 /* inbandbytestreamhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BF61039030A00BC1A70 /* inbandbytestreamhandler.h */; };
+		8B0D5C6F1039030A00BC1A70 /* inbandbytestreammanager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BF71039030A00BC1A70 /* inbandbytestreammanager.h */; };
+		8B0D5C701039030A00BC1A70 /* instantmucroom.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BF81039030A00BC1A70 /* instantmucroom.h */; };
+		8B0D5C711039030A00BC1A70 /* iqhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BF91039030A00BC1A70 /* iqhandler.h */; };
+		8B0D5C721039030A00BC1A70 /* jid.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BFA1039030A00BC1A70 /* jid.h */; };
+		8B0D5C731039030A00BC1A70 /* lastactivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BFB1039030A00BC1A70 /* lastactivity.h */; };
+		8B0D5C741039030A00BC1A70 /* lastactivityhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BFC1039030A00BC1A70 /* lastactivityhandler.h */; };
+		8B0D5C751039030A00BC1A70 /* loghandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BFD1039030A00BC1A70 /* loghandler.h */; };
+		8B0D5C761039030A00BC1A70 /* logsink.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BFE1039030A00BC1A70 /* logsink.h */; };
+		8B0D5C771039030A00BC1A70 /* macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5BFF1039030A00BC1A70 /* macros.h */; };
+		8B0D5C781039030A00BC1A70 /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C021039030A00BC1A70 /* md5.h */; };
+		8B0D5C791039030A00BC1A70 /* messageeventfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C031039030A00BC1A70 /* messageeventfilter.h */; };
+		8B0D5C7A1039030A00BC1A70 /* messageeventhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C041039030A00BC1A70 /* messageeventhandler.h */; };
+		8B0D5C7B1039030A00BC1A70 /* messagefilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C051039030A00BC1A70 /* messagefilter.h */; };
+		8B0D5C7C1039030A00BC1A70 /* messagehandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C061039030A00BC1A70 /* messagehandler.h */; };
+		8B0D5C7D1039030A00BC1A70 /* messagesession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C071039030A00BC1A70 /* messagesession.h */; };
+		8B0D5C7E1039030A00BC1A70 /* messagesessionhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C081039030A00BC1A70 /* messagesessionhandler.h */; };
+		8B0D5C7F1039030A00BC1A70 /* mucinvitationhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C091039030A00BC1A70 /* mucinvitationhandler.h */; };
+		8B0D5C801039030A00BC1A70 /* mucmessagesession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C0A1039030A00BC1A70 /* mucmessagesession.h */; };
+		8B0D5C811039030A00BC1A70 /* mucroom.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C0B1039030A00BC1A70 /* mucroom.h */; };
+		8B0D5C821039030A00BC1A70 /* mucroomconfighandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C0C1039030A00BC1A70 /* mucroomconfighandler.h */; };
+		8B0D5C831039030A00BC1A70 /* mucroomhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C0D1039030A00BC1A70 /* mucroomhandler.h */; };
+		8B0D5C841039030A00BC1A70 /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C0E1039030A00BC1A70 /* mutex.h */; };
+		8B0D5C851039030A00BC1A70 /* mutexguard.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C0F1039030A00BC1A70 /* mutexguard.h */; };
+		8B0D5C861039030A00BC1A70 /* nonsaslauth.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C101039030A00BC1A70 /* nonsaslauth.h */; };
+		8B0D5C871039030A00BC1A70 /* oob.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C111039030A00BC1A70 /* oob.h */; };
+		8B0D5C881039030A00BC1A70 /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C121039030A00BC1A70 /* parser.h */; };
+		8B0D5C891039030A00BC1A70 /* prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C131039030A00BC1A70 /* prep.h */; };
+		8B0D5C8A1039030A00BC1A70 /* presencehandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C141039030A00BC1A70 /* presencehandler.h */; };
+		8B0D5C8B1039030A00BC1A70 /* privacyitem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C151039030A00BC1A70 /* privacyitem.h */; };
+		8B0D5C8C1039030A00BC1A70 /* privacylisthandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C161039030A00BC1A70 /* privacylisthandler.h */; };
+		8B0D5C8D1039030A00BC1A70 /* privacymanager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C171039030A00BC1A70 /* privacymanager.h */; };
+		8B0D5C8E1039030A00BC1A70 /* privatexml.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C181039030A00BC1A70 /* privatexml.h */; };
+		8B0D5C8F1039030A00BC1A70 /* privatexmlhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C191039030A00BC1A70 /* privatexmlhandler.h */; };
+		8B0D5C901039030A00BC1A70 /* registration.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C1A1039030A00BC1A70 /* registration.h */; };
+		8B0D5C911039030A00BC1A70 /* registrationhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C1B1039030A00BC1A70 /* registrationhandler.h */; };
+		8B0D5C921039030A00BC1A70 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C1C1039030A00BC1A70 /* resource.h */; };
+		8B0D5C931039030A00BC1A70 /* rosteritem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C1D1039030A00BC1A70 /* rosteritem.h */; };
+		8B0D5C941039030A00BC1A70 /* rosterlistener.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C1E1039030A00BC1A70 /* rosterlistener.h */; };
+		8B0D5C951039030A00BC1A70 /* rostermanager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C1F1039030A00BC1A70 /* rostermanager.h */; };
+		8B0D5C961039030A00BC1A70 /* search.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C201039030A00BC1A70 /* search.h */; };
+		8B0D5C971039030A00BC1A70 /* searchhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C211039030A00BC1A70 /* searchhandler.h */; };
+		8B0D5C981039030A00BC1A70 /* sha.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C221039030A00BC1A70 /* sha.h */; };
+		8B0D5C991039030A00BC1A70 /* sihandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C231039030A00BC1A70 /* sihandler.h */; };
+		8B0D5C9A1039030A00BC1A70 /* simanager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C241039030A00BC1A70 /* simanager.h */; };
+		8B0D5C9B1039030A00BC1A70 /* siprofileft.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C251039030A00BC1A70 /* siprofileft.h */; };
+		8B0D5C9C1039030A00BC1A70 /* siprofilefthandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C261039030A00BC1A70 /* siprofilefthandler.h */; };
+		8B0D5C9D1039030A00BC1A70 /* siprofilehandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C271039030A00BC1A70 /* siprofilehandler.h */; };
+		8B0D5C9E1039030A00BC1A70 /* socks5bytestream.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C281039030A00BC1A70 /* socks5bytestream.h */; };
+		8B0D5C9F1039030A00BC1A70 /* socks5bytestreamdatahandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C291039030A00BC1A70 /* socks5bytestreamdatahandler.h */; };
+		8B0D5CA01039030A00BC1A70 /* socks5bytestreamhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C2A1039030A00BC1A70 /* socks5bytestreamhandler.h */; };
+		8B0D5CA11039030A00BC1A70 /* socks5bytestreammanager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C2B1039030A00BC1A70 /* socks5bytestreammanager.h */; };
+		8B0D5CA21039030A00BC1A70 /* socks5bytestreamserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C2C1039030A00BC1A70 /* socks5bytestreamserver.h */; };
+		8B0D5CA31039030A00BC1A70 /* stanza.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C2D1039030A00BC1A70 /* stanza.h */; };
+		8B0D5CA41039030A00BC1A70 /* stanzaextension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C2E1039030A00BC1A70 /* stanzaextension.h */; };
+		8B0D5CA51039030A00BC1A70 /* stanzaextensionfactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C2F1039030A00BC1A70 /* stanzaextensionfactory.h */; };
+		8B0D5CA61039030A00BC1A70 /* statisticshandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C301039030A00BC1A70 /* statisticshandler.h */; };
+		8B0D5CA71039030A00BC1A70 /* subscriptionhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C311039030A00BC1A70 /* subscriptionhandler.h */; };
+		8B0D5CA81039030A00BC1A70 /* tag.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C321039030A00BC1A70 /* tag.h */; };
+		8B0D5CA91039030A00BC1A70 /* taghandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C331039030A00BC1A70 /* taghandler.h */; };
+		8B0D5CAA1039030A00BC1A70 /* tlsbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C341039030A00BC1A70 /* tlsbase.h */; };
+		8B0D5CAB1039030A00BC1A70 /* tlsdefault.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C351039030A00BC1A70 /* tlsdefault.h */; };
+		8B0D5CAC1039030A00BC1A70 /* tlsgnutlsbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C361039030A00BC1A70 /* tlsgnutlsbase.h */; };
+		8B0D5CAD1039030A00BC1A70 /* tlsgnutlsclient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C371039030A00BC1A70 /* tlsgnutlsclient.h */; };
+		8B0D5CAE1039030A00BC1A70 /* tlsgnutlsclientanon.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C381039030A00BC1A70 /* tlsgnutlsclientanon.h */; };
+		8B0D5CAF1039030A00BC1A70 /* tlsgnutlsserveranon.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C391039030A00BC1A70 /* tlsgnutlsserveranon.h */; };
+		8B0D5CB01039030A00BC1A70 /* tlshandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C3A1039030A00BC1A70 /* tlshandler.h */; };
+		8B0D5CB11039030A00BC1A70 /* tlsopenssl.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C3B1039030A00BC1A70 /* tlsopenssl.h */; };
+		8B0D5CB21039030A00BC1A70 /* tlsschannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C3C1039030A00BC1A70 /* tlsschannel.h */; };
+		8B0D5CB31039030A00BC1A70 /* uniquemucroom.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C3D1039030A00BC1A70 /* uniquemucroom.h */; };
+		8B0D5CB41039030A00BC1A70 /* vcard.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C3E1039030A00BC1A70 /* vcard.h */; };
+		8B0D5CB51039030A00BC1A70 /* vcardhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C3F1039030A00BC1A70 /* vcardhandler.h */; };
+		8B0D5CB61039030A00BC1A70 /* vcardmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C401039030A00BC1A70 /* vcardmanager.h */; };
+		8B0D5CB71039030A00BC1A70 /* vcardupdate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C411039030A00BC1A70 /* vcardupdate.h */; };
+		8B0D5CB81039030A00BC1A70 /* xdelayeddelivery.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5C431039030A00BC1A70 /* xdelayeddelivery.h */; };
+		8B0D5CBA1039032700BC1A70 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CB91039032700BC1A70 /* config.h */; };
+		8B0D5CC71039035300BC1A70 /* GLXPlayerChat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CBB1039035300BC1A70 /* GLXPlayerChat.cpp */; };
+		8B0D5CC81039035300BC1A70 /* GLXPlayerChatDiscoverHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CBC1039035300BC1A70 /* GLXPlayerChatDiscoverHandler.cpp */; };
+		8B0D5CC91039035300BC1A70 /* GLXPlayerChatEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CBD1039035300BC1A70 /* GLXPlayerChatEventHandler.cpp */; };
+		8B0D5CCA1039035300BC1A70 /* GLXPlayerChatMessageHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CBE1039035300BC1A70 /* GLXPlayerChatMessageHandler.cpp */; };
+		8B0D5CCB1039035300BC1A70 /* GLXPlayerChatRoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CBF1039035300BC1A70 /* GLXPlayerChatRoom.cpp */; };
+		8B0D5CCC1039035300BC1A70 /* GLXPlayerChatRoomHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CC01039035300BC1A70 /* GLXPlayerChatRoomHandler.cpp */; };
+		8B0D5CCD1039035300BC1A70 /* GLXPlayerChatRoomList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CC11039035300BC1A70 /* GLXPlayerChatRoomList.cpp */; };
+		8B0D5CCE1039035300BC1A70 /* GLXPlayerChatRoster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CC21039035300BC1A70 /* GLXPlayerChatRoster.cpp */; };
+		8B0D5CCF1039035300BC1A70 /* GLXPlayerChatRosterItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CC31039035300BC1A70 /* GLXPlayerChatRosterItem.cpp */; };
+		8B0D5CD01039035300BC1A70 /* GLXPlayerChatSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CC41039035300BC1A70 /* GLXPlayerChatSession.cpp */; };
+		8B0D5CD11039035300BC1A70 /* GLXPlayerChatSessionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CC51039035300BC1A70 /* GLXPlayerChatSessionHandler.cpp */; };
+		8B0D5CD21039035300BC1A70 /* GLXPlayerChatStateHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CC61039035300BC1A70 /* GLXPlayerChatStateHandler.cpp */; };
+		8B0D5CE11039037600BC1A70 /* GLXPlayerChat.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CD31039037600BC1A70 /* GLXPlayerChat.h */; };
+		8B0D5CE21039037600BC1A70 /* GLXPlayerChatDiscoverHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CD41039037600BC1A70 /* GLXPlayerChatDiscoverHandler.h */; };
+		8B0D5CE31039037600BC1A70 /* GLXPlayerChatEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CD51039037600BC1A70 /* GLXPlayerChatEventHandler.h */; };
+		8B0D5CE41039037600BC1A70 /* GLXPlayerChatMessageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CD61039037600BC1A70 /* GLXPlayerChatMessageHandler.h */; };
+		8B0D5CE51039037600BC1A70 /* GLXPlayerChatObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CD71039037600BC1A70 /* GLXPlayerChatObserver.h */; };
+		8B0D5CE61039037600BC1A70 /* GLXPlayerChatRoom.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CD81039037600BC1A70 /* GLXPlayerChatRoom.h */; };
+		8B0D5CE71039037600BC1A70 /* GLXPlayerChatRoomHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CD91039037600BC1A70 /* GLXPlayerChatRoomHandler.h */; };
+		8B0D5CE81039037600BC1A70 /* GLXPlayerChatRoomList.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CDA1039037600BC1A70 /* GLXPlayerChatRoomList.h */; };
+		8B0D5CE91039037600BC1A70 /* GLXPlayerChatRoomObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CDB1039037600BC1A70 /* GLXPlayerChatRoomObserver.h */; };
+		8B0D5CEA1039037600BC1A70 /* GLXPlayerChatRoster.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CDC1039037600BC1A70 /* GLXPlayerChatRoster.h */; };
+		8B0D5CEB1039037600BC1A70 /* GLXPlayerChatRosterItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CDD1039037600BC1A70 /* GLXPlayerChatRosterItem.h */; };
+		8B0D5CEC1039037600BC1A70 /* GLXPlayerChatSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CDE1039037600BC1A70 /* GLXPlayerChatSession.h */; };
+		8B0D5CED1039037600BC1A70 /* GLXPlayerChatSessionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CDF1039037600BC1A70 /* GLXPlayerChatSessionHandler.h */; };
+		8B0D5CEE1039037600BC1A70 /* GLXPlayerChatStateHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CE01039037600BC1A70 /* GLXPlayerChatStateHandler.h */; };
+		8B0D5CF4103903B900BC1A70 /* GLXPlayerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CEF103903B900BC1A70 /* GLXPlayerComponent.cpp */; };
+		8B0D5CF5103903B900BC1A70 /* GLXPlayerHttp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CF0103903B900BC1A70 /* GLXPlayerHttp.cpp */; };
+		8B0D5CF6103903B900BC1A70 /* GLXPlayerSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CF1103903B900BC1A70 /* GLXPlayerSocket.cpp */; };
+		8B0D5CF7103903B900BC1A70 /* GLXPlayerSocketFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CF2103903B900BC1A70 /* GLXPlayerSocketFactory.cpp */; };
+		8B0D5CF8103903B900BC1A70 /* GLXPlayerWebComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5CF3103903B900BC1A70 /* GLXPlayerWebComponent.cpp */; };
+		8B0D5D00103903D200BC1A70 /* GLXPlayerComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CF9103903D200BC1A70 /* GLXPlayerComponent.h */; };
+		8B0D5D01103903D200BC1A70 /* GLXPlayerHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CFA103903D200BC1A70 /* GLXPlayerHttp.h */; };
+		8B0D5D02103903D200BC1A70 /* GLXPlayerObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CFB103903D200BC1A70 /* GLXPlayerObserver.h */; };
+		8B0D5D03103903D200BC1A70 /* GLXPlayerSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CFC103903D200BC1A70 /* GLXPlayerSocket.h */; };
+		8B0D5D04103903D200BC1A70 /* GLXPlayerSocketFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CFD103903D200BC1A70 /* GLXPlayerSocketFactory.h */; };
+		8B0D5D05103903D200BC1A70 /* GLXPlayerSocketObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CFE103903D200BC1A70 /* GLXPlayerSocketObserver.h */; };
+		8B0D5D06103903D200BC1A70 /* GLXPlayerWebComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5CFF103903D200BC1A70 /* GLXPlayerWebComponent.h */; };
+		8B0D5D081039040000BC1A70 /* GLXPlayerDownload.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D071039040000BC1A70 /* GLXPlayerDownload.cpp */; };
+		8B0D5D0A1039042000BC1A70 /* GLXPlayerDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D091039042000BC1A70 /* GLXPlayerDownload.h */; };
+		8B0D5D0C1039044100BC1A70 /* GLXPlayerLeaderboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D0B1039044100BC1A70 /* GLXPlayerLeaderboard.cpp */; };
+		8B0D5D0E1039045800BC1A70 /* GLXPlayerLeaderboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D0D1039045800BC1A70 /* GLXPlayerLeaderboard.h */; };
+		8B0D5D101039048700BC1A70 /* GLXPlayerLobby.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D0F1039048700BC1A70 /* GLXPlayerLobby.cpp */; };
+		8B0D5D12103904AB00BC1A70 /* GLXPlayerLobby.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D11103904AB00BC1A70 /* GLXPlayerLobby.h */; };
+		8B0D5D14103904C200BC1A70 /* GLXPlayerLogin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D13103904C200BC1A70 /* GLXPlayerLogin.cpp */; };
+		8B0D5D16103904D500BC1A70 /* GLXPlayerLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D15103904D500BC1A70 /* GLXPlayerLogin.h */; };
+		8B0D5D18103904EE00BC1A70 /* GLXPlayerMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D17103904EE00BC1A70 /* GLXPlayerMessage.cpp */; };
+		8B0D5D1A103904FF00BC1A70 /* GLXPlayerMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D19103904FF00BC1A70 /* GLXPlayerMessage.h */; };
+		8B0D5D251039055600BC1A70 /* Connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D1F1039055600BC1A70 /* Connection.cpp */; };
+		8B0D5D261039055600BC1A70 /* DataBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D201039055600BC1A70 /* DataBuilder.cpp */; };
+		8B0D5D271039055600BC1A70 /* DefaultDataPacket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D211039055600BC1A70 /* DefaultDataPacket.cpp */; };
+		8B0D5D281039055600BC1A70 /* GLXPlayerMPBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D221039055600BC1A70 /* GLXPlayerMPBase.cpp */; };
+		8B0D5D291039055600BC1A70 /* QueryCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D231039055600BC1A70 /* QueryCondition.cpp */; };
+		8B0D5D2A1039055600BC1A70 /* XIPAddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D241039055600BC1A70 /* XIPAddress.cpp */; };
+		8B0D5D331039057300BC1A70 /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D2B1039057300BC1A70 /* Connection.h */; };
+		8B0D5D341039057300BC1A70 /* DataBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D2C1039057300BC1A70 /* DataBuilder.h */; };
+		8B0D5D351039057300BC1A70 /* DataPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D2D1039057300BC1A70 /* DataPacket.h */; };
+		8B0D5D361039057300BC1A70 /* DefaultDataPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D2E1039057300BC1A70 /* DefaultDataPacket.h */; };
+		8B0D5D371039057300BC1A70 /* GLXPlayerMPBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D2F1039057300BC1A70 /* GLXPlayerMPBase.h */; };
+		8B0D5D381039057300BC1A70 /* GLXPlayerMPBaseObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D301039057300BC1A70 /* GLXPlayerMPBaseObserver.h */; };
+		8B0D5D391039057300BC1A70 /* QueryCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D311039057300BC1A70 /* QueryCondition.h */; };
+		8B0D5D3A1039057300BC1A70 /* XIPAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D321039057300BC1A70 /* XIPAddress.h */; };
+		8B0D5D3C1039059000BC1A70 /* GLXPlayerMPbyServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D3B1039059000BC1A70 /* GLXPlayerMPbyServer.cpp */; };
+		8B0D5D3E103905A800BC1A70 /* GLXPlayerMPbyServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D3D103905A800BC1A70 /* GLXPlayerMPbyServer.h */; };
+		8B0D5D43103905C800BC1A70 /* ConnectionLobby.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D3F103905C800BC1A70 /* ConnectionLobby.cpp */; };
+		8B0D5D44103905C800BC1A70 /* DataPacketLobby.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D40103905C800BC1A70 /* DataPacketLobby.cpp */; };
+		8B0D5D45103905C800BC1A70 /* GLXPlayerMPLobby.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D41103905C800BC1A70 /* GLXPlayerMPLobby.cpp */; };
+		8B0D5D46103905C800BC1A70 /* LobbyParameterAndQuery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D42103905C800BC1A70 /* LobbyParameterAndQuery.cpp */; };
+		8B0D5D4B103905E200BC1A70 /* ConnectionLobby.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D47103905E200BC1A70 /* ConnectionLobby.h */; };
+		8B0D5D4C103905E200BC1A70 /* DataPacketLobby.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D48103905E200BC1A70 /* DataPacketLobby.h */; };
+		8B0D5D4D103905E200BC1A70 /* GLXPlayerMPLobby.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D49103905E200BC1A70 /* GLXPlayerMPLobby.h */; };
+		8B0D5D4E103905E200BC1A70 /* LobbyParameterAndQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D4A103905E200BC1A70 /* LobbyParameterAndQuery.h */; };
+		8B0D5D541039060300BC1A70 /* GLXPlayerMPbyP2P.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D4F1039060300BC1A70 /* GLXPlayerMPbyP2P.cpp */; };
+		8B0D5D551039060300BC1A70 /* OnlineGameRoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D501039060300BC1A70 /* OnlineGameRoom.cpp */; };
+		8B0D5D561039060300BC1A70 /* OnlineGameRoomList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D511039060300BC1A70 /* OnlineGameRoomList.cpp */; };
+		8B0D5D571039060300BC1A70 /* OnlinePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D521039060300BC1A70 /* OnlinePlayer.cpp */; };
+		8B0D5D581039060300BC1A70 /* OnlinePlayerList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D531039060300BC1A70 /* OnlinePlayerList.cpp */; };
+		8B0D5D5F1039061800BC1A70 /* GLXPlayerMPbyP2P.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D591039061800BC1A70 /* GLXPlayerMPbyP2P.h */; };
+		8B0D5D601039061800BC1A70 /* GLXPlayerUpnpObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D5A1039061800BC1A70 /* GLXPlayerUpnpObserver.h */; };
+		8B0D5D611039061800BC1A70 /* OnlineGameRoom.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D5B1039061800BC1A70 /* OnlineGameRoom.h */; };
+		8B0D5D621039061800BC1A70 /* OnlineGameRoomList.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D5C1039061800BC1A70 /* OnlineGameRoomList.h */; };
+		8B0D5D631039061800BC1A70 /* OnlinePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D5D1039061800BC1A70 /* OnlinePlayer.h */; };
+		8B0D5D641039061800BC1A70 /* OnlinePlayerList.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D5E1039061800BC1A70 /* OnlinePlayerList.h */; };
+		8B0D5D7F1039063800BC1A70 /* bsdqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D661039063800BC1A70 /* bsdqueue.h */; };
+		8B0D5D801039063800BC1A70 /* declspec.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D671039063800BC1A70 /* declspec.h */; };
+		8B0D5D811039063800BC1A70 /* igd_desc_parse.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D681039063800BC1A70 /* igd_desc_parse.c */; };
+		8B0D5D821039063800BC1A70 /* igd_desc_parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D691039063800BC1A70 /* igd_desc_parse.h */; };
+		8B0D5D831039063800BC1A70 /* minisoap.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D6B1039063800BC1A70 /* minisoap.c */; };
+		8B0D5D841039063800BC1A70 /* minisoap.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D6C1039063800BC1A70 /* minisoap.h */; };
+		8B0D5D851039063800BC1A70 /* minissdpc.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D6D1039063800BC1A70 /* minissdpc.c */; };
+		8B0D5D861039063800BC1A70 /* minissdpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D6E1039063800BC1A70 /* minissdpc.h */; };
+		8B0D5D871039063800BC1A70 /* miniupnpc.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D6F1039063800BC1A70 /* miniupnpc.c */; };
+		8B0D5D881039063800BC1A70 /* miniupnpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D701039063800BC1A70 /* miniupnpc.h */; };
+		8B0D5D891039063800BC1A70 /* miniwget.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D711039063800BC1A70 /* miniwget.c */; };
+		8B0D5D8A1039063800BC1A70 /* miniwget.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D721039063800BC1A70 /* miniwget.h */; };
+		8B0D5D8B1039063800BC1A70 /* minixml.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D731039063800BC1A70 /* minixml.c */; };
+		8B0D5D8C1039063800BC1A70 /* minixml.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D741039063800BC1A70 /* minixml.h */; };
+		8B0D5D8D1039063800BC1A70 /* PortMapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D751039063800BC1A70 /* PortMapper.cpp */; };
+		8B0D5D8E1039063800BC1A70 /* PortMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D761039063800BC1A70 /* PortMapper.h */; };
+		8B0D5D8F1039063800BC1A70 /* upnpcommands.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D771039063800BC1A70 /* upnpcommands.c */; };
+		8B0D5D901039063800BC1A70 /* upnpcommands.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D781039063800BC1A70 /* upnpcommands.h */; };
+		8B0D5D911039063800BC1A70 /* upnperrors.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D791039063800BC1A70 /* upnperrors.c */; };
+		8B0D5D921039063800BC1A70 /* upnperrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D7A1039063800BC1A70 /* upnperrors.h */; };
+		8B0D5D931039063800BC1A70 /* upnpreplyparse.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D7B1039063800BC1A70 /* upnpreplyparse.c */; };
+		8B0D5D941039063800BC1A70 /* upnpreplyparse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D7C1039063800BC1A70 /* upnpreplyparse.h */; };
+		8B0D5D951039063800BC1A70 /* upnpThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D7D1039063800BC1A70 /* upnpThread.cpp */; };
+		8B0D5D961039063800BC1A70 /* upnpThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D7E1039063800BC1A70 /* upnpThread.h */; };
+		8B0D5D981039065800BC1A70 /* GLXPlayerUser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D971039065800BC1A70 /* GLXPlayerUser.cpp */; };
+		8B0D5D9A1039067300BC1A70 /* GLXPlayerUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D991039067300BC1A70 /* GLXPlayerUser.h */; };
+		8B0D5D9D1039068B00BC1A70 /* GLXPlayerYoutube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5D9B1039068B00BC1A70 /* GLXPlayerYoutube.cpp */; };
+		8B0D5DA1103906A200BC1A70 /* GLXPlayerYoutube.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5D9F103906A200BC1A70 /* GLXPlayerYoutube.h */; };
+		8B0D5DA41039071800BC1A70 /* IPhoneSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5DA31039071800BC1A70 /* IPhoneSocket.cpp */; };
+		8B0D5DA61039073A00BC1A70 /* Porting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D5DA51039073A00BC1A70 /* Porting.cpp */; };
+		8B0D5DAA1039075200BC1A70 /* IPhoneSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5DA71039075200BC1A70 /* IPhoneSocket.h */; };
+		8B0D5DAB1039075200BC1A70 /* Porting.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5DA81039075200BC1A70 /* Porting.h */; };
+		8B0D5DAC1039075200BC1A70 /* XPlayer_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5DA91039075200BC1A70 /* XPlayer_defines.h */; };
+		8B0D5DBD103924EA00BC1A70 /* rss.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5DBB103924EA00BC1A70 /* rss.h */; };
+		8B0D5DBE103924EA00BC1A70 /* SlimXml.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0D5DBC103924EA00BC1A70 /* SlimXml.h */; };
+		8B59598510451800009C3941 /* Platform_iPhone.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B59598310451800009C3941 /* Platform_iPhone.h */; };
+		8B59598610451800009C3941 /* Platform_iPhone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B59598410451800009C3941 /* Platform_iPhone.mm */; };
+		8BA04D111047C1F30050F842 /* GLXPlayerSereverConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BA04D101047C1F30050F842 /* GLXPlayerSereverConfig.cpp */; };
+		8BA04D131047C2060050F842 /* GLXPlayerSereverConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA04D121047C2060050F842 /* GLXPlayerSereverConfig.h */; };
+		8BD12C541039019B005DBD82 /* rss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C501039019B005DBD82 /* rss.cpp */; };
+		8BD12C561039019B005DBD82 /* SlimXml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C521039019B005DBD82 /* SlimXml.cpp */; };
+		8BD12C6F103901C3005DBD82 /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C58103901C3005DBD82 /* adler32.c */; };
+		8BD12C70103901C3005DBD82 /* compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C59103901C3005DBD82 /* compress.c */; };
+		8BD12C71103901C3005DBD82 /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C5A103901C3005DBD82 /* crc32.c */; };
+		8BD12C72103901C3005DBD82 /* crc32.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD12C5B103901C3005DBD82 /* crc32.h */; };
+		8BD12C73103901C3005DBD82 /* deflate.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C5C103901C3005DBD82 /* deflate.c */; };
+		8BD12C74103901C3005DBD82 /* deflate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD12C5D103901C3005DBD82 /* deflate.h */; };
+		8BD12C75103901C3005DBD82 /* gzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C5E103901C3005DBD82 /* gzio.c */; };
+		8BD12C76103901C3005DBD82 /* infback.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C5F103901C3005DBD82 /* infback.c */; };
+		8BD12C77103901C3005DBD82 /* inffast.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C60103901C3005DBD82 /* inffast.c */; };
+		8BD12C78103901C3005DBD82 /* inffast.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD12C61103901C3005DBD82 /* inffast.h */; };
+		8BD12C79103901C3005DBD82 /* inffixed.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD12C62103901C3005DBD82 /* inffixed.h */; };
+		8BD12C7A103901C3005DBD82 /* inflate.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C63103901C3005DBD82 /* inflate.c */; };
+		8BD12C7B103901C3005DBD82 /* inflate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD12C64103901C3005DBD82 /* inflate.h */; };
+		8BD12C7C103901C3005DBD82 /* inftrees.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C65103901C3005DBD82 /* inftrees.c */; };
+		8BD12C7D103901C3005DBD82 /* inftrees.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD12C66103901C3005DBD82 /* inftrees.h */; };
+		8BD12C7E103901C3005DBD82 /* trees.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C67103901C3005DBD82 /* trees.c */; };
+		8BD12C7F103901C3005DBD82 /* trees.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD12C68103901C3005DBD82 /* trees.h */; };
+		8BD12C80103901C3005DBD82 /* uncompr.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C69103901C3005DBD82 /* uncompr.c */; };
+		8BD12C81103901C3005DBD82 /* zconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD12C6A103901C3005DBD82 /* zconf.h */; };
+		8BD12C82103901C3005DBD82 /* zconf.in.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD12C6B103901C3005DBD82 /* zconf.in.h */; };
+		8BD12C83103901C3005DBD82 /* zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD12C6C103901C3005DBD82 /* zlib.h */; };
+		8BD12C84103901C3005DBD82 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BD12C6D103901C3005DBD82 /* zutil.c */; };
+		8BD12C85103901C3005DBD82 /* zutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD12C6E103901C3005DBD82 /* zutil.h */; };
+		AA747D9F0F9514B9006C5449 /* libGLXPlayer_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* libGLXPlayer_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B0D5B351039022D00BC1A70 /* GLXPlayerUserFriend.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerUserFriend.cpp; path = ../../../src/Online/Buddy/GLXPlayerUserFriend.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B371039024300BC1A70 /* GLXPlayerUserFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerUserFriend.h; path = ../../../include/Buddy/GLXPlayerUserFriend.h; sourceTree = SOURCE_ROOT; };
+		8B0D5B3B103902E700BC1A70 /* adhoc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = adhoc.cpp; path = ../../../src/Online/Chat/gloox/adhoc.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B3C103902E700BC1A70 /* annotations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = annotations.cpp; path = ../../../src/Online/Chat/gloox/annotations.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B3D103902E700BC1A70 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64.cpp; path = ../../../src/Online/Chat/gloox/base64.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B3E103902E700BC1A70 /* bookmarkstorage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bookmarkstorage.cpp; path = ../../../src/Online/Chat/gloox/bookmarkstorage.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B3F103902E700BC1A70 /* chatstatefilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = chatstatefilter.cpp; path = ../../../src/Online/Chat/gloox/chatstatefilter.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B40103902E700BC1A70 /* client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = client.cpp; path = ../../../src/Online/Chat/gloox/client.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B41103902E700BC1A70 /* clientbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = clientbase.cpp; path = ../../../src/Online/Chat/gloox/clientbase.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B42103902E700BC1A70 /* component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = component.cpp; path = ../../../src/Online/Chat/gloox/component.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B43103902E700BC1A70 /* compressionzlib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = compressionzlib.cpp; path = ../../../src/Online/Chat/gloox/compressionzlib.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B44103902E700BC1A70 /* connectionhttpproxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = connectionhttpproxy.cpp; path = ../../../src/Online/Chat/gloox/connectionhttpproxy.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B45103902E700BC1A70 /* connectionsocks5proxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = connectionsocks5proxy.cpp; path = ../../../src/Online/Chat/gloox/connectionsocks5proxy.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B46103902E700BC1A70 /* connectiontcpbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = connectiontcpbase.cpp; path = ../../../src/Online/Chat/gloox/connectiontcpbase.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B47103902E700BC1A70 /* connectiontcpclient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = connectiontcpclient.cpp; path = ../../../src/Online/Chat/gloox/connectiontcpclient.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B48103902E700BC1A70 /* connectiontcpserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = connectiontcpserver.cpp; path = ../../../src/Online/Chat/gloox/connectiontcpserver.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B49103902E700BC1A70 /* dataform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dataform.cpp; path = ../../../src/Online/Chat/gloox/dataform.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B4A103902E700BC1A70 /* dataformbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dataformbase.cpp; path = ../../../src/Online/Chat/gloox/dataformbase.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B4B103902E700BC1A70 /* dataformfield.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dataformfield.cpp; path = ../../../src/Online/Chat/gloox/dataformfield.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B4C103902E700BC1A70 /* dataformitem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dataformitem.cpp; path = ../../../src/Online/Chat/gloox/dataformitem.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B4D103902E700BC1A70 /* dataformreported.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dataformreported.cpp; path = ../../../src/Online/Chat/gloox/dataformreported.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B4E103902E700BC1A70 /* delayeddelivery.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = delayeddelivery.cpp; path = ../../../src/Online/Chat/gloox/delayeddelivery.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B4F103902E700BC1A70 /* disco.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = disco.cpp; path = ../../../src/Online/Chat/gloox/disco.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B50103902E700BC1A70 /* dns.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dns.cpp; path = ../../../src/Online/Chat/gloox/dns.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B51103902E700BC1A70 /* flexoff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = flexoff.cpp; path = ../../../src/Online/Chat/gloox/flexoff.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B52103902E700BC1A70 /* gloox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gloox.cpp; path = ../../../src/Online/Chat/gloox/gloox.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B53103902E700BC1A70 /* gpgencrypted.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gpgencrypted.cpp; path = ../../../src/Online/Chat/gloox/gpgencrypted.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B54103902E700BC1A70 /* gpgsigned.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gpgsigned.cpp; path = ../../../src/Online/Chat/gloox/gpgsigned.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B55103902E700BC1A70 /* inbandbytestream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = inbandbytestream.cpp; path = ../../../src/Online/Chat/gloox/inbandbytestream.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B56103902E700BC1A70 /* inbandbytestreammanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = inbandbytestreammanager.cpp; path = ../../../src/Online/Chat/gloox/inbandbytestreammanager.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B57103902E700BC1A70 /* instantmucroom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = instantmucroom.cpp; path = ../../../src/Online/Chat/gloox/instantmucroom.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B58103902E700BC1A70 /* jid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = jid.cpp; path = ../../../src/Online/Chat/gloox/jid.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B59103902E700BC1A70 /* lastactivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lastactivity.cpp; path = ../../../src/Online/Chat/gloox/lastactivity.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B5A103902E700BC1A70 /* logsink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = logsink.cpp; path = ../../../src/Online/Chat/gloox/logsink.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B5B103902E700BC1A70 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile.am; path = ../../../src/Online/Chat/gloox/Makefile.am; sourceTree = SOURCE_ROOT; };
+		8B0D5B5C103902E700BC1A70 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile.in; path = ../../../src/Online/Chat/gloox/Makefile.in; sourceTree = SOURCE_ROOT; };
+		8B0D5B5D103902E700BC1A70 /* md5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = md5.cpp; path = ../../../src/Online/Chat/gloox/md5.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B5E103902E700BC1A70 /* messageeventfilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = messageeventfilter.cpp; path = ../../../src/Online/Chat/gloox/messageeventfilter.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B5F103902E700BC1A70 /* messagefilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = messagefilter.cpp; path = ../../../src/Online/Chat/gloox/messagefilter.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B60103902E700BC1A70 /* messagesession.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = messagesession.cpp; path = ../../../src/Online/Chat/gloox/messagesession.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B61103902E700BC1A70 /* mucmessagesession.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mucmessagesession.cpp; path = ../../../src/Online/Chat/gloox/mucmessagesession.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B62103902E700BC1A70 /* mucroom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mucroom.cpp; path = ../../../src/Online/Chat/gloox/mucroom.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B63103902E700BC1A70 /* mutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mutex.cpp; path = ../../../src/Online/Chat/gloox/mutex.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B64103902E700BC1A70 /* nonsaslauth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = nonsaslauth.cpp; path = ../../../src/Online/Chat/gloox/nonsaslauth.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B65103902E700BC1A70 /* oob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = oob.cpp; path = ../../../src/Online/Chat/gloox/oob.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B66103902E700BC1A70 /* parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = parser.cpp; path = ../../../src/Online/Chat/gloox/parser.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B67103902E700BC1A70 /* prep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = prep.cpp; path = ../../../src/Online/Chat/gloox/prep.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B68103902E700BC1A70 /* privacyitem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = privacyitem.cpp; path = ../../../src/Online/Chat/gloox/privacyitem.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B69103902E700BC1A70 /* privacymanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = privacymanager.cpp; path = ../../../src/Online/Chat/gloox/privacymanager.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B6A103902E700BC1A70 /* privatexml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = privatexml.cpp; path = ../../../src/Online/Chat/gloox/privatexml.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B6B103902E700BC1A70 /* registration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = registration.cpp; path = ../../../src/Online/Chat/gloox/registration.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B6C103902E700BC1A70 /* rosteritem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rosteritem.cpp; path = ../../../src/Online/Chat/gloox/rosteritem.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B6D103902E700BC1A70 /* rostermanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rostermanager.cpp; path = ../../../src/Online/Chat/gloox/rostermanager.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B6E103902E700BC1A70 /* search.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = search.cpp; path = ../../../src/Online/Chat/gloox/search.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B6F103902E700BC1A70 /* sha.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sha.cpp; path = ../../../src/Online/Chat/gloox/sha.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B70103902E700BC1A70 /* simanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = simanager.cpp; path = ../../../src/Online/Chat/gloox/simanager.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B71103902E700BC1A70 /* siprofileft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = siprofileft.cpp; path = ../../../src/Online/Chat/gloox/siprofileft.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B72103902E700BC1A70 /* socks5bytestream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = socks5bytestream.cpp; path = ../../../src/Online/Chat/gloox/socks5bytestream.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B73103902E700BC1A70 /* socks5bytestreammanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = socks5bytestreammanager.cpp; path = ../../../src/Online/Chat/gloox/socks5bytestreammanager.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B74103902E700BC1A70 /* socks5bytestreamserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = socks5bytestreamserver.cpp; path = ../../../src/Online/Chat/gloox/socks5bytestreamserver.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B75103902E700BC1A70 /* stanza.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stanza.cpp; path = ../../../src/Online/Chat/gloox/stanza.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B76103902E700BC1A70 /* stanzaextensionfactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stanzaextensionfactory.cpp; path = ../../../src/Online/Chat/gloox/stanzaextensionfactory.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B77103902E700BC1A70 /* tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tag.cpp; path = ../../../src/Online/Chat/gloox/tag.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B78103902E700BC1A70 /* tlsdefault.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tlsdefault.cpp; path = ../../../src/Online/Chat/gloox/tlsdefault.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B79103902E700BC1A70 /* tlsgnutlsbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tlsgnutlsbase.cpp; path = ../../../src/Online/Chat/gloox/tlsgnutlsbase.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B7A103902E700BC1A70 /* tlsgnutlsclient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tlsgnutlsclient.cpp; path = ../../../src/Online/Chat/gloox/tlsgnutlsclient.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B7B103902E700BC1A70 /* tlsgnutlsclientanon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tlsgnutlsclientanon.cpp; path = ../../../src/Online/Chat/gloox/tlsgnutlsclientanon.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B7C103902E700BC1A70 /* tlsgnutlsserveranon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tlsgnutlsserveranon.cpp; path = ../../../src/Online/Chat/gloox/tlsgnutlsserveranon.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B7D103902E700BC1A70 /* tlsopenssl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tlsopenssl.cpp; path = ../../../src/Online/Chat/gloox/tlsopenssl.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B7E103902E700BC1A70 /* tlsschannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tlsschannel.cpp; path = ../../../src/Online/Chat/gloox/tlsschannel.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B7F103902E700BC1A70 /* uniquemucroom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uniquemucroom.cpp; path = ../../../src/Online/Chat/gloox/uniquemucroom.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B80103902E700BC1A70 /* vcard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vcard.cpp; path = ../../../src/Online/Chat/gloox/vcard.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B81103902E700BC1A70 /* vcardmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vcardmanager.cpp; path = ../../../src/Online/Chat/gloox/vcardmanager.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B82103902E700BC1A70 /* vcardupdate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vcardupdate.cpp; path = ../../../src/Online/Chat/gloox/vcardupdate.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5B83103902E700BC1A70 /* version.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = version.rc; path = ../../../src/Online/Chat/gloox/version.rc; sourceTree = SOURCE_ROOT; };
+		8B0D5B84103902E700BC1A70 /* xdelayeddelivery.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = xdelayeddelivery.cpp; path = ../../../src/Online/Chat/gloox/xdelayeddelivery.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5BCC1039030A00BC1A70 /* adhoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = adhoc.h; path = ../../../include/Chat/gloox/adhoc.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BCD1039030A00BC1A70 /* adhoccommandprovider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = adhoccommandprovider.h; path = ../../../include/Chat/gloox/adhoccommandprovider.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BCE1039030A00BC1A70 /* adhochandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = adhochandler.h; path = ../../../include/Chat/gloox/adhochandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BCF1039030A00BC1A70 /* annotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = annotations.h; path = ../../../include/Chat/gloox/annotations.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BD01039030A00BC1A70 /* annotationshandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = annotationshandler.h; path = ../../../include/Chat/gloox/annotationshandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BD11039030A00BC1A70 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base64.h; path = ../../../include/Chat/gloox/base64.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BD21039030A00BC1A70 /* bookmarkhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bookmarkhandler.h; path = ../../../include/Chat/gloox/bookmarkhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BD31039030A00BC1A70 /* bookmarkstorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bookmarkstorage.h; path = ../../../include/Chat/gloox/bookmarkstorage.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BD41039030A00BC1A70 /* chatstatefilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chatstatefilter.h; path = ../../../include/Chat/gloox/chatstatefilter.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BD51039030A00BC1A70 /* chatstatehandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chatstatehandler.h; path = ../../../include/Chat/gloox/chatstatehandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BD61039030A00BC1A70 /* client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = client.h; path = ../../../include/Chat/gloox/client.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BD71039030A00BC1A70 /* clientbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = clientbase.h; path = ../../../include/Chat/gloox/clientbase.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BD81039030A00BC1A70 /* component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = component.h; path = ../../../include/Chat/gloox/component.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BD91039030A00BC1A70 /* compressionbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compressionbase.h; path = ../../../include/Chat/gloox/compressionbase.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BDA1039030A00BC1A70 /* compressiondatahandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compressiondatahandler.h; path = ../../../include/Chat/gloox/compressiondatahandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BDB1039030A00BC1A70 /* compressionzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compressionzlib.h; path = ../../../include/Chat/gloox/compressionzlib.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BDC1039030A00BC1A70 /* connectionbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectionbase.h; path = ../../../include/Chat/gloox/connectionbase.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BDD1039030A00BC1A70 /* connectiondatahandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectiondatahandler.h; path = ../../../include/Chat/gloox/connectiondatahandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BDE1039030A00BC1A70 /* connectionhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectionhandler.h; path = ../../../include/Chat/gloox/connectionhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BDF1039030A00BC1A70 /* connectionhttpproxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectionhttpproxy.h; path = ../../../include/Chat/gloox/connectionhttpproxy.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BE01039030A00BC1A70 /* connectionlistener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectionlistener.h; path = ../../../include/Chat/gloox/connectionlistener.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BE11039030A00BC1A70 /* connectionsocks5proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectionsocks5proxy.h; path = ../../../include/Chat/gloox/connectionsocks5proxy.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BE21039030A00BC1A70 /* connectiontcpbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectiontcpbase.h; path = ../../../include/Chat/gloox/connectiontcpbase.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BE31039030A00BC1A70 /* connectiontcpclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectiontcpclient.h; path = ../../../include/Chat/gloox/connectiontcpclient.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BE41039030A00BC1A70 /* connectiontcpserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectiontcpserver.h; path = ../../../include/Chat/gloox/connectiontcpserver.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BE51039030A00BC1A70 /* dataform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataform.h; path = ../../../include/Chat/gloox/dataform.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BE61039030A00BC1A70 /* dataformbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataformbase.h; path = ../../../include/Chat/gloox/dataformbase.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BE71039030A00BC1A70 /* dataformfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataformfield.h; path = ../../../include/Chat/gloox/dataformfield.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BE81039030A00BC1A70 /* dataformitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataformitem.h; path = ../../../include/Chat/gloox/dataformitem.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BE91039030A00BC1A70 /* dataformreported.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataformreported.h; path = ../../../include/Chat/gloox/dataformreported.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BEA1039030A00BC1A70 /* delayeddelivery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = delayeddelivery.h; path = ../../../include/Chat/gloox/delayeddelivery.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BEB1039030A00BC1A70 /* disco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = disco.h; path = ../../../include/Chat/gloox/disco.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BEC1039030A00BC1A70 /* discohandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = discohandler.h; path = ../../../include/Chat/gloox/discohandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BED1039030A00BC1A70 /* disconodehandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = disconodehandler.h; path = ../../../include/Chat/gloox/disconodehandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BEE1039030A00BC1A70 /* dns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dns.h; path = ../../../include/Chat/gloox/dns.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BEF1039030A00BC1A70 /* flexoff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flexoff.h; path = ../../../include/Chat/gloox/flexoff.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BF01039030A00BC1A70 /* flexoffhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flexoffhandler.h; path = ../../../include/Chat/gloox/flexoffhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BF11039030A00BC1A70 /* gloox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gloox.h; path = ../../../include/Chat/gloox/gloox.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BF21039030A00BC1A70 /* gpgencrypted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gpgencrypted.h; path = ../../../include/Chat/gloox/gpgencrypted.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BF31039030A00BC1A70 /* gpgsigned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gpgsigned.h; path = ../../../include/Chat/gloox/gpgsigned.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BF41039030A00BC1A70 /* inbandbytestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inbandbytestream.h; path = ../../../include/Chat/gloox/inbandbytestream.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BF51039030A00BC1A70 /* inbandbytestreamdatahandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inbandbytestreamdatahandler.h; path = ../../../include/Chat/gloox/inbandbytestreamdatahandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BF61039030A00BC1A70 /* inbandbytestreamhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inbandbytestreamhandler.h; path = ../../../include/Chat/gloox/inbandbytestreamhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BF71039030A00BC1A70 /* inbandbytestreammanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inbandbytestreammanager.h; path = ../../../include/Chat/gloox/inbandbytestreammanager.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BF81039030A00BC1A70 /* instantmucroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = instantmucroom.h; path = ../../../include/Chat/gloox/instantmucroom.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BF91039030A00BC1A70 /* iqhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iqhandler.h; path = ../../../include/Chat/gloox/iqhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BFA1039030A00BC1A70 /* jid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jid.h; path = ../../../include/Chat/gloox/jid.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BFB1039030A00BC1A70 /* lastactivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lastactivity.h; path = ../../../include/Chat/gloox/lastactivity.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BFC1039030A00BC1A70 /* lastactivityhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lastactivityhandler.h; path = ../../../include/Chat/gloox/lastactivityhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BFD1039030A00BC1A70 /* loghandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = loghandler.h; path = ../../../include/Chat/gloox/loghandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BFE1039030A00BC1A70 /* logsink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = logsink.h; path = ../../../include/Chat/gloox/logsink.h; sourceTree = SOURCE_ROOT; };
+		8B0D5BFF1039030A00BC1A70 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = macros.h; path = ../../../include/Chat/gloox/macros.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C001039030A00BC1A70 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile.am; path = ../../../include/Chat/gloox/Makefile.am; sourceTree = SOURCE_ROOT; };
+		8B0D5C011039030A00BC1A70 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile.in; path = ../../../include/Chat/gloox/Makefile.in; sourceTree = SOURCE_ROOT; };
+		8B0D5C021039030A00BC1A70 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = md5.h; path = ../../../include/Chat/gloox/md5.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C031039030A00BC1A70 /* messageeventfilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messageeventfilter.h; path = ../../../include/Chat/gloox/messageeventfilter.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C041039030A00BC1A70 /* messageeventhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messageeventhandler.h; path = ../../../include/Chat/gloox/messageeventhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C051039030A00BC1A70 /* messagefilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messagefilter.h; path = ../../../include/Chat/gloox/messagefilter.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C061039030A00BC1A70 /* messagehandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messagehandler.h; path = ../../../include/Chat/gloox/messagehandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C071039030A00BC1A70 /* messagesession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messagesession.h; path = ../../../include/Chat/gloox/messagesession.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C081039030A00BC1A70 /* messagesessionhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messagesessionhandler.h; path = ../../../include/Chat/gloox/messagesessionhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C091039030A00BC1A70 /* mucinvitationhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mucinvitationhandler.h; path = ../../../include/Chat/gloox/mucinvitationhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C0A1039030A00BC1A70 /* mucmessagesession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mucmessagesession.h; path = ../../../include/Chat/gloox/mucmessagesession.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C0B1039030A00BC1A70 /* mucroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mucroom.h; path = ../../../include/Chat/gloox/mucroom.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C0C1039030A00BC1A70 /* mucroomconfighandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mucroomconfighandler.h; path = ../../../include/Chat/gloox/mucroomconfighandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C0D1039030A00BC1A70 /* mucroomhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mucroomhandler.h; path = ../../../include/Chat/gloox/mucroomhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C0E1039030A00BC1A70 /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mutex.h; path = ../../../include/Chat/gloox/mutex.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C0F1039030A00BC1A70 /* mutexguard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mutexguard.h; path = ../../../include/Chat/gloox/mutexguard.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C101039030A00BC1A70 /* nonsaslauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nonsaslauth.h; path = ../../../include/Chat/gloox/nonsaslauth.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C111039030A00BC1A70 /* oob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oob.h; path = ../../../include/Chat/gloox/oob.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C121039030A00BC1A70 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = parser.h; path = ../../../include/Chat/gloox/parser.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C131039030A00BC1A70 /* prep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = prep.h; path = ../../../include/Chat/gloox/prep.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C141039030A00BC1A70 /* presencehandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = presencehandler.h; path = ../../../include/Chat/gloox/presencehandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C151039030A00BC1A70 /* privacyitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privacyitem.h; path = ../../../include/Chat/gloox/privacyitem.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C161039030A00BC1A70 /* privacylisthandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privacylisthandler.h; path = ../../../include/Chat/gloox/privacylisthandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C171039030A00BC1A70 /* privacymanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privacymanager.h; path = ../../../include/Chat/gloox/privacymanager.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C181039030A00BC1A70 /* privatexml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privatexml.h; path = ../../../include/Chat/gloox/privatexml.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C191039030A00BC1A70 /* privatexmlhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privatexmlhandler.h; path = ../../../include/Chat/gloox/privatexmlhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C1A1039030A00BC1A70 /* registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registration.h; path = ../../../include/Chat/gloox/registration.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C1B1039030A00BC1A70 /* registrationhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registrationhandler.h; path = ../../../include/Chat/gloox/registrationhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C1C1039030A00BC1A70 /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resource.h; path = ../../../include/Chat/gloox/resource.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C1D1039030A00BC1A70 /* rosteritem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rosteritem.h; path = ../../../include/Chat/gloox/rosteritem.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C1E1039030A00BC1A70 /* rosterlistener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rosterlistener.h; path = ../../../include/Chat/gloox/rosterlistener.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C1F1039030A00BC1A70 /* rostermanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rostermanager.h; path = ../../../include/Chat/gloox/rostermanager.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C201039030A00BC1A70 /* search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = search.h; path = ../../../include/Chat/gloox/search.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C211039030A00BC1A70 /* searchhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = searchhandler.h; path = ../../../include/Chat/gloox/searchhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C221039030A00BC1A70 /* sha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha.h; path = ../../../include/Chat/gloox/sha.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C231039030A00BC1A70 /* sihandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sihandler.h; path = ../../../include/Chat/gloox/sihandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C241039030A00BC1A70 /* simanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = simanager.h; path = ../../../include/Chat/gloox/simanager.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C251039030A00BC1A70 /* siprofileft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = siprofileft.h; path = ../../../include/Chat/gloox/siprofileft.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C261039030A00BC1A70 /* siprofilefthandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = siprofilefthandler.h; path = ../../../include/Chat/gloox/siprofilefthandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C271039030A00BC1A70 /* siprofilehandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = siprofilehandler.h; path = ../../../include/Chat/gloox/siprofilehandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C281039030A00BC1A70 /* socks5bytestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socks5bytestream.h; path = ../../../include/Chat/gloox/socks5bytestream.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C291039030A00BC1A70 /* socks5bytestreamdatahandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socks5bytestreamdatahandler.h; path = ../../../include/Chat/gloox/socks5bytestreamdatahandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C2A1039030A00BC1A70 /* socks5bytestreamhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socks5bytestreamhandler.h; path = ../../../include/Chat/gloox/socks5bytestreamhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C2B1039030A00BC1A70 /* socks5bytestreammanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socks5bytestreammanager.h; path = ../../../include/Chat/gloox/socks5bytestreammanager.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C2C1039030A00BC1A70 /* socks5bytestreamserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socks5bytestreamserver.h; path = ../../../include/Chat/gloox/socks5bytestreamserver.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C2D1039030A00BC1A70 /* stanza.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stanza.h; path = ../../../include/Chat/gloox/stanza.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C2E1039030A00BC1A70 /* stanzaextension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stanzaextension.h; path = ../../../include/Chat/gloox/stanzaextension.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C2F1039030A00BC1A70 /* stanzaextensionfactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stanzaextensionfactory.h; path = ../../../include/Chat/gloox/stanzaextensionfactory.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C301039030A00BC1A70 /* statisticshandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = statisticshandler.h; path = ../../../include/Chat/gloox/statisticshandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C311039030A00BC1A70 /* subscriptionhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = subscriptionhandler.h; path = ../../../include/Chat/gloox/subscriptionhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C321039030A00BC1A70 /* tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tag.h; path = ../../../include/Chat/gloox/tag.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C331039030A00BC1A70 /* taghandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = taghandler.h; path = ../../../include/Chat/gloox/taghandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C341039030A00BC1A70 /* tlsbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsbase.h; path = ../../../include/Chat/gloox/tlsbase.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C351039030A00BC1A70 /* tlsdefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsdefault.h; path = ../../../include/Chat/gloox/tlsdefault.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C361039030A00BC1A70 /* tlsgnutlsbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsgnutlsbase.h; path = ../../../include/Chat/gloox/tlsgnutlsbase.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C371039030A00BC1A70 /* tlsgnutlsclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsgnutlsclient.h; path = ../../../include/Chat/gloox/tlsgnutlsclient.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C381039030A00BC1A70 /* tlsgnutlsclientanon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsgnutlsclientanon.h; path = ../../../include/Chat/gloox/tlsgnutlsclientanon.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C391039030A00BC1A70 /* tlsgnutlsserveranon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsgnutlsserveranon.h; path = ../../../include/Chat/gloox/tlsgnutlsserveranon.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C3A1039030A00BC1A70 /* tlshandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlshandler.h; path = ../../../include/Chat/gloox/tlshandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C3B1039030A00BC1A70 /* tlsopenssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsopenssl.h; path = ../../../include/Chat/gloox/tlsopenssl.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C3C1039030A00BC1A70 /* tlsschannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsschannel.h; path = ../../../include/Chat/gloox/tlsschannel.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C3D1039030A00BC1A70 /* uniquemucroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uniquemucroom.h; path = ../../../include/Chat/gloox/uniquemucroom.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C3E1039030A00BC1A70 /* vcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vcard.h; path = ../../../include/Chat/gloox/vcard.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C3F1039030A00BC1A70 /* vcardhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vcardhandler.h; path = ../../../include/Chat/gloox/vcardhandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C401039030A00BC1A70 /* vcardmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vcardmanager.h; path = ../../../include/Chat/gloox/vcardmanager.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C411039030A00BC1A70 /* vcardupdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vcardupdate.h; path = ../../../include/Chat/gloox/vcardupdate.h; sourceTree = SOURCE_ROOT; };
+		8B0D5C421039030A00BC1A70 /* version.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = version.rc; path = ../../../include/Chat/gloox/version.rc; sourceTree = SOURCE_ROOT; };
+		8B0D5C431039030A00BC1A70 /* xdelayeddelivery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xdelayeddelivery.h; path = ../../../include/Chat/gloox/xdelayeddelivery.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CB91039032700BC1A70 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../../src/Online/Chat/gloox_config/config.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CBB1039035300BC1A70 /* GLXPlayerChat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChat.cpp; path = ../../../src/Online/Chat/GLXPlayerChat.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CBC1039035300BC1A70 /* GLXPlayerChatDiscoverHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChatDiscoverHandler.cpp; path = ../../../src/Online/Chat/GLXPlayerChatDiscoverHandler.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CBD1039035300BC1A70 /* GLXPlayerChatEventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChatEventHandler.cpp; path = ../../../src/Online/Chat/GLXPlayerChatEventHandler.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CBE1039035300BC1A70 /* GLXPlayerChatMessageHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChatMessageHandler.cpp; path = ../../../src/Online/Chat/GLXPlayerChatMessageHandler.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CBF1039035300BC1A70 /* GLXPlayerChatRoom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChatRoom.cpp; path = ../../../src/Online/Chat/GLXPlayerChatRoom.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CC01039035300BC1A70 /* GLXPlayerChatRoomHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChatRoomHandler.cpp; path = ../../../src/Online/Chat/GLXPlayerChatRoomHandler.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CC11039035300BC1A70 /* GLXPlayerChatRoomList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChatRoomList.cpp; path = ../../../src/Online/Chat/GLXPlayerChatRoomList.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CC21039035300BC1A70 /* GLXPlayerChatRoster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChatRoster.cpp; path = ../../../src/Online/Chat/GLXPlayerChatRoster.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CC31039035300BC1A70 /* GLXPlayerChatRosterItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChatRosterItem.cpp; path = ../../../src/Online/Chat/GLXPlayerChatRosterItem.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CC41039035300BC1A70 /* GLXPlayerChatSession.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChatSession.cpp; path = ../../../src/Online/Chat/GLXPlayerChatSession.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CC51039035300BC1A70 /* GLXPlayerChatSessionHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChatSessionHandler.cpp; path = ../../../src/Online/Chat/GLXPlayerChatSessionHandler.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CC61039035300BC1A70 /* GLXPlayerChatStateHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerChatStateHandler.cpp; path = ../../../src/Online/Chat/GLXPlayerChatStateHandler.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CD31039037600BC1A70 /* GLXPlayerChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChat.h; path = ../../../include/Chat/GLXPlayerChat.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CD41039037600BC1A70 /* GLXPlayerChatDiscoverHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatDiscoverHandler.h; path = ../../../include/Chat/GLXPlayerChatDiscoverHandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CD51039037600BC1A70 /* GLXPlayerChatEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatEventHandler.h; path = ../../../include/Chat/GLXPlayerChatEventHandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CD61039037600BC1A70 /* GLXPlayerChatMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatMessageHandler.h; path = ../../../include/Chat/GLXPlayerChatMessageHandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CD71039037600BC1A70 /* GLXPlayerChatObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatObserver.h; path = ../../../include/Chat/GLXPlayerChatObserver.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CD81039037600BC1A70 /* GLXPlayerChatRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRoom.h; path = ../../../include/Chat/GLXPlayerChatRoom.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CD91039037600BC1A70 /* GLXPlayerChatRoomHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRoomHandler.h; path = ../../../include/Chat/GLXPlayerChatRoomHandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CDA1039037600BC1A70 /* GLXPlayerChatRoomList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRoomList.h; path = ../../../include/Chat/GLXPlayerChatRoomList.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CDB1039037600BC1A70 /* GLXPlayerChatRoomObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRoomObserver.h; path = ../../../include/Chat/GLXPlayerChatRoomObserver.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CDC1039037600BC1A70 /* GLXPlayerChatRoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRoster.h; path = ../../../include/Chat/GLXPlayerChatRoster.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CDD1039037600BC1A70 /* GLXPlayerChatRosterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRosterItem.h; path = ../../../include/Chat/GLXPlayerChatRosterItem.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CDE1039037600BC1A70 /* GLXPlayerChatSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatSession.h; path = ../../../include/Chat/GLXPlayerChatSession.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CDF1039037600BC1A70 /* GLXPlayerChatSessionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatSessionHandler.h; path = ../../../include/Chat/GLXPlayerChatSessionHandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CE01039037600BC1A70 /* GLXPlayerChatStateHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatStateHandler.h; path = ../../../include/Chat/GLXPlayerChatStateHandler.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CEF103903B900BC1A70 /* GLXPlayerComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerComponent.cpp; path = ../../../src/Online/Common/GLXPlayerComponent.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CF0103903B900BC1A70 /* GLXPlayerHttp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerHttp.cpp; path = ../../../src/Online/Common/GLXPlayerHttp.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CF1103903B900BC1A70 /* GLXPlayerSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerSocket.cpp; path = ../../../src/Online/Common/GLXPlayerSocket.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CF2103903B900BC1A70 /* GLXPlayerSocketFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerSocketFactory.cpp; path = ../../../src/Online/Common/GLXPlayerSocketFactory.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CF3103903B900BC1A70 /* GLXPlayerWebComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerWebComponent.cpp; path = ../../../src/Online/Common/GLXPlayerWebComponent.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5CF9103903D200BC1A70 /* GLXPlayerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerComponent.h; path = ../../../include/Common/GLXPlayerComponent.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CFA103903D200BC1A70 /* GLXPlayerHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerHttp.h; path = ../../../include/Common/GLXPlayerHttp.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CFB103903D200BC1A70 /* GLXPlayerObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerObserver.h; path = ../../../include/Common/GLXPlayerObserver.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CFC103903D200BC1A70 /* GLXPlayerSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerSocket.h; path = ../../../include/Common/GLXPlayerSocket.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CFD103903D200BC1A70 /* GLXPlayerSocketFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerSocketFactory.h; path = ../../../include/Common/GLXPlayerSocketFactory.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CFE103903D200BC1A70 /* GLXPlayerSocketObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerSocketObserver.h; path = ../../../include/Common/GLXPlayerSocketObserver.h; sourceTree = SOURCE_ROOT; };
+		8B0D5CFF103903D200BC1A70 /* GLXPlayerWebComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerWebComponent.h; path = ../../../include/Common/GLXPlayerWebComponent.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D071039040000BC1A70 /* GLXPlayerDownload.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerDownload.cpp; path = ../../../src/Online/Download/GLXPlayerDownload.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D091039042000BC1A70 /* GLXPlayerDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerDownload.h; path = ../../../include/Download/GLXPlayerDownload.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D0B1039044100BC1A70 /* GLXPlayerLeaderboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerLeaderboard.cpp; path = ../../../src/Online/Leaderboard/GLXPlayerLeaderboard.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D0D1039045800BC1A70 /* GLXPlayerLeaderboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerLeaderboard.h; path = ../../../include/Leaderboard/GLXPlayerLeaderboard.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D0F1039048700BC1A70 /* GLXPlayerLobby.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerLobby.cpp; path = ../../../src/Online/Lobby/GLXPlayerLobby.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D11103904AB00BC1A70 /* GLXPlayerLobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerLobby.h; path = ../../../include/Lobby/GLXPlayerLobby.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D13103904C200BC1A70 /* GLXPlayerLogin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerLogin.cpp; path = ../../../src/Online/Login/GLXPlayerLogin.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D15103904D500BC1A70 /* GLXPlayerLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerLogin.h; path = ../../../include/Login/GLXPlayerLogin.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D17103904EE00BC1A70 /* GLXPlayerMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerMessage.cpp; path = ../../../src/Online/Message/GLXPlayerMessage.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D19103904FF00BC1A70 /* GLXPlayerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMessage.h; path = ../../../include/Message/GLXPlayerMessage.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D1F1039055600BC1A70 /* Connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Connection.cpp; path = ../../../src/Online/Multiplayer/Common/Connection.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D201039055600BC1A70 /* DataBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataBuilder.cpp; path = ../../../src/Online/Multiplayer/Common/DataBuilder.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D211039055600BC1A70 /* DefaultDataPacket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DefaultDataPacket.cpp; path = ../../../src/Online/Multiplayer/Common/DefaultDataPacket.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D221039055600BC1A70 /* GLXPlayerMPBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerMPBase.cpp; path = ../../../src/Online/Multiplayer/Common/GLXPlayerMPBase.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D231039055600BC1A70 /* QueryCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QueryCondition.cpp; path = ../../../src/Online/Multiplayer/Common/QueryCondition.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D241039055600BC1A70 /* XIPAddress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XIPAddress.cpp; path = ../../../src/Online/Multiplayer/Common/XIPAddress.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D2B1039057300BC1A70 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = ../../../include/Multiplayer/Common/Connection.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D2C1039057300BC1A70 /* DataBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBuilder.h; path = ../../../include/Multiplayer/Common/DataBuilder.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D2D1039057300BC1A70 /* DataPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataPacket.h; path = ../../../include/Multiplayer/Common/DataPacket.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D2E1039057300BC1A70 /* DefaultDataPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefaultDataPacket.h; path = ../../../include/Multiplayer/Common/DefaultDataPacket.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D2F1039057300BC1A70 /* GLXPlayerMPBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMPBase.h; path = ../../../include/Multiplayer/Common/GLXPlayerMPBase.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D301039057300BC1A70 /* GLXPlayerMPBaseObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMPBaseObserver.h; path = ../../../include/Multiplayer/Common/GLXPlayerMPBaseObserver.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D311039057300BC1A70 /* QueryCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryCondition.h; path = ../../../include/Multiplayer/Common/QueryCondition.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D321039057300BC1A70 /* XIPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XIPAddress.h; path = ../../../include/Multiplayer/Common/XIPAddress.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D3B1039059000BC1A70 /* GLXPlayerMPbyServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerMPbyServer.cpp; path = ../../../src/Online/Multiplayer/ForwardbyServer/GLXPlayerMPbyServer.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D3D103905A800BC1A70 /* GLXPlayerMPbyServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMPbyServer.h; path = ../../../include/Multiplayer/ForwardbyServer/GLXPlayerMPbyServer.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D3F103905C800BC1A70 /* ConnectionLobby.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConnectionLobby.cpp; path = ../../../src/Online/Multiplayer/Lobby/ConnectionLobby.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D40103905C800BC1A70 /* DataPacketLobby.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataPacketLobby.cpp; path = ../../../src/Online/Multiplayer/Lobby/DataPacketLobby.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D41103905C800BC1A70 /* GLXPlayerMPLobby.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerMPLobby.cpp; path = ../../../src/Online/Multiplayer/Lobby/GLXPlayerMPLobby.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D42103905C800BC1A70 /* LobbyParameterAndQuery.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LobbyParameterAndQuery.cpp; path = ../../../src/Online/Multiplayer/Lobby/LobbyParameterAndQuery.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D47103905E200BC1A70 /* ConnectionLobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionLobby.h; path = ../../../include/Multiplayer/Lobby/ConnectionLobby.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D48103905E200BC1A70 /* DataPacketLobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataPacketLobby.h; path = ../../../include/Multiplayer/Lobby/DataPacketLobby.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D49103905E200BC1A70 /* GLXPlayerMPLobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMPLobby.h; path = ../../../include/Multiplayer/Lobby/GLXPlayerMPLobby.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D4A103905E200BC1A70 /* LobbyParameterAndQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LobbyParameterAndQuery.h; path = ../../../include/Multiplayer/Lobby/LobbyParameterAndQuery.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D4F1039060300BC1A70 /* GLXPlayerMPbyP2P.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerMPbyP2P.cpp; path = ../../../src/Online/Multiplayer/P2P/GLXPlayerMPbyP2P.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D501039060300BC1A70 /* OnlineGameRoom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OnlineGameRoom.cpp; path = ../../../src/Online/Multiplayer/P2P/OnlineGameRoom.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D511039060300BC1A70 /* OnlineGameRoomList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OnlineGameRoomList.cpp; path = ../../../src/Online/Multiplayer/P2P/OnlineGameRoomList.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D521039060300BC1A70 /* OnlinePlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OnlinePlayer.cpp; path = ../../../src/Online/Multiplayer/P2P/OnlinePlayer.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D531039060300BC1A70 /* OnlinePlayerList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OnlinePlayerList.cpp; path = ../../../src/Online/Multiplayer/P2P/OnlinePlayerList.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D591039061800BC1A70 /* GLXPlayerMPbyP2P.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMPbyP2P.h; path = ../../../include/Multiplayer/P2P/GLXPlayerMPbyP2P.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D5A1039061800BC1A70 /* GLXPlayerUpnpObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerUpnpObserver.h; path = ../../../include/Multiplayer/P2P/GLXPlayerUpnpObserver.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D5B1039061800BC1A70 /* OnlineGameRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnlineGameRoom.h; path = ../../../include/Multiplayer/P2P/OnlineGameRoom.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D5C1039061800BC1A70 /* OnlineGameRoomList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnlineGameRoomList.h; path = ../../../include/Multiplayer/P2P/OnlineGameRoomList.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D5D1039061800BC1A70 /* OnlinePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnlinePlayer.h; path = ../../../include/Multiplayer/P2P/OnlinePlayer.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D5E1039061800BC1A70 /* OnlinePlayerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnlinePlayerList.h; path = ../../../include/Multiplayer/P2P/OnlinePlayerList.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D661039063800BC1A70 /* bsdqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bsdqueue.h; path = ../../../src/Online/Multiplayer/P2P/upnp/bsdqueue.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D671039063800BC1A70 /* declspec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = declspec.h; path = ../../../src/Online/Multiplayer/P2P/upnp/declspec.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D681039063800BC1A70 /* igd_desc_parse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = igd_desc_parse.c; path = ../../../src/Online/Multiplayer/P2P/upnp/igd_desc_parse.c; sourceTree = SOURCE_ROOT; };
+		8B0D5D691039063800BC1A70 /* igd_desc_parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = igd_desc_parse.h; path = ../../../src/Online/Multiplayer/P2P/upnp/igd_desc_parse.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D6A1039063800BC1A70 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../../src/Online/Multiplayer/P2P/upnp/LICENSE; sourceTree = SOURCE_ROOT; };
+		8B0D5D6B1039063800BC1A70 /* minisoap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = minisoap.c; path = ../../../src/Online/Multiplayer/P2P/upnp/minisoap.c; sourceTree = SOURCE_ROOT; };
+		8B0D5D6C1039063800BC1A70 /* minisoap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = minisoap.h; path = ../../../src/Online/Multiplayer/P2P/upnp/minisoap.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D6D1039063800BC1A70 /* minissdpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = minissdpc.c; path = ../../../src/Online/Multiplayer/P2P/upnp/minissdpc.c; sourceTree = SOURCE_ROOT; };
+		8B0D5D6E1039063800BC1A70 /* minissdpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = minissdpc.h; path = ../../../src/Online/Multiplayer/P2P/upnp/minissdpc.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D6F1039063800BC1A70 /* miniupnpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = miniupnpc.c; path = ../../../src/Online/Multiplayer/P2P/upnp/miniupnpc.c; sourceTree = SOURCE_ROOT; };
+		8B0D5D701039063800BC1A70 /* miniupnpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = miniupnpc.h; path = ../../../src/Online/Multiplayer/P2P/upnp/miniupnpc.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D711039063800BC1A70 /* miniwget.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = miniwget.c; path = ../../../src/Online/Multiplayer/P2P/upnp/miniwget.c; sourceTree = SOURCE_ROOT; };
+		8B0D5D721039063800BC1A70 /* miniwget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = miniwget.h; path = ../../../src/Online/Multiplayer/P2P/upnp/miniwget.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D731039063800BC1A70 /* minixml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = minixml.c; path = ../../../src/Online/Multiplayer/P2P/upnp/minixml.c; sourceTree = SOURCE_ROOT; };
+		8B0D5D741039063800BC1A70 /* minixml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = minixml.h; path = ../../../src/Online/Multiplayer/P2P/upnp/minixml.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D751039063800BC1A70 /* PortMapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PortMapper.cpp; path = ../../../src/Online/Multiplayer/P2P/upnp/PortMapper.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D761039063800BC1A70 /* PortMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortMapper.h; path = ../../../src/Online/Multiplayer/P2P/upnp/PortMapper.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D771039063800BC1A70 /* upnpcommands.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = upnpcommands.c; path = ../../../src/Online/Multiplayer/P2P/upnp/upnpcommands.c; sourceTree = SOURCE_ROOT; };
+		8B0D5D781039063800BC1A70 /* upnpcommands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = upnpcommands.h; path = ../../../src/Online/Multiplayer/P2P/upnp/upnpcommands.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D791039063800BC1A70 /* upnperrors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = upnperrors.c; path = ../../../src/Online/Multiplayer/P2P/upnp/upnperrors.c; sourceTree = SOURCE_ROOT; };
+		8B0D5D7A1039063800BC1A70 /* upnperrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = upnperrors.h; path = ../../../src/Online/Multiplayer/P2P/upnp/upnperrors.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D7B1039063800BC1A70 /* upnpreplyparse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = upnpreplyparse.c; path = ../../../src/Online/Multiplayer/P2P/upnp/upnpreplyparse.c; sourceTree = SOURCE_ROOT; };
+		8B0D5D7C1039063800BC1A70 /* upnpreplyparse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = upnpreplyparse.h; path = ../../../src/Online/Multiplayer/P2P/upnp/upnpreplyparse.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D7D1039063800BC1A70 /* upnpThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = upnpThread.cpp; path = ../../../src/Online/Multiplayer/P2P/upnp/upnpThread.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D7E1039063800BC1A70 /* upnpThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = upnpThread.h; path = ../../../src/Online/Multiplayer/P2P/upnp/upnpThread.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D971039065800BC1A70 /* GLXPlayerUser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerUser.cpp; path = ../../../src/Online/User/GLXPlayerUser.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D991039067300BC1A70 /* GLXPlayerUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerUser.h; path = ../../../include/User/GLXPlayerUser.h; sourceTree = SOURCE_ROOT; };
+		8B0D5D9B1039068B00BC1A70 /* GLXPlayerYoutube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerYoutube.cpp; path = ../../../src/Online/YouTube/GLXPlayerYoutube.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5D9F103906A200BC1A70 /* GLXPlayerYoutube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerYoutube.h; path = ../../../include/YouTube/GLXPlayerYoutube.h; sourceTree = SOURCE_ROOT; };
+		8B0D5DA31039071800BC1A70 /* IPhoneSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPhoneSocket.cpp; path = ../../../src/Online/IPhoneSocket.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5DA51039073A00BC1A70 /* Porting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Porting.cpp; path = ../../../src/Online/Porting.cpp; sourceTree = SOURCE_ROOT; };
+		8B0D5DA71039075200BC1A70 /* IPhoneSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPhoneSocket.h; path = ../../../include/IPhoneSocket.h; sourceTree = SOURCE_ROOT; };
+		8B0D5DA81039075200BC1A70 /* Porting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Porting.h; path = ../../../include/Porting.h; sourceTree = SOURCE_ROOT; };
+		8B0D5DA91039075200BC1A70 /* XPlayer_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPlayer_defines.h; path = ../../../include/XPlayer_defines.h; sourceTree = SOURCE_ROOT; };
+		8B0D5DBB103924EA00BC1A70 /* rss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rss.h; path = ../../../include/3rdParty/XMLParser/rss.h; sourceTree = SOURCE_ROOT; };
+		8B0D5DBC103924EA00BC1A70 /* SlimXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlimXml.h; path = ../../../include/3rdParty/XMLParser/SlimXml.h; sourceTree = SOURCE_ROOT; };
+		8B59598310451800009C3941 /* Platform_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Platform_iPhone.h; path = ../Classes/Platform_iPhone.h; sourceTree = SOURCE_ROOT; };
+		8B59598410451800009C3941 /* Platform_iPhone.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Platform_iPhone.mm; path = ../Classes/Platform_iPhone.mm; sourceTree = SOURCE_ROOT; };
+		8BA04D101047C1F30050F842 /* GLXPlayerSereverConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerSereverConfig.cpp; path = ../../../src/Online/Common/GLXPlayerSereverConfig.cpp; sourceTree = SOURCE_ROOT; };
+		8BA04D121047C2060050F842 /* GLXPlayerSereverConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerSereverConfig.h; path = ../../../include/Common/GLXPlayerSereverConfig.h; sourceTree = SOURCE_ROOT; };
+		8BD12C501039019B005DBD82 /* rss.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rss.cpp; path = ../../../src/Online/3rdParty/XMLParser/rss.cpp; sourceTree = SOURCE_ROOT; };
+		8BD12C521039019B005DBD82 /* SlimXml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SlimXml.cpp; path = ../../../src/Online/3rdParty/XMLParser/SlimXml.cpp; sourceTree = SOURCE_ROOT; };
+		8BD12C58103901C3005DBD82 /* adler32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = adler32.c; path = ../../../src/Online/3rdParty/zlib/adler32.c; sourceTree = SOURCE_ROOT; };
+		8BD12C59103901C3005DBD82 /* compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = compress.c; path = ../../../src/Online/3rdParty/zlib/compress.c; sourceTree = SOURCE_ROOT; };
+		8BD12C5A103901C3005DBD82 /* crc32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = crc32.c; path = ../../../src/Online/3rdParty/zlib/crc32.c; sourceTree = SOURCE_ROOT; };
+		8BD12C5B103901C3005DBD82 /* crc32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crc32.h; path = ../../../src/Online/3rdParty/zlib/crc32.h; sourceTree = SOURCE_ROOT; };
+		8BD12C5C103901C3005DBD82 /* deflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = deflate.c; path = ../../../src/Online/3rdParty/zlib/deflate.c; sourceTree = SOURCE_ROOT; };
+		8BD12C5D103901C3005DBD82 /* deflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = deflate.h; path = ../../../src/Online/3rdParty/zlib/deflate.h; sourceTree = SOURCE_ROOT; };
+		8BD12C5E103901C3005DBD82 /* gzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gzio.c; path = ../../../src/Online/3rdParty/zlib/gzio.c; sourceTree = SOURCE_ROOT; };
+		8BD12C5F103901C3005DBD82 /* infback.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = infback.c; path = ../../../src/Online/3rdParty/zlib/infback.c; sourceTree = SOURCE_ROOT; };
+		8BD12C60103901C3005DBD82 /* inffast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inffast.c; path = ../../../src/Online/3rdParty/zlib/inffast.c; sourceTree = SOURCE_ROOT; };
+		8BD12C61103901C3005DBD82 /* inffast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inffast.h; path = ../../../src/Online/3rdParty/zlib/inffast.h; sourceTree = SOURCE_ROOT; };
+		8BD12C62103901C3005DBD82 /* inffixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inffixed.h; path = ../../../src/Online/3rdParty/zlib/inffixed.h; sourceTree = SOURCE_ROOT; };
+		8BD12C63103901C3005DBD82 /* inflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inflate.c; path = ../../../src/Online/3rdParty/zlib/inflate.c; sourceTree = SOURCE_ROOT; };
+		8BD12C64103901C3005DBD82 /* inflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inflate.h; path = ../../../src/Online/3rdParty/zlib/inflate.h; sourceTree = SOURCE_ROOT; };
+		8BD12C65103901C3005DBD82 /* inftrees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inftrees.c; path = ../../../src/Online/3rdParty/zlib/inftrees.c; sourceTree = SOURCE_ROOT; };
+		8BD12C66103901C3005DBD82 /* inftrees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inftrees.h; path = ../../../src/Online/3rdParty/zlib/inftrees.h; sourceTree = SOURCE_ROOT; };
+		8BD12C67103901C3005DBD82 /* trees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = trees.c; path = ../../../src/Online/3rdParty/zlib/trees.c; sourceTree = SOURCE_ROOT; };
+		8BD12C68103901C3005DBD82 /* trees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trees.h; path = ../../../src/Online/3rdParty/zlib/trees.h; sourceTree = SOURCE_ROOT; };
+		8BD12C69103901C3005DBD82 /* uncompr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = uncompr.c; path = ../../../src/Online/3rdParty/zlib/uncompr.c; sourceTree = SOURCE_ROOT; };
+		8BD12C6A103901C3005DBD82 /* zconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zconf.h; path = ../../../src/Online/3rdParty/zlib/zconf.h; sourceTree = SOURCE_ROOT; };
+		8BD12C6B103901C3005DBD82 /* zconf.in.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zconf.in.h; path = ../../../src/Online/3rdParty/zlib/zconf.in.h; sourceTree = SOURCE_ROOT; };
+		8BD12C6C103901C3005DBD82 /* zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zlib.h; path = ../../../src/Online/3rdParty/zlib/zlib.h; sourceTree = SOURCE_ROOT; };
+		8BD12C6D103901C3005DBD82 /* zutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zutil.c; path = ../../../src/Online/3rdParty/zlib/zutil.c; sourceTree = SOURCE_ROOT; };
+		8BD12C6E103901C3005DBD82 /* zutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zutil.h; path = ../../../src/Online/3rdParty/zlib/zutil.h; sourceTree = SOURCE_ROOT; };
+		AA747D9E0F9514B9006C5449 /* libGLXPlayer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libGLXPlayer_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libGLXPlayerDebug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGLXPlayerDebug.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libGLXPlayerDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* libGLXPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				8BD12C401038FED1005DBD82 /* online */,
+				8B0D5DA31039071800BC1A70 /* IPhoneSocket.cpp */,
+				8B0D5DA71039075200BC1A70 /* IPhoneSocket.h */,
+				8B0D5DA51039073A00BC1A70 /* Porting.cpp */,
+				8B0D5DA81039075200BC1A70 /* Porting.h */,
+				8B0D5DA91039075200BC1A70 /* XPlayer_defines.h */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = libGLXPlayer;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8B59598310451800009C3941 /* Platform_iPhone.h */,
+				8B59598410451800009C3941 /* Platform_iPhone.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* libGLXPlayer_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		8B0D5B391039029D00BC1A70 /* gloox */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5BCC1039030A00BC1A70 /* adhoc.h */,
+				8B0D5BCD1039030A00BC1A70 /* adhoccommandprovider.h */,
+				8B0D5BCE1039030A00BC1A70 /* adhochandler.h */,
+				8B0D5BCF1039030A00BC1A70 /* annotations.h */,
+				8B0D5BD01039030A00BC1A70 /* annotationshandler.h */,
+				8B0D5BD11039030A00BC1A70 /* base64.h */,
+				8B0D5BD21039030A00BC1A70 /* bookmarkhandler.h */,
+				8B0D5BD31039030A00BC1A70 /* bookmarkstorage.h */,
+				8B0D5BD41039030A00BC1A70 /* chatstatefilter.h */,
+				8B0D5BD51039030A00BC1A70 /* chatstatehandler.h */,
+				8B0D5BD61039030A00BC1A70 /* client.h */,
+				8B0D5BD71039030A00BC1A70 /* clientbase.h */,
+				8B0D5BD81039030A00BC1A70 /* component.h */,
+				8B0D5BD91039030A00BC1A70 /* compressionbase.h */,
+				8B0D5BDA1039030A00BC1A70 /* compressiondatahandler.h */,
+				8B0D5BDB1039030A00BC1A70 /* compressionzlib.h */,
+				8B0D5BDC1039030A00BC1A70 /* connectionbase.h */,
+				8B0D5BDD1039030A00BC1A70 /* connectiondatahandler.h */,
+				8B0D5BDE1039030A00BC1A70 /* connectionhandler.h */,
+				8B0D5BDF1039030A00BC1A70 /* connectionhttpproxy.h */,
+				8B0D5BE01039030A00BC1A70 /* connectionlistener.h */,
+				8B0D5BE11039030A00BC1A70 /* connectionsocks5proxy.h */,
+				8B0D5BE21039030A00BC1A70 /* connectiontcpbase.h */,
+				8B0D5BE31039030A00BC1A70 /* connectiontcpclient.h */,
+				8B0D5BE41039030A00BC1A70 /* connectiontcpserver.h */,
+				8B0D5BE51039030A00BC1A70 /* dataform.h */,
+				8B0D5BE61039030A00BC1A70 /* dataformbase.h */,
+				8B0D5BE71039030A00BC1A70 /* dataformfield.h */,
+				8B0D5BE81039030A00BC1A70 /* dataformitem.h */,
+				8B0D5BE91039030A00BC1A70 /* dataformreported.h */,
+				8B0D5BEA1039030A00BC1A70 /* delayeddelivery.h */,
+				8B0D5BEB1039030A00BC1A70 /* disco.h */,
+				8B0D5BEC1039030A00BC1A70 /* discohandler.h */,
+				8B0D5BED1039030A00BC1A70 /* disconodehandler.h */,
+				8B0D5BEE1039030A00BC1A70 /* dns.h */,
+				8B0D5BEF1039030A00BC1A70 /* flexoff.h */,
+				8B0D5BF01039030A00BC1A70 /* flexoffhandler.h */,
+				8B0D5BF11039030A00BC1A70 /* gloox.h */,
+				8B0D5BF21039030A00BC1A70 /* gpgencrypted.h */,
+				8B0D5BF31039030A00BC1A70 /* gpgsigned.h */,
+				8B0D5BF41039030A00BC1A70 /* inbandbytestream.h */,
+				8B0D5BF51039030A00BC1A70 /* inbandbytestreamdatahandler.h */,
+				8B0D5BF61039030A00BC1A70 /* inbandbytestreamhandler.h */,
+				8B0D5BF71039030A00BC1A70 /* inbandbytestreammanager.h */,
+				8B0D5BF81039030A00BC1A70 /* instantmucroom.h */,
+				8B0D5BF91039030A00BC1A70 /* iqhandler.h */,
+				8B0D5BFA1039030A00BC1A70 /* jid.h */,
+				8B0D5BFB1039030A00BC1A70 /* lastactivity.h */,
+				8B0D5BFC1039030A00BC1A70 /* lastactivityhandler.h */,
+				8B0D5BFD1039030A00BC1A70 /* loghandler.h */,
+				8B0D5BFE1039030A00BC1A70 /* logsink.h */,
+				8B0D5BFF1039030A00BC1A70 /* macros.h */,
+				8B0D5C001039030A00BC1A70 /* Makefile.am */,
+				8B0D5C011039030A00BC1A70 /* Makefile.in */,
+				8B0D5C021039030A00BC1A70 /* md5.h */,
+				8B0D5C031039030A00BC1A70 /* messageeventfilter.h */,
+				8B0D5C041039030A00BC1A70 /* messageeventhandler.h */,
+				8B0D5C051039030A00BC1A70 /* messagefilter.h */,
+				8B0D5C061039030A00BC1A70 /* messagehandler.h */,
+				8B0D5C071039030A00BC1A70 /* messagesession.h */,
+				8B0D5C081039030A00BC1A70 /* messagesessionhandler.h */,
+				8B0D5C091039030A00BC1A70 /* mucinvitationhandler.h */,
+				8B0D5C0A1039030A00BC1A70 /* mucmessagesession.h */,
+				8B0D5C0B1039030A00BC1A70 /* mucroom.h */,
+				8B0D5C0C1039030A00BC1A70 /* mucroomconfighandler.h */,
+				8B0D5C0D1039030A00BC1A70 /* mucroomhandler.h */,
+				8B0D5C0E1039030A00BC1A70 /* mutex.h */,
+				8B0D5C0F1039030A00BC1A70 /* mutexguard.h */,
+				8B0D5C101039030A00BC1A70 /* nonsaslauth.h */,
+				8B0D5C111039030A00BC1A70 /* oob.h */,
+				8B0D5C121039030A00BC1A70 /* parser.h */,
+				8B0D5C131039030A00BC1A70 /* prep.h */,
+				8B0D5C141039030A00BC1A70 /* presencehandler.h */,
+				8B0D5C151039030A00BC1A70 /* privacyitem.h */,
+				8B0D5C161039030A00BC1A70 /* privacylisthandler.h */,
+				8B0D5C171039030A00BC1A70 /* privacymanager.h */,
+				8B0D5C181039030A00BC1A70 /* privatexml.h */,
+				8B0D5C191039030A00BC1A70 /* privatexmlhandler.h */,
+				8B0D5C1A1039030A00BC1A70 /* registration.h */,
+				8B0D5C1B1039030A00BC1A70 /* registrationhandler.h */,
+				8B0D5C1C1039030A00BC1A70 /* resource.h */,
+				8B0D5C1D1039030A00BC1A70 /* rosteritem.h */,
+				8B0D5C1E1039030A00BC1A70 /* rosterlistener.h */,
+				8B0D5C1F1039030A00BC1A70 /* rostermanager.h */,
+				8B0D5C201039030A00BC1A70 /* search.h */,
+				8B0D5C211039030A00BC1A70 /* searchhandler.h */,
+				8B0D5C221039030A00BC1A70 /* sha.h */,
+				8B0D5C231039030A00BC1A70 /* sihandler.h */,
+				8B0D5C241039030A00BC1A70 /* simanager.h */,
+				8B0D5C251039030A00BC1A70 /* siprofileft.h */,
+				8B0D5C261039030A00BC1A70 /* siprofilefthandler.h */,
+				8B0D5C271039030A00BC1A70 /* siprofilehandler.h */,
+				8B0D5C281039030A00BC1A70 /* socks5bytestream.h */,
+				8B0D5C291039030A00BC1A70 /* socks5bytestreamdatahandler.h */,
+				8B0D5C2A1039030A00BC1A70 /* socks5bytestreamhandler.h */,
+				8B0D5C2B1039030A00BC1A70 /* socks5bytestreammanager.h */,
+				8B0D5C2C1039030A00BC1A70 /* socks5bytestreamserver.h */,
+				8B0D5C2D1039030A00BC1A70 /* stanza.h */,
+				8B0D5C2E1039030A00BC1A70 /* stanzaextension.h */,
+				8B0D5C2F1039030A00BC1A70 /* stanzaextensionfactory.h */,
+				8B0D5C301039030A00BC1A70 /* statisticshandler.h */,
+				8B0D5C311039030A00BC1A70 /* subscriptionhandler.h */,
+				8B0D5C321039030A00BC1A70 /* tag.h */,
+				8B0D5C331039030A00BC1A70 /* taghandler.h */,
+				8B0D5C341039030A00BC1A70 /* tlsbase.h */,
+				8B0D5C351039030A00BC1A70 /* tlsdefault.h */,
+				8B0D5C361039030A00BC1A70 /* tlsgnutlsbase.h */,
+				8B0D5C371039030A00BC1A70 /* tlsgnutlsclient.h */,
+				8B0D5C381039030A00BC1A70 /* tlsgnutlsclientanon.h */,
+				8B0D5C391039030A00BC1A70 /* tlsgnutlsserveranon.h */,
+				8B0D5C3A1039030A00BC1A70 /* tlshandler.h */,
+				8B0D5C3B1039030A00BC1A70 /* tlsopenssl.h */,
+				8B0D5C3C1039030A00BC1A70 /* tlsschannel.h */,
+				8B0D5C3D1039030A00BC1A70 /* uniquemucroom.h */,
+				8B0D5C3E1039030A00BC1A70 /* vcard.h */,
+				8B0D5C3F1039030A00BC1A70 /* vcardhandler.h */,
+				8B0D5C401039030A00BC1A70 /* vcardmanager.h */,
+				8B0D5C411039030A00BC1A70 /* vcardupdate.h */,
+				8B0D5C421039030A00BC1A70 /* version.rc */,
+				8B0D5C431039030A00BC1A70 /* xdelayeddelivery.h */,
+				8B0D5B3B103902E700BC1A70 /* adhoc.cpp */,
+				8B0D5B3C103902E700BC1A70 /* annotations.cpp */,
+				8B0D5B3D103902E700BC1A70 /* base64.cpp */,
+				8B0D5B3E103902E700BC1A70 /* bookmarkstorage.cpp */,
+				8B0D5B3F103902E700BC1A70 /* chatstatefilter.cpp */,
+				8B0D5B40103902E700BC1A70 /* client.cpp */,
+				8B0D5B41103902E700BC1A70 /* clientbase.cpp */,
+				8B0D5B42103902E700BC1A70 /* component.cpp */,
+				8B0D5B43103902E700BC1A70 /* compressionzlib.cpp */,
+				8B0D5B44103902E700BC1A70 /* connectionhttpproxy.cpp */,
+				8B0D5B45103902E700BC1A70 /* connectionsocks5proxy.cpp */,
+				8B0D5B46103902E700BC1A70 /* connectiontcpbase.cpp */,
+				8B0D5B47103902E700BC1A70 /* connectiontcpclient.cpp */,
+				8B0D5B48103902E700BC1A70 /* connectiontcpserver.cpp */,
+				8B0D5B49103902E700BC1A70 /* dataform.cpp */,
+				8B0D5B4A103902E700BC1A70 /* dataformbase.cpp */,
+				8B0D5B4B103902E700BC1A70 /* dataformfield.cpp */,
+				8B0D5B4C103902E700BC1A70 /* dataformitem.cpp */,
+				8B0D5B4D103902E700BC1A70 /* dataformreported.cpp */,
+				8B0D5B4E103902E700BC1A70 /* delayeddelivery.cpp */,
+				8B0D5B4F103902E700BC1A70 /* disco.cpp */,
+				8B0D5B50103902E700BC1A70 /* dns.cpp */,
+				8B0D5B51103902E700BC1A70 /* flexoff.cpp */,
+				8B0D5B52103902E700BC1A70 /* gloox.cpp */,
+				8B0D5B53103902E700BC1A70 /* gpgencrypted.cpp */,
+				8B0D5B54103902E700BC1A70 /* gpgsigned.cpp */,
+				8B0D5B55103902E700BC1A70 /* inbandbytestream.cpp */,
+				8B0D5B56103902E700BC1A70 /* inbandbytestreammanager.cpp */,
+				8B0D5B57103902E700BC1A70 /* instantmucroom.cpp */,
+				8B0D5B58103902E700BC1A70 /* jid.cpp */,
+				8B0D5B59103902E700BC1A70 /* lastactivity.cpp */,
+				8B0D5B5A103902E700BC1A70 /* logsink.cpp */,
+				8B0D5B5B103902E700BC1A70 /* Makefile.am */,
+				8B0D5B5C103902E700BC1A70 /* Makefile.in */,
+				8B0D5B5D103902E700BC1A70 /* md5.cpp */,
+				8B0D5B5E103902E700BC1A70 /* messageeventfilter.cpp */,
+				8B0D5B5F103902E700BC1A70 /* messagefilter.cpp */,
+				8B0D5B60103902E700BC1A70 /* messagesession.cpp */,
+				8B0D5B61103902E700BC1A70 /* mucmessagesession.cpp */,
+				8B0D5B62103902E700BC1A70 /* mucroom.cpp */,
+				8B0D5B63103902E700BC1A70 /* mutex.cpp */,
+				8B0D5B64103902E700BC1A70 /* nonsaslauth.cpp */,
+				8B0D5B65103902E700BC1A70 /* oob.cpp */,
+				8B0D5B66103902E700BC1A70 /* parser.cpp */,
+				8B0D5B67103902E700BC1A70 /* prep.cpp */,
+				8B0D5B68103902E700BC1A70 /* privacyitem.cpp */,
+				8B0D5B69103902E700BC1A70 /* privacymanager.cpp */,
+				8B0D5B6A103902E700BC1A70 /* privatexml.cpp */,
+				8B0D5B6B103902E700BC1A70 /* registration.cpp */,
+				8B0D5B6C103902E700BC1A70 /* rosteritem.cpp */,
+				8B0D5B6D103902E700BC1A70 /* rostermanager.cpp */,
+				8B0D5B6E103902E700BC1A70 /* search.cpp */,
+				8B0D5B6F103902E700BC1A70 /* sha.cpp */,
+				8B0D5B70103902E700BC1A70 /* simanager.cpp */,
+				8B0D5B71103902E700BC1A70 /* siprofileft.cpp */,
+				8B0D5B72103902E700BC1A70 /* socks5bytestream.cpp */,
+				8B0D5B73103902E700BC1A70 /* socks5bytestreammanager.cpp */,
+				8B0D5B74103902E700BC1A70 /* socks5bytestreamserver.cpp */,
+				8B0D5B75103902E700BC1A70 /* stanza.cpp */,
+				8B0D5B76103902E700BC1A70 /* stanzaextensionfactory.cpp */,
+				8B0D5B77103902E700BC1A70 /* tag.cpp */,
+				8B0D5B78103902E700BC1A70 /* tlsdefault.cpp */,
+				8B0D5B79103902E700BC1A70 /* tlsgnutlsbase.cpp */,
+				8B0D5B7A103902E700BC1A70 /* tlsgnutlsclient.cpp */,
+				8B0D5B7B103902E700BC1A70 /* tlsgnutlsclientanon.cpp */,
+				8B0D5B7C103902E700BC1A70 /* tlsgnutlsserveranon.cpp */,
+				8B0D5B7D103902E700BC1A70 /* tlsopenssl.cpp */,
+				8B0D5B7E103902E700BC1A70 /* tlsschannel.cpp */,
+				8B0D5B7F103902E700BC1A70 /* uniquemucroom.cpp */,
+				8B0D5B80103902E700BC1A70 /* vcard.cpp */,
+				8B0D5B81103902E700BC1A70 /* vcardmanager.cpp */,
+				8B0D5B82103902E700BC1A70 /* vcardupdate.cpp */,
+				8B0D5B83103902E700BC1A70 /* version.rc */,
+				8B0D5B84103902E700BC1A70 /* xdelayeddelivery.cpp */,
+			);
+			name = gloox;
+			sourceTree = "<group>";
+		};
+		8B0D5B3A103902A400BC1A70 /* gloox_config */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5CB91039032700BC1A70 /* config.h */,
+			);
+			name = gloox_config;
+			sourceTree = "<group>";
+		};
+		8B0D5D1B1039051400BC1A70 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D2B1039057300BC1A70 /* Connection.h */,
+				8B0D5D2C1039057300BC1A70 /* DataBuilder.h */,
+				8B0D5D2D1039057300BC1A70 /* DataPacket.h */,
+				8B0D5D2E1039057300BC1A70 /* DefaultDataPacket.h */,
+				8B0D5D2F1039057300BC1A70 /* GLXPlayerMPBase.h */,
+				8B0D5D301039057300BC1A70 /* GLXPlayerMPBaseObserver.h */,
+				8B0D5D311039057300BC1A70 /* QueryCondition.h */,
+				8B0D5D321039057300BC1A70 /* XIPAddress.h */,
+				8B0D5D1F1039055600BC1A70 /* Connection.cpp */,
+				8B0D5D201039055600BC1A70 /* DataBuilder.cpp */,
+				8B0D5D211039055600BC1A70 /* DefaultDataPacket.cpp */,
+				8B0D5D221039055600BC1A70 /* GLXPlayerMPBase.cpp */,
+				8B0D5D231039055600BC1A70 /* QueryCondition.cpp */,
+				8B0D5D241039055600BC1A70 /* XIPAddress.cpp */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		8B0D5D1C1039051B00BC1A70 /* forwardbyserver */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D3D103905A800BC1A70 /* GLXPlayerMPbyServer.h */,
+				8B0D5D3B1039059000BC1A70 /* GLXPlayerMPbyServer.cpp */,
+			);
+			name = forwardbyserver;
+			sourceTree = "<group>";
+		};
+		8B0D5D1D1039052500BC1A70 /* p2p */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D651039061C00BC1A70 /* upnp */,
+				8B0D5D591039061800BC1A70 /* GLXPlayerMPbyP2P.h */,
+				8B0D5D5A1039061800BC1A70 /* GLXPlayerUpnpObserver.h */,
+				8B0D5D5B1039061800BC1A70 /* OnlineGameRoom.h */,
+				8B0D5D5C1039061800BC1A70 /* OnlineGameRoomList.h */,
+				8B0D5D5D1039061800BC1A70 /* OnlinePlayer.h */,
+				8B0D5D5E1039061800BC1A70 /* OnlinePlayerList.h */,
+				8B0D5D4F1039060300BC1A70 /* GLXPlayerMPbyP2P.cpp */,
+				8B0D5D501039060300BC1A70 /* OnlineGameRoom.cpp */,
+				8B0D5D511039060300BC1A70 /* OnlineGameRoomList.cpp */,
+				8B0D5D521039060300BC1A70 /* OnlinePlayer.cpp */,
+				8B0D5D531039060300BC1A70 /* OnlinePlayerList.cpp */,
+			);
+			name = p2p;
+			sourceTree = "<group>";
+		};
+		8B0D5D1E1039052B00BC1A70 /* lobby */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D47103905E200BC1A70 /* ConnectionLobby.h */,
+				8B0D5D48103905E200BC1A70 /* DataPacketLobby.h */,
+				8B0D5D49103905E200BC1A70 /* GLXPlayerMPLobby.h */,
+				8B0D5D4A103905E200BC1A70 /* LobbyParameterAndQuery.h */,
+				8B0D5D3F103905C800BC1A70 /* ConnectionLobby.cpp */,
+				8B0D5D40103905C800BC1A70 /* DataPacketLobby.cpp */,
+				8B0D5D41103905C800BC1A70 /* GLXPlayerMPLobby.cpp */,
+				8B0D5D42103905C800BC1A70 /* LobbyParameterAndQuery.cpp */,
+			);
+			name = lobby;
+			sourceTree = "<group>";
+		};
+		8B0D5D651039061C00BC1A70 /* upnp */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D661039063800BC1A70 /* bsdqueue.h */,
+				8B0D5D671039063800BC1A70 /* declspec.h */,
+				8B0D5D681039063800BC1A70 /* igd_desc_parse.c */,
+				8B0D5D691039063800BC1A70 /* igd_desc_parse.h */,
+				8B0D5D6A1039063800BC1A70 /* LICENSE */,
+				8B0D5D6B1039063800BC1A70 /* minisoap.c */,
+				8B0D5D6C1039063800BC1A70 /* minisoap.h */,
+				8B0D5D6D1039063800BC1A70 /* minissdpc.c */,
+				8B0D5D6E1039063800BC1A70 /* minissdpc.h */,
+				8B0D5D6F1039063800BC1A70 /* miniupnpc.c */,
+				8B0D5D701039063800BC1A70 /* miniupnpc.h */,
+				8B0D5D711039063800BC1A70 /* miniwget.c */,
+				8B0D5D721039063800BC1A70 /* miniwget.h */,
+				8B0D5D731039063800BC1A70 /* minixml.c */,
+				8B0D5D741039063800BC1A70 /* minixml.h */,
+				8B0D5D751039063800BC1A70 /* PortMapper.cpp */,
+				8B0D5D761039063800BC1A70 /* PortMapper.h */,
+				8B0D5D771039063800BC1A70 /* upnpcommands.c */,
+				8B0D5D781039063800BC1A70 /* upnpcommands.h */,
+				8B0D5D791039063800BC1A70 /* upnperrors.c */,
+				8B0D5D7A1039063800BC1A70 /* upnperrors.h */,
+				8B0D5D7B1039063800BC1A70 /* upnpreplyparse.c */,
+				8B0D5D7C1039063800BC1A70 /* upnpreplyparse.h */,
+				8B0D5D7D1039063800BC1A70 /* upnpThread.cpp */,
+				8B0D5D7E1039063800BC1A70 /* upnpThread.h */,
+			);
+			name = upnp;
+			sourceTree = "<group>";
+		};
+		8BD12C401038FED1005DBD82 /* online */ = {
+			isa = PBXGroup;
+			children = (
+				8BD12C411038FF04005DBD82 /* 3rdParty */,
+				8BD12C421038FF14005DBD82 /* buddy */,
+				8BD12C431038FF1F005DBD82 /* chat */,
+				8BD12C441038FF25005DBD82 /* common */,
+				8BD12C451038FF2A005DBD82 /* download */,
+				8BD12C461038FF36005DBD82 /* leaderboard */,
+				8BD12C471038FF48005DBD82 /* lobby */,
+				8BD12C481038FF4E005DBD82 /* login */,
+				8BD12C491038FF53005DBD82 /* message */,
+				8BD12C4A1038FF59005DBD82 /* multiplayer */,
+				8BD12C4B1038FF6A005DBD82 /* user */,
+				8BD12C4C1038FF70005DBD82 /* youtube */,
+			);
+			name = online;
+			sourceTree = "<group>";
+		};
+		8BD12C411038FF04005DBD82 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				8BD12C4E10390143005DBD82 /* XMLParser */,
+				8BD12C4F1039014E005DBD82 /* zlib */,
+			);
+			name = 3rdParty;
+			sourceTree = "<group>";
+		};
+		8BD12C421038FF14005DBD82 /* buddy */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5B371039024300BC1A70 /* GLXPlayerUserFriend.h */,
+				8B0D5B351039022D00BC1A70 /* GLXPlayerUserFriend.cpp */,
+			);
+			name = buddy;
+			sourceTree = "<group>";
+		};
+		8BD12C431038FF1F005DBD82 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5B391039029D00BC1A70 /* gloox */,
+				8B0D5B3A103902A400BC1A70 /* gloox_config */,
+				8B0D5CD31039037600BC1A70 /* GLXPlayerChat.h */,
+				8B0D5CD41039037600BC1A70 /* GLXPlayerChatDiscoverHandler.h */,
+				8B0D5CD51039037600BC1A70 /* GLXPlayerChatEventHandler.h */,
+				8B0D5CD61039037600BC1A70 /* GLXPlayerChatMessageHandler.h */,
+				8B0D5CD71039037600BC1A70 /* GLXPlayerChatObserver.h */,
+				8B0D5CD81039037600BC1A70 /* GLXPlayerChatRoom.h */,
+				8B0D5CD91039037600BC1A70 /* GLXPlayerChatRoomHandler.h */,
+				8B0D5CDA1039037600BC1A70 /* GLXPlayerChatRoomList.h */,
+				8B0D5CDB1039037600BC1A70 /* GLXPlayerChatRoomObserver.h */,
+				8B0D5CDC1039037600BC1A70 /* GLXPlayerChatRoster.h */,
+				8B0D5CDD1039037600BC1A70 /* GLXPlayerChatRosterItem.h */,
+				8B0D5CDE1039037600BC1A70 /* GLXPlayerChatSession.h */,
+				8B0D5CDF1039037600BC1A70 /* GLXPlayerChatSessionHandler.h */,
+				8B0D5CE01039037600BC1A70 /* GLXPlayerChatStateHandler.h */,
+				8B0D5CBB1039035300BC1A70 /* GLXPlayerChat.cpp */,
+				8B0D5CBC1039035300BC1A70 /* GLXPlayerChatDiscoverHandler.cpp */,
+				8B0D5CBD1039035300BC1A70 /* GLXPlayerChatEventHandler.cpp */,
+				8B0D5CBE1039035300BC1A70 /* GLXPlayerChatMessageHandler.cpp */,
+				8B0D5CBF1039035300BC1A70 /* GLXPlayerChatRoom.cpp */,
+				8B0D5CC01039035300BC1A70 /* GLXPlayerChatRoomHandler.cpp */,
+				8B0D5CC11039035300BC1A70 /* GLXPlayerChatRoomList.cpp */,
+				8B0D5CC21039035300BC1A70 /* GLXPlayerChatRoster.cpp */,
+				8B0D5CC31039035300BC1A70 /* GLXPlayerChatRosterItem.cpp */,
+				8B0D5CC41039035300BC1A70 /* GLXPlayerChatSession.cpp */,
+				8B0D5CC51039035300BC1A70 /* GLXPlayerChatSessionHandler.cpp */,
+				8B0D5CC61039035300BC1A70 /* GLXPlayerChatStateHandler.cpp */,
+			);
+			name = chat;
+			sourceTree = "<group>";
+		};
+		8BD12C441038FF25005DBD82 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				8BA04D121047C2060050F842 /* GLXPlayerSereverConfig.h */,
+				8BA04D101047C1F30050F842 /* GLXPlayerSereverConfig.cpp */,
+				8B0D5CF9103903D200BC1A70 /* GLXPlayerComponent.h */,
+				8B0D5CFA103903D200BC1A70 /* GLXPlayerHttp.h */,
+				8B0D5CFB103903D200BC1A70 /* GLXPlayerObserver.h */,
+				8B0D5CFC103903D200BC1A70 /* GLXPlayerSocket.h */,
+				8B0D5CFD103903D200BC1A70 /* GLXPlayerSocketFactory.h */,
+				8B0D5CFE103903D200BC1A70 /* GLXPlayerSocketObserver.h */,
+				8B0D5CFF103903D200BC1A70 /* GLXPlayerWebComponent.h */,
+				8B0D5CEF103903B900BC1A70 /* GLXPlayerComponent.cpp */,
+				8B0D5CF0103903B900BC1A70 /* GLXPlayerHttp.cpp */,
+				8B0D5CF1103903B900BC1A70 /* GLXPlayerSocket.cpp */,
+				8B0D5CF2103903B900BC1A70 /* GLXPlayerSocketFactory.cpp */,
+				8B0D5CF3103903B900BC1A70 /* GLXPlayerWebComponent.cpp */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		8BD12C451038FF2A005DBD82 /* download */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D091039042000BC1A70 /* GLXPlayerDownload.h */,
+				8B0D5D071039040000BC1A70 /* GLXPlayerDownload.cpp */,
+			);
+			name = download;
+			sourceTree = "<group>";
+		};
+		8BD12C461038FF36005DBD82 /* leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D0D1039045800BC1A70 /* GLXPlayerLeaderboard.h */,
+				8B0D5D0B1039044100BC1A70 /* GLXPlayerLeaderboard.cpp */,
+			);
+			name = leaderboard;
+			sourceTree = "<group>";
+		};
+		8BD12C471038FF48005DBD82 /* lobby */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D11103904AB00BC1A70 /* GLXPlayerLobby.h */,
+				8B0D5D0F1039048700BC1A70 /* GLXPlayerLobby.cpp */,
+			);
+			name = lobby;
+			sourceTree = "<group>";
+		};
+		8BD12C481038FF4E005DBD82 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D15103904D500BC1A70 /* GLXPlayerLogin.h */,
+				8B0D5D13103904C200BC1A70 /* GLXPlayerLogin.cpp */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		8BD12C491038FF53005DBD82 /* message */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D19103904FF00BC1A70 /* GLXPlayerMessage.h */,
+				8B0D5D17103904EE00BC1A70 /* GLXPlayerMessage.cpp */,
+			);
+			name = message;
+			sourceTree = "<group>";
+		};
+		8BD12C4A1038FF59005DBD82 /* multiplayer */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D1B1039051400BC1A70 /* common */,
+				8B0D5D1C1039051B00BC1A70 /* forwardbyserver */,
+				8B0D5D1E1039052B00BC1A70 /* lobby */,
+				8B0D5D1D1039052500BC1A70 /* p2p */,
+			);
+			name = multiplayer;
+			sourceTree = "<group>";
+		};
+		8BD12C4B1038FF6A005DBD82 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D991039067300BC1A70 /* GLXPlayerUser.h */,
+				8B0D5D971039065800BC1A70 /* GLXPlayerUser.cpp */,
+			);
+			name = user;
+			sourceTree = "<group>";
+		};
+		8BD12C4C1038FF70005DBD82 /* youtube */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5D9F103906A200BC1A70 /* GLXPlayerYoutube.h */,
+				8B0D5D9B1039068B00BC1A70 /* GLXPlayerYoutube.cpp */,
+			);
+			name = youtube;
+			sourceTree = "<group>";
+		};
+		8BD12C4E10390143005DBD82 /* XMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D5DBB103924EA00BC1A70 /* rss.h */,
+				8B0D5DBC103924EA00BC1A70 /* SlimXml.h */,
+				8BD12C501039019B005DBD82 /* rss.cpp */,
+				8BD12C521039019B005DBD82 /* SlimXml.cpp */,
+			);
+			name = XMLParser;
+			sourceTree = "<group>";
+		};
+		8BD12C4F1039014E005DBD82 /* zlib */ = {
+			isa = PBXGroup;
+			children = (
+				8BD12C58103901C3005DBD82 /* adler32.c */,
+				8BD12C59103901C3005DBD82 /* compress.c */,
+				8BD12C5A103901C3005DBD82 /* crc32.c */,
+				8BD12C5B103901C3005DBD82 /* crc32.h */,
+				8BD12C5C103901C3005DBD82 /* deflate.c */,
+				8BD12C5D103901C3005DBD82 /* deflate.h */,
+				8BD12C5E103901C3005DBD82 /* gzio.c */,
+				8BD12C5F103901C3005DBD82 /* infback.c */,
+				8BD12C60103901C3005DBD82 /* inffast.c */,
+				8BD12C61103901C3005DBD82 /* inffast.h */,
+				8BD12C62103901C3005DBD82 /* inffixed.h */,
+				8BD12C63103901C3005DBD82 /* inflate.c */,
+				8BD12C64103901C3005DBD82 /* inflate.h */,
+				8BD12C65103901C3005DBD82 /* inftrees.c */,
+				8BD12C66103901C3005DBD82 /* inftrees.h */,
+				8BD12C67103901C3005DBD82 /* trees.c */,
+				8BD12C68103901C3005DBD82 /* trees.h */,
+				8BD12C69103901C3005DBD82 /* uncompr.c */,
+				8BD12C6A103901C3005DBD82 /* zconf.h */,
+				8BD12C6B103901C3005DBD82 /* zconf.in.h */,
+				8BD12C6C103901C3005DBD82 /* zlib.h */,
+				8BD12C6D103901C3005DBD82 /* zutil.c */,
+				8BD12C6E103901C3005DBD82 /* zutil.h */,
+			);
+			name = zlib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* libGLXPlayer_Prefix.pch in Headers */,
+				8BD12C72103901C3005DBD82 /* crc32.h in Headers */,
+				8BD12C74103901C3005DBD82 /* deflate.h in Headers */,
+				8BD12C78103901C3005DBD82 /* inffast.h in Headers */,
+				8BD12C79103901C3005DBD82 /* inffixed.h in Headers */,
+				8BD12C7B103901C3005DBD82 /* inflate.h in Headers */,
+				8BD12C7D103901C3005DBD82 /* inftrees.h in Headers */,
+				8BD12C7F103901C3005DBD82 /* trees.h in Headers */,
+				8BD12C81103901C3005DBD82 /* zconf.h in Headers */,
+				8BD12C82103901C3005DBD82 /* zconf.in.h in Headers */,
+				8BD12C83103901C3005DBD82 /* zlib.h in Headers */,
+				8BD12C85103901C3005DBD82 /* zutil.h in Headers */,
+				8B0D5B381039024300BC1A70 /* GLXPlayerUserFriend.h in Headers */,
+				8B0D5C441039030A00BC1A70 /* adhoc.h in Headers */,
+				8B0D5C451039030A00BC1A70 /* adhoccommandprovider.h in Headers */,
+				8B0D5C461039030A00BC1A70 /* adhochandler.h in Headers */,
+				8B0D5C471039030A00BC1A70 /* annotations.h in Headers */,
+				8B0D5C481039030A00BC1A70 /* annotationshandler.h in Headers */,
+				8B0D5C491039030A00BC1A70 /* base64.h in Headers */,
+				8B0D5C4A1039030A00BC1A70 /* bookmarkhandler.h in Headers */,
+				8B0D5C4B1039030A00BC1A70 /* bookmarkstorage.h in Headers */,
+				8B0D5C4C1039030A00BC1A70 /* chatstatefilter.h in Headers */,
+				8B0D5C4D1039030A00BC1A70 /* chatstatehandler.h in Headers */,
+				8B0D5C4E1039030A00BC1A70 /* client.h in Headers */,
+				8B0D5C4F1039030A00BC1A70 /* clientbase.h in Headers */,
+				8B0D5C501039030A00BC1A70 /* component.h in Headers */,
+				8B0D5C511039030A00BC1A70 /* compressionbase.h in Headers */,
+				8B0D5C521039030A00BC1A70 /* compressiondatahandler.h in Headers */,
+				8B0D5C531039030A00BC1A70 /* compressionzlib.h in Headers */,
+				8B0D5C541039030A00BC1A70 /* connectionbase.h in Headers */,
+				8B0D5C551039030A00BC1A70 /* connectiondatahandler.h in Headers */,
+				8B0D5C561039030A00BC1A70 /* connectionhandler.h in Headers */,
+				8B0D5C571039030A00BC1A70 /* connectionhttpproxy.h in Headers */,
+				8B0D5C581039030A00BC1A70 /* connectionlistener.h in Headers */,
+				8B0D5C591039030A00BC1A70 /* connectionsocks5proxy.h in Headers */,
+				8B0D5C5A1039030A00BC1A70 /* connectiontcpbase.h in Headers */,
+				8B0D5C5B1039030A00BC1A70 /* connectiontcpclient.h in Headers */,
+				8B0D5C5C1039030A00BC1A70 /* connectiontcpserver.h in Headers */,
+				8B0D5C5D1039030A00BC1A70 /* dataform.h in Headers */,
+				8B0D5C5E1039030A00BC1A70 /* dataformbase.h in Headers */,
+				8B0D5C5F1039030A00BC1A70 /* dataformfield.h in Headers */,
+				8B0D5C601039030A00BC1A70 /* dataformitem.h in Headers */,
+				8B0D5C611039030A00BC1A70 /* dataformreported.h in Headers */,
+				8B0D5C621039030A00BC1A70 /* delayeddelivery.h in Headers */,
+				8B0D5C631039030A00BC1A70 /* disco.h in Headers */,
+				8B0D5C641039030A00BC1A70 /* discohandler.h in Headers */,
+				8B0D5C651039030A00BC1A70 /* disconodehandler.h in Headers */,
+				8B0D5C661039030A00BC1A70 /* dns.h in Headers */,
+				8B0D5C671039030A00BC1A70 /* flexoff.h in Headers */,
+				8B0D5C681039030A00BC1A70 /* flexoffhandler.h in Headers */,
+				8B0D5C691039030A00BC1A70 /* gloox.h in Headers */,
+				8B0D5C6A1039030A00BC1A70 /* gpgencrypted.h in Headers */,
+				8B0D5C6B1039030A00BC1A70 /* gpgsigned.h in Headers */,
+				8B0D5C6C1039030A00BC1A70 /* inbandbytestream.h in Headers */,
+				8B0D5C6D1039030A00BC1A70 /* inbandbytestreamdatahandler.h in Headers */,
+				8B0D5C6E1039030A00BC1A70 /* inbandbytestreamhandler.h in Headers */,
+				8B0D5C6F1039030A00BC1A70 /* inbandbytestreammanager.h in Headers */,
+				8B0D5C701039030A00BC1A70 /* instantmucroom.h in Headers */,
+				8B0D5C711039030A00BC1A70 /* iqhandler.h in Headers */,
+				8B0D5C721039030A00BC1A70 /* jid.h in Headers */,
+				8B0D5C731039030A00BC1A70 /* lastactivity.h in Headers */,
+				8B0D5C741039030A00BC1A70 /* lastactivityhandler.h in Headers */,
+				8B0D5C751039030A00BC1A70 /* loghandler.h in Headers */,
+				8B0D5C761039030A00BC1A70 /* logsink.h in Headers */,
+				8B0D5C771039030A00BC1A70 /* macros.h in Headers */,
+				8B0D5C781039030A00BC1A70 /* md5.h in Headers */,
+				8B0D5C791039030A00BC1A70 /* messageeventfilter.h in Headers */,
+				8B0D5C7A1039030A00BC1A70 /* messageeventhandler.h in Headers */,
+				8B0D5C7B1039030A00BC1A70 /* messagefilter.h in Headers */,
+				8B0D5C7C1039030A00BC1A70 /* messagehandler.h in Headers */,
+				8B0D5C7D1039030A00BC1A70 /* messagesession.h in Headers */,
+				8B0D5C7E1039030A00BC1A70 /* messagesessionhandler.h in Headers */,
+				8B0D5C7F1039030A00BC1A70 /* mucinvitationhandler.h in Headers */,
+				8B0D5C801039030A00BC1A70 /* mucmessagesession.h in Headers */,
+				8B0D5C811039030A00BC1A70 /* mucroom.h in Headers */,
+				8B0D5C821039030A00BC1A70 /* mucroomconfighandler.h in Headers */,
+				8B0D5C831039030A00BC1A70 /* mucroomhandler.h in Headers */,
+				8B0D5C841039030A00BC1A70 /* mutex.h in Headers */,
+				8B0D5C851039030A00BC1A70 /* mutexguard.h in Headers */,
+				8B0D5C861039030A00BC1A70 /* nonsaslauth.h in Headers */,
+				8B0D5C871039030A00BC1A70 /* oob.h in Headers */,
+				8B0D5C881039030A00BC1A70 /* parser.h in Headers */,
+				8B0D5C891039030A00BC1A70 /* prep.h in Headers */,
+				8B0D5C8A1039030A00BC1A70 /* presencehandler.h in Headers */,
+				8B0D5C8B1039030A00BC1A70 /* privacyitem.h in Headers */,
+				8B0D5C8C1039030A00BC1A70 /* privacylisthandler.h in Headers */,
+				8B0D5C8D1039030A00BC1A70 /* privacymanager.h in Headers */,
+				8B0D5C8E1039030A00BC1A70 /* privatexml.h in Headers */,
+				8B0D5C8F1039030A00BC1A70 /* privatexmlhandler.h in Headers */,
+				8B0D5C901039030A00BC1A70 /* registration.h in Headers */,
+				8B0D5C911039030A00BC1A70 /* registrationhandler.h in Headers */,
+				8B0D5C921039030A00BC1A70 /* resource.h in Headers */,
+				8B0D5C931039030A00BC1A70 /* rosteritem.h in Headers */,
+				8B0D5C941039030A00BC1A70 /* rosterlistener.h in Headers */,
+				8B0D5C951039030A00BC1A70 /* rostermanager.h in Headers */,
+				8B0D5C961039030A00BC1A70 /* search.h in Headers */,
+				8B0D5C971039030A00BC1A70 /* searchhandler.h in Headers */,
+				8B0D5C981039030A00BC1A70 /* sha.h in Headers */,
+				8B0D5C991039030A00BC1A70 /* sihandler.h in Headers */,
+				8B0D5C9A1039030A00BC1A70 /* simanager.h in Headers */,
+				8B0D5C9B1039030A00BC1A70 /* siprofileft.h in Headers */,
+				8B0D5C9C1039030A00BC1A70 /* siprofilefthandler.h in Headers */,
+				8B0D5C9D1039030A00BC1A70 /* siprofilehandler.h in Headers */,
+				8B0D5C9E1039030A00BC1A70 /* socks5bytestream.h in Headers */,
+				8B0D5C9F1039030A00BC1A70 /* socks5bytestreamdatahandler.h in Headers */,
+				8B0D5CA01039030A00BC1A70 /* socks5bytestreamhandler.h in Headers */,
+				8B0D5CA11039030A00BC1A70 /* socks5bytestreammanager.h in Headers */,
+				8B0D5CA21039030A00BC1A70 /* socks5bytestreamserver.h in Headers */,
+				8B0D5CA31039030A00BC1A70 /* stanza.h in Headers */,
+				8B0D5CA41039030A00BC1A70 /* stanzaextension.h in Headers */,
+				8B0D5CA51039030A00BC1A70 /* stanzaextensionfactory.h in Headers */,
+				8B0D5CA61039030A00BC1A70 /* statisticshandler.h in Headers */,
+				8B0D5CA71039030A00BC1A70 /* subscriptionhandler.h in Headers */,
+				8B0D5CA81039030A00BC1A70 /* tag.h in Headers */,
+				8B0D5CA91039030A00BC1A70 /* taghandler.h in Headers */,
+				8B0D5CAA1039030A00BC1A70 /* tlsbase.h in Headers */,
+				8B0D5CAB1039030A00BC1A70 /* tlsdefault.h in Headers */,
+				8B0D5CAC1039030A00BC1A70 /* tlsgnutlsbase.h in Headers */,
+				8B0D5CAD1039030A00BC1A70 /* tlsgnutlsclient.h in Headers */,
+				8B0D5CAE1039030A00BC1A70 /* tlsgnutlsclientanon.h in Headers */,
+				8B0D5CAF1039030A00BC1A70 /* tlsgnutlsserveranon.h in Headers */,
+				8B0D5CB01039030A00BC1A70 /* tlshandler.h in Headers */,
+				8B0D5CB11039030A00BC1A70 /* tlsopenssl.h in Headers */,
+				8B0D5CB21039030A00BC1A70 /* tlsschannel.h in Headers */,
+				8B0D5CB31039030A00BC1A70 /* uniquemucroom.h in Headers */,
+				8B0D5CB41039030A00BC1A70 /* vcard.h in Headers */,
+				8B0D5CB51039030A00BC1A70 /* vcardhandler.h in Headers */,
+				8B0D5CB61039030A00BC1A70 /* vcardmanager.h in Headers */,
+				8B0D5CB71039030A00BC1A70 /* vcardupdate.h in Headers */,
+				8B0D5CB81039030A00BC1A70 /* xdelayeddelivery.h in Headers */,
+				8B0D5CBA1039032700BC1A70 /* config.h in Headers */,
+				8B0D5CE11039037600BC1A70 /* GLXPlayerChat.h in Headers */,
+				8B0D5CE21039037600BC1A70 /* GLXPlayerChatDiscoverHandler.h in Headers */,
+				8B0D5CE31039037600BC1A70 /* GLXPlayerChatEventHandler.h in Headers */,
+				8B0D5CE41039037600BC1A70 /* GLXPlayerChatMessageHandler.h in Headers */,
+				8B0D5CE51039037600BC1A70 /* GLXPlayerChatObserver.h in Headers */,
+				8B0D5CE61039037600BC1A70 /* GLXPlayerChatRoom.h in Headers */,
+				8B0D5CE71039037600BC1A70 /* GLXPlayerChatRoomHandler.h in Headers */,
+				8B0D5CE81039037600BC1A70 /* GLXPlayerChatRoomList.h in Headers */,
+				8B0D5CE91039037600BC1A70 /* GLXPlayerChatRoomObserver.h in Headers */,
+				8B0D5CEA1039037600BC1A70 /* GLXPlayerChatRoster.h in Headers */,
+				8B0D5CEB1039037600BC1A70 /* GLXPlayerChatRosterItem.h in Headers */,
+				8B0D5CEC1039037600BC1A70 /* GLXPlayerChatSession.h in Headers */,
+				8B0D5CED1039037600BC1A70 /* GLXPlayerChatSessionHandler.h in Headers */,
+				8B0D5CEE1039037600BC1A70 /* GLXPlayerChatStateHandler.h in Headers */,
+				8B0D5D00103903D200BC1A70 /* GLXPlayerComponent.h in Headers */,
+				8B0D5D01103903D200BC1A70 /* GLXPlayerHttp.h in Headers */,
+				8B0D5D02103903D200BC1A70 /* GLXPlayerObserver.h in Headers */,
+				8B0D5D03103903D200BC1A70 /* GLXPlayerSocket.h in Headers */,
+				8B0D5D04103903D200BC1A70 /* GLXPlayerSocketFactory.h in Headers */,
+				8B0D5D05103903D200BC1A70 /* GLXPlayerSocketObserver.h in Headers */,
+				8B0D5D06103903D200BC1A70 /* GLXPlayerWebComponent.h in Headers */,
+				8B0D5D0A1039042000BC1A70 /* GLXPlayerDownload.h in Headers */,
+				8B0D5D0E1039045800BC1A70 /* GLXPlayerLeaderboard.h in Headers */,
+				8B0D5D12103904AB00BC1A70 /* GLXPlayerLobby.h in Headers */,
+				8B0D5D16103904D500BC1A70 /* GLXPlayerLogin.h in Headers */,
+				8B0D5D1A103904FF00BC1A70 /* GLXPlayerMessage.h in Headers */,
+				8B0D5D331039057300BC1A70 /* Connection.h in Headers */,
+				8B0D5D341039057300BC1A70 /* DataBuilder.h in Headers */,
+				8B0D5D351039057300BC1A70 /* DataPacket.h in Headers */,
+				8B0D5D361039057300BC1A70 /* DefaultDataPacket.h in Headers */,
+				8B0D5D371039057300BC1A70 /* GLXPlayerMPBase.h in Headers */,
+				8B0D5D381039057300BC1A70 /* GLXPlayerMPBaseObserver.h in Headers */,
+				8B0D5D391039057300BC1A70 /* QueryCondition.h in Headers */,
+				8B0D5D3A1039057300BC1A70 /* XIPAddress.h in Headers */,
+				8B0D5D3E103905A800BC1A70 /* GLXPlayerMPbyServer.h in Headers */,
+				8B0D5D4B103905E200BC1A70 /* ConnectionLobby.h in Headers */,
+				8B0D5D4C103905E200BC1A70 /* DataPacketLobby.h in Headers */,
+				8B0D5D4D103905E200BC1A70 /* GLXPlayerMPLobby.h in Headers */,
+				8B0D5D4E103905E200BC1A70 /* LobbyParameterAndQuery.h in Headers */,
+				8B0D5D5F1039061800BC1A70 /* GLXPlayerMPbyP2P.h in Headers */,
+				8B0D5D601039061800BC1A70 /* GLXPlayerUpnpObserver.h in Headers */,
+				8B0D5D611039061800BC1A70 /* OnlineGameRoom.h in Headers */,
+				8B0D5D621039061800BC1A70 /* OnlineGameRoomList.h in Headers */,
+				8B0D5D631039061800BC1A70 /* OnlinePlayer.h in Headers */,
+				8B0D5D641039061800BC1A70 /* OnlinePlayerList.h in Headers */,
+				8B0D5D7F1039063800BC1A70 /* bsdqueue.h in Headers */,
+				8B0D5D801039063800BC1A70 /* declspec.h in Headers */,
+				8B0D5D821039063800BC1A70 /* igd_desc_parse.h in Headers */,
+				8B0D5D841039063800BC1A70 /* minisoap.h in Headers */,
+				8B0D5D861039063800BC1A70 /* minissdpc.h in Headers */,
+				8B0D5D881039063800BC1A70 /* miniupnpc.h in Headers */,
+				8B0D5D8A1039063800BC1A70 /* miniwget.h in Headers */,
+				8B0D5D8C1039063800BC1A70 /* minixml.h in Headers */,
+				8B0D5D8E1039063800BC1A70 /* PortMapper.h in Headers */,
+				8B0D5D901039063800BC1A70 /* upnpcommands.h in Headers */,
+				8B0D5D921039063800BC1A70 /* upnperrors.h in Headers */,
+				8B0D5D941039063800BC1A70 /* upnpreplyparse.h in Headers */,
+				8B0D5D961039063800BC1A70 /* upnpThread.h in Headers */,
+				8B0D5D9A1039067300BC1A70 /* GLXPlayerUser.h in Headers */,
+				8B0D5DA1103906A200BC1A70 /* GLXPlayerYoutube.h in Headers */,
+				8B0D5DAA1039075200BC1A70 /* IPhoneSocket.h in Headers */,
+				8B0D5DAB1039075200BC1A70 /* Porting.h in Headers */,
+				8B0D5DAC1039075200BC1A70 /* XPlayer_defines.h in Headers */,
+				8B0D5DBD103924EA00BC1A70 /* rss.h in Headers */,
+				8B0D5DBE103924EA00BC1A70 /* SlimXml.h in Headers */,
+				8B59598510451800009C3941 /* Platform_iPhone.h in Headers */,
+				8BA04D131047C2060050F842 /* GLXPlayerSereverConfig.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* libGLXPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "libGLXPlayer" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libGLXPlayer;
+			productName = libGLXPlayer;
+			productReference = D2AAC07E0554694100DB518D /* libGLXPlayerDebug.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "libGLXPlayer" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* libGLXPlayer */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* libGLXPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD12C541039019B005DBD82 /* rss.cpp in Sources */,
+				8BD12C561039019B005DBD82 /* SlimXml.cpp in Sources */,
+				8BD12C6F103901C3005DBD82 /* adler32.c in Sources */,
+				8BD12C70103901C3005DBD82 /* compress.c in Sources */,
+				8BD12C71103901C3005DBD82 /* crc32.c in Sources */,
+				8BD12C73103901C3005DBD82 /* deflate.c in Sources */,
+				8BD12C75103901C3005DBD82 /* gzio.c in Sources */,
+				8BD12C76103901C3005DBD82 /* infback.c in Sources */,
+				8BD12C77103901C3005DBD82 /* inffast.c in Sources */,
+				8BD12C7A103901C3005DBD82 /* inflate.c in Sources */,
+				8BD12C7C103901C3005DBD82 /* inftrees.c in Sources */,
+				8BD12C7E103901C3005DBD82 /* trees.c in Sources */,
+				8BD12C80103901C3005DBD82 /* uncompr.c in Sources */,
+				8BD12C84103901C3005DBD82 /* zutil.c in Sources */,
+				8B0D5B361039022D00BC1A70 /* GLXPlayerUserFriend.cpp in Sources */,
+				8B0D5B85103902E700BC1A70 /* adhoc.cpp in Sources */,
+				8B0D5B86103902E700BC1A70 /* annotations.cpp in Sources */,
+				8B0D5B87103902E700BC1A70 /* base64.cpp in Sources */,
+				8B0D5B88103902E700BC1A70 /* bookmarkstorage.cpp in Sources */,
+				8B0D5B89103902E700BC1A70 /* chatstatefilter.cpp in Sources */,
+				8B0D5B8A103902E700BC1A70 /* client.cpp in Sources */,
+				8B0D5B8B103902E700BC1A70 /* clientbase.cpp in Sources */,
+				8B0D5B8C103902E700BC1A70 /* component.cpp in Sources */,
+				8B0D5B8D103902E700BC1A70 /* compressionzlib.cpp in Sources */,
+				8B0D5B8E103902E700BC1A70 /* connectionhttpproxy.cpp in Sources */,
+				8B0D5B8F103902E700BC1A70 /* connectionsocks5proxy.cpp in Sources */,
+				8B0D5B90103902E700BC1A70 /* connectiontcpbase.cpp in Sources */,
+				8B0D5B91103902E700BC1A70 /* connectiontcpclient.cpp in Sources */,
+				8B0D5B92103902E700BC1A70 /* connectiontcpserver.cpp in Sources */,
+				8B0D5B93103902E700BC1A70 /* dataform.cpp in Sources */,
+				8B0D5B94103902E700BC1A70 /* dataformbase.cpp in Sources */,
+				8B0D5B95103902E700BC1A70 /* dataformfield.cpp in Sources */,
+				8B0D5B96103902E700BC1A70 /* dataformitem.cpp in Sources */,
+				8B0D5B97103902E700BC1A70 /* dataformreported.cpp in Sources */,
+				8B0D5B98103902E700BC1A70 /* delayeddelivery.cpp in Sources */,
+				8B0D5B99103902E700BC1A70 /* disco.cpp in Sources */,
+				8B0D5B9A103902E700BC1A70 /* dns.cpp in Sources */,
+				8B0D5B9B103902E700BC1A70 /* flexoff.cpp in Sources */,
+				8B0D5B9C103902E700BC1A70 /* gloox.cpp in Sources */,
+				8B0D5B9D103902E700BC1A70 /* gpgencrypted.cpp in Sources */,
+				8B0D5B9E103902E700BC1A70 /* gpgsigned.cpp in Sources */,
+				8B0D5B9F103902E700BC1A70 /* inbandbytestream.cpp in Sources */,
+				8B0D5BA0103902E700BC1A70 /* inbandbytestreammanager.cpp in Sources */,
+				8B0D5BA1103902E700BC1A70 /* instantmucroom.cpp in Sources */,
+				8B0D5BA2103902E700BC1A70 /* jid.cpp in Sources */,
+				8B0D5BA3103902E700BC1A70 /* lastactivity.cpp in Sources */,
+				8B0D5BA4103902E700BC1A70 /* logsink.cpp in Sources */,
+				8B0D5BA5103902E700BC1A70 /* md5.cpp in Sources */,
+				8B0D5BA6103902E700BC1A70 /* messageeventfilter.cpp in Sources */,
+				8B0D5BA7103902E700BC1A70 /* messagefilter.cpp in Sources */,
+				8B0D5BA8103902E700BC1A70 /* messagesession.cpp in Sources */,
+				8B0D5BA9103902E700BC1A70 /* mucmessagesession.cpp in Sources */,
+				8B0D5BAA103902E700BC1A70 /* mucroom.cpp in Sources */,
+				8B0D5BAB103902E700BC1A70 /* mutex.cpp in Sources */,
+				8B0D5BAC103902E700BC1A70 /* nonsaslauth.cpp in Sources */,
+				8B0D5BAD103902E700BC1A70 /* oob.cpp in Sources */,
+				8B0D5BAE103902E700BC1A70 /* parser.cpp in Sources */,
+				8B0D5BAF103902E700BC1A70 /* prep.cpp in Sources */,
+				8B0D5BB0103902E700BC1A70 /* privacyitem.cpp in Sources */,
+				8B0D5BB1103902E700BC1A70 /* privacymanager.cpp in Sources */,
+				8B0D5BB2103902E700BC1A70 /* privatexml.cpp in Sources */,
+				8B0D5BB3103902E700BC1A70 /* registration.cpp in Sources */,
+				8B0D5BB4103902E700BC1A70 /* rosteritem.cpp in Sources */,
+				8B0D5BB5103902E700BC1A70 /* rostermanager.cpp in Sources */,
+				8B0D5BB6103902E700BC1A70 /* search.cpp in Sources */,
+				8B0D5BB7103902E700BC1A70 /* sha.cpp in Sources */,
+				8B0D5BB8103902E700BC1A70 /* simanager.cpp in Sources */,
+				8B0D5BB9103902E700BC1A70 /* siprofileft.cpp in Sources */,
+				8B0D5BBA103902E700BC1A70 /* socks5bytestream.cpp in Sources */,
+				8B0D5BBB103902E700BC1A70 /* socks5bytestreammanager.cpp in Sources */,
+				8B0D5BBC103902E700BC1A70 /* socks5bytestreamserver.cpp in Sources */,
+				8B0D5BBD103902E700BC1A70 /* stanza.cpp in Sources */,
+				8B0D5BBE103902E700BC1A70 /* stanzaextensionfactory.cpp in Sources */,
+				8B0D5BBF103902E700BC1A70 /* tag.cpp in Sources */,
+				8B0D5BC0103902E700BC1A70 /* tlsdefault.cpp in Sources */,
+				8B0D5BC1103902E700BC1A70 /* tlsgnutlsbase.cpp in Sources */,
+				8B0D5BC2103902E700BC1A70 /* tlsgnutlsclient.cpp in Sources */,
+				8B0D5BC3103902E700BC1A70 /* tlsgnutlsclientanon.cpp in Sources */,
+				8B0D5BC4103902E700BC1A70 /* tlsgnutlsserveranon.cpp in Sources */,
+				8B0D5BC5103902E700BC1A70 /* tlsopenssl.cpp in Sources */,
+				8B0D5BC6103902E700BC1A70 /* tlsschannel.cpp in Sources */,
+				8B0D5BC7103902E700BC1A70 /* uniquemucroom.cpp in Sources */,
+				8B0D5BC8103902E700BC1A70 /* vcard.cpp in Sources */,
+				8B0D5BC9103902E700BC1A70 /* vcardmanager.cpp in Sources */,
+				8B0D5BCA103902E700BC1A70 /* vcardupdate.cpp in Sources */,
+				8B0D5BCB103902E700BC1A70 /* xdelayeddelivery.cpp in Sources */,
+				8B0D5CC71039035300BC1A70 /* GLXPlayerChat.cpp in Sources */,
+				8B0D5CC81039035300BC1A70 /* GLXPlayerChatDiscoverHandler.cpp in Sources */,
+				8B0D5CC91039035300BC1A70 /* GLXPlayerChatEventHandler.cpp in Sources */,
+				8B0D5CCA1039035300BC1A70 /* GLXPlayerChatMessageHandler.cpp in Sources */,
+				8B0D5CCB1039035300BC1A70 /* GLXPlayerChatRoom.cpp in Sources */,
+				8B0D5CCC1039035300BC1A70 /* GLXPlayerChatRoomHandler.cpp in Sources */,
+				8B0D5CCD1039035300BC1A70 /* GLXPlayerChatRoomList.cpp in Sources */,
+				8B0D5CCE1039035300BC1A70 /* GLXPlayerChatRoster.cpp in Sources */,
+				8B0D5CCF1039035300BC1A70 /* GLXPlayerChatRosterItem.cpp in Sources */,
+				8B0D5CD01039035300BC1A70 /* GLXPlayerChatSession.cpp in Sources */,
+				8B0D5CD11039035300BC1A70 /* GLXPlayerChatSessionHandler.cpp in Sources */,
+				8B0D5CD21039035300BC1A70 /* GLXPlayerChatStateHandler.cpp in Sources */,
+				8B0D5CF4103903B900BC1A70 /* GLXPlayerComponent.cpp in Sources */,
+				8B0D5CF5103903B900BC1A70 /* GLXPlayerHttp.cpp in Sources */,
+				8B0D5CF6103903B900BC1A70 /* GLXPlayerSocket.cpp in Sources */,
+				8B0D5CF7103903B900BC1A70 /* GLXPlayerSocketFactory.cpp in Sources */,
+				8B0D5CF8103903B900BC1A70 /* GLXPlayerWebComponent.cpp in Sources */,
+				8B0D5D081039040000BC1A70 /* GLXPlayerDownload.cpp in Sources */,
+				8B0D5D0C1039044100BC1A70 /* GLXPlayerLeaderboard.cpp in Sources */,
+				8B0D5D101039048700BC1A70 /* GLXPlayerLobby.cpp in Sources */,
+				8B0D5D14103904C200BC1A70 /* GLXPlayerLogin.cpp in Sources */,
+				8B0D5D18103904EE00BC1A70 /* GLXPlayerMessage.cpp in Sources */,
+				8B0D5D251039055600BC1A70 /* Connection.cpp in Sources */,
+				8B0D5D261039055600BC1A70 /* DataBuilder.cpp in Sources */,
+				8B0D5D271039055600BC1A70 /* DefaultDataPacket.cpp in Sources */,
+				8B0D5D281039055600BC1A70 /* GLXPlayerMPBase.cpp in Sources */,
+				8B0D5D291039055600BC1A70 /* QueryCondition.cpp in Sources */,
+				8B0D5D2A1039055600BC1A70 /* XIPAddress.cpp in Sources */,
+				8B0D5D3C1039059000BC1A70 /* GLXPlayerMPbyServer.cpp in Sources */,
+				8B0D5D43103905C800BC1A70 /* ConnectionLobby.cpp in Sources */,
+				8B0D5D44103905C800BC1A70 /* DataPacketLobby.cpp in Sources */,
+				8B0D5D45103905C800BC1A70 /* GLXPlayerMPLobby.cpp in Sources */,
+				8B0D5D46103905C800BC1A70 /* LobbyParameterAndQuery.cpp in Sources */,
+				8B0D5D541039060300BC1A70 /* GLXPlayerMPbyP2P.cpp in Sources */,
+				8B0D5D551039060300BC1A70 /* OnlineGameRoom.cpp in Sources */,
+				8B0D5D561039060300BC1A70 /* OnlineGameRoomList.cpp in Sources */,
+				8B0D5D571039060300BC1A70 /* OnlinePlayer.cpp in Sources */,
+				8B0D5D581039060300BC1A70 /* OnlinePlayerList.cpp in Sources */,
+				8B0D5D811039063800BC1A70 /* igd_desc_parse.c in Sources */,
+				8B0D5D831039063800BC1A70 /* minisoap.c in Sources */,
+				8B0D5D851039063800BC1A70 /* minissdpc.c in Sources */,
+				8B0D5D871039063800BC1A70 /* miniupnpc.c in Sources */,
+				8B0D5D891039063800BC1A70 /* miniwget.c in Sources */,
+				8B0D5D8B1039063800BC1A70 /* minixml.c in Sources */,
+				8B0D5D8D1039063800BC1A70 /* PortMapper.cpp in Sources */,
+				8B0D5D8F1039063800BC1A70 /* upnpcommands.c in Sources */,
+				8B0D5D911039063800BC1A70 /* upnperrors.c in Sources */,
+				8B0D5D931039063800BC1A70 /* upnpreplyparse.c in Sources */,
+				8B0D5D951039063800BC1A70 /* upnpThread.cpp in Sources */,
+				8B0D5D981039065800BC1A70 /* GLXPlayerUser.cpp in Sources */,
+				8B0D5D9D1039068B00BC1A70 /* GLXPlayerYoutube.cpp in Sources */,
+				8B0D5DA41039071800BC1A70 /* IPhoneSocket.cpp in Sources */,
+				8B0D5DA61039073A00BC1A70 /* Porting.cpp in Sources */,
+				8B59598610451800009C3941 /* Platform_iPhone.mm in Sources */,
+				8BA04D111047C1F30050F842 /* GLXPlayerSereverConfig.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/libGLXPlayer.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = libGLXPlayer_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONE,
+					GLOOX_EXPORTS,
+					_DEBUG,
+				);
+				GCC_VERSION = 4.2;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../src/Online/Chat/gloox_lib\"",
+				);
+				PRODUCT_NAME = GLXPlayerDebug;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/libGLXPlayer.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = libGLXPlayer_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONE,
+					GLOOX_EXPORTS,
+				);
+				GCC_VERSION = 4.2;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../src/Online/Chat/gloox_lib\"",
+				);
+				PRODUCT_NAME = GLXPlayerRelease;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "libGLXPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "libGLXPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

@@ -1,0 +1,64 @@
+///////////////////////////////////////////////////////////////////////
+
+#pragma once
+
+///////////////////////////////////////////////////////////////////////
+
+#include "Core/irrlicht.h"
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+enum EWeaponType
+{
+	WT_Gate,
+	WT_Hydra,
+	WT_Fireball,
+	WT_Iceball,
+	WT_Griffin,
+	WT_Spell,
+	WT_Count,
+	WT_Invalid = -1,
+	WT_First = 0,
+	WT_Last = WT_Count - 1,
+};
+
+enum EWeaponLevel
+{
+	WL_1,
+	WL_2,
+	WL_3,
+	WL_Count,
+	WL_None = -1,
+	WL_First = 0,
+	WL_Last = WL_Count - 1,
+};
+
+enum ESpellType
+{
+	ST_Boulder,
+	ST_Lightning,
+	ST_GhostArmy,
+	ST_Tornado,
+	ST_Count,
+	ST_None = -1,
+};
+
+////////////////////////////////////////////////////////////////////////////////
+
+struct SUpgradeInfo
+{
+	int				getPriceGold() const;
+	int				getPriceSouls() const;
+	IAttributes*	getAttributes() const;
+
+	int		Name;
+	int		Description;
+	stringw UpgradeType;
+	stringw	UpgradeID;
+};
+
+const SUpgradeInfo& GetWeaponInfo(EWeaponType weapon, int level);
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

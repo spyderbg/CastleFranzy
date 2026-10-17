@@ -1,0 +1,3023 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<project-file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.radixlive.com/public/schemas/radix/1.0/Project.xsd">
+	<project uuid="{3741B45D-69D6-4722-A7D2-1C42E21B82C2}">
+		<version>1</version>
+		<display-name>Wii C++ Static Library</display-name>
+		<aliases>
+			<alias uuid="{C7041DD1-9E80-4343-9A85-B512EFB67837}">UUID_ProjectFilesGroup</alias>
+			<alias uuid="{B97971CD-429D-412B-AA96-1C450A21E53D}">CATID_PromotedFiles</alias>
+			<alias uuid="{101B1F51-64F4-4F61-8325-B79F0341E732}">Templates</alias>
+			<alias uuid="{4C245B36-11F1-4f8d-B335-9D0D3796FC1F}">PLATFORM_RevolutionSettings</alias>
+			<alias uuid="{69AC1A2A-F39A-4f4c-838A-E63496F95758}">UUID_TargetCommon</alias>
+			<alias uuid="{b6fbe68c-b39d-11da-a3c8-00c04f28d986}">UUID_BuildAllLinkerCommon</alias>
+			<alias uuid="{69fd0c97-a3f4-11da-882e-00c04f28d986}">BuildFslCompilerCommon40</alias>
+			<alias uuid="{121E6F7E-B39E-11DA-9B03-00C04F28D986}">Dictionary</alias>
+			<alias uuid="{B364993C-3B1D-47EB-8A85-792F1F216AD7}">Dictionary2</alias>
+			<alias uuid="{A92DF2FD-A4CE-11DA-8C4E-00C04F28D986}">Dictionary3</alias>
+		</aliases>
+		<settings>
+			<setting entry="toolChain" uuid-alias="PLATFORM_RevolutionSettings">
+				<simple>library.static</simple>
+			</setting>
+			<setting entry="dynamicTargetsPicklist" uuid-alias="UUID_TargetCommon">
+				<simple>{B2968A78-4023-4093-A4CE-A21147F39630}</simple>
+			</setting>
+			<!-- C++ specific settings -->
+			<setting entry="forceC99Extensions" uuid-alias="BuildFslCompilerCommon40">
+				<simple>false</simple>
+			</setting>
+			<setting entry="booleans" uuid-alias="BuildFslCompilerCommon40">
+				<simple>true</simple>
+			</setting>
+			<setting entry="wchar_t" uuid-alias="BuildFslCompilerCommon40">
+				<simple>true</simple>
+			</setting>
+			<!-- End of C++ specific settings -->
+			<setting entry="systemIncludes" uuid-alias="Dictionary">
+				<array>
+					<simple>${project}\..\..\..\include</simple>
+					<simple>${project}\..\zlib</simple>
+					<simple>${project}\..\libpng</simple>
+					<simple>${project}\..\jpeglib</simple>
+					<simple>${project}\..\freetype\include</simple>
+					<simple>${env-var:NW4R_ROOT}\Library\include</simple>
+				</array>
+			</setting>
+			<setting entry="userCompileSwitches" uuid-alias="Dictionary">
+				<simple>-D_WII -D_IRR_STATIC_LIB_ -DPNG_NO_CONST</simple>
+			</setting>
+			<setting entry="intermediateOutput" uuid-alias="Dictionary2">
+				<simple>${project}/../obj/IrrWiiDebug/${TargetName}</simple>
+			</setting>
+			<setting entry="finalOutputDir" uuid-alias="Dictionary2">
+				<simple>${Project}/</simple>
+			</setting>
+			<setting entry="gccExtensions" uuid-alias="BuildFslCompilerCommon40">
+				<simple>false</simple>
+			</setting>
+			<setting entry="standardKeywords" uuid-alias="BuildFslCompilerCommon40">
+				<simple>false</simple>
+			</setting>
+			<setting entry="optimizationLevel" uuid-alias="BuildFslCompilerCommon40">
+				<simple>4</simple>
+			</setting>
+			<setting entry="optimizationSpaceOrSpeed" uuid-alias="BuildFslCompilerCommon40">
+				<simple>2</simple>
+			</setting>
+			<setting entry="inlineDepth" uuid-alias="BuildFslCompilerCommon40">
+				<simple>9</simple>
+			</setting>
+			<setting entry="inlineAuto" uuid-alias="BuildFslCompilerCommon40">
+				<simple>true</simple>
+			</setting>
+			<setting entry="stringsPooling" uuid-alias="BuildFslCompilerCommon40">
+				<simple>false</simple>
+			</setting>
+			<setting entry="finalOutputName" uuid-alias="Dictionary2">
+				<simple>irrlicht.debug.a</simple>
+			</setting>
+			<setting entry="projectLinkType" uuid-alias="Dictionary3">
+				<simple>1</simple>
+			</setting>
+			<setting entry="warningsUnusedArgs" uuid-alias="BuildFslCompilerCommon40">
+				<simple>false</simple>
+			</setting>
+			<setting entry="warningsUnusedVars" uuid-alias="BuildFslCompilerCommon40">
+				<simple>false</simple>
+			</setting>
+			<setting entry="warningsSignedUnsigned" uuid-alias="BuildFslCompilerCommon40">
+				<simple>false</simple>
+			</setting>
+		</settings>
+		<files>
+			<file file-tag="fsl-4.x.Nintendo-Wii-3.1.x.rxtpo:1">
+				<path>${ProductInstallRoot}/Nintendo Revolution/Templates/Settings/fsl-4.x.Nintendo-Wii-3.1.x.rxtpo</path>
+			</file>
+			<file file-tag="CZBuffer.cpp:1">
+				<path>${Project}/../CZBuffer.cpp</path>
+			</file>
+			<file file-tag="CZipReader.cpp:1">
+				<path>${Project}/../CZipReader.cpp</path>
+			</file>
+			<file file-tag="IBurningShader.cpp:1">
+				<path>${Project}/../IBurningShader.cpp</path>
+			</file>
+			<file file-tag="Irrlicht.cpp:1">
+				<path>${Project}/../Irrlicht.cpp</path>
+			</file>
+			<file file-tag="irrXML.cpp:1">
+				<path>${Project}/../irrXML.cpp</path>
+			</file>
+			<file file-tag="os.cpp:1">
+				<path>${Project}/../os.cpp</path>
+			</file>
+			<file file-tag="BuiltInFont.h:1">
+				<path>${Project}/../BuiltInFont.h</path>
+			</file>
+			<file file-tag="C3DSMeshFileLoader.h:1">
+				<path>${Project}/../C3DSMeshFileLoader.h</path>
+			</file>
+			<file file-tag="CAnimatedMeshMD2.h:1">
+				<path>${Project}/../CAnimatedMeshMD2.h</path>
+			</file>
+			<file file-tag="CAnimatedMeshMD3.h:1">
+				<path>${Project}/../CAnimatedMeshMD3.h</path>
+			</file>
+			<file file-tag="CAnimatedMeshSceneNode.h:1">
+				<path>${Project}/../CAnimatedMeshSceneNode.h</path>
+			</file>
+			<file file-tag="CAttributeImpl.h:1">
+				<path>${Project}/../CAttributeImpl.h</path>
+			</file>
+			<file file-tag="CAttributes.h:1">
+				<path>${Project}/../CAttributes.h</path>
+			</file>
+			<file file-tag="CB3DMeshFileLoader.h:1">
+				<path>${Project}/../CB3DMeshFileLoader.h</path>
+			</file>
+			<file file-tag="CBillboardSceneNode.h:1">
+				<path>${Project}/../CBillboardSceneNode.h</path>
+			</file>
+			<file file-tag="CBoneSceneNode.h:1">
+				<path>${Project}/../CBoneSceneNode.h</path>
+			</file>
+			<file file-tag="CBSPMeshFileLoader.h:1">
+				<path>${Project}/../CBSPMeshFileLoader.h</path>
+			</file>
+			<file file-tag="CCameraFPSSceneNode.h:1">
+				<path>${Project}/../CCameraFPSSceneNode.h</path>
+			</file>
+			<file file-tag="CCameraMayaSceneNode.h:1">
+				<path>${Project}/../CCameraMayaSceneNode.h</path>
+			</file>
+			<file file-tag="CCameraSceneNode.h:1">
+				<path>${Project}/../CCameraSceneNode.h</path>
+			</file>
+			<file file-tag="CColladaFileLoader.h:1">
+				<path>${Project}/../CColladaFileLoader.h</path>
+			</file>
+			<file file-tag="CColladaMeshWriter.h:1">
+				<path>${Project}/../CColladaMeshWriter.h</path>
+			</file>
+			<file file-tag="CColorConverter.h:1">
+				<path>${Project}/../CColorConverter.h</path>
+			</file>
+			<file file-tag="CCSMLoader.h:1">
+				<path>${Project}/../CCSMLoader.h</path>
+			</file>
+			<file file-tag="CCubeSceneNode.h:1">
+				<path>${Project}/../CCubeSceneNode.h</path>
+			</file>
+			<file file-tag="CD3D8Driver.h:1">
+				<path>${Project}/../CD3D8Driver.h</path>
+			</file>
+			<file file-tag="CD3D8MaterialRenderer.h:1">
+				<path>${Project}/../CD3D8MaterialRenderer.h</path>
+			</file>
+			<file file-tag="CD3D8NormalMapRenderer.h:1">
+				<path>${Project}/../CD3D8NormalMapRenderer.h</path>
+			</file>
+			<file file-tag="CD3D8ParallaxMapRenderer.h:1">
+				<path>${Project}/../CD3D8ParallaxMapRenderer.h</path>
+			</file>
+			<file file-tag="CD3D8ShaderMaterialRenderer.h:1">
+				<path>${Project}/../CD3D8ShaderMaterialRenderer.h</path>
+			</file>
+			<file file-tag="CD3D8Texture.h:1">
+				<path>${Project}/../CD3D8Texture.h</path>
+			</file>
+			<file file-tag="CD3D9Driver.h:1">
+				<path>${Project}/../CD3D9Driver.h</path>
+			</file>
+			<file file-tag="CD3D9HLSLMaterialRenderer.h:1">
+				<path>${Project}/../CD3D9HLSLMaterialRenderer.h</path>
+			</file>
+			<file file-tag="CD3D9MaterialRenderer.h:1">
+				<path>${Project}/../CD3D9MaterialRenderer.h</path>
+			</file>
+			<file file-tag="CD3D9NormalMapRenderer.h:1">
+				<path>${Project}/../CD3D9NormalMapRenderer.h</path>
+			</file>
+			<file file-tag="CD3D9ParallaxMapRenderer.h:1">
+				<path>${Project}/../CD3D9ParallaxMapRenderer.h</path>
+			</file>
+			<file file-tag="CD3D9ShaderMaterialRenderer.h:1">
+				<path>${Project}/../CD3D9ShaderMaterialRenderer.h</path>
+			</file>
+			<file file-tag="CD3D9Texture.h:1">
+				<path>${Project}/../CD3D9Texture.h</path>
+			</file>
+			<file file-tag="CDefaultGUIElementFactory.h:1">
+				<path>${Project}/../CDefaultGUIElementFactory.h</path>
+			</file>
+			<file file-tag="CDefaultSceneNodeAnimatorFactory.h:1">
+				<path>${Project}/../CDefaultSceneNodeAnimatorFactory.h</path>
+			</file>
+			<file file-tag="CDefaultSceneNodeFactory.h:1">
+				<path>${Project}/../CDefaultSceneNodeFactory.h</path>
+			</file>
+			<file file-tag="CDepthBuffer.h:1">
+				<path>${Project}/../CDepthBuffer.h</path>
+			</file>
+			<file file-tag="CDMFLoader.h:1">
+				<path>${Project}/../CDMFLoader.h</path>
+			</file>
+			<file file-tag="CDummyTransformationSceneNode.h:1">
+				<path>${Project}/../CDummyTransformationSceneNode.h</path>
+			</file>
+			<file file-tag="CEmptySceneNode.h:1">
+				<path>${Project}/../CEmptySceneNode.h</path>
+			</file>
+			<file file-tag="CFileList.h:1">
+				<path>${Project}/../CFileList.h</path>
+			</file>
+			<file file-tag="CFileSystem.h:1">
+				<path>${Project}/../CFileSystem.h</path>
+			</file>
+			<file file-tag="CFPSCounter.h:1">
+				<path>${Project}/../CFPSCounter.h</path>
+			</file>
+			<file file-tag="CGeometryCreator.h:1">
+				<path>${Project}/../CGeometryCreator.h</path>
+			</file>
+			<file file-tag="CGUIButton.h:1">
+				<path>${Project}/../CGUIButton.h</path>
+			</file>
+			<file file-tag="CGUICheckBox.h:1">
+				<path>${Project}/../CGUICheckBox.h</path>
+			</file>
+			<file file-tag="CGUIColorSelectDialog.h:1">
+				<path>${Project}/../CGUIColorSelectDialog.h</path>
+			</file>
+			<file file-tag="CGUIComboBox.h:1">
+				<path>${Project}/../CGUIComboBox.h</path>
+			</file>
+			<file file-tag="CGUIContextMenu.h:1">
+				<path>${Project}/../CGUIContextMenu.h</path>
+			</file>
+			<file file-tag="CGUIEditBox.h:1">
+				<path>${Project}/../CGUIEditBox.h</path>
+			</file>
+			<file file-tag="CGUIEnvironment.h:1">
+				<path>${Project}/../CGUIEnvironment.h</path>
+			</file>
+			<file file-tag="CGUIFileOpenDialog.h:1">
+				<path>${Project}/../CGUIFileOpenDialog.h</path>
+			</file>
+			<file file-tag="CGUIFont.h:1">
+				<path>${Project}/../CGUIFont.h</path>
+			</file>
+			<file file-tag="CGUIImage.h:1">
+				<path>${Project}/../CGUIImage.h</path>
+			</file>
+			<file file-tag="CGUIInOutFader.h:1">
+				<path>${Project}/../CGUIInOutFader.h</path>
+			</file>
+			<file file-tag="CGUIListBox.h:1">
+				<path>${Project}/../CGUIListBox.h</path>
+			</file>
+			<file file-tag="CGUIMenu.h:1">
+				<path>${Project}/../CGUIMenu.h</path>
+			</file>
+			<file file-tag="CGUIMeshViewer.h:1">
+				<path>${Project}/../CGUIMeshViewer.h</path>
+			</file>
+			<file file-tag="CGUIMessageBox.h:1">
+				<path>${Project}/../CGUIMessageBox.h</path>
+			</file>
+			<file file-tag="CGUIModalScreen.h:1">
+				<path>${Project}/../CGUIModalScreen.h</path>
+			</file>
+			<file file-tag="CGUIScrollBar.h:1">
+				<path>${Project}/../CGUIScrollBar.h</path>
+			</file>
+			<file file-tag="CGUISkin.h:1">
+				<path>${Project}/../CGUISkin.h</path>
+			</file>
+			<file file-tag="CGUISpinBox.h:1">
+				<path>${Project}/../CGUISpinBox.h</path>
+			</file>
+			<file file-tag="CGUISpriteBank.h:1">
+				<path>${Project}/../CGUISpriteBank.h</path>
+			</file>
+			<file file-tag="CGUIStaticText.h:1">
+				<path>${Project}/../CGUIStaticText.h</path>
+			</file>
+			<file file-tag="CGUITabControl.h:1">
+				<path>${Project}/../CGUITabControl.h</path>
+			</file>
+			<file file-tag="CGUIToolBar.h:1">
+				<path>${Project}/../CGUIToolBar.h</path>
+			</file>
+			<file file-tag="CGUIWindow.h:1">
+				<path>${Project}/../CGUIWindow.h</path>
+			</file>
+			<file file-tag="CImage.h:1">
+				<path>${Project}/../CImage.h</path>
+			</file>
+			<file file-tag="CImageLoaderBMP.h:1">
+				<path>${Project}/../CImageLoaderBMP.h</path>
+			</file>
+			<file file-tag="CImageLoaderJPG.h:1">
+				<path>${Project}/../CImageLoaderJPG.h</path>
+			</file>
+			<file file-tag="CImageLoaderPCX.h:1">
+				<path>${Project}/../CImageLoaderPCX.h</path>
+			</file>
+			<file file-tag="CImageLoaderPNG.h:1">
+				<path>${Project}/../CImageLoaderPNG.h</path>
+			</file>
+			<file file-tag="CImageLoaderPPM.h:1">
+				<path>${Project}/../CImageLoaderPPM.h</path>
+			</file>
+			<file file-tag="CImageLoaderPSD.h:1">
+				<path>${Project}/../CImageLoaderPSD.h</path>
+			</file>
+			<file file-tag="CImageLoaderTGA.h:1">
+				<path>${Project}/../CImageLoaderTGA.h</path>
+			</file>
+			<file file-tag="CImageWriterBMP.h:1">
+				<path>${Project}/../CImageWriterBMP.h</path>
+			</file>
+			<file file-tag="CImageWriterJPG.h:1">
+				<path>${Project}/../CImageWriterJPG.h</path>
+			</file>
+			<file file-tag="CImageWriterPCX.h:1">
+				<path>${Project}/../CImageWriterPCX.h</path>
+			</file>
+			<file file-tag="CImageWriterPNG.h:1">
+				<path>${Project}/../CImageWriterPNG.h</path>
+			</file>
+			<file file-tag="CImageWriterPPM.h:1">
+				<path>${Project}/../CImageWriterPPM.h</path>
+			</file>
+			<file file-tag="CImageWriterPSD.h:1">
+				<path>${Project}/../CImageWriterPSD.h</path>
+			</file>
+			<file file-tag="CImageWriterTGA.h:1">
+				<path>${Project}/../CImageWriterTGA.h</path>
+			</file>
+			<file file-tag="CIrrDeviceLinux.h:1">
+				<path>${Project}/../CIrrDeviceLinux.h</path>
+			</file>
+			<file file-tag="CIrrDeviceSDL.h:1">
+				<path>${Project}/../CIrrDeviceSDL.h</path>
+			</file>
+			<file file-tag="CIrrDeviceStub.h:1">
+				<path>${Project}/../CIrrDeviceStub.h</path>
+			</file>
+			<file file-tag="CIrrDeviceWin32.h:1">
+				<path>${Project}/../CIrrDeviceWin32.h</path>
+			</file>
+			<file file-tag="CIrrMeshFileLoader.h:1">
+				<path>${Project}/../CIrrMeshFileLoader.h</path>
+			</file>
+			<file file-tag="CIrrMeshWriter.h:1">
+				<path>${Project}/../CIrrMeshWriter.h</path>
+			</file>
+			<file file-tag="CLightSceneNode.h:1">
+				<path>${Project}/../CLightSceneNode.h</path>
+			</file>
+			<file file-tag="CLimitReadFile.h:1">
+				<path>${Project}/../CLimitReadFile.h</path>
+			</file>
+			<file file-tag="CLMTSMeshFileLoader.h:1">
+				<path>${Project}/../CLMTSMeshFileLoader.h</path>
+			</file>
+			<file file-tag="CLogger.h:1">
+				<path>${Project}/../CLogger.h</path>
+			</file>
+			<file file-tag="CMD2MeshFileLoader.h:1">
+				<path>${Project}/../CMD2MeshFileLoader.h</path>
+			</file>
+			<file file-tag="CMD3MeshFileLoader.h:1">
+				<path>${Project}/../CMD3MeshFileLoader.h</path>
+			</file>
+			<file file-tag="CMemoryReadFile.h:1">
+				<path>${Project}/../CMemoryReadFile.h</path>
+			</file>
+			<file file-tag="CMeshCache.h:1">
+				<path>${Project}/../CMeshCache.h</path>
+			</file>
+			<file file-tag="CMeshManipulator.h:1">
+				<path>${Project}/../CMeshManipulator.h</path>
+			</file>
+			<file file-tag="CMeshSceneNode.h:1">
+				<path>${Project}/../CMeshSceneNode.h</path>
+			</file>
+			<file file-tag="CMetaTriangleSelector.h:1">
+				<path>${Project}/../CMetaTriangleSelector.h</path>
+			</file>
+			<file file-tag="CMS3DMeshFileLoader.h:1">
+				<path>${Project}/../CMS3DMeshFileLoader.h</path>
+			</file>
+			<file file-tag="CMY3DHelper.h:1">
+				<path>${Project}/../CMY3DHelper.h</path>
+			</file>
+			<file file-tag="CMY3DMeshFileLoader.h:1">
+				<path>${Project}/../CMY3DMeshFileLoader.h</path>
+			</file>
+			<file file-tag="CMY3DStuff.h:1">
+				<path>${Project}/../CMY3DStuff.h</path>
+			</file>
+			<file file-tag="CNullDriver.h:1">
+				<path>${Project}/../CNullDriver.h</path>
+			</file>
+			<file file-tag="COBJMeshFileLoader.h:1">
+				<path>${Project}/../COBJMeshFileLoader.h</path>
+			</file>
+			<file file-tag="COCTLoader.h:1">
+				<path>${Project}/../COCTLoader.h</path>
+			</file>
+			<file file-tag="COctTreeSceneNode.h:1">
+				<path>${Project}/../COctTreeSceneNode.h</path>
+			</file>
+			<file file-tag="COctTreeTriangleSelector.h:1">
+				<path>${Project}/../COctTreeTriangleSelector.h</path>
+			</file>
+			<file file-tag="COgreMeshFileLoader.h:1">
+				<path>${Project}/../COgreMeshFileLoader.h</path>
+			</file>
+			<file file-tag="COpenGLDriver.h:1">
+				<path>${Project}/../COpenGLDriver.h</path>
+			</file>
+			<file file-tag="COpenGLExtensionHandler.h:1">
+				<path>${Project}/../COpenGLExtensionHandler.h</path>
+			</file>
+			<file file-tag="COpenGLMaterialRenderer.h:1">
+				<path>${Project}/../COpenGLMaterialRenderer.h</path>
+			</file>
+			<file file-tag="COpenGLNormalMapRenderer.h:1">
+				<path>${Project}/../COpenGLNormalMapRenderer.h</path>
+			</file>
+			<file file-tag="COpenGLParallaxMapRenderer.h:1">
+				<path>${Project}/../COpenGLParallaxMapRenderer.h</path>
+			</file>
+			<file file-tag="COpenGLShaderMaterialRenderer.h:1">
+				<path>${Project}/../COpenGLShaderMaterialRenderer.h</path>
+			</file>
+			<file file-tag="COpenGLSLMaterialRenderer.h:1">
+				<path>${Project}/../COpenGLSLMaterialRenderer.h</path>
+			</file>
+			<file file-tag="COpenGLTexture.h:1">
+				<path>${Project}/../COpenGLTexture.h</path>
+			</file>
+			<file file-tag="COSOperator.h:1">
+				<path>${Project}/../COSOperator.h</path>
+			</file>
+			<file file-tag="CPakReader.h:1">
+				<path>${Project}/../CPakReader.h</path>
+			</file>
+			<file file-tag="CParticleAnimatedMeshSceneNodeEmitter.h:1">
+				<path>${Project}/../CParticleAnimatedMeshSceneNodeEmitter.h</path>
+			</file>
+			<file file-tag="CParticleAttractionAffector.h:1">
+				<path>${Project}/../CParticleAttractionAffector.h</path>
+			</file>
+			<file file-tag="CParticleBoxEmitter.h:1">
+				<path>${Project}/../CParticleBoxEmitter.h</path>
+			</file>
+			<file file-tag="CParticleCylinderEmitter.h:1">
+				<path>${Project}/../CParticleCylinderEmitter.h</path>
+			</file>
+			<file file-tag="CParticleFadeOutAffector.h:1">
+				<path>${Project}/../CParticleFadeOutAffector.h</path>
+			</file>
+			<file file-tag="CParticleGravityAffector.h:1">
+				<path>${Project}/../CParticleGravityAffector.h</path>
+			</file>
+			<file file-tag="CParticleMeshEmitter.h:1">
+				<path>${Project}/../CParticleMeshEmitter.h</path>
+			</file>
+			<file file-tag="CParticlePointEmitter.h:1">
+				<path>${Project}/../CParticlePointEmitter.h</path>
+			</file>
+			<file file-tag="CParticleRingEmitter.h:1">
+				<path>${Project}/../CParticleRingEmitter.h</path>
+			</file>
+			<file file-tag="CParticleRotationAffector.h:1">
+				<path>${Project}/../CParticleRotationAffector.h</path>
+			</file>
+			<file file-tag="CParticleSphereEmitter.h:1">
+				<path>${Project}/../CParticleSphereEmitter.h</path>
+			</file>
+			<file file-tag="CParticleSystemSceneNode.h:1">
+				<path>${Project}/../CParticleSystemSceneNode.h</path>
+			</file>
+			<file file-tag="CQ3LevelMesh.h:1">
+				<path>${Project}/../CQ3LevelMesh.h</path>
+			</file>
+			<file file-tag="CQuake3ShaderSceneNode.h:1">
+				<path>${Project}/../CQuake3ShaderSceneNode.h</path>
+			</file>
+			<file file-tag="CReadFile.h:1">
+				<path>${Project}/../CReadFile.h</path>
+			</file>
+			<file file-tag="CSceneCollisionManager.h:1">
+				<path>${Project}/../CSceneCollisionManager.h</path>
+			</file>
+			<file file-tag="CSceneManager.h:1">
+				<path>${Project}/../CSceneManager.h</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorCollisionResponse.h:1">
+				<path>${Project}/../CSceneNodeAnimatorCollisionResponse.h</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorDelete.h:1">
+				<path>${Project}/../CSceneNodeAnimatorDelete.h</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorFlyCircle.h:1">
+				<path>${Project}/../CSceneNodeAnimatorFlyCircle.h</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorFlyStraight.h:1">
+				<path>${Project}/../CSceneNodeAnimatorFlyStraight.h</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorFollowSpline.h:1">
+				<path>${Project}/../CSceneNodeAnimatorFollowSpline.h</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorRotation.h:1">
+				<path>${Project}/../CSceneNodeAnimatorRotation.h</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorTexture.h:1">
+				<path>${Project}/../CSceneNodeAnimatorTexture.h</path>
+			</file>
+			<file file-tag="CShadowVolumeSceneNode.h:1">
+				<path>${Project}/../CShadowVolumeSceneNode.h</path>
+			</file>
+			<file file-tag="CSkinnedMesh.h:1">
+				<path>${Project}/../CSkinnedMesh.h</path>
+			</file>
+			<file file-tag="CSkyBoxSceneNode.h:1">
+				<path>${Project}/../CSkyBoxSceneNode.h</path>
+			</file>
+			<file file-tag="CSkyDomeSceneNode.h:1">
+				<path>${Project}/../CSkyDomeSceneNode.h</path>
+			</file>
+			<file file-tag="CSoftware2MaterialRenderer.h:1">
+				<path>${Project}/../CSoftware2MaterialRenderer.h</path>
+			</file>
+			<file file-tag="CSoftwareDriver2.h:1">
+				<path>${Project}/../CSoftwareDriver2.h</path>
+			</file>
+			<file file-tag="CSoftwareDriver.h:1">
+				<path>${Project}/../CSoftwareDriver.h</path>
+			</file>
+			<file file-tag="CSoftwareTexture2.h:1">
+				<path>${Project}/../CSoftwareTexture2.h</path>
+			</file>
+			<file file-tag="CSoftwareTexture.h:1">
+				<path>${Project}/../CSoftwareTexture.h</path>
+			</file>
+			<file file-tag="CSphereSceneNode.h:1">
+				<path>${Project}/../CSphereSceneNode.h</path>
+			</file>
+			<file file-tag="CSTLMeshFileLoader.h:1">
+				<path>${Project}/../CSTLMeshFileLoader.h</path>
+			</file>
+			<file file-tag="CSTLMeshWriter.h:1">
+				<path>${Project}/../CSTLMeshWriter.h</path>
+			</file>
+			<file file-tag="CTerrainSceneNode.h:1">
+				<path>${Project}/../CTerrainSceneNode.h</path>
+			</file>
+			<file file-tag="CTerrainTriangleSelector.h:1">
+				<path>${Project}/../CTerrainTriangleSelector.h</path>
+			</file>
+			<file file-tag="CTextSceneNode.h:1">
+				<path>${Project}/../CTextSceneNode.h</path>
+			</file>
+			<file file-tag="CTimer.h:1">
+				<path>${Project}/../CTimer.h</path>
+			</file>
+			<file file-tag="CTriangleBBSelector.h:1">
+				<path>${Project}/../CTriangleBBSelector.h</path>
+			</file>
+			<file file-tag="CTriangleSelector.h:1">
+				<path>${Project}/../CTriangleSelector.h</path>
+			</file>
+			<file file-tag="CTRTextureGouraud.h:1">
+				<path>${Project}/../CTRTextureGouraud.h</path>
+			</file>
+			<file file-tag="CVideoModeList.h:1">
+				<path>${Project}/../CVideoModeList.h</path>
+			</file>
+			<file file-tag="CWaterSurfaceSceneNode.h:1">
+				<path>${Project}/../CWaterSurfaceSceneNode.h</path>
+			</file>
+			<file file-tag="CWriteFile.h:1">
+				<path>${Project}/../CWriteFile.h</path>
+			</file>
+			<file file-tag="CXMeshFileLoader.h:1">
+				<path>${Project}/../CXMeshFileLoader.h</path>
+			</file>
+			<file file-tag="CXMLReader.h:1">
+				<path>${Project}/../CXMLReader.h</path>
+			</file>
+			<file file-tag="CXMLReaderImpl.h:1">
+				<path>${Project}/../CXMLReaderImpl.h</path>
+			</file>
+			<file file-tag="CXMLWriter.h:1">
+				<path>${Project}/../CXMLWriter.h</path>
+			</file>
+			<file file-tag="CZBuffer.h:1">
+				<path>${Project}/../CZBuffer.h</path>
+			</file>
+			<file file-tag="CZipReader.h:1">
+				<path>${Project}/../CZipReader.h</path>
+			</file>
+			<file file-tag="dmfsupport.h:1">
+				<path>${Project}/../dmfsupport.h</path>
+			</file>
+			<file file-tag="glext.h:1">
+				<path>${Project}/../glext.h</path>
+			</file>
+			<file file-tag="glxext.h:1">
+				<path>${Project}/../glxext.h</path>
+			</file>
+			<file file-tag="IBurningShader.h:1">
+				<path>${Project}/../IBurningShader.h</path>
+			</file>
+			<file file-tag="IDepthBuffer.h:1">
+				<path>${Project}/../IDepthBuffer.h</path>
+			</file>
+			<file file-tag="IImagePresenter.h:1">
+				<path>${Project}/../IImagePresenter.h</path>
+			</file>
+			<file file-tag="ITriangleRenderer.h:1">
+				<path>${Project}/../ITriangleRenderer.h</path>
+			</file>
+			<file file-tag="IZBuffer.h:1">
+				<path>${Project}/../IZBuffer.h</path>
+			</file>
+			<file file-tag="OctTree.h:1">
+				<path>${Project}/../OctTree.h</path>
+			</file>
+			<file file-tag="os.h:1">
+				<path>${Project}/../os.h</path>
+			</file>
+			<file file-tag="S2DVertex.h:1">
+				<path>${Project}/../S2DVertex.h</path>
+			</file>
+			<file file-tag="S4DVertex.h:1">
+				<path>${Project}/../S4DVertex.h</path>
+			</file>
+			<file file-tag="SoftwareDriver2_compile_config.h:1">
+				<path>${Project}/../SoftwareDriver2_compile_config.h</path>
+			</file>
+			<file file-tag="SoftwareDriver2_helper.h:1">
+				<path>${Project}/../SoftwareDriver2_helper.h</path>
+			</file>
+			<file file-tag="C3DSMeshFileLoader.cpp:1">
+				<path>${Project}/../C3DSMeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="CAnimatedMeshMD2.cpp:1">
+				<path>${Project}/../CAnimatedMeshMD2.cpp</path>
+			</file>
+			<file file-tag="CAnimatedMeshMD3.cpp:1">
+				<path>${Project}/../CAnimatedMeshMD3.cpp</path>
+			</file>
+			<file file-tag="CAnimatedMeshSceneNode.cpp:1">
+				<path>${Project}/../CAnimatedMeshSceneNode.cpp</path>
+			</file>
+			<file file-tag="CAttributes.cpp:1">
+				<path>${Project}/../CAttributes.cpp</path>
+			</file>
+			<file file-tag="CB3DMeshFileLoader.cpp:1">
+				<path>${Project}/../CB3DMeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="CBillboardSceneNode.cpp:1">
+				<path>${Project}/../CBillboardSceneNode.cpp</path>
+			</file>
+			<file file-tag="CBoneSceneNode.cpp:1">
+				<path>${Project}/../CBoneSceneNode.cpp</path>
+			</file>
+			<file file-tag="CBSPMeshFileLoader.cpp:1">
+				<path>${Project}/../CBSPMeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="CCameraFPSSceneNode.cpp:1">
+				<path>${Project}/../CCameraFPSSceneNode.cpp</path>
+			</file>
+			<file file-tag="CCameraMayaSceneNode.cpp:1">
+				<path>${Project}/../CCameraMayaSceneNode.cpp</path>
+			</file>
+			<file file-tag="CCameraSceneNode.cpp:1">
+				<path>${Project}/../CCameraSceneNode.cpp</path>
+			</file>
+			<file file-tag="CColladaFileLoader.cpp:1">
+				<path>${Project}/../CColladaFileLoader.cpp</path>
+			</file>
+			<file file-tag="CColladaMeshWriter.cpp:1">
+				<path>${Project}/../CColladaMeshWriter.cpp</path>
+			</file>
+			<file file-tag="CColorConverter.cpp:1">
+				<path>${Project}/../CColorConverter.cpp</path>
+			</file>
+			<file file-tag="CCSMLoader.cpp:1">
+				<path>${Project}/../CCSMLoader.cpp</path>
+			</file>
+			<file file-tag="CCubeSceneNode.cpp:1">
+				<path>${Project}/../CCubeSceneNode.cpp</path>
+			</file>
+			<file file-tag="CD3D8Driver.cpp:1">
+				<path>${Project}/../CD3D8Driver.cpp</path>
+			</file>
+			<file file-tag="CD3D8NormalMapRenderer.cpp:1">
+				<path>${Project}/../CD3D8NormalMapRenderer.cpp</path>
+			</file>
+			<file file-tag="CD3D8ParallaxMapRenderer.cpp:1">
+				<path>${Project}/../CD3D8ParallaxMapRenderer.cpp</path>
+			</file>
+			<file file-tag="CD3D8ShaderMaterialRenderer.cpp:1">
+				<path>${Project}/../CD3D8ShaderMaterialRenderer.cpp</path>
+			</file>
+			<file file-tag="CD3D8Texture.cpp:1">
+				<path>${Project}/../CD3D8Texture.cpp</path>
+			</file>
+			<file file-tag="CD3D9Driver.cpp:1">
+				<path>${Project}/../CD3D9Driver.cpp</path>
+			</file>
+			<file file-tag="CD3D9HLSLMaterialRenderer.cpp:1">
+				<path>${Project}/../CD3D9HLSLMaterialRenderer.cpp</path>
+			</file>
+			<file file-tag="CD3D9NormalMapRenderer.cpp:1">
+				<path>${Project}/../CD3D9NormalMapRenderer.cpp</path>
+			</file>
+			<file file-tag="CD3D9ParallaxMapRenderer.cpp:1">
+				<path>${Project}/../CD3D9ParallaxMapRenderer.cpp</path>
+			</file>
+			<file file-tag="CD3D9ShaderMaterialRenderer.cpp:1">
+				<path>${Project}/../CD3D9ShaderMaterialRenderer.cpp</path>
+			</file>
+			<file file-tag="CD3D9Texture.cpp:1">
+				<path>${Project}/../CD3D9Texture.cpp</path>
+			</file>
+			<file file-tag="CDefaultGUIElementFactory.cpp:1">
+				<path>${Project}/../CDefaultGUIElementFactory.cpp</path>
+			</file>
+			<file file-tag="ISceneNode.cpp:1">
+				<path>${Project}/../ISceneNode.cpp</path>
+			</file>
+			<file file-tag="CDefaultSceneNodeAnimatorFactory.cpp:1">
+				<path>${Project}/../CDefaultSceneNodeAnimatorFactory.cpp</path>
+			</file>
+			<file file-tag="CDefaultSceneNodeFactory.cpp:1">
+				<path>${Project}/../CDefaultSceneNodeFactory.cpp</path>
+			</file>
+			<file file-tag="CDepthBuffer.cpp:1">
+				<path>${Project}/../CDepthBuffer.cpp</path>
+			</file>
+			<file file-tag="CDMFLoader.cpp:1">
+				<path>${Project}/../CDMFLoader.cpp</path>
+			</file>
+			<file file-tag="CDummyTransformationSceneNode.cpp:1">
+				<path>${Project}/../CDummyTransformationSceneNode.cpp</path>
+			</file>
+			<file file-tag="CEmptySceneNode.cpp:1">
+				<path>${Project}/../CEmptySceneNode.cpp</path>
+			</file>
+			<file file-tag="CFileList.cpp:1">
+				<path>${Project}/../CFileList.cpp</path>
+			</file>
+			<file file-tag="CFileSystem.cpp:1">
+				<path>${Project}/../CFileSystem.cpp</path>
+			</file>
+			<file file-tag="CFPSCounter.cpp:1">
+				<path>${Project}/../CFPSCounter.cpp</path>
+			</file>
+			<file file-tag="CGeometryCreator.cpp:1">
+				<path>${Project}/../CGeometryCreator.cpp</path>
+			</file>
+			<file file-tag="CGUIButton.cpp:1">
+				<path>${Project}/../CGUIButton.cpp</path>
+			</file>
+			<file file-tag="CGUICheckBox.cpp:1">
+				<path>${Project}/../CGUICheckBox.cpp</path>
+			</file>
+			<file file-tag="CGUIColorSelectDialog.cpp:1">
+				<path>${Project}/../CGUIColorSelectDialog.cpp</path>
+			</file>
+			<file file-tag="CGUIComboBox.cpp:1">
+				<path>${Project}/../CGUIComboBox.cpp</path>
+			</file>
+			<file file-tag="CGUIContextMenu.cpp:1">
+				<path>${Project}/../CGUIContextMenu.cpp</path>
+			</file>
+			<file file-tag="CGUIEditBox.cpp:1">
+				<path>${Project}/../CGUIEditBox.cpp</path>
+			</file>
+			<file file-tag="CGUIEnvironment.cpp:1">
+				<path>${Project}/../CGUIEnvironment.cpp</path>
+			</file>
+			<file file-tag="CGUIFileOpenDialog.cpp:1">
+				<path>${Project}/../CGUIFileOpenDialog.cpp</path>
+			</file>
+			<file file-tag="CGUIFont.cpp:1">
+				<path>${Project}/../CGUIFont.cpp</path>
+			</file>
+			<file file-tag="CGUIImage.cpp:1">
+				<path>${Project}/../CGUIImage.cpp</path>
+			</file>
+			<file file-tag="CGUIInOutFader.cpp:1">
+				<path>${Project}/../CGUIInOutFader.cpp</path>
+			</file>
+			<file file-tag="CGUIListBox.cpp:1">
+				<path>${Project}/../CGUIListBox.cpp</path>
+			</file>
+			<file file-tag="CGUIMenu.cpp:1">
+				<path>${Project}/../CGUIMenu.cpp</path>
+			</file>
+			<file file-tag="CGUIMeshViewer.cpp:1">
+				<path>${Project}/../CGUIMeshViewer.cpp</path>
+			</file>
+			<file file-tag="CGUIMessageBox.cpp:1">
+				<path>${Project}/../CGUIMessageBox.cpp</path>
+			</file>
+			<file file-tag="CGUIModalScreen.cpp:1">
+				<path>${Project}/../CGUIModalScreen.cpp</path>
+			</file>
+			<file file-tag="CGUIScrollBar.cpp:1">
+				<path>${Project}/../CGUIScrollBar.cpp</path>
+			</file>
+			<file file-tag="CGUISkin.cpp:1">
+				<path>${Project}/../CGUISkin.cpp</path>
+			</file>
+			<file file-tag="CGUISpinBox.cpp:1">
+				<path>${Project}/../CGUISpinBox.cpp</path>
+			</file>
+			<file file-tag="CGUISpriteBank.cpp:1">
+				<path>${Project}/../CGUISpriteBank.cpp</path>
+			</file>
+			<file file-tag="CGUIStaticText.cpp:1">
+				<path>${Project}/../CGUIStaticText.cpp</path>
+			</file>
+			<file file-tag="CGUITabControl.cpp:1">
+				<path>${Project}/../CGUITabControl.cpp</path>
+			</file>
+			<file file-tag="CGUIToolBar.cpp:1">
+				<path>${Project}/../CGUIToolBar.cpp</path>
+			</file>
+			<file file-tag="CGUIWindow.cpp:1">
+				<path>${Project}/../CGUIWindow.cpp</path>
+			</file>
+			<file file-tag="CImage.cpp:1">
+				<path>${Project}/../CImage.cpp</path>
+			</file>
+			<file file-tag="CImageLoaderBMP.cpp:1">
+				<path>${Project}/../CImageLoaderBMP.cpp</path>
+			</file>
+			<file file-tag="CImageLoaderJPG.cpp:1">
+				<path>${Project}/../CImageLoaderJPG.cpp</path>
+			</file>
+			<file file-tag="CImageLoaderPCX.cpp:1">
+				<path>${Project}/../CImageLoaderPCX.cpp</path>
+			</file>
+			<file file-tag="CImageLoaderPNG.cpp:1">
+				<path>${Project}/../CImageLoaderPNG.cpp</path>
+			</file>
+			<file file-tag="CImageLoaderPPM.cpp:1">
+				<path>${Project}/../CImageLoaderPPM.cpp</path>
+			</file>
+			<file file-tag="CImageLoaderPSD.cpp:1">
+				<path>${Project}/../CImageLoaderPSD.cpp</path>
+			</file>
+			<file file-tag="CImageLoaderTGA.cpp:1">
+				<path>${Project}/../CImageLoaderTGA.cpp</path>
+			</file>
+			<file file-tag="CImageWriterBMP.cpp:1">
+				<path>${Project}/../CImageWriterBMP.cpp</path>
+			</file>
+			<file file-tag="CImageWriterJPG.cpp:1">
+				<path>${Project}/../CImageWriterJPG.cpp</path>
+			</file>
+			<file file-tag="CImageWriterPCX.cpp:1">
+				<path>${Project}/../CImageWriterPCX.cpp</path>
+			</file>
+			<file file-tag="CImageWriterPNG.cpp:1">
+				<path>${Project}/../CImageWriterPNG.cpp</path>
+			</file>
+			<file file-tag="CImageWriterPPM.cpp:1">
+				<path>${Project}/../CImageWriterPPM.cpp</path>
+			</file>
+			<file file-tag="CImageWriterPSD.cpp:1">
+				<path>${Project}/../CImageWriterPSD.cpp</path>
+			</file>
+			<file file-tag="CImageWriterTGA.cpp:1">
+				<path>${Project}/../CImageWriterTGA.cpp</path>
+			</file>
+			<file file-tag="CIrrDeviceLinux.cpp:1">
+				<path>${Project}/../CIrrDeviceLinux.cpp</path>
+			</file>
+			<file file-tag="CIrrDeviceSDL.cpp:1">
+				<path>${Project}/../CIrrDeviceSDL.cpp</path>
+			</file>
+			<file file-tag="CIrrDeviceStub.cpp:1">
+				<path>${Project}/../CIrrDeviceStub.cpp</path>
+			</file>
+			<file file-tag="CIrrDeviceWin32.cpp:1">
+				<path>${Project}/../CIrrDeviceWin32.cpp</path>
+			</file>
+			<file file-tag="CIrrMeshFileLoader.cpp:1">
+				<path>${Project}/../CIrrMeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="CIrrMeshWriter.cpp:1">
+				<path>${Project}/../CIrrMeshWriter.cpp</path>
+			</file>
+			<file file-tag="CLightSceneNode.cpp:1">
+				<path>${Project}/../CLightSceneNode.cpp</path>
+			</file>
+			<file file-tag="CLimitReadFile.cpp:1">
+				<path>${Project}/../CLimitReadFile.cpp</path>
+			</file>
+			<file file-tag="CLMTSMeshFileLoader.cpp:1">
+				<path>${Project}/../CLMTSMeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="CLogger.cpp:1">
+				<path>${Project}/../CLogger.cpp</path>
+			</file>
+			<file file-tag="CMD2MeshFileLoader.cpp:1">
+				<path>${Project}/../CMD2MeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="CMD3MeshFileLoader.cpp:1">
+				<path>${Project}/../CMD3MeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="CMemoryReadFile.cpp:1">
+				<path>${Project}/../CMemoryReadFile.cpp</path>
+			</file>
+			<file file-tag="CMeshCache.cpp:1">
+				<path>${Project}/../CMeshCache.cpp</path>
+			</file>
+			<file file-tag="CMeshManipulator.cpp:1">
+				<path>${Project}/../CMeshManipulator.cpp</path>
+			</file>
+			<file file-tag="CMeshSceneNode.cpp:1">
+				<path>${Project}/../CMeshSceneNode.cpp</path>
+			</file>
+			<file file-tag="CMetaTriangleSelector.cpp:1">
+				<path>${Project}/../CMetaTriangleSelector.cpp</path>
+			</file>
+			<file file-tag="CMS3DMeshFileLoader.cpp:1">
+				<path>${Project}/../CMS3DMeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="CMY3DMeshFileLoader.cpp:1">
+				<path>${Project}/../CMY3DMeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="CNullDriver.cpp:1">
+				<path>${Project}/../CNullDriver.cpp</path>
+			</file>
+			<file file-tag="COBJMeshFileLoader.cpp:1">
+				<path>${Project}/../COBJMeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="COCTLoader.cpp:1">
+				<path>${Project}/../COCTLoader.cpp</path>
+			</file>
+			<file file-tag="COctTreeSceneNode.cpp:1">
+				<path>${Project}/../COctTreeSceneNode.cpp</path>
+			</file>
+			<file file-tag="COctTreeTriangleSelector.cpp:1">
+				<path>${Project}/../COctTreeTriangleSelector.cpp</path>
+			</file>
+			<file file-tag="COgreMeshFileLoader.cpp:1">
+				<path>${Project}/../COgreMeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="COpenGLDriver.cpp:1">
+				<path>${Project}/../COpenGLDriver.cpp</path>
+			</file>
+			<file file-tag="COpenGLExtensionHandler.cpp:1">
+				<path>${Project}/../COpenGLExtensionHandler.cpp</path>
+			</file>
+			<file file-tag="COpenGLNormalMapRenderer.cpp:1">
+				<path>${Project}/../COpenGLNormalMapRenderer.cpp</path>
+			</file>
+			<file file-tag="COpenGLParallaxMapRenderer.cpp:1">
+				<path>${Project}/../COpenGLParallaxMapRenderer.cpp</path>
+			</file>
+			<file file-tag="COpenGLShaderMaterialRenderer.cpp:1">
+				<path>${Project}/../COpenGLShaderMaterialRenderer.cpp</path>
+			</file>
+			<file file-tag="COpenGLSLMaterialRenderer.cpp:1">
+				<path>${Project}/../COpenGLSLMaterialRenderer.cpp</path>
+			</file>
+			<file file-tag="COpenGLTexture.cpp:1">
+				<path>${Project}/../COpenGLTexture.cpp</path>
+			</file>
+			<file file-tag="COSOperator.cpp:1">
+				<path>${Project}/../COSOperator.cpp</path>
+			</file>
+			<file file-tag="CPakReader.cpp:1">
+				<path>${Project}/../CPakReader.cpp</path>
+			</file>
+			<file file-tag="CParticleAnimatedMeshSceneNodeEmitter.cpp:1">
+				<path>${Project}/../CParticleAnimatedMeshSceneNodeEmitter.cpp</path>
+			</file>
+			<file file-tag="CParticleAttractionAffector.cpp:1">
+				<path>${Project}/../CParticleAttractionAffector.cpp</path>
+			</file>
+			<file file-tag="CParticleBoxEmitter.cpp:1">
+				<path>${Project}/../CParticleBoxEmitter.cpp</path>
+			</file>
+			<file file-tag="CParticleCylinderEmitter.cpp:1">
+				<path>${Project}/../CParticleCylinderEmitter.cpp</path>
+			</file>
+			<file file-tag="CParticleFadeOutAffector.cpp:1">
+				<path>${Project}/../CParticleFadeOutAffector.cpp</path>
+			</file>
+			<file file-tag="CParticleGravityAffector.cpp:1">
+				<path>${Project}/../CParticleGravityAffector.cpp</path>
+			</file>
+			<file file-tag="CParticleMeshEmitter.cpp:1">
+				<path>${Project}/../CParticleMeshEmitter.cpp</path>
+			</file>
+			<file file-tag="CParticlePointEmitter.cpp:1">
+				<path>${Project}/../CParticlePointEmitter.cpp</path>
+			</file>
+			<file file-tag="CParticleRingEmitter.cpp:1">
+				<path>${Project}/../CParticleRingEmitter.cpp</path>
+			</file>
+			<file file-tag="CParticleRotationAffector.cpp:1">
+				<path>${Project}/../CParticleRotationAffector.cpp</path>
+			</file>
+			<file file-tag="CParticleSphereEmitter.cpp:1">
+				<path>${Project}/../CParticleSphereEmitter.cpp</path>
+			</file>
+			<file file-tag="CParticleSystemSceneNode.cpp:1">
+				<path>${Project}/../CParticleSystemSceneNode.cpp</path>
+			</file>
+			<file file-tag="CQ3LevelMesh.cpp:1">
+				<path>${Project}/../CQ3LevelMesh.cpp</path>
+			</file>
+			<file file-tag="CQuake3ShaderSceneNode.cpp:1">
+				<path>${Project}/../CQuake3ShaderSceneNode.cpp</path>
+			</file>
+			<file file-tag="CReadFile.cpp:1">
+				<path>${Project}/../CReadFile.cpp</path>
+			</file>
+			<file file-tag="CSceneCollisionManager.cpp:1">
+				<path>${Project}/../CSceneCollisionManager.cpp</path>
+			</file>
+			<file file-tag="CSceneManager.cpp:1">
+				<path>${Project}/../CSceneManager.cpp</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorCollisionResponse.cpp:1">
+				<path>${Project}/../CSceneNodeAnimatorCollisionResponse.cpp</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorDelete.cpp:1">
+				<path>${Project}/../CSceneNodeAnimatorDelete.cpp</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorFlyCircle.cpp:1">
+				<path>${Project}/../CSceneNodeAnimatorFlyCircle.cpp</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorFlyStraight.cpp:1">
+				<path>${Project}/../CSceneNodeAnimatorFlyStraight.cpp</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorFollowSpline.cpp:1">
+				<path>${Project}/../CSceneNodeAnimatorFollowSpline.cpp</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorRotation.cpp:1">
+				<path>${Project}/../CSceneNodeAnimatorRotation.cpp</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorTexture.cpp:1">
+				<path>${Project}/../CSceneNodeAnimatorTexture.cpp</path>
+			</file>
+			<file file-tag="CShadowVolumeSceneNode.cpp:1">
+				<path>${Project}/../CShadowVolumeSceneNode.cpp</path>
+			</file>
+			<file file-tag="CSkinnedMesh.cpp:1">
+				<path>${Project}/../CSkinnedMesh.cpp</path>
+			</file>
+			<file file-tag="CSkyBoxSceneNode.cpp:1">
+				<path>${Project}/../CSkyBoxSceneNode.cpp</path>
+			</file>
+			<file file-tag="CSkyDomeSceneNode.cpp:1">
+				<path>${Project}/../CSkyDomeSceneNode.cpp</path>
+			</file>
+			<file file-tag="CSoftwareDriver2.cpp:1">
+				<path>${Project}/../CSoftwareDriver2.cpp</path>
+			</file>
+			<file file-tag="CSoftwareDriver.cpp:1">
+				<path>${Project}/../CSoftwareDriver.cpp</path>
+			</file>
+			<file file-tag="CSoftwareTexture2.cpp:1">
+				<path>${Project}/../CSoftwareTexture2.cpp</path>
+			</file>
+			<file file-tag="CSoftwareTexture.cpp:1">
+				<path>${Project}/../CSoftwareTexture.cpp</path>
+			</file>
+			<file file-tag="CSphereSceneNode.cpp:1">
+				<path>${Project}/../CSphereSceneNode.cpp</path>
+			</file>
+			<file file-tag="CSTLMeshFileLoader.cpp:1">
+				<path>${Project}/../CSTLMeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="CSTLMeshWriter.cpp:1">
+				<path>${Project}/../CSTLMeshWriter.cpp</path>
+			</file>
+			<file file-tag="CTerrainSceneNode.cpp:1">
+				<path>${Project}/../CTerrainSceneNode.cpp</path>
+			</file>
+			<file file-tag="CTerrainTriangleSelector.cpp:1">
+				<path>${Project}/../CTerrainTriangleSelector.cpp</path>
+			</file>
+			<file file-tag="CTextSceneNode.cpp:1">
+				<path>${Project}/../CTextSceneNode.cpp</path>
+			</file>
+			<file file-tag="CTRFlat.cpp:1">
+				<path>${Project}/../CTRFlat.cpp</path>
+			</file>
+			<file file-tag="CTRFlatWire.cpp:1">
+				<path>${Project}/../CTRFlatWire.cpp</path>
+			</file>
+			<file file-tag="CTRGouraud2.cpp:1">
+				<path>${Project}/../CTRGouraud2.cpp</path>
+			</file>
+			<file file-tag="CTRGouraud.cpp:1">
+				<path>${Project}/../CTRGouraud.cpp</path>
+			</file>
+			<file file-tag="CTRGouraudAlpha2.cpp:1">
+				<path>${Project}/../CTRGouraudAlpha2.cpp</path>
+			</file>
+			<file file-tag="CTRGouraudAlphaNoZ2.cpp:1">
+				<path>${Project}/../CTRGouraudAlphaNoZ2.cpp</path>
+			</file>
+			<file file-tag="CTRGouraudWire.cpp:1">
+				<path>${Project}/../CTRGouraudWire.cpp</path>
+			</file>
+			<file file-tag="CTriangleBBSelector.cpp:1">
+				<path>${Project}/../CTriangleBBSelector.cpp</path>
+			</file>
+			<file file-tag="CTriangleSelector.cpp:1">
+				<path>${Project}/../CTriangleSelector.cpp</path>
+			</file>
+			<file file-tag="CTRTextureBlend.cpp:1">
+				<path>${Project}/../CTRTextureBlend.cpp</path>
+			</file>
+			<file file-tag="CTRTextureDetailMap2.cpp:1">
+				<path>${Project}/../CTRTextureDetailMap2.cpp</path>
+			</file>
+			<file file-tag="CTRTextureFlat.cpp:1">
+				<path>${Project}/../CTRTextureFlat.cpp</path>
+			</file>
+			<file file-tag="CTRTextureFlatWire.cpp:1">
+				<path>${Project}/../CTRTextureFlatWire.cpp</path>
+			</file>
+			<file file-tag="CTRTextureGouraud2.cpp:1">
+				<path>${Project}/../CTRTextureGouraud2.cpp</path>
+			</file>
+			<file file-tag="CTRTextureGouraud.cpp:1">
+				<path>${Project}/../CTRTextureGouraud.cpp</path>
+			</file>
+			<file file-tag="CTRTextureGouraudAdd2.cpp:1">
+				<path>${Project}/../CTRTextureGouraudAdd2.cpp</path>
+			</file>
+			<file file-tag="CTRTextureGouraudAdd.cpp:1">
+				<path>${Project}/../CTRTextureGouraudAdd.cpp</path>
+			</file>
+			<file file-tag="CTRTextureGouraudAddNoZ2.cpp:1">
+				<path>${Project}/../CTRTextureGouraudAddNoZ2.cpp</path>
+			</file>
+			<file file-tag="CTRTextureGouraudAlpha.cpp:1">
+				<path>${Project}/../CTRTextureGouraudAlpha.cpp</path>
+			</file>
+			<file file-tag="CTRTextureGouraudAlphaNoZ.cpp:1">
+				<path>${Project}/../CTRTextureGouraudAlphaNoZ.cpp</path>
+			</file>
+			<file file-tag="CTRTextureGouraudNoZ2.cpp:1">
+				<path>${Project}/../CTRTextureGouraudNoZ2.cpp</path>
+			</file>
+			<file file-tag="CTRTextureGouraudNoZ.cpp:1">
+				<path>${Project}/../CTRTextureGouraudNoZ.cpp</path>
+			</file>
+			<file file-tag="CTRTextureGouraudVertexAlpha2.cpp:1">
+				<path>${Project}/../CTRTextureGouraudVertexAlpha2.cpp</path>
+			</file>
+			<file file-tag="CTRTextureGouraudWire.cpp:1">
+				<path>${Project}/../CTRTextureGouraudWire.cpp</path>
+			</file>
+			<file file-tag="CTRTextureLightMap2_Add.cpp:1">
+				<path>${Project}/../CTRTextureLightMap2_Add.cpp</path>
+			</file>
+			<file file-tag="CTRTextureLightMap2_M1.cpp:1">
+				<path>${Project}/../CTRTextureLightMap2_M1.cpp</path>
+			</file>
+			<file file-tag="CTRTextureLightMap2_M2.cpp:1">
+				<path>${Project}/../CTRTextureLightMap2_M2.cpp</path>
+			</file>
+			<file file-tag="CTRTextureLightMap2_M4.cpp:1">
+				<path>${Project}/../CTRTextureLightMap2_M4.cpp</path>
+			</file>
+			<file file-tag="CTRTextureLightMapGouraud2_M4.cpp:1">
+				<path>${Project}/../CTRTextureLightMapGouraud2_M4.cpp</path>
+			</file>
+			<file file-tag="CTRTextureWire2.cpp:1">
+				<path>${Project}/../CTRTextureWire2.cpp</path>
+			</file>
+			<file file-tag="CVideoModeList.cpp:1">
+				<path>${Project}/../CVideoModeList.cpp</path>
+			</file>
+			<file file-tag="CWaterSurfaceSceneNode.cpp:1">
+				<path>${Project}/../CWaterSurfaceSceneNode.cpp</path>
+			</file>
+			<file file-tag="CWriteFile.cpp:1">
+				<path>${Project}/../CWriteFile.cpp</path>
+			</file>
+			<file file-tag="CXMeshFileLoader.cpp:1">
+				<path>${Project}/../CXMeshFileLoader.cpp</path>
+			</file>
+			<file file-tag="CXMLReader.cpp:1">
+				<path>${Project}/../CXMLReader.cpp</path>
+			</file>
+			<file file-tag="CXMLWriter.cpp:1">
+				<path>${Project}/../CXMLWriter.cpp</path>
+			</file>
+			<file file-tag="CWiiDriver.cpp:1">
+				<path>${Project}/../CWiiDriver.cpp</path>
+			</file>
+			<file file-tag="CWiiDriver.h:1">
+				<path>${Project}/../CWiiDriver.h</path>
+			</file>
+			<file file-tag="CIrrDeviceWii.h:1">
+				<path>${Project}/../CIrrDeviceWii.h</path>
+			</file>
+			<file file-tag="CIrrDeviceWii.cpp:1">
+				<path>${Project}/../CIrrDeviceWii.cpp</path>
+			</file>
+			<file file-tag="quaternion.h:1">
+				<path>${Project}/../../../include/quaternion.h</path>
+			</file>
+			<file file-tag="rect.h:1">
+				<path>${Project}/../../../include/rect.h</path>
+			</file>
+			<file file-tag="S3DVertex.h:1">
+				<path>${Project}/../../../include/S3DVertex.h</path>
+			</file>
+			<file file-tag="SAnimatedMesh.h:1">
+				<path>${Project}/../../../include/SAnimatedMesh.h</path>
+			</file>
+			<file file-tag="SceneParameters.h:1">
+				<path>${Project}/../../../include/SceneParameters.h</path>
+			</file>
+			<file file-tag="SColor.h:1">
+				<path>${Project}/../../../include/SColor.h</path>
+			</file>
+			<file file-tag="SExposedVideoData.h:1">
+				<path>${Project}/../../../include/SExposedVideoData.h</path>
+			</file>
+			<file file-tag="SIrrCreationParameters.h:1">
+				<path>${Project}/../../../include/SIrrCreationParameters.h</path>
+			</file>
+			<file file-tag="SKeyMap.h:1">
+				<path>${Project}/../../../include/SKeyMap.h</path>
+			</file>
+			<file file-tag="SLight.h:1">
+				<path>${Project}/../../../include/SLight.h</path>
+			</file>
+			<file file-tag="SMaterial.h:1">
+				<path>${Project}/../../../include/SMaterial.h</path>
+			</file>
+			<file file-tag="SMaterialLayer.h:1">
+				<path>${Project}/../../../include/SMaterialLayer.h</path>
+			</file>
+			<file file-tag="SMesh.h:1">
+				<path>${Project}/../../../include/SMesh.h</path>
+			</file>
+			<file file-tag="SMeshBuffer.h:1">
+				<path>${Project}/../../../include/SMeshBuffer.h</path>
+			</file>
+			<file file-tag="SMeshBufferLightMap.h:1">
+				<path>${Project}/../../../include/SMeshBufferLightMap.h</path>
+			</file>
+			<file file-tag="SMeshBufferTangents.h:1">
+				<path>${Project}/../../../include/SMeshBufferTangents.h</path>
+			</file>
+			<file file-tag="SParticle.h:1">
+				<path>${Project}/../../../include/SParticle.h</path>
+			</file>
+			<file file-tag="SSharedMeshBuffer.h:1">
+				<path>${Project}/../../../include/SSharedMeshBuffer.h</path>
+			</file>
+			<file file-tag="SSkinMeshBuffer.h:1">
+				<path>${Project}/../../../include/SSkinMeshBuffer.h</path>
+			</file>
+			<file file-tag="SViewFrustum.h:1">
+				<path>${Project}/../../../include/SViewFrustum.h</path>
+			</file>
+			<file file-tag="triangle3d.h:1">
+				<path>${Project}/../../../include/triangle3d.h</path>
+			</file>
+			<file file-tag="vector2d.h:1">
+				<path>${Project}/../../../include/vector2d.h</path>
+			</file>
+			<file file-tag="vector3d.h:1">
+				<path>${Project}/../../../include/vector3d.h</path>
+			</file>
+			<file file-tag="aabbox3d.h:1">
+				<path>${Project}/../../../include/aabbox3d.h</path>
+			</file>
+			<file file-tag="CMeshBuffer.h:1">
+				<path>${Project}/../../../include/CMeshBuffer.h</path>
+			</file>
+			<file file-tag="coreutil.h:1">
+				<path>${Project}/../../../include/coreutil.h</path>
+			</file>
+			<file file-tag="dimension2d.h:1">
+				<path>${Project}/../../../include/dimension2d.h</path>
+			</file>
+			<file file-tag="ECullingTypes.h:1">
+				<path>${Project}/../../../include/ECullingTypes.h</path>
+			</file>
+			<file file-tag="EDebugSceneTypes.h:1">
+				<path>${Project}/../../../include/EDebugSceneTypes.h</path>
+			</file>
+			<file file-tag="EDriverFeatures.h:1">
+				<path>${Project}/../../../include/EDriverFeatures.h</path>
+			</file>
+			<file file-tag="EDriverTypes.h:1">
+				<path>${Project}/../../../include/EDriverTypes.h</path>
+			</file>
+			<file file-tag="EGUIElementTypes.h:1">
+				<path>${Project}/../../../include/EGUIElementTypes.h</path>
+			</file>
+			<file file-tag="EMaterialFlags.h:1">
+				<path>${Project}/../../../include/EMaterialFlags.h</path>
+			</file>
+			<file file-tag="EMaterialTypes.h:1">
+				<path>${Project}/../../../include/EMaterialTypes.h</path>
+			</file>
+			<file file-tag="EMeshWriterEnums.h:1">
+				<path>${Project}/../../../include/EMeshWriterEnums.h</path>
+			</file>
+			<file file-tag="EMessageBoxFlags.h:1">
+				<path>${Project}/../../../include/EMessageBoxFlags.h</path>
+			</file>
+			<file file-tag="ESceneNodeAnimatorTypes.h:1">
+				<path>${Project}/../../../include/ESceneNodeAnimatorTypes.h</path>
+			</file>
+			<file file-tag="ESceneNodeTypes.h:1">
+				<path>${Project}/../../../include/ESceneNodeTypes.h</path>
+			</file>
+			<file file-tag="ETerrainElements.h:1">
+				<path>${Project}/../../../include/ETerrainElements.h</path>
+			</file>
+			<file file-tag="fast_atof.h:1">
+				<path>${Project}/../../../include/fast_atof.h</path>
+			</file>
+			<file file-tag="heapsort.h:1">
+				<path>${Project}/../../../include/heapsort.h</path>
+			</file>
+			<file file-tag="IAnimatedMesh.h:1">
+				<path>${Project}/../../../include/IAnimatedMesh.h</path>
+			</file>
+			<file file-tag="IAnimatedMeshMD2.h:1">
+				<path>${Project}/../../../include/IAnimatedMeshMD2.h</path>
+			</file>
+			<file file-tag="IAnimatedMeshMD3.h:1">
+				<path>${Project}/../../../include/IAnimatedMeshMD3.h</path>
+			</file>
+			<file file-tag="IAnimatedMeshSceneNode.h:1">
+				<path>${Project}/../../../include/IAnimatedMeshSceneNode.h</path>
+			</file>
+			<file file-tag="IAttributeExchangingObject.h:1">
+				<path>${Project}/../../../include/IAttributeExchangingObject.h</path>
+			</file>
+			<file file-tag="IAttributes.h:1">
+				<path>${Project}/../../../include/IAttributes.h</path>
+			</file>
+			<file file-tag="IBillboardSceneNode.h:1">
+				<path>${Project}/../../../include/IBillboardSceneNode.h</path>
+			</file>
+			<file file-tag="IBoneSceneNode.h:1">
+				<path>${Project}/../../../include/IBoneSceneNode.h</path>
+			</file>
+			<file file-tag="ICameraSceneNode.h:1">
+				<path>${Project}/../../../include/ICameraSceneNode.h</path>
+			</file>
+			<file file-tag="ICursorControl.h:1">
+				<path>${Project}/../../../include/ICursorControl.h</path>
+			</file>
+			<file file-tag="IDummyTransformationSceneNode.h:1">
+				<path>${Project}/../../../include/IDummyTransformationSceneNode.h</path>
+			</file>
+			<file file-tag="IEventReceiver.h:1">
+				<path>${Project}/../../../include/IEventReceiver.h</path>
+			</file>
+			<file file-tag="IFileList.h:1">
+				<path>${Project}/../../../include/IFileList.h</path>
+			</file>
+			<file file-tag="IFileSystem.h:1">
+				<path>${Project}/../../../include/IFileSystem.h</path>
+			</file>
+			<file file-tag="IGPUProgrammingServices.h:1">
+				<path>${Project}/../../../include/IGPUProgrammingServices.h</path>
+			</file>
+			<file file-tag="IGUIButton.h:1">
+				<path>${Project}/../../../include/IGUIButton.h</path>
+			</file>
+			<file file-tag="IGUICheckBox.h:1">
+				<path>${Project}/../../../include/IGUICheckBox.h</path>
+			</file>
+			<file file-tag="IGUIColorSelectDialog.h:1">
+				<path>${Project}/../../../include/IGUIColorSelectDialog.h</path>
+			</file>
+			<file file-tag="IGUIComboBox.h:1">
+				<path>${Project}/../../../include/IGUIComboBox.h</path>
+			</file>
+			<file file-tag="IGUIContextMenu.h:1">
+				<path>${Project}/../../../include/IGUIContextMenu.h</path>
+			</file>
+			<file file-tag="IGUIEditBox.h:1">
+				<path>${Project}/../../../include/IGUIEditBox.h</path>
+			</file>
+			<file file-tag="IGUIElement.h:1">
+				<path>${Project}/../../../include/IGUIElement.h</path>
+			</file>
+			<file file-tag="IGUIElementFactory.h:1">
+				<path>${Project}/../../../include/IGUIElementFactory.h</path>
+			</file>
+			<file file-tag="IGUIEnvironment.h:1">
+				<path>${Project}/../../../include/IGUIEnvironment.h</path>
+			</file>
+			<file file-tag="IGUIFileOpenDialog.h:1">
+				<path>${Project}/../../../include/IGUIFileOpenDialog.h</path>
+			</file>
+			<file file-tag="IGUIFont.h:1">
+				<path>${Project}/../../../include/IGUIFont.h</path>
+			</file>
+			<file file-tag="IGUIFontBitmap.h:1">
+				<path>${Project}/../../../include/IGUIFontBitmap.h</path>
+			</file>
+			<file file-tag="IGUIImage.h:1">
+				<path>${Project}/../../../include/IGUIImage.h</path>
+			</file>
+			<file file-tag="IGUIInOutFader.h:1">
+				<path>${Project}/../../../include/IGUIInOutFader.h</path>
+			</file>
+			<file file-tag="IGUIListBox.h:1">
+				<path>${Project}/../../../include/IGUIListBox.h</path>
+			</file>
+			<file file-tag="IGUIMeshViewer.h:1">
+				<path>${Project}/../../../include/IGUIMeshViewer.h</path>
+			</file>
+			<file file-tag="IGUIScrollBar.h:1">
+				<path>${Project}/../../../include/IGUIScrollBar.h</path>
+			</file>
+			<file file-tag="IGUISkin.h:1">
+				<path>${Project}/../../../include/IGUISkin.h</path>
+			</file>
+			<file file-tag="IGUISpinBox.h:1">
+				<path>${Project}/../../../include/IGUISpinBox.h</path>
+			</file>
+			<file file-tag="IGUISpriteBank.h:1">
+				<path>${Project}/../../../include/IGUISpriteBank.h</path>
+			</file>
+			<file file-tag="IGUIStaticText.h:1">
+				<path>${Project}/../../../include/IGUIStaticText.h</path>
+			</file>
+			<file file-tag="IGUITabControl.h:1">
+				<path>${Project}/../../../include/IGUITabControl.h</path>
+			</file>
+			<file file-tag="IGUIToolbar.h:1">
+				<path>${Project}/../../../include/IGUIToolbar.h</path>
+			</file>
+			<file file-tag="IGUIWindow.h:1">
+				<path>${Project}/../../../include/IGUIWindow.h</path>
+			</file>
+			<file file-tag="IImage.h:1">
+				<path>${Project}/../../../include/IImage.h</path>
+			</file>
+			<file file-tag="IImageLoader.h:1">
+				<path>${Project}/../../../include/IImageLoader.h</path>
+			</file>
+			<file file-tag="IImageWriter.h:1">
+				<path>${Project}/../../../include/IImageWriter.h</path>
+			</file>
+			<file file-tag="ILightSceneNode.h:1">
+				<path>${Project}/../../../include/ILightSceneNode.h</path>
+			</file>
+			<file file-tag="ILogger.h:1">
+				<path>${Project}/../../../include/ILogger.h</path>
+			</file>
+			<file file-tag="IMaterialRenderer.h:1">
+				<path>${Project}/../../../include/IMaterialRenderer.h</path>
+			</file>
+			<file file-tag="IMaterialRendererServices.h:1">
+				<path>${Project}/../../../include/IMaterialRendererServices.h</path>
+			</file>
+			<file file-tag="IMesh.h:1">
+				<path>${Project}/../../../include/IMesh.h</path>
+			</file>
+			<file file-tag="IMeshBuffer.h:1">
+				<path>${Project}/../../../include/IMeshBuffer.h</path>
+			</file>
+			<file file-tag="IMeshCache.h:1">
+				<path>${Project}/../../../include/IMeshCache.h</path>
+			</file>
+			<file file-tag="IMeshLoader.h:1">
+				<path>${Project}/../../../include/IMeshLoader.h</path>
+			</file>
+			<file file-tag="IMeshManipulator.h:1">
+				<path>${Project}/../../../include/IMeshManipulator.h</path>
+			</file>
+			<file file-tag="IMeshSceneNode.h:1">
+				<path>${Project}/../../../include/IMeshSceneNode.h</path>
+			</file>
+			<file file-tag="IMeshWriter.h:1">
+				<path>${Project}/../../../include/IMeshWriter.h</path>
+			</file>
+			<file file-tag="IMetaTriangleSelector.h:1">
+				<path>${Project}/../../../include/IMetaTriangleSelector.h</path>
+			</file>
+			<file file-tag="IOSOperator.h:1">
+				<path>${Project}/../../../include/IOSOperator.h</path>
+			</file>
+			<file file-tag="IParticleAffector.h:1">
+				<path>${Project}/../../../include/IParticleAffector.h</path>
+			</file>
+			<file file-tag="IParticleAnimatedMeshSceneNodeEmitter.h:1">
+				<path>${Project}/../../../include/IParticleAnimatedMeshSceneNodeEmitter.h</path>
+			</file>
+			<file file-tag="IParticleAttractionAffector.h:1">
+				<path>${Project}/../../../include/IParticleAttractionAffector.h</path>
+			</file>
+			<file file-tag="IParticleBoxEmitter.h:1">
+				<path>${Project}/../../../include/IParticleBoxEmitter.h</path>
+			</file>
+			<file file-tag="IParticleCylinderEmitter.h:1">
+				<path>${Project}/../../../include/IParticleCylinderEmitter.h</path>
+			</file>
+			<file file-tag="IParticleEmitter.h:1">
+				<path>${Project}/../../../include/IParticleEmitter.h</path>
+			</file>
+			<file file-tag="IParticleFadeOutAffector.h:1">
+				<path>${Project}/../../../include/IParticleFadeOutAffector.h</path>
+			</file>
+			<file file-tag="IParticleGravityAffector.h:1">
+				<path>${Project}/../../../include/IParticleGravityAffector.h</path>
+			</file>
+			<file file-tag="IParticleMeshEmitter.h:1">
+				<path>${Project}/../../../include/IParticleMeshEmitter.h</path>
+			</file>
+			<file file-tag="IParticleRingEmitter.h:1">
+				<path>${Project}/../../../include/IParticleRingEmitter.h</path>
+			</file>
+			<file file-tag="IParticleRotationAffector.h:1">
+				<path>${Project}/../../../include/IParticleRotationAffector.h</path>
+			</file>
+			<file file-tag="IParticleSphereEmitter.h:1">
+				<path>${Project}/../../../include/IParticleSphereEmitter.h</path>
+			</file>
+			<file file-tag="IParticleSystemSceneNode.h:1">
+				<path>${Project}/../../../include/IParticleSystemSceneNode.h</path>
+			</file>
+			<file file-tag="IQ3LevelMesh.h:1">
+				<path>${Project}/../../../include/IQ3LevelMesh.h</path>
+			</file>
+			<file file-tag="IQ3Shader.h:1">
+				<path>${Project}/../../../include/IQ3Shader.h</path>
+			</file>
+			<file file-tag="IReadFile.h:1">
+				<path>${Project}/../../../include/IReadFile.h</path>
+			</file>
+			<file file-tag="IReferenceCounted.h:1">
+				<path>${Project}/../../../include/IReferenceCounted.h</path>
+			</file>
+			<file file-tag="irrAllocator.h:1">
+				<path>${Project}/../../../include/irrAllocator.h</path>
+			</file>
+			<file file-tag="irrArray.h:1">
+				<path>${Project}/../../../include/irrArray.h</path>
+			</file>
+			<file file-tag="IrrCompileConfig.h:1">
+				<path>${Project}/../../../include/IrrCompileConfig.h</path>
+			</file>
+			<file file-tag="irrlicht.h:1">
+				<path>${Project}/../../../include/irrlicht.h</path>
+			</file>
+			<file file-tag="IrrlichtDevice.h:1">
+				<path>${Project}/../../../include/IrrlichtDevice.h</path>
+			</file>
+			<file file-tag="irrList.h:1">
+				<path>${Project}/../../../include/irrList.h</path>
+			</file>
+			<file file-tag="irrMap.h:1">
+				<path>${Project}/../../../include/irrMap.h</path>
+			</file>
+			<file file-tag="irrMath.h:1">
+				<path>${Project}/../../../include/irrMath.h</path>
+			</file>
+			<file file-tag="irrString.h:1">
+				<path>${Project}/../../../include/irrString.h</path>
+			</file>
+			<file file-tag="irrTypes.h:1">
+				<path>${Project}/../../../include/irrTypes.h</path>
+			</file>
+			<file file-tag="irrXML.h:1">
+				<path>${Project}/../../../include/irrXML.h</path>
+			</file>
+			<file file-tag="ISceneCollisionManager.h:1">
+				<path>${Project}/../../../include/ISceneCollisionManager.h</path>
+			</file>
+			<file file-tag="ISceneManager.h:1">
+				<path>${Project}/../../../include/ISceneManager.h</path>
+			</file>
+			<file file-tag="ISceneNode.h:1">
+				<path>${Project}/../../../include/ISceneNode.h</path>
+			</file>
+			<file file-tag="ISceneNodeAnimator.h:1">
+				<path>${Project}/../../../include/ISceneNodeAnimator.h</path>
+			</file>
+			<file file-tag="ISceneNodeAnimatorCollisionResponse.h:1">
+				<path>${Project}/../../../include/ISceneNodeAnimatorCollisionResponse.h</path>
+			</file>
+			<file file-tag="ISceneNodeAnimatorFactory.h:1">
+				<path>${Project}/../../../include/ISceneNodeAnimatorFactory.h</path>
+			</file>
+			<file file-tag="ISceneNodeFactory.h:1">
+				<path>${Project}/../../../include/ISceneNodeFactory.h</path>
+			</file>
+			<file file-tag="ISceneUserDataSerializer.h:1">
+				<path>${Project}/../../../include/ISceneUserDataSerializer.h</path>
+			</file>
+			<file file-tag="IShaderConstantSetCallBack.h:1">
+				<path>${Project}/../../../include/IShaderConstantSetCallBack.h</path>
+			</file>
+			<file file-tag="IShadowVolumeSceneNode.h:1">
+				<path>${Project}/../../../include/IShadowVolumeSceneNode.h</path>
+			</file>
+			<file file-tag="ISkinnedMesh.h:1">
+				<path>${Project}/../../../include/ISkinnedMesh.h</path>
+			</file>
+			<file file-tag="ITerrainSceneNode.h:1">
+				<path>${Project}/../../../include/ITerrainSceneNode.h</path>
+			</file>
+			<file file-tag="ITextSceneNode.h:1">
+				<path>${Project}/../../../include/ITextSceneNode.h</path>
+			</file>
+			<file file-tag="ITexture.h:1">
+				<path>${Project}/../../../include/ITexture.h</path>
+			</file>
+			<file file-tag="ITimer.h:1">
+				<path>${Project}/../../../include/ITimer.h</path>
+			</file>
+			<file file-tag="ITriangleSelector.h:1">
+				<path>${Project}/../../../include/ITriangleSelector.h</path>
+			</file>
+			<file file-tag="IVideoDriver.h:1">
+				<path>${Project}/../../../include/IVideoDriver.h</path>
+			</file>
+			<file file-tag="IVideoModeList.h:1">
+				<path>${Project}/../../../include/IVideoModeList.h</path>
+			</file>
+			<file file-tag="IWriteFile.h:1">
+				<path>${Project}/../../../include/IWriteFile.h</path>
+			</file>
+			<file file-tag="IXMLReader.h:1">
+				<path>${Project}/../../../include/IXMLReader.h</path>
+			</file>
+			<file file-tag="IXMLWriter.h:1">
+				<path>${Project}/../../../include/IXMLWriter.h</path>
+			</file>
+			<file file-tag="Keycodes.h:1">
+				<path>${Project}/../../../include/Keycodes.h</path>
+			</file>
+			<file file-tag="line2d.h:1">
+				<path>${Project}/../../../include/line2d.h</path>
+			</file>
+			<file file-tag="line3d.h:1">
+				<path>${Project}/../../../include/line3d.h</path>
+			</file>
+			<file file-tag="matrix4.h:1">
+				<path>${Project}/../../../include/matrix4.h</path>
+			</file>
+			<file file-tag="plane3d.h:1">
+				<path>${Project}/../../../include/plane3d.h</path>
+			</file>
+			<file file-tag="position2d.h:1">
+				<path>${Project}/../../../include/position2d.h</path>
+			</file>
+			<file file-tag="zutil.h:1">
+				<path>${Project}/../zlib/zutil.h</path>
+			</file>
+			<file file-tag="adler32.c:1">
+				<path>${Project}/../zlib/adler32.c</path>
+			</file>
+			<file file-tag="compress.c:1">
+				<path>${Project}/../zlib/compress.c</path>
+			</file>
+			<file file-tag="crc32.c:1">
+				<path>${Project}/../zlib/crc32.c</path>
+			</file>
+			<file file-tag="deflate.c:1">
+				<path>${Project}/../zlib/deflate.c</path>
+			</file>
+			<file file-tag="gzio.c:1">
+				<path>${Project}/../zlib/gzio.c</path>
+			</file>
+			<file file-tag="infback.c:1">
+				<path>${Project}/../zlib/infback.c</path>
+			</file>
+			<file file-tag="inffast.c:1">
+				<path>${Project}/../zlib/inffast.c</path>
+			</file>
+			<file file-tag="inflate.c:1">
+				<path>${Project}/../zlib/inflate.c</path>
+			</file>
+			<file file-tag="inftrees.c:1">
+				<path>${Project}/../zlib/inftrees.c</path>
+			</file>
+			<file file-tag="trees.c:1">
+				<path>${Project}/../zlib/trees.c</path>
+			</file>
+			<file file-tag="uncompr.c:1">
+				<path>${Project}/../zlib/uncompr.c</path>
+			</file>
+			<file file-tag="zutil.c:1">
+				<path>${Project}/../zlib/zutil.c</path>
+			</file>
+			<file file-tag="crc32.h:1">
+				<path>${Project}/../zlib/crc32.h</path>
+			</file>
+			<file file-tag="deflate.h:1">
+				<path>${Project}/../zlib/deflate.h</path>
+			</file>
+			<file file-tag="inffast.h:1">
+				<path>${Project}/../zlib/inffast.h</path>
+			</file>
+			<file file-tag="inffixed.h:1">
+				<path>${Project}/../zlib/inffixed.h</path>
+			</file>
+			<file file-tag="inflate.h:1">
+				<path>${Project}/../zlib/inflate.h</path>
+			</file>
+			<file file-tag="inftrees.h:1">
+				<path>${Project}/../zlib/inftrees.h</path>
+			</file>
+			<file file-tag="trees.h:1">
+				<path>${Project}/../zlib/trees.h</path>
+			</file>
+			<file file-tag="zconf.h:1">
+				<path>${Project}/../zlib/zconf.h</path>
+			</file>
+			<file file-tag="zlib.h:1">
+				<path>${Project}/../zlib/zlib.h</path>
+			</file>
+			<file file-tag="jdatadst.c:1">
+				<path>${Project}/../jpeglib/jdatadst.c</path>
+			</file>
+			<file file-tag="jdatasrc.c:1">
+				<path>${Project}/../jpeglib/jdatasrc.c</path>
+			</file>
+			<file file-tag="jdcoefct.c:1">
+				<path>${Project}/../jpeglib/jdcoefct.c</path>
+			</file>
+			<file file-tag="jdcolor.c:1">
+				<path>${Project}/../jpeglib/jdcolor.c</path>
+			</file>
+			<file file-tag="jddctmgr.c:1">
+				<path>${Project}/../jpeglib/jddctmgr.c</path>
+			</file>
+			<file file-tag="jdhuff.c:1">
+				<path>${Project}/../jpeglib/jdhuff.c</path>
+			</file>
+			<file file-tag="jdinput.c:1">
+				<path>${Project}/../jpeglib/jdinput.c</path>
+			</file>
+			<file file-tag="jdmainct.c:1">
+				<path>${Project}/../jpeglib/jdmainct.c</path>
+			</file>
+			<file file-tag="jdmarker.c:1">
+				<path>${Project}/../jpeglib/jdmarker.c</path>
+			</file>
+			<file file-tag="jdmaster.c:1">
+				<path>${Project}/../jpeglib/jdmaster.c</path>
+			</file>
+			<file file-tag="jdmerge.c:1">
+				<path>${Project}/../jpeglib/jdmerge.c</path>
+			</file>
+			<file file-tag="jdphuff.c:1">
+				<path>${Project}/../jpeglib/jdphuff.c</path>
+			</file>
+			<file file-tag="jdpostct.c:1">
+				<path>${Project}/../jpeglib/jdpostct.c</path>
+			</file>
+			<file file-tag="jdsample.c:1">
+				<path>${Project}/../jpeglib/jdsample.c</path>
+			</file>
+			<file file-tag="jdtrans.c:1">
+				<path>${Project}/../jpeglib/jdtrans.c</path>
+			</file>
+			<file file-tag="jerror.c:1">
+				<path>${Project}/../jpeglib/jerror.c</path>
+			</file>
+			<file file-tag="jfdctflt.c:1">
+				<path>${Project}/../jpeglib/jfdctflt.c</path>
+			</file>
+			<file file-tag="jfdctfst.c:1">
+				<path>${Project}/../jpeglib/jfdctfst.c</path>
+			</file>
+			<file file-tag="jfdctint.c:1">
+				<path>${Project}/../jpeglib/jfdctint.c</path>
+			</file>
+			<file file-tag="jidctflt.c:1">
+				<path>${Project}/../jpeglib/jidctflt.c</path>
+			</file>
+			<file file-tag="jidctfst.c:1">
+				<path>${Project}/../jpeglib/jidctfst.c</path>
+			</file>
+			<file file-tag="jidctint.c:1">
+				<path>${Project}/../jpeglib/jidctint.c</path>
+			</file>
+			<file file-tag="jidctred.c:1">
+				<path>${Project}/../jpeglib/jidctred.c</path>
+			</file>
+			<file file-tag="jmemmgr.c:1">
+				<path>${Project}/../jpeglib/jmemmgr.c</path>
+			</file>
+			<file file-tag="jpegtran.c:1">
+				<path>${Project}/../jpeglib/jpegtran.c</path>
+			</file>
+			<file file-tag="jquant1.c:1">
+				<path>${Project}/../jpeglib/jquant1.c</path>
+			</file>
+			<file file-tag="jquant2.c:1">
+				<path>${Project}/../jpeglib/jquant2.c</path>
+			</file>
+			<file file-tag="jutils.c:1">
+				<path>${Project}/../jpeglib/jutils.c</path>
+			</file>
+			<file file-tag="rdbmp.c:1">
+				<path>${Project}/../jpeglib/rdbmp.c</path>
+			</file>
+			<file file-tag="rdcolmap.c:1">
+				<path>${Project}/../jpeglib/rdcolmap.c</path>
+			</file>
+			<file file-tag="rdgif.c:1">
+				<path>${Project}/../jpeglib/rdgif.c</path>
+			</file>
+			<file file-tag="rdjpgcom.c:1">
+				<path>${Project}/../jpeglib/rdjpgcom.c</path>
+			</file>
+			<file file-tag="rdppm.c:1">
+				<path>${Project}/../jpeglib/rdppm.c</path>
+			</file>
+			<file file-tag="rdrle.c:1">
+				<path>${Project}/../jpeglib/rdrle.c</path>
+			</file>
+			<file file-tag="rdswitch.c:1">
+				<path>${Project}/../jpeglib/rdswitch.c</path>
+			</file>
+			<file file-tag="rdtarga.c:1">
+				<path>${Project}/../jpeglib/rdtarga.c</path>
+			</file>
+			<file file-tag="Tcdjpeg.c:1">
+				<path>${Project}/../jpeglib/Tcdjpeg.c</path>
+			</file>
+			<file file-tag="transupp.c:1">
+				<path>${Project}/../jpeglib/transupp.c</path>
+			</file>
+			<file file-tag="wrbmp.c:1">
+				<path>${Project}/../jpeglib/wrbmp.c</path>
+			</file>
+			<file file-tag="wrgif.c:1">
+				<path>${Project}/../jpeglib/wrgif.c</path>
+			</file>
+			<file file-tag="wrjpgcom.c:1">
+				<path>${Project}/../jpeglib/wrjpgcom.c</path>
+			</file>
+			<file file-tag="wrppm.c:1">
+				<path>${Project}/../jpeglib/wrppm.c</path>
+			</file>
+			<file file-tag="wrrle.c:1">
+				<path>${Project}/../jpeglib/wrrle.c</path>
+			</file>
+			<file file-tag="wrtarga.c:1">
+				<path>${Project}/../jpeglib/wrtarga.c</path>
+			</file>
+			<file file-tag="cderror.h:1">
+				<path>${Project}/../jpeglib/cderror.h</path>
+			</file>
+			<file file-tag="cdjpeg.h:1">
+				<path>${Project}/../jpeglib/cdjpeg.h</path>
+			</file>
+			<file file-tag="jchuff.h:1">
+				<path>${Project}/../jpeglib/jchuff.h</path>
+			</file>
+			<file file-tag="jconfig.h:1">
+				<path>${Project}/../jpeglib/jconfig.h</path>
+			</file>
+			<file file-tag="jdct.h:1">
+				<path>${Project}/../jpeglib/jdct.h</path>
+			</file>
+			<file file-tag="jdhuff.h:1">
+				<path>${Project}/../jpeglib/jdhuff.h</path>
+			</file>
+			<file file-tag="jerror.h:1">
+				<path>${Project}/../jpeglib/jerror.h</path>
+			</file>
+			<file file-tag="jinclude.h:1">
+				<path>${Project}/../jpeglib/jinclude.h</path>
+			</file>
+			<file file-tag="jmemsys.h:1">
+				<path>${Project}/../jpeglib/jmemsys.h</path>
+			</file>
+			<file file-tag="jmorecfg.h:1">
+				<path>${Project}/../jpeglib/jmorecfg.h</path>
+			</file>
+			<file file-tag="jpegint.h:1">
+				<path>${Project}/../jpeglib/jpegint.h</path>
+			</file>
+			<file file-tag="jpeglib.h:1">
+				<path>${Project}/../jpeglib/jpeglib.h</path>
+			</file>
+			<file file-tag="jversion.h:1">
+				<path>${Project}/../jpeglib/jversion.h</path>
+			</file>
+			<file file-tag="transupp.h:1">
+				<path>${Project}/../jpeglib/transupp.h</path>
+			</file>
+			<file file-tag="ansi2knr.c:1">
+				<path>${Project}/../jpeglib/ansi2knr.c</path>
+			</file>
+			<file file-tag="cdjpeg.c:1">
+				<path>${Project}/../jpeglib/cdjpeg.c</path>
+			</file>
+			<file file-tag="cjpeg.c:1">
+				<path>${Project}/../jpeglib/cjpeg.c</path>
+			</file>
+			<file file-tag="ckconfig.c:1">
+				<path>${Project}/../jpeglib/ckconfig.c</path>
+			</file>
+			<file file-tag="djpeg.c:1">
+				<path>${Project}/../jpeglib/djpeg.c</path>
+			</file>
+			<file file-tag="example.c:1">
+				<path>${Project}/../jpeglib/example.c</path>
+			</file>
+			<file file-tag="jcapimin.c:1">
+				<path>${Project}/../jpeglib/jcapimin.c</path>
+			</file>
+			<file file-tag="jcapistd.c:1">
+				<path>${Project}/../jpeglib/jcapistd.c</path>
+			</file>
+			<file file-tag="jccoefct.c:1">
+				<path>${Project}/../jpeglib/jccoefct.c</path>
+			</file>
+			<file file-tag="jccolor.c:1">
+				<path>${Project}/../jpeglib/jccolor.c</path>
+			</file>
+			<file file-tag="jcdctmgr.c:1">
+				<path>${Project}/../jpeglib/jcdctmgr.c</path>
+			</file>
+			<file file-tag="jchuff.c:1">
+				<path>${Project}/../jpeglib/jchuff.c</path>
+			</file>
+			<file file-tag="jcinit.c:1">
+				<path>${Project}/../jpeglib/jcinit.c</path>
+			</file>
+			<file file-tag="jcmainct.c:1">
+				<path>${Project}/../jpeglib/jcmainct.c</path>
+			</file>
+			<file file-tag="jcmarker.c:1">
+				<path>${Project}/../jpeglib/jcmarker.c</path>
+			</file>
+			<file file-tag="jcmaster.c:1">
+				<path>${Project}/../jpeglib/jcmaster.c</path>
+			</file>
+			<file file-tag="jcomapi.c:1">
+				<path>${Project}/../jpeglib/jcomapi.c</path>
+			</file>
+			<file file-tag="jcparam.c:1">
+				<path>${Project}/../jpeglib/jcparam.c</path>
+			</file>
+			<file file-tag="jcphuff.c:1">
+				<path>${Project}/../jpeglib/jcphuff.c</path>
+			</file>
+			<file file-tag="jcprepct.c:1">
+				<path>${Project}/../jpeglib/jcprepct.c</path>
+			</file>
+			<file file-tag="jcsample.c:1">
+				<path>${Project}/../jpeglib/jcsample.c</path>
+			</file>
+			<file file-tag="jctrans.c:1">
+				<path>${Project}/../jpeglib/jctrans.c</path>
+			</file>
+			<file file-tag="jdapimin.c:1">
+				<path>${Project}/../jpeglib/jdapimin.c</path>
+			</file>
+			<file file-tag="jdapistd.c:1">
+				<path>${Project}/../jpeglib/jdapistd.c</path>
+			</file>
+			<file file-tag="pngwutil.c:1">
+				<path>${Project}/../libpng/pngwutil.c</path>
+			</file>
+			<file file-tag="png.h:1">
+				<path>${Project}/../libpng/png.h</path>
+			</file>
+			<file file-tag="pngconf.h:1">
+				<path>${Project}/../libpng/pngconf.h</path>
+			</file>
+			<file file-tag="example.c:2">
+				<path>${Project}/../libpng/example.c</path>
+			</file>
+			<file file-tag="png.c:1">
+				<path>${Project}/../libpng/png.c</path>
+			</file>
+			<file file-tag="pngerror.c:1">
+				<path>${Project}/../libpng/pngerror.c</path>
+			</file>
+			<file file-tag="pnggccrd.c:1">
+				<path>${Project}/../libpng/pnggccrd.c</path>
+			</file>
+			<file file-tag="pngget.c:1">
+				<path>${Project}/../libpng/pngget.c</path>
+			</file>
+			<file file-tag="pngmem.c:1">
+				<path>${Project}/../libpng/pngmem.c</path>
+			</file>
+			<file file-tag="pngpread.c:1">
+				<path>${Project}/../libpng/pngpread.c</path>
+			</file>
+			<file file-tag="pngread.c:1">
+				<path>${Project}/../libpng/pngread.c</path>
+			</file>
+			<file file-tag="pngrio.c:1">
+				<path>${Project}/../libpng/pngrio.c</path>
+			</file>
+			<file file-tag="pngrtran.c:1">
+				<path>${Project}/../libpng/pngrtran.c</path>
+			</file>
+			<file file-tag="pngrutil.c:1">
+				<path>${Project}/../libpng/pngrutil.c</path>
+			</file>
+			<file file-tag="pngset.c:1">
+				<path>${Project}/../libpng/pngset.c</path>
+			</file>
+			<file file-tag="pngtest.c:1">
+				<path>${Project}/../libpng/pngtest.c</path>
+			</file>
+			<file file-tag="pngtrans.c:1">
+				<path>${Project}/../libpng/pngtrans.c</path>
+			</file>
+			<file file-tag="pngvcrd.c:1">
+				<path>${Project}/../libpng/pngvcrd.c</path>
+			</file>
+			<file file-tag="pngwio.c:1">
+				<path>${Project}/../libpng/pngwio.c</path>
+			</file>
+			<file file-tag="pngwrite.c:1">
+				<path>${Project}/../libpng/pngwrite.c</path>
+			</file>
+			<file file-tag="pngwtran.c:1">
+				<path>${Project}/../libpng/pngwtran.c</path>
+			</file>
+			<file file-tag="CWiiMemMgr.h:1">
+				<path>${Project}/CWiiMemMgr.h</path>
+			</file>
+			<file file-tag="CWiiMemMgr.cpp:1">
+				<path>${Project}/CWiiMemMgr.cpp</path>
+			</file>
+			<file file-tag="CWiiTexture.h:1">
+				<path>${Project}/CWiiTexture.h</path>
+			</file>
+			<file file-tag="CWiiTexture.cpp:1">
+				<path>${Project}/CWiiTexture.cpp</path>
+			</file>
+			<file file-tag="WiiTextureConv.h:1">
+				<path>${Project}/WiiTextureConv.h</path>
+			</file>
+			<file file-tag="WiiTextureConv.cpp:1">
+				<path>${Project}/WiiTextureConv.cpp</path>
+			</file>
+			<file file-tag="jmemirr.c:1">
+				<path>${Project}/../jpeglib/jmemirr.c</path>
+			</file>
+			<file file-tag="IChannelAnimator.h:1">
+				<path>${Project}/../IChannelAnimator.h</path>
+			</file>
+			<file file-tag="IAnimationTrack.h:1">
+				<path>${Project}/../IAnimationTrack.h</path>
+			</file>
+			<file file-tag="CChannelAnimator.cpp:1">
+				<path>${Project}/../CChannelAnimator.cpp</path>
+			</file>
+			<file file-tag="IAnimator.h:1">
+				<path>${Project}/../IAnimator.h</path>
+			</file>
+			<file file-tag="CAnimationTrack.cpp:1">
+				<path>${Project}/../CAnimationTrack.cpp</path>
+			</file>
+			<file file-tag="CChannelBlender.h:1">
+				<path>${Project}/../CChannelBlender.h</path>
+			</file>
+			<file file-tag="CChannelBlender.cpp:1">
+				<path>${Project}/../CChannelBlender.cpp</path>
+			</file>
+			<file file-tag="CImageLoaderWAL.h:1">
+				<path>${Project}/../CImageLoaderWAL.h</path>
+			</file>
+			<file file-tag="CAnimationTrack.h:1">
+				<path>${Project}/../CAnimationTrack.h</path>
+			</file>
+			<file file-tag="CChannelAnimator.h:1">
+				<path>${Project}/../CChannelAnimator.h</path>
+			</file>
+			<file file-tag="CSkinnedMesh2.cpp:1">
+				<path>${Project}/../CSkinnedMesh2.cpp</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorChannelLibrary.cpp:1">
+				<path>${Project}/../CSceneNodeAnimatorChannelLibrary.cpp</path>
+			</file>
+			<file file-tag="Irrlicht2008.vcproj:1">
+				<path>${Project}/../Irrlicht2008.vcproj</path>
+			</file>
+			<file file-tag="Irrlicht2008.vcproj.GAMELOFT.Gerald.Langlois.user:1">
+				<path>${Project}/../Irrlicht2008.vcproj.GAMELOFT.Gerald.Langlois.user</path>
+			</file>
+			<file file-tag="CSkinnedMesh2.h:1">
+				<path>${Project}/../CSkinnedMesh2.h</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorChannelLibrary.h:1">
+				<path>${Project}/../CSceneNodeAnimatorChannelLibrary.h</path>
+			</file>
+			<file file-tag="CCameraTargetTrackerSceneNode.cpp:1">
+				<path>${Project}/../CCameraTargetTrackerSceneNode.cpp</path>
+			</file>
+			<file file-tag="CCameraTargetTrackerSceneNode.h:1">
+				<path>${Project}/../CCameraTargetTrackerSceneNode.h</path>
+			</file>
+			<file file-tag="CMorphingMesh.cpp:1">
+				<path>${Project}/../CMorphingMesh.cpp</path>
+			</file>
+			<file file-tag="CMorphingMesh.h:1">
+				<path>${Project}/../CMorphingMesh.h</path>
+			</file>
+			<file file-tag="CSkinnedMeshSceneNode.cpp:1">
+				<path>${Project}/../CSkinnedMeshSceneNode.cpp</path>
+			</file>
+			<file file-tag="CSkinnedMeshSceneNode.h:1">
+				<path>${Project}/../CSkinnedMeshSceneNode.h</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorCameraFPS.cpp:1">
+				<path>${Project}/../CSceneNodeAnimatorCameraFPS.cpp</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorCameraFPS.h:1">
+				<path>${Project}/../CSceneNodeAnimatorCameraFPS.h</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorCameraMaya.cpp:1">
+				<path>${Project}/../CSceneNodeAnimatorCameraMaya.cpp</path>
+			</file>
+			<file file-tag="CSceneNodeAnimatorCameraMaya.h:1">
+				<path>${Project}/../CSceneNodeAnimatorCameraMaya.h</path>
+			</file>
+			<file file-tag="CGUIFontVector.cpp:1">
+				<path>${Project}/../CGUIFontVector.cpp</path>
+			</file>
+			<file file-tag="CGUIFontVector.h:1">
+				<path>${Project}/../CGUIFontVector.h</path>
+			</file>
+			<file file-tag="CBurningShader_Raster_Reference.cpp:1">
+				<path>${Project}/../CBurningShader_Raster_Reference.cpp</path>
+			</file>
+			<file file-tag="CGUITTFont.cpp:1">
+				<path>${Project}/../CGUITTFont.cpp</path>
+			</file>
+			<file file-tag="CGUITTFont.h:1">
+				<path>${Project}/../CGUITTFont.h</path>
+			</file>
+			<file file-tag="CVolumeLightSceneNode.cpp:1">
+				<path>${Project}/../CVolumeLightSceneNode.cpp</path>
+			</file>
+			<file file-tag="CVolumeLightSceneNode.h:1">
+				<path>${Project}/../CVolumeLightSceneNode.h</path>
+			</file>
+			<file file-tag="CGUITable.cpp:1">
+				<path>${Project}/../CGUITable.cpp</path>
+			</file>
+			<file file-tag="CGUITable.h:1">
+				<path>${Project}/../CGUITable.h</path>
+			</file>
+			<file file-tag="CParticleSizeAffector.h:1">
+				<path>${Project}/../CParticleSizeAffector.h</path>
+			</file>
+			<file file-tag="CParticleSizeAffector.cpp:1">
+				<path>${Project}/../CParticleSizeAffector.cpp</path>
+			</file>
+			<file file-tag="CParticleSpinAffector.h:1">
+				<path>${Project}/../CParticleSpinAffector.h</path>
+			</file>
+			<file file-tag="CParticleSpinAffector.cpp:1">
+				<path>${Project}/../CParticleSpinAffector.cpp</path>
+			</file>
+		</files>
+		<group-roots>
+			<group-root category-alias="UUID_ProjectFilesGroup" depth="0" root-group-tag="UUID_ProjectFilesGroup:1">
+				<group-items>
+					<file-ref>CGUITable.cpp:1</file-ref>
+					<file-ref>CGUITable.h:1</file-ref>
+					<file-ref>CVolumeLightSceneNode.cpp:1</file-ref>
+					<file-ref>CVolumeLightSceneNode.h:1</file-ref>
+					<file-ref>CParticleSizeAffector.h:1</file-ref>
+					<file-ref>CParticleSizeAffector.cpp:1</file-ref>
+					<file-ref>CGUITTFont.cpp:1</file-ref>
+					<file-ref>CGUITTFont.h:1</file-ref>
+					<file-ref>CBurningShader_Raster_Reference.cpp:1</file-ref>
+					<file-ref>CParticleSpinAffector.h:1</file-ref>
+					<file-ref>CParticleSpinAffector.cpp:1</file-ref>
+					<file-ref>CSceneNodeAnimatorCameraFPS.cpp:1</file-ref>
+					<file-ref>CSceneNodeAnimatorCameraFPS.h:1</file-ref>
+					<file-ref>CGUIFontVector.cpp:1</file-ref>
+					<file-ref>CGUIFontVector.h:1</file-ref>
+					<file-ref>CSceneNodeAnimatorCameraMaya.cpp:1</file-ref>
+					<file-ref>CSceneNodeAnimatorCameraMaya.h:1</file-ref>
+					<file-ref>CMorphingMesh.cpp:1</file-ref>
+					<file-ref>CSkinnedMeshSceneNode.cpp:1</file-ref>
+					<file-ref>CSkinnedMeshSceneNode.h:1</file-ref>
+					<file-ref>CMorphingMesh.h:1</file-ref>
+					<file-ref>CCameraTargetTrackerSceneNode.cpp:1</file-ref>
+					<file-ref>CCameraTargetTrackerSceneNode.h:1</file-ref>
+					<file-ref>CWiiDriver.cpp:1</file-ref>
+					<file-ref>CWiiDriver.h:1</file-ref>
+					<file-ref>CZBuffer.cpp:1</file-ref>
+					<file-ref>CZipReader.cpp:1</file-ref>
+					<file-ref>IBurningShader.cpp:1</file-ref>
+					<file-ref>Irrlicht.cpp:1</file-ref>
+					<file-ref>irrXML.cpp:1</file-ref>
+					<file-ref>os.cpp:1</file-ref>
+					<file-ref>BuiltInFont.h:1</file-ref>
+					<file-ref>IChannelAnimator.h:1</file-ref>
+					<file-ref>IAnimationTrack.h:1</file-ref>
+					<file-ref>CChannelAnimator.cpp:1</file-ref>
+					<file-ref>IAnimator.h:1</file-ref>
+					<file-ref>CAnimationTrack.cpp:1</file-ref>
+					<file-ref>CChannelBlender.h:1</file-ref>
+					<file-ref>CChannelBlender.cpp:1</file-ref>
+					<file-ref>CImageLoaderWAL.h:1</file-ref>
+					<file-ref>C3DSMeshFileLoader.h:1</file-ref>
+					<file-ref>CAnimatedMeshMD2.h:1</file-ref>
+					<file-ref>CAnimatedMeshMD3.h:1</file-ref>
+					<file-ref>CAnimatedMeshSceneNode.h:1</file-ref>
+					<file-ref>CAnimationTrack.h:1</file-ref>
+					<file-ref>CChannelAnimator.h:1</file-ref>
+					<file-ref>CSkinnedMesh2.cpp:1</file-ref>
+					<file-ref>CAttributeImpl.h:1</file-ref>
+					<file-ref>CSceneNodeAnimatorChannelLibrary.cpp:1</file-ref>
+					<file-ref>CAttributes.h:1</file-ref>
+					<file-ref>Irrlicht2008.vcproj:1</file-ref>
+					<file-ref>Irrlicht2008.vcproj.GAMELOFT.Gerald.Langlois.user:1</file-ref>
+					<file-ref>CSkinnedMesh2.h:1</file-ref>
+					<file-ref>CSceneNodeAnimatorChannelLibrary.h:1</file-ref>
+					<file-ref>CB3DMeshFileLoader.h:1</file-ref>
+					<file-ref>CBillboardSceneNode.h:1</file-ref>
+					<file-ref>CBoneSceneNode.h:1</file-ref>
+					<file-ref>CBSPMeshFileLoader.h:1</file-ref>
+					<file-ref>CCameraFPSSceneNode.h:1</file-ref>
+					<file-ref>CCameraMayaSceneNode.h:1</file-ref>
+					<file-ref>CCameraSceneNode.h:1</file-ref>
+					<file-ref>CColladaFileLoader.h:1</file-ref>
+					<file-ref>CColladaMeshWriter.h:1</file-ref>
+					<file-ref>CColorConverter.h:1</file-ref>
+					<file-ref>CCSMLoader.h:1</file-ref>
+					<file-ref>CCubeSceneNode.h:1</file-ref>
+					<file-ref>CD3D8Driver.h:1</file-ref>
+					<file-ref>CD3D8MaterialRenderer.h:1</file-ref>
+					<file-ref>CD3D8NormalMapRenderer.h:1</file-ref>
+					<file-ref>CD3D8ParallaxMapRenderer.h:1</file-ref>
+					<file-ref>CD3D8ShaderMaterialRenderer.h:1</file-ref>
+					<file-ref>CD3D8Texture.h:1</file-ref>
+					<file-ref>CD3D9Driver.h:1</file-ref>
+					<file-ref>CD3D9HLSLMaterialRenderer.h:1</file-ref>
+					<file-ref>CD3D9MaterialRenderer.h:1</file-ref>
+					<file-ref>CD3D9NormalMapRenderer.h:1</file-ref>
+					<file-ref>CD3D9ParallaxMapRenderer.h:1</file-ref>
+					<file-ref>CD3D9ShaderMaterialRenderer.h:1</file-ref>
+					<file-ref>CD3D9Texture.h:1</file-ref>
+					<file-ref>CDefaultGUIElementFactory.h:1</file-ref>
+					<file-ref>CDefaultSceneNodeAnimatorFactory.h:1</file-ref>
+					<file-ref>CDefaultSceneNodeFactory.h:1</file-ref>
+					<file-ref>CDepthBuffer.h:1</file-ref>
+					<file-ref>CDMFLoader.h:1</file-ref>
+					<file-ref>CDummyTransformationSceneNode.h:1</file-ref>
+					<file-ref>CEmptySceneNode.h:1</file-ref>
+					<file-ref>CFileList.h:1</file-ref>
+					<file-ref>CFileSystem.h:1</file-ref>
+					<file-ref>CFPSCounter.h:1</file-ref>
+					<file-ref>CGeometryCreator.h:1</file-ref>
+					<file-ref>CGUIButton.h:1</file-ref>
+					<file-ref>CGUICheckBox.h:1</file-ref>
+					<file-ref>CGUIColorSelectDialog.h:1</file-ref>
+					<file-ref>CGUIComboBox.h:1</file-ref>
+					<file-ref>CGUIContextMenu.h:1</file-ref>
+					<file-ref>CGUIEditBox.h:1</file-ref>
+					<file-ref>CGUIEnvironment.h:1</file-ref>
+					<file-ref>CGUIFileOpenDialog.h:1</file-ref>
+					<file-ref>CGUIFont.h:1</file-ref>
+					<file-ref>CGUIImage.h:1</file-ref>
+					<file-ref>CGUIInOutFader.h:1</file-ref>
+					<file-ref>CGUIListBox.h:1</file-ref>
+					<file-ref>CGUIMenu.h:1</file-ref>
+					<file-ref>CGUIMeshViewer.h:1</file-ref>
+					<file-ref>CGUIMessageBox.h:1</file-ref>
+					<file-ref>CGUIModalScreen.h:1</file-ref>
+					<file-ref>CGUIScrollBar.h:1</file-ref>
+					<file-ref>CGUISkin.h:1</file-ref>
+					<file-ref>CGUISpinBox.h:1</file-ref>
+					<file-ref>CGUISpriteBank.h:1</file-ref>
+					<file-ref>CGUIStaticText.h:1</file-ref>
+					<file-ref>CGUITabControl.h:1</file-ref>
+					<file-ref>CGUIToolBar.h:1</file-ref>
+					<file-ref>CGUIWindow.h:1</file-ref>
+					<file-ref>CImage.h:1</file-ref>
+					<file-ref>CImageLoaderBMP.h:1</file-ref>
+					<file-ref>CImageLoaderJPG.h:1</file-ref>
+					<file-ref>CImageLoaderPCX.h:1</file-ref>
+					<file-ref>CImageLoaderPNG.h:1</file-ref>
+					<file-ref>CImageLoaderPPM.h:1</file-ref>
+					<file-ref>CImageLoaderPSD.h:1</file-ref>
+					<file-ref>CImageLoaderTGA.h:1</file-ref>
+					<file-ref>CImageWriterBMP.h:1</file-ref>
+					<file-ref>CImageWriterJPG.h:1</file-ref>
+					<file-ref>CImageWriterPCX.h:1</file-ref>
+					<file-ref>CImageWriterPNG.h:1</file-ref>
+					<file-ref>CImageWriterPPM.h:1</file-ref>
+					<file-ref>CImageWriterPSD.h:1</file-ref>
+					<file-ref>CImageWriterTGA.h:1</file-ref>
+					<file-ref>CIrrDeviceLinux.h:1</file-ref>
+					<file-ref>CIrrDeviceSDL.h:1</file-ref>
+					<file-ref>CIrrDeviceStub.h:1</file-ref>
+					<file-ref>CIrrDeviceWin32.h:1</file-ref>
+					<file-ref>CIrrMeshFileLoader.h:1</file-ref>
+					<file-ref>CIrrMeshWriter.h:1</file-ref>
+					<file-ref>CLightSceneNode.h:1</file-ref>
+					<file-ref>CLimitReadFile.h:1</file-ref>
+					<file-ref>CLMTSMeshFileLoader.h:1</file-ref>
+					<file-ref>CLogger.h:1</file-ref>
+					<file-ref>CMD2MeshFileLoader.h:1</file-ref>
+					<file-ref>CMD3MeshFileLoader.h:1</file-ref>
+					<file-ref>CMemoryReadFile.h:1</file-ref>
+					<file-ref>CMeshCache.h:1</file-ref>
+					<file-ref>CMeshManipulator.h:1</file-ref>
+					<file-ref>CMeshSceneNode.h:1</file-ref>
+					<file-ref>CMetaTriangleSelector.h:1</file-ref>
+					<file-ref>CMS3DMeshFileLoader.h:1</file-ref>
+					<file-ref>CMY3DHelper.h:1</file-ref>
+					<file-ref>CMY3DMeshFileLoader.h:1</file-ref>
+					<file-ref>CMY3DStuff.h:1</file-ref>
+					<file-ref>CNullDriver.h:1</file-ref>
+					<file-ref>COBJMeshFileLoader.h:1</file-ref>
+					<file-ref>COCTLoader.h:1</file-ref>
+					<file-ref>COctTreeSceneNode.h:1</file-ref>
+					<file-ref>COctTreeTriangleSelector.h:1</file-ref>
+					<file-ref>COgreMeshFileLoader.h:1</file-ref>
+					<file-ref>COpenGLDriver.h:1</file-ref>
+					<file-ref>COpenGLExtensionHandler.h:1</file-ref>
+					<file-ref>COpenGLMaterialRenderer.h:1</file-ref>
+					<file-ref>COpenGLNormalMapRenderer.h:1</file-ref>
+					<file-ref>COpenGLParallaxMapRenderer.h:1</file-ref>
+					<file-ref>COpenGLShaderMaterialRenderer.h:1</file-ref>
+					<file-ref>COpenGLSLMaterialRenderer.h:1</file-ref>
+					<file-ref>COpenGLTexture.h:1</file-ref>
+					<file-ref>COSOperator.h:1</file-ref>
+					<file-ref>CPakReader.h:1</file-ref>
+					<file-ref>CParticleAnimatedMeshSceneNodeEmitter.h:1</file-ref>
+					<file-ref>CParticleAttractionAffector.h:1</file-ref>
+					<file-ref>CParticleBoxEmitter.h:1</file-ref>
+					<file-ref>CParticleCylinderEmitter.h:1</file-ref>
+					<file-ref>CParticleFadeOutAffector.h:1</file-ref>
+					<file-ref>CParticleGravityAffector.h:1</file-ref>
+					<file-ref>CParticleMeshEmitter.h:1</file-ref>
+					<file-ref>CParticlePointEmitter.h:1</file-ref>
+					<file-ref>CParticleRingEmitter.h:1</file-ref>
+					<file-ref>CParticleRotationAffector.h:1</file-ref>
+					<file-ref>CParticleSphereEmitter.h:1</file-ref>
+					<file-ref>CParticleSystemSceneNode.h:1</file-ref>
+					<file-ref>CQ3LevelMesh.h:1</file-ref>
+					<file-ref>CQuake3ShaderSceneNode.h:1</file-ref>
+					<file-ref>CReadFile.h:1</file-ref>
+					<file-ref>CSceneCollisionManager.h:1</file-ref>
+					<file-ref>CSceneManager.h:1</file-ref>
+					<file-ref>CSceneNodeAnimatorCollisionResponse.h:1</file-ref>
+					<file-ref>CSceneNodeAnimatorDelete.h:1</file-ref>
+					<file-ref>CSceneNodeAnimatorFlyCircle.h:1</file-ref>
+					<file-ref>CSceneNodeAnimatorFlyStraight.h:1</file-ref>
+					<file-ref>CSceneNodeAnimatorFollowSpline.h:1</file-ref>
+					<file-ref>CSceneNodeAnimatorRotation.h:1</file-ref>
+					<file-ref>CSceneNodeAnimatorTexture.h:1</file-ref>
+					<file-ref>CShadowVolumeSceneNode.h:1</file-ref>
+					<file-ref>CSkinnedMesh.h:1</file-ref>
+					<file-ref>CSkyBoxSceneNode.h:1</file-ref>
+					<file-ref>CSkyDomeSceneNode.h:1</file-ref>
+					<file-ref>CSoftware2MaterialRenderer.h:1</file-ref>
+					<file-ref>CSoftwareDriver2.h:1</file-ref>
+					<file-ref>CSoftwareDriver.h:1</file-ref>
+					<file-ref>CSoftwareTexture2.h:1</file-ref>
+					<file-ref>CSoftwareTexture.h:1</file-ref>
+					<file-ref>CSphereSceneNode.h:1</file-ref>
+					<file-ref>CSTLMeshFileLoader.h:1</file-ref>
+					<file-ref>CSTLMeshWriter.h:1</file-ref>
+					<file-ref>CTerrainSceneNode.h:1</file-ref>
+					<file-ref>CTerrainTriangleSelector.h:1</file-ref>
+					<file-ref>CTextSceneNode.h:1</file-ref>
+					<file-ref>CTimer.h:1</file-ref>
+					<file-ref>CTriangleBBSelector.h:1</file-ref>
+					<file-ref>CTriangleSelector.h:1</file-ref>
+					<file-ref>CTRTextureGouraud.h:1</file-ref>
+					<file-ref>CVideoModeList.h:1</file-ref>
+					<file-ref>CWaterSurfaceSceneNode.h:1</file-ref>
+					<file-ref>CWriteFile.h:1</file-ref>
+					<file-ref>CXMeshFileLoader.h:1</file-ref>
+					<file-ref>CXMLReader.h:1</file-ref>
+					<file-ref>CXMLReaderImpl.h:1</file-ref>
+					<file-ref>CXMLWriter.h:1</file-ref>
+					<file-ref>CZBuffer.h:1</file-ref>
+					<file-ref>CZipReader.h:1</file-ref>
+					<file-ref>dmfsupport.h:1</file-ref>
+					<file-ref>glext.h:1</file-ref>
+					<file-ref>glxext.h:1</file-ref>
+					<file-ref>IBurningShader.h:1</file-ref>
+					<file-ref>IDepthBuffer.h:1</file-ref>
+					<file-ref>IImagePresenter.h:1</file-ref>
+					<file-ref>ITriangleRenderer.h:1</file-ref>
+					<file-ref>IZBuffer.h:1</file-ref>
+					<file-ref>OctTree.h:1</file-ref>
+					<file-ref>os.h:1</file-ref>
+					<file-ref>S2DVertex.h:1</file-ref>
+					<file-ref>S4DVertex.h:1</file-ref>
+					<file-ref>SoftwareDriver2_compile_config.h:1</file-ref>
+					<file-ref>SoftwareDriver2_helper.h:1</file-ref>
+					<file-ref>C3DSMeshFileLoader.cpp:1</file-ref>
+					<file-ref>CAnimatedMeshMD2.cpp:1</file-ref>
+					<file-ref>CAnimatedMeshMD3.cpp:1</file-ref>
+					<file-ref>CAnimatedMeshSceneNode.cpp:1</file-ref>
+					<file-ref>CAttributes.cpp:1</file-ref>
+					<file-ref>CB3DMeshFileLoader.cpp:1</file-ref>
+					<file-ref>CBillboardSceneNode.cpp:1</file-ref>
+					<file-ref>CBoneSceneNode.cpp:1</file-ref>
+					<file-ref>CBSPMeshFileLoader.cpp:1</file-ref>
+					<file-ref>CCameraFPSSceneNode.cpp:1</file-ref>
+					<file-ref>CCameraMayaSceneNode.cpp:1</file-ref>
+					<file-ref>CCameraSceneNode.cpp:1</file-ref>
+					<file-ref>CColladaFileLoader.cpp:1</file-ref>
+					<file-ref>CColladaMeshWriter.cpp:1</file-ref>
+					<file-ref>CColorConverter.cpp:1</file-ref>
+					<file-ref>CCSMLoader.cpp:1</file-ref>
+					<file-ref>CCubeSceneNode.cpp:1</file-ref>
+					<file-ref>CD3D8Driver.cpp:1</file-ref>
+					<file-ref>CD3D8NormalMapRenderer.cpp:1</file-ref>
+					<file-ref>CD3D8ParallaxMapRenderer.cpp:1</file-ref>
+					<file-ref>CD3D8ShaderMaterialRenderer.cpp:1</file-ref>
+					<file-ref>CD3D8Texture.cpp:1</file-ref>
+					<file-ref>CD3D9Driver.cpp:1</file-ref>
+					<file-ref>CD3D9HLSLMaterialRenderer.cpp:1</file-ref>
+					<file-ref>CD3D9NormalMapRenderer.cpp:1</file-ref>
+					<file-ref>CD3D9ParallaxMapRenderer.cpp:1</file-ref>
+					<file-ref>CD3D9ShaderMaterialRenderer.cpp:1</file-ref>
+					<file-ref>CD3D9Texture.cpp:1</file-ref>
+					<file-ref>CDefaultGUIElementFactory.cpp:1</file-ref>
+					<file-ref>ISceneNode.cpp:1</file-ref>
+					<file-ref>CDefaultSceneNodeAnimatorFactory.cpp:1</file-ref>
+					<file-ref>CDefaultSceneNodeFactory.cpp:1</file-ref>
+					<file-ref>CDepthBuffer.cpp:1</file-ref>
+					<file-ref>CDMFLoader.cpp:1</file-ref>
+					<file-ref>CDummyTransformationSceneNode.cpp:1</file-ref>
+					<file-ref>CEmptySceneNode.cpp:1</file-ref>
+					<file-ref>CFileList.cpp:1</file-ref>
+					<file-ref>CFileSystem.cpp:1</file-ref>
+					<file-ref>CFPSCounter.cpp:1</file-ref>
+					<file-ref>CGeometryCreator.cpp:1</file-ref>
+					<file-ref>CGUIButton.cpp:1</file-ref>
+					<file-ref>CGUICheckBox.cpp:1</file-ref>
+					<file-ref>CGUIColorSelectDialog.cpp:1</file-ref>
+					<file-ref>CGUIComboBox.cpp:1</file-ref>
+					<file-ref>CGUIContextMenu.cpp:1</file-ref>
+					<file-ref>CGUIEditBox.cpp:1</file-ref>
+					<file-ref>CGUIEnvironment.cpp:1</file-ref>
+					<file-ref>CGUIFileOpenDialog.cpp:1</file-ref>
+					<file-ref>CGUIFont.cpp:1</file-ref>
+					<file-ref>CGUIImage.cpp:1</file-ref>
+					<file-ref>CGUIInOutFader.cpp:1</file-ref>
+					<file-ref>CGUIListBox.cpp:1</file-ref>
+					<file-ref>CGUIMenu.cpp:1</file-ref>
+					<file-ref>CGUIMeshViewer.cpp:1</file-ref>
+					<file-ref>CGUIMessageBox.cpp:1</file-ref>
+					<file-ref>CGUIModalScreen.cpp:1</file-ref>
+					<file-ref>CGUIScrollBar.cpp:1</file-ref>
+					<file-ref>CGUISkin.cpp:1</file-ref>
+					<file-ref>CGUISpinBox.cpp:1</file-ref>
+					<file-ref>CGUISpriteBank.cpp:1</file-ref>
+					<file-ref>CGUIStaticText.cpp:1</file-ref>
+					<file-ref>CGUITabControl.cpp:1</file-ref>
+					<file-ref>CGUIToolBar.cpp:1</file-ref>
+					<file-ref>CGUIWindow.cpp:1</file-ref>
+					<file-ref>CImage.cpp:1</file-ref>
+					<file-ref>CImageLoaderBMP.cpp:1</file-ref>
+					<file-ref>CImageLoaderJPG.cpp:1</file-ref>
+					<file-ref>CImageLoaderPCX.cpp:1</file-ref>
+					<file-ref>CImageLoaderPNG.cpp:1</file-ref>
+					<file-ref>CImageLoaderPPM.cpp:1</file-ref>
+					<file-ref>CImageLoaderPSD.cpp:1</file-ref>
+					<file-ref>CImageLoaderTGA.cpp:1</file-ref>
+					<file-ref>CImageWriterBMP.cpp:1</file-ref>
+					<file-ref>CImageWriterJPG.cpp:1</file-ref>
+					<file-ref>CImageWriterPCX.cpp:1</file-ref>
+					<file-ref>CImageWriterPNG.cpp:1</file-ref>
+					<file-ref>CImageWriterPPM.cpp:1</file-ref>
+					<file-ref>CImageWriterPSD.cpp:1</file-ref>
+					<file-ref>CImageWriterTGA.cpp:1</file-ref>
+					<file-ref>CIrrDeviceLinux.cpp:1</file-ref>
+					<file-ref>CIrrDeviceSDL.cpp:1</file-ref>
+					<file-ref>CIrrDeviceStub.cpp:1</file-ref>
+					<file-ref>CIrrDeviceWin32.cpp:1</file-ref>
+					<file-ref>CIrrMeshFileLoader.cpp:1</file-ref>
+					<file-ref>CIrrMeshWriter.cpp:1</file-ref>
+					<file-ref>CLightSceneNode.cpp:1</file-ref>
+					<file-ref>CLimitReadFile.cpp:1</file-ref>
+					<file-ref>CLMTSMeshFileLoader.cpp:1</file-ref>
+					<file-ref>CLogger.cpp:1</file-ref>
+					<file-ref>CMD2MeshFileLoader.cpp:1</file-ref>
+					<file-ref>CMD3MeshFileLoader.cpp:1</file-ref>
+					<file-ref>CMemoryReadFile.cpp:1</file-ref>
+					<file-ref>CMeshCache.cpp:1</file-ref>
+					<file-ref>CMeshManipulator.cpp:1</file-ref>
+					<file-ref>CMeshSceneNode.cpp:1</file-ref>
+					<file-ref>CMetaTriangleSelector.cpp:1</file-ref>
+					<file-ref>CMS3DMeshFileLoader.cpp:1</file-ref>
+					<file-ref>CMY3DMeshFileLoader.cpp:1</file-ref>
+					<file-ref>CNullDriver.cpp:1</file-ref>
+					<file-ref>COBJMeshFileLoader.cpp:1</file-ref>
+					<file-ref>COCTLoader.cpp:1</file-ref>
+					<file-ref>COctTreeSceneNode.cpp:1</file-ref>
+					<file-ref>COctTreeTriangleSelector.cpp:1</file-ref>
+					<file-ref>COgreMeshFileLoader.cpp:1</file-ref>
+					<file-ref>COpenGLDriver.cpp:1</file-ref>
+					<file-ref>COpenGLExtensionHandler.cpp:1</file-ref>
+					<file-ref>COpenGLNormalMapRenderer.cpp:1</file-ref>
+					<file-ref>COpenGLParallaxMapRenderer.cpp:1</file-ref>
+					<file-ref>COpenGLShaderMaterialRenderer.cpp:1</file-ref>
+					<file-ref>COpenGLSLMaterialRenderer.cpp:1</file-ref>
+					<file-ref>COpenGLTexture.cpp:1</file-ref>
+					<file-ref>COSOperator.cpp:1</file-ref>
+					<file-ref>CPakReader.cpp:1</file-ref>
+					<file-ref>CParticleAnimatedMeshSceneNodeEmitter.cpp:1</file-ref>
+					<file-ref>CParticleAttractionAffector.cpp:1</file-ref>
+					<file-ref>CParticleBoxEmitter.cpp:1</file-ref>
+					<file-ref>CParticleCylinderEmitter.cpp:1</file-ref>
+					<file-ref>CParticleFadeOutAffector.cpp:1</file-ref>
+					<file-ref>CParticleGravityAffector.cpp:1</file-ref>
+					<file-ref>CParticleMeshEmitter.cpp:1</file-ref>
+					<file-ref>CParticlePointEmitter.cpp:1</file-ref>
+					<file-ref>CParticleRingEmitter.cpp:1</file-ref>
+					<file-ref>CParticleRotationAffector.cpp:1</file-ref>
+					<file-ref>CParticleSphereEmitter.cpp:1</file-ref>
+					<file-ref>CParticleSystemSceneNode.cpp:1</file-ref>
+					<file-ref>CQ3LevelMesh.cpp:1</file-ref>
+					<file-ref>CQuake3ShaderSceneNode.cpp:1</file-ref>
+					<file-ref>CReadFile.cpp:1</file-ref>
+					<file-ref>CSceneCollisionManager.cpp:1</file-ref>
+					<file-ref>CSceneManager.cpp:1</file-ref>
+					<file-ref>CSceneNodeAnimatorCollisionResponse.cpp:1</file-ref>
+					<file-ref>CSceneNodeAnimatorDelete.cpp:1</file-ref>
+					<file-ref>CSceneNodeAnimatorFlyCircle.cpp:1</file-ref>
+					<file-ref>CSceneNodeAnimatorFlyStraight.cpp:1</file-ref>
+					<file-ref>CSceneNodeAnimatorFollowSpline.cpp:1</file-ref>
+					<file-ref>CSceneNodeAnimatorRotation.cpp:1</file-ref>
+					<file-ref>CSceneNodeAnimatorTexture.cpp:1</file-ref>
+					<file-ref>CShadowVolumeSceneNode.cpp:1</file-ref>
+					<file-ref>CSkinnedMesh.cpp:1</file-ref>
+					<file-ref>CSkyBoxSceneNode.cpp:1</file-ref>
+					<file-ref>CSkyDomeSceneNode.cpp:1</file-ref>
+					<file-ref>CSoftwareDriver.cpp:1</file-ref>
+					<file-ref>CSoftwareTexture.cpp:1</file-ref>
+					<file-ref>CSphereSceneNode.cpp:1</file-ref>
+					<file-ref>CSTLMeshFileLoader.cpp:1</file-ref>
+					<file-ref>CSTLMeshWriter.cpp:1</file-ref>
+					<file-ref>CTerrainSceneNode.cpp:1</file-ref>
+					<file-ref>CTerrainTriangleSelector.cpp:1</file-ref>
+					<file-ref>CTextSceneNode.cpp:1</file-ref>
+					<file-ref>CTRFlat.cpp:1</file-ref>
+					<file-ref>CTRFlatWire.cpp:1</file-ref>
+					<file-ref>CTRGouraud.cpp:1</file-ref>
+					<file-ref>CTRGouraudWire.cpp:1</file-ref>
+					<file-ref>CTriangleBBSelector.cpp:1</file-ref>
+					<file-ref>CTriangleSelector.cpp:1</file-ref>
+					<file-ref>CTRTextureFlat.cpp:1</file-ref>
+					<file-ref>CTRTextureFlatWire.cpp:1</file-ref>
+					<file-ref>CTRTextureGouraud.cpp:1</file-ref>
+					<file-ref>CTRTextureGouraudAdd.cpp:1</file-ref>
+					<file-ref>CTRTextureGouraudNoZ.cpp:1</file-ref>
+					<file-ref>CTRTextureGouraudWire.cpp:1</file-ref>
+					<file-ref>CVideoModeList.cpp:1</file-ref>
+					<file-ref>CWaterSurfaceSceneNode.cpp:1</file-ref>
+					<file-ref>CXMeshFileLoader.cpp:1</file-ref>
+					<mixed-group group-tag="New Group:1">
+						<label>irr impl</label>
+						<group-items>
+							<file-ref>CIrrDeviceWii.h:1</file-ref>
+							<file-ref>CIrrDeviceWii.cpp:1</file-ref>
+							<mixed-group group-tag="New Group:2">
+								<label>extern</label>
+								<group-items>
+									<mixed-group group-tag="New Group:14">
+										<label>jpeglib</label>
+										<group-items>
+											<file-ref>jmemirr.c:1</file-ref>
+											<file-ref>jdatadst.c:1</file-ref>
+											<file-ref>jdatasrc.c:1</file-ref>
+											<file-ref>jdcoefct.c:1</file-ref>
+											<file-ref>jdhuff.c:1</file-ref>
+											<file-ref>jdcolor.c:1</file-ref>
+											<file-ref>jddctmgr.c:1</file-ref>
+											<file-ref>jdphuff.c:1</file-ref>
+											<file-ref>jdinput.c:1</file-ref>
+											<file-ref>jdmainct.c:1</file-ref>
+											<file-ref>jdmarker.c:1</file-ref>
+											<file-ref>jdmaster.c:1</file-ref>
+											<file-ref>jdmerge.c:1</file-ref>
+											<file-ref>jdpostct.c:1</file-ref>
+											<file-ref>jdsample.c:1</file-ref>
+											<file-ref>jdtrans.c:1</file-ref>
+											<file-ref>jerror.c:1</file-ref>
+											<file-ref>jfdctflt.c:1</file-ref>
+											<file-ref>jfdctfst.c:1</file-ref>
+											<file-ref>jfdctint.c:1</file-ref>
+											<file-ref>jidctflt.c:1</file-ref>
+											<file-ref>jidctfst.c:1</file-ref>
+											<file-ref>jidctint.c:1</file-ref>
+											<file-ref>jidctred.c:1</file-ref>
+											<file-ref>jmemmgr.c:1</file-ref>
+											<file-ref>jpegtran.c:1</file-ref>
+											<file-ref>jquant1.c:1</file-ref>
+											<file-ref>jquant2.c:1</file-ref>
+											<file-ref>jutils.c:1</file-ref>
+											<file-ref>rdbmp.c:1</file-ref>
+											<file-ref>rdcolmap.c:1</file-ref>
+											<file-ref>rdgif.c:1</file-ref>
+											<file-ref>rdjpgcom.c:1</file-ref>
+											<file-ref>rdppm.c:1</file-ref>
+											<file-ref>rdrle.c:1</file-ref>
+											<file-ref>rdswitch.c:1</file-ref>
+											<file-ref>rdtarga.c:1</file-ref>
+											<file-ref>Tcdjpeg.c:1</file-ref>
+											<file-ref>transupp.c:1</file-ref>
+											<file-ref>wrbmp.c:1</file-ref>
+											<file-ref>wrgif.c:1</file-ref>
+											<file-ref>wrjpgcom.c:1</file-ref>
+											<file-ref>wrppm.c:1</file-ref>
+											<file-ref>wrrle.c:1</file-ref>
+											<file-ref>wrtarga.c:1</file-ref>
+											<file-ref>cderror.h:1</file-ref>
+											<file-ref>cdjpeg.h:1</file-ref>
+											<file-ref>jchuff.h:1</file-ref>
+											<file-ref>jconfig.h:1</file-ref>
+											<file-ref>jdct.h:1</file-ref>
+											<file-ref>jdhuff.h:1</file-ref>
+											<file-ref>jerror.h:1</file-ref>
+											<file-ref>jinclude.h:1</file-ref>
+											<file-ref>jmemsys.h:1</file-ref>
+											<file-ref>jmorecfg.h:1</file-ref>
+											<file-ref>jpegint.h:1</file-ref>
+											<file-ref>jpeglib.h:1</file-ref>
+											<file-ref>jversion.h:1</file-ref>
+											<file-ref>transupp.h:1</file-ref>
+											<file-ref>ansi2knr.c:1</file-ref>
+											<file-ref>cdjpeg.c:1</file-ref>
+											<file-ref>cjpeg.c:1</file-ref>
+											<file-ref>ckconfig.c:1</file-ref>
+											<file-ref>djpeg.c:1</file-ref>
+											<file-ref>example.c:1</file-ref>
+											<file-ref>jcapimin.c:1</file-ref>
+											<file-ref>jcapistd.c:1</file-ref>
+											<file-ref>jccoefct.c:1</file-ref>
+											<file-ref>jccolor.c:1</file-ref>
+											<file-ref>jcdctmgr.c:1</file-ref>
+											<file-ref>jchuff.c:1</file-ref>
+											<file-ref>jcinit.c:1</file-ref>
+											<file-ref>jcmainct.c:1</file-ref>
+											<file-ref>jcmarker.c:1</file-ref>
+											<file-ref>jcmaster.c:1</file-ref>
+											<file-ref>jcomapi.c:1</file-ref>
+											<file-ref>jcparam.c:1</file-ref>
+											<file-ref>jcphuff.c:1</file-ref>
+											<file-ref>jcprepct.c:1</file-ref>
+											<file-ref>jcsample.c:1</file-ref>
+											<file-ref>jctrans.c:1</file-ref>
+											<file-ref>jdapimin.c:1</file-ref>
+											<file-ref>jdapistd.c:1</file-ref>
+										</group-items>
+									</mixed-group>
+									<mixed-group group-tag="New Group:15">
+										<label>libpng</label>
+										<group-items>
+											<file-ref>pngwutil.c:1</file-ref>
+											<file-ref>png.h:1</file-ref>
+											<file-ref>pngconf.h:1</file-ref>
+											<file-ref>example.c:2</file-ref>
+											<file-ref>png.c:1</file-ref>
+											<file-ref>pngerror.c:1</file-ref>
+											<file-ref>pnggccrd.c:1</file-ref>
+											<file-ref>pngget.c:1</file-ref>
+											<file-ref>pngmem.c:1</file-ref>
+											<file-ref>pngpread.c:1</file-ref>
+											<file-ref>pngread.c:1</file-ref>
+											<file-ref>pngrio.c:1</file-ref>
+											<file-ref>pngrtran.c:1</file-ref>
+											<file-ref>pngrutil.c:1</file-ref>
+											<file-ref>pngset.c:1</file-ref>
+											<file-ref>pngtest.c:1</file-ref>
+											<file-ref>pngtrans.c:1</file-ref>
+											<file-ref>pngvcrd.c:1</file-ref>
+											<file-ref>pngwio.c:1</file-ref>
+											<file-ref>pngwrite.c:1</file-ref>
+											<file-ref>pngwtran.c:1</file-ref>
+										</group-items>
+									</mixed-group>
+									<mixed-group group-tag="New Group:16">
+										<label>zlib</label>
+										<group-items>
+											<file-ref>zutil.h:1</file-ref>
+											<file-ref>adler32.c:1</file-ref>
+											<file-ref>compress.c:1</file-ref>
+											<file-ref>crc32.c:1</file-ref>
+											<file-ref>deflate.c:1</file-ref>
+											<file-ref>gzio.c:1</file-ref>
+											<file-ref>infback.c:1</file-ref>
+											<file-ref>inffast.c:1</file-ref>
+											<file-ref>inflate.c:1</file-ref>
+											<file-ref>inftrees.c:1</file-ref>
+											<file-ref>trees.c:1</file-ref>
+											<file-ref>uncompr.c:1</file-ref>
+											<file-ref>zutil.c:1</file-ref>
+											<file-ref>crc32.h:1</file-ref>
+											<file-ref>deflate.h:1</file-ref>
+											<file-ref>inffast.h:1</file-ref>
+											<file-ref>inffixed.h:1</file-ref>
+											<file-ref>inflate.h:1</file-ref>
+											<file-ref>inftrees.h:1</file-ref>
+											<file-ref>trees.h:1</file-ref>
+											<file-ref>zconf.h:1</file-ref>
+											<file-ref>zlib.h:1</file-ref>
+										</group-items>
+									</mixed-group>
+								</group-items>
+							</mixed-group>
+						</group-items>
+					</mixed-group>
+					<mixed-group group-tag="New Group:3">
+						<label>video impl</label>
+						<group-items>
+							<mixed-group group-tag="New Group:8">
+								<label>Burning Video</label>
+								<group-items>
+									<file-ref>CSoftwareDriver2.cpp:1</file-ref>
+									<file-ref>CSoftwareTexture2.cpp:1</file-ref>
+									<file-ref>CTRGouraud2.cpp:1</file-ref>
+									<file-ref>CTRGouraudAlpha2.cpp:1</file-ref>
+									<file-ref>CTRGouraudAlphaNoZ2.cpp:1</file-ref>
+									<file-ref>CTRTextureBlend.cpp:1</file-ref>
+									<file-ref>CTRTextureDetailMap2.cpp:1</file-ref>
+									<file-ref>CTRTextureGouraud2.cpp:1</file-ref>
+									<file-ref>CTRTextureGouraudAdd2.cpp:1</file-ref>
+									<file-ref>CTRTextureGouraudAddNoZ2.cpp:1</file-ref>
+									<file-ref>CTRTextureGouraudAlpha.cpp:1</file-ref>
+									<file-ref>CTRTextureGouraudAlphaNoZ.cpp:1</file-ref>
+									<file-ref>CTRTextureGouraudNoZ2.cpp:1</file-ref>
+									<file-ref>CTRTextureGouraudVertexAlpha2.cpp:1</file-ref>
+									<file-ref>CTRTextureLightMap2_Add.cpp:1</file-ref>
+									<file-ref>CTRTextureLightMap2_M1.cpp:1</file-ref>
+									<file-ref>CTRTextureLightMap2_M2.cpp:1</file-ref>
+									<file-ref>CTRTextureLightMap2_M4.cpp:1</file-ref>
+									<file-ref>CTRTextureLightMapGouraud2_M4.cpp:1</file-ref>
+									<file-ref>CTRTextureWire2.cpp:1</file-ref>
+								</group-items>
+							</mixed-group>
+							<mixed-group group-tag="New Group:9">
+								<label>Wii</label>
+								<group-items>
+									<file-ref>WiiTextureConv.h:1</file-ref>
+									<file-ref>WiiTextureConv.cpp:1</file-ref>
+									<file-ref>CWiiTexture.h:1</file-ref>
+									<file-ref>CWiiTexture.cpp:1</file-ref>
+								</group-items>
+							</mixed-group>
+						</group-items>
+					</mixed-group>
+					<mixed-group group-tag="New Group:4">
+						<label>scene impl</label>
+						<group-items/>
+					</mixed-group>
+					<mixed-group group-tag="New Group:5">
+						<label>include</label>
+						<group-items>
+							<file-ref>quaternion.h:1</file-ref>
+							<file-ref>rect.h:1</file-ref>
+							<file-ref>S3DVertex.h:1</file-ref>
+							<file-ref>SAnimatedMesh.h:1</file-ref>
+							<file-ref>SceneParameters.h:1</file-ref>
+							<file-ref>SColor.h:1</file-ref>
+							<file-ref>SExposedVideoData.h:1</file-ref>
+							<file-ref>SIrrCreationParameters.h:1</file-ref>
+							<file-ref>SKeyMap.h:1</file-ref>
+							<file-ref>SLight.h:1</file-ref>
+							<file-ref>SMaterial.h:1</file-ref>
+							<file-ref>SMaterialLayer.h:1</file-ref>
+							<file-ref>SMesh.h:1</file-ref>
+							<file-ref>SMeshBuffer.h:1</file-ref>
+							<file-ref>SMeshBufferLightMap.h:1</file-ref>
+							<file-ref>SMeshBufferTangents.h:1</file-ref>
+							<file-ref>SParticle.h:1</file-ref>
+							<file-ref>SSharedMeshBuffer.h:1</file-ref>
+							<file-ref>SSkinMeshBuffer.h:1</file-ref>
+							<file-ref>SViewFrustum.h:1</file-ref>
+							<file-ref>triangle3d.h:1</file-ref>
+							<file-ref>vector2d.h:1</file-ref>
+							<file-ref>vector3d.h:1</file-ref>
+							<file-ref>aabbox3d.h:1</file-ref>
+							<file-ref>CMeshBuffer.h:1</file-ref>
+							<file-ref>coreutil.h:1</file-ref>
+							<file-ref>dimension2d.h:1</file-ref>
+							<file-ref>ECullingTypes.h:1</file-ref>
+							<file-ref>EDebugSceneTypes.h:1</file-ref>
+							<file-ref>EDriverFeatures.h:1</file-ref>
+							<file-ref>EDriverTypes.h:1</file-ref>
+							<file-ref>EGUIElementTypes.h:1</file-ref>
+							<file-ref>EMaterialFlags.h:1</file-ref>
+							<file-ref>EMaterialTypes.h:1</file-ref>
+							<file-ref>EMeshWriterEnums.h:1</file-ref>
+							<file-ref>EMessageBoxFlags.h:1</file-ref>
+							<file-ref>ESceneNodeAnimatorTypes.h:1</file-ref>
+							<file-ref>ESceneNodeTypes.h:1</file-ref>
+							<file-ref>ETerrainElements.h:1</file-ref>
+							<file-ref>fast_atof.h:1</file-ref>
+							<file-ref>heapsort.h:1</file-ref>
+							<file-ref>IAnimatedMesh.h:1</file-ref>
+							<file-ref>IAnimatedMeshMD2.h:1</file-ref>
+							<file-ref>IAnimatedMeshMD3.h:1</file-ref>
+							<file-ref>IAnimatedMeshSceneNode.h:1</file-ref>
+							<file-ref>IAttributeExchangingObject.h:1</file-ref>
+							<file-ref>IAttributes.h:1</file-ref>
+							<file-ref>IBillboardSceneNode.h:1</file-ref>
+							<file-ref>IBoneSceneNode.h:1</file-ref>
+							<file-ref>ICameraSceneNode.h:1</file-ref>
+							<file-ref>ICursorControl.h:1</file-ref>
+							<file-ref>IDummyTransformationSceneNode.h:1</file-ref>
+							<file-ref>IEventReceiver.h:1</file-ref>
+							<file-ref>IFileList.h:1</file-ref>
+							<file-ref>IFileSystem.h:1</file-ref>
+							<file-ref>IGPUProgrammingServices.h:1</file-ref>
+							<file-ref>IGUIButton.h:1</file-ref>
+							<file-ref>IGUICheckBox.h:1</file-ref>
+							<file-ref>IGUIColorSelectDialog.h:1</file-ref>
+							<file-ref>IGUIComboBox.h:1</file-ref>
+							<file-ref>IGUIContextMenu.h:1</file-ref>
+							<file-ref>IGUIEditBox.h:1</file-ref>
+							<file-ref>IGUIElement.h:1</file-ref>
+							<file-ref>IGUIElementFactory.h:1</file-ref>
+							<file-ref>IGUIEnvironment.h:1</file-ref>
+							<file-ref>IGUIFileOpenDialog.h:1</file-ref>
+							<file-ref>IGUIFont.h:1</file-ref>
+							<file-ref>IGUIFontBitmap.h:1</file-ref>
+							<file-ref>IGUIImage.h:1</file-ref>
+							<file-ref>IGUIInOutFader.h:1</file-ref>
+							<file-ref>IGUIListBox.h:1</file-ref>
+							<file-ref>IGUIMeshViewer.h:1</file-ref>
+							<file-ref>IGUIScrollBar.h:1</file-ref>
+							<file-ref>IGUISkin.h:1</file-ref>
+							<file-ref>IGUISpinBox.h:1</file-ref>
+							<file-ref>IGUISpriteBank.h:1</file-ref>
+							<file-ref>IGUIStaticText.h:1</file-ref>
+							<file-ref>IGUITabControl.h:1</file-ref>
+							<file-ref>IGUIToolbar.h:1</file-ref>
+							<file-ref>IGUIWindow.h:1</file-ref>
+							<file-ref>IImage.h:1</file-ref>
+							<file-ref>IImageLoader.h:1</file-ref>
+							<file-ref>IImageWriter.h:1</file-ref>
+							<file-ref>ILightSceneNode.h:1</file-ref>
+							<file-ref>ILogger.h:1</file-ref>
+							<file-ref>IMaterialRenderer.h:1</file-ref>
+							<file-ref>IMaterialRendererServices.h:1</file-ref>
+							<file-ref>IMesh.h:1</file-ref>
+							<file-ref>IMeshBuffer.h:1</file-ref>
+							<file-ref>IMeshCache.h:1</file-ref>
+							<file-ref>IMeshLoader.h:1</file-ref>
+							<file-ref>IMeshManipulator.h:1</file-ref>
+							<file-ref>IMeshSceneNode.h:1</file-ref>
+							<file-ref>IMeshWriter.h:1</file-ref>
+							<file-ref>IMetaTriangleSelector.h:1</file-ref>
+							<file-ref>IOSOperator.h:1</file-ref>
+							<file-ref>IParticleAffector.h:1</file-ref>
+							<file-ref>IParticleAnimatedMeshSceneNodeEmitter.h:1</file-ref>
+							<file-ref>IParticleAttractionAffector.h:1</file-ref>
+							<file-ref>IParticleBoxEmitter.h:1</file-ref>
+							<file-ref>IParticleCylinderEmitter.h:1</file-ref>
+							<file-ref>IParticleEmitter.h:1</file-ref>
+							<file-ref>IParticleFadeOutAffector.h:1</file-ref>
+							<file-ref>IParticleGravityAffector.h:1</file-ref>
+							<file-ref>IParticleMeshEmitter.h:1</file-ref>
+							<file-ref>IParticleRingEmitter.h:1</file-ref>
+							<file-ref>IParticleRotationAffector.h:1</file-ref>
+							<file-ref>IParticleSphereEmitter.h:1</file-ref>
+							<file-ref>IParticleSystemSceneNode.h:1</file-ref>
+							<file-ref>IQ3LevelMesh.h:1</file-ref>
+							<file-ref>IQ3Shader.h:1</file-ref>
+							<file-ref>IReadFile.h:1</file-ref>
+							<file-ref>IReferenceCounted.h:1</file-ref>
+							<file-ref>irrAllocator.h:1</file-ref>
+							<file-ref>irrArray.h:1</file-ref>
+							<file-ref>IrrCompileConfig.h:1</file-ref>
+							<file-ref>irrlicht.h:1</file-ref>
+							<file-ref>IrrlichtDevice.h:1</file-ref>
+							<file-ref>irrList.h:1</file-ref>
+							<file-ref>irrMap.h:1</file-ref>
+							<file-ref>irrMath.h:1</file-ref>
+							<file-ref>irrString.h:1</file-ref>
+							<file-ref>irrTypes.h:1</file-ref>
+							<file-ref>irrXML.h:1</file-ref>
+							<file-ref>ISceneCollisionManager.h:1</file-ref>
+							<file-ref>ISceneManager.h:1</file-ref>
+							<file-ref>ISceneNode.h:1</file-ref>
+							<file-ref>ISceneNodeAnimator.h:1</file-ref>
+							<file-ref>ISceneNodeAnimatorCollisionResponse.h:1</file-ref>
+							<file-ref>ISceneNodeAnimatorFactory.h:1</file-ref>
+							<file-ref>ISceneNodeFactory.h:1</file-ref>
+							<file-ref>ISceneUserDataSerializer.h:1</file-ref>
+							<file-ref>IShaderConstantSetCallBack.h:1</file-ref>
+							<file-ref>IShadowVolumeSceneNode.h:1</file-ref>
+							<file-ref>ISkinnedMesh.h:1</file-ref>
+							<file-ref>ITerrainSceneNode.h:1</file-ref>
+							<file-ref>ITextSceneNode.h:1</file-ref>
+							<file-ref>ITexture.h:1</file-ref>
+							<file-ref>ITimer.h:1</file-ref>
+							<file-ref>ITriangleSelector.h:1</file-ref>
+							<file-ref>IVideoDriver.h:1</file-ref>
+							<file-ref>IVideoModeList.h:1</file-ref>
+							<file-ref>IWriteFile.h:1</file-ref>
+							<file-ref>IXMLReader.h:1</file-ref>
+							<file-ref>IXMLWriter.h:1</file-ref>
+							<file-ref>Keycodes.h:1</file-ref>
+							<file-ref>line2d.h:1</file-ref>
+							<file-ref>line3d.h:1</file-ref>
+							<file-ref>matrix4.h:1</file-ref>
+							<file-ref>plane3d.h:1</file-ref>
+							<file-ref>position2d.h:1</file-ref>
+						</group-items>
+					</mixed-group>
+					<mixed-group group-tag="New Group:6">
+						<label>gui impl</label>
+						<group-items>
+							<mixed-group group-tag="New Group:12">
+								<label>New Group</label>
+								<group-items/>
+							</mixed-group>
+						</group-items>
+					</mixed-group>
+					<mixed-group group-tag="New Group:7">
+						<label>doc</label>
+						<group-items/>
+					</mixed-group>
+					<mixed-group group-tag="New Group:13">
+						<label>io impl</label>
+						<group-items>
+							<file-ref>CWriteFile.cpp:1</file-ref>
+							<file-ref>CXMLReader.cpp:1</file-ref>
+							<file-ref>CXMLWriter.cpp:1</file-ref>
+						</group-items>
+					</mixed-group>
+					<mixed-group group-tag="New Group:10">
+						<label>wii impl</label>
+						<group-items>
+							<file-ref>CWiiMemMgr.h:1</file-ref>
+							<file-ref>CWiiMemMgr.cpp:1</file-ref>
+						</group-items>
+					</mixed-group>
+				</group-items>
+			</group-root>
+			<group-root category-alias="CATID_PromotedFiles" depth="1" instance-alias="Templates" root-group-tag="CATID_PromotedFiles:1">
+				<file-refs>
+					<file-ref>fsl-4.x.Nintendo-Wii-3.1.x.rxtpo:1</file-ref>
+				</file-refs>
+			</group-root>
+		</group-roots>
+		<targets>
+			<target>
+				<name>Debug</name>
+				<settings>
+					<setting entry="finalOutputDir" uuid-alias="Dictionary2">
+						<simple>${project}/../../../lib/wii</simple>
+					</setting>
+					<setting entry="finalOutputName" uuid-alias="Dictionary2">
+						<simple>${ProjectFileNameNoExt}.${TargetName}.a</simple>
+					</setting>
+				</settings>
+			</target>
+			<target>
+				<name>Release</name>
+				<settings>
+					<setting entry="finalOutputName" uuid-alias="Dictionary2">
+						<simple>${ProjectFileNameNoExt}.${TargetName}.a</simple>
+					</setting>
+					<setting entry="finalOutputDir" uuid-alias="Dictionary2">
+						<simple>${project}/../../../lib/wii</simple>
+					</setting>
+				</settings>
+			</target>
+		</targets>
+		<extensions/>
+		<cached-files/>
+	</project>
+</project-file>

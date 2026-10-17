@@ -1,0 +1,105 @@
+// saved by AuroraGT v0.1.0.2 (SpriteEditor v0.1.0.5)
+////////////////////////////////////////////////////////////////////////////////
+/*SPRITE*/ {
+
+    VERSION 0001
+
+    // Images:  1
+    // Modules: 6
+    // Frames:  6
+    // Anims:   1
+
+////////////////////////////////////////////////////////////////////////////////
+// Images...
+// <Image> := IMAGE [id] "file" [ALPHA "alpha_file"] [TRANSP transp_color]
+
+    IMAGE 0x0000 ".\ghost_army.tga" TRANSP 0x00FF00FF // 0  size: 512 x 256  palettes: 1
+
+////////////////////////////////////////////////////////////////////////////////
+// Modules...
+// <Modules> := MODULES { <MD1> <MD2> ... }
+// <MDi>     := MD id Type [params] ["desc"]
+// Type      := MD_IMAGE | MD_RECT | ...
+// [params]  := if (Type == MD_IMAGE)     -> image x y width height
+//              if (Type == MD_RECT)      -> color width height
+//              if (Type == MD_FILL_RECT) -> color width height
+//              if (Type == MD_ARC)       -> color width height startAngle arcAngle
+//              if (Type == MD_FILL_ARC)  -> color width height startAngle arcAngle
+//              if (Type == MD_MARKER)    -> color width height
+//              if (Type == MD_TRIANGLE)  -> color p2X p2Y p3X p3Y
+//              if (Type == MD_FILL_TRIANGLE)  -> color p2X p2Y p3X p3Y
+
+    MODULES
+    {
+        MD	0x1000	MD_IMAGE	0	0	1	110	125
+        MD	0x1002	MD_IMAGE	0	136	1	122	125
+        MD	0x1004	MD_IMAGE	0	277	1	118	123
+        MD	0x1005	MD_IMAGE	0	4	129	115	123
+        MD	0x1007	MD_IMAGE	0	139	129	121	123
+        MD	0x1009	MD_IMAGE	0	274	128	123	126
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+// Frames...
+// <Frame> := FRAME ["desc"] { id <RC1> [<RC2> ...] <FM1> [<FM2> ...] }
+// <RCi>   := RC x1 y1 x2 y2
+// <FMi>   := FM module_or_frame_id ox oy [FLAGS hex_flags] [+Flags]
+// Flags   := HYPER_FM | FLIP_X | FLIP_Y | ROT_90 | FREE_ROT
+
+    FRAME "" // Index = 0, FModules = 1
+    {
+        0x2000
+        FM	0x1000	-55	-107
+    }
+
+    FRAME "" // Index = 1, FModules = 1
+    {
+        0x2002
+        FM	0x1002	-68	-106
+    }
+
+    FRAME "" // Index = 2, FModules = 1
+    {
+        0x2004
+        FM	0x1004	-66	-105
+    }
+
+    FRAME "" // Index = 3, FModules = 1
+    {
+        0x2005
+        FM	0x1005	-63	-105
+    }
+
+    FRAME "" // Index = 4, FModules = 1
+    {
+        0x2007
+        FM	0x1007	-68	-106
+    }
+
+    FRAME "" // Index = 5, FModules = 1
+    {
+        0x2009
+        FM	0x1009	-69	-108
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+// Animations...
+// <Anim> := ANIM ["desc"] { id [<AF1> <AF2> ...] }
+// <AFi>  := AF frame_id time ox oy [FLAGS hex_flags] [+Flags]
+// Flags  := FLIP_X | FLIP_Y | ROT_90
+
+    ANIM "ghost_army" // Index = 0, AFrames = 6
+    {
+        0x3001
+        AF	0x2000	2	0	0
+        AF	0x2002	2	0	0
+        AF	0x2004	2	0	0
+        AF	0x2005	2	0	0
+        AF	0x2007	2	0	0
+        AF	0x2009	2	0	0
+    }
+
+    SPRITE_END
+
+} // SPRITE
+////////////////////////////////////////////////////////////////////////////////

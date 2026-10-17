@@ -1,0 +1,22 @@
+struct Output {
+   float4 position  : POSITION;
+   float4 color     : COLOR;
+   float2 texCoord0 : TEXCOORD0;
+   float2 texCoord1 : TEXCOORD1;
+};
+
+Output main(
+   float4 vertex    : POSITION,
+   float4 color     : COLOR,
+   float3 normal    : NORMAL,
+   float2 texCoord0 : TEXCOORD0,
+   float2 texCoord1 : TEXCOORD1,
+   uniform float4x4 worldViewProjectionMtx)
+{
+   Output OUT;
+   OUT.position = mul(worldViewProjectionMtx, vertex);
+   OUT.color = color;
+   OUT.texCoord0 = texCoord0;
+   OUT.texCoord1 = texCoord1;
+   return OUT;
+}

@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.mm */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28FD14FE0DC6FC130079059D /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28FD14FD0DC6FC130079059D /* EAGLView.mm */; };
+		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		2D5F80720F14832F00AF8E9A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5F80710F14832F00AF8E9A /* SystemConfiguration.framework */; };
+		412947CF0FA1969400915705 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 412947CE0FA1969400915705 /* Default.png */; };
+		41B47C0B0F9CC0A1006862F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B47C0A0F9CC0A1006862F4 /* CoreGraphics.framework */; };
+		41CB892F101F33D500B118C5 /* libGLLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41CB892E101F33D500B118C5 /* libGLLive.a */; };
+		41E28D711061E4E1000B2ED8 /* gll_font.pak in Resources */ = {isa = PBXBuildFile; fileRef = 41E28D6D1061E4E1000B2ED8 /* gll_font.pak */; };
+		41E28D721061E4E1000B2ED8 /* gll_res.pak in Resources */ = {isa = PBXBuildFile; fileRef = 41E28D6E1061E4E1000B2ED8 /* gll_res.pak */; };
+		41E28D731061E4E1000B2ED8 /* gll_str.pak in Resources */ = {isa = PBXBuildFile; fileRef = 41E28D6F1061E4E1000B2ED8 /* gll_str.pak */; };
+		41E28D741061E4E1000B2ED8 /* oconf.bar in Resources */ = {isa = PBXBuildFile; fileRef = 41E28D701061E4E1000B2ED8 /* oconf.bar */; };
+		59F36BDF109FD55C00BF86B5 /* ad.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F36BDE109FD55C00BF86B5 /* ad.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneOnlineDemoAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhoneOnlineDemoAppDelegate.mm; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* iPhoneGLLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneGLLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28FD14FC0DC6FC130079059D /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		28FD14FD0DC6FC130079059D /* EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLView.mm; sourceTree = "<group>"; };
+		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D5F80710F14832F00AF8E9A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* iPhoneOnlineDemo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneOnlineDemo_Prefix.pch; sourceTree = "<group>"; };
+		412947CE0FA1969400915705 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		41B47C0A0F9CC0A1006862F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		41CB892E101F33D500B118C5 /* libGLLive.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLLive.a; path = ../RES_For_Integrate/New_Style/ForDevice/libGLLive.a; sourceTree = SOURCE_ROOT; };
+		41E28D6C1061E4C0000B2ED8 /* GLLiveGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLLiveGame.h; path = ../RES_For_Integrate/New_Style/GLLiveGame.h; sourceTree = SOURCE_ROOT; };
+		41E28D6D1061E4E1000B2ED8 /* gll_font.pak */ = {isa = PBXFileReference; lastKnownFileType = file; name = gll_font.pak; path = ../RES_For_Integrate/New_Style/gll_font.pak; sourceTree = SOURCE_ROOT; };
+		41E28D6E1061E4E1000B2ED8 /* gll_res.pak */ = {isa = PBXFileReference; lastKnownFileType = file; name = gll_res.pak; path = ../RES_For_Integrate/New_Style/gll_res.pak; sourceTree = SOURCE_ROOT; };
+		41E28D6F1061E4E1000B2ED8 /* gll_str.pak */ = {isa = PBXFileReference; lastKnownFileType = file; name = gll_str.pak; path = ../RES_For_Integrate/New_Style/gll_str.pak; sourceTree = SOURCE_ROOT; };
+		41E28D701061E4E1000B2ED8 /* oconf.bar */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = oconf.bar; path = ../RES_For_Integrate/New_Style/oconf.bar; sourceTree = SOURCE_ROOT; };
+		59F36BDE109FD55C00BF86B5 /* ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ad.png; path = ../RES_For_Integrate/New_Style/ad.png; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
+				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
+				2D5F80720F14832F00AF8E9A /* SystemConfiguration.framework in Frameworks */,
+				41B47C0B0F9CC0A1006862F4 /* CoreGraphics.framework in Frameworks */,
+				41CB892F101F33D500B118C5 /* libGLLive.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				41E28D6C1061E4C0000B2ED8 /* GLLiveGame.h */,
+				28FD14FC0DC6FC130079059D /* EAGLView.h */,
+				28FD14FD0DC6FC130079059D /* EAGLView.mm */,
+				1D3623240D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.h */,
+				1D3623250D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.mm */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iPhoneGLLive.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* iPhoneOnlineDemo_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59F36BDE109FD55C00BF86B5 /* ad.png */,
+				41E28D6D1061E4E1000B2ED8 /* gll_font.pak */,
+				41E28D6E1061E4E1000B2ED8 /* gll_res.pak */,
+				41E28D6F1061E4E1000B2ED8 /* gll_str.pak */,
+				41E28D701061E4E1000B2ED8 /* oconf.bar */,
+				412947CE0FA1969400915705 /* Default.png */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41CB892E101F33D500B118C5 /* libGLLive.a */,
+				41B47C0A0F9CC0A1006862F4 /* CoreGraphics.framework */,
+				2D5F80710F14832F00AF8E9A /* SystemConfiguration.framework */,
+				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
+				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iPhoneGLLive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPhoneGLLive" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPhoneGLLive;
+			productName = iPhoneGLLive;
+			productReference = 1D6058910D05DD3D006BFB54 /* iPhoneGLLive.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhoneGLLive_New" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iPhoneGLLive */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				412947CF0FA1969400915705 /* Default.png in Resources */,
+				41E28D711061E4E1000B2ED8 /* gll_font.pak in Resources */,
+				41E28D721061E4E1000B2ED8 /* gll_res.pak in Resources */,
+				41E28D731061E4E1000B2ED8 /* gll_str.pak in Resources */,
+				41E28D741061E4E1000B2ED8 /* oconf.bar in Resources */,
+				59F36BDF109FD55C00BF86B5 /* ad.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.mm in Sources */,
+				28FD14FE0DC6FC130079059D /* EAGLView.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug_simulator */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Valeri Vuchov";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos2.2.1]" = "iPhone Developer: Valeri Vuchov";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPhoneOnlineDemo_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../GLLive/Gles/OpenGLES/lib/win32\"",
+					"\"$(SRCROOT)/../../GLLive/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../src/Gles/OpenGLES/lib/win32\"",
+					"\"$(SRCROOT)/../RES_For_Integrate/New_Style/ForSimulator\"",
+				);
+				PRODUCT_NAME = iPhoneGLLive;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6B88DE3A-F109-4DA0-AE9E-5F77177A272E";
+				"PROVISIONING_PROFILE[sdk=iphoneos2.2.1]" = "6B88DE3A-F109-4DA0-AE9E-5F77177A272E";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug_simulator;
+		};
+		1D6058950D05DD3E006BFB54 /* Release_simulator */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos3.0]" = "iPhone Developer: Valeri Vuchov";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPhoneOnlineDemo_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../GLLive/Gles/OpenGLES/lib/win32\"",
+					"\"$(SRCROOT)/../../GLLive/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../src/Gles/OpenGLES/lib/win32\"",
+					"\"$(SRCROOT)/../RES_For_Integrate/New_Style/ForSimulator\"",
+				);
+				PRODUCT_NAME = iPhoneGLLive;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos3.0]" = "6B88DE3A-F109-4DA0-AE9E-5F77177A272E";
+			};
+			name = Release_simulator;
+		};
+		41CB8939101F349E00B118C5 /* Debug_device */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Valeri Vuchov";
+				CODE_SIGN_RESOURCE_RULES_PATH = iphoneos2.0/resourceRules.plist;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6B88DE3A-F109-4DA0-AE9E-5F77177A272E";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug_device;
+		};
+		41CB893A101F349E00B118C5 /* Debug_device */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Valeri Vuchov";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos2.2.1]" = "iPhone Developer: Valeri Vuchov";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPhoneOnlineDemo_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../GLLive/Gles/OpenGLES/lib/win32\"",
+					"\"$(SRCROOT)/../../GLLive/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../src/Gles/OpenGLES/lib/win32\"",
+					"\"$(SRCROOT)/../RES_For_Integrate/New_Style/ForDevice\"",
+				);
+				PRODUCT_NAME = iPhoneGLLive;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6B88DE3A-F109-4DA0-AE9E-5F77177A272E";
+				"PROVISIONING_PROFILE[sdk=iphoneos2.2.1]" = "6B88DE3A-F109-4DA0-AE9E-5F77177A272E";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug_device;
+		};
+		41CB893B101F34A200B118C5 /* Release_device */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos3.0]" = "iPhone Developer: Valeri Vuchov";
+				CODE_SIGN_RESOURCE_RULES_PATH = iphoneos2.0/resourceRules.plist;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
+				LIBRARY_SEARCH_PATHS = "";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos3.0]" = "6B88DE3A-F109-4DA0-AE9E-5F77177A272E";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release_device;
+		};
+		41CB893C101F34A200B118C5 /* Release_device */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos3.0]" = "iPhone Developer: Valeri Vuchov";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPhoneOnlineDemo_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../GLLive/Gles/OpenGLES/lib/win32\"",
+					"\"$(SRCROOT)/../../GLLive/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../src/Gles/OpenGLES/lib/win32\"",
+					"\"$(SRCROOT)/../RES_For_Integrate/New_Style/ForDevice\"",
+				);
+				PRODUCT_NAME = iPhoneGLLive;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos3.0]" = "B39EE29E-1DCA-47E3-86E1-A238CAC9D4FB";
+			};
+			name = Release_device;
+		};
+		C01FCF4F08A954540054247B /* Debug_simulator */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Valeri Vuchov";
+				CODE_SIGN_RESOURCE_RULES_PATH = iphoneos2.0/resourceRules.plist;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6B88DE3A-F109-4DA0-AE9E-5F77177A272E";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug_simulator;
+		};
+		C01FCF5008A954540054247B /* Release_simulator */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos3.0]" = "iPhone Developer: Valeri Vuchov";
+				CODE_SIGN_RESOURCE_RULES_PATH = iphoneos2.0/resourceRules.plist;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
+				LIBRARY_SEARCH_PATHS = "";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos3.0]" = "6B88DE3A-F109-4DA0-AE9E-5F77177A272E";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release_simulator;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPhoneGLLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug_simulator */,
+				41CB893A101F349E00B118C5 /* Debug_device */,
+				1D6058950D05DD3E006BFB54 /* Release_simulator */,
+				41CB893C101F34A200B118C5 /* Release_device */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release_simulator;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhoneGLLive_New" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug_simulator */,
+				41CB8939101F349E00B118C5 /* Debug_device */,
+				C01FCF5008A954540054247B /* Release_simulator */,
+				41CB893B101F34A200B118C5 /* Release_device */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release_simulator;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

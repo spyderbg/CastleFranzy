@@ -1,0 +1,59 @@
+#define ID_DE										0
+
+
+
+#define TXT_BESTSELLERS								0
+#define TXT_FOR_YOU									1
+#define TXT_CATALOG									2
+#define TXT_WHATS_NEW								3
+#define TXT_FEEDBACK								4
+#define TXT_FEEDBACK_SHORT							5
+#define TXT_FROM									6
+#define TXT_TITLE									7
+#define TXT_REVIEW									8
+#define TXT_BESTSELLERS_SHORT						9
+#define TXT_BESTSELLERS_TITLES						10
+#define TXT_ERR_CONN_APPSTORE						11
+#define TXT_ERR_CONN_SERVER							12
+#define TXT_GAME_CATALOG							13
+#define TXT_BUY										14
+#define TXT_SUBMIT_REVIEW							15
+#define TXT_GAME_INFORMATION						16
+#define TXT_SEND									17
+#define TXT_CANCEL									18
+#define TXT_OK										19
+#define TXT_LANG_EN									20
+#define TXT_LANG_DE									21
+#define TXT_LANG_FR									22
+#define TXT_LANG_IT									23
+#define TXT_LANG_SP									24
+#define TXT_LANG_JP									25
+#define TXT_LANG_KR									26
+#define TXT_DEFAULT_FROM							27
+#define TXT_DEFAULT_TITLE							28
+#define TXT_DEFAULT_REVIEW							29
+#define TXT_ALLOW_GAMELOFT							30
+#define TXT_PLEASE_WRITE_EMAIL						31
+#define TXT_PLEASE_WRITE_FROM						32
+#define TXT_PLEASE_WRITE_REVIEW						33
+#define TXT_PLEASE_WRITE_TITLE						34
+#define TXT_ERROR									35
+#define TXT_ERROR_POST								36
+#define TXT_THANK_FEEDBACK							37
+#define TXT_REVIEW_SENT								38
+#define TXT_ALL_GAMES								39
+#define TXT_EMAIL									40
+#define TXT_DEFAULT_EMAIL							41
+#define TXT_DEFAULT_EMAIL_UPDATE					42
+#define TXT_NEW_PRICE								43
+#define TXT_NEW										44
+#define TXT_CHOOSE_GAME								45
+#define TXT_PLEASE_CHOOSE_GAME						46
+#define TXT_REVIEW_NO								47
+#define TXT_REVIEW_ONE								48
+#define TXT_PAID									49
+#define TXT_FREE									50
+
+#define NUM_STRINGS_DE								51
+#define BIN_SIZE_DE								2074
+#define OFF_SIZE_DE								104 // 2 + 51 * 2

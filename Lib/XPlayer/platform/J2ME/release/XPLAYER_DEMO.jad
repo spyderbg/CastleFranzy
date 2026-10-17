@@ -1,0 +1,20 @@
+MIDlet-Name: MyMidlet
+MIDlet-Description: Improve your common sense and earn life smarts!
+MIDlet-1: MyMidlet, /icon.png, Sparrow
+MIDlet-Icon: /icon.png
+MIDlet-Version: 0.0.1
+MIDlet-Vendor: Gameloft SA
+MIDlet-Jar-URL: XPlayer_EN_NONIGP_001.jar
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-2.0
+XPlayDWURL: http://beta-dw.gameloft.com/dwXPlayer_v2.php
+XPlayMPURL: socket://itest.mdc.gameloft.org:6102
+XPlayerURL: http://beta.gameloft.com/ope/GenericXPlayer_v1.php
+GGI: 16429
+ChatServer: xmpp-beta.gameloft.com
+ChatRoomDomian: conference.gameloft.com
+BroadcastPort: 7654
+UPNPPort: 51020
+ChatDomian: gameloft.com
+
+MIDlet-Jar-Size: 54561

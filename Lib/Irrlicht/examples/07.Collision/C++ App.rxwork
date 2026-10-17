@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<workspace-file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.radixlive.com/public/schemas/radix/1.0/Workspace.xsd">
+	<workspace uuid="{C0686085-636E-435E-AB45-0406CB1343FE}">
+		<version>1000</version>
+		<display-name>Untitled Workspace</display-name>
+		<aliases>
+			<alias uuid="{C7041DD1-9E80-4343-9A85-B512EFB67837}">UUID_ProjectFilesGroup</alias>
+		</aliases>
+		<settings/>
+		<files>
+			<file file-tag="C++ App.rxproj:1">
+				<path>${Workspace}/C++ App.rxproj</path>
+			</file>
+		</files>
+		<group-roots>
+			<group-root category-alias="UUID_ProjectFilesGroup" depth="0" root-group-tag="FilesGroup">
+				<group-items>
+					<file-ref>C++ App.rxproj:1</file-ref>
+				</group-items>
+			</group-root>
+		</group-roots>
+	</workspace>
+</workspace-file>

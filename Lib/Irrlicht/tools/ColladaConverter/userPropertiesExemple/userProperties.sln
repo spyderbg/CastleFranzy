@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "userProperties", "userProperties.vcproj", "{BC229D26-327C-4DC6-8134-5CE469F85C80}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5758451D-BF75-40E4-A4CF-5923EF33C3C8} = {5758451D-BF75-40E4-A4CF-5923EF33C3C8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ColladaConverter_2008", "..\src\ColladaConverter_2008.vcproj", "{5758451D-BF75-40E4-A4CF-5923EF33C3C8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C2CD77A3-6E2E-4B90-B579-C10CB5A2FC5E} = {C2CD77A3-6E2E-4B90-B579-C10CB5A2FC5E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ResFile", "..\..\ResFile\src\ResFile.vcproj", "{C2CD77A3-6E2E-4B90-B579-C10CB5A2FC5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		StaticLib_Debug|Win32 = StaticLib_Debug|Win32
+		StaticLib_Release|Win32 = StaticLib_Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC229D26-327C-4DC6-8134-5CE469F85C80}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BC229D26-327C-4DC6-8134-5CE469F85C80}.Debug|Win32.Build.0 = Debug|Win32
+		{BC229D26-327C-4DC6-8134-5CE469F85C80}.Release|Win32.ActiveCfg = Release|Win32
+		{BC229D26-327C-4DC6-8134-5CE469F85C80}.Release|Win32.Build.0 = Release|Win32
+		{BC229D26-327C-4DC6-8134-5CE469F85C80}.StaticLib_Debug|Win32.ActiveCfg = Debug|Win32
+		{BC229D26-327C-4DC6-8134-5CE469F85C80}.StaticLib_Debug|Win32.Build.0 = Debug|Win32
+		{BC229D26-327C-4DC6-8134-5CE469F85C80}.StaticLib_Release|Win32.ActiveCfg = Release|Win32
+		{BC229D26-327C-4DC6-8134-5CE469F85C80}.StaticLib_Release|Win32.Build.0 = Release|Win32
+		{5758451D-BF75-40E4-A4CF-5923EF33C3C8}.Debug|Win32.ActiveCfg = StaticLib_Debug|Win32
+		{5758451D-BF75-40E4-A4CF-5923EF33C3C8}.Debug|Win32.Build.0 = StaticLib_Debug|Win32
+		{5758451D-BF75-40E4-A4CF-5923EF33C3C8}.Release|Win32.ActiveCfg = StaticLib_Release|Win32
+		{5758451D-BF75-40E4-A4CF-5923EF33C3C8}.Release|Win32.Build.0 = StaticLib_Release|Win32
+		{5758451D-BF75-40E4-A4CF-5923EF33C3C8}.StaticLib_Debug|Win32.ActiveCfg = StaticLib_Debug|Win32
+		{5758451D-BF75-40E4-A4CF-5923EF33C3C8}.StaticLib_Debug|Win32.Build.0 = StaticLib_Debug|Win32
+		{5758451D-BF75-40E4-A4CF-5923EF33C3C8}.StaticLib_Release|Win32.ActiveCfg = StaticLib_Release|Win32
+		{5758451D-BF75-40E4-A4CF-5923EF33C3C8}.StaticLib_Release|Win32.Build.0 = StaticLib_Release|Win32
+		{C2CD77A3-6E2E-4B90-B579-C10CB5A2FC5E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C2CD77A3-6E2E-4B90-B579-C10CB5A2FC5E}.Debug|Win32.Build.0 = Debug|Win32
+		{C2CD77A3-6E2E-4B90-B579-C10CB5A2FC5E}.Release|Win32.ActiveCfg = Release|Win32
+		{C2CD77A3-6E2E-4B90-B579-C10CB5A2FC5E}.Release|Win32.Build.0 = Release|Win32
+		{C2CD77A3-6E2E-4B90-B579-C10CB5A2FC5E}.StaticLib_Debug|Win32.ActiveCfg = Debug|Win32
+		{C2CD77A3-6E2E-4B90-B579-C10CB5A2FC5E}.StaticLib_Debug|Win32.Build.0 = Debug|Win32
+		{C2CD77A3-6E2E-4B90-B579-C10CB5A2FC5E}.StaticLib_Release|Win32.ActiveCfg = Release|Win32
+		{C2CD77A3-6E2E-4B90-B579-C10CB5A2FC5E}.StaticLib_Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B09BF50104514CB006E46AD /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF39104514CB006E46AD /* adler32.c */; };
+		8B09BF51104514CB006E46AD /* compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF3A104514CB006E46AD /* compress.c */; };
+		8B09BF52104514CB006E46AD /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF3B104514CB006E46AD /* crc32.c */; };
+		8B09BF53104514CB006E46AD /* crc32.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF3C104514CB006E46AD /* crc32.h */; };
+		8B09BF54104514CB006E46AD /* deflate.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF3D104514CB006E46AD /* deflate.c */; };
+		8B09BF55104514CB006E46AD /* deflate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF3E104514CB006E46AD /* deflate.h */; };
+		8B09BF56104514CB006E46AD /* gzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF3F104514CB006E46AD /* gzio.c */; };
+		8B09BF57104514CB006E46AD /* infback.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF40104514CB006E46AD /* infback.c */; };
+		8B09BF58104514CB006E46AD /* inffast.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF41104514CB006E46AD /* inffast.c */; };
+		8B09BF59104514CB006E46AD /* inffast.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF42104514CB006E46AD /* inffast.h */; };
+		8B09BF5A104514CB006E46AD /* inffixed.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF43104514CB006E46AD /* inffixed.h */; };
+		8B09BF5B104514CB006E46AD /* inflate.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF44104514CB006E46AD /* inflate.c */; };
+		8B09BF5C104514CB006E46AD /* inflate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF45104514CB006E46AD /* inflate.h */; };
+		8B09BF5D104514CB006E46AD /* inftrees.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF46104514CB006E46AD /* inftrees.c */; };
+		8B09BF5E104514CB006E46AD /* inftrees.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF47104514CB006E46AD /* inftrees.h */; };
+		8B09BF5F104514CB006E46AD /* trees.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF48104514CB006E46AD /* trees.c */; };
+		8B09BF60104514CB006E46AD /* trees.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF49104514CB006E46AD /* trees.h */; };
+		8B09BF61104514CB006E46AD /* uncompr.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF4A104514CB006E46AD /* uncompr.c */; };
+		8B09BF62104514CB006E46AD /* zconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF4B104514CB006E46AD /* zconf.h */; };
+		8B09BF63104514CB006E46AD /* zconf.in.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF4C104514CB006E46AD /* zconf.in.h */; };
+		8B09BF64104514CB006E46AD /* zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF4D104514CB006E46AD /* zlib.h */; };
+		8B09BF65104514CB006E46AD /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF4E104514CB006E46AD /* zutil.c */; };
+		8B09BF66104514CB006E46AD /* zutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF4F104514CB006E46AD /* zutil.h */; };
+		8B09BF6E104514E3006E46AD /* GLXPlayerComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF67104514E3006E46AD /* GLXPlayerComponent.h */; };
+		8B09BF6F104514E3006E46AD /* GLXPlayerHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF68104514E3006E46AD /* GLXPlayerHttp.h */; };
+		8B09BF70104514E3006E46AD /* GLXPlayerObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF69104514E3006E46AD /* GLXPlayerObserver.h */; };
+		8B09BF71104514E3006E46AD /* GLXPlayerSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF6A104514E3006E46AD /* GLXPlayerSocket.h */; };
+		8B09BF72104514E3006E46AD /* GLXPlayerSocketFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF6B104514E3006E46AD /* GLXPlayerSocketFactory.h */; };
+		8B09BF73104514E3006E46AD /* GLXPlayerSocketObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF6C104514E3006E46AD /* GLXPlayerSocketObserver.h */; };
+		8B09BF74104514E3006E46AD /* GLXPlayerWebComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF6D104514E3006E46AD /* GLXPlayerWebComponent.h */; };
+		8B09BF7A104514FA006E46AD /* GLXPlayerComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF75104514FA006E46AD /* GLXPlayerComponent.cpp */; };
+		8B09BF7B104514FA006E46AD /* GLXPlayerHttp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF76104514FA006E46AD /* GLXPlayerHttp.cpp */; };
+		8B09BF7C104514FA006E46AD /* GLXPlayerSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF77104514FA006E46AD /* GLXPlayerSocket.cpp */; };
+		8B09BF7D104514FA006E46AD /* GLXPlayerSocketFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF78104514FA006E46AD /* GLXPlayerSocketFactory.cpp */; };
+		8B09BF7E104514FA006E46AD /* GLXPlayerWebComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF79104514FA006E46AD /* GLXPlayerWebComponent.cpp */; };
+		8B09BF811045151B006E46AD /* GLXPlayerYoutube.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF7F1045151B006E46AD /* GLXPlayerYoutube.h */; };
+		8B09BF851045153E006E46AD /* GLXPlayerYoutube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF831045153E006E46AD /* GLXPlayerYoutube.cpp */; };
+		8B09BF8A10451569006E46AD /* IPhoneSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF8710451569006E46AD /* IPhoneSocket.h */; };
+		8B09BF8B10451569006E46AD /* Porting.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF8810451569006E46AD /* Porting.h */; };
+		8B09BF8C10451569006E46AD /* XPlayer_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B09BF8910451569006E46AD /* XPlayer_defines.h */; };
+		8B09BF8F1045158A006E46AD /* IPhoneSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF8D1045158A006E46AD /* IPhoneSocket.cpp */; };
+		8B09BF901045158A006E46AD /* Porting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B09BF8E1045158A006E46AD /* Porting.cpp */; };
+		8B5959BE10451D64009C3941 /* Platform_iPhone.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5959BC10451D64009C3941 /* Platform_iPhone.h */; };
+		8B5959BF10451D64009C3941 /* Platform_iPhone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B5959BD10451D64009C3941 /* Platform_iPhone.mm */; };
+		AA747D9F0F9514B9006C5449 /* libReplay_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* libReplay_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B09BF39104514CB006E46AD /* adler32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = adler32.c; path = ../../../src/Online/3rdParty/zlib/adler32.c; sourceTree = SOURCE_ROOT; };
+		8B09BF3A104514CB006E46AD /* compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = compress.c; path = ../../../src/Online/3rdParty/zlib/compress.c; sourceTree = SOURCE_ROOT; };
+		8B09BF3B104514CB006E46AD /* crc32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = crc32.c; path = ../../../src/Online/3rdParty/zlib/crc32.c; sourceTree = SOURCE_ROOT; };
+		8B09BF3C104514CB006E46AD /* crc32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crc32.h; path = ../../../src/Online/3rdParty/zlib/crc32.h; sourceTree = SOURCE_ROOT; };
+		8B09BF3D104514CB006E46AD /* deflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = deflate.c; path = ../../../src/Online/3rdParty/zlib/deflate.c; sourceTree = SOURCE_ROOT; };
+		8B09BF3E104514CB006E46AD /* deflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = deflate.h; path = ../../../src/Online/3rdParty/zlib/deflate.h; sourceTree = SOURCE_ROOT; };
+		8B09BF3F104514CB006E46AD /* gzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gzio.c; path = ../../../src/Online/3rdParty/zlib/gzio.c; sourceTree = SOURCE_ROOT; };
+		8B09BF40104514CB006E46AD /* infback.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = infback.c; path = ../../../src/Online/3rdParty/zlib/infback.c; sourceTree = SOURCE_ROOT; };
+		8B09BF41104514CB006E46AD /* inffast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inffast.c; path = ../../../src/Online/3rdParty/zlib/inffast.c; sourceTree = SOURCE_ROOT; };
+		8B09BF42104514CB006E46AD /* inffast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inffast.h; path = ../../../src/Online/3rdParty/zlib/inffast.h; sourceTree = SOURCE_ROOT; };
+		8B09BF43104514CB006E46AD /* inffixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inffixed.h; path = ../../../src/Online/3rdParty/zlib/inffixed.h; sourceTree = SOURCE_ROOT; };
+		8B09BF44104514CB006E46AD /* inflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inflate.c; path = ../../../src/Online/3rdParty/zlib/inflate.c; sourceTree = SOURCE_ROOT; };
+		8B09BF45104514CB006E46AD /* inflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inflate.h; path = ../../../src/Online/3rdParty/zlib/inflate.h; sourceTree = SOURCE_ROOT; };
+		8B09BF46104514CB006E46AD /* inftrees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inftrees.c; path = ../../../src/Online/3rdParty/zlib/inftrees.c; sourceTree = SOURCE_ROOT; };
+		8B09BF47104514CB006E46AD /* inftrees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inftrees.h; path = ../../../src/Online/3rdParty/zlib/inftrees.h; sourceTree = SOURCE_ROOT; };
+		8B09BF48104514CB006E46AD /* trees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = trees.c; path = ../../../src/Online/3rdParty/zlib/trees.c; sourceTree = SOURCE_ROOT; };
+		8B09BF49104514CB006E46AD /* trees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trees.h; path = ../../../src/Online/3rdParty/zlib/trees.h; sourceTree = SOURCE_ROOT; };
+		8B09BF4A104514CB006E46AD /* uncompr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = uncompr.c; path = ../../../src/Online/3rdParty/zlib/uncompr.c; sourceTree = SOURCE_ROOT; };
+		8B09BF4B104514CB006E46AD /* zconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zconf.h; path = ../../../src/Online/3rdParty/zlib/zconf.h; sourceTree = SOURCE_ROOT; };
+		8B09BF4C104514CB006E46AD /* zconf.in.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zconf.in.h; path = ../../../src/Online/3rdParty/zlib/zconf.in.h; sourceTree = SOURCE_ROOT; };
+		8B09BF4D104514CB006E46AD /* zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zlib.h; path = ../../../src/Online/3rdParty/zlib/zlib.h; sourceTree = SOURCE_ROOT; };
+		8B09BF4E104514CB006E46AD /* zutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zutil.c; path = ../../../src/Online/3rdParty/zlib/zutil.c; sourceTree = SOURCE_ROOT; };
+		8B09BF4F104514CB006E46AD /* zutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zutil.h; path = ../../../src/Online/3rdParty/zlib/zutil.h; sourceTree = SOURCE_ROOT; };
+		8B09BF67104514E3006E46AD /* GLXPlayerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerComponent.h; path = ../../../include/Common/GLXPlayerComponent.h; sourceTree = SOURCE_ROOT; };
+		8B09BF68104514E3006E46AD /* GLXPlayerHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerHttp.h; path = ../../../include/Common/GLXPlayerHttp.h; sourceTree = SOURCE_ROOT; };
+		8B09BF69104514E3006E46AD /* GLXPlayerObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerObserver.h; path = ../../../include/Common/GLXPlayerObserver.h; sourceTree = SOURCE_ROOT; };
+		8B09BF6A104514E3006E46AD /* GLXPlayerSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerSocket.h; path = ../../../include/Common/GLXPlayerSocket.h; sourceTree = SOURCE_ROOT; };
+		8B09BF6B104514E3006E46AD /* GLXPlayerSocketFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerSocketFactory.h; path = ../../../include/Common/GLXPlayerSocketFactory.h; sourceTree = SOURCE_ROOT; };
+		8B09BF6C104514E3006E46AD /* GLXPlayerSocketObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerSocketObserver.h; path = ../../../include/Common/GLXPlayerSocketObserver.h; sourceTree = SOURCE_ROOT; };
+		8B09BF6D104514E3006E46AD /* GLXPlayerWebComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerWebComponent.h; path = ../../../include/Common/GLXPlayerWebComponent.h; sourceTree = SOURCE_ROOT; };
+		8B09BF75104514FA006E46AD /* GLXPlayerComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerComponent.cpp; path = ../../../src/Online/Common/GLXPlayerComponent.cpp; sourceTree = SOURCE_ROOT; };
+		8B09BF76104514FA006E46AD /* GLXPlayerHttp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerHttp.cpp; path = ../../../src/Online/Common/GLXPlayerHttp.cpp; sourceTree = SOURCE_ROOT; };
+		8B09BF77104514FA006E46AD /* GLXPlayerSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerSocket.cpp; path = ../../../src/Online/Common/GLXPlayerSocket.cpp; sourceTree = SOURCE_ROOT; };
+		8B09BF78104514FA006E46AD /* GLXPlayerSocketFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerSocketFactory.cpp; path = ../../../src/Online/Common/GLXPlayerSocketFactory.cpp; sourceTree = SOURCE_ROOT; };
+		8B09BF79104514FA006E46AD /* GLXPlayerWebComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerWebComponent.cpp; path = ../../../src/Online/Common/GLXPlayerWebComponent.cpp; sourceTree = SOURCE_ROOT; };
+		8B09BF7F1045151B006E46AD /* GLXPlayerYoutube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerYoutube.h; path = ../../../include/YouTube/GLXPlayerYoutube.h; sourceTree = SOURCE_ROOT; };
+		8B09BF831045153E006E46AD /* GLXPlayerYoutube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLXPlayerYoutube.cpp; path = ../../../src/Online/YouTube/GLXPlayerYoutube.cpp; sourceTree = SOURCE_ROOT; };
+		8B09BF8710451569006E46AD /* IPhoneSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPhoneSocket.h; path = ../../../include/IPhoneSocket.h; sourceTree = SOURCE_ROOT; };
+		8B09BF8810451569006E46AD /* Porting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Porting.h; path = ../../../include/Porting.h; sourceTree = SOURCE_ROOT; };
+		8B09BF8910451569006E46AD /* XPlayer_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPlayer_defines.h; path = ../../../include/XPlayer_defines.h; sourceTree = SOURCE_ROOT; };
+		8B09BF8D1045158A006E46AD /* IPhoneSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPhoneSocket.cpp; path = ../../../src/Online/IPhoneSocket.cpp; sourceTree = SOURCE_ROOT; };
+		8B09BF8E1045158A006E46AD /* Porting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Porting.cpp; path = ../../../src/Online/Porting.cpp; sourceTree = SOURCE_ROOT; };
+		8B5959BC10451D64009C3941 /* Platform_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Platform_iPhone.h; path = ../Classes/Platform_iPhone.h; sourceTree = SOURCE_ROOT; };
+		8B5959BD10451D64009C3941 /* Platform_iPhone.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Platform_iPhone.mm; path = ../Classes/Platform_iPhone.mm; sourceTree = SOURCE_ROOT; };
+		AA747D9E0F9514B9006C5449 /* libReplay_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libReplay_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libReplayDebug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReplayDebug.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libReplayDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* libReplay */ = {
+			isa = PBXGroup;
+			children = (
+				8B09BF3410451429006E46AD /* src */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = libReplay;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8B5959BC10451D64009C3941 /* Platform_iPhone.h */,
+				8B5959BD10451D64009C3941 /* Platform_iPhone.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* libReplay_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		8B09BF3410451429006E46AD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				8B09BF3510451433006E46AD /* 3rdParty */,
+				8B09BF361045145B006E46AD /* common */,
+				8B09BF3710451462006E46AD /* youtube */,
+				8B09BF8D1045158A006E46AD /* IPhoneSocket.cpp */,
+				8B09BF8E1045158A006E46AD /* Porting.cpp */,
+				8B09BF8710451569006E46AD /* IPhoneSocket.h */,
+				8B09BF8810451569006E46AD /* Porting.h */,
+				8B09BF8910451569006E46AD /* XPlayer_defines.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		8B09BF3510451433006E46AD /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				8B09BF3810451485006E46AD /* zlib */,
+			);
+			name = 3rdParty;
+			sourceTree = "<group>";
+		};
+		8B09BF361045145B006E46AD /* common */ = {
+			isa = PBXGroup;
+			children = (
+				8B09BF75104514FA006E46AD /* GLXPlayerComponent.cpp */,
+				8B09BF76104514FA006E46AD /* GLXPlayerHttp.cpp */,
+				8B09BF77104514FA006E46AD /* GLXPlayerSocket.cpp */,
+				8B09BF78104514FA006E46AD /* GLXPlayerSocketFactory.cpp */,
+				8B09BF79104514FA006E46AD /* GLXPlayerWebComponent.cpp */,
+				8B09BF67104514E3006E46AD /* GLXPlayerComponent.h */,
+				8B09BF68104514E3006E46AD /* GLXPlayerHttp.h */,
+				8B09BF69104514E3006E46AD /* GLXPlayerObserver.h */,
+				8B09BF6A104514E3006E46AD /* GLXPlayerSocket.h */,
+				8B09BF6B104514E3006E46AD /* GLXPlayerSocketFactory.h */,
+				8B09BF6C104514E3006E46AD /* GLXPlayerSocketObserver.h */,
+				8B09BF6D104514E3006E46AD /* GLXPlayerWebComponent.h */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		8B09BF3710451462006E46AD /* youtube */ = {
+			isa = PBXGroup;
+			children = (
+				8B09BF831045153E006E46AD /* GLXPlayerYoutube.cpp */,
+				8B09BF7F1045151B006E46AD /* GLXPlayerYoutube.h */,
+			);
+			name = youtube;
+			sourceTree = "<group>";
+		};
+		8B09BF3810451485006E46AD /* zlib */ = {
+			isa = PBXGroup;
+			children = (
+				8B09BF39104514CB006E46AD /* adler32.c */,
+				8B09BF3A104514CB006E46AD /* compress.c */,
+				8B09BF3B104514CB006E46AD /* crc32.c */,
+				8B09BF3C104514CB006E46AD /* crc32.h */,
+				8B09BF3D104514CB006E46AD /* deflate.c */,
+				8B09BF3E104514CB006E46AD /* deflate.h */,
+				8B09BF3F104514CB006E46AD /* gzio.c */,
+				8B09BF40104514CB006E46AD /* infback.c */,
+				8B09BF41104514CB006E46AD /* inffast.c */,
+				8B09BF42104514CB006E46AD /* inffast.h */,
+				8B09BF43104514CB006E46AD /* inffixed.h */,
+				8B09BF44104514CB006E46AD /* inflate.c */,
+				8B09BF45104514CB006E46AD /* inflate.h */,
+				8B09BF46104514CB006E46AD /* inftrees.c */,
+				8B09BF47104514CB006E46AD /* inftrees.h */,
+				8B09BF48104514CB006E46AD /* trees.c */,
+				8B09BF49104514CB006E46AD /* trees.h */,
+				8B09BF4A104514CB006E46AD /* uncompr.c */,
+				8B09BF4B104514CB006E46AD /* zconf.h */,
+				8B09BF4C104514CB006E46AD /* zconf.in.h */,
+				8B09BF4D104514CB006E46AD /* zlib.h */,
+				8B09BF4E104514CB006E46AD /* zutil.c */,
+				8B09BF4F104514CB006E46AD /* zutil.h */,
+			);
+			name = zlib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* libReplay_Prefix.pch in Headers */,
+				8B09BF53104514CB006E46AD /* crc32.h in Headers */,
+				8B09BF55104514CB006E46AD /* deflate.h in Headers */,
+				8B09BF59104514CB006E46AD /* inffast.h in Headers */,
+				8B09BF5A104514CB006E46AD /* inffixed.h in Headers */,
+				8B09BF5C104514CB006E46AD /* inflate.h in Headers */,
+				8B09BF5E104514CB006E46AD /* inftrees.h in Headers */,
+				8B09BF60104514CB006E46AD /* trees.h in Headers */,
+				8B09BF62104514CB006E46AD /* zconf.h in Headers */,
+				8B09BF63104514CB006E46AD /* zconf.in.h in Headers */,
+				8B09BF64104514CB006E46AD /* zlib.h in Headers */,
+				8B09BF66104514CB006E46AD /* zutil.h in Headers */,
+				8B09BF6E104514E3006E46AD /* GLXPlayerComponent.h in Headers */,
+				8B09BF6F104514E3006E46AD /* GLXPlayerHttp.h in Headers */,
+				8B09BF70104514E3006E46AD /* GLXPlayerObserver.h in Headers */,
+				8B09BF71104514E3006E46AD /* GLXPlayerSocket.h in Headers */,
+				8B09BF72104514E3006E46AD /* GLXPlayerSocketFactory.h in Headers */,
+				8B09BF73104514E3006E46AD /* GLXPlayerSocketObserver.h in Headers */,
+				8B09BF74104514E3006E46AD /* GLXPlayerWebComponent.h in Headers */,
+				8B09BF811045151B006E46AD /* GLXPlayerYoutube.h in Headers */,
+				8B09BF8A10451569006E46AD /* IPhoneSocket.h in Headers */,
+				8B09BF8B10451569006E46AD /* Porting.h in Headers */,
+				8B09BF8C10451569006E46AD /* XPlayer_defines.h in Headers */,
+				8B5959BE10451D64009C3941 /* Platform_iPhone.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* libReplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "libReplay" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libReplay;
+			productName = libReplay;
+			productReference = D2AAC07E0554694100DB518D /* libReplayDebug.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "libReplay" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* libReplay */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* libReplay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B09BF50104514CB006E46AD /* adler32.c in Sources */,
+				8B09BF51104514CB006E46AD /* compress.c in Sources */,
+				8B09BF52104514CB006E46AD /* crc32.c in Sources */,
+				8B09BF54104514CB006E46AD /* deflate.c in Sources */,
+				8B09BF56104514CB006E46AD /* gzio.c in Sources */,
+				8B09BF57104514CB006E46AD /* infback.c in Sources */,
+				8B09BF58104514CB006E46AD /* inffast.c in Sources */,
+				8B09BF5B104514CB006E46AD /* inflate.c in Sources */,
+				8B09BF5D104514CB006E46AD /* inftrees.c in Sources */,
+				8B09BF5F104514CB006E46AD /* trees.c in Sources */,
+				8B09BF61104514CB006E46AD /* uncompr.c in Sources */,
+				8B09BF65104514CB006E46AD /* zutil.c in Sources */,
+				8B09BF7A104514FA006E46AD /* GLXPlayerComponent.cpp in Sources */,
+				8B09BF7B104514FA006E46AD /* GLXPlayerHttp.cpp in Sources */,
+				8B09BF7C104514FA006E46AD /* GLXPlayerSocket.cpp in Sources */,
+				8B09BF7D104514FA006E46AD /* GLXPlayerSocketFactory.cpp in Sources */,
+				8B09BF7E104514FA006E46AD /* GLXPlayerWebComponent.cpp in Sources */,
+				8B09BF851045153E006E46AD /* GLXPlayerYoutube.cpp in Sources */,
+				8B09BF8F1045158A006E46AD /* IPhoneSocket.cpp in Sources */,
+				8B09BF901045158A006E46AD /* Porting.cpp in Sources */,
+				8B5959BF10451D64009C3941 /* Platform_iPhone.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/libReplay.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = libReplay_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					IPHONE,
+					_DEBUG,
+				);
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = ReplayDebug;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/libReplay.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = libReplay_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = IPHONE;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = ReplayRelease;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "libReplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "libReplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

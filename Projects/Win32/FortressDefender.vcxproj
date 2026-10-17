@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{39C143DE-7693-44AC-8F3E-FCAC07A309C4}</ProjectGuid>
+    <RootNamespace>FortressDefender</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\Build\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\Build\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\Src;..\..\lib\irrlicht\include;..\..\lib\Irrlicht\tools\ColladaConverter\include;..\..\lib\Irrlicht\tools\ResFile\include;..\..\Lib\Irrlicht\source\Irrlicht\PowerVR\OGLES\Include;..\..\Lib\Irrlicht\source\Irrlicht\PowerVR\OGLES\Windows\Include\;..\..\Lib\SoundLib\include;..\..\Lib\LibOpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_IRR_STATIC_LIB_;_IRR_IPHONE_EMULATION_;OS_WIN32;BUILD_OGLES;_WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SoundLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Lib\Irrlicht\source\Irrlicht\Debug Multithreaded\;..\..\Lib\SoundLib\build\Win32\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\Src;..\..\lib\irrlicht\include;..\..\lib\Irrlicht\tools\ColladaConverter\include;..\..\lib\Irrlicht\tools\ResFile\include;..\..\Lib\Irrlicht\source\Irrlicht\PowerVR\OGLES\Include;..\..\Lib\Irrlicht\source\Irrlicht\PowerVR\OGLES\Windows\Include\;..\..\Lib\SoundLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_IRR_STATIC_LIB_;_IRR_IPHONE_EMULATION_;OS_WIN32;BUILD_OGLES;_WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Irrlicht.lib;SoundLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Lib\Irrlicht\source\Irrlicht\Release Multithreaded\;..\..\Lib\SoundLib\build\Win32\Release\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Src\Common\EventManager.cpp" />
+    <ClCompile Include="..\..\Src\Common\Gestures.cpp" />
+    <ClCompile Include="..\..\Src\Common\GX_Math.cpp" />
+    <ClCompile Include="..\..\Src\Common\StateMachine.cpp" />
+    <ClCompile Include="..\..\Src\Common\StringTable.cpp" />
+    <ClCompile Include="..\..\Src\Core\Application.cpp" />
+    <ClCompile Include="..\..\Src\Core\Logs.cpp" />
+    <ClCompile Include="..\..\Src\Editor\EditorUI.cpp" />
+    <ClCompile Include="..\..\Src\Editor\GS_Editor.cpp" />
+    <ClCompile Include="..\..\Src\Entities\IMenu.cpp" />
+    <ClCompile Include="..\..\Src\Fonts\Font.cpp" />
+    <ClCompile Include="..\..\Src\Fonts\FontManager.cpp" />
+    <ClCompile Include="..\..\Src\GameStates\GSLevel.cpp" />
+    <ClCompile Include="..\..\Src\GameStates\GS_Cheat.cpp" />
+    <ClCompile Include="..\..\Src\GameStates\GS_Menu.cpp" />
+    <ClCompile Include="..\..\Src\GameStates\GS_Shop.cpp" />
+    <ClCompile Include="..\..\Src\GameStates\GS_Splash.cpp" />
+    <ClCompile Include="..\..\Src\GameStates\GS_SwitchToExternal.cpp" />
+    <ClCompile Include="..\..\Src\Game\Achievements.cpp" />
+    <ClCompile Include="..\..\Src\Game\Cheats.cpp" />
+    <ClCompile Include="..\..\Src\Game\ColladaControl.cpp" />
+    <ClCompile Include="..\..\Src\Game\Config\GameConfig.cpp" />
+    <ClCompile Include="..\..\Src\Game\Config\LevelStats.cpp" />
+    <ClCompile Include="..\..\Src\Game\Config\Scores.cpp" />
+    <ClCompile Include="..\..\Src\Game\Config\Upgrades.cpp" />
+    <ClCompile Include="..\..\Src\Game\Config\UserProfile.cpp" />
+    <ClCompile Include="..\..\Src\Game\HUD\HUD.cpp" />
+    <ClCompile Include="..\..\Src\Game\LevelInfo.cpp" />
+    <ClCompile Include="..\..\Src\Game\Misc.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\GameCamera.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\GameObject.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\Projectile.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\Unit.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\UnitParts\Bomb.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\UnitParts\ShamanAura.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\UnitParts\UnitKind.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\Weapons\CastleGate.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\Weapons\Fireball.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\Weapons\Griffin.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\Weapons\Hydra.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\Weapons\Iceball.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\Weapons\Spells.cpp" />
+    <ClCompile Include="..\..\Src\Game\Objects\Weapons\WeaponObject.cpp" />
+    <ClCompile Include="..\..\Src\Game\Playfield.cpp" />
+    <ClCompile Include="..\..\Src\Game\PlayfieldParts\Challenge.cpp" />
+    <ClCompile Include="..\..\Src\Game\Value.cpp" />
+    <ClCompile Include="..\..\Src\IO\Accelerometer\AccelerometerBase.cpp" />
+    <ClCompile Include="..\..\Src\IO\Accelerometer\AccelerometerWin32.cpp" />
+    <ClCompile Include="..\..\Src\IO\Audio\SoundFileManager.cpp" />
+    <ClCompile Include="..\..\Src\IO\Audio\SoundManager.cpp" />
+    <ClCompile Include="..\..\Src\IO\TouchScreen\TouchPad.cpp" />
+    <ClCompile Include="..\..\Src\Menus\MenuMain.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_About.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Achievements.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Campaign.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Confirmation.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Difficulty.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Engage.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_GameSettings.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Help.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_HighScore.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_HighScoresLevelList.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Info.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Ingame.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Ingame_Help.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_LanguageSelection.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Loading.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Login.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_NewGame.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Options.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Score.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_Shop.cpp" />
+    <ClCompile Include="..\..\Src\Menus\Menu_SoundOptions.cpp" />
+    <ClCompile Include="..\..\Src\Network\XPlayerManager.cpp" />
+    <ClCompile Include="..\..\Src\Particle\ParticlePreset.cpp" />
+    <ClCompile Include="..\..\Src\Particle\ParticleSystem.cpp" />
+    <ClCompile Include="..\..\Src\Particle\ParticleSystemManager.cpp" />
+    <ClCompile Include="..\..\Src\Particle\ParticleSystem\CFpsParticleAttractionAffector.cpp" />
+    <ClCompile Include="..\..\Src\Particle\ParticleSystem\CFpsParticleBoxEmitter.cpp" />
+    <ClCompile Include="..\..\Src\Particle\ParticleSystem\CFpsParticleFadeOutAffector.cpp" />
+    <ClCompile Include="..\..\Src\Particle\ParticleSystem\CFpsParticleGravityAffector.cpp" />
+    <ClCompile Include="..\..\Src\Particle\ParticleSystem\CFpsParticleRotationAffector.cpp" />
+    <ClCompile Include="..\..\Src\Particle\ParticleSystem\CFpsParticleSizeAffector.cpp" />
+    <ClCompile Include="..\..\Src\Particle\ParticleSystem\CFpsParticleSpinAffector.cpp" />
+    <ClCompile Include="..\..\Src\Particle\ParticleSystem\CFpsParticleSystemSceneNode.cpp" />
+    <ClCompile Include="..\..\Src\PlatformSpecifics\Win32\CImageLoaderPVR.cpp" />
+    <ClCompile Include="..\..\Src\PlatformSpecifics\Win32\main.cpp" />
+    <ClCompile Include="..\..\Src\PlatformSpecifics\Win32\PVRTDecompress.cpp" />
+    <ClCompile Include="..\..\Src\Sprites\AnimationInstance.cpp" />
+    <ClCompile Include="..\..\Src\Sprites\ASprite.cpp" />
+    <ClCompile Include="..\..\Src\Sprites\ASpriteInstance.cpp" />
+    <ClCompile Include="..\..\Src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Utils\Float.cpp" />
+    <ClCompile Include="..\..\Src\Utils\profiler.cpp" />
+    <ClCompile Include="..\..\Src\Utils\StringUtils.cpp" />
+    <ClCompile Include="..\..\Src\VisualControls\IVisualControl.cpp" />
+    <ClCompile Include="..\..\Src\VisualControls\VisualControlButton.cpp" />
+    <ClCompile Include="..\..\Src\VisualControls\VisualControlContainer.cpp" />
+    <ClCompile Include="..\..\Src\VisualControls\VisualControlEditBox.cpp" />
+    <ClCompile Include="..\..\Src\VisualControls\VisualControlMesh.cpp" />
+    <ClCompile Include="..\..\Src\VisualControls\VisualControlPane.cpp" />
+    <ClCompile Include="..\..\Src\VisualControls\VisualControlSlider.cpp" />
+    <ClCompile Include="..\..\Src\VisualControls\VisualControlSprite.cpp" />
+    <ClCompile Include="..\..\Src\VisualControls\VisualControlSwitch.cpp" />
+    <ClCompile Include="..\..\Src\VisualControls\VisualControlText.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Src\Autogenerated\Fonts.h" />
+    <ClInclude Include="..\..\Src\Autogenerated\FortressDefender_ID.hpp" />
+    <ClInclude Include="..\..\Src\Autogenerated\FortressDefender_ID_string.hpp" />
+    <ClInclude Include="..\..\Src\Autogenerated\Ingame.h" />
+    <ClInclude Include="..\..\Src\Autogenerated\Menu.h" />
+    <ClInclude Include="..\..\Src\Autogenerated\sounds.h" />
+    <ClInclude Include="..\..\Src\Autogenerated\version.h" />
+    <ClInclude Include="..\..\Src\Common\EventManager.h" />
+    <ClInclude Include="..\..\Src\Common\Gestures.h" />
+    <ClInclude Include="..\..\Src\Common\GX_Math.h" />
+    <ClInclude Include="..\..\Src\Common\Singleton.h" />
+    <ClInclude Include="..\..\Src\Common\StateMachine.h" />
+    <ClInclude Include="..\..\Src\Common\StringTable.h" />
+    <ClInclude Include="..\..\Src\config_version.h" />
+    <ClInclude Include="..\..\Src\Core\Application.h" />
+    <ClInclude Include="..\..\Src\Core\irrlicht.h" />
+    <ClInclude Include="..\..\Src\Core\Logs.h" />
+    <ClInclude Include="..\..\Src\Editor\EditorUI.h" />
+    <ClInclude Include="..\..\Src\Editor\GS_Editor.h" />
+    <ClInclude Include="..\..\Src\Entities\IDrawable.h" />
+    <ClInclude Include="..\..\Src\Entities\IEvent.h" />
+    <ClInclude Include="..\..\Src\Entities\IEventReceiver.h" />
+    <ClInclude Include="..\..\Src\Entities\IFileStream.h" />
+    <ClInclude Include="..\..\Src\Entities\IMenu.h" />
+    <ClInclude Include="..\..\Src\Entities\ISleepable.h" />
+    <ClInclude Include="..\..\Src\Entities\IStateBase.h" />
+    <ClInclude Include="..\..\Src\Entities\IStream.h" />
+    <ClInclude Include="..\..\Src\Entities\IUpdatable.h" />
+    <ClInclude Include="..\..\Src\Events\EvAcceleration.h" />
+    <ClInclude Include="..\..\Src\Events\Events.h" />
+    <ClInclude Include="..\..\Src\Events\EvKeyboard.h" />
+    <ClInclude Include="..\..\Src\Events\EvMouse.h" />
+    <ClInclude Include="..\..\Src\Events\EvVirtualButton.h" />
+    <ClInclude Include="..\..\Src\Fonts\Font.h" />
+    <ClInclude Include="..\..\Src\Fonts\FontManager.h" />
+    <ClInclude Include="..\..\Src\GameStates\GSLevel.h" />
+    <ClInclude Include="..\..\Src\GameStates\GS_Cheat.h" />
+    <ClInclude Include="..\..\Src\GameStates\GS_Menu.h" />
+    <ClInclude Include="..\..\Src\GameStates\GS_Shop.h" />
+    <ClInclude Include="..\..\Src\GameStates\GS_Splash.h" />
+    <ClInclude Include="..\..\Src\GameStates\GS_SwitchToExternal.h" />
+    <ClInclude Include="..\..\Src\Game\Achievements.h" />
+    <ClInclude Include="..\..\Src\Game\Cheats.h" />
+    <ClInclude Include="..\..\Src\Game\ColladaControl.h" />
+    <ClInclude Include="..\..\Src\Game\Config\GameConfig.h" />
+    <ClInclude Include="..\..\Src\Game\Config\LevelStats.h" />
+    <ClInclude Include="..\..\Src\Game\Config\Scores.h" />
+    <ClInclude Include="..\..\Src\Game\Config\Upgrades.h" />
+    <ClInclude Include="..\..\Src\Game\Config\UserProfile.h" />
+    <ClInclude Include="..\..\Src\Game\HUD\HUD.h" />
+    <ClInclude Include="..\..\Src\Game\LevelInfo.h" />
+    <ClInclude Include="..\..\Src\Game\Misc.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\GameCamera.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\GameObject.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\Projectile.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\Unit.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\UnitParts\Bomb.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\UnitParts\DamageSource.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\UnitParts\ShamanAura.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\UnitParts\UnitKind.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\Weapons\CastleGate.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\Weapons\Fireball.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\Weapons\Griffin.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\Weapons\Hydra.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\Weapons\Iceball.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\Weapons\Spells.h" />
+    <ClInclude Include="..\..\Src\Game\Objects\Weapons\WeaponObject.h" />
+    <ClInclude Include="..\..\Src\Game\Playfield.h" />
+    <ClInclude Include="..\..\Src\Game\PlayfieldParts\Challenge.h" />
+    <ClInclude Include="..\..\Src\Game\Value.h" />
+    <ClInclude Include="..\..\Src\GX_Device.h" />
+    <ClInclude Include="..\..\Src\IO\Accelerometer\AccelerometerBase.h" />
+    <ClInclude Include="..\..\Src\IO\Accelerometer\AccelerometerWin32.h" />
+    <ClInclude Include="..\..\Src\IO\Audio\SoundFileManager.h" />
+    <ClInclude Include="..\..\Src\IO\Audio\SoundManager.h" />
+    <ClInclude Include="..\..\Src\IO\TouchScreen\TouchPad.h" />
+    <ClInclude Include="..\..\Src\Menus\MenuMain.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_About.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Achievements.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Campaign.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Confirmation.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Difficulty.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Engage.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_GameSettings.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Help.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_HighScore.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_HighScoresLevelList.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Info.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Ingame.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Ingame_Help.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_LanguageSelection.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Loading.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Login.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_NewGame.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Options.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Score.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_ScoreInputType.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_Shop.h" />
+    <ClInclude Include="..\..\Src\Menus\Menu_SoundOptions.h" />
+    <ClInclude Include="..\..\Src\Network\XPlayerManager.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticlePreset.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystemManager.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\CFpsParticleAttractionAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\CFpsParticleBoxEmitter.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\CFpsParticleFadeOutAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\CFpsParticleGravityAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\CFpsParticleRotationAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\CFpsParticleSizeAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\CFpsParticleSpinAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\CFpsParticleSystemSceneNode.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\IFpsParticleAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\IFpsParticleAttractionAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\IFpsParticleBoxEmitter.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\IFpsParticleEmitter.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\IFpsParticleFadeOutAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\IFpsParticleGravityAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\IFpsParticleRotationAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\IFpsParticleSizeAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\IFpsParticleSpinAffector.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\IFpsParticleSystemSceneNode.h" />
+    <ClInclude Include="..\..\Src\Particle\ParticleSystem\SFpsParticle.h" />
+    <ClInclude Include="..\..\Src\PlatformSpecifics\IPhone\Device.h" />
+    <ClInclude Include="..\..\Src\PlatformSpecifics\Win32\CImageLoaderPVR.h" />
+    <ClInclude Include="..\..\Src\PlatformSpecifics\Win32\Device.h" />
+    <ClInclude Include="..\..\Src\PlatformSpecifics\Win32\PVRTDecompress.h" />
+    <ClInclude Include="..\..\Src\PlatformSpecifics\Win32\PVRTGlobal.h" />
+    <ClInclude Include="..\..\Src\PlatformSpecifics\Win32\PVRTTexture.h" />
+    <CustomBuild Include="..\..\Src\PlatformSpecifics\Win32\PVRTTextureAPI.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <ClInclude Include="..\..\Src\Sprites\AnimationInstance.h" />
+    <ClInclude Include="..\..\Src\Sprites\ASprite.h" />
+    <ClInclude Include="..\..\Src\Sprites\ASpriteInstance.h" />
+    <ClInclude Include="..\..\Src\Utils\Float.h" />
+    <ClInclude Include="..\..\Src\Utils\Point2D.h" />
+    <ClInclude Include="..\..\Src\Utils\profiler.h" />
+    <ClInclude Include="..\..\Src\Utils\StringUtils.h" />
+    <ClInclude Include="..\..\Src\VisualControls\IVisualControl.h" />
+    <ClInclude Include="..\..\Src\VisualControls\VisualControlButton.h" />
+    <ClInclude Include="..\..\Src\VisualControls\VisualControlCommon.h" />
+    <ClInclude Include="..\..\Src\VisualControls\VisualControlContainer.h" />
+    <ClInclude Include="..\..\Src\VisualControls\VisualControlEditBox.h" />
+    <ClInclude Include="..\..\Src\VisualControls\VisualControlMesh.h" />
+    <ClInclude Include="..\..\Src\VisualControls\VisualControlPane.h" />
+    <ClInclude Include="..\..\Src\VisualControls\VisualControlSlider.h" />
+    <ClInclude Include="..\..\Src\VisualControls\VisualControlSprite.h" />
+    <ClInclude Include="..\..\Src\VisualControls\VisualControlSwitch.h" />
+    <ClInclude Include="..\..\Src\VisualControls\VisualControlText.h" />
+    <ClInclude Include="..\IPhone\Classes\EAGLView.h" />
+    <ClInclude Include="..\IPhone\Classes\iCDAppDelegate.h" />
+    <ClInclude Include="..\IPhone\Classes\TextInput.h" />
+    <ClInclude Include="..\IPhone\Classes\WTextInput.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\IPhone\Classes\EAGLView.mm" />
+    <None Include="..\IPhone\Classes\iCDAppDelegate.mm" />
+    <None Include="..\IPhone\Classes\TextInput.mm" />
+    <None Include="..\IPhone\main.mm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lib\Irrlicht\source\Irrlicht\Irrlicht2008.vcxproj">
+      <Project>{e08e042a-6c45-411b-92be-3cc31331019f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\SoundLib\prj\SoundLib.vcxproj">
+      <Project>{b69357fd-acc5-4ad4-8a59-cdbc1f2c2bd6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

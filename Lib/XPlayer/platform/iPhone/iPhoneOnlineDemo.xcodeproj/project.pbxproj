@@ -1,0 +1,1085 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28FD14FE0DC6FC130079059D /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28FD14FD0DC6FC130079059D /* EAGLView.mm */; };
+		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		2D5F80720F14832F00AF8E9A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5F80710F14832F00AF8E9A /* SystemConfiguration.framework */; };
+		2D5F811F0F148C3500AF8E9A /* res.pak in Resources */ = {isa = PBXBuildFile; fileRef = 2D5F811E0F148C3500AF8E9A /* res.pak */; };
+		8B0A0464103A5301001679FD /* test.avi in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A0463103A5301001679FD /* test.avi */; };
+		8B4D044F0F1C7BA200E57BE1 /* oconf.bar in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D044D0F1C7BA200E57BE1 /* oconf.bar */; };
+		8B4D04500F1C7BA200E57BE1 /* user.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D044E0F1C7BA200E57BE1 /* user.txt */; };
+		8B699B1F1046348000460B82 /* libGLXPlayerMacDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B699B1E1046348000460B82 /* libGLXPlayerMacDebug.a */; };
+		8B7FE0060F931860003A2D29 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDE9C0F93185F003A2D29 /* Game.cpp */; };
+		8B7FE0080F931860003A2D29 /* GameStateLogo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEA10F93185F003A2D29 /* GameStateLogo.cpp */; };
+		8B7FE0090F931860003A2D29 /* GameStateMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEA30F93185F003A2D29 /* GameStateMenu.cpp */; };
+		8B7FE00A0F931860003A2D29 /* GameStateMultiplayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEA50F93185F003A2D29 /* GameStateMultiplayer.cpp */; };
+		8B7FE00B0F931860003A2D29 /* GameStateOnline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEA70F93185F003A2D29 /* GameStateOnline.cpp */; };
+		8B7FE00C0F931860003A2D29 /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEA90F93185F003A2D29 /* GameState.cpp */; };
+		8B7FE00D0F931860003A2D29 /* GameStateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEAB0F93185F003A2D29 /* GameStateFactory.cpp */; };
+		8B7FE00E0F931860003A2D29 /* InputBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEAE0F93185F003A2D29 /* InputBox.cpp */; };
+		8B7FE00F0F931860003A2D29 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEB00F93185F003A2D29 /* Menu.cpp */; };
+		8B7FE0100F931860003A2D29 /* MenuItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEB20F93185F003A2D29 /* MenuItem.cpp */; };
+		8B7FE0110F931860003A2D29 /* GL3DCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEB90F93185F003A2D29 /* GL3DCamera.cpp */; };
+		8B7FE0120F931860003A2D29 /* GlRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEBC0F93185F003A2D29 /* GlRenderer.cpp */; };
+		8B7FE0130F931860003A2D29 /* glt_device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEBE0F93185F003A2D29 /* glt_device.cpp */; };
+		8B7FE0140F931860003A2D29 /* glt_math_alg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEC00F93185F003A2D29 /* glt_math_alg.cpp */; };
+		8B7FE0150F931860003A2D29 /* glt_math_fixed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDEC20F93185F003A2D29 /* glt_math_fixed.cpp */; };
+		8B7FE08A0F931860003A2D29 /* ASprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDFEA0F931860003A2D29 /* ASprite.cpp */; };
+		8B7FE08B0F931860003A2D29 /* FMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDFED0F931860003A2D29 /* FMath.cpp */; };
+		8B7FE08C0F931860003A2D29 /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDFEF0F931860003A2D29 /* Font.cpp */; };
+		8B7FE08D0F931860003A2D29 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDFF20F931860003A2D29 /* Image.cpp */; };
+		8B7FE08E0F931860003A2D29 /* Memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDFF40F931860003A2D29 /* Memory.cpp */; };
+		8B7FE08F0F931860003A2D29 /* MyDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDFF60F931860003A2D29 /* MyDisplay.cpp */; };
+		8B7FE0900F931860003A2D29 /* MyGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDFF80F931860003A2D29 /* MyGraphics.cpp */; };
+		8B7FE0910F931860003A2D29 /* Profile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDFFA0F931860003A2D29 /* Profile.cpp */; };
+		8B7FE0920F931860003A2D29 /* ResFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDFFC0F931860003A2D29 /* ResFile.cpp */; };
+		8B7FE0930F931860003A2D29 /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDFFE0F931860003A2D29 /* ResourceManager.cpp */; };
+		8B7FE0940F931860003A2D29 /* Stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FE0000F931860003A2D29 /* Stream.cpp */; };
+		8B7FE0950F931860003A2D29 /* Touchpad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FE0020F931860003A2D29 /* Touchpad.cpp */; };
+		8B7FE0960F931860003A2D29 /* TouchRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FE0040F931860003A2D29 /* TouchRect.cpp */; };
+		8BA04D1A1047C2720050F842 /* GameStateServerConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BA04D181047C2720050F842 /* GameStateServerConfig.cpp */; };
+		8BA7DD310FA83F0B002A71A5 /* MyRoomQueryCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7DD2F0FA83F0B002A71A5 /* MyRoomQueryCondition.cpp */; };
+		8BBB768410392F8A00782079 /* Makefile.am in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB764010392F8A00782079 /* Makefile.am */; };
+		8BBB768510392F8A00782079 /* Makefile.in in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB764110392F8A00782079 /* Makefile.in */; };
+		8BBB768610392F8A00782079 /* version.rc in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB768210392F8A00782079 /* version.rc */; };
+		8BF09E6C0FEF1E1500CDB9E2 /* GameStateMultiplayerLobby.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BF09E6A0FEF1E1500CDB9E2 /* GameStateMultiplayerLobby.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneOnlineDemoAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneOnlineDemoAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* iPhoneOnlineDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneOnlineDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28FD14FC0DC6FC130079059D /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		28FD14FD0DC6FC130079059D /* EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLView.mm; sourceTree = "<group>"; };
+		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D5F801E0F147A4D00AF8E9A /* Predefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Predefine.h; sourceTree = "<group>"; };
+		2D5F801F0F147A4D00AF8E9A /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		2D5F80710F14832F00AF8E9A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
+		2D5F811E0F148C3500AF8E9A /* res.pak */ = {isa = PBXFileReference; lastKnownFileType = file; name = res.pak; path = data/res.pak; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* iPhoneOnlineDemo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneOnlineDemo_Prefix.pch; sourceTree = "<group>"; };
+		8B0A0463103A5301001679FD /* test.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; name = test.avi; path = data/test.avi; sourceTree = "<group>"; };
+		8B4D044D0F1C7BA200E57BE1 /* oconf.bar */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = oconf.bar; path = data/oconf.bar; sourceTree = "<group>"; };
+		8B4D044E0F1C7BA200E57BE1 /* user.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = user.txt; path = data/user.txt; sourceTree = "<group>"; };
+		8B699B1E1046348000460B82 /* libGLXPlayerMacDebug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLXPlayerMacDebug.a; path = ../../lib/mac/libGLXPlayerMacDebug.a; sourceTree = SOURCE_ROOT; };
+		8B7FDE9B0F93185F003A2D29 /* DEF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEF.h; sourceTree = "<group>"; };
+		8B7FDE9C0F93185F003A2D29 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		8B7FDE9D0F93185F003A2D29 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		8B7FDEA10F93185F003A2D29 /* GameStateLogo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStateLogo.cpp; sourceTree = "<group>"; };
+		8B7FDEA20F93185F003A2D29 /* GameStateLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateLogo.h; sourceTree = "<group>"; };
+		8B7FDEA30F93185F003A2D29 /* GameStateMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStateMenu.cpp; sourceTree = "<group>"; };
+		8B7FDEA40F93185F003A2D29 /* GameStateMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateMenu.h; sourceTree = "<group>"; };
+		8B7FDEA50F93185F003A2D29 /* GameStateMultiplayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStateMultiplayer.cpp; sourceTree = "<group>"; };
+		8B7FDEA60F93185F003A2D29 /* GameStateMultiplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateMultiplayer.h; sourceTree = "<group>"; };
+		8B7FDEA70F93185F003A2D29 /* GameStateOnline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStateOnline.cpp; sourceTree = "<group>"; };
+		8B7FDEA80F93185F003A2D29 /* GameStateOnline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateOnline.h; sourceTree = "<group>"; };
+		8B7FDEA90F93185F003A2D29 /* GameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
+		8B7FDEAA0F93185F003A2D29 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		8B7FDEAB0F93185F003A2D29 /* GameStateFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStateFactory.cpp; sourceTree = "<group>"; };
+		8B7FDEAC0F93185F003A2D29 /* GameStateFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateFactory.h; sourceTree = "<group>"; };
+		8B7FDEAD0F93185F003A2D29 /* GameStateHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateHandler.h; sourceTree = "<group>"; };
+		8B7FDEAE0F93185F003A2D29 /* InputBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputBox.cpp; sourceTree = "<group>"; };
+		8B7FDEAF0F93185F003A2D29 /* InputBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputBox.h; sourceTree = "<group>"; };
+		8B7FDEB00F93185F003A2D29 /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
+		8B7FDEB10F93185F003A2D29 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		8B7FDEB20F93185F003A2D29 /* MenuItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuItem.cpp; sourceTree = "<group>"; };
+		8B7FDEB30F93185F003A2D29 /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
+		8B7FDEB40F93185F003A2D29 /* MenuItemObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemObserver.h; sourceTree = "<group>"; };
+		8B7FDEB50F93185F003A2D29 /* TouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchEvent.h; sourceTree = "<group>"; };
+		8B7FDEB70F93185F003A2D29 /* CompileOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompileOptions.h; sourceTree = "<group>"; };
+		8B7FDEB80F93185F003A2D29 /* egltypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = egltypes.h; sourceTree = "<group>"; };
+		8B7FDEB90F93185F003A2D29 /* GL3DCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GL3DCamera.cpp; sourceTree = "<group>"; };
+		8B7FDEBA0F93185F003A2D29 /* GL3DCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GL3DCamera.h; sourceTree = "<group>"; };
+		8B7FDEBB0F93185F003A2D29 /* gll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gll.h; sourceTree = "<group>"; };
+		8B7FDEBC0F93185F003A2D29 /* GlRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlRenderer.cpp; sourceTree = "<group>"; };
+		8B7FDEBD0F93185F003A2D29 /* GlRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlRenderer.h; sourceTree = "<group>"; };
+		8B7FDEBE0F93185F003A2D29 /* glt_device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glt_device.cpp; sourceTree = "<group>"; };
+		8B7FDEBF0F93185F003A2D29 /* glt_device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glt_device.h; sourceTree = "<group>"; };
+		8B7FDEC00F93185F003A2D29 /* glt_math_alg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glt_math_alg.cpp; sourceTree = "<group>"; };
+		8B7FDEC10F93185F003A2D29 /* glt_math_alg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glt_math_alg.h; sourceTree = "<group>"; };
+		8B7FDEC20F93185F003A2D29 /* glt_math_fixed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glt_math_fixed.cpp; sourceTree = "<group>"; };
+		8B7FDEC30F93185F003A2D29 /* glt_math_fixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glt_math_fixed.h; sourceTree = "<group>"; };
+		8B7FDFEA0F931860003A2D29 /* ASprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ASprite.cpp; sourceTree = "<group>"; };
+		8B7FDFEB0F931860003A2D29 /* ASprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASprite.h; sourceTree = "<group>"; };
+		8B7FDFEC0F931860003A2D29 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		8B7FDFED0F931860003A2D29 /* FMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FMath.cpp; sourceTree = "<group>"; };
+		8B7FDFEE0F931860003A2D29 /* FMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMath.h; sourceTree = "<group>"; };
+		8B7FDFEF0F931860003A2D29 /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
+		8B7FDFF00F931860003A2D29 /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Font.h; sourceTree = "<group>"; };
+		8B7FDFF10F931860003A2D29 /* font_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = font_table.h; sourceTree = "<group>"; };
+		8B7FDFF20F931860003A2D29 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
+		8B7FDFF30F931860003A2D29 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		8B7FDFF40F931860003A2D29 /* Memory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Memory.cpp; sourceTree = "<group>"; };
+		8B7FDFF50F931860003A2D29 /* Memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Memory.h; sourceTree = "<group>"; };
+		8B7FDFF60F931860003A2D29 /* MyDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyDisplay.cpp; sourceTree = "<group>"; };
+		8B7FDFF70F931860003A2D29 /* MyDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDisplay.h; sourceTree = "<group>"; };
+		8B7FDFF80F931860003A2D29 /* MyGraphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyGraphics.cpp; sourceTree = "<group>"; };
+		8B7FDFF90F931860003A2D29 /* MyGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGraphics.h; sourceTree = "<group>"; };
+		8B7FDFFA0F931860003A2D29 /* Profile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Profile.cpp; sourceTree = "<group>"; };
+		8B7FDFFB0F931860003A2D29 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		8B7FDFFC0F931860003A2D29 /* ResFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResFile.cpp; sourceTree = "<group>"; };
+		8B7FDFFD0F931860003A2D29 /* ResFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResFile.h; sourceTree = "<group>"; };
+		8B7FDFFE0F931860003A2D29 /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceManager.cpp; sourceTree = "<group>"; };
+		8B7FDFFF0F931860003A2D29 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
+		8B7FE0000F931860003A2D29 /* Stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stream.cpp; sourceTree = "<group>"; };
+		8B7FE0010F931860003A2D29 /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stream.h; sourceTree = "<group>"; };
+		8B7FE0020F931860003A2D29 /* Touchpad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Touchpad.cpp; sourceTree = "<group>"; };
+		8B7FE0030F931860003A2D29 /* Touchpad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Touchpad.h; sourceTree = "<group>"; };
+		8B7FE0040F931860003A2D29 /* TouchRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchRect.cpp; sourceTree = "<group>"; };
+		8B7FE0050F931860003A2D29 /* TouchRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchRect.h; sourceTree = "<group>"; };
+		8BA04D181047C2720050F842 /* GameStateServerConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStateServerConfig.cpp; sourceTree = "<group>"; };
+		8BA04D191047C2720050F842 /* GameStateServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateServerConfig.h; sourceTree = "<group>"; };
+		8BA7DD2F0FA83F0B002A71A5 /* MyRoomQueryCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyRoomQueryCondition.cpp; sourceTree = "<group>"; };
+		8BA7DD300FA83F0B002A71A5 /* MyRoomQueryCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRoomQueryCondition.h; sourceTree = "<group>"; };
+		8BBB754A10392D9E00782079 /* IPhoneSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPhoneSocket.h; path = ../../include/IPhoneSocket.h; sourceTree = SOURCE_ROOT; };
+		8BBB754B10392D9E00782079 /* Porting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Porting.h; path = ../../include/Porting.h; sourceTree = SOURCE_ROOT; };
+		8BBB754C10392D9E00782079 /* XPlayer_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPlayer_defines.h; path = ../../include/XPlayer_defines.h; sourceTree = SOURCE_ROOT; };
+		8BBB754F10392E2500782079 /* GLXPlayerYoutube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerYoutube.h; path = ../../include/YouTube/GLXPlayerYoutube.h; sourceTree = SOURCE_ROOT; };
+		8BBB755010392E2500782079 /* GLXPlayerYoutubeEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerYoutubeEX.h; path = ../../include/YouTube/GLXPlayerYoutubeEX.h; sourceTree = SOURCE_ROOT; };
+		8BBB755110392E4500782079 /* GLXPlayerDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerDownload.h; path = ../../include/Download/GLXPlayerDownload.h; sourceTree = SOURCE_ROOT; };
+		8BBB755210392E8600782079 /* rss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rss.h; path = ../../include/3rdParty/XMLParser/rss.h; sourceTree = SOURCE_ROOT; };
+		8BBB755310392E8600782079 /* SlimXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlimXml.h; path = ../../include/3rdParty/XMLParser/SlimXml.h; sourceTree = SOURCE_ROOT; };
+		8BBB755510392F2600782079 /* GLXPlayerUserFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerUserFriend.h; path = ../../../include/Buddy/GLXPlayerUserFriend.h; sourceTree = "<group>"; };
+		8BBB760C10392F8A00782079 /* adhoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = adhoc.h; path = ../../include/Chat/gloox/adhoc.h; sourceTree = SOURCE_ROOT; };
+		8BBB760D10392F8A00782079 /* adhoccommandprovider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = adhoccommandprovider.h; path = ../../include/Chat/gloox/adhoccommandprovider.h; sourceTree = SOURCE_ROOT; };
+		8BBB760E10392F8A00782079 /* adhochandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = adhochandler.h; path = ../../include/Chat/gloox/adhochandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB760F10392F8A00782079 /* annotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = annotations.h; path = ../../include/Chat/gloox/annotations.h; sourceTree = SOURCE_ROOT; };
+		8BBB761010392F8A00782079 /* annotationshandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = annotationshandler.h; path = ../../include/Chat/gloox/annotationshandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB761110392F8A00782079 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base64.h; path = ../../include/Chat/gloox/base64.h; sourceTree = SOURCE_ROOT; };
+		8BBB761210392F8A00782079 /* bookmarkhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bookmarkhandler.h; path = ../../include/Chat/gloox/bookmarkhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB761310392F8A00782079 /* bookmarkstorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bookmarkstorage.h; path = ../../include/Chat/gloox/bookmarkstorage.h; sourceTree = SOURCE_ROOT; };
+		8BBB761410392F8A00782079 /* chatstatefilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chatstatefilter.h; path = ../../include/Chat/gloox/chatstatefilter.h; sourceTree = SOURCE_ROOT; };
+		8BBB761510392F8A00782079 /* chatstatehandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chatstatehandler.h; path = ../../include/Chat/gloox/chatstatehandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB761610392F8A00782079 /* client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = client.h; path = ../../include/Chat/gloox/client.h; sourceTree = SOURCE_ROOT; };
+		8BBB761710392F8A00782079 /* clientbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = clientbase.h; path = ../../include/Chat/gloox/clientbase.h; sourceTree = SOURCE_ROOT; };
+		8BBB761810392F8A00782079 /* component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = component.h; path = ../../include/Chat/gloox/component.h; sourceTree = SOURCE_ROOT; };
+		8BBB761910392F8A00782079 /* compressionbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compressionbase.h; path = ../../include/Chat/gloox/compressionbase.h; sourceTree = SOURCE_ROOT; };
+		8BBB761A10392F8A00782079 /* compressiondatahandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compressiondatahandler.h; path = ../../include/Chat/gloox/compressiondatahandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB761B10392F8A00782079 /* compressionzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compressionzlib.h; path = ../../include/Chat/gloox/compressionzlib.h; sourceTree = SOURCE_ROOT; };
+		8BBB761C10392F8A00782079 /* connectionbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectionbase.h; path = ../../include/Chat/gloox/connectionbase.h; sourceTree = SOURCE_ROOT; };
+		8BBB761D10392F8A00782079 /* connectiondatahandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectiondatahandler.h; path = ../../include/Chat/gloox/connectiondatahandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB761E10392F8A00782079 /* connectionhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectionhandler.h; path = ../../include/Chat/gloox/connectionhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB761F10392F8A00782079 /* connectionhttpproxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectionhttpproxy.h; path = ../../include/Chat/gloox/connectionhttpproxy.h; sourceTree = SOURCE_ROOT; };
+		8BBB762010392F8A00782079 /* connectionlistener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectionlistener.h; path = ../../include/Chat/gloox/connectionlistener.h; sourceTree = SOURCE_ROOT; };
+		8BBB762110392F8A00782079 /* connectionsocks5proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectionsocks5proxy.h; path = ../../include/Chat/gloox/connectionsocks5proxy.h; sourceTree = SOURCE_ROOT; };
+		8BBB762210392F8A00782079 /* connectiontcpbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectiontcpbase.h; path = ../../include/Chat/gloox/connectiontcpbase.h; sourceTree = SOURCE_ROOT; };
+		8BBB762310392F8A00782079 /* connectiontcpclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectiontcpclient.h; path = ../../include/Chat/gloox/connectiontcpclient.h; sourceTree = SOURCE_ROOT; };
+		8BBB762410392F8A00782079 /* connectiontcpserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = connectiontcpserver.h; path = ../../include/Chat/gloox/connectiontcpserver.h; sourceTree = SOURCE_ROOT; };
+		8BBB762510392F8A00782079 /* dataform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataform.h; path = ../../include/Chat/gloox/dataform.h; sourceTree = SOURCE_ROOT; };
+		8BBB762610392F8A00782079 /* dataformbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataformbase.h; path = ../../include/Chat/gloox/dataformbase.h; sourceTree = SOURCE_ROOT; };
+		8BBB762710392F8A00782079 /* dataformfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataformfield.h; path = ../../include/Chat/gloox/dataformfield.h; sourceTree = SOURCE_ROOT; };
+		8BBB762810392F8A00782079 /* dataformitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataformitem.h; path = ../../include/Chat/gloox/dataformitem.h; sourceTree = SOURCE_ROOT; };
+		8BBB762910392F8A00782079 /* dataformreported.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataformreported.h; path = ../../include/Chat/gloox/dataformreported.h; sourceTree = SOURCE_ROOT; };
+		8BBB762A10392F8A00782079 /* delayeddelivery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = delayeddelivery.h; path = ../../include/Chat/gloox/delayeddelivery.h; sourceTree = SOURCE_ROOT; };
+		8BBB762B10392F8A00782079 /* disco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = disco.h; path = ../../include/Chat/gloox/disco.h; sourceTree = SOURCE_ROOT; };
+		8BBB762C10392F8A00782079 /* discohandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = discohandler.h; path = ../../include/Chat/gloox/discohandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB762D10392F8A00782079 /* disconodehandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = disconodehandler.h; path = ../../include/Chat/gloox/disconodehandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB762E10392F8A00782079 /* dns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dns.h; path = ../../include/Chat/gloox/dns.h; sourceTree = SOURCE_ROOT; };
+		8BBB762F10392F8A00782079 /* flexoff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flexoff.h; path = ../../include/Chat/gloox/flexoff.h; sourceTree = SOURCE_ROOT; };
+		8BBB763010392F8A00782079 /* flexoffhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flexoffhandler.h; path = ../../include/Chat/gloox/flexoffhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB763110392F8A00782079 /* gloox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gloox.h; path = ../../include/Chat/gloox/gloox.h; sourceTree = SOURCE_ROOT; };
+		8BBB763210392F8A00782079 /* gpgencrypted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gpgencrypted.h; path = ../../include/Chat/gloox/gpgencrypted.h; sourceTree = SOURCE_ROOT; };
+		8BBB763310392F8A00782079 /* gpgsigned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gpgsigned.h; path = ../../include/Chat/gloox/gpgsigned.h; sourceTree = SOURCE_ROOT; };
+		8BBB763410392F8A00782079 /* inbandbytestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inbandbytestream.h; path = ../../include/Chat/gloox/inbandbytestream.h; sourceTree = SOURCE_ROOT; };
+		8BBB763510392F8A00782079 /* inbandbytestreamdatahandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inbandbytestreamdatahandler.h; path = ../../include/Chat/gloox/inbandbytestreamdatahandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB763610392F8A00782079 /* inbandbytestreamhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inbandbytestreamhandler.h; path = ../../include/Chat/gloox/inbandbytestreamhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB763710392F8A00782079 /* inbandbytestreammanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inbandbytestreammanager.h; path = ../../include/Chat/gloox/inbandbytestreammanager.h; sourceTree = SOURCE_ROOT; };
+		8BBB763810392F8A00782079 /* instantmucroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = instantmucroom.h; path = ../../include/Chat/gloox/instantmucroom.h; sourceTree = SOURCE_ROOT; };
+		8BBB763910392F8A00782079 /* iqhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iqhandler.h; path = ../../include/Chat/gloox/iqhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB763A10392F8A00782079 /* jid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jid.h; path = ../../include/Chat/gloox/jid.h; sourceTree = SOURCE_ROOT; };
+		8BBB763B10392F8A00782079 /* lastactivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lastactivity.h; path = ../../include/Chat/gloox/lastactivity.h; sourceTree = SOURCE_ROOT; };
+		8BBB763C10392F8A00782079 /* lastactivityhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lastactivityhandler.h; path = ../../include/Chat/gloox/lastactivityhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB763D10392F8A00782079 /* loghandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = loghandler.h; path = ../../include/Chat/gloox/loghandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB763E10392F8A00782079 /* logsink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = logsink.h; path = ../../include/Chat/gloox/logsink.h; sourceTree = SOURCE_ROOT; };
+		8BBB763F10392F8A00782079 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = macros.h; path = ../../include/Chat/gloox/macros.h; sourceTree = SOURCE_ROOT; };
+		8BBB764010392F8A00782079 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile.am; path = ../../include/Chat/gloox/Makefile.am; sourceTree = SOURCE_ROOT; };
+		8BBB764110392F8A00782079 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile.in; path = ../../include/Chat/gloox/Makefile.in; sourceTree = SOURCE_ROOT; };
+		8BBB764210392F8A00782079 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = md5.h; path = ../../include/Chat/gloox/md5.h; sourceTree = SOURCE_ROOT; };
+		8BBB764310392F8A00782079 /* messageeventfilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messageeventfilter.h; path = ../../include/Chat/gloox/messageeventfilter.h; sourceTree = SOURCE_ROOT; };
+		8BBB764410392F8A00782079 /* messageeventhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messageeventhandler.h; path = ../../include/Chat/gloox/messageeventhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB764510392F8A00782079 /* messagefilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messagefilter.h; path = ../../include/Chat/gloox/messagefilter.h; sourceTree = SOURCE_ROOT; };
+		8BBB764610392F8A00782079 /* messagehandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messagehandler.h; path = ../../include/Chat/gloox/messagehandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB764710392F8A00782079 /* messagesession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messagesession.h; path = ../../include/Chat/gloox/messagesession.h; sourceTree = SOURCE_ROOT; };
+		8BBB764810392F8A00782079 /* messagesessionhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messagesessionhandler.h; path = ../../include/Chat/gloox/messagesessionhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB764910392F8A00782079 /* mucinvitationhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mucinvitationhandler.h; path = ../../include/Chat/gloox/mucinvitationhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB764A10392F8A00782079 /* mucmessagesession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mucmessagesession.h; path = ../../include/Chat/gloox/mucmessagesession.h; sourceTree = SOURCE_ROOT; };
+		8BBB764B10392F8A00782079 /* mucroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mucroom.h; path = ../../include/Chat/gloox/mucroom.h; sourceTree = SOURCE_ROOT; };
+		8BBB764C10392F8A00782079 /* mucroomconfighandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mucroomconfighandler.h; path = ../../include/Chat/gloox/mucroomconfighandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB764D10392F8A00782079 /* mucroomhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mucroomhandler.h; path = ../../include/Chat/gloox/mucroomhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB764E10392F8A00782079 /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mutex.h; path = ../../include/Chat/gloox/mutex.h; sourceTree = SOURCE_ROOT; };
+		8BBB764F10392F8A00782079 /* mutexguard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mutexguard.h; path = ../../include/Chat/gloox/mutexguard.h; sourceTree = SOURCE_ROOT; };
+		8BBB765010392F8A00782079 /* nonsaslauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nonsaslauth.h; path = ../../include/Chat/gloox/nonsaslauth.h; sourceTree = SOURCE_ROOT; };
+		8BBB765110392F8A00782079 /* oob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oob.h; path = ../../include/Chat/gloox/oob.h; sourceTree = SOURCE_ROOT; };
+		8BBB765210392F8A00782079 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = parser.h; path = ../../include/Chat/gloox/parser.h; sourceTree = SOURCE_ROOT; };
+		8BBB765310392F8A00782079 /* prep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = prep.h; path = ../../include/Chat/gloox/prep.h; sourceTree = SOURCE_ROOT; };
+		8BBB765410392F8A00782079 /* presencehandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = presencehandler.h; path = ../../include/Chat/gloox/presencehandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB765510392F8A00782079 /* privacyitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privacyitem.h; path = ../../include/Chat/gloox/privacyitem.h; sourceTree = SOURCE_ROOT; };
+		8BBB765610392F8A00782079 /* privacylisthandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privacylisthandler.h; path = ../../include/Chat/gloox/privacylisthandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB765710392F8A00782079 /* privacymanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privacymanager.h; path = ../../include/Chat/gloox/privacymanager.h; sourceTree = SOURCE_ROOT; };
+		8BBB765810392F8A00782079 /* privatexml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privatexml.h; path = ../../include/Chat/gloox/privatexml.h; sourceTree = SOURCE_ROOT; };
+		8BBB765910392F8A00782079 /* privatexmlhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = privatexmlhandler.h; path = ../../include/Chat/gloox/privatexmlhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB765A10392F8A00782079 /* registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registration.h; path = ../../include/Chat/gloox/registration.h; sourceTree = SOURCE_ROOT; };
+		8BBB765B10392F8A00782079 /* registrationhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registrationhandler.h; path = ../../include/Chat/gloox/registrationhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB765C10392F8A00782079 /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resource.h; path = ../../include/Chat/gloox/resource.h; sourceTree = SOURCE_ROOT; };
+		8BBB765D10392F8A00782079 /* rosteritem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rosteritem.h; path = ../../include/Chat/gloox/rosteritem.h; sourceTree = SOURCE_ROOT; };
+		8BBB765E10392F8A00782079 /* rosterlistener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rosterlistener.h; path = ../../include/Chat/gloox/rosterlistener.h; sourceTree = SOURCE_ROOT; };
+		8BBB765F10392F8A00782079 /* rostermanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rostermanager.h; path = ../../include/Chat/gloox/rostermanager.h; sourceTree = SOURCE_ROOT; };
+		8BBB766010392F8A00782079 /* search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = search.h; path = ../../include/Chat/gloox/search.h; sourceTree = SOURCE_ROOT; };
+		8BBB766110392F8A00782079 /* searchhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = searchhandler.h; path = ../../include/Chat/gloox/searchhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB766210392F8A00782079 /* sha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha.h; path = ../../include/Chat/gloox/sha.h; sourceTree = SOURCE_ROOT; };
+		8BBB766310392F8A00782079 /* sihandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sihandler.h; path = ../../include/Chat/gloox/sihandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB766410392F8A00782079 /* simanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = simanager.h; path = ../../include/Chat/gloox/simanager.h; sourceTree = SOURCE_ROOT; };
+		8BBB766510392F8A00782079 /* siprofileft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = siprofileft.h; path = ../../include/Chat/gloox/siprofileft.h; sourceTree = SOURCE_ROOT; };
+		8BBB766610392F8A00782079 /* siprofilefthandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = siprofilefthandler.h; path = ../../include/Chat/gloox/siprofilefthandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB766710392F8A00782079 /* siprofilehandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = siprofilehandler.h; path = ../../include/Chat/gloox/siprofilehandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB766810392F8A00782079 /* socks5bytestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socks5bytestream.h; path = ../../include/Chat/gloox/socks5bytestream.h; sourceTree = SOURCE_ROOT; };
+		8BBB766910392F8A00782079 /* socks5bytestreamdatahandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socks5bytestreamdatahandler.h; path = ../../include/Chat/gloox/socks5bytestreamdatahandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB766A10392F8A00782079 /* socks5bytestreamhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socks5bytestreamhandler.h; path = ../../include/Chat/gloox/socks5bytestreamhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB766B10392F8A00782079 /* socks5bytestreammanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socks5bytestreammanager.h; path = ../../include/Chat/gloox/socks5bytestreammanager.h; sourceTree = SOURCE_ROOT; };
+		8BBB766C10392F8A00782079 /* socks5bytestreamserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socks5bytestreamserver.h; path = ../../include/Chat/gloox/socks5bytestreamserver.h; sourceTree = SOURCE_ROOT; };
+		8BBB766D10392F8A00782079 /* stanza.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stanza.h; path = ../../include/Chat/gloox/stanza.h; sourceTree = SOURCE_ROOT; };
+		8BBB766E10392F8A00782079 /* stanzaextension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stanzaextension.h; path = ../../include/Chat/gloox/stanzaextension.h; sourceTree = SOURCE_ROOT; };
+		8BBB766F10392F8A00782079 /* stanzaextensionfactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stanzaextensionfactory.h; path = ../../include/Chat/gloox/stanzaextensionfactory.h; sourceTree = SOURCE_ROOT; };
+		8BBB767010392F8A00782079 /* statisticshandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = statisticshandler.h; path = ../../include/Chat/gloox/statisticshandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB767110392F8A00782079 /* subscriptionhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = subscriptionhandler.h; path = ../../include/Chat/gloox/subscriptionhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB767210392F8A00782079 /* tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tag.h; path = ../../include/Chat/gloox/tag.h; sourceTree = SOURCE_ROOT; };
+		8BBB767310392F8A00782079 /* taghandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = taghandler.h; path = ../../include/Chat/gloox/taghandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB767410392F8A00782079 /* tlsbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsbase.h; path = ../../include/Chat/gloox/tlsbase.h; sourceTree = SOURCE_ROOT; };
+		8BBB767510392F8A00782079 /* tlsdefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsdefault.h; path = ../../include/Chat/gloox/tlsdefault.h; sourceTree = SOURCE_ROOT; };
+		8BBB767610392F8A00782079 /* tlsgnutlsbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsgnutlsbase.h; path = ../../include/Chat/gloox/tlsgnutlsbase.h; sourceTree = SOURCE_ROOT; };
+		8BBB767710392F8A00782079 /* tlsgnutlsclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsgnutlsclient.h; path = ../../include/Chat/gloox/tlsgnutlsclient.h; sourceTree = SOURCE_ROOT; };
+		8BBB767810392F8A00782079 /* tlsgnutlsclientanon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsgnutlsclientanon.h; path = ../../include/Chat/gloox/tlsgnutlsclientanon.h; sourceTree = SOURCE_ROOT; };
+		8BBB767910392F8A00782079 /* tlsgnutlsserveranon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsgnutlsserveranon.h; path = ../../include/Chat/gloox/tlsgnutlsserveranon.h; sourceTree = SOURCE_ROOT; };
+		8BBB767A10392F8A00782079 /* tlshandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlshandler.h; path = ../../include/Chat/gloox/tlshandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB767B10392F8A00782079 /* tlsopenssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsopenssl.h; path = ../../include/Chat/gloox/tlsopenssl.h; sourceTree = SOURCE_ROOT; };
+		8BBB767C10392F8A00782079 /* tlsschannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tlsschannel.h; path = ../../include/Chat/gloox/tlsschannel.h; sourceTree = SOURCE_ROOT; };
+		8BBB767D10392F8A00782079 /* uniquemucroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uniquemucroom.h; path = ../../include/Chat/gloox/uniquemucroom.h; sourceTree = SOURCE_ROOT; };
+		8BBB767E10392F8A00782079 /* vcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vcard.h; path = ../../include/Chat/gloox/vcard.h; sourceTree = SOURCE_ROOT; };
+		8BBB767F10392F8A00782079 /* vcardhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vcardhandler.h; path = ../../include/Chat/gloox/vcardhandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB768010392F8A00782079 /* vcardmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vcardmanager.h; path = ../../include/Chat/gloox/vcardmanager.h; sourceTree = SOURCE_ROOT; };
+		8BBB768110392F8A00782079 /* vcardupdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vcardupdate.h; path = ../../include/Chat/gloox/vcardupdate.h; sourceTree = SOURCE_ROOT; };
+		8BBB768210392F8A00782079 /* version.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = version.rc; path = ../../include/Chat/gloox/version.rc; sourceTree = SOURCE_ROOT; };
+		8BBB768310392F8A00782079 /* xdelayeddelivery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xdelayeddelivery.h; path = ../../include/Chat/gloox/xdelayeddelivery.h; sourceTree = SOURCE_ROOT; };
+		8BBB768710392FA300782079 /* GLXPlayerChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChat.h; path = ../../include/Chat/GLXPlayerChat.h; sourceTree = SOURCE_ROOT; };
+		8BBB768810392FA300782079 /* GLXPlayerChatDiscoverHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatDiscoverHandler.h; path = ../../include/Chat/GLXPlayerChatDiscoverHandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB768910392FA300782079 /* GLXPlayerChatEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatEventHandler.h; path = ../../include/Chat/GLXPlayerChatEventHandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB768A10392FA300782079 /* GLXPlayerChatMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatMessageHandler.h; path = ../../include/Chat/GLXPlayerChatMessageHandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB768B10392FA300782079 /* GLXPlayerChatObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatObserver.h; path = ../../include/Chat/GLXPlayerChatObserver.h; sourceTree = SOURCE_ROOT; };
+		8BBB768C10392FA300782079 /* GLXPlayerChatRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRoom.h; path = ../../include/Chat/GLXPlayerChatRoom.h; sourceTree = SOURCE_ROOT; };
+		8BBB768D10392FA300782079 /* GLXPlayerChatRoomHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRoomHandler.h; path = ../../include/Chat/GLXPlayerChatRoomHandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB768E10392FA300782079 /* GLXPlayerChatRoomList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRoomList.h; path = ../../include/Chat/GLXPlayerChatRoomList.h; sourceTree = SOURCE_ROOT; };
+		8BBB768F10392FA300782079 /* GLXPlayerChatRoomObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRoomObserver.h; path = ../../include/Chat/GLXPlayerChatRoomObserver.h; sourceTree = SOURCE_ROOT; };
+		8BBB769010392FA300782079 /* GLXPlayerChatRoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRoster.h; path = ../../include/Chat/GLXPlayerChatRoster.h; sourceTree = SOURCE_ROOT; };
+		8BBB769110392FA300782079 /* GLXPlayerChatRosterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatRosterItem.h; path = ../../include/Chat/GLXPlayerChatRosterItem.h; sourceTree = SOURCE_ROOT; };
+		8BBB769210392FA300782079 /* GLXPlayerChatSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatSession.h; path = ../../include/Chat/GLXPlayerChatSession.h; sourceTree = SOURCE_ROOT; };
+		8BBB769310392FA300782079 /* GLXPlayerChatSessionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatSessionHandler.h; path = ../../include/Chat/GLXPlayerChatSessionHandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB769410392FA300782079 /* GLXPlayerChatStateHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerChatStateHandler.h; path = ../../include/Chat/GLXPlayerChatStateHandler.h; sourceTree = SOURCE_ROOT; };
+		8BBB769510392FC300782079 /* GLXPlayerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerComponent.h; path = ../../include/Common/GLXPlayerComponent.h; sourceTree = SOURCE_ROOT; };
+		8BBB769610392FC300782079 /* GLXPlayerHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerHttp.h; path = ../../include/Common/GLXPlayerHttp.h; sourceTree = SOURCE_ROOT; };
+		8BBB769710392FC300782079 /* GLXPlayerObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerObserver.h; path = ../../include/Common/GLXPlayerObserver.h; sourceTree = SOURCE_ROOT; };
+		8BBB769810392FC300782079 /* GLXPlayerSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerSocket.h; path = ../../include/Common/GLXPlayerSocket.h; sourceTree = SOURCE_ROOT; };
+		8BBB769910392FC300782079 /* GLXPlayerSocketFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerSocketFactory.h; path = ../../include/Common/GLXPlayerSocketFactory.h; sourceTree = SOURCE_ROOT; };
+		8BBB769A10392FC300782079 /* GLXPlayerSocketObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerSocketObserver.h; path = ../../include/Common/GLXPlayerSocketObserver.h; sourceTree = SOURCE_ROOT; };
+		8BBB769B10392FC300782079 /* GLXPlayerWebComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerWebComponent.h; path = ../../include/Common/GLXPlayerWebComponent.h; sourceTree = SOURCE_ROOT; };
+		8BBB769C10392FE200782079 /* GLXPlayerLeaderboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerLeaderboard.h; path = ../../include/Leaderboard/GLXPlayerLeaderboard.h; sourceTree = SOURCE_ROOT; };
+		8BBB769D10392FFE00782079 /* GLXPlayerLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerLogin.h; path = ../../include/Login/GLXPlayerLogin.h; sourceTree = SOURCE_ROOT; };
+		8BBB769E1039303300782079 /* GLXPlayerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMessage.h; path = ../../include/Message/GLXPlayerMessage.h; sourceTree = SOURCE_ROOT; };
+		8BBB769F1039305800782079 /* ConnectionLobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionLobby.h; path = ../../include/Multiplayer/Lobby/ConnectionLobby.h; sourceTree = SOURCE_ROOT; };
+		8BBB76A01039305800782079 /* DataPacketLobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataPacketLobby.h; path = ../../include/Multiplayer/Lobby/DataPacketLobby.h; sourceTree = SOURCE_ROOT; };
+		8BBB76A11039305800782079 /* GLXPlayerMPLobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMPLobby.h; path = ../../include/Multiplayer/Lobby/GLXPlayerMPLobby.h; sourceTree = SOURCE_ROOT; };
+		8BBB76A21039305800782079 /* LobbyParameterAndQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LobbyParameterAndQuery.h; path = ../../include/Multiplayer/Lobby/LobbyParameterAndQuery.h; sourceTree = SOURCE_ROOT; };
+		8BBB76A31039307800782079 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = ../../include/Multiplayer/Common/Connection.h; sourceTree = SOURCE_ROOT; };
+		8BBB76A41039307800782079 /* DataBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBuilder.h; path = ../../include/Multiplayer/Common/DataBuilder.h; sourceTree = SOURCE_ROOT; };
+		8BBB76A51039307800782079 /* DataPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataPacket.h; path = ../../include/Multiplayer/Common/DataPacket.h; sourceTree = SOURCE_ROOT; };
+		8BBB76A61039307800782079 /* DefaultDataPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefaultDataPacket.h; path = ../../include/Multiplayer/Common/DefaultDataPacket.h; sourceTree = SOURCE_ROOT; };
+		8BBB76A71039307800782079 /* GLXPlayerMPBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMPBase.h; path = ../../include/Multiplayer/Common/GLXPlayerMPBase.h; sourceTree = SOURCE_ROOT; };
+		8BBB76A81039307800782079 /* GLXPlayerMPBaseObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMPBaseObserver.h; path = ../../include/Multiplayer/Common/GLXPlayerMPBaseObserver.h; sourceTree = SOURCE_ROOT; };
+		8BBB76A91039307800782079 /* QueryCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryCondition.h; path = ../../include/Multiplayer/Common/QueryCondition.h; sourceTree = SOURCE_ROOT; };
+		8BBB76AA1039307800782079 /* XIPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XIPAddress.h; path = ../../include/Multiplayer/Common/XIPAddress.h; sourceTree = SOURCE_ROOT; };
+		8BBB76AB1039309B00782079 /* GLXPlayerMPbyServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMPbyServer.h; path = ../../include/Multiplayer/ForwardbyServer/GLXPlayerMPbyServer.h; sourceTree = SOURCE_ROOT; };
+		8BBB76AC103930BF00782079 /* GLXPlayerMPbyP2P.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerMPbyP2P.h; path = ../../include/Multiplayer/P2P/GLXPlayerMPbyP2P.h; sourceTree = SOURCE_ROOT; };
+		8BBB76AD103930BF00782079 /* GLXPlayerUpnpObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerUpnpObserver.h; path = ../../include/Multiplayer/P2P/GLXPlayerUpnpObserver.h; sourceTree = SOURCE_ROOT; };
+		8BBB76AE103930BF00782079 /* OnlineGameRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnlineGameRoom.h; path = ../../include/Multiplayer/P2P/OnlineGameRoom.h; sourceTree = SOURCE_ROOT; };
+		8BBB76AF103930BF00782079 /* OnlineGameRoomList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnlineGameRoomList.h; path = ../../include/Multiplayer/P2P/OnlineGameRoomList.h; sourceTree = SOURCE_ROOT; };
+		8BBB76B0103930BF00782079 /* OnlinePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnlinePlayer.h; path = ../../include/Multiplayer/P2P/OnlinePlayer.h; sourceTree = SOURCE_ROOT; };
+		8BBB76B1103930BF00782079 /* OnlinePlayerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnlinePlayerList.h; path = ../../include/Multiplayer/P2P/OnlinePlayerList.h; sourceTree = SOURCE_ROOT; };
+		8BBB76B2103930E000782079 /* GLXPlayerUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerUser.h; path = ../../include/User/GLXPlayerUser.h; sourceTree = SOURCE_ROOT; };
+		8BF09E6A0FEF1E1500CDB9E2 /* GameStateMultiplayerLobby.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStateMultiplayerLobby.cpp; sourceTree = "<group>"; };
+		8BF09E6B0FEF1E1500CDB9E2 /* GameStateMultiplayerLobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateMultiplayerLobby.h; sourceTree = "<group>"; };
+		8BFA97CA104CB3520008548B /* GLXPlayerSereverConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLXPlayerSereverConfig.h; path = ../../include/Common/GLXPlayerSereverConfig.h; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
+				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
+				2D5F80720F14832F00AF8E9A /* SystemConfiguration.framework in Frameworks */,
+				8B699B1F1046348000460B82 /* libGLXPlayerMacDebug.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28FD14FC0DC6FC130079059D /* EAGLView.h */,
+				28FD14FD0DC6FC130079059D /* EAGLView.mm */,
+				1D3623240D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.h */,
+				1D3623250D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iPhoneOnlineDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				8B699B1E1046348000460B82 /* libGLXPlayerMacDebug.a */,
+				8B75B73E0F81EA46002E6E4E /* src */,
+				2D5F801E0F147A4D00AF8E9A /* Predefine.h */,
+				2D5F801F0F147A4D00AF8E9A /* stdafx.h */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* iPhoneOnlineDemo_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D5F811D0F148C2600AF8E9A /* data */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D5F80710F14832F00AF8E9A /* SystemConfiguration.framework */,
+				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
+				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D5F811D0F148C2600AF8E9A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				8B0A0463103A5301001679FD /* test.avi */,
+				8B4D044D0F1C7BA200E57BE1 /* oconf.bar */,
+				8B4D044E0F1C7BA200E57BE1 /* user.txt */,
+				2D5F811E0F148C3500AF8E9A /* res.pak */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		8B75B73E0F81EA46002E6E4E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				8B7FDE9A0F93185F003A2D29 /* Game */,
+				8B7FDEB60F93185F003A2D29 /* Gles */,
+				8B7FDEC40F93185F003A2D29 /* Online */,
+				8B7FDFE90F931860003A2D29 /* System */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = SOURCE_ROOT;
+		};
+		8B7ACE77101D4DF300EF3BCA /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB754F10392E2500782079 /* GLXPlayerYoutube.h */,
+				8BBB755010392E2500782079 /* GLXPlayerYoutubeEX.h */,
+			);
+			name = Youtube;
+			sourceTree = "<group>";
+		};
+		8B7C3BED1015BD4800C3D216 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB755110392E4500782079 /* GLXPlayerDownload.h */,
+			);
+			name = Download;
+			sourceTree = "<group>";
+		};
+		8B7FDE9A0F93185F003A2D29 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				8B7FDE9E0F93185F003A2D29 /* Gamestate */,
+				8B7FDE9B0F93185F003A2D29 /* DEF.h */,
+				8B7FDE9C0F93185F003A2D29 /* Game.cpp */,
+				8B7FDE9D0F93185F003A2D29 /* Game.h */,
+				8B7FDEA90F93185F003A2D29 /* GameState.cpp */,
+				8B7FDEAA0F93185F003A2D29 /* GameState.h */,
+				8B7FDEAB0F93185F003A2D29 /* GameStateFactory.cpp */,
+				8B7FDEAC0F93185F003A2D29 /* GameStateFactory.h */,
+				8B7FDEAD0F93185F003A2D29 /* GameStateHandler.h */,
+				8B7FDEAE0F93185F003A2D29 /* InputBox.cpp */,
+				8B7FDEAF0F93185F003A2D29 /* InputBox.h */,
+				8B7FDEB00F93185F003A2D29 /* Menu.cpp */,
+				8B7FDEB10F93185F003A2D29 /* Menu.h */,
+				8B7FDEB20F93185F003A2D29 /* MenuItem.cpp */,
+				8B7FDEB30F93185F003A2D29 /* MenuItem.h */,
+				8B7FDEB40F93185F003A2D29 /* MenuItemObserver.h */,
+				8B7FDEB50F93185F003A2D29 /* TouchEvent.h */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		8B7FDE9E0F93185F003A2D29 /* Gamestate */ = {
+			isa = PBXGroup;
+			children = (
+				8BA04D181047C2720050F842 /* GameStateServerConfig.cpp */,
+				8BA04D191047C2720050F842 /* GameStateServerConfig.h */,
+				8BF09E6A0FEF1E1500CDB9E2 /* GameStateMultiplayerLobby.cpp */,
+				8BF09E6B0FEF1E1500CDB9E2 /* GameStateMultiplayerLobby.h */,
+				8BA7DD2F0FA83F0B002A71A5 /* MyRoomQueryCondition.cpp */,
+				8BA7DD300FA83F0B002A71A5 /* MyRoomQueryCondition.h */,
+				8B7FDEA10F93185F003A2D29 /* GameStateLogo.cpp */,
+				8B7FDEA20F93185F003A2D29 /* GameStateLogo.h */,
+				8B7FDEA30F93185F003A2D29 /* GameStateMenu.cpp */,
+				8B7FDEA40F93185F003A2D29 /* GameStateMenu.h */,
+				8B7FDEA50F93185F003A2D29 /* GameStateMultiplayer.cpp */,
+				8B7FDEA60F93185F003A2D29 /* GameStateMultiplayer.h */,
+				8B7FDEA70F93185F003A2D29 /* GameStateOnline.cpp */,
+				8B7FDEA80F93185F003A2D29 /* GameStateOnline.h */,
+			);
+			path = Gamestate;
+			sourceTree = "<group>";
+		};
+		8B7FDEB60F93185F003A2D29 /* Gles */ = {
+			isa = PBXGroup;
+			children = (
+				8B7FDEB70F93185F003A2D29 /* CompileOptions.h */,
+				8B7FDEB80F93185F003A2D29 /* egltypes.h */,
+				8B7FDEB90F93185F003A2D29 /* GL3DCamera.cpp */,
+				8B7FDEBA0F93185F003A2D29 /* GL3DCamera.h */,
+				8B7FDEBB0F93185F003A2D29 /* gll.h */,
+				8B7FDEBC0F93185F003A2D29 /* GlRenderer.cpp */,
+				8B7FDEBD0F93185F003A2D29 /* GlRenderer.h */,
+				8B7FDEBE0F93185F003A2D29 /* glt_device.cpp */,
+				8B7FDEBF0F93185F003A2D29 /* glt_device.h */,
+				8B7FDEC00F93185F003A2D29 /* glt_math_alg.cpp */,
+				8B7FDEC10F93185F003A2D29 /* glt_math_alg.h */,
+				8B7FDEC20F93185F003A2D29 /* glt_math_fixed.cpp */,
+				8B7FDEC30F93185F003A2D29 /* glt_math_fixed.h */,
+			);
+			path = Gles;
+			sourceTree = "<group>";
+		};
+		8B7FDEC40F93185F003A2D29 /* Online */ = {
+			isa = PBXGroup;
+			children = (
+				8B7FDEC50F93185F003A2D29 /* 3rdParty */,
+				8B7FDEDE0F93185F003A2D29 /* Buddy */,
+				8B7FDEE30F93185F003A2D29 /* Chat */,
+				8B7FDFC40F93185F003A2D29 /* Common */,
+				8B7C3BED1015BD4800C3D216 /* Download */,
+				8B7FDFD60F93185F003A2D29 /* Leaderboard */,
+				8B7FDFD90F931860003A2D29 /* Login */,
+				8B7FDFDC0F931860003A2D29 /* Message */,
+				8B7FDFDF0F931860003A2D29 /* Multiplayer */,
+				8B7FDFE50F931860003A2D29 /* User */,
+				8B7ACE77101D4DF300EF3BCA /* Youtube */,
+				8BBB754B10392D9E00782079 /* Porting.h */,
+				8BBB754A10392D9E00782079 /* IPhoneSocket.h */,
+				8BBB754C10392D9E00782079 /* XPlayer_defines.h */,
+			);
+			path = Online;
+			sourceTree = "<group>";
+		};
+		8B7FDEC50F93185F003A2D29 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				8BF09ED50FEF32E400CDB9E2 /* XMLParser */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		8B7FDEDE0F93185F003A2D29 /* Buddy */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB755510392F2600782079 /* GLXPlayerUserFriend.h */,
+			);
+			path = Buddy;
+			sourceTree = "<group>";
+		};
+		8B7FDEE30F93185F003A2D29 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB768710392FA300782079 /* GLXPlayerChat.h */,
+				8BBB768810392FA300782079 /* GLXPlayerChatDiscoverHandler.h */,
+				8BBB768910392FA300782079 /* GLXPlayerChatEventHandler.h */,
+				8BBB768A10392FA300782079 /* GLXPlayerChatMessageHandler.h */,
+				8BBB768B10392FA300782079 /* GLXPlayerChatObserver.h */,
+				8BBB768C10392FA300782079 /* GLXPlayerChatRoom.h */,
+				8BBB768D10392FA300782079 /* GLXPlayerChatRoomHandler.h */,
+				8BBB768E10392FA300782079 /* GLXPlayerChatRoomList.h */,
+				8BBB768F10392FA300782079 /* GLXPlayerChatRoomObserver.h */,
+				8BBB769010392FA300782079 /* GLXPlayerChatRoster.h */,
+				8BBB769110392FA300782079 /* GLXPlayerChatRosterItem.h */,
+				8BBB769210392FA300782079 /* GLXPlayerChatSession.h */,
+				8BBB769310392FA300782079 /* GLXPlayerChatSessionHandler.h */,
+				8BBB769410392FA300782079 /* GLXPlayerChatStateHandler.h */,
+				8B7FDEE40F93185F003A2D29 /* gloox */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		8B7FDEE40F93185F003A2D29 /* gloox */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB760C10392F8A00782079 /* adhoc.h */,
+				8BBB760D10392F8A00782079 /* adhoccommandprovider.h */,
+				8BBB760E10392F8A00782079 /* adhochandler.h */,
+				8BBB760F10392F8A00782079 /* annotations.h */,
+				8BBB761010392F8A00782079 /* annotationshandler.h */,
+				8BBB761110392F8A00782079 /* base64.h */,
+				8BBB761210392F8A00782079 /* bookmarkhandler.h */,
+				8BBB761310392F8A00782079 /* bookmarkstorage.h */,
+				8BBB761410392F8A00782079 /* chatstatefilter.h */,
+				8BBB761510392F8A00782079 /* chatstatehandler.h */,
+				8BBB761610392F8A00782079 /* client.h */,
+				8BBB761710392F8A00782079 /* clientbase.h */,
+				8BBB761810392F8A00782079 /* component.h */,
+				8BBB761910392F8A00782079 /* compressionbase.h */,
+				8BBB761A10392F8A00782079 /* compressiondatahandler.h */,
+				8BBB761B10392F8A00782079 /* compressionzlib.h */,
+				8BBB761C10392F8A00782079 /* connectionbase.h */,
+				8BBB761D10392F8A00782079 /* connectiondatahandler.h */,
+				8BBB761E10392F8A00782079 /* connectionhandler.h */,
+				8BBB761F10392F8A00782079 /* connectionhttpproxy.h */,
+				8BBB762010392F8A00782079 /* connectionlistener.h */,
+				8BBB762110392F8A00782079 /* connectionsocks5proxy.h */,
+				8BBB762210392F8A00782079 /* connectiontcpbase.h */,
+				8BBB762310392F8A00782079 /* connectiontcpclient.h */,
+				8BBB762410392F8A00782079 /* connectiontcpserver.h */,
+				8BBB762510392F8A00782079 /* dataform.h */,
+				8BBB762610392F8A00782079 /* dataformbase.h */,
+				8BBB762710392F8A00782079 /* dataformfield.h */,
+				8BBB762810392F8A00782079 /* dataformitem.h */,
+				8BBB762910392F8A00782079 /* dataformreported.h */,
+				8BBB762A10392F8A00782079 /* delayeddelivery.h */,
+				8BBB762B10392F8A00782079 /* disco.h */,
+				8BBB762C10392F8A00782079 /* discohandler.h */,
+				8BBB762D10392F8A00782079 /* disconodehandler.h */,
+				8BBB762E10392F8A00782079 /* dns.h */,
+				8BBB762F10392F8A00782079 /* flexoff.h */,
+				8BBB763010392F8A00782079 /* flexoffhandler.h */,
+				8BBB763110392F8A00782079 /* gloox.h */,
+				8BBB763210392F8A00782079 /* gpgencrypted.h */,
+				8BBB763310392F8A00782079 /* gpgsigned.h */,
+				8BBB763410392F8A00782079 /* inbandbytestream.h */,
+				8BBB763510392F8A00782079 /* inbandbytestreamdatahandler.h */,
+				8BBB763610392F8A00782079 /* inbandbytestreamhandler.h */,
+				8BBB763710392F8A00782079 /* inbandbytestreammanager.h */,
+				8BBB763810392F8A00782079 /* instantmucroom.h */,
+				8BBB763910392F8A00782079 /* iqhandler.h */,
+				8BBB763A10392F8A00782079 /* jid.h */,
+				8BBB763B10392F8A00782079 /* lastactivity.h */,
+				8BBB763C10392F8A00782079 /* lastactivityhandler.h */,
+				8BBB763D10392F8A00782079 /* loghandler.h */,
+				8BBB763E10392F8A00782079 /* logsink.h */,
+				8BBB763F10392F8A00782079 /* macros.h */,
+				8BBB764010392F8A00782079 /* Makefile.am */,
+				8BBB764110392F8A00782079 /* Makefile.in */,
+				8BBB764210392F8A00782079 /* md5.h */,
+				8BBB764310392F8A00782079 /* messageeventfilter.h */,
+				8BBB764410392F8A00782079 /* messageeventhandler.h */,
+				8BBB764510392F8A00782079 /* messagefilter.h */,
+				8BBB764610392F8A00782079 /* messagehandler.h */,
+				8BBB764710392F8A00782079 /* messagesession.h */,
+				8BBB764810392F8A00782079 /* messagesessionhandler.h */,
+				8BBB764910392F8A00782079 /* mucinvitationhandler.h */,
+				8BBB764A10392F8A00782079 /* mucmessagesession.h */,
+				8BBB764B10392F8A00782079 /* mucroom.h */,
+				8BBB764C10392F8A00782079 /* mucroomconfighandler.h */,
+				8BBB764D10392F8A00782079 /* mucroomhandler.h */,
+				8BBB764E10392F8A00782079 /* mutex.h */,
+				8BBB764F10392F8A00782079 /* mutexguard.h */,
+				8BBB765010392F8A00782079 /* nonsaslauth.h */,
+				8BBB765110392F8A00782079 /* oob.h */,
+				8BBB765210392F8A00782079 /* parser.h */,
+				8BBB765310392F8A00782079 /* prep.h */,
+				8BBB765410392F8A00782079 /* presencehandler.h */,
+				8BBB765510392F8A00782079 /* privacyitem.h */,
+				8BBB765610392F8A00782079 /* privacylisthandler.h */,
+				8BBB765710392F8A00782079 /* privacymanager.h */,
+				8BBB765810392F8A00782079 /* privatexml.h */,
+				8BBB765910392F8A00782079 /* privatexmlhandler.h */,
+				8BBB765A10392F8A00782079 /* registration.h */,
+				8BBB765B10392F8A00782079 /* registrationhandler.h */,
+				8BBB765C10392F8A00782079 /* resource.h */,
+				8BBB765D10392F8A00782079 /* rosteritem.h */,
+				8BBB765E10392F8A00782079 /* rosterlistener.h */,
+				8BBB765F10392F8A00782079 /* rostermanager.h */,
+				8BBB766010392F8A00782079 /* search.h */,
+				8BBB766110392F8A00782079 /* searchhandler.h */,
+				8BBB766210392F8A00782079 /* sha.h */,
+				8BBB766310392F8A00782079 /* sihandler.h */,
+				8BBB766410392F8A00782079 /* simanager.h */,
+				8BBB766510392F8A00782079 /* siprofileft.h */,
+				8BBB766610392F8A00782079 /* siprofilefthandler.h */,
+				8BBB766710392F8A00782079 /* siprofilehandler.h */,
+				8BBB766810392F8A00782079 /* socks5bytestream.h */,
+				8BBB766910392F8A00782079 /* socks5bytestreamdatahandler.h */,
+				8BBB766A10392F8A00782079 /* socks5bytestreamhandler.h */,
+				8BBB766B10392F8A00782079 /* socks5bytestreammanager.h */,
+				8BBB766C10392F8A00782079 /* socks5bytestreamserver.h */,
+				8BBB766D10392F8A00782079 /* stanza.h */,
+				8BBB766E10392F8A00782079 /* stanzaextension.h */,
+				8BBB766F10392F8A00782079 /* stanzaextensionfactory.h */,
+				8BBB767010392F8A00782079 /* statisticshandler.h */,
+				8BBB767110392F8A00782079 /* subscriptionhandler.h */,
+				8BBB767210392F8A00782079 /* tag.h */,
+				8BBB767310392F8A00782079 /* taghandler.h */,
+				8BBB767410392F8A00782079 /* tlsbase.h */,
+				8BBB767510392F8A00782079 /* tlsdefault.h */,
+				8BBB767610392F8A00782079 /* tlsgnutlsbase.h */,
+				8BBB767710392F8A00782079 /* tlsgnutlsclient.h */,
+				8BBB767810392F8A00782079 /* tlsgnutlsclientanon.h */,
+				8BBB767910392F8A00782079 /* tlsgnutlsserveranon.h */,
+				8BBB767A10392F8A00782079 /* tlshandler.h */,
+				8BBB767B10392F8A00782079 /* tlsopenssl.h */,
+				8BBB767C10392F8A00782079 /* tlsschannel.h */,
+				8BBB767D10392F8A00782079 /* uniquemucroom.h */,
+				8BBB767E10392F8A00782079 /* vcard.h */,
+				8BBB767F10392F8A00782079 /* vcardhandler.h */,
+				8BBB768010392F8A00782079 /* vcardmanager.h */,
+				8BBB768110392F8A00782079 /* vcardupdate.h */,
+				8BBB768210392F8A00782079 /* version.rc */,
+				8BBB768310392F8A00782079 /* xdelayeddelivery.h */,
+			);
+			path = gloox;
+			sourceTree = "<group>";
+		};
+		8B7FDFC40F93185F003A2D29 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8BFA97CA104CB3520008548B /* GLXPlayerSereverConfig.h */,
+				8BBB769510392FC300782079 /* GLXPlayerComponent.h */,
+				8BBB769610392FC300782079 /* GLXPlayerHttp.h */,
+				8BBB769710392FC300782079 /* GLXPlayerObserver.h */,
+				8BBB769810392FC300782079 /* GLXPlayerSocket.h */,
+				8BBB769910392FC300782079 /* GLXPlayerSocketFactory.h */,
+				8BBB769A10392FC300782079 /* GLXPlayerSocketObserver.h */,
+				8BBB769B10392FC300782079 /* GLXPlayerWebComponent.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8B7FDFD60F93185F003A2D29 /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB769C10392FE200782079 /* GLXPlayerLeaderboard.h */,
+			);
+			path = Leaderboard;
+			sourceTree = "<group>";
+		};
+		8B7FDFD90F931860003A2D29 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB769D10392FFE00782079 /* GLXPlayerLogin.h */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8B7FDFDC0F931860003A2D29 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB769E1039303300782079 /* GLXPlayerMessage.h */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		8B7FDFDF0F931860003A2D29 /* Multiplayer */ = {
+			isa = PBXGroup;
+			children = (
+				8BF09E5F0FEF1DA500CDB9E2 /* Lobby */,
+				8BA7DCE90FA83E09002A71A5 /* Common */,
+				8BA7DCEB0FA83E1C002A71A5 /* ForwardbyServer */,
+				8BA7DCEC0FA83E38002A71A5 /* Local */,
+				8BA7DCEA0FA83E13002A71A5 /* P2P */,
+			);
+			path = Multiplayer;
+			sourceTree = "<group>";
+		};
+		8B7FDFE50F931860003A2D29 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB76B2103930E000782079 /* GLXPlayerUser.h */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		8B7FDFE90F931860003A2D29 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				8B7FDFEA0F931860003A2D29 /* ASprite.cpp */,
+				8B7FDFEB0F931860003A2D29 /* ASprite.h */,
+				8B7FDFEC0F931860003A2D29 /* Device.h */,
+				8B7FDFED0F931860003A2D29 /* FMath.cpp */,
+				8B7FDFEE0F931860003A2D29 /* FMath.h */,
+				8B7FDFEF0F931860003A2D29 /* Font.cpp */,
+				8B7FDFF00F931860003A2D29 /* Font.h */,
+				8B7FDFF10F931860003A2D29 /* font_table.h */,
+				8B7FDFF20F931860003A2D29 /* Image.cpp */,
+				8B7FDFF30F931860003A2D29 /* Image.h */,
+				8B7FDFF40F931860003A2D29 /* Memory.cpp */,
+				8B7FDFF50F931860003A2D29 /* Memory.h */,
+				8B7FDFF60F931860003A2D29 /* MyDisplay.cpp */,
+				8B7FDFF70F931860003A2D29 /* MyDisplay.h */,
+				8B7FDFF80F931860003A2D29 /* MyGraphics.cpp */,
+				8B7FDFF90F931860003A2D29 /* MyGraphics.h */,
+				8B7FDFFA0F931860003A2D29 /* Profile.cpp */,
+				8B7FDFFB0F931860003A2D29 /* Profile.h */,
+				8B7FDFFC0F931860003A2D29 /* ResFile.cpp */,
+				8B7FDFFD0F931860003A2D29 /* ResFile.h */,
+				8B7FDFFE0F931860003A2D29 /* ResourceManager.cpp */,
+				8B7FDFFF0F931860003A2D29 /* ResourceManager.h */,
+				8B7FE0000F931860003A2D29 /* Stream.cpp */,
+				8B7FE0010F931860003A2D29 /* Stream.h */,
+				8B7FE0020F931860003A2D29 /* Touchpad.cpp */,
+				8B7FE0030F931860003A2D29 /* Touchpad.h */,
+				8B7FE0040F931860003A2D29 /* TouchRect.cpp */,
+				8B7FE0050F931860003A2D29 /* TouchRect.h */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		8BA7DCE90FA83E09002A71A5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB76A31039307800782079 /* Connection.h */,
+				8BBB76A41039307800782079 /* DataBuilder.h */,
+				8BBB76A51039307800782079 /* DataPacket.h */,
+				8BBB76A61039307800782079 /* DefaultDataPacket.h */,
+				8BBB76A71039307800782079 /* GLXPlayerMPBase.h */,
+				8BBB76A81039307800782079 /* GLXPlayerMPBaseObserver.h */,
+				8BBB76A91039307800782079 /* QueryCondition.h */,
+				8BBB76AA1039307800782079 /* XIPAddress.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		8BA7DCEA0FA83E13002A71A5 /* P2P */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB76AC103930BF00782079 /* GLXPlayerMPbyP2P.h */,
+				8BBB76AD103930BF00782079 /* GLXPlayerUpnpObserver.h */,
+				8BBB76AE103930BF00782079 /* OnlineGameRoom.h */,
+				8BBB76AF103930BF00782079 /* OnlineGameRoomList.h */,
+				8BBB76B0103930BF00782079 /* OnlinePlayer.h */,
+				8BBB76B1103930BF00782079 /* OnlinePlayerList.h */,
+			);
+			name = P2P;
+			sourceTree = "<group>";
+		};
+		8BA7DCEB0FA83E1C002A71A5 /* ForwardbyServer */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB76AB1039309B00782079 /* GLXPlayerMPbyServer.h */,
+			);
+			name = ForwardbyServer;
+			sourceTree = "<group>";
+		};
+		8BA7DCEC0FA83E38002A71A5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Local;
+			sourceTree = "<group>";
+		};
+		8BF09E5F0FEF1DA500CDB9E2 /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB769F1039305800782079 /* ConnectionLobby.h */,
+				8BBB76A01039305800782079 /* DataPacketLobby.h */,
+				8BBB76A11039305800782079 /* GLXPlayerMPLobby.h */,
+				8BBB76A21039305800782079 /* LobbyParameterAndQuery.h */,
+			);
+			name = Lobby;
+			sourceTree = "<group>";
+		};
+		8BF09ED50FEF32E400CDB9E2 /* XMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				8BBB755210392E8600782079 /* rss.h */,
+				8BBB755310392E8600782079 /* SlimXml.h */,
+			);
+			name = XMLParser;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iPhoneOnlineDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPhoneOnlineDemo" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPhoneOnlineDemo;
+			productName = iPhoneOnlineDemo;
+			productReference = 1D6058910D05DD3D006BFB54 /* iPhoneOnlineDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhoneOnlineDemo" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iPhoneOnlineDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2D5F811F0F148C3500AF8E9A /* res.pak in Resources */,
+				8B4D044F0F1C7BA200E57BE1 /* oconf.bar in Resources */,
+				8B4D04500F1C7BA200E57BE1 /* user.txt in Resources */,
+				8BBB768410392F8A00782079 /* Makefile.am in Resources */,
+				8BBB768510392F8A00782079 /* Makefile.in in Resources */,
+				8BBB768610392F8A00782079 /* version.rc in Resources */,
+				8B0A0464103A5301001679FD /* test.avi in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* iPhoneOnlineDemoAppDelegate.m in Sources */,
+				28FD14FE0DC6FC130079059D /* EAGLView.mm in Sources */,
+				8B7FE0060F931860003A2D29 /* Game.cpp in Sources */,
+				8B7FE0080F931860003A2D29 /* GameStateLogo.cpp in Sources */,
+				8B7FE0090F931860003A2D29 /* GameStateMenu.cpp in Sources */,
+				8B7FE00A0F931860003A2D29 /* GameStateMultiplayer.cpp in Sources */,
+				8B7FE00B0F931860003A2D29 /* GameStateOnline.cpp in Sources */,
+				8B7FE00C0F931860003A2D29 /* GameState.cpp in Sources */,
+				8B7FE00D0F931860003A2D29 /* GameStateFactory.cpp in Sources */,
+				8B7FE00E0F931860003A2D29 /* InputBox.cpp in Sources */,
+				8B7FE00F0F931860003A2D29 /* Menu.cpp in Sources */,
+				8B7FE0100F931860003A2D29 /* MenuItem.cpp in Sources */,
+				8B7FE0110F931860003A2D29 /* GL3DCamera.cpp in Sources */,
+				8B7FE0120F931860003A2D29 /* GlRenderer.cpp in Sources */,
+				8B7FE0130F931860003A2D29 /* glt_device.cpp in Sources */,
+				8B7FE0140F931860003A2D29 /* glt_math_alg.cpp in Sources */,
+				8B7FE0150F931860003A2D29 /* glt_math_fixed.cpp in Sources */,
+				8B7FE08A0F931860003A2D29 /* ASprite.cpp in Sources */,
+				8B7FE08B0F931860003A2D29 /* FMath.cpp in Sources */,
+				8B7FE08C0F931860003A2D29 /* Font.cpp in Sources */,
+				8B7FE08D0F931860003A2D29 /* Image.cpp in Sources */,
+				8B7FE08E0F931860003A2D29 /* Memory.cpp in Sources */,
+				8B7FE08F0F931860003A2D29 /* MyDisplay.cpp in Sources */,
+				8B7FE0900F931860003A2D29 /* MyGraphics.cpp in Sources */,
+				8B7FE0910F931860003A2D29 /* Profile.cpp in Sources */,
+				8B7FE0920F931860003A2D29 /* ResFile.cpp in Sources */,
+				8B7FE0930F931860003A2D29 /* ResourceManager.cpp in Sources */,
+				8B7FE0940F931860003A2D29 /* Stream.cpp in Sources */,
+				8B7FE0950F931860003A2D29 /* Touchpad.cpp in Sources */,
+				8B7FE0960F931860003A2D29 /* TouchRect.cpp in Sources */,
+				8BA7DD310FA83F0B002A71A5 /* MyRoomQueryCondition.cpp in Sources */,
+				8BF09E6C0FEF1E1500CDB9E2 /* GameStateMultiplayerLobby.cpp in Sources */,
+				8BA04D1A1047C2720050F842 /* GameStateServerConfig.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPhoneOnlineDemo_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../lib/mac\"",
+					"\"$(SRCROOT)/../../lib/mac/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/../../lib/mac/Debug-iphonesimulator\"",
+					"\"$(SRCROOT)/../../lib/mac/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../lib/IPhone\"",
+				);
+				PRODUCT_NAME = iPhoneOnlineDemo;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPhoneOnlineDemo_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../src/Online/Chat/gloox_lib\"",
+					"\"$(SRCROOT)/../../lib/mac\"",
+					"\"$(SRCROOT)/../../lib/mac/Release-iphonesimulator\"",
+					"\"$(SRCROOT)/../../lib/mac/Debug-iphonesimulator\"",
+					"\"$(SRCROOT)/../../lib/mac/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../lib/IPhone\"",
+				);
+				PRODUCT_NAME = iPhoneOnlineDemo;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos3.0]" = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = iphoneos2.0/resourceRules.plist;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					.,
+					..,
+					../../src,
+					../../src/game,
+					../../src/system,
+					../../src/online/upnp,
+					../../src/online,
+					../../src/zlib,
+					../../src/gles,
+					../../src/Multiplayer,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos3.0]" = "";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos2.2]" = "iPhone Developer: Valeri Vuchov";
+				CODE_SIGN_RESOURCE_RULES_PATH = iphoneos2.0/resourceRules.plist;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					.,
+					..,
+					../src,
+					../src/game,
+					../src/system,
+					../src/online,
+					../src/online/upnp,
+					../src/zlib,
+					../src/gles,
+				);
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos2.2]" = "B5840707-3DB6-4BAB-892B-F05BDBEDA35D";
+				SDKROOT = iphoneos2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPhoneOnlineDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhoneOnlineDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

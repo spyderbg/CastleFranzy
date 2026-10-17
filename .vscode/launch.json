@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Castle Frenzy: Ubuntu Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/linux-debug/bin/FortressDefender",
+            "cwd": "${workspaceFolder}/Build",
+            "args": [],
+            "stopAtEntry": false,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "Build Ubuntu Debug",
+            "setupCommands": [
+                {
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "text": "set debuginfod enabled off",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

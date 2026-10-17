@@ -1,0 +1,2365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug - iPhoneEmulation|Win32">
+      <Configuration>Debug - iPhoneEmulation</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Multithreaded - IrrLicht Edition|Win32">
+      <Configuration>Debug Multithreaded - IrrLicht Edition</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Multithreaded|Win32">
+      <Configuration>Debug Multithreaded</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Singlethreaded|Win32">
+      <Configuration>Debug Singlethreaded</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release - iPhoneEmulation|Win32">
+      <Configuration>Release - iPhoneEmulation</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Multithreaded|Win32">
+      <Configuration>Release Multithreaded</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Singlethreaded|Win32">
+      <Configuration>Release Singlethreaded</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Irrlicht</ProjectName>
+    <ProjectGuid>{E08E042A-6C45-411B-92BE-3CC31331019F}</ProjectGuid>
+    <RootNamespace>Irrlicht</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+    <ReferencePath>..\..\..\freetype\include\;$(ReferencePath)</ReferencePath>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+    <ReferencePath>..\..\..\freetype\include\;$(ReferencePath)</ReferencePath>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+    <ReferencePath>..\..\..\freetype\include\;$(ReferencePath)</ReferencePath>
+    <OutDir>..\..\lib\Win32-visualstudio\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+    <ReferencePath>..\..\..\freetype\include\;$(ReferencePath)</ReferencePath>
+    <OutDir>..\..\lib\Win32-visualstudio\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+    <ReferencePath>..\..\..\freetype\include\;$(ReferencePath)</ReferencePath>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+    <ReferencePath>..\..\..\freetype\include\;$(ReferencePath)</ReferencePath>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+    <ReferencePath>..\..\..\freetype\include\;$(ReferencePath)</ReferencePath>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\tools\setupCompileConfig.bat</Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\Debug/Irrlicht.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;zlib;freetype\include;particlesystem\include;..\..\tools\ColladaConverter\include;..\..\tools\ResFile\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>IRRLICHT_USE_PRECOMPILED_HEADER;WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_IRR_STATIC_LIB_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(TargetDir)irrlicht.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc90.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4244;4996;4530;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <UseFullPaths>true</UseFullPaths>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c07</Culture>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Message>Copying debug program database to bin directory</Message>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\tools\setupCompileConfig.bat</Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\Release/Irrlicht.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\include;zlib;freetype\include;particlesystem\include;..\..\tools\ColladaConverter\include;..\..\tools\ResFile\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_IRR_STATIC_LIB_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling />
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(TargetDir)irrlicht.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc90.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat />
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c07</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\tools\setupCompileConfig.bat</Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\Debug/Irrlicht.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;zlib;freetype\include;particlesystem\include;..\..\tools\ColladaConverter\include;..\..\tools\ResFile\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>IRRLICHT_USE_PRECOMPILED_HEADER;WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_IRR_STATIC_LIB_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(TargetDir)irrlicht.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc90.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4250;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c07</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName)_d.lib</OutputFile>
+    </Lib>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\tools\setupCompileConfig.bat</Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\Release/Irrlicht.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\include;zlib;freetype\include;particlesystem\include;..\..\tools\ColladaConverter\include;..\..\tools\ResFile\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_IRR_STATIC_LIB_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(TargetDir)irrlicht.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc90.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat />
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c07</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\tools\setupCompileConfig.bat</Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\Debug/Irrlicht.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP
+ %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;zlib;freetype\include;particlesystem\include;..\..\tools\ColladaConverter\include;..\..\tools\ResFile\include;PowerVR\OGLES\Include;PowerVR\OGLES\Windows\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>IRRLICHT_USE_PRECOMPILED_HEADER;WIN32;_DEBUG;_WINDOWS;_USRDLL;_IRR_IPHONE_EMULATION_;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;_IRR_STATIC_LIB_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(TargetDir)irrlicht.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc90.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c07</Culture>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>libgles_cm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)\freetype\objs;$(ProjectDir)PowerVR\OGLES\WindowsPC\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\tools\setupCompileConfig.bat</Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\Debug/Irrlicht.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;zlib;freetype\include;particlesystem\include;..\..\tools\resfile\include;..\..\tools\ColladaConverter\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_IRR_IPHONE_EMULATION_;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;_IRR_STATIC_LIB_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(TargetDir)irrlicht.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc90.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c07</Culture>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>libgles_cm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).release.lib</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)\freetype\objs;$(ProjectDir)PowerVR\OGLES\WindowsPC\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\tools\setupCompileConfig.bat</Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\Debug/Irrlicht.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;zlib;freetype\include;particlesystem\include;..\..\tools\ColladaConverter\include;..\..\tools\ResFile\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>IRRLICHT_USE_PRECOMPILED_HEADER;WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_IRR_STATIC_LIB_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(TargetDir)irrlicht.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc90.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4250;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c07</Culture>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\aabbox3d.h" />
+    <ClInclude Include="..\..\include\BeginPack.h" />
+    <ClInclude Include="..\..\include\BuiltInFont.h" />
+    <ClInclude Include="..\..\include\CBatchBuffer.h" />
+    <ClInclude Include="..\..\include\CBatchGridSceneNode.h" />
+    <ClInclude Include="..\..\include\CBatchGridSceneNode_impl.h" />
+    <ClInclude Include="..\..\include\CBatchListCompileData.h" />
+    <ClInclude Include="..\..\include\CBatchMesh.h" />
+    <ClInclude Include="..\..\include\CBatchMesh_impl.h" />
+    <ClInclude Include="..\..\include\CBatchSceneNode.h" />
+    <ClInclude Include="..\..\include\CBatchSceneNode_impl.h" />
+    <ClInclude Include="..\..\include\CColladaAnimationTrack.h" />
+    <ClInclude Include="..\..\include\CColladaAnimationTrackFloat.h" />
+    <ClInclude Include="..\..\include\CColladaAnimationTrackImageFileList.h" />
+    <ClInclude Include="..\..\include\CColladaAnimationTrackLightColor.h" />
+    <ClInclude Include="..\..\include\CColladaAnimationTrackOffsetUV.h" />
+    <ClInclude Include="..\..\include\CColladaAnimationTrackPosition.h" />
+    <ClInclude Include="..\..\include\CColladaAnimationTrackQuaternion.h" />
+    <ClInclude Include="..\..\include\CColladaAnimationTrackTransparency.h" />
+    <ClInclude Include="..\..\include\CColladaAnimationTrackVector3d.h" />
+    <ClInclude Include="..\..\include\CColladaAnimationTrackVisibility.h" />
+    <ClInclude Include="..\..\include\CColladaAnimationTrackWeight.h" />
+    <ClInclude Include="..\..\include\CColladaBillboardSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaBinaryFileLoader.h" />
+    <ClInclude Include="..\..\include\CColladaCameraSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaConverter.h" />
+    <ClInclude Include="..\..\include\CColladaDatabase.h" />
+    <ClInclude Include="..\..\include\CColladaDynamicAnimationSet.h" />
+    <ClInclude Include="..\..\include\CColladaEventsManager.h" />
+    <ClInclude Include="..\..\include\CColladaFactory.h" />
+    <ClInclude Include="..\..\include\CColladaFileLoader.h" />
+    <ClInclude Include="..\..\include\CColladaImage.h" />
+    <ClInclude Include="..\..\include\CColladaInstancedSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaLightSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaMaterial.h" />
+    <ClInclude Include="..\..\include\CColladaMesh.h" />
+    <ClInclude Include="..\..\include\CColladaMeshBuffer.h" />
+    <ClInclude Include="..\..\include\CColladaMeshBufferProxy.h" />
+    <ClInclude Include="..\..\include\CColladaMeshBufferRef.h" />
+    <ClInclude Include="..\..\include\CColladaMeshSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaMeshWriter.h" />
+    <ClInclude Include="..\..\include\CColladaModularSkinnedMesh.h" />
+    <ClInclude Include="..\..\include\CColladaMorphingMesh.h" />
+    <ClInclude Include="..\..\include\CColladaParticleSystemDeflectorSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaParticleSystemForceSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaParticleSystemGravitySceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaParticleSystemSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaParticleSystemWindSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaResFileManager.h" />
+    <ClInclude Include="..\..\include\CColladaRootSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaSceneNodeAnimator.h" />
+    <ClInclude Include="..\..\include\CColladaSceneNodeAnimatorBlender.h" />
+    <ClInclude Include="..\..\include\CColladaSceneNodeAnimatorSet.h" />
+    <ClInclude Include="..\..\include\CColladaSkinnedMesh.h" />
+    <ClInclude Include="..\..\include\CColladaSkinnedMeshSceneNode.h" />
+    <ClInclude Include="..\..\include\CColladaTimelineController.h" />
+    <ClInclude Include="..\..\include\CColorConverter.h" />
+    <ClInclude Include="..\..\include\CCommonGLDriver.h" />
+    <ClInclude Include="..\..\include\CCommonGLExtensionHandler.h" />
+    <ClInclude Include="..\..\include\CCommonGLExtensionList.h" />
+    <ClInclude Include="..\..\include\CCommonGLHeaders.h" />
+    <ClInclude Include="..\..\include\CCommonGLMaterialRenderer.h" />
+    <ClInclude Include="..\..\include\CCommonGLTexture.h" />
+    <ClInclude Include="..\..\include\CCompressedImage.h" />
+    <ClInclude Include="..\..\include\CD3D8Driver.h" />
+    <ClInclude Include="..\..\include\CD3D8MaterialRenderer.h" />
+    <ClInclude Include="..\..\include\CD3D8NormalMapRenderer.h" />
+    <ClInclude Include="..\..\include\CD3D8ParallaxMapRenderer.h" />
+    <ClInclude Include="..\..\include\CD3D8ShaderMaterialRenderer.h" />
+    <ClInclude Include="..\..\include\CD3D8Texture.h" />
+    <ClInclude Include="..\..\include\CDefaultGUIElementFactory.h" />
+    <ClInclude Include="..\..\include\CFPSCounter.h" />
+    <ClInclude Include="..\..\include\CGUIButton.h" />
+    <ClInclude Include="..\..\include\CGUICheckbox.h" />
+    <ClInclude Include="..\..\include\CGUIColorSelectDialog.h" />
+    <ClInclude Include="..\..\include\CGUIComboBox.h" />
+    <ClInclude Include="..\..\include\CGUIContextMenu.h" />
+    <ClInclude Include="..\..\include\CGUIEditBox.h" />
+    <ClInclude Include="..\..\include\CGUIEnvironment.h" />
+    <ClInclude Include="..\..\include\CGUIFileOpenDialog.h" />
+    <ClInclude Include="..\..\include\CGUIFont.h" />
+    <ClInclude Include="..\..\include\CGUIFontVector.h" />
+    <ClInclude Include="..\..\include\CGUIImage.h" />
+    <ClInclude Include="..\..\include\CGUIInOutFader.h" />
+    <ClInclude Include="..\..\include\CGUIListBox.h" />
+    <ClInclude Include="..\..\include\CGUIMenu.h" />
+    <ClInclude Include="..\..\include\CGUIMeshViewer.h" />
+    <ClInclude Include="..\..\include\CGUIMessageBox.h" />
+    <ClInclude Include="..\..\include\CGUIModalScreen.h" />
+    <ClInclude Include="..\..\include\CGUIScrollBar.h" />
+    <ClInclude Include="..\..\include\CGUISkin.h" />
+    <ClInclude Include="..\..\include\CGUISpinBox.h" />
+    <ClInclude Include="..\..\include\CGUISpriteBank.h" />
+    <ClInclude Include="..\..\include\CGUIStaticText.h" />
+    <ClInclude Include="..\..\include\CGUITabControl.h" />
+    <ClInclude Include="..\..\include\CGUITable.h" />
+    <ClInclude Include="..\..\include\CGUIToolBar.h" />
+    <ClInclude Include="..\..\include\CGUITTFont.h" />
+    <ClInclude Include="..\..\include\CGUIWindow.h" />
+    <ClInclude Include="..\..\include\CImage.h" />
+    <ClInclude Include="..\..\include\CImageLoaderBMP.h" />
+    <ClInclude Include="..\..\include\CImageLoaderDDS.h" />
+    <ClInclude Include="..\..\include\CImageLoaderJPG.h" />
+    <ClInclude Include="..\..\include\CImageLoaderPCX.h" />
+    <ClInclude Include="..\..\include\CImageLoaderPNG.h" />
+    <ClInclude Include="..\..\include\CImageLoaderPPM.h" />
+    <ClInclude Include="..\..\include\CImageLoaderPSD.h" />
+    <ClInclude Include="..\..\include\CImageLoaderTGA.h" />
+    <ClInclude Include="..\..\include\CImageLoaderWAL.h" />
+    <ClInclude Include="..\..\include\CImageWriterBMP.h" />
+    <ClInclude Include="..\..\include\CImageWriterJPG.h" />
+    <ClInclude Include="..\..\include\CImageWriterPCX.h" />
+    <ClInclude Include="..\..\include\CImageWriterPNG.h" />
+    <ClInclude Include="..\..\include\CImageWriterPPM.h" />
+    <ClInclude Include="..\..\include\CImageWriterPSD.h" />
+    <ClInclude Include="..\..\include\CImageWriterTGA.h" />
+    <ClInclude Include="..\..\include\CIrrDevicePS3.h" />
+    <ClInclude Include="..\..\include\CIrrFactory.h" />
+    <ClInclude Include="..\..\include\CMeshCollision.h" />
+    <ClInclude Include="..\..\include\CNullDriver.h" />
+    <ClInclude Include="..\..\include\COpenGLDriver.h" />
+    <ClInclude Include="..\..\include\COpenGLESDriver.h" />
+    <ClInclude Include="..\..\include\COpenGLESNormalMapRenderer.h" />
+    <ClInclude Include="..\..\include\COpenGLESParallaxMapRenderer.h" />
+    <ClInclude Include="..\..\include\COpenGLESShaderMaterialRenderer.h" />
+    <ClInclude Include="..\..\include\COpenGLESSLMaterialRenderer.h" />
+    <ClInclude Include="..\..\include\COpenGLESTexture.h" />
+    <ClInclude Include="..\..\include\COpenGLNormalMapRenderer.h" />
+    <ClInclude Include="..\..\include\COpenGLParallaxMapRenderer.h" />
+    <ClInclude Include="..\..\include\COpenGLShaderMaterialRenderer.h" />
+    <ClInclude Include="..\..\include\COpenGLSLMaterialRenderer.h" />
+    <ClInclude Include="..\..\include\COpenGLTexture.h" />
+    <ClInclude Include="..\..\include\CPS3Driver.h" />
+    <ClInclude Include="..\..\include\CPS3MaterialRenderer.h" />
+    <ClInclude Include="..\..\include\CPS3NormalMapRenderer.h" />
+    <ClInclude Include="..\..\include\CPS3ParallaxMapRenderer.h" />
+    <ClInclude Include="..\..\include\CPS3ShaderMaterialRenderer.h" />
+    <ClInclude Include="..\..\include\CPS3SLMaterialRenderer.h" />
+    <ClInclude Include="..\..\include\CPS3Texture.h" />
+    <ClInclude Include="..\..\include\CSceneManager.h" />
+    <ClInclude Include="..\..\include\CTextureManager.h" />
+    <ClInclude Include="..\..\include\CVideoModeList.h" />
+    <ClInclude Include="..\..\include\dimension2d.h" />
+    <ClInclude Include="..\..\include\ECompileDataType.h" />
+    <ClInclude Include="..\..\include\ECullingResult.h" />
+    <ClInclude Include="..\..\include\ECullingTypes.h" />
+    <ClInclude Include="..\..\include\EDebugSceneTypes.h" />
+    <ClInclude Include="..\..\include\EDriverAllocationResult.h" />
+    <ClInclude Include="..\..\include\EDriverTypes.h" />
+    <ClInclude Include="..\..\include\EGUIElementTypes.h" />
+    <ClInclude Include="..\..\include\EMeshWriterEnums.h" />
+    <ClInclude Include="..\..\include\EMessageBoxFlags.h" />
+    <ClInclude Include="..\..\include\EndPack.h" />
+    <ClInclude Include="..\..\include\EPrimitiveType.h" />
+    <ClInclude Include="..\..\include\ESceneNodeAnimatorTypes.h" />
+    <ClInclude Include="..\..\include\ESceneNodeTypes.h" />
+    <ClInclude Include="..\..\include\EVertexAttributes.h" />
+    <ClInclude Include="..\..\include\EVertexType.h" />
+    <ClInclude Include="..\..\include\glext.h" />
+    <ClInclude Include="..\..\include\heapsort.h" />
+    <ClInclude Include="..\..\include\IAnimatedMesh.h" />
+    <ClInclude Include="..\..\include\IAnimatedMeshMD2.h" />
+    <ClInclude Include="..\..\include\IAnimatedMeshMS3D.h" />
+    <ClInclude Include="..\..\include\IAnimatedMeshSceneNode.h" />
+    <ClInclude Include="..\..\include\IAnimationTrack.h" />
+    <ClInclude Include="..\..\include\IAnimator.h" />
+    <ClInclude Include="..\..\include\IAttributeExchangingObject.h" />
+    <ClInclude Include="..\..\include\IAttributes.h" />
+    <ClInclude Include="..\..\include\IBatchBinding.h" />
+    <ClInclude Include="..\..\include\IBatchList.h" />
+    <ClInclude Include="..\..\include\IBatchMesh.h" />
+    <ClInclude Include="..\..\include\IBatchSceneNode.h" />
+    <ClInclude Include="..\..\include\IBillboardSceneNode.h" />
+    <ClInclude Include="..\..\include\IBindedAnimator.h" />
+    <ClInclude Include="..\..\include\ICameraSceneNode.h" />
+    <ClInclude Include="..\..\include\IChannelAnimator.h" />
+    <ClInclude Include="..\..\include\IColladaMesh.h" />
+    <ClInclude Include="..\..\include\IColladaRootSceneNode.h" />
+    <ClInclude Include="..\..\include\IColladaSceneNode.h" />
+    <ClInclude Include="..\..\include\IColladaSceneNodeAnimator.h" />
+    <ClInclude Include="..\..\include\IColladaSkinnedMesh.h" />
+    <ClInclude Include="..\..\include\ICursorControl.h" />
+    <ClInclude Include="..\..\include\IDriverBinding.h" />
+    <ClInclude Include="..\..\include\IDummyTransformationSceneNode.h" />
+    <ClInclude Include="..\..\include\IEventReceiver.h" />
+    <ClInclude Include="..\..\include\IFileList.h" />
+    <ClInclude Include="..\..\include\IFileSystem.h" />
+    <ClInclude Include="..\..\include\IGPUProgrammingServices.h" />
+    <ClInclude Include="..\..\include\IGUIButton.h" />
+    <ClInclude Include="..\..\include\IGUICheckbox.h" />
+    <ClInclude Include="..\..\include\IGUIComboBox.h" />
+    <ClInclude Include="..\..\include\IGUIContextMenu.h" />
+    <ClInclude Include="..\..\include\IGUIEditBox.h" />
+    <ClInclude Include="..\..\include\IGUIElement.h" />
+    <ClInclude Include="..\..\include\IGUIElementFactory.h" />
+    <ClInclude Include="..\..\include\IGUIEnvironment.h" />
+    <ClInclude Include="..\..\include\IGUIFileOpenDialog.h" />
+    <ClInclude Include="..\..\include\IGUIFont.h" />
+    <ClInclude Include="..\..\include\IGUIFontVector.h" />
+    <ClInclude Include="..\..\include\IGUIImage.h" />
+    <ClInclude Include="..\..\include\IGUIInOutFader.h" />
+    <ClInclude Include="..\..\include\IGUIListBox.h" />
+    <ClInclude Include="..\..\include\IGUIMeshViewer.h" />
+    <ClInclude Include="..\..\include\IGUIScrollBar.h" />
+    <ClInclude Include="..\..\include\IGUISkin.h" />
+    <ClInclude Include="..\..\include\IGUISpinBox.h" />
+    <ClInclude Include="..\..\include\IGUISpriteBank.h" />
+    <ClInclude Include="..\..\include\IGUIStaticText.h" />
+    <ClInclude Include="..\..\include\IGUITabControl.h" />
+    <ClInclude Include="..\..\include\IGUIToolbar.h" />
+    <ClInclude Include="..\..\include\IGUITTFont.h" />
+    <ClInclude Include="..\..\include\IGUIWindow.h" />
+    <ClInclude Include="..\..\include\IImage.h" />
+    <ClInclude Include="..\..\include\IImageLoader.h" />
+    <ClInclude Include="..\..\include\IImagePresenter.h" />
+    <ClInclude Include="..\..\include\ILightSceneNode.h" />
+    <ClInclude Include="..\..\include\ILogger.h" />
+    <ClInclude Include="..\..\include\IMaterialRenderer.h" />
+    <ClInclude Include="..\..\include\IMaterialRendererServices.h" />
+    <ClInclude Include="..\..\include\IMesh.h" />
+    <ClInclude Include="..\..\include\IMeshBuffer.h" />
+    <ClInclude Include="..\..\include\IMeshCache.h" />
+    <ClInclude Include="..\..\include\IMeshLoader.h" />
+    <ClInclude Include="..\..\include\IMeshManipulator.h" />
+    <ClInclude Include="..\..\include\IMeshSceneNode.h" />
+    <ClInclude Include="..\..\include\IMeshWriter.h" />
+    <ClInclude Include="..\..\include\IMetaTriangleSelector.h" />
+    <ClInclude Include="..\..\include\IMorphingMesh.h" />
+    <ClInclude Include="..\..\include\IOSOperator.h" />
+    <ClInclude Include="..\..\include\IParticleAffector.h" />
+    <ClInclude Include="..\..\include\IParticleEmitter.h" />
+    <ClInclude Include="..\..\include\IParticleSystemSceneNode.h" />
+    <ClInclude Include="..\..\include\IQ3LevelMesh.h" />
+    <ClInclude Include="..\..\include\IReadFile.H" />
+    <ClInclude Include="..\..\include\IReferenceCounted.h" />
+    <ClInclude Include="..\..\include\irrAllocator.h" />
+    <ClInclude Include="..\..\include\irrArray.h" />
+    <ClInclude Include="..\..\include\IrrCompileConfig.h" />
+    <ClInclude Include="..\..\include\IrrCompileDefaultConfig.h" />
+    <ClInclude Include="..\..\include\IrrCompileGameConfig.h" />
+    <ClInclude Include="..\..\include\irrlicht.h" />
+    <ClInclude Include="..\..\include\IrrlichtDevice.h" />
+    <ClInclude Include="..\..\include\irrList.h" />
+    <ClInclude Include="..\..\include\irrMap.h" />
+    <ClInclude Include="..\..\include\irrMath.h" />
+    <ClInclude Include="..\..\include\irros.h" />
+    <ClInclude Include="..\..\include\irrProcessBufferHeap.h" />
+    <ClInclude Include="..\..\include\irrString.h" />
+    <ClInclude Include="..\..\include\irrTexGen.h" />
+    <ClInclude Include="..\..\include\irrTypes.h" />
+    <ClInclude Include="..\..\include\irrXML.h" />
+    <ClInclude Include="..\..\include\ISceneCollisionManager.h" />
+    <ClInclude Include="..\..\include\ISceneManager.h" />
+    <ClInclude Include="..\..\include\ISceneNode.h" />
+    <ClInclude Include="..\..\include\ISceneNodeAnimator.h" />
+    <ClInclude Include="..\..\include\ISceneNodeAnimatorChannelLibrary.h" />
+    <ClInclude Include="..\..\include\ISceneNodeAnimatorCollisionResponse.h" />
+    <ClInclude Include="..\..\include\ISceneNodeAnimatorFactory.h" />
+    <ClInclude Include="..\..\include\ISceneNodeFactory.h" />
+    <ClInclude Include="..\..\include\ISceneNodeMeshLoader.h" />
+    <ClInclude Include="..\..\include\IShaderConstantSetCallBack.h" />
+    <ClInclude Include="..\..\include\IShadowVolumeSceneNode.h" />
+    <ClInclude Include="..\..\include\ISkinnedMesh.h" />
+    <ClInclude Include="..\..\include\ITerrainSceneNode.h" />
+    <ClInclude Include="..\..\include\ITextSceneNode.h" />
+    <ClInclude Include="..\..\include\ITexture.h" />
+    <ClInclude Include="..\..\include\ITimeController.h" />
+    <ClInclude Include="..\..\include\ITimer.h" />
+    <ClInclude Include="..\..\include\ITriangleSelector.h" />
+    <ClInclude Include="..\..\include\IUnknown.h" />
+    <ClInclude Include="..\..\include\IVideoDriver.h" />
+    <ClInclude Include="..\..\include\IVideoModeList.h" />
+    <ClInclude Include="..\..\include\IWriteFile.h" />
+    <ClInclude Include="..\..\include\IXMLReader.h" />
+    <ClInclude Include="..\..\include\IXMLWriter.h" />
+    <ClInclude Include="..\..\include\Keycodes.h" />
+    <ClInclude Include="..\..\include\line2d.h" />
+    <ClInclude Include="..\..\include\line3d.h" />
+    <ClInclude Include="..\..\include\matrix4.h" />
+    <ClInclude Include="..\..\include\plane3d.h" />
+    <ClInclude Include="..\..\include\position2d.h" />
+    <ClInclude Include="..\..\include\quaternion.h" />
+    <ClInclude Include="..\..\include\rect.h" />
+    <ClInclude Include="..\..\include\S3DVertex.h" />
+    <ClInclude Include="..\..\include\S3DVertexComponentArrays.h" />
+    <ClInclude Include="..\..\include\SAnimatedMesh.h" />
+    <ClInclude Include="..\..\include\SceneParameters.h" />
+    <ClInclude Include="..\..\include\SColor.h" />
+    <ClInclude Include="..\..\include\SExposedVideoData.h" />
+    <ClInclude Include="..\..\include\SIrrCreationParameters.h" />
+    <ClInclude Include="..\..\include\SKeyMap.h" />
+    <ClInclude Include="..\..\include\SLight.h" />
+    <ClInclude Include="..\..\include\SMaterial.h" />
+    <ClInclude Include="..\..\include\SMesh.h" />
+    <ClInclude Include="..\..\include\SMeshBuffer.h" />
+    <ClInclude Include="..\..\include\SMeshBufferLightMap.h" />
+    <ClInclude Include="..\..\include\SMeshBufferTangents.h" />
+    <ClInclude Include="..\..\include\SParticle.h" />
+    <ClInclude Include="..\..\include\SProcessBufferBindingBase.h" />
+    <ClInclude Include="..\..\include\SViewFrustum.h" />
+    <ClInclude Include="..\..\include\triangle3d.h" />
+    <ClInclude Include="..\..\include\UTF8.h" />
+    <ClInclude Include="..\..\include\vector2d.h" />
+    <ClInclude Include="..\..\include\vector3d.h" />
+    <ClInclude Include="C3DSMeshFileLoader.h" />
+    <ClInclude Include="CAnimatedMeshMD2.h" />
+    <ClInclude Include="CAnimatedMeshMD3.h" />
+    <ClInclude Include="CAnimatedMeshSceneNode.h" />
+    <ClInclude Include="CAnimationClip.h" />
+    <ClInclude Include="CAnimationTrack.h" />
+    <ClInclude Include="CAnimationTrackLibrary.h" />
+    <ClInclude Include="CAttributeImpl.h" />
+    <ClInclude Include="CAttributes.h" />
+    <ClInclude Include="CB3DMeshFileLoader.h" />
+    <ClInclude Include="CBillboardSceneNode.h" />
+    <ClInclude Include="CBoneSceneNode.h" />
+    <ClInclude Include="CBSPMeshFileLoader.h" />
+    <ClInclude Include="CCameraFPSSceneNode.h" />
+    <ClInclude Include="CCameraMayaSceneNode.h" />
+    <ClInclude Include="CCameraSceneNode.h" />
+    <ClInclude Include="CCameraTargetTrackerSceneNode.h" />
+    <ClInclude Include="CChannelAnimator.h" />
+    <ClInclude Include="CChannelBlender.h" />
+    <ClInclude Include="CColladaBinaryFileLoader.h" />
+    <ClInclude Include="CColladaFileLoader.h" />
+    <ClInclude Include="CColladaMeshWriter.h" />
+    <ClInclude Include="CColladaModularSkinnedMeshSceneNode.h" />
+    <ClInclude Include="CColladaTools.h" />
+    <ClInclude Include="CCSMLoader.h" />
+    <ClInclude Include="CCubeSceneNode.h" />
+    <ClInclude Include="CD3D9Driver.h" />
+    <ClInclude Include="CD3D9HLSLMaterialRenderer.h" />
+    <ClInclude Include="CD3D9MaterialRenderer.h" />
+    <ClInclude Include="CD3D9NormalMapRenderer.h" />
+    <ClInclude Include="CD3D9ParallaxMapRenderer.h" />
+    <ClInclude Include="CD3D9ShaderMaterialRenderer.h" />
+    <ClInclude Include="CD3D9Texture.h" />
+    <ClInclude Include="CDefaultSceneNodeAnimatorFactory.h" />
+    <ClInclude Include="CDefaultSceneNodeFactory.h" />
+    <ClInclude Include="CDMFLoader.h" />
+    <ClInclude Include="CDummyTransformationSceneNode.h" />
+    <ClInclude Include="CEmptySceneNode.h" />
+    <ClInclude Include="CFileList.h" />
+    <ClInclude Include="CFileSystem.h" />
+    <ClInclude Include="CGeometryCreator.h" />
+    <ClInclude Include="CIrrDeviceLinux.h" />
+    <ClInclude Include="CIrrDeviceSDL.h" />
+    <ClInclude Include="CIrrDeviceStub.h" />
+    <ClInclude Include="CIrrDeviceWii.h" />
+    <ClInclude Include="CIrrDeviceWin32.h" />
+    <ClInclude Include="CIrrDeviceWinCE.h" />
+    <ClInclude Include="CIrrMeshFileLoader.h" />
+    <ClInclude Include="CIrrMeshWriter.h" />
+    <ClInclude Include="CLightSceneNode.h" />
+    <ClInclude Include="CLimitReadFile.h" />
+    <ClInclude Include="CLMTSMeshFileLoader.h" />
+    <ClInclude Include="CLogger.h" />
+    <ClInclude Include="CLWOMeshFileLoader.h" />
+    <ClInclude Include="CMD2MeshFileLoader.h" />
+    <ClInclude Include="CMD3MeshFileLoader.h" />
+    <ClInclude Include="CMemoryReadFile.h" />
+    <ClInclude Include="CMeshCache.h" />
+    <ClInclude Include="CMeshManipulator.h" />
+    <ClInclude Include="CMeshSceneNode.h" />
+    <ClInclude Include="CMetaTriangleSelector.h" />
+    <ClInclude Include="CMorphingMesh.h" />
+    <ClInclude Include="CMS3DMeshFileLoader.h" />
+    <ClInclude Include="CMY3DHelper.h" />
+    <ClInclude Include="CMY3DMeshFileLoader.h" />
+    <ClInclude Include="CMY3DStuff.h" />
+    <ClInclude Include="COBJMeshFileLoader.h" />
+    <ClInclude Include="COBJMeshWriter.h" />
+    <ClInclude Include="COCTLoader.h" />
+    <ClInclude Include="COctTreeSceneNode.h" />
+    <ClInclude Include="COctTreeTriangleSelector.h" />
+    <ClInclude Include="COgreMeshFileLoader.h" />
+    <ClInclude Include="COSOperator.h" />
+    <ClInclude Include="CPakReader.h" />
+    <ClInclude Include="CParticleBoxEmitter.h" />
+    <ClInclude Include="CParticleFadeOutAffector.h" />
+    <ClInclude Include="CParticleGravityAffector.h" />
+    <ClInclude Include="CParticlePointEmitter.h" />
+    <ClInclude Include="CParticleSizeAffector.h" />
+    <ClInclude Include="CParticleSpinAffector.h" />
+    <ClInclude Include="CParticleSystemSceneNode.h" />
+    <ClInclude Include="CQ3LevelMesh.h" />
+    <ClInclude Include="CQuake3ShaderSceneNode.h" />
+    <ClInclude Include="CReadFile.h" />
+    <ClInclude Include="CSceneCollisionManager.h" />
+    <ClInclude Include="CSceneNodeAnimatorCameraFPS.h" />
+    <ClInclude Include="CSceneNodeAnimatorCameraMaya.h" />
+    <ClInclude Include="CSceneNodeAnimatorChannelLibrary.h" />
+    <ClInclude Include="CSceneNodeAnimatorCollisionResponse.h" />
+    <ClInclude Include="CSceneNodeAnimatorDelete.h" />
+    <ClInclude Include="CSceneNodeAnimatorFlyCircle.h" />
+    <ClInclude Include="CSceneNodeAnimatorFlyStraight.h" />
+    <ClInclude Include="CSceneNodeAnimatorFollowSpline.h" />
+    <ClInclude Include="CSceneNodeAnimatorRotation.h" />
+    <ClInclude Include="CSceneNodeAnimatorTexture.h" />
+    <ClInclude Include="CShadowVolumeSceneNode.h" />
+    <ClInclude Include="CSkinnedMesh.h" />
+    <ClInclude Include="CSkinnedMesh2.h" />
+    <ClInclude Include="CSkinnedMeshSceneNode.h" />
+    <ClInclude Include="CSkyBoxSceneNode.h" />
+    <ClInclude Include="CSkyDomeSceneNode.h" />
+    <ClInclude Include="CSphereSceneNode.h" />
+    <ClInclude Include="CSTLMeshFileLoader.h" />
+    <ClInclude Include="CSTLMeshWriter.h" />
+    <ClInclude Include="CTerrainSceneNode.h" />
+    <ClInclude Include="CTerrainTriangleSelector.h" />
+    <ClInclude Include="CTextSceneNode.h" />
+    <ClInclude Include="CTimeController.h" />
+    <ClInclude Include="CTimelineController.h" />
+    <ClInclude Include="CTimer.h" />
+    <ClInclude Include="CTriangleBBSelector.h" />
+    <ClInclude Include="CTriangleSelector.h" />
+    <ClInclude Include="CVolumeLightSceneNode.h" />
+    <ClInclude Include="CWaterSurfaceSceneNode.h" />
+    <ClInclude Include="CWiiDriver.h" />
+    <ClInclude Include="CWriteFile.h" />
+    <ClInclude Include="CXMeshFileLoader.h" />
+    <ClInclude Include="CXMLReader.h" />
+    <ClInclude Include="CXMLReaderImpl.h" />
+    <ClInclude Include="CXMLWriter.h" />
+    <ClInclude Include="CZipReader.h" />
+    <ClInclude Include="dmfsupport.h" />
+    <ClInclude Include="jpeglib\cderror.h" />
+    <ClInclude Include="jpeglib\cdjpeg.h" />
+    <ClInclude Include="jpeglib\jchuff.h" />
+    <ClInclude Include="jpeglib\jconfig.h" />
+    <ClInclude Include="jpeglib\jdct.h" />
+    <ClInclude Include="jpeglib\jdhuff.h" />
+    <ClInclude Include="jpeglib\jerror.h" />
+    <ClInclude Include="jpeglib\jinclude.h" />
+    <ClInclude Include="jpeglib\jmemsys.h" />
+    <ClInclude Include="jpeglib\jmorecfg.h" />
+    <ClInclude Include="jpeglib\jpegint.h" />
+    <ClInclude Include="jpeglib\jpeglib.h" />
+    <ClInclude Include="jpeglib\jversion.h" />
+    <ClInclude Include="libpng\png.h" />
+    <ClInclude Include="libpng\pngconf.h" />
+    <ClInclude Include="OctTree.h" />
+    <ClInclude Include="particlesystem\include\BehaviorModels\PColorModel.h" />
+    <ClInclude Include="particlesystem\include\BehaviorModels\PEmitterModel.h" />
+    <ClInclude Include="particlesystem\include\BehaviorModels\PForcesModel.h" />
+    <ClInclude Include="particlesystem\include\BehaviorModels\PGenerationModel.h" />
+    <ClInclude Include="particlesystem\include\BehaviorModels\PLifeModel.h" />
+    <ClInclude Include="particlesystem\include\BehaviorModels\PMotionModel.h" />
+    <ClInclude Include="particlesystem\include\BehaviorModels\PRenderDataModel.h" />
+    <ClInclude Include="particlesystem\include\BehaviorModels\PSizeModel.h" />
+    <ClInclude Include="particlesystem\include\BehaviorModels\PSpinModel.h" />
+    <ClInclude Include="particlesystem\include\ParameterNames.h" />
+    <ClInclude Include="particlesystem\include\Particle.h" />
+    <ClInclude Include="particlesystem\include\ParticleContext.h" />
+    <ClInclude Include="particlesystem\include\ParticleSystem.h" />
+    <ClInclude Include="particlesystem\include\PBehaviorModel.h" />
+    <ClInclude Include="particlesystem\include\PDomain.h" />
+    <ClInclude Include="particlesystem\include\PForce.h" />
+    <ClInclude Include="particlesystem\include\PForceImpl.h" />
+    <ClInclude Include="particlesystem\include\PRenderData.h" />
+    <ClInclude Include="particlesystem\include\PSManager.h" />
+    <ClInclude Include="particlesystem\include\PSUtils.h" />
+    <ClInclude Include="PowerVR\OGLES\Include\GLES\egl.h" />
+    <ClInclude Include="PowerVR\OGLES\Include\GLES\gl.h" />
+    <ClInclude Include="PowerVR\OGLES\Include\GLES\glext.h" />
+    <ClInclude Include="PVRT\PVRTDecompress.h" />
+    <ClInclude Include="Wii\CWiiMaterialRenderer.h" />
+    <ClInclude Include="Wii\CWiiMemMgr.h" />
+    <ClInclude Include="Wii\CWiiTexture.h" />
+    <ClInclude Include="Wii\WiiTextureConv.h" />
+    <ClInclude Include="zlib\crc32.h" />
+    <ClInclude Include="zlib\deflate.h" />
+    <ClInclude Include="zlib\inffast.h" />
+    <ClInclude Include="zlib\inffixed.h" />
+    <ClInclude Include="zlib\inftrees.h" />
+    <ClInclude Include="zlib\trees.h" />
+    <ClInclude Include="zlib\zconf.h" />
+    <ClInclude Include="zlib\zlib.h" />
+    <ClInclude Include="zlib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\tools\ResFile\src\resFile.cpp" />
+    <ClCompile Include="C3DSMeshFileLoader.cpp" />
+    <ClCompile Include="CAnimatedMeshMD2.cpp" />
+    <ClCompile Include="CAnimatedMeshMD3.cpp" />
+    <ClCompile Include="CAnimatedMeshSceneNode.cpp" />
+    <ClCompile Include="CAnimationTrack.cpp" />
+    <ClCompile Include="CAttributes.cpp" />
+    <ClCompile Include="CB3DMeshFileLoader.cpp" />
+    <ClCompile Include="CBatchBuffer.cpp" />
+    <ClCompile Include="CBatchListCompileData.cpp" />
+    <ClCompile Include="CBatchMesh.cpp" />
+    <ClCompile Include="CBillboardSceneNode.cpp" />
+    <ClCompile Include="CBoneSceneNode.cpp" />
+    <ClCompile Include="CBSPMeshFileLoader.cpp" />
+    <ClCompile Include="CCameraFPSSceneNode.cpp" />
+    <ClCompile Include="CCameraMayaSceneNode.cpp" />
+    <ClCompile Include="CCameraSceneNode.cpp" />
+    <ClCompile Include="CCameraTargetTrackerSceneNode.cpp" />
+    <ClCompile Include="CChannelAnimator.cpp" />
+    <ClCompile Include="CChannelBlender.cpp" />
+    <ClCompile Include="CColladaAnimationTrack.cpp" />
+    <ClCompile Include="CColladaAnimationTrackFloat.cpp" />
+    <ClCompile Include="CColladaAnimationTrackImageFileList.cpp" />
+    <ClCompile Include="CColladaAnimationTrackLightColor.cpp" />
+    <ClCompile Include="CColladaAnimationTrackOffsetUV.cpp" />
+    <ClCompile Include="CColladaAnimationTrackPosition.cpp" />
+    <ClCompile Include="CColladaAnimationTrackQuaternion.cpp" />
+    <ClCompile Include="CColladaAnimationTrackTransparency.cpp" />
+    <ClCompile Include="CColladaAnimationTrackVector3d.cpp" />
+    <ClCompile Include="CColladaAnimationTrackVisibility.cpp" />
+    <ClCompile Include="CColladaAnimationTrackWeight.cpp" />
+    <ClCompile Include="CColladaBillboardSceneNode.cpp" />
+    <ClCompile Include="CColladaBinaryFileLoader.cpp" />
+    <ClCompile Include="CColladaCameraSceneNode.cpp" />
+    <ClCompile Include="CColladaConverter.cpp" />
+    <ClCompile Include="CColladaDatabase.cpp" />
+    <ClCompile Include="CColladaDynamicAnimationSet.cpp" />
+    <ClCompile Include="CColladaFactory.cpp" />
+    <ClCompile Include="CColladaFileLoader.cpp" />
+    <ClCompile Include="CColladaInstancedSceneNode.cpp" />
+    <ClCompile Include="CColladaLightSceneNode.cpp" />
+    <ClCompile Include="CColladaMaterial.cpp" />
+    <ClCompile Include="CColladaMesh.cpp" />
+    <ClCompile Include="CColladaMeshBuffer.cpp" />
+    <ClCompile Include="CColladaMeshBufferProxy.cpp" />
+    <ClCompile Include="CColladaMeshBufferRef.cpp" />
+    <ClCompile Include="CColladaMeshSceneNode.cpp" />
+    <ClCompile Include="CColladaMeshWriter.cpp" />
+    <ClCompile Include="CColladaModularSkinnedMesh.cpp" />
+    <ClCompile Include="CColladaModularSkinnedMeshSceneNode.cpp" />
+    <ClCompile Include="CColladaMorphingMesh.cpp" />
+    <ClCompile Include="CColladaParticleSystemSceneNode.cpp" />
+    <ClCompile Include="CColladaResFileManager.cpp" />
+    <ClCompile Include="CColladaSceneNode.cpp" />
+    <ClCompile Include="CColladaSceneNodeAnimator.cpp" />
+    <ClCompile Include="CColladaSceneNodeAnimatorBlender.cpp" />
+    <ClCompile Include="CColladaSceneNodeAnimatorSet.cpp" />
+    <ClCompile Include="CColladaSkinnedMesh.cpp" />
+    <ClCompile Include="CColladaSkinnedMeshSceneNode.cpp" />
+    <ClCompile Include="CColladaTimelineController.cpp" />
+    <ClCompile Include="CColorConverter.cpp" />
+    <ClCompile Include="CCommonGLDriver.cpp" />
+    <ClCompile Include="CCommonGLExtensionHandler.cpp" />
+    <ClCompile Include="CCommonGLMaterialRenderer.cpp" />
+    <ClCompile Include="CCommonGLTexture.cpp" />
+    <ClCompile Include="CCompressedImage.cpp" />
+    <ClCompile Include="CCSMLoader.cpp" />
+    <ClCompile Include="CCubeSceneNode.cpp" />
+    <ClCompile Include="CD3D8Driver.cpp" />
+    <ClCompile Include="CD3D8NormalMapRenderer.cpp" />
+    <ClCompile Include="CD3D8ParallaxMapRenderer.cpp" />
+    <ClCompile Include="CD3D8ShaderMaterialRenderer.cpp" />
+    <ClCompile Include="CD3D8Texture.cpp" />
+    <ClCompile Include="CD3D9Driver.cpp" />
+    <ClCompile Include="CD3D9HLSLMaterialRenderer.cpp" />
+    <ClCompile Include="CD3D9NormalMapRenderer.cpp" />
+    <ClCompile Include="CD3D9ParallaxMapRenderer.cpp" />
+    <ClCompile Include="CD3D9ShaderMaterialRenderer.cpp" />
+    <ClCompile Include="CD3D9Texture.cpp" />
+    <ClCompile Include="CDefaultGUIElementFactory.cpp" />
+    <ClCompile Include="CDefaultSceneNodeAnimatorFactory.cpp" />
+    <ClCompile Include="CDefaultSceneNodeFactory.cpp" />
+    <ClCompile Include="CDMFLoader.cpp" />
+    <ClCompile Include="CDummyTransformationSceneNode.cpp" />
+    <ClCompile Include="CEmptySceneNode.cpp" />
+    <ClCompile Include="CFileList.cpp" />
+    <ClCompile Include="CFileSystem.cpp" />
+    <ClCompile Include="CFPSCounter.cpp" />
+    <ClCompile Include="CGeometryCreator.cpp" />
+    <ClCompile Include="CGUIButton.cpp" />
+    <ClCompile Include="CGUICheckbox.cpp" />
+    <ClCompile Include="CGUIColorSelectDialog.cpp" />
+    <ClCompile Include="CGUIComboBox.cpp" />
+    <ClCompile Include="CGUIContextMenu.cpp" />
+    <ClCompile Include="CGUIEditBox.cpp" />
+    <ClCompile Include="CGUIEnvironment.cpp" />
+    <ClCompile Include="CGUIFileOpenDialog.cpp" />
+    <ClCompile Include="CGUIFont.cpp" />
+    <ClCompile Include="CGUIFontVector.cpp" />
+    <ClCompile Include="CGUIImage.cpp" />
+    <ClCompile Include="CGUIInOutFader.cpp" />
+    <ClCompile Include="CGUIListBox.cpp" />
+    <ClCompile Include="CGUIMenu.cpp" />
+    <ClCompile Include="CGUIMeshViewer.cpp" />
+    <ClCompile Include="CGUIMessageBox.cpp" />
+    <ClCompile Include="CGUIModalScreen.cpp" />
+    <ClCompile Include="CGUIScrollBar.cpp" />
+    <ClCompile Include="CGUISkin.cpp" />
+    <ClCompile Include="CGUISpinBox.cpp" />
+    <ClCompile Include="CGUISpriteBank.cpp" />
+    <ClCompile Include="CGUIStaticText.cpp" />
+    <ClCompile Include="CGUITabControl.cpp" />
+    <ClCompile Include="CGUITable.cpp" />
+    <ClCompile Include="CGUIToolBar.cpp" />
+    <ClCompile Include="CGUITTFont.cpp" />
+    <ClCompile Include="CGUIWindow.cpp" />
+    <ClCompile Include="CImage.cpp" />
+    <ClCompile Include="CImageLoaderBMP.cpp" />
+    <ClCompile Include="CImageLoaderDDS.cpp" />
+    <ClCompile Include="CImageLoaderJPG.cpp" />
+    <ClCompile Include="CImageLoaderPCX.cpp" />
+    <ClCompile Include="CImageLoaderPNG.cpp" />
+    <ClCompile Include="CImageLoaderPPM.cpp" />
+    <ClCompile Include="CImageLoaderPSD.cpp" />
+    <ClCompile Include="CImageLoaderTGA.cpp" />
+    <ClCompile Include="CImageLoaderWAL.cpp" />
+    <ClCompile Include="CImageWriterBMP.cpp" />
+    <ClCompile Include="CImageWriterJPG.cpp" />
+    <ClCompile Include="CImageWriterPCX.cpp" />
+    <ClCompile Include="CImageWriterPNG.cpp" />
+    <ClCompile Include="CImageWriterPPM.cpp" />
+    <ClCompile Include="CImageWriterPSD.cpp" />
+    <ClCompile Include="CImageWriterTGA.cpp" />
+    <ClCompile Include="CIrrDeviceLinux.cpp" />
+    <ClCompile Include="CIrrDeviceSDL.cpp" />
+    <ClCompile Include="CIrrDeviceStub.cpp" />
+    <ClCompile Include="CIrrDeviceWii.cpp" />
+    <ClCompile Include="CIrrDeviceWin32.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">false</PreprocessSuppressLineNumbers>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">false</PreprocessSuppressLineNumbers>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">false</PreprocessSuppressLineNumbers>
+    </ClCompile>
+    <ClCompile Include="CIrrDeviceWinCE.cpp" />
+    <ClCompile Include="CIrrFactory.cpp" />
+    <ClCompile Include="CIrrMeshFileLoader.cpp" />
+    <ClCompile Include="CIrrMeshWriter.cpp" />
+    <ClCompile Include="CLightSceneNode.cpp" />
+    <ClCompile Include="CLimitReadFile.cpp" />
+    <ClCompile Include="CLMTSMeshFileLoader.cpp" />
+    <ClCompile Include="CLogger.cpp" />
+    <ClCompile Include="CLWOMeshFileLoader.cpp" />
+    <ClCompile Include="CMD2MeshFileLoader.cpp" />
+    <ClCompile Include="CMD3MeshFileLoader.cpp" />
+    <ClCompile Include="CMemoryReadFile.cpp" />
+    <ClCompile Include="CMeshCache.cpp" />
+    <ClCompile Include="CMeshCollision.cpp" />
+    <ClCompile Include="CMeshManipulator.cpp" />
+    <ClCompile Include="CMeshSceneNode.cpp" />
+    <ClCompile Include="CMetaTriangleSelector.cpp" />
+    <ClCompile Include="CMorphingMesh.cpp" />
+    <ClCompile Include="CMS3DMeshFileLoader.cpp" />
+    <ClCompile Include="CMY3DMeshFileLoader.cpp" />
+    <ClCompile Include="CNullDriver.cpp" />
+    <ClCompile Include="COBJMeshFileLoader.cpp" />
+    <ClCompile Include="COBJMeshWriter.cpp" />
+    <ClCompile Include="COCTLoader.cpp" />
+    <ClCompile Include="COctTreeSceneNode.cpp" />
+    <ClCompile Include="COctTreeTriangleSelector.cpp" />
+    <ClCompile Include="COgreMeshFileLoader.cpp" />
+    <ClCompile Include="COpenGLDriver.cpp" />
+    <ClCompile Include="COpenGLESDriver.cpp" />
+    <ClCompile Include="COpenGLESNormalMapRenderer.cpp" />
+    <ClCompile Include="COpenGLESParallaxMapRenderer.cpp" />
+    <ClCompile Include="COpenGLESShaderMaterialRenderer.cpp" />
+    <ClCompile Include="COpenGLESSLMaterialRenderer.cpp" />
+    <ClCompile Include="COpenGLESTexture.cpp" />
+    <ClCompile Include="COpenGLNormalMapRenderer.cpp" />
+    <ClCompile Include="COpenGLParallaxMapRenderer.cpp" />
+    <ClCompile Include="COpenGLShaderMaterialRenderer.cpp" />
+    <ClCompile Include="COpenGLSLMaterialRenderer.cpp" />
+    <ClCompile Include="COpenGLTexture.cpp" />
+    <ClCompile Include="COSOperator.cpp" />
+    <ClCompile Include="CPakReader.cpp" />
+    <ClCompile Include="CParticleAnimatedMeshSceneNodeEmitter.cpp" />
+    <ClCompile Include="CParticleAttractionAffector.cpp" />
+    <ClCompile Include="CParticleBoxEmitter.cpp" />
+    <ClCompile Include="CParticleCylinderEmitter.cpp" />
+    <ClCompile Include="CParticleFadeOutAffector.cpp" />
+    <ClCompile Include="CParticleGravityAffector.cpp" />
+    <ClCompile Include="CParticleMeshEmitter.cpp" />
+    <ClCompile Include="CParticlePointEmitter.cpp" />
+    <ClCompile Include="CParticleRingEmitter.cpp" />
+    <ClCompile Include="CParticleRotationAffector.cpp" />
+    <ClCompile Include="CParticleSizeAffector.cpp" />
+    <ClCompile Include="CParticleSphereEmitter.cpp" />
+    <ClCompile Include="CParticleSpinAffector.cpp" />
+    <ClCompile Include="CParticleSystemSceneNode.cpp" />
+    <ClCompile Include="CQ3LevelMesh.cpp" />
+    <ClCompile Include="CQuake3ShaderSceneNode.cpp" />
+    <ClCompile Include="CReadFile.cpp" />
+    <ClCompile Include="CSceneCollisionManager.cpp" />
+    <ClCompile Include="CSceneManager.cpp" />
+    <ClCompile Include="CSceneNodeAnimatorCameraFPS.cpp" />
+    <ClCompile Include="CSceneNodeAnimatorCameraMaya.cpp" />
+    <ClCompile Include="CSceneNodeAnimatorChannelLibrary.cpp" />
+    <ClCompile Include="CSceneNodeAnimatorCollisionResponse.cpp" />
+    <ClCompile Include="CSceneNodeAnimatorDelete.cpp" />
+    <ClCompile Include="CSceneNodeAnimatorFlyCircle.cpp" />
+    <ClCompile Include="CSceneNodeAnimatorFlyStraight.cpp" />
+    <ClCompile Include="CSceneNodeAnimatorFollowSpline.cpp" />
+    <ClCompile Include="CSceneNodeAnimatorRotation.cpp" />
+    <ClCompile Include="CSceneNodeAnimatorTexture.cpp" />
+    <ClCompile Include="CShadowVolumeSceneNode.cpp" />
+    <ClCompile Include="CSkinnedMesh.cpp" />
+    <ClCompile Include="CSkinnedMesh2.cpp" />
+    <ClCompile Include="CSkinnedMeshSceneNode.cpp" />
+    <ClCompile Include="CSkyBoxSceneNode.cpp" />
+    <ClCompile Include="CSkyDomeSceneNode.cpp" />
+    <ClCompile Include="CSphereSceneNode.cpp" />
+    <ClCompile Include="CSTLMeshFileLoader.cpp" />
+    <ClCompile Include="CSTLMeshWriter.cpp" />
+    <ClCompile Include="CTerrainSceneNode.cpp" />
+    <ClCompile Include="CTerrainTriangleSelector.cpp" />
+    <ClCompile Include="CTextSceneNode.cpp" />
+    <ClCompile Include="CTextureManager.cpp" />
+    <ClCompile Include="CTriangleBBSelector.cpp" />
+    <ClCompile Include="CTriangleSelector.cpp" />
+    <ClCompile Include="CVideoModeList.cpp" />
+    <ClCompile Include="CVolumeLightSceneNode.cpp" />
+    <ClCompile Include="CWaterSurfaceSceneNode.cpp" />
+    <ClCompile Include="CWiiDriver.cpp" />
+    <ClCompile Include="CWriteFile.cpp" />
+    <ClCompile Include="CXMeshFileLoader.cpp" />
+    <ClCompile Include="CXMLReader.cpp" />
+    <ClCompile Include="CXMLWriter.cpp" />
+    <ClCompile Include="CZipReader.cpp" />
+    <ClCompile Include="encoding.cpp" />
+    <ClCompile Include="IBatchList.cpp" />
+    <ClCompile Include="IBatchMesh.cpp" />
+    <ClCompile Include="IBatchSceneNode.cpp" />
+    <ClCompile Include="IColladaMesh.cpp" />
+    <ClCompile Include="IColladaSceneNodeAnimator.cpp" />
+    <ClCompile Include="IColladaSkinnedMesh.cpp" />
+    <ClCompile Include="IDriverBinding.cpp" />
+    <ClCompile Include="IMaterialRenderer.cpp" />
+    <ClCompile Include="IMesh.cpp" />
+    <ClCompile Include="IMeshBuffer.cpp" />
+    <ClCompile Include="Irrlicht.cpp" />
+    <ClCompile Include="IrrlichtDevice.cpp" />
+    <ClCompile Include="irros.cpp" />
+    <ClCompile Include="irrProcessBufferHeap.cpp" />
+    <ClCompile Include="irrTexGen.cpp" />
+    <ClCompile Include="irrXML.cpp" />
+    <ClCompile Include="ISceneNode.cpp" />
+    <ClCompile Include="ISceneNodeAnimator.cpp" />
+    <ClCompile Include="IVideoDriver.cpp" />
+    <ClCompile Include="jpeglib\cdjpeg.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcapimin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcapistd.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jccoefct.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jccolor.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcdctmgr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jchuff.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcinit.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcmainct.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcmarker.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcmaster.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcomapi.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcparam.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcphuff.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcprepct.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jcsample.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jctrans.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdapimin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdapistd.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdatadst.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdatasrc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdcoefct.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdcolor.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jddctmgr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdhuff.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdinput.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdmainct.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdmarker.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdmaster.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdmerge.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdphuff.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdpostct.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdsample.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jdtrans.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jerror.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jfdctflt.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jfdctfst.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jfdctint.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jidctflt.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jidctfst.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jidctint.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jidctred.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jmemirr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jmemmgr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jquant1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jquant2.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeglib\jutils.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\png.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngerror.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngget.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngmem.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngpread.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngread.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngrio.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngrtran.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngrutil.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngset.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngtrans.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngwio.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngwrite.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngwtran.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="libpng\pngwutil.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="particlesystem\scr\Particle.cpp" />
+    <ClCompile Include="particlesystem\scr\ParticleContext.cpp" />
+    <ClCompile Include="particlesystem\scr\ParticleSystem.cpp" />
+    <ClCompile Include="particlesystem\scr\PBehaviorModel.cpp" />
+    <ClCompile Include="particlesystem\scr\PDomain.cpp" />
+    <ClCompile Include="particlesystem\scr\PSManager.cpp" />
+    <ClCompile Include="PS3\CIrrDevicePS3.cpp" />
+    <ClCompile Include="PS3\CPS3Driver.cpp" />
+    <ClCompile Include="PS3\CPS3NormalMapRenderer.cpp" />
+    <ClCompile Include="PS3\CPS3ParallaxMapRenderer.cpp" />
+    <ClCompile Include="PS3\CPS3ShaderMaterialRenderer.cpp" />
+    <ClCompile Include="PS3\CPS3SLMaterialRenderer.cpp" />
+    <ClCompile Include="PS3\CPS3Texture.cpp" />
+    <ClCompile Include="PVRT\PVRTDecompress.cpp" />
+    <ClCompile Include="S3DVertexComponentArrays.cpp" />
+    <ClCompile Include="SProcessBufferBindingBase.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Wii\CWiiMaterialRenderer.cpp" />
+    <ClCompile Include="Wii\CWiiMemMgr.cpp" />
+    <ClCompile Include="Wii\CWiiTexture.cpp" />
+    <ClCompile Include="Wii\WiiTextureConv.cpp" />
+    <ClCompile Include="zlib\adler32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="zlib\compress.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="zlib\crc32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="zlib\deflate.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="zlib\inffast.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="zlib\inflate.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="zlib\inftrees.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="zlib\trees.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="zlib\uncompr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="zlib\zutil.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded - IrrLicht Edition|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - iPhoneEmulation|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\changes.txt" />
+    <Text Include="..\..\readme.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

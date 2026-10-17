@@ -1,0 +1,178 @@
+// saved by AuroraGT v0.1.0.2 (SpriteEditor v0.1.0.5)
+////////////////////////////////////////////////////////////////////////////////
+/*SPRITE*/ {
+
+    VERSION 0001
+
+    // Images:  1
+    // Modules: 15
+    // Frames:  15
+    // Anims:   1
+
+////////////////////////////////////////////////////////////////////////////////
+// Images...
+// <Image> := IMAGE [id] "file" [ALPHA "alpha_file"] [TRANSP transp_color]
+
+    IMAGE 0x0000 ".\iceball_big.tga" TRANSP 0x00FF00FF // 0  size: 512 x 256  palettes: 1
+
+////////////////////////////////////////////////////////////////////////////////
+// Modules...
+// <Modules> := MODULES { <MD1> <MD2> ... }
+// <MDi>     := MD id Type [params] ["desc"]
+// Type      := MD_IMAGE | MD_RECT | ...
+// [params]  := if (Type == MD_IMAGE)     -> image x y width height
+//              if (Type == MD_RECT)      -> color width height
+//              if (Type == MD_FILL_RECT) -> color width height
+//              if (Type == MD_ARC)       -> color width height startAngle arcAngle
+//              if (Type == MD_FILL_ARC)  -> color width height startAngle arcAngle
+//              if (Type == MD_MARKER)    -> color width height
+//              if (Type == MD_TRIANGLE)  -> color p2X p2Y p3X p3Y
+//              if (Type == MD_FILL_TRIANGLE)  -> color p2X p2Y p3X p3Y
+
+    MODULES
+    {
+        MD	0x1000	MD_IMAGE	0	5	0	88	85
+        MD	0x1001	MD_IMAGE	0	104	2	88	85
+        MD	0x1002	MD_IMAGE	0	203	4	88	85
+        MD	0x1003	MD_IMAGE	0	302	5	88	85
+        MD	0x1004	MD_IMAGE	0	407	5	88	85
+        MD	0x100A	MD_IMAGE	0	8	165	88	85
+        MD	0x100B	MD_IMAGE	0	106	167	88	85
+        MD	0x100C	MD_IMAGE	0	205	169	88	85
+        MD	0x100D	MD_IMAGE	0	300	169	88	85
+        MD	0x100E	MD_IMAGE	0	398	169	88	85
+        MD	0x1005	MD_IMAGE	0	9	95	82	69
+        MD	0x1006	MD_IMAGE	0	109	96	82	69
+        MD	0x1007	MD_IMAGE	0	207	96	82	69
+        MD	0x1008	MD_IMAGE	0	310	98	82	69
+        MD	0x1009	MD_IMAGE	0	409	95	82	69
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+// Frames...
+// <Frame> := FRAME ["desc"] { id <RC1> [<RC2> ...] <FM1> [<FM2> ...] }
+// <RCi>   := RC x1 y1 x2 y2
+// <FMi>   := FM module_or_frame_id ox oy [FLAGS hex_flags] [+Flags]
+// Flags   := HYPER_FM | FLIP_X | FLIP_Y | ROT_90 | FREE_ROT
+
+    FRAME "" // Index = 0, FModules = 1
+    {
+        0x2000
+        FM	0x1000	-47	-41
+    }
+
+    FRAME "" // Index = 1, FModules = 1
+    {
+        0x2001
+        FM	0x1001	-41	-41
+    }
+
+    FRAME "" // Index = 2, FModules = 1
+    {
+        0x2002
+        FM	0x1002	-43	-41
+    }
+
+    FRAME "" // Index = 3, FModules = 1
+    {
+        0x2003
+        FM	0x1003	-44	-42
+    }
+
+    FRAME "" // Index = 4, FModules = 1
+    {
+        0x2004
+        FM	0x1004	-44	-41
+    }
+
+    FRAME "" // Index = 5, FModules = 1
+    {
+        0x2005
+        FM	0x100A	-41	-43
+    }
+
+    FRAME "" // Index = 6, FModules = 1
+    {
+        0x2006
+        FM	0x100B	-39	-44
+    }
+
+    FRAME "first_tail" // Index = 7, FModules = 1
+    {
+        0x2007
+        FM	0x100C	-37	-42
+    }
+
+    FRAME "" // Index = 8, FModules = 1
+    {
+        0x2008
+        FM	0x100D	-37	-43
+    }
+
+    FRAME "" // Index = 9, FModules = 1
+    {
+        0x2009
+        FM	0x100E	-40	-43
+    }
+
+    FRAME "" // Index = 10, FModules = 1
+    {
+        0x200A
+        FM	0x1005	-41	-41
+    }
+
+    FRAME "" // Index = 11, FModules = 1
+    {
+        0x200B
+        FM	0x1006	-41	-41
+    }
+
+    FRAME "" // Index = 12, FModules = 1
+    {
+        0x200C
+        FM	0x1007	-41	-41
+    }
+
+    FRAME "" // Index = 13, FModules = 1
+    {
+        0x200D
+        FM	0x1008	-41	-41
+    }
+
+    FRAME "" // Index = 14, FModules = 1
+    {
+        0x200E
+        FM	0x1009	-41	-41
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+// Animations...
+// <Anim> := ANIM ["desc"] { id [<AF1> <AF2> ...] }
+// <AFi>  := AF frame_id time ox oy [FLAGS hex_flags] [+Flags]
+// Flags  := FLIP_X | FLIP_Y | ROT_90
+
+    ANIM "ice" // Index = 0, AFrames = 16
+    {
+        0x3000
+        AF	0x2000	2	0	0
+        AF	0x2001	2	0	0
+        AF	0x2002	2	0	0
+        AF	0x2003	2	0	0
+        AF	0x2004	2	0	0
+        AF	0x2005	2	0	0
+        AF	0x2006	2	0	0
+        AF	0x2007	2	0	0
+        AF	0x2008	2	0	0
+        AF	0x2000	2	0	0
+        AF	0x2001	2	0	0
+        AF	0x2002	2	0	0
+        AF	0x2004	2	0	0
+        AF	0x2005	2	0	0
+        AF	0x2006	2	0	0
+        AF	0x2007	2	0	0
+    }
+
+    SPRITE_END
+
+} // SPRITE
+////////////////////////////////////////////////////////////////////////////////

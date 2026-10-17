@@ -1,0 +1,86 @@
+FILE_FORMAT_TEMPLATE "GP_Data"
+{
+//  TYPE BINARY
+
+	CHUNKS
+	{
+		sprite.set_options : BS_MODULES | BS_FRAMES | BS_ANIMS | BS_MODULES_XY | BS_MODULES_XY_SHORT | BS_MODULES_WH_SHORT | BS_FM_OFF_SHORT | BS_FRAME_RECTS
+		sprite.set_pixel_format : _8888
+		sprite.set_data_format : I256
+
+		//////////////////////////////////////////////////
+		// version
+
+		utils.write : TYPE_UINT16 0x05DF
+		utils.write : TYPE_UINT32 0x0001853B		
+
+		//////////////////////////////////////////////////
+		// Modules...
+		
+		sprite.number_of_modules : TYPE_UINT16
+		sprite.for_each_module
+			module.type : TYPE_UINT8		
+			module.x : TYPE_UINT16
+			module.y : TYPE_UINT16
+			module.w : TYPE_UINT16
+			module.h : TYPE_UINT16			
+			
+		//////////////////////////////////////////////////
+		// FModules...
+
+		sprite.number_of_fmodules : TYPE_UINT16
+		sprite.for_each_fmodule
+			fmodule.module_index : TYPE_UINT16
+			fmodule.offset_x : TYPE_INT16
+			fmodule.offset_y : TYPE_INT16
+			fmodule.flags : TYPE_UINT8
+
+		//////////////////////////////////////////////////
+		// Frames...
+		
+		sprite.number_of_frects : TYPE_UINT16								
+		sprite.for_each_frect
+			frect.x : TYPE_INT16
+			frect.y : TYPE_INT16
+			frect.w : TYPE_INT16
+			frect.h : TYPE_INT16
+
+		sprite.number_of_frames : TYPE_UINT16		
+		sprite.for_each_frame
+			frame.number_of_fmodules : TYPE_UINT16
+			frame.first_fmodule : TYPE_INT16
+			frame.number_of_frects : TYPE_UINT8
+
+		sprite.for_each_frame
+			frame.rc_x : TYPE_INT16
+			frame.rc_y : TYPE_INT16
+			frame.rc_w : TYPE_INT16
+			frame.rc_h : TYPE_INT16		
+
+		//////////////////////////////////////////////////
+		// AFrames...
+		
+		sprite.number_of_aframes : TYPE_UINT16
+		sprite.for_each_aframe
+			aframe.frame_index : TYPE_UINT8
+			aframe.time : TYPE_UINT8
+			aframe.offset_x : TYPE_INT8
+			aframe.offset_y : TYPE_INT8
+			aframe.flags : TYPE_UINT8
+
+
+		//////////////////////////////////////////////////
+		// Anims...
+
+		sprite.number_of_anims : TYPE_UINT16
+		sprite.for_each_anim
+			anim.number_of_aframes : TYPE_UINT16
+			anim.first_aframe : TYPE_INT16
+
+		//////////////////////////////////////////////////
+
+		sprite.module_images : FFT_TYPE_DATA
+
+		//////////////////////////////////////////////////
+	}
+}

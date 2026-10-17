@@ -1,0 +1,114 @@
+// saved by AuroraGT v0.1.0.2 (SpriteEditor v0.1.0.5)
+////////////////////////////////////////////////////////////////////////////////
+/*SPRITE*/ {
+
+    VERSION 0001
+
+    // Images:  1
+    // Modules: 5
+    // Frames:  4
+    // Anims:   1
+
+////////////////////////////////////////////////////////////////////////////////
+// Images...
+// <Image> := IMAGE [id] "file" [ALPHA "alpha_file"] [TRANSP transp_color]
+
+    IMAGE 0x0000 ".\dizzy_effect.tga" TRANSP 0x00FF00FF // 0  size: 64 x 64  palettes: 1
+
+////////////////////////////////////////////////////////////////////////////////
+// Modules...
+// <Modules> := MODULES { <MD1> <MD2> ... }
+// <MDi>     := MD id Type [params] ["desc"]
+// Type      := MD_IMAGE | MD_RECT | ...
+// [params]  := if (Type == MD_IMAGE)     -> image x y width height
+//              if (Type == MD_RECT)      -> color width height
+//              if (Type == MD_FILL_RECT) -> color width height
+//              if (Type == MD_ARC)       -> color width height startAngle arcAngle
+//              if (Type == MD_FILL_ARC)  -> color width height startAngle arcAngle
+//              if (Type == MD_MARKER)    -> color width height
+//              if (Type == MD_TRIANGLE)  -> color p2X p2Y p3X p3Y
+//              if (Type == MD_FILL_TRIANGLE)  -> color p2X p2Y p3X p3Y
+
+    MODULES
+    {
+        MD	0x1000	MD_IMAGE	0	3	5	7	7
+        MD	0x1001	MD_IMAGE	0	13	5	7	7
+        MD	0x1002	MD_IMAGE	0	23	6	5	5
+        MD	0x1003	MD_IMAGE	0	31	5	6	6
+        MD	0x1004	MD_IMAGE	0	38	5	6	6
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+// Frames...
+// <Frame> := FRAME ["desc"] { id <RC1> [<RC2> ...] <FM1> [<FM2> ...] }
+// <RCi>   := RC x1 y1 x2 y2
+// <FMi>   := FM module_or_frame_id ox oy [FLAGS hex_flags] [+Flags]
+// Flags   := HYPER_FM | FLIP_X | FLIP_Y | ROT_90 | FREE_ROT
+
+    FRAME "" // Index = 0, FModules = 7
+    {
+        0x2000
+        FM	0x1000	-13	7
+        FM	0x1000	2	4
+        FM	0x1001	13	-6
+        FM	0x1003	-3	-12
+        FM	0x1004	-14	-7
+        FM	0x1002	9	-13
+        FM	0x1002	-19	3
+    }
+
+    FRAME "" // Index = 1, FModules = 7
+    {
+        0x2001
+        FM	0x1000	-11	8
+        FM	0x1000	4	3
+        FM	0x1001	14	-8
+        FM	0x1003	-4	-12
+        FM	0x1004	-15	-5
+        FM	0x1002	7	-13
+        FM	0x1002	-19	5
+    }
+
+    FRAME "" // Index = 2, FModules = 7
+    {
+        0x2002
+        FM	0x1000	-7	8
+        FM	0x1000	6	1
+        FM	0x1001	15	-11
+        FM	0x1003	-6	-10
+        FM	0x1004	-16	-3
+        FM	0x1002	5	-13
+        FM	0x1002	-17	7
+    }
+
+    FRAME "" // Index = 3, FModules = 7
+    {
+        0x2003
+        FM	0x1000	-2	6
+        FM	0x1000	-14	7
+        FM	0x1000	10	-1
+        FM	0x1003	-8	-9
+        FM	0x1004	-17	-1
+        FM	0x1002	3	-13
+        FM	0x1002	14	-12
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+// Animations...
+// <Anim> := ANIM ["desc"] { id [<AF1> <AF2> ...] }
+// <AFi>  := AF frame_id time ox oy [FLAGS hex_flags] [+Flags]
+// Flags  := FLIP_X | FLIP_Y | ROT_90
+
+    ANIM "dizzy" // Index = 0, AFrames = 4
+    {
+        0x3000
+        AF	0x2000	2	0	0
+        AF	0x2001	2	0	0
+        AF	0x2002	2	0	0
+        AF	0x2003	2	0	0
+    }
+
+    SPRITE_END
+
+} // SPRITE
+////////////////////////////////////////////////////////////////////////////////

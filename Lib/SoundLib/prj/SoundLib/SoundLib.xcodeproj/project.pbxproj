@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA747D9F0F9514B9006C5449 /* SoundLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* SoundLib_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		BFB06F4F109707F6002D1ACA /* iPhoneMusicPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = BFB06F4D109707F6002D1ACA /* iPhoneMusicPlayer.h */; };
+		BFB06F50109707F6002D1ACA /* iPhoneMusicPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = BFB06F4E109707F6002D1ACA /* iPhoneMusicPlayer.mm */; };
+		CE54F79F0FFA5F1600606D07 /* SourcesPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE54F79E0FFA5F1600606D07 /* SourcesPool.cpp */; };
+		CE9117DE0FF8FA46005E1AE0 /* CSoundDecoderMSWAV.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE9117DD0FF8FA46005E1AE0 /* CSoundDecoderMSWAV.cpp */; };
+		CE9117E20FF8FA57005E1AE0 /* CSoundDecoderMSWAV.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9117DF0FF8FA57005E1AE0 /* CSoundDecoderMSWAV.h */; };
+		CE9117E30FF8FA57005E1AE0 /* ISoundFile.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9117E00FF8FA57005E1AE0 /* ISoundFile.h */; };
+		CE9117E40FF8FA57005E1AE0 /* MSHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9117E10FF8FA57005E1AE0 /* MSHeaders.h */; };
+		CE9C5E700FF3608500C237EB /* AdpcmDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E630FF3608500C237EB /* AdpcmDecoder.h */; };
+		CE9C5E710FF3608500C237EB /* AdpcmState.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E640FF3608500C237EB /* AdpcmState.h */; };
+		CE9C5E720FF3608500C237EB /* AudioDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E650FF3608500C237EB /* AudioDefs.h */; };
+		CE9C5E730FF3608500C237EB /* CSound.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E660FF3608500C237EB /* CSound.h */; };
+		CE9C5E740FF3608500C237EB /* CSoundData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E670FF3608500C237EB /* CSoundData.h */; };
+		CE9C5E750FF3608500C237EB /* CSoundDecoderADPCM.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E680FF3608500C237EB /* CSoundDecoderADPCM.h */; };
+		CE9C5E760FF3608500C237EB /* CSoundDecoderMPC.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E690FF3608500C237EB /* CSoundDecoderMPC.h */; };
+		CE9C5E770FF3608500C237EB /* CSoundDecoderMSADPCM.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E6A0FF3608500C237EB /* CSoundDecoderMSADPCM.h */; };
+		CE9C5E780FF3608500C237EB /* CSoundDecoderPCM.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E6B0FF3608500C237EB /* CSoundDecoderPCM.h */; };
+		CE9C5E7A0FF3608500C237EB /* ISoundDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E6D0FF3608500C237EB /* ISoundDecoder.h */; };
+		CE9C5E7B0FF3608500C237EB /* StaticSound.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E6E0FF3608500C237EB /* StaticSound.h */; };
+		CE9C5E7C0FF3608500C237EB /* StreamingSound.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9C5E6F0FF3608500C237EB /* StreamingSound.h */; };
+		CEAD81150FF4BE3C00B780B7 /* BaseSoundManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAD81140FF4BE3C00B780B7 /* BaseSoundManager.cpp */; };
+		CEAD81170FF4BE4900B780B7 /* BaseSoundManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CEAD81160FF4BE4900B780B7 /* BaseSoundManager.h */; };
+		CED9DDFE0FF111AE00DAABED /* AdpcmDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED9DDF30FF111AE00DAABED /* AdpcmDecoder.cpp */; };
+		CED9DDFF0FF111AE00DAABED /* AdpcmState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED9DDF40FF111AE00DAABED /* AdpcmState.cpp */; };
+		CED9DE000FF111AE00DAABED /* CSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED9DDF50FF111AE00DAABED /* CSound.cpp */; };
+		CED9DE010FF111AE00DAABED /* CSoundData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED9DDF60FF111AE00DAABED /* CSoundData.cpp */; };
+		CED9DE020FF111AE00DAABED /* CSoundDecoderADPCM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED9DDF70FF111AE00DAABED /* CSoundDecoderADPCM.cpp */; };
+		CED9DE030FF111AE00DAABED /* CSoundDecoderMPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED9DDF80FF111AE00DAABED /* CSoundDecoderMPC.cpp */; };
+		CED9DE040FF111AE00DAABED /* CSoundDecoderMSADPCM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED9DDF90FF111AE00DAABED /* CSoundDecoderMSADPCM.cpp */; };
+		CED9DE050FF111AE00DAABED /* CSoundDecoderPCM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED9DDFA0FF111AE00DAABED /* CSoundDecoderPCM.cpp */; };
+		CED9DE070FF111AE00DAABED /* StaticSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED9DDFC0FF111AE00DAABED /* StaticSound.cpp */; };
+		CED9DE080FF111AE00DAABED /* StreamingSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED9DDFD0FF111AE00DAABED /* StreamingSound.cpp */; };
+		CED9DE170FF1126500DAABED /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED9DE160FF1126500DAABED /* OpenAL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA747D9E0F9514B9006C5449 /* SoundLib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundLib_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BFB06F4D109707F6002D1ACA /* iPhoneMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iPhoneMusicPlayer.h; path = ../../src/iPhoneMusicPlayer.h; sourceTree = SOURCE_ROOT; };
+		BFB06F4E109707F6002D1ACA /* iPhoneMusicPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = iPhoneMusicPlayer.mm; path = ../../src/iPhoneMusicPlayer.mm; sourceTree = SOURCE_ROOT; };
+		CE54F79E0FFA5F1600606D07 /* SourcesPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SourcesPool.cpp; path = ../../src/SourcesPool.cpp; sourceTree = SOURCE_ROOT; };
+		CE9117DD0FF8FA46005E1AE0 /* CSoundDecoderMSWAV.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CSoundDecoderMSWAV.cpp; path = ../../src/CSoundDecoderMSWAV.cpp; sourceTree = SOURCE_ROOT; };
+		CE9117DF0FF8FA57005E1AE0 /* CSoundDecoderMSWAV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSoundDecoderMSWAV.h; path = ../../include/CSoundDecoderMSWAV.h; sourceTree = SOURCE_ROOT; };
+		CE9117E00FF8FA57005E1AE0 /* ISoundFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISoundFile.h; path = ../../include/ISoundFile.h; sourceTree = SOURCE_ROOT; };
+		CE9117E10FF8FA57005E1AE0 /* MSHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSHeaders.h; path = ../../include/MSHeaders.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E630FF3608500C237EB /* AdpcmDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdpcmDecoder.h; path = ../../include/AdpcmDecoder.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E640FF3608500C237EB /* AdpcmState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdpcmState.h; path = ../../include/AdpcmState.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E650FF3608500C237EB /* AudioDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDefs.h; path = ../../include/AudioDefs.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E660FF3608500C237EB /* CSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSound.h; path = ../../include/CSound.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E670FF3608500C237EB /* CSoundData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSoundData.h; path = ../../include/CSoundData.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E680FF3608500C237EB /* CSoundDecoderADPCM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSoundDecoderADPCM.h; path = ../../include/CSoundDecoderADPCM.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E690FF3608500C237EB /* CSoundDecoderMPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSoundDecoderMPC.h; path = ../../include/CSoundDecoderMPC.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E6A0FF3608500C237EB /* CSoundDecoderMSADPCM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSoundDecoderMSADPCM.h; path = ../../include/CSoundDecoderMSADPCM.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E6B0FF3608500C237EB /* CSoundDecoderPCM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSoundDecoderPCM.h; path = ../../include/CSoundDecoderPCM.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E6D0FF3608500C237EB /* ISoundDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISoundDecoder.h; path = ../../include/ISoundDecoder.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E6E0FF3608500C237EB /* StaticSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StaticSound.h; path = ../../include/StaticSound.h; sourceTree = SOURCE_ROOT; };
+		CE9C5E6F0FF3608500C237EB /* StreamingSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreamingSound.h; path = ../../include/StreamingSound.h; sourceTree = SOURCE_ROOT; };
+		CEAD81140FF4BE3C00B780B7 /* BaseSoundManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseSoundManager.cpp; path = ../../src/BaseSoundManager.cpp; sourceTree = SOURCE_ROOT; };
+		CEAD81160FF4BE4900B780B7 /* BaseSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseSoundManager.h; path = ../../include/BaseSoundManager.h; sourceTree = SOURCE_ROOT; };
+		CED9DDF30FF111AE00DAABED /* AdpcmDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AdpcmDecoder.cpp; path = ../../src/AdpcmDecoder.cpp; sourceTree = SOURCE_ROOT; };
+		CED9DDF40FF111AE00DAABED /* AdpcmState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AdpcmState.cpp; path = ../../src/AdpcmState.cpp; sourceTree = SOURCE_ROOT; };
+		CED9DDF50FF111AE00DAABED /* CSound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CSound.cpp; path = ../../src/CSound.cpp; sourceTree = SOURCE_ROOT; };
+		CED9DDF60FF111AE00DAABED /* CSoundData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CSoundData.cpp; path = ../../src/CSoundData.cpp; sourceTree = SOURCE_ROOT; };
+		CED9DDF70FF111AE00DAABED /* CSoundDecoderADPCM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CSoundDecoderADPCM.cpp; path = ../../src/CSoundDecoderADPCM.cpp; sourceTree = SOURCE_ROOT; };
+		CED9DDF80FF111AE00DAABED /* CSoundDecoderMPC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CSoundDecoderMPC.cpp; path = ../../src/CSoundDecoderMPC.cpp; sourceTree = SOURCE_ROOT; };
+		CED9DDF90FF111AE00DAABED /* CSoundDecoderMSADPCM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CSoundDecoderMSADPCM.cpp; path = ../../src/CSoundDecoderMSADPCM.cpp; sourceTree = SOURCE_ROOT; };
+		CED9DDFA0FF111AE00DAABED /* CSoundDecoderPCM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CSoundDecoderPCM.cpp; path = ../../src/CSoundDecoderPCM.cpp; sourceTree = SOURCE_ROOT; };
+		CED9DDFC0FF111AE00DAABED /* StaticSound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StaticSound.cpp; path = ../../src/StaticSound.cpp; sourceTree = SOURCE_ROOT; };
+		CED9DDFD0FF111AE00DAABED /* StreamingSound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StreamingSound.cpp; path = ../../src/StreamingSound.cpp; sourceTree = SOURCE_ROOT; };
+		CED9DE160FF1126500DAABED /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = /System/Library/Frameworks/OpenAL.framework; sourceTree = "<absolute>"; };
+		D2AAC07E0554694100DB518D /* libSoundLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSoundLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				CED9DE170FF1126500DAABED /* OpenAL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libSoundLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* SoundLib */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = SoundLib;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CED9DE160FF1126500DAABED /* OpenAL.framework */,
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BFB06F4D109707F6002D1ACA /* iPhoneMusicPlayer.h */,
+				BFB06F4E109707F6002D1ACA /* iPhoneMusicPlayer.mm */,
+				CE54F79E0FFA5F1600606D07 /* SourcesPool.cpp */,
+				CE9117DF0FF8FA57005E1AE0 /* CSoundDecoderMSWAV.h */,
+				CE9117E00FF8FA57005E1AE0 /* ISoundFile.h */,
+				CE9117E10FF8FA57005E1AE0 /* MSHeaders.h */,
+				CE9117DD0FF8FA46005E1AE0 /* CSoundDecoderMSWAV.cpp */,
+				CEAD81160FF4BE4900B780B7 /* BaseSoundManager.h */,
+				CEAD81140FF4BE3C00B780B7 /* BaseSoundManager.cpp */,
+				CE9C5E630FF3608500C237EB /* AdpcmDecoder.h */,
+				CE9C5E640FF3608500C237EB /* AdpcmState.h */,
+				CE9C5E650FF3608500C237EB /* AudioDefs.h */,
+				CE9C5E660FF3608500C237EB /* CSound.h */,
+				CE9C5E670FF3608500C237EB /* CSoundData.h */,
+				CE9C5E680FF3608500C237EB /* CSoundDecoderADPCM.h */,
+				CE9C5E690FF3608500C237EB /* CSoundDecoderMPC.h */,
+				CE9C5E6A0FF3608500C237EB /* CSoundDecoderMSADPCM.h */,
+				CE9C5E6B0FF3608500C237EB /* CSoundDecoderPCM.h */,
+				CE9C5E6D0FF3608500C237EB /* ISoundDecoder.h */,
+				CE9C5E6E0FF3608500C237EB /* StaticSound.h */,
+				CE9C5E6F0FF3608500C237EB /* StreamingSound.h */,
+				CED9DDF30FF111AE00DAABED /* AdpcmDecoder.cpp */,
+				CED9DDF40FF111AE00DAABED /* AdpcmState.cpp */,
+				CED9DDF50FF111AE00DAABED /* CSound.cpp */,
+				CED9DDF60FF111AE00DAABED /* CSoundData.cpp */,
+				CED9DDF70FF111AE00DAABED /* CSoundDecoderADPCM.cpp */,
+				CED9DDF80FF111AE00DAABED /* CSoundDecoderMPC.cpp */,
+				CED9DDF90FF111AE00DAABED /* CSoundDecoderMSADPCM.cpp */,
+				CED9DDFA0FF111AE00DAABED /* CSoundDecoderPCM.cpp */,
+				CED9DDFC0FF111AE00DAABED /* StaticSound.cpp */,
+				CED9DDFD0FF111AE00DAABED /* StreamingSound.cpp */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* SoundLib_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* SoundLib_Prefix.pch in Headers */,
+				CE9C5E700FF3608500C237EB /* AdpcmDecoder.h in Headers */,
+				CE9C5E710FF3608500C237EB /* AdpcmState.h in Headers */,
+				CE9C5E720FF3608500C237EB /* AudioDefs.h in Headers */,
+				CE9C5E730FF3608500C237EB /* CSound.h in Headers */,
+				CE9C5E740FF3608500C237EB /* CSoundData.h in Headers */,
+				CE9C5E750FF3608500C237EB /* CSoundDecoderADPCM.h in Headers */,
+				CE9C5E760FF3608500C237EB /* CSoundDecoderMPC.h in Headers */,
+				CE9C5E770FF3608500C237EB /* CSoundDecoderMSADPCM.h in Headers */,
+				CE9C5E780FF3608500C237EB /* CSoundDecoderPCM.h in Headers */,
+				CE9C5E7A0FF3608500C237EB /* ISoundDecoder.h in Headers */,
+				CE9C5E7B0FF3608500C237EB /* StaticSound.h in Headers */,
+				CE9C5E7C0FF3608500C237EB /* StreamingSound.h in Headers */,
+				CEAD81170FF4BE4900B780B7 /* BaseSoundManager.h in Headers */,
+				CE9117E20FF8FA57005E1AE0 /* CSoundDecoderMSWAV.h in Headers */,
+				CE9117E30FF8FA57005E1AE0 /* ISoundFile.h in Headers */,
+				CE9117E40FF8FA57005E1AE0 /* MSHeaders.h in Headers */,
+				BFB06F4F109707F6002D1ACA /* iPhoneMusicPlayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* SoundLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "SoundLib" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundLib;
+			productName = SoundLib;
+			productReference = D2AAC07E0554694100DB518D /* libSoundLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "SoundLib" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* SoundLib */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* SoundLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED9DDFE0FF111AE00DAABED /* AdpcmDecoder.cpp in Sources */,
+				CED9DDFF0FF111AE00DAABED /* AdpcmState.cpp in Sources */,
+				CED9DE000FF111AE00DAABED /* CSound.cpp in Sources */,
+				CED9DE010FF111AE00DAABED /* CSoundData.cpp in Sources */,
+				CED9DE020FF111AE00DAABED /* CSoundDecoderADPCM.cpp in Sources */,
+				CED9DE030FF111AE00DAABED /* CSoundDecoderMPC.cpp in Sources */,
+				CED9DE040FF111AE00DAABED /* CSoundDecoderMSADPCM.cpp in Sources */,
+				CED9DE050FF111AE00DAABED /* CSoundDecoderPCM.cpp in Sources */,
+				CED9DE070FF111AE00DAABED /* StaticSound.cpp in Sources */,
+				CED9DE080FF111AE00DAABED /* StreamingSound.cpp in Sources */,
+				CEAD81150FF4BE3C00B780B7 /* BaseSoundManager.cpp in Sources */,
+				CE9117DE0FF8FA46005E1AE0 /* CSoundDecoderMSWAV.cpp in Sources */,
+				CE54F79F0FFA5F1600606D07 /* SourcesPool.cpp in Sources */,
+				BFB06F50109707F6002D1ACA /* iPhoneMusicPlayer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/SoundLib.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SoundLib_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = TARGET_OS_IPHONE;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../include\"",
+					"\"$(SRCROOT)/../../../Irrlicht/include\"",
+					"\"$(SRCROOT)/../../../../src\"",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = SoundLib;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/SoundLib.dst;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SoundLib_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = TARGET_OS_IPHONE;
+				GCC_THUMB_SUPPORT = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../include\"",
+					"\"$(SRCROOT)/../../../Irrlicht/include\"",
+					"\"$(SRCROOT)/../../../../src\"",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
+				PRODUCT_NAME = SoundLib;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Valeri Vuchov";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../include\"";
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "79DEE065-D1CB-4E4C-B292-06532EB46ADE";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Valeri Vuchov";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = TARGET_OS_IPHONE;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = 4.0;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../include\"",
+					"\"$(SRCROOT)/../../../Irrlicht/include\"",
+					"\"$(SRCROOT)/../../../../src\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PROVISIONING_PROFILE = "79DEE065-D1CB-4E4C-B292-06532EB46ADE";
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "SoundLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "SoundLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

@@ -1,0 +1,618 @@
+<!-- Game Objects Configuration File -->
+<config>
+<!-- Secret letters: 
+! - read only property
+# - do not show and edit in editor 
+@ - animation list
+$ - typelist
+^ - objects in scene list -->
+
+	<typelists>	
+		<attributes>
+			<stringwarray name="LevelList" count="6" value0="level_01" value1="level_02" value2="level_hawaii" value3="level_hawaii_tutorial" value4="level_hawaii_03" value5="mc_level_01"/>
+			<stringwarray name="TriggerType" count="4" value0="OnEnter" value1="OnExit" value2="OnPickObject" value3="OnDash"/>
+			<stringwarray name="EffectType" count="1" value0="None"/>
+			<stringwarray name="DoorOpenMethod" count="2" value0="From Code" value1="From Animation"/>
+			<stringwarray name="PowerUpType" count="8" value0="Shotgun Ammo" value1="Shotgun" value2="Grenade" value3="AssaultRifle" value4="AssaultRifle Ammo" value5="Sniper" value6="Sniper Ammo" value7="Plasma Gun"/>
+			<stringwarray name="FiendType" count="4" value0="On Ground" value1="On Wall" value2="On Ceiling"  value3="On Ceiling Static"/>
+			<stringwarray name="ConsoleType" count="3" value0="Unlock Door" value1="Control" value2="Drop Container"/>
+			<stringwarray name="CorruptedWeapon" count="3" value0="Pistol" value1="Shotgun" value2="Assault Rifle"/>
+			<stringwarray name="MUSICID" count="2" value0="h3theme" value1="theme"/>
+			<stringwarray name="MessageFace" count="2" value0="Girl" value1="Marine"/>
+			<stringwarray name="PlasmaPipeType" count="2" value0="Normal" value1="Broken"/>
+			<stringwarray name="MessageFace" count="2" value0="Girl" value1="Marine"/>
+		</attributes>
+
+	</typelists>
+	
+	<objects>
+		<object>
+			<attributes>
+				<string name="Name" value="Room"/>
+				<string name="!GameType" value="Geometry"/>		
+				<string name="MeshFile" value=""/>											
+				<bool name="Wireframe" value="false"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Collisions"/>
+				<string name="!GameType" value="Collisions"/>		
+				<string name="MeshFile" value=""/>											
+				<bool name="Wireframe" value="false"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="NavMesh"/>
+				<string name="!GameType" value="NavMesh"/>		
+				<string name="MeshFile" value=""/>
+				<int name="^LinkToTrain^Train" value="-1"/>
+				<bool name="Wireframe" value="false"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Door"/>
+				<string name="!GameType" value="Door"/>
+				<string name="MeshFile" value="..\entities\meshes_bin\door_mesh.bdae"/>
+				<string name="AnimationFile" value="..\entities\meshes_bin\door_anims.bdae"/>
+				<string name="@Anim" value=""/>
+				<int name="^Room0^Geometry" value="-1"/>
+				<int name="^Room1^Geometry" value="-1"/>
+				<!--<int name="Length" value="0"/>
+				<int name="OpenSteps" value="0"/>
+				<int name="$DoorOpenMethod" value="1"/>-->
+				<float name="OpenDistance" value="1200"/>-->
+				<float name="OpenDistanceCombat" value="300"/>-->
+				<bool name="DoorLocked" value="false"/>
+				<bool name="Inside Room" value="false"/>
+				<bool name="Wireframe" value="false"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="StaticMesh"/>
+				<string name="!GameType" value="StaticObject"/>		
+				<string name="MeshFile" value=""/>												
+				<bool name="Wireframe" value="false"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="AnimatedMesh"/>
+				<string name="!GameType" value="AnimatedObject"/>		
+				<string name="MeshFile" value=""/>							
+				<string name="AnimationFile" value=""/>	
+				<string name="@Anim" value="0"/>					
+				<bool name="Loop" value="true"/>	
+				<bool name="Wireframe" value="false"/>
+				<bool name="IFLAnimation" value="false"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Enemy"/>
+				<string name="!GameType" value="Enemy"/>
+				<string name="MeshFile" value="..\entities\meshes_bin\daemon_mesh.bdae"/>
+				<string name="AnimationFile" value="..\entities\meshes_bin\daemon_anims.bdae"/>
+				<string name="@Anim" value=""/>
+				<int name="^PatrolPoint^WayPoint" value="-1"/>
+				<int name="^Crate^Crate" value="-1"/>
+				<float name="Health" value="20.0f"/>
+				<int name="Respawn Counter" value="0"/>
+				<float name="Speed" value="100.0f"/>
+				<int name="Audio_Radius" value="0"/>
+				<int name="Patrol_Radius" value="2400"/>
+				<int name="Patrol_Angle" value="90"/>
+				<bool name="Patrol_Walk" value="true"/>
+				<int name="Aware_Radius" value="2500"/>
+				<int name="Aware_Angle" value="160"/>
+				<bool name="WaitSpawn" value="false"/>
+				<bool name="Imobile" value="false"/>
+				<bool name="NoPowerUp" value="false"/>
+				<bool name="Wireframe" value="false"/>
+				
+			</attributes>		
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Fiend"/>
+				<string name="!GameType" value="Fiend"/>
+				<string name="MeshFile" value="..\entities\meshes_bin\fiend_mesh.bdae"/>
+				<string name="AnimationFile" value="..\entities\meshes_bin\fiend_anims.bdae"/>
+				<string name="@Anim" value=""/>
+				<int name="^PatrolPoint^WayPoint" value="-1"/>				
+				<int name="$FiendType" value="0"/>
+				<float name="Health" value="100.0f"/>
+				<int name="Respawn Counter" value="0"/>
+				<float name="Speed" value="100.0f"/>
+				<int name="Audio_Radius" value="0"/>
+				<int name="Patrol_Radius" value="300"/>
+				<int name="Patrol_Angle" value="90"/>				
+				<bool name="Patrol_Walk" value="true"/>
+				<int name="Aware_Radius" value="600"/>
+				<int name="Aware_Angle" value="160"/>
+				<bool name="WaitSpawn" value="false"/>
+				<bool name="FakeDead" value="false"/>
+				<bool name="NoCombatCloseDoor" value="false"/>
+				<bool name="Wireframe" value="false"/>
+				
+			</attributes>		
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="MiniFiend"/>
+				<string name="!GameType" value="MiniFiend"/>
+				<string name="MeshFile" value="..\entities\meshes_bin\fiend_mini_mesh.bdae"/>
+				<string name="AnimationFile" value="..\entities\meshes_bin\fiend_anims.bdae"/>
+				<string name="@Anim" value=""/>
+				<int name="^PatrolPoint^WayPoint" value="-1"/>				
+				<float name="Health" value="10.0f"/>
+				<float name="Speed" value="100.0f"/>
+				<int name="Audio_Radius" value="0"/>
+				<int name="Patrol_Radius" value="300"/>
+				<int name="Patrol_Angle" value="90"/>				
+				<bool name="Patrol_Walk" value="true"/>
+				<int name="Aware_Radius" value="600"/>
+				<int name="Aware_Angle" value="160"/>
+				<bool name="WaitSpawn" value="false"/>
+				<bool name="FakeDead" value="false"/>
+				<bool name="NoCombatCloseDoor" value="false"/>
+				<bool name="Wireframe" value="false"/>
+				
+			</attributes>		
+		</object>		
+
+		<object>
+			<attributes>
+				<string name="Name" value="Corrupted"/>
+				<string name="!GameType" value="Corrupted"/>
+				<string name="MeshFile" value="..\entities\meshes_bin\marine_corrupted_mesh.bdae"/>
+				<string name="AnimationFile" value="..\entities\meshes_bin\marine_anims.bdae"/>
+				<string name="@Anim" value=""/>
+				<int name="^PatrolPoint^WayPoint" value="-1"/>				
+				<float name="Health" value="100.0f"/>
+				<float name="Speed" value="100.0f"/>
+				<int name="Audio_Radius" value="0"/>
+				<int name="Patrol_Radius" value="900"/>
+				<int name="Patrol_Angle" value="90"/>
+				<bool name="Patrol_Walk" value="true"/>
+				<int name="Aware_Radius" value="2500"/>
+				<int name="Aware_Angle" value="160"/>
+				<bool name="WaitSpawn" value="false"/>
+				<bool name="NonVolatile" value="false"/>
+				<int name="$CorruptedWeapon" value="0"/>
+				<bool name="FakeDead" value="false"/>
+				<bool name="NoCombatCloseDoor" value="false"/>
+				<int name="^Move^Trigger" value="-1"/>
+				<bool name="NoPowerUp" value="false"/>
+				<bool name="Wireframe" value="false"/>
+
+			</attributes>		
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Corruptor"/>
+				<string name="!GameType" value="Corruptor"/>
+				<string name="MeshFile" value="..\entities\meshes_bin\corruptor_mesh.bdae"/>
+				<string name="AnimationFile" value="..\entities\meshes_bin\corruptor_anims.bdae"/>
+				<string name="@Anim" value=""/>
+				<int name="^PatrolPoint^WayPoint" value="-1"/>				
+				<float name="Health" value="100.0f"/>
+				<float name="Speed" value="100.0f"/>
+				<int name="Patrol_Radius" value="900"/>
+				<int name="Patrol_Angle" value="90"/>
+				<bool name="Patrol_Walk" value="true"/>
+				<int name="Aware_Radius" value="2500"/>
+				<int name="Aware_Angle" value="160"/>
+				<bool name="WaitSpawn" value="false"/>
+				<bool name="Wireframe" value="false"/>
+
+			</attributes>		
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="SpiderBoss"/>
+				<string name="!GameType" value="SpiderBoss"/>
+				<string name="MeshFile" value="..\entities\meshes_bin\spider_boss_mesh.bdae"/>
+				<string name="AnimationFile" value="..\entities\meshes_bin\spider_boss_anims.bdae"/>
+				<string name="@Anim" value=""/>
+				<float name="Health" value="100.0f"/>				
+				<bool name="Wireframe" value="false"/>
+
+			</attributes>		
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="HeavyDaemon"/>
+				<string name="!GameType" value="HeavyDaemon"/>
+				<string name="MeshFile" value="..\entities\meshes_bin\heavy_daemon_mesh.bdae"/>
+				<string name="AnimationFile" value="..\entities\meshes_bin\heavy_daemon_anims.bdae"/>
+				<string name="@Anim" value=""/>
+				<int name="^PatrolPoint^WayPoint" value="-1"/>
+				<float name="Health" value="20.0f"/>
+				<float name="Speed" value="100.0f"/>
+				<int name="Audio_Radius" value="0"/>
+				<int name="Patrol_Radius" value="2400"/>
+				<int name="Patrol_Angle" value="90"/>
+				<int name="Aware_Radius" value="2500"/>
+				<int name="Aware_Angle" value="160"/>
+				<bool name="WaitSpawn" value="false"/>
+				<bool name="Imobile" value="false"/>
+				<bool name="NoPowerUp" value="false"/>
+				<bool name="Wireframe" value="false"/>
+
+			</attributes>		
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Sentinel"/>
+				<string name="!GameType" value="Sentinel"/>
+				<string name="MeshFile" value="..\location_03_monolitic\meshes_bin\mc_sentinel_mesh.bdae"/>
+				<string name="AnimationFile" value="..\location_03_monolitic\meshes_bin\mc_sentinel_anim.bdae"/>
+				<string name="@Anim" value=""/>
+				<int name="^PatrolPoint^WayPoint" value="-1"/>
+				<int name="^Move^Trigger" value="-1"/>
+				<float name="Health" value="20.0f"/>
+				<float name="Speed" value="100.0f"/>
+				<int name="Audio_Radius" value="0"/>
+				<int name="Patrol_Radius" value="2400"/>
+				<int name="Patrol_Angle" value="90"/>
+				<int name="Aware_Radius" value="2500"/>
+				<int name="Aware_Angle" value="160"/>
+				<bool name="WaitSpawn" value="false"/>							
+				<bool name="Wireframe" value="false"/>
+			</attributes>		
+		</object>
+		
+		<!--<object>
+			<attributes>
+				<string name="Name" value="Marine"/>
+				<string name="!GameType" value="Marine"/>
+				<string name="MeshFile" value="..\entities\meshes_bin\marine_mesh.bdae"/>
+				<string name="AnimationFile" value="..\entities\meshes_bin\marine_anims.bdae"/>
+				<string name="@Anim" value=""/>
+				<float name="Health" value="100.0f"/>				
+				<bool name="Wireframe" value="false"/>
+
+			</attributes>		
+		</object>-->
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Trigger"/>
+				<string name="!GameType" value="Trigger"/>			
+				<vector3d name="Sizes" value="100.0, 50.0, 10.0"/>					
+				<bool name="Enabled" value="true"/>
+				<string name="MaterialType" value="trans_vertex_alpha"/>									
+				<int name="^WhileOut^Cinematic" value="-1"/>						
+				<int name="^WhileIn^Cinematic" value="-1"/>						
+				<int name="^InToOut^Cinematic" value="-1"/>						
+				<int name="^OutToIn^Cinematic" value="-1"/>						
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="WayPoint"/>
+				<string name="!GameType" value="WayPoint"/>	
+				<string name="#MeshFile" value="../editor/meshes_bin/waypoint.bdae"/>
+				<int name="^Next^WayPoint" value="-1"/>
+			</attributes>
+		</object>		
+
+		<object>
+			<attributes>
+				<string name="Name" value="GridWayPoint"/>
+				<string name="!GameType" value="GridWayPoint"/>	
+				<string name="#MeshFile" value="../editor/meshes_bin/waypoint_grid.bdae"/>
+				<int name="^Left^GridWayPoint" value="-1"/>
+				<int name="^Right^GridWayPoint" value="-1"/>
+				<int name="^Up^GridWayPoint" value="-1"/>
+				<int name="^Down^GridWayPoint" value="-1"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="CoverPoint"/>
+				<string name="!GameType" value="CoverPoint"/>	
+				<string name="#MeshFile" value="../editor/meshes_bin/waypoint.bdae"/>				
+			</attributes>
+		</object>	
+		
+		<object>
+			<attributes>
+				<string name="Name" value="FogPlane"/>
+				<string name="!GameType" value="FogPlane"/>	
+				<string name="MeshFile" value="../location_03_monolitic/meshes_bin/mc_fog.bdae"/>				
+				<color name="FogColor" value="00B1ADA8"/>
+				<float name="Min Distance" value="1.f"/>
+				<float name="Max Distance" value="1000.f"/>
+			</attributes>
+		</object>	
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Cinematic"/>
+				<string name="!GameType" value="Cinematic"/>
+				<string name="#MeshFile" value="../editor/meshes_bin/cinematic.bdae"/>				
+				<string name="!ScriptFile" value=""/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Camera"/>
+				<string name="!GameType" value="Camera"/>		
+				<string name="#MeshFile" value="../editor/meshes_bin/camera.bdae"/>																
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Effect"/>
+				<string name="!GameType" value="Effect"/>					
+				<string name="$EffectType" value=""/>
+			</attributes>
+		</object>		
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Group"/>
+				<string name="!GameType" value="Group"/>					
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="FOG"/>
+				<string name="!GameType" value="FOG"/>
+				<color name="FogColor" value="00FFFFFF"/>
+				<bool name="LinearFog" value="true"/>
+				<float name="Start" value="1000.0f"/>
+				<float name="End" value="5000.0f"/>
+				<float name="Density" value="0.00001f"/>
+				<bool name="PixelFog" value="false"/>
+				<bool name="RangeFog" value="false"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="SkyPlane"/>
+				<string name="!GameType" value="SkyPlane"/>		
+				<string name="MeshFile" value=""/>																
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="SpawnPoint"/>
+				<string name="!GameType" value="SpawnPoint"/>		
+				<string name="MeshFile" value="../editor/meshes_bin/spawnPoint.bdae"/>																
+				<bool name="StartPoint" value="false"/>
+				<int name="^CompasWP^WayPoint" value="-1"/>
+			</attributes>
+		</object>			
+		
+		<object>
+			<attributes>
+				<string name="Name" value="PlaceHolder"/>
+				<string name="!GameType" value="PlaceHolder"/>
+				<string name="MeshFile" value="../location_01_ship/meshes_bin/container.bdae"/>
+				<string name="AnimationFile" value=""/>
+				<string name="@Anim" value=""/>
+				<int name="^Initial^GridWayPoint" value="-1"/>
+				<bool name="Global" value="false"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="EnemyGroup"/>
+				<string name="!GameType" value="EnemyGroup"/>				
+				<int name="^Portal^Portal" value="-1"/>
+				<int name="^Run^Cinematic" value="-1"/>	
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="PowerUp"/>
+				<string name="!GameType" value="PowerUp"/>
+				<string name="MeshFile" value="../entities/meshes_bin/shell.bdae"/>
+				<string name="AnimationFile" value=""/>
+				<string name="@Anim" value=""/>
+				<int name="$PowerUpType" value="0"/>
+				<int name="Value" value="10"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Explosive Crate"/>
+				<string name="!GameType" value="Crate"/>
+				<string name="MeshFile" value="../entities/meshes_bin/crate.bdae"/>
+				<float name="Health" value="10.0f"/>
+				<float name="Radius" value="600.0f"/>
+				<float name="Damage" value="10.0f"/>
+			</attributes>
+		</object>
+
+		<object>
+			<attributes>
+				<string name="Name" value="MachineGunStatic"/>
+				<string name="!GameType" value="MachineGunStatic"/>
+				<string name="MeshFile" value="../entities/meshes_bin/machinegun_static_mesh.bdae"/>
+				<string name="AnimationFile" value="../entities/meshes_bin/machinegun_static_anims.bdae"/>
+				<string name="@Anim" value=""/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="MachineGunEnemy"/>
+				<string name="!GameType" value="MachineGunEnemy"/>
+				<string name="MeshFile" value="../entities/meshes_bin/machinegun_static_mesh.bdae"/>
+				<string name="AnimationFile" value="../entities/meshes_bin/machinegun_static_anims.bdae"/>
+				<string name="@Anim" value=""/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Console Object"/>
+				<string name="!GameType" value="ConsoleObject"/>
+				<string name="MeshFile" value="../entities/meshes_bin/console.bdae"/>			
+				<string name="AnimationFile" value=""/>
+				<string name="@Anim" value=""/>
+				<int name="^Run^Cinematic" value="-1"/>
+				<int name="^Run1^Cinematic" value="-1"/>
+				<int name="^Run2^Cinematic" value="-1"/>
+				<int name="^Run3^Cinematic" value="-1"/>
+				<int name="$ConsoleType" value="0"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Tutorial Target"/>
+				<string name="!GameType" value="TutorialTarget"/>
+				<string name="MeshFile" value="../entities/meshes_bin/tutorial_target.bdae"/>
+				<string name="AnimationFile" value=""/>
+				<string name="@Anim" value=""/>
+				<float name="Health" value="4.0f"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Portal - Old"/>
+				<string name="!GameType" value="Portal"/>
+				<string name="MeshFile" value="../entities/meshes_bin/portal.bdae"/>
+				<string name="AnimationFile" value=""/>
+				<string name="@Anim" value=""/>	
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Respawn Portal"/>
+				<string name="!GameType" value="RespawnPortal"/>
+				<string name="MeshFile" value="../entities/meshes_bin/portal_respawn.bdae"/>
+				<string name="AnimationFile" value=""/>
+				<int name="^Start^WayPoint" value="-1"/>
+				<int name="^End^WayPoint" value="-1"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Elevator"/>
+				<string name="!GameType" value="Elevator"/>
+				<string name="MeshFile" value="../entities/meshes_bin/lift.bdae"/>
+				<string name="AnimationFile" value=""/>
+				<string name="@Anim" value=""/>	
+				<int name="^Start^WayPoint" value="-1"/>
+				<int name="^End^WayPoint" value="-1"/>
+				<float name="Speed" value="500"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Train"/>
+				<string name="!GameType" value="Train"/>
+				<string name="MeshFile" value="../entities/meshes_bin/train.bdae"/>
+				<string name="AnimationFile" value=""/>
+				<string name="@Anim" value=""/>	
+				<int name="^Start^WayPoint" value="-1"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="Cable"/>
+				<string name="!GameType" value="Cable"/>
+				<string name="MeshFile" value="../entities/meshes_bin/cable_01.bdae"/>
+				<string name="AnimationFile" value=""/>
+				<string name="@Anim" value=""/>	
+				<string name="$EffectType" value=""/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="RoomOcclusion"/>
+				<string name="!GameType" value="RoomOcclusion"/>
+				<int name="^Room0^Geometry" value="-1"/>
+				<int name="^Room1^Geometry" value="-1"/>
+			</attributes>
+		</object>
+
+		<object>
+			<attributes>
+				<string name="Name" value="Destroyable"/>
+				<string name="!GameType" value="Destroyable"/>
+				<string name="MeshFile" value=""/>
+				<string name="AnimationFile" value=""/>
+				<string name="@Anim" value=""/>	
+				<float name="Health" value="400.0f"/>
+			</attributes>
+		</object>
+		
+		<object>
+			<attributes>
+				<string name="Name" value="PlasmaPipe"/>
+				<string name="!GameType" value="PlasmaPipe"/>
+				<string name="MeshFile" value="..\location_01_ship\meshes_bin\pipe_mesh.bdae"/>
+				<string name="AnimationFile" value="..\location_01_ship\meshes_bin\pipe_anim.bdae"/>
+				<string name="@Anim" value=""/>	
+				<int name="$PlasmaPipeType" value="0"/>
+				<int name="Health" value="100.0f"/>
+				<float name="Radius" value="100.0f"/>
+				<float name="Angle" value="30.0f"/>				
+				<float name="ExplosionDamage" value="20.0f"/>
+				<float name="ReleaseDamage" value="1.0f"/>
+				<float name="DamageTime" value="1000.0f"/>	
+				<float name="RecoverTime" value="1000.0f"/>	
+			</attributes>
+		</object>
+
+		<object>
+			<attributes>
+				<string name="Name" value="AttackPoint"/>
+				<string name="!GameType" value="AttackPoint"/>	
+				<string name="#MeshFile" value="../editor/meshes_bin/attack_waypoint.bdae"/>
+			</attributes>
+		</object>
+
+		<object>
+			<attributes>
+				<string name="Name" value="ElectricBeam"/>
+				<string name="!GameType" value="ElectricBeam"/>
+				<string name="MeshFile" value="..\location_03_monolitic\meshes_bin\mc_L1_room_05_orizantal_electric_beam_mesh.bdae"/>
+				<string name="AnimationFile" value="..\location_03_monolitic\meshes_bin\mc_L1_room_05_orizantal_electric_beam_anim.bdae"/>
+				<string name="@Anim" value=""/>
+				<float name="DamagePerSec" value="20.0f"/>
+				<int name="ActiveTime" value="3000"/>
+				<int name="IdleTime" value="3000"/>
+			</attributes>
+		</object>
+		
+	</objects>	
+</config>

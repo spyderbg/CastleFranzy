@@ -1,0 +1,79 @@
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// GS_SwitchToExternal
+//
+//		State that handle unloading and loading of the GLLib and IGP 
+//
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma once
+
+///////////////////////////////////////////////////////////////////////
+
+#include "Entities/IStateBase.h"
+#include "IO/TouchScreen/TouchPad.h"
+
+
+///////////////////////////////////////////////////////////////////////
+// ** Forward Declaration
+// ////////////////////////////////////////////////////////
+class GS_Menu;
+class ASprite; 
+
+
+enum SwitchToExternal_Types
+{
+	SwitchUnproperCalled = 0,
+	SwitchToIGP, 
+	SwitchToGLLive
+};
+
+
+
+// ** Main Class
+// ////////////////////////////////////////////////////////
+class GS_SwitchToExternal : public IStateBase
+{
+
+	//internal switch states 
+	enum Internal_States 
+	{
+		State_Free = 0,
+		State_Init, 
+		State_ReturnToSplash
+	};
+
+// ** Friendships
+// ////////////////////////////////////////////////////////
+	friend				class CStateMachine;
+// ** Ctors / Dtor
+// ////////////////////////////////////////////////////////
+public:
+						 GS_SwitchToExternal( SwitchToExternal_Types type = SwitchUnproperCalled );
+	virtual				~GS_SwitchToExternal();
+// ** Methods
+// ////////////////////////////////////////////////////////
+public:
+	virtual void	update( float dt );
+	virtual void	draw();
+
+	virtual void	pause();
+	virtual void	resume();
+
+	virtual void	sleep();
+	virtual void	wakeup();
+
+// ** Members
+// ////////////////////////////////////////////////////////
+private:
+
+	virtual void	ctor();
+	virtual void	dtor();
+
+	void					UpdateStates();
+	SwitchToExternal_Types	m_switchType;
+	Internal_States			m_switchState;
+
+	//background
+	ASprite*			m_BGR;	
+};
+

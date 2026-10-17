@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B69357FD-ACC5-4AD4-8A59-CDBC1F2C2BD6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)..\build\Win32\Debug\</OutDir>
+    <IntDir>$(ProjectDir)..\build\Win32\Debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)..\build\Win32\Release\</OutDir>
+    <IntDir>$(ProjectDir)..\build\Win32\Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\src;$(ProjectDir)..\include;$(ProjectDir)..\..\LibOpenAL\include;$(ProjectDir)..\..\irrlicht\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>openAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\LibOpenAL\libs\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\src;$(ProjectDir)..\include;$(ProjectDir)..\..\LibOpenAL\include;$(ProjectDir)..\..\irrlicht\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>openAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\LibOpenAL\libs\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\AdpcmDecoder.cpp" />
+    <ClCompile Include="..\src\AdpcmState.cpp" />
+    <ClCompile Include="..\src\BaseSoundManager.cpp" />
+    <ClCompile Include="..\src\CSound.cpp" />
+    <ClCompile Include="..\src\CSoundData.cpp" />
+    <ClCompile Include="..\src\CSoundDecoderADPCM.cpp" />
+    <ClCompile Include="..\src\CSoundDecoderMPC.cpp" />
+    <ClCompile Include="..\src\CSoundDecoderMSADPCM.cpp" />
+    <ClCompile Include="..\src\CSoundDecoderMSWAV.cpp" />
+    <ClCompile Include="..\src\CSoundDecoderPCM.cpp" />
+    <ClCompile Include="..\src\SourcesPool.cpp" />
+    <ClCompile Include="..\src\StaticSound.cpp" />
+    <ClCompile Include="..\src\StreamingSound.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Src\stdafx.h" />
+    <ClInclude Include="..\include\AdpcmDecoder.h" />
+    <ClInclude Include="..\include\AdpcmState.h" />
+    <ClInclude Include="..\include\AudioDefs.h" />
+    <ClInclude Include="..\include\BaseSoundManager.h" />
+    <ClInclude Include="..\include\CSound.h" />
+    <ClInclude Include="..\include\CSoundData.h" />
+    <ClInclude Include="..\include\CSoundDecoderADPCM.h" />
+    <ClInclude Include="..\include\CSoundDecoderMPC.h" />
+    <ClInclude Include="..\include\CSoundDecoderMSADPCM.h" />
+    <ClInclude Include="..\include\CSoundDecoderMSWAV.h" />
+    <ClInclude Include="..\include\CSoundDecoderPCM.h" />
+    <ClInclude Include="..\include\ISoundDecoder.h" />
+    <ClInclude Include="..\include\ISoundFile.h" />
+    <ClInclude Include="..\include\MSHeaders.h" />
+    <ClInclude Include="..\include\SourcesPool.h" />
+    <ClInclude Include="..\include\StaticSound.h" />
+    <ClInclude Include="..\include\StreamingSound.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

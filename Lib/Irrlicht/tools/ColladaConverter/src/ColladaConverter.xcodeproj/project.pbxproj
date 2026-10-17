@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F0F22CF0F263AAA0021607B /* CInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F22CE0F263AAA0021607B /* CInstance.cpp */; };
+		2F0F22D60F263ABB0021607B /* CDatabaseCollada.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F22D20F263ABB0021607B /* CDatabaseCollada.cpp */; };
+		2F0F22D70F263ABB0021607B /* CMemoryReadFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F22D40F263ABB0021607B /* CMemoryReadFile.cpp */; };
+		2F0F22DC0F263AD80021607B /* CReadFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F22D90F263AD80021607B /* CReadFile.cpp */; };
+		2F0F22DD0F263AD80021607B /* CScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F22DB0F263AD80021607B /* CScene.cpp */; };
+		2F15187B0F263980006021F4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F1518700F263980006021F4 /* main.cpp */; };
+		2F15187E0F263980006021F4 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F1518760F263980006021F4 /* util.cpp */; };
+		2F1518860F2639C0006021F4 /* resFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F1518810F2639C0006021F4 /* resFile.cpp */; };
+		2F1518870F2639C0006021F4 /* resFileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F1518840F2639C0006021F4 /* resFileWriter.cpp */; };
+		2F1518880F2639C0006021F4 /* token.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F1518850F2639C0006021F4 /* token.cpp */; };
+		2F1518940F263A7D006021F4 /* CXMLReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F1518910F263A7D006021F4 /* CXMLReader.cpp */; };
+		F4B02E160F822E1100C3FD59 /* CColladaParticleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4B02E120F822E1100C3FD59 /* CColladaParticleSystem.cpp */; };
+		F4B02E170F822E1100C3FD59 /* CColladaSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4B02E140F822E1100C3FD59 /* CColladaSource.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F0F22CE0F263AAA0021607B /* CInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CInstance.cpp; sourceTree = "<group>"; };
+		2F0F22D10F263ABB0021607B /* CColladaTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CColladaTags.h; sourceTree = "<group>"; };
+		2F0F22D20F263ABB0021607B /* CDatabaseCollada.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CDatabaseCollada.cpp; sourceTree = "<group>"; };
+		2F0F22D30F263ABB0021607B /* CDatabaseCollada.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDatabaseCollada.h; sourceTree = "<group>"; };
+		2F0F22D40F263ABB0021607B /* CMemoryReadFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CMemoryReadFile.cpp; sourceTree = "<group>"; };
+		2F0F22D50F263ABB0021607B /* CMemoryReadFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMemoryReadFile.h; sourceTree = "<group>"; };
+		2F0F22D90F263AD80021607B /* CReadFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CReadFile.cpp; sourceTree = "<group>"; };
+		2F0F22DA0F263AD80021607B /* CReadFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CReadFile.h; sourceTree = "<group>"; };
+		2F0F22DB0F263AD80021607B /* CScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CScene.cpp; sourceTree = "<group>"; };
+		2F1518700F263980006021F4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2F1518760F263980006021F4 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		2F1518770F263980006021F4 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		2F1518810F2639C0006021F4 /* resFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resFile.cpp; sourceTree = "<group>"; };
+		2F1518840F2639C0006021F4 /* resFileWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resFileWriter.cpp; sourceTree = "<group>"; };
+		2F1518850F2639C0006021F4 /* token.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = token.cpp; sourceTree = "<group>"; };
+		2F1518910F263A7D006021F4 /* CXMLReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXMLReader.cpp; sourceTree = "<group>"; };
+		2F1518920F263A7D006021F4 /* CXMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLReader.h; sourceTree = "<group>"; };
+		2F1518930F263A7D006021F4 /* CXMLReaderImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLReaderImpl.h; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* ColladaConverterOSX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ColladaConverterOSX; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B02E120F822E1100C3FD59 /* CColladaParticleSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CColladaParticleSystem.cpp; sourceTree = "<group>"; };
+		F4B02E130F822E1100C3FD59 /* CColladaParticleSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CColladaParticleSystem.h; sourceTree = "<group>"; };
+		F4B02E140F822E1100C3FD59 /* CColladaSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CColladaSource.cpp; sourceTree = "<group>"; };
+		F4B02E150F822E1100C3FD59 /* CColladaSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CColladaSource.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* ColladaConverterOSX */ = {
+			isa = PBXGroup;
+			children = (
+				2F1518800F2639C0006021F4 /* ResFile */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = ColladaConverterOSX;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F4B02E120F822E1100C3FD59 /* CColladaParticleSystem.cpp */,
+				F4B02E130F822E1100C3FD59 /* CColladaParticleSystem.h */,
+				F4B02E140F822E1100C3FD59 /* CColladaSource.cpp */,
+				F4B02E150F822E1100C3FD59 /* CColladaSource.h */,
+				2F0F22D90F263AD80021607B /* CReadFile.cpp */,
+				2F0F22DA0F263AD80021607B /* CReadFile.h */,
+				2F0F22DB0F263AD80021607B /* CScene.cpp */,
+				2F0F22D10F263ABB0021607B /* CColladaTags.h */,
+				2F0F22D20F263ABB0021607B /* CDatabaseCollada.cpp */,
+				2F0F22D30F263ABB0021607B /* CDatabaseCollada.h */,
+				2F0F22D40F263ABB0021607B /* CMemoryReadFile.cpp */,
+				2F0F22D50F263ABB0021607B /* CMemoryReadFile.h */,
+				2F0F22CE0F263AAA0021607B /* CInstance.cpp */,
+				2F1518910F263A7D006021F4 /* CXMLReader.cpp */,
+				2F1518920F263A7D006021F4 /* CXMLReader.h */,
+				2F1518930F263A7D006021F4 /* CXMLReaderImpl.h */,
+				2F1518700F263980006021F4 /* main.cpp */,
+				2F1518760F263980006021F4 /* util.cpp */,
+				2F1518770F263980006021F4 /* util.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* ColladaConverterOSX */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F1518800F2639C0006021F4 /* ResFile */ = {
+			isa = PBXGroup;
+			children = (
+				2F1518810F2639C0006021F4 /* resFile.cpp */,
+				2F1518840F2639C0006021F4 /* resFileWriter.cpp */,
+				2F1518850F2639C0006021F4 /* token.cpp */,
+			);
+			name = ResFile;
+			path = ../../ResFile/src;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* ColladaConverterOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "ColladaConverterOSX" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColladaConverterOSX;
+			productInstallPath = "$(HOME)/bin";
+			productName = ColladaConverterOSX;
+			productReference = 8DD76F6C0486A84900D96B5E /* ColladaConverterOSX */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "ColladaConverter" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* ColladaConverterOSX */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* ColladaConverterOSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F15187B0F263980006021F4 /* main.cpp in Sources */,
+				2F15187E0F263980006021F4 /* util.cpp in Sources */,
+				2F1518860F2639C0006021F4 /* resFile.cpp in Sources */,
+				2F1518870F2639C0006021F4 /* resFileWriter.cpp in Sources */,
+				2F1518880F2639C0006021F4 /* token.cpp in Sources */,
+				2F1518940F263A7D006021F4 /* CXMLReader.cpp in Sources */,
+				2F0F22CF0F263AAA0021607B /* CInstance.cpp in Sources */,
+				2F0F22D60F263ABB0021607B /* CDatabaseCollada.cpp in Sources */,
+				2F0F22D70F263ABB0021607B /* CMemoryReadFile.cpp in Sources */,
+				2F0F22DC0F263AD80021607B /* CReadFile.cpp in Sources */,
+				2F0F22DD0F263AD80021607B /* CScene.cpp in Sources */,
+				F4B02E160F822E1100C3FD59 /* CColladaParticleSystem.cpp in Sources */,
+				F4B02E170F822E1100C3FD59 /* CColladaSource.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_GLIBCXX_DEBUG=1",
+					"_GLIBCXX_DEBUG_PEDANTIC=1",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ColladaConverterOSX;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ColladaConverterOSX;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../include",
+					"$(SRCROOT)/../../ResFile/include",
+					"$(SRCROOT)/../lib/Irrlicht/include",
+				);
+				OBJROOT = "$(SRCROOT)";
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				SYMROOT = ../bin;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../include",
+					"$(SRCROOT)/../../ResFile/include",
+					"$(SRCROOT)/../lib/Irrlicht/include",
+				);
+				OBJROOT = "$(SRCROOT)";
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				SYMROOT = ../bin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "ColladaConverterOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "ColladaConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

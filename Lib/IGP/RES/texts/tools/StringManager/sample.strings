@@ -1,0 +1,59 @@
+// Sample String Pack
+
+$"// simple string" // comment on a new line
+"bla bla bla"
+
+$"// 32 bytes large token"
+ABCD5678123456781234567812345678	"32 bytes large token"
+
+$"// ASCII hex"
+TEXT_ASCII "\x32\x33\x34\x35"
+
+$"// multiple lines strings"
+TEXT_AB1 "aaa\nbbb\nccc"
+TEXT_AB2 "aaa
+bbb
+ccc" // idem TEXT_AB1
+
+// all strings are ASCII [1 byte, 0x00 - 0xFF]
+TEXT_LOCALE 
+"…»…»…»"
+"∆∆∆∆∆∆"
+"««««««"
+
+$ // new line
+
+STRING_ID1 = "string1";
+STRING_ID2 = "string2";
+//$ // ISSUE: new line does not work after ;.,
+STRING_ID3 = "string3"
+
+$ // new line
+
++BASE // define a base constant
+TEXT_A	"aaaaa"
+TEXT_B	"bbbbb"
+TEXT_C	"ccccc"
+- // disable base constant
+TEXT_D	"ddddd"
+TEXT_E	"ddddd"
+$
++NEXT_BASE
+TEXT1	"text1"
+TEXT2	"text2"
+*NUM_TEXTS // number of strings since last +
+$
++LEN
+A			"a"
+AB			"ab"
+ABC			"abc"
+ABCD		"abcd",
+ABCDE		"abcde",
+ABCDEF		"abcdef",,,,;
+ABCDEFG		"abcdefg"
+ABCDEFGH	"abcdefgh"
+-
+$
+ANOTHER_TEXT_ID
+"la la la"
+"last string"

@@ -1,0 +1,23 @@
+//
+// Prefix header for all source files of the 'FortressDefender' target in the 'FortressDefender' project
+//
+
+#ifndef __STDCPP__
+#if defined(__STDC__) || defined(__ANSI_CPP) || defined(__ANSI_CPP__) || \
+defined(CENTERLINE_CLPP) || defined(__LUCID_ANSI_PP__)
+#define __STDCPP__ 1
+#endif
+#endif
+
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+
+#import <UIKit/UIKit.h>
+
+#elif defined(__cplusplus)
+
+#include "stdafx.h"
+
+#endif

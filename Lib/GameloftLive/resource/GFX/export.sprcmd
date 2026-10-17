@@ -1,0 +1,59 @@
+SetGlobalBSpriteFlags(BS_DEFAULT_DOJA|BS_MODULES_XY_SHORT|BS_MODULES_WH_SHORT|BS_FM_OFF_SHORT|BS_AF_OFF_SHORT)
+
+Load("BG1.sprite")
+	ExportBSpriteEx("BG1.bsprite", GLOBAL, I256, _1555)
+
+Load("menu.sprite")
+	ExportBSpriteEx("menu.bsprite", GLOBAL, I256, _1555)
+	
+Load("textbox.sprite")
+	ExportBSpriteEx("textbox.bsprite", GLOBAL, I256, _1555)
+	
+Load("flag.sprite")
+	ExportBSpriteEx("flag.bsprite", GLOBAL, I256, _1555)
+	
+Load("evaluate.sprite")
+	ExportBSpriteEx("evaluate.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font1.sprite")
+	ExportBSpriteEx("font1.bsprite", GLOBAL, I256, _1555)
+
+Load("font\font2.sprite")
+	ExportBSpriteEx("font2.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font3.sprite")
+	ExportBSpriteEx("font3.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font4.sprite")
+	ExportBSpriteEx("font4.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font5.sprite")
+	ExportBSpriteEx("font5.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font6.sprite")
+	ExportBSpriteEx("font6.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font7.sprite")
+	ExportBSpriteEx("font7.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font8.sprite")
+	ExportBSpriteEx("font8.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font9.sprite")
+	ExportBSpriteEx("font9.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font10.sprite")
+	ExportBSpriteEx("font10.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font11.sprite")
+	ExportBSpriteEx("font11.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font12.sprite")
+	ExportBSpriteEx("font12.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font13.sprite")
+	ExportBSpriteEx("font13.bsprite", GLOBAL, I256, _1555)
+	
+Load("font\font14.sprite")
+	ExportBSpriteEx("font14.bsprite", GLOBAL, I256, _1555)
+	

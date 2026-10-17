@@ -1,0 +1,5 @@
+{
+	"cmake.sourceDirectory": "${workspaceFolder}",
+	"cmake.useCMakePresets": "always",
+	"C_Cpp.default.compileCommands": "${workspaceFolder}/build/linux-debug/compile_commands.json"
+}

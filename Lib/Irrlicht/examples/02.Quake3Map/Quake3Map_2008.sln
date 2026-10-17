@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02.Quake3Map", "Quake3Map_2008.vcproj", "{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug - WiiEmulation|Win32 = Debug - WiiEmulation|Win32
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Debug - WiiEmulation|Win32.ActiveCfg = Debug - WiiEmulation|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Debug - WiiEmulation|Win32.Build.0 = Debug - WiiEmulation|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Debug|Win32.ActiveCfg = Debug|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Debug|Win32.Build.0 = Debug|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Release|Win32.ActiveCfg = Release|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

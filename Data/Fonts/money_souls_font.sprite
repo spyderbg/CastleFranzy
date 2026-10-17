@@ -1,0 +1,234 @@
+// saved by AuroraGT v0.1.0.2 (SpriteEditor v0.1.0.5)
+////////////////////////////////////////////////////////////////////////////////
+/*SPRITE*/ {
+
+    VERSION 0001
+
+    // Images:  1
+    // Modules: 91
+    // Frames:  1
+    // Anims:   0
+
+////////////////////////////////////////////////////////////////////////////////
+// Images...
+// <Image> := IMAGE [id] "file" [ALPHA "alpha_file"] [TRANSP transp_color]
+
+    IMAGE 0x0000 ".\money_souls_font.tga" TRANSP 0x00FF00FF // 0  size: 512 x 256  palettes: 1
+
+////////////////////////////////////////////////////////////////////////////////
+// Modules...
+// <Modules> := MODULES { <MD1> <MD2> ... }
+// <MDi>     := MD id Type [params] ["desc"]
+// Type      := MD_IMAGE | MD_RECT | ...
+// [params]  := if (Type == MD_IMAGE)     -> image x y width height
+//              if (Type == MD_RECT)      -> color width height
+//              if (Type == MD_FILL_RECT) -> color width height
+//              if (Type == MD_ARC)       -> color width height startAngle arcAngle
+//              if (Type == MD_FILL_ARC)  -> color width height startAngle arcAngle
+//              if (Type == MD_MARKER)    -> color width height
+//              if (Type == MD_TRIANGLE)  -> color p2X p2Y p3X p3Y
+//              if (Type == MD_FILL_TRIANGLE)  -> color p2X p2Y p3X p3Y
+
+    MODULES
+    {
+        MD	0x1000	MD_IMAGE	0	8	12	6	16	"0x20"
+        MD	0x1001	MD_IMAGE	0	22	3	8	32	"0x21"
+        MD	0x1002	MD_IMAGE	0	33	3	18	32	"0x22"
+        MD	0x1003	MD_IMAGE	0	53	3	12	32	"0x23"
+        MD	0x1004	MD_IMAGE	0	68	3	10	32	"0x24"
+        MD	0x1005	MD_IMAGE	0	80	3	10	32	"0x25"
+        MD	0x1006	MD_IMAGE	0	94	3	11	32	"0x26"
+        MD	0x1007	MD_IMAGE	0	106	3	11	32	"0x27"
+        MD	0x1008	MD_IMAGE	0	120	3	9	32	"0x28"
+        MD	0x1009	MD_IMAGE	0	132	3	9	32	"0x29"
+        MD	0x100A	MD_IMAGE	0	143	3	8	32	"0x2A"
+        MD	0x100B	MD_IMAGE	0	153	3	9	32	"0x2B"
+        MD	0x100C	MD_IMAGE	0	163	3	9	32	"0x2C"
+        MD	0x100D	MD_IMAGE	0	173	3	14	32	"0x2D"
+        MD	0x100E	MD_IMAGE	0	188	3	8	32	"0x2E"
+        MD	0x100F	MD_IMAGE	0	199	3	17	32	"0x2F"
+        MD	0x1080	MD_IMAGE	0	218	3	12	32	"0x2F"
+        MD	0x1010	MD_IMAGE	0	232	3	13	32	"0x30"
+        MD	0x1011	MD_IMAGE	0	247	3	16	32	"0x31"
+        MD	0x1012	MD_IMAGE	0	266	3	17	32	"0x32"
+        MD	0x1013	MD_IMAGE	0	10	39	17	32	"0x32"
+        MD	0x1014	MD_IMAGE	0	29	39	16	32	"0x32"
+        MD	0x1015	MD_IMAGE	0	48	39	15	32	"0x32"
+        MD	0x1016	MD_IMAGE	0	66	39	17	32	"0x32"
+        MD	0x1017	MD_IMAGE	0	85	39	14	32	"0x32"
+        MD	0x1018	MD_IMAGE	0	102	39	14	32	"0x32"
+        MD	0x1019	MD_IMAGE	0	119	39	16	32	"0x32"
+        MD	0x101A	MD_IMAGE	0	138	39	17	32	"0x32"
+        MD	0x101B	MD_IMAGE	0	159	39	7	32	"0x32"
+        MD	0x101C	MD_IMAGE	0	169	39	8	32	"0x32"
+        MD	0x101D	MD_IMAGE	0	181	39	15	32	"0x32"
+        MD	0x101E	MD_IMAGE	0	198	39	15	32	"0x32"
+        MD	0x101F	MD_IMAGE	0	215	39	19	32	"0x32"
+        MD	0x1020	MD_IMAGE	0	237	39	17	32	"0x32"
+        MD	0x1021	MD_IMAGE	0	257	39	18	32	"0x32"
+        MD	0x1022	MD_IMAGE	0	278	39	15	32	"0x32"
+        MD	0x1023	MD_IMAGE	0	296	39	18	32	"0x32"
+        MD	0x1024	MD_IMAGE	0	317	39	15	32	"0x32"
+        MD	0x1025	MD_IMAGE	0	335	39	12	32	"0x32"
+        MD	0x1026	MD_IMAGE	0	349	39	15	32	"0x32"
+        MD	0x1027	MD_IMAGE	0	366	39	16	32	"0x32"
+        MD	0x1028	MD_IMAGE	0	385	39	16	32	"0x32"
+        MD	0x1029	MD_IMAGE	0	403	39	22	32	"0x32"
+        MD	0x102A	MD_IMAGE	0	427	39	15	32	"0x32"
+        MD	0x102B	MD_IMAGE	0	444	39	16	32	"0x32"
+        MD	0x102C	MD_IMAGE	0	462	39	14	32	"0x32"
+        MD	0x102D	MD_IMAGE	0	10	72	15	32	"0x32"
+        MD	0x102E	MD_IMAGE	0	27	72	15	32	"0x32"
+        MD	0x102F	MD_IMAGE	0	44	72	12	32	"0x32"
+        MD	0x1030	MD_IMAGE	0	58	72	15	32	"0x32"
+        MD	0x1031	MD_IMAGE	0	75	72	14	32	"0x32"
+        MD	0x1032	MD_IMAGE	0	91	72	10	32	"0x32"
+        MD	0x1033	MD_IMAGE	0	103	72	14	32	"0x32"
+        MD	0x1034	MD_IMAGE	0	120	72	13	32	"0x32"
+        MD	0x1035	MD_IMAGE	0	136	72	7	32	"0x32"
+        MD	0x1036	MD_IMAGE	0	145	72	9	32	"0x32"
+        MD	0x1037	MD_IMAGE	0	157	72	14	32	"0x32"
+        MD	0x1038	MD_IMAGE	0	174	72	7	32	"0x32"
+        MD	0x1039	MD_IMAGE	0	184	72	20	32	"0x32"
+        MD	0x103A	MD_IMAGE	0	207	72	13	32	"0x32"
+        MD	0x103B	MD_IMAGE	0	223	72	14	32	"0x32"
+        MD	0x103C	MD_IMAGE	0	240	72	14	32	"0x32"
+        MD	0x103D	MD_IMAGE	0	257	72	14	32	"0x32"
+        MD	0x103E	MD_IMAGE	0	274	72	10	32	"0x32"
+        MD	0x103F	MD_IMAGE	0	287	72	9	32	"0x32"
+        MD	0x1041	MD_IMAGE	0	312	72	14	32	"0x32"
+        MD	0x1042	MD_IMAGE	0	329	72	13	32	"0x32"
+        MD	0x1040	MD_IMAGE	0	298	72	11	32	"0x32"
+        MD	0x1043	MD_IMAGE	0	345	72	18	32	"0x32"
+        MD	0x1044	MD_IMAGE	0	365	72	13	32	"0x32"
+        MD	0x1045	MD_IMAGE	0	380	72	13	32	"0x32"
+        MD	0x1046	MD_IMAGE	0	395	72	13	32	"0x32"
+        MD	0x1047	MD_IMAGE	0	11	106	13	32	"0x32"
+        MD	0x1048	MD_IMAGE	0	26	106	13	32	"0x32"
+        MD	0x1049	MD_IMAGE	0	39	106	13	32	"0x32"
+        MD	0x104A	MD_IMAGE	0	56	106	13	32	"0x32"
+        MD	0x104B	MD_IMAGE	0	71	106	13	32	"0x32"
+        MD	0x104C	MD_IMAGE	0	86	106	13	32	"0x32"
+        MD	0x104D	MD_IMAGE	0	103	106	13	32	"0x32"
+        MD	0x104E	MD_IMAGE	0	119	106	13	32	"0x32"
+        MD	0x104F	MD_IMAGE	0	133	106	13	32	"0x32"
+        MD	0x1050	MD_IMAGE	0	149	106	13	32	"0x32"
+        MD	0x1051	MD_IMAGE	0	180	107	18	32	"0x32"
+        MD	0x1052	MD_IMAGE	0	215	107	18	32	"0x32"
+        MD	0x1053	MD_IMAGE	0	247	107	19	32	"0x32"
+        MD	0x1054	MD_IMAGE	0	279	107	20	32	"0x32"
+        MD	0x1055	MD_IMAGE	0	312	107	17	32	"0x32"
+        MD	0x1056	MD_IMAGE	0	346	107	18	32	"0x32"
+        MD	0x1057	MD_IMAGE	0	378	107	20	32	"0x32"
+        MD	0x1058	MD_IMAGE	0	418	107	6	32	"0x32"
+        MD	0x1059	MD_IMAGE	0	443	107	6	32	"0x32"
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+// Frames...
+// <Frame> := FRAME ["desc"] { id <RC1> [<RC2> ...] <FM1> [<FM2> ...] }
+// <RCi>   := RC x1 y1 x2 y2
+// <FMi>   := FM module_or_frame_id ox oy [FLAGS hex_flags] [+Flags]
+// Flags   := HYPER_FM | FLIP_X | FLIP_Y | ROT_90 | FREE_ROT
+
+    FRAME "font" // Index = 0, FModules = 91
+    {
+        0x2000
+        RC	0	0	0	0
+        FM	0x1000	0	9
+        FM	0x1001	0	0
+        FM	0x1002	0	0
+        FM	0x1003	0	0
+        FM	0x1004	0	0
+        FM	0x1005	0	0
+        FM	0x1006	0	0
+        FM	0x1007	0	0
+        FM	0x1008	0	0
+        FM	0x1009	0	0
+        FM	0x100A	0	0
+        FM	0x100B	0	0
+        FM	0x100C	0	0
+        FM	0x100D	0	0
+        FM	0x100E	0	0
+        FM	0x100F	0	0
+        FM	0x1080	0	0
+        FM	0x1010	0	0
+        FM	0x1011	0	0
+        FM	0x1012	0	0
+        FM	0x1013	0	0
+        FM	0x1014	0	0
+        FM	0x1015	0	0
+        FM	0x1016	0	0
+        FM	0x1017	0	0
+        FM	0x1018	0	0
+        FM	0x1019	0	0
+        FM	0x101A	0	0
+        FM	0x101B	0	0
+        FM	0x101C	0	0
+        FM	0x101D	0	0
+        FM	0x101E	0	0
+        FM	0x101F	0	0
+        FM	0x1020	0	0
+        FM	0x1021	0	0
+        FM	0x1022	0	0
+        FM	0x1023	0	0
+        FM	0x1024	0	0
+        FM	0x1025	0	0
+        FM	0x1026	0	0
+        FM	0x1027	0	0
+        FM	0x1028	0	0
+        FM	0x1029	0	0
+        FM	0x102A	0	0
+        FM	0x102B	0	0
+        FM	0x102C	0	0
+        FM	0x102D	0	0
+        FM	0x102E	0	0
+        FM	0x102F	0	0
+        FM	0x1030	0	0
+        FM	0x1031	0	0
+        FM	0x1032	0	0
+        FM	0x1033	0	0
+        FM	0x1034	0	0
+        FM	0x1035	0	0
+        FM	0x1036	0	0
+        FM	0x1037	0	0
+        FM	0x1038	0	0
+        FM	0x1039	0	0
+        FM	0x103A	0	0
+        FM	0x103B	0	0
+        FM	0x103C	0	0
+        FM	0x103D	0	0
+        FM	0x103E	0	0
+        FM	0x103F	0	0
+        FM	0x1040	0	0
+        FM	0x1041	0	0
+        FM	0x1042	0	0
+        FM	0x1043	0	0
+        FM	0x1044	0	0
+        FM	0x1045	0	0
+        FM	0x1046	0	0
+        FM	0x1047	0	1
+        FM	0x1048	0	1
+        FM	0x1049	0	1
+        FM	0x104A	0	1
+        FM	0x104B	0	1
+        FM	0x104C	0	1
+        FM	0x104D	0	1
+        FM	0x104E	0	1
+        FM	0x104F	0	1
+        FM	0x1050	0	1
+        FM	0x1001	0	2	+FLIP_Y
+        FM	0x1051	0	1
+        FM	0x1052	1	1
+        FM	0x1053	1	1
+        FM	0x1054	1	0
+        FM	0x1055	0	0
+        FM	0x1056	1	1
+        FM	0x1057	1	2
+        FM	0x1058	2	1
+    }
+
+    SPRITE_END
+
+} // SPRITE
+////////////////////////////////////////////////////////////////////////////////

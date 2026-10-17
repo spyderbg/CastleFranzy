@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01.HelloWorld", "HelloWorld_2008.vcproj", "{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E08E042A-6C45-411B-92BE-3CC31331019F} = {E08E042A-6C45-411B-92BE-3CC31331019F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Irrlicht", "..\..\source\Irrlicht\Irrlicht2008.vcproj", "{E08E042A-6C45-411B-92BE-3CC31331019F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug - WiiEmulation|Win32 = Debug - WiiEmulation|Win32
+		Debug|Win32 = Debug|Win32
+		Release - Fast FPU|Win32 = Release - Fast FPU|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Debug - WiiEmulation|Win32.ActiveCfg = Debug - WiiEmulation|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Debug - WiiEmulation|Win32.Build.0 = Debug - WiiEmulation|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Debug|Win32.ActiveCfg = Debug|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Debug|Win32.Build.0 = Debug|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Release - Fast FPU|Win32.ActiveCfg = Release|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Release - Fast FPU|Win32.Build.0 = Release|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Release|Win32.ActiveCfg = Release|Win32
+		{265B57DD-0C6D-4CFD-A95E-0FCC3ECD0E90}.Release|Win32.Build.0 = Release|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug - WiiEmulation|Win32.ActiveCfg = Debug - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug - WiiEmulation|Win32.Build.0 = Debug - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug|Win32.Build.0 = Debug|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release - Fast FPU|Win32.ActiveCfg = Release - Fast FPU|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release - Fast FPU|Win32.Build.0 = Release - Fast FPU|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release|Win32.ActiveCfg = Release|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,3457 @@
+// saved by AuroraGT v0.1.0.2 (SpriteEditor v0.1.0.5)
+////////////////////////////////////////////////////////////////////////////////
+/*SPRITE*/ {
+
+    VERSION 0001
+
+    // Images:  1
+    // Modules: 383
+    // Frames:  293
+    // Anims:   0
+
+////////////////////////////////////////////////////////////////////////////////
+// Images...
+// <Image> := IMAGE [id] "file" [ALPHA "alpha_file"] [TRANSP transp_color]
+
+    IMAGE 0x0000 ".\menu.bmp" TRANSP 0x00FF00FF // 0  size: 1024 x 832  palettes: 1
+
+////////////////////////////////////////////////////////////////////////////////
+// Modules...
+// <Modules> := MODULES { <MD1> <MD2> ... }
+// <MDi>     := MD id Type [params] ["desc"]
+// Type      := MD_IMAGE | MD_RECT | ...
+// [params]  := if (Type == MD_IMAGE)     -> image x y width height
+//              if (Type == MD_RECT)      -> color width height
+//              if (Type == MD_FILL_RECT) -> color width height
+//              if (Type == MD_ARC)       -> color width height startAngle arcAngle
+//              if (Type == MD_FILL_ARC)  -> color width height startAngle arcAngle
+//              if (Type == MD_MARKER)    -> color width height
+//              if (Type == MD_TRIANGLE)  -> color p2X p2Y p3X p3Y
+//              if (Type == MD_FILL_TRIANGLE)  -> color p2X p2Y p3X p3Y
+
+    MODULES
+    {
+        MD	0x1000	MD_IMAGE	0	696	314	60	63
+        MD	0x1001	MD_IMAGE	0	824	316	62	63
+        MD	0x1197	MD_IMAGE	0	760	292	64	64
+        MD	0x1003	MD_IMAGE	0	738	424	16	34
+        MD	0x1132	MD_IMAGE	0	966	407	29	46
+        MD	0x1004	MD_IMAGE	0	1012	476	11	13
+        MD	0x1005	MD_IMAGE	0	1003	800	13	13
+        MD	0x1006	MD_IMAGE	0	786	554	26	32
+        MD	0x103F	MD_IMAGE	0	695	757	23	29
+        MD	0x1040	MD_IMAGE	0	672	757	23	29
+        MD	0x1007	MD_IMAGE	0	168	436	38	45
+        MD	0x1009	MD_IMAGE	0	206	436	38	45
+        MD	0x100A	MD_IMAGE	0	718	593	26	32
+        MD	0x100B	MD_IMAGE	0	216	179	68	71
+        MD	0x100C	MD_IMAGE	0	461	249	71	70
+        MD	0x100D	MD_IMAGE	0	635	0	20	158
+        MD	0x1185	MD_IMAGE	0	970	294	20	63
+        MD	0x118A	MD_IMAGE	0	990	294	17	63
+        MD	0x1193	MD_IMAGE	0	1007	294	17	63
+        MD	0x1194	MD_IMAGE	0	981	146	7	63
+        MD	0x118B	MD_IMAGE	0	331	331	20	50
+        MD	0x1190	MD_IMAGE	0	205	200	11	50
+        MD	0x1187	MD_IMAGE	0	625	158	20	63
+        MD	0x118F	MD_IMAGE	0	645	158	11	63
+        MD	0x1186	MD_IMAGE	0	596	260	20	63
+        MD	0x118C	MD_IMAGE	0	351	331	20	50
+        MD	0x1188	MD_IMAGE	0	950	294	20	63
+        MD	0x1191	MD_IMAGE	0	656	158	11	63
+        MD	0x1189	MD_IMAGE	0	964	146	17	77
+        MD	0x1192	MD_IMAGE	0	940	146	17	77
+        MD	0x1195	MD_IMAGE	0	957	146	7	77
+        MD	0x100F	MD_IMAGE	0	655	0	17	158
+        MD	0x100E	MD_IMAGE	0	615	0	20	158
+        MD	0x1010	MD_IMAGE	0	46	822	136	10
+        MD	0x1011	MD_IMAGE	0	288	695	351	32
+        MD	0x1041	MD_IMAGE	0	636	695	3	32
+        MD	0x1012	MD_IMAGE	0	286	0	197	177
+        MD	0x117C	MD_IMAGE	0	129	555	158	37
+        MD	0x117B	MD_IMAGE	0	791	426	175	46
+        MD	0x1013	MD_IMAGE	0	806	757	30	28
+        MD	0x1014	MD_IMAGE	0	836	757	21	28
+        MD	0x1015	MD_IMAGE	0	896	757	30	28
+        MD	0x1016	MD_IMAGE	0	434	759	22	22
+        MD	0x10E3	MD_IMAGE	0	68	320	12	11
+        MD	0x10E5	MD_IMAGE	0	915	553	12	11
+        MD	0x10E4	MD_IMAGE	0	275	632	33	32
+        MD	0x1017	MD_IMAGE	0	0	0	60	320	"3"
+        MD	0x1018	MD_IMAGE	0	747	0	30	150
+        MD	0x1019	MD_IMAGE	0	705	0	12	150
+        MD	0x101A	MD_IMAGE	0	717	0	30	150
+        MD	0x101B	MD_IMAGE	0	401	759	33	25
+        MD	0x101C	MD_IMAGE	0	857	757	39	28
+        MD	0x101D	MD_IMAGE	0	944	515	17	17
+        MD	0x101E	MD_IMAGE	0	915	573	22	17
+        MD	0x101F	MD_IMAGE	0	702	628	16	16
+        MD	0x1002	MD_IMAGE	0	976	643	16	16
+        MD	0x1020	MD_IMAGE	0	937	573	22	16
+        MD	0x1021	MD_IMAGE	0	391	249	20	4
+        MD	0x116E	MD_IMAGE	0	411	249	13	4
+        MD	0x1022	MD_IMAGE	0	424	249	19	4
+        MD	0x1023	MD_IMAGE	0	292	521	230	39
+        MD	0x1199	MD_IMAGE	0	522	554	227	39
+        MD	0x1198	MD_IMAGE	0	1009	250	13	39
+        MD	0x119A	MD_IMAGE	0	760	250	13	39
+        MD	0x1180	MD_IMAGE	0	587	515	227	39
+        MD	0x117F	MD_IMAGE	0	587	480	20	33
+        MD	0x1181	MD_IMAGE	0	38	516	23	33
+        MD	0x1026	MD_IMAGE	0	244	436	31	45
+        MD	0x1027	MD_IMAGE	0	275	436	31	45
+        MD	0x1028	MD_IMAGE	0	824	251	62	65
+        MD	0x1029	MD_IMAGE	0	625	249	71	70
+        MD	0x102A	MD_IMAGE	0	787	472	34	43
+        MD	0x102B	MD_IMAGE	0	859	472	34	43
+        MD	0x102C	MD_IMAGE	0	148	256	313	75
+        MD	0x10B3	MD_IMAGE	0	615	158	10	6
+        MD	0x102D	MD_IMAGE	0	853	553	31	37
+        MD	0x102E	MD_IMAGE	0	884	553	31	37
+        MD	0x102F	MD_IMAGE	0	144	331	58	58
+        MD	0x1030	MD_IMAGE	0	202	331	58	58
+        MD	0x1031	MD_IMAGE	0	575	0	20	165
+        MD	0x1032	MD_IMAGE	0	595	0	20	165
+        MD	0x117D	MD_IMAGE	0	542	0	11	165
+        MD	0x1033	MD_IMAGE	0	553	0	22	165
+        MD	0x1034	MD_IMAGE	0	705	150	5	2
+        MD	0x117E	MD_IMAGE	0	1022	18	2	2
+        MD	0x1035	MD_IMAGE	0	209	627	33	35
+        MD	0x1036	MD_IMAGE	0	456	759	21	20
+        MD	0x1037	MD_IMAGE	0	899	405	21	20
+        MD	0x1177	MD_IMAGE	0	1005	608	18	24
+        MD	0x1178	MD_IMAGE	0	1005	693	15	14
+        MD	0x1179	MD_IMAGE	0	446	679	15	14
+        MD	0x117A	MD_IMAGE	0	607	471	180	44
+        MD	0x1038	MD_IMAGE	0	561	519	24	32
+        MD	0x1039	MD_IMAGE	0	461	324	165	64
+        MD	0x103C	MD_IMAGE	0	718	785	234	22
+        MD	0x103D	MD_IMAGE	0	0	789	246	22
+        MD	0x1182	MD_IMAGE	0	532	260	64	64
+        MD	0x1183	MD_IMAGE	0	696	249	64	65
+        MD	0x103E	MD_IMAGE	0	777	0	212	146
+        MD	0x119B	MD_IMAGE	0	632	823	296	5
+        MD	0x119C	MD_IMAGE	0	246	789	308	19
+        MD	0x119D	MD_IMAGE	0	667	186	4	5
+        MD	0x119E	MD_IMAGE	0	1022	0	2	9
+        MD	0x119F	MD_IMAGE	0	1022	9	2	9
+        MD	0x1043	MD_IMAGE	0	364	177	173	72
+        MD	0x1044	MD_IMAGE	0	60	0	20	320
+        MD	0x1045	MD_IMAGE	0	581	388	35	46
+        MD	0x1046	MD_IMAGE	0	756	405	35	46
+        MD	0x1047	MD_IMAGE	0	625	221	15	28
+        MD	0x1048	MD_IMAGE	0	371	331	32	50
+        MD	0x1049	MD_IMAGE	0	403	331	32	50
+        MD	0x104A	MD_IMAGE	0	286	177	78	79
+        MD	0x104B	MD_IMAGE	0	940	223	69	71
+        MD	0x104C	MD_IMAGE	0	663	693	342	32
+        MD	0x104D	MD_IMAGE	0	535	821	97	10
+        MD	0x104E	MD_IMAGE	0	525	808	25	10
+        MD	0x104F	MD_IMAGE	0	242	627	33	35
+        MD	0x1050	MD_IMAGE	0	544	388	37	47
+        MD	0x1051	MD_IMAGE	0	656	379	37	47
+        MD	0x1052	MD_IMAGE	0	341	560	35	36
+        MD	0x1053	MD_IMAGE	0	447	560	35	36
+        MD	0x1054	MD_IMAGE	0	62	332	35	46
+        MD	0x1055	MD_IMAGE	0	97	332	35	46
+        MD	0x1056	MD_IMAGE	0	0	474	30	42
+        MD	0x1057	MD_IMAGE	0	893	472	34	43
+        MD	0x1058	MD_IMAGE	0	156	627	53	35
+        MD	0x1059	MD_IMAGE	0	287	560	54	37
+        MD	0x105A	MD_IMAGE	0	536	663	59	32
+        MD	0x105B	MD_IMAGE	0	228	664	60	32
+        MD	0x105C	MD_IMAGE	0	491	628	71	35
+        MD	0x105D	MD_IMAGE	0	376	560	71	36
+        MD	0x105E	MD_IMAGE	0	0	694	70	32
+        MD	0x105F	MD_IMAGE	0	639	725	70	32
+        MD	0x1060	MD_IMAGE	0	709	725	95	32
+        MD	0x1061	MD_IMAGE	0	804	725	95	32
+        MD	0x1062	MD_IMAGE	0	899	725	99	32
+        MD	0x1063	MD_IMAGE	0	392	727	99	32
+        MD	0x1064	MD_IMAGE	0	491	727	77	32
+        MD	0x1065	MD_IMAGE	0	80	662	77	32
+        MD	0x1066	MD_IMAGE	0	562	628	51	35
+        MD	0x1067	MD_IMAGE	0	952	800	38	16
+        MD	0x1068	MD_IMAGE	0	613	628	89	35
+        MD	0x1069	MD_IMAGE	0	966	573	54	35
+        MD	0x106A	MD_IMAGE	0	749	591	54	35
+        MD	0x106B	MD_IMAGE	0	157	662	71	32
+        MD	0x106C	MD_IMAGE	0	465	663	71	32
+        MD	0x106D	MD_IMAGE	0	0	592	68	35
+        MD	0x106E	MD_IMAGE	0	595	663	68	32
+        MD	0x106F	MD_IMAGE	0	443	249	12	3
+        MD	0x1070	MD_IMAGE	0	68	592	78	35
+        MD	0x1071	MD_IMAGE	0	146	592	78	35
+        MD	0x1072	MD_IMAGE	0	224	592	54	35
+        MD	0x1073	MD_IMAGE	0	521	593	54	35
+        MD	0x1074	MD_IMAGE	0	70	694	70	32
+        MD	0x1075	MD_IMAGE	0	140	694	70	32
+        MD	0x1076	MD_IMAGE	0	575	593	65	35
+        MD	0x1077	MD_IMAGE	0	803	591	47	35
+        MD	0x10E2	MD_IMAGE	0	947	407	18	19
+        MD	0x1078	MD_IMAGE	0	640	593	78	35
+        MD	0x1079	MD_IMAGE	0	341	596	78	35
+        MD	0x107A	MD_IMAGE	0	419	596	72	35
+        MD	0x107B	MD_IMAGE	0	718	626	72	35
+        MD	0x107C	MD_IMAGE	0	568	757	80	32
+        MD	0x107D	MD_IMAGE	0	0	662	80	32
+        MD	0x107E	MD_IMAGE	0	790	626	82	35
+        MD	0x107F	MD_IMAGE	0	872	626	82	35
+        MD	0x1080	MD_IMAGE	0	0	627	78	35
+        MD	0x1081	MD_IMAGE	0	78	627	78	35
+        MD	0x1082	MD_IMAGE	0	266	0	20	179
+        MD	0x1083	MD_IMAGE	0	216	0	20	179
+        MD	0x1084	MD_IMAGE	0	236	0	30	179
+        MD	0x1085	MD_IMAGE	0	616	260	7	31
+        MD	0x1088	MD_IMAGE	0	616	291	7	31
+        MD	0x10E0	MD_IMAGE	0	132	360	7	17
+        MD	0x1089	MD_IMAGE	0	1015	210	7	31
+        MD	0x1086	MD_IMAGE	0	754	451	19	20
+        MD	0x1087	MD_IMAGE	0	1005	632	19	20
+        MD	0x108A	MD_IMAGE	0	814	515	113	38
+        MD	0x108B	MD_IMAGE	0	616	426	122	45
+        MD	0x108C	MD_IMAGE	0	544	435	63	45
+        MD	0x108D	MD_IMAGE	0	105	436	63	45
+        MD	0x108E	MD_IMAGE	0	241	696	39	29
+        MD	0x108F	MD_IMAGE	0	568	727	30	29
+        MD	0x1090	MD_IMAGE	0	260	331	71	52
+        MD	0x1091	MD_IMAGE	0	170	0	20	200
+        MD	0x1092	MD_IMAGE	0	190	0	20	200
+        MD	0x1184	MD_IMAGE	0	210	0	6	200
+        MD	0x1093	MD_IMAGE	0	148	0	22	200
+        MD	0x1094	MD_IMAGE	0	63	515	229	40
+        MD	0x10DC	MD_IMAGE	0	860	379	18	40
+        MD	0x10DF	MD_IMAGE	0	1009	210	6	40
+        MD	0x1095	MD_IMAGE	0	500	436	32	44
+        MD	0x1098	MD_IMAGE	0	306	436	32	44
+        MD	0x1099	MD_IMAGE	0	338	436	39	44
+        MD	0x1096	MD_IMAGE	0	414	665	32	30
+        MD	0x1097	MD_IMAGE	0	663	663	32	30
+        MD	0x109A	MD_IMAGE	0	288	665	39	30
+        MD	0x109B	MD_IMAGE	0	702	661	318	32
+        MD	0x109C	MD_IMAGE	0	182	823	162	2
+        MD	0x109D	MD_IMAGE	0	465	631	22	30
+        MD	0x109E	MD_IMAGE	0	749	554	37	37
+        MD	0x109F	MD_IMAGE	0	0	429	43	45
+        MD	0x10A0	MD_IMAGE	0	457	436	43	44
+        MD	0x10A1	MD_IMAGE	0	43	429	31	45
+        MD	0x10A2	MD_IMAGE	0	74	429	31	45
+        MD	0x10A3	MD_IMAGE	0	927	472	34	43
+        MD	0x10A4	MD_IMAGE	0	886	251	31	43
+        MD	0x10A5	MD_IMAGE	0	376	480	31	41
+        MD	0x10A6	MD_IMAGE	0	30	474	33	42
+        MD	0x10A7	MD_IMAGE	0	63	474	39	41
+        MD	0x10A8	MD_IMAGE	0	436	480	39	40
+        MD	0x10A9	MD_IMAGE	0	522	519	39	35
+        MD	0x1145	MD_IMAGE	0	505	480	41	39
+        MD	0x1146	MD_IMAGE	0	546	480	41	39
+        MD	0x10AA	MD_IMAGE	0	482	560	39	35
+        MD	0x10AB	MD_IMAGE	0	878	405	21	20
+        MD	0x10AC	MD_IMAGE	0	542	165	83	95
+        MD	0x10AD	MD_IMAGE	0	0	727	392	32
+        MD	0x10AE	MD_IMAGE	0	995	407	29	41
+        MD	0x10AF	MD_IMAGE	0	407	480	29	41
+        MD	0x10B0	MD_IMAGE	0	483	0	20	176
+        MD	0x10B1	MD_IMAGE	0	503	0	20	176
+        MD	0x10B2	MD_IMAGE	0	523	0	19	176
+        MD	0x1008	MD_IMAGE	0	773	451	17	20
+        MD	0x10B4	MD_IMAGE	0	927	515	17	20
+        MD	0x10B5	MD_IMAGE	0	327	665	87	30
+        MD	0x10B6	MD_IMAGE	0	927	535	96	38
+        MD	0x10B7	MD_IMAGE	0	954	643	22	18
+        MD	0x10B8	MD_IMAGE	0	1005	707	17	14
+        MD	0x10B9	MD_IMAGE	0	377	249	14	6
+        MD	0x10BC	MD_IMAGE	0	981	209	6	14
+        MD	0x10BD	MD_IMAGE	0	455	331	6	14
+        MD	0x10BE	MD_IMAGE	0	532	464	10	14
+        MD	0x10BF	MD_IMAGE	0	1012	448	10	14
+        MD	0x10C0	MD_IMAGE	0	216	811	14	10
+        MD	0x10C1	MD_IMAGE	0	1012	462	10	14
+        MD	0x10C2	MD_IMAGE	0	456	779	14	10
+        MD	0x10C3	MD_IMAGE	0	682	0	10	152
+        MD	0x10C4	MD_IMAGE	0	692	0	10	152
+        MD	0x1108	MD_IMAGE	0	702	0	3	152
+        MD	0x10C5	MD_IMAGE	0	672	0	10	152
+        MD	0x10C6	MD_IMAGE	0	132	332	10	28
+        MD	0x10C7	MD_IMAGE	0	616	388	10	28
+        MD	0x110F	MD_IMAGE	0	667	158	4	28
+        MD	0x10C8	MD_IMAGE	0	532	436	10	28
+        MD	0x114F	MD_IMAGE	0	920	146	10	104
+        MD	0x10CA	MD_IMAGE	0	930	146	10	104
+        MD	0x1150	MD_IMAGE	0	884	146	10	105
+        MD	0x1151	MD_IMAGE	0	894	146	10	105
+        MD	0x1112	MD_IMAGE	0	917	146	3	104
+        MD	0x1152	MD_IMAGE	0	904	146	3	105
+        MD	0x115C	MD_IMAGE	0	907	146	10	105
+        MD	0x115D	MD_IMAGE	0	989	0	10	105
+        MD	0x115E	MD_IMAGE	0	999	0	3	105
+        MD	0x115F	MD_IMAGE	0	1002	0	10	105
+        MD	0x1160	MD_IMAGE	0	1012	0	10	105
+        MD	0x1161	MD_IMAGE	0	989	105	3	105
+        MD	0x1162	MD_IMAGE	0	992	105	10	105
+        MD	0x1163	MD_IMAGE	0	1002	105	10	105
+        MD	0x1164	MD_IMAGE	0	1012	105	3	105
+        MD	0x1165	MD_IMAGE	0	824	146	10	105
+        MD	0x1166	MD_IMAGE	0	834	146	10	105
+        MD	0x1167	MD_IMAGE	0	1015	105	3	105
+        MD	0x1153	MD_IMAGE	0	844	146	10	105
+        MD	0x1154	MD_IMAGE	0	854	146	10	105
+        MD	0x1155	MD_IMAGE	0	1018	105	3	105
+        MD	0x1156	MD_IMAGE	0	864	146	10	105
+        MD	0x1157	MD_IMAGE	0	874	146	10	105
+        MD	0x1158	MD_IMAGE	0	1021	105	3	105
+        MD	0x10CC	MD_IMAGE	0	80	0	25	268
+        MD	0x10CE	MD_IMAGE	0	105	0	23	268
+        MD	0x10CD	MD_IMAGE	0	128	0	20	268
+        MD	0x10CF	MD_IMAGE	0	148	253	89	2
+        MD	0x10D0	MD_IMAGE	0	278	597	39	35
+        MD	0x10D1	MD_IMAGE	0	966	608	39	35
+        MD	0x10D4	MD_IMAGE	0	920	405	27	20
+        MD	0x10D5	MD_IMAGE	0	886	358	30	47
+        MD	0x10D6	MD_IMAGE	0	916	358	32	47
+        MD	0x10D8	MD_IMAGE	0	331	381	13	8
+        MD	0x10D9	MD_IMAGE	0	344	381	13	8
+        MD	0x10DA	MD_IMAGE	0	537	176	4	18
+        MD	0x10DD	MD_IMAGE	0	626	379	30	47
+        MD	0x10DE	MD_IMAGE	0	102	481	32	34
+        MD	0x10DB	MD_IMAGE	0	0	320	62	58
+        MD	0x10E1	MD_IMAGE	0	143	389	401	47
+        MD	0x1113	MD_IMAGE	0	0	759	401	30
+        MD	0x10E6	MD_IMAGE	0	950	357	74	50
+        MD	0x10E7	MD_IMAGE	0	491	595	20	32
+        MD	0x10E8	MD_IMAGE	0	317	597	20	32
+        MD	0x10E9	MD_IMAGE	0	961	497	63	38
+        MD	0x10EA	MD_IMAGE	0	639	695	21	29
+        MD	0x10EB	MD_IMAGE	0	998	725	20	29
+        MD	0x10EC	MD_IMAGE	0	598	727	21	29
+        MD	0x10ED	MD_IMAGE	0	619	727	20	28
+        MD	0x10EE	MD_IMAGE	0	998	754	24	29
+        MD	0x10EF	MD_IMAGE	0	648	757	24	29
+        MD	0x10F0	MD_IMAGE	0	748	757	58	28
+        MD	0x10F1	MD_IMAGE	0	306	480	70	41
+        MD	0x10F3	MD_IMAGE	0	377	436	42	44
+        MD	0x10F4	MD_IMAGE	0	756	356	50	49
+        MD	0x10F5	MD_IMAGE	0	696	377	60	47
+        MD	0x10F6	MD_IMAGE	0	419	631	46	34
+        MD	0x1109	MD_IMAGE	0	806	356	14	22
+        MD	0x110A	MD_IMAGE	0	738	458	13	13
+        MD	0x10F8	MD_IMAGE	0	626	319	20	60
+        MD	0x10FF	MD_IMAGE	0	646	319	20	60
+        MD	0x10FB	MD_IMAGE	0	666	319	30	60
+        MD	0x10FC	MD_IMAGE	0	475	480	30	40
+        MD	0x1102	MD_IMAGE	0	769	210	7	40
+        MD	0x1103	MD_IMAGE	0	769	150	7	60
+        MD	0x10F9	MD_IMAGE	0	917	250	20	40
+        MD	0x10FE	MD_IMAGE	0	435	331	20	40
+        MD	0x10FA	MD_IMAGE	0	185	200	20	53
+        MD	0x10FD	MD_IMAGE	0	148	200	20	53
+        MD	0x1100	MD_IMAGE	0	168	200	17	53
+        MD	0x1114	MD_IMAGE	0	210	696	31	30
+        MD	0x1115	MD_IMAGE	0	718	757	30	28
+        MD	0x10F2	MD_IMAGE	0	853	590	113	36
+        MD	0x1116	MD_IMAGE	0	554	805	71	16
+        MD	0x1117	MD_IMAGE	0	625	805	71	16
+        MD	0x1118	MD_IMAGE	0	696	807	50	16
+        MD	0x1119	MD_IMAGE	0	746	807	50	16
+        MD	0x111A	MD_IMAGE	0	796	807	76	16
+        MD	0x111B	MD_IMAGE	0	872	807	76	16
+        MD	0x111C	MD_IMAGE	0	477	759	77	16
+        MD	0x111D	MD_IMAGE	0	554	789	77	16
+        MD	0x111E	MD_IMAGE	0	952	784	71	16
+        MD	0x111F	MD_IMAGE	0	631	789	71	16
+        MD	0x1120	MD_IMAGE	0	0	555	129	37
+        MD	0x1121	MD_IMAGE	0	0	378	143	51
+        MD	0x1122	MD_IMAGE	0	80	268	64	64
+        MD	0x1124	MD_IMAGE	0	46	811	64	11
+        MD	0x1125	MD_IMAGE	0	110	811	71	11
+        MD	0x1126	MD_IMAGE	0	424	821	51	10
+        MD	0x1127	MD_IMAGE	0	475	821	60	10
+        MD	0x1128	MD_IMAGE	0	948	816	61	11
+        MD	0x1129	MD_IMAGE	0	672	152	97	97
+        MD	0x1144	MD_IMAGE	0	886	294	64	64
+        MD	0x1123	MD_IMAGE	0	0	516	38	38
+        MD	0x112A	MD_IMAGE	0	335	808	46	15
+        MD	0x112B	MD_IMAGE	0	381	808	43	15
+        MD	0x112C	MD_IMAGE	0	505	775	39	13
+        MD	0x112D	MD_IMAGE	0	424	808	46	13
+        MD	0x112E	MD_IMAGE	0	246	808	46	15
+        MD	0x112F	MD_IMAGE	0	292	808	43	15
+        MD	0x1130	MD_IMAGE	0	470	808	39	13
+        MD	0x1131	MD_IMAGE	0	0	811	46	13
+        MD	0x113B	MD_IMAGE	0	62	320	6	12
+        MD	0x113D	MD_IMAGE	0	992	643	13	13
+        MD	0x113E	MD_IMAGE	0	982	771	13	13
+        MD	0x113F	MD_IMAGE	0	364	249	13	6
+        MD	0x1141	MD_IMAGE	0	702	786	13	13
+        MD	0x1142	MD_IMAGE	0	990	800	13	13
+        MD	0x1143	MD_IMAGE	0	1003	210	6	13
+        MD	0x113C	MD_IMAGE	0	814	553	39	38
+        MD	0x1147	MD_IMAGE	0	419	436	38	44
+        MD	0x1148	MD_IMAGE	0	821	472	38	43
+        MD	0x1149	MD_IMAGE	0	640	221	27	28
+        MD	0x114A	MD_IMAGE	0	435	371	18	18
+        MD	0x114B	MD_IMAGE	0	982	757	14	14
+        MD	0x114C	MD_IMAGE	0	554	759	14	14
+        MD	0x1168	MD_IMAGE	0	554	773	14	14
+        MD	0x1169	MD_IMAGE	0	477	775	14	14
+        MD	0x116A	MD_IMAGE	0	491	775	14	14
+        MD	0x116B	MD_IMAGE	0	791	405	14	14
+        MD	0x114D	MD_IMAGE	0	702	644	14	14
+        MD	0x114E	MD_IMAGE	0	446	665	14	14
+        MD	0x1159	MD_IMAGE	0	509	808	16	13
+        MD	0x115A	MD_IMAGE	0	987	210	16	13
+        MD	0x115B	MD_IMAGE	0	806	379	54	47
+        MD	0x116D	MD_IMAGE	0	966	453	46	44
+        MD	0x116F	MD_IMAGE	0	134	481	34	34
+        MD	0x1170	MD_IMAGE	0	168	481	34	34
+        MD	0x1171	MD_IMAGE	0	202	481	34	34
+        MD	0x1172	MD_IMAGE	0	236	481	34	34
+        MD	0x1173	MD_IMAGE	0	270	481	34	34
+        MD	0x1174	MD_IMAGE	0	317	631	34	34
+        MD	0x1175	MD_IMAGE	0	351	631	34	34
+        MD	0x1176	MD_IMAGE	0	385	631	34	34
+        MD	0x1024	MD_IMAGE	0	954	757	28	27
+        MD	0x1025	MD_IMAGE	0	926	757	28	27
+        MD	0x103A	MD_IMAGE	0	181	811	35	11
+        MD	0x103B	MD_IMAGE	0	777	146	47	146
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+// Frames...
+// <Frame> := FRAME ["desc"] { id <RC1> [<RC2> ...] <FM1> [<FM2> ...] }
+// <RCi>   := RC x1 y1 x2 y2
+// <FMi>   := FM module_or_frame_id ox oy [FLAGS hex_flags] [+Flags]
+// Flags   := HYPER_FM | FLIP_X | FLIP_Y | ROT_90 | FREE_ROT
+
+    FRAME "BG" // Index = 0, FModules = 24
+    {
+        0x202E
+        FM	0x1044	0	0
+        FM	0x1044	20	0
+        FM	0x1044	40	0
+        FM	0x1044	60	0
+        FM	0x1044	80	0
+        FM	0x1044	100	0
+        FM	0x1044	120	0
+        FM	0x1044	140	0
+        FM	0x1044	160	0
+        FM	0x1044	180	0
+        FM	0x1044	200	0
+        FM	0x1044	220	0
+        FM	0x1044	240	0
+        FM	0x1044	260	0
+        FM	0x1044	280	0
+        FM	0x1044	300	0
+        FM	0x1044	320	0
+        FM	0x1044	340	0
+        FM	0x1044	360	0
+        FM	0x1044	380	0
+        FM	0x1044	400	0
+        FM	0x1044	420	0
+        FM	0x1044	440	0
+        FM	0x1044	460	0
+    }
+
+    FRAME "BG_SELECTOR" // Index = 1, FModules = 22
+    {
+        0x2001
+        FM	0x100D	22	86
+        FM	0x100E	42	86
+        FM	0x100E	62	86
+        FM	0x100E	82	86
+        FM	0x100E	102	86
+        FM	0x100E	122	86
+        FM	0x100E	142	86
+        FM	0x100E	162	86
+        FM	0x100E	182	86
+        FM	0x100E	202	86
+        FM	0x100E	222	86
+        FM	0x100E	242	86
+        FM	0x100E	262	86
+        FM	0x100E	282	86
+        FM	0x100E	302	86
+        FM	0x100E	322	86
+        FM	0x100E	342	86
+        FM	0x100E	362	86
+        FM	0x100E	382	86
+        FM	0x100E	402	86
+        FM	0x100E	422	86
+        FM	0x100F	442	86	+FLIP_X
+    }
+
+    FRAME "BG_TITLE" // Index = 2, FModules = 3
+    {
+        0x2000
+        FM	0x1010	0	9
+        FM	0x1011	127	19
+        FM	0x1041	478	19
+    }
+
+    FRAME "AVATAR" // Index = 3, FModules = 1
+    {
+        0x2003
+        FM	0x1197	0	0
+    }
+
+    FRAME "BUTTON_LEFT" // Index = 4, FModules = 1
+    {
+        0x2004
+        FM	0x1003	29	149
+    }
+
+    FRAME "BG_LEFT" // Index = 5, FModules = 1
+    {
+        0x20C7
+        FM	0x1132	23	143
+    }
+
+    FRAME "BUTTON_RIGHT" // Index = 6, FModules = 1
+    {
+        0x20C6
+        FM	0x1003	436	149	+FLIP_X
+    }
+
+    FRAME "BG_RIGHT" // Index = 7, FModules = 1
+    {
+        0x20C8
+        FM	0x1132	429	143	+FLIP_X
+    }
+
+    FRAME "BUTTON_BACK" // Index = 8, FModules = 2
+    {
+        0x2005
+        FM	0x1000	12	251
+        FM	0x1006	22	276
+    }
+
+    FRAME "BG_BACK" // Index = 9, FModules = 2
+    {
+        0x2009
+        FM	0x100B	7	244
+        FM	0x100A	22	276
+    }
+
+    FRAME "BUTTON_OK" // Index = 10, FModules = 2
+    {
+        0x2006
+        FM	0x1001	406	251
+        FM	0x1007	419	264
+    }
+
+    FRAME "BG_OK" // Index = 11, FModules = 2
+    {
+        0x200A
+        FM	0x100C	401	246
+        FM	0x1009	419	264
+    }
+
+    FRAME "PAGE" // Index = 12, FModules = 1
+    {
+        0x200D
+        FM	0x1004	0	0
+    }
+
+    FRAME "PAGE_ON" // Index = 13, FModules = 1
+    {
+        0x2007
+        FM	0x1005	0	0
+    }
+
+    FRAME "BG_LOGO" // Index = 14, FModules = 1
+    {
+        0x2002
+        FM	0x1012	283	0
+    }
+
+    FRAME "EDIT_REG" // Index = 15, FModules = 28
+    {
+        0x2008
+        FM	0x1013	36	118
+        FM	0x1014	216	118
+        FM	0x1015	66	118
+        FM	0x1015	96	118
+        FM	0x1015	126	118
+        FM	0x1015	156	118
+        FM	0x1015	186	118
+        FM	0x1013	243	118
+        FM	0x1014	423	118
+        FM	0x1015	273	118
+        FM	0x1015	303	118
+        FM	0x1015	333	118
+        FM	0x1015	363	118
+        FM	0x1015	393	118
+        FM	0x1013	36	175
+        FM	0x1014	216	175
+        FM	0x1015	66	175
+        FM	0x1015	96	175
+        FM	0x1015	126	175
+        FM	0x1015	156	175
+        FM	0x1015	186	175
+        FM	0x1013	243	175
+        FM	0x1014	423	175
+        FM	0x1015	273	175
+        FM	0x1015	303	175
+        FM	0x1015	333	175
+        FM	0x1015	363	175
+        FM	0x1015	393	175
+    }
+
+    FRAME "CHECKED" // Index = 16, FModules = 2
+    {
+        0x200B
+        FM	0x1016	0	0
+        FM	0x10E3	5	7
+    }
+
+    FRAME "CHECK" // Index = 17, FModules = 1
+    {
+        0x207D
+        FM	0x1016	0	0
+    }
+
+    FRAME "CHECK_ON" // Index = 18, FModules = 2
+    {
+        0x2056
+        FM	0x10E4	0	0
+        FM	0x10E5	11	11
+    }
+
+    FRAME "BLACK_BG" // Index = 19, FModules = 8
+    {
+        0x200C
+        FM	0x1017	0	0
+        FM	0x1017	60	0
+        FM	0x1017	120	0
+        FM	0x1017	180	0
+        FM	0x1017	240	0
+        FM	0x1017	300	0
+        FM	0x1017	360	0
+        FM	0x1017	420	0
+    }
+
+    FRAME "BG_WARNING" // Index = 20, FModules = 25
+    {
+        0x2015
+        FM	0x1018	99	85
+        FM	0x1019	369	85
+        FM	0x101A	309	85
+        FM	0x101A	339	85
+        FM	0x101A	219	85
+        FM	0x101A	189	85
+        FM	0x101A	279	85
+        FM	0x101A	159	85
+        FM	0x101A	129	85
+        FM	0x101A	249	85
+        FM	0x1023	100	87
+        FM	0x1022	101	130
+        FM	0x1022	360	130
+        FM	0x1021	120	130
+        FM	0x1021	140	130
+        FM	0x1021	160	130
+        FM	0x1021	180	130
+        FM	0x1021	200	130
+        FM	0x1021	220	130
+        FM	0x1021	240	130
+        FM	0x1021	260	130
+        FM	0x1021	280	130
+        FM	0x1021	300	130
+        FM	0x1021	320	130
+        FM	0x1021	340	130
+    }
+
+    FRAME "" // Index = 21, FModules = 2
+    {
+        0x2016
+        FM	0x101B	333	98
+        FM	0x101F	341	102
+    }
+
+    FRAME "" // Index = 22, FModules = 2
+    {
+        0x2017
+        FM	0x101B	333	98
+        FM	0x1020	339	102
+    }
+
+    FRAME "" // Index = 23, FModules = 2
+    {
+        0x2018
+        FM	0x101C	330	95
+        FM	0x101D	340	100
+    }
+
+    FRAME "" // Index = 24, FModules = 2
+    {
+        0x2019
+        FM	0x101C	330	95
+        FM	0x101E	339	100
+    }
+
+    FRAME "BUTTON_CONNECT" // Index = 25, FModules = 2
+    {
+        0x201A
+        FM	0x1039	172	249
+        FM	0x1026	188	263
+    }
+
+    FRAME "BG_CONNECT" // Index = 26, FModules = 2
+    {
+        0x201B
+        FM	0x1043	168	242
+        FM	0x1027	188	263
+    }
+
+    FRAME "BUTTON_CREATE" // Index = 27, FModules = 2
+    {
+        0x201C
+        FM	0x1028	406	249
+        FM	0x102A	422	265
+    }
+
+    FRAME "BG_CREATE" // Index = 28, FModules = 2
+    {
+        0x201D
+        FM	0x1029	401	245
+        FM	0x102B	422	265
+    }
+
+    FRAME "BUTTON_FORGOT" // Index = 29, FModules = 2
+    {
+        0x201F
+        FM	0x1028	406	249
+        FM	0x102D	422	266
+    }
+
+    FRAME "BG_FORGOT" // Index = 30, FModules = 2
+    {
+        0x2020
+        FM	0x1029	401	245
+        FM	0x102E	422	266
+    }
+
+    FRAME "BG_LOGO2" // Index = 31, FModules = 2
+    {
+        0x201E
+        FM	0x102C	84	18
+        FM	0x10B3	395	31
+    }
+
+    FRAME "evaluate" // Index = 32, FModules = 32
+    {
+        0x2024
+        FM	0x1031	99	75
+        FM	0x1032	119	75
+        FM	0x1032	139	75
+        FM	0x1032	159	75
+        FM	0x1032	179	75
+        FM	0x1032	199	75
+        FM	0x1032	219	75
+        FM	0x1032	239	75
+        FM	0x1032	259	75
+        FM	0x1032	279	75
+        FM	0x1032	299	75
+        FM	0x1032	319	75
+        FM	0x1032	339	75
+        FM	0x1033	359	75
+        FM	0x1022	121	119
+        FM	0x1021	101	119
+        FM	0x1022	160	119
+        FM	0x1021	140	119
+        FM	0x1022	199	119
+        FM	0x1021	179	119
+        FM	0x1022	238	119
+        FM	0x1021	218	119
+        FM	0x1022	277	119
+        FM	0x1021	257	119
+        FM	0x1022	316	119
+        FM	0x1021	296	119
+        FM	0x1022	355	119
+        FM	0x1021	335	119
+        FM	0x1034	374	120
+        FM	0x1199	126	76
+        FM	0x1198	100	76
+        FM	0x119A	113	76
+    }
+
+    FRAME "good" // Index = 33, FModules = 1
+    {
+        0x2023
+        FM	0x102F	152	136
+    }
+
+    FRAME "bad" // Index = 34, FModules = 1
+    {
+        0x2022
+        FM	0x1030	268	136
+    }
+
+    FRAME "" // Index = 35, FModules = 1
+    {
+        0x200E
+        FM	0x1039	0	0
+    }
+
+    FRAME "" // Index = 36, FModules = 1
+    {
+        0x200F
+        FM	0x1043	0	0
+    }
+
+    FRAME "en" // Index = 37, FModules = 3
+    {
+        0x2025
+        FM	0x1039	105	175
+        FM	0x1050	136	181
+        FM	0x1058	178	191
+    }
+
+    FRAME "" // Index = 38, FModules = 3
+    {
+        0x210E
+        FM	0x1039	277	175
+        FM	0x1052	313	193
+        FM	0x105A	352	191
+    }
+
+    FRAME "" // Index = 39, FModules = 3
+    {
+        0x210F
+        FM	0x1039	105	242
+        FM	0x1054	137	247
+        FM	0x105C	176	256
+    }
+
+    FRAME "" // Index = 40, FModules = 3
+    {
+        0x2110
+        FM	0x1039	277	242
+        FM	0x1056	315	259
+        FM	0x105E	350	256
+    }
+
+    FRAME "" // Index = 41, FModules = 3
+    {
+        0x202A
+        FM	0x1043	101	168
+        FM	0x1051	136	181
+        FM	0x1059	177	189
+    }
+
+    FRAME "" // Index = 42, FModules = 3
+    {
+        0x202B
+        FM	0x1043	273	168
+        FM	0x1053	313	193
+        FM	0x105B	352	191
+    }
+
+    FRAME "" // Index = 43, FModules = 3
+    {
+        0x202C
+        FM	0x1043	101	235
+        FM	0x1055	137	247
+        FM	0x105D	176	256
+    }
+
+    FRAME "" // Index = 44, FModules = 3
+    {
+        0x202D
+        FM	0x1043	273	235
+        FM	0x105F	350	256
+        FM	0x1057	315	259
+    }
+
+    FRAME "de" // Index = 45, FModules = 3
+    {
+        0x2043
+        FM	0x1039	105	175
+        FM	0x1050	125	181
+        FM	0x1060	165	191
+    }
+
+    FRAME "" // Index = 46, FModules = 3
+    {
+        0x2111
+        FM	0x1039	277	175
+        FM	0x1052	296	193
+        FM	0x1062	334	191
+    }
+
+    FRAME "" // Index = 47, FModules = 3
+    {
+        0x2112
+        FM	0x1039	105	242
+        FM	0x1054	127	247
+        FM	0x1064	164	256
+    }
+
+    FRAME "" // Index = 48, FModules = 4
+    {
+        0x2113
+        FM	0x1039	277	242
+        FM	0x1056	300	259
+        FM	0x1066	334	256
+        FM	0x1067	385	272
+    }
+
+    FRAME "" // Index = 49, FModules = 3
+    {
+        0x2047
+        FM	0x1043	101	168
+        FM	0x1051	125	181
+        FM	0x1061	165	191
+    }
+
+    FRAME "" // Index = 50, FModules = 3
+    {
+        0x2048
+        FM	0x1043	273	168
+        FM	0x1053	296	193
+        FM	0x1063	334	191
+    }
+
+    FRAME "" // Index = 51, FModules = 3
+    {
+        0x2049
+        FM	0x1043	101	235
+        FM	0x1055	127	247
+        FM	0x1065	164	256
+    }
+
+    FRAME "" // Index = 52, FModules = 3
+    {
+        0x204A
+        FM	0x1043	273	235
+        FM	0x1057	300	259
+        FM	0x1068	334	256
+    }
+
+    FRAME "fr" // Index = 53, FModules = 3
+    {
+        0x2044
+        FM	0x1039	105	175
+        FM	0x1050	136	181
+        FM	0x1069	178	190
+    }
+
+    FRAME "" // Index = 54, FModules = 3
+    {
+        0x2114
+        FM	0x1039	277	175
+        FM	0x1052	313	193
+        FM	0x106B	350	190
+    }
+
+    FRAME "" // Index = 55, FModules = 3
+    {
+        0x2115
+        FM	0x1039	105	242
+        FM	0x1054	137	247
+        FM	0x106D	178	256
+    }
+
+    FRAME "" // Index = 56, FModules = 3
+    {
+        0x2116
+        FM	0x1039	277	242
+        FM	0x1056	315	259
+        FM	0x1070	350	256
+    }
+
+    FRAME "" // Index = 57, FModules = 3
+    {
+        0x204B
+        FM	0x1043	101	168
+        FM	0x1051	136	181
+        FM	0x106A	178	190
+    }
+
+    FRAME "" // Index = 58, FModules = 3
+    {
+        0x204C
+        FM	0x1043	273	168
+        FM	0x1053	313	193
+        FM	0x106C	350	190
+    }
+
+    FRAME "" // Index = 59, FModules = 4
+    {
+        0x204D
+        FM	0x1043	101	235
+        FM	0x1055	137	247
+        FM	0x106E	178	256
+        FM	0x106F	226	288
+    }
+
+    FRAME "" // Index = 60, FModules = 3
+    {
+        0x204E
+        FM	0x1043	273	235
+        FM	0x1057	315	259
+        FM	0x1071	350	256
+    }
+
+    FRAME "sp" // Index = 61, FModules = 3
+    {
+        0x2045
+        FM	0x1039	105	175
+        FM	0x1050	136	181
+        FM	0x1072	179	191
+    }
+
+    FRAME "" // Index = 62, FModules = 3
+    {
+        0x211A
+        FM	0x1039	277	175
+        FM	0x1052	313	193
+        FM	0x1074	352	191
+    }
+
+    FRAME "" // Index = 63, FModules = 3
+    {
+        0x211B
+        FM	0x1039	105	242
+        FM	0x1054	137	247
+        FM	0x1076	179	256
+    }
+
+    FRAME "" // Index = 64, FModules = 3
+    {
+        0x211C
+        FM	0x1039	277	242
+        FM	0x1056	315	259
+        FM	0x1078	352	256
+    }
+
+    FRAME "" // Index = 65, FModules = 3
+    {
+        0x2057
+        FM	0x1043	101	168
+        FM	0x1051	136	181
+        FM	0x1073	179	191
+    }
+
+    FRAME "" // Index = 66, FModules = 3
+    {
+        0x2058
+        FM	0x1043	273	168
+        FM	0x1053	313	193
+        FM	0x1075	352	191
+    }
+
+    FRAME "" // Index = 67, FModules = 4
+    {
+        0x2059
+        FM	0x1043	101	235
+        FM	0x1055	137	247
+        FM	0x1077	179	256
+        FM	0x10E2	226	272
+    }
+
+    FRAME "" // Index = 68, FModules = 3
+    {
+        0x205A
+        FM	0x1043	273	235
+        FM	0x1057	315	259
+        FM	0x1079	352	256
+    }
+
+    FRAME "it" // Index = 69, FModules = 3
+    {
+        0x2046
+        FM	0x1039	105	175
+        FM	0x1050	136	181
+        FM	0x107A	178	191
+    }
+
+    FRAME "" // Index = 70, FModules = 3
+    {
+        0x2117
+        FM	0x1039	277	175
+        FM	0x1052	313	193
+        FM	0x107C	351	191
+    }
+
+    FRAME "" // Index = 71, FModules = 3
+    {
+        0x2118
+        FM	0x1039	105	242
+        FM	0x1054	137	247
+        FM	0x107E	179	256
+    }
+
+    FRAME "" // Index = 72, FModules = 3
+    {
+        0x2119
+        FM	0x1039	277	242
+        FM	0x1056	315	259
+        FM	0x1080	350	256
+    }
+
+    FRAME "" // Index = 73, FModules = 3
+    {
+        0x204F
+        FM	0x1043	101	168
+        FM	0x1051	136	181
+        FM	0x107B	178	191
+    }
+
+    FRAME "" // Index = 74, FModules = 3
+    {
+        0x2050
+        FM	0x1043	273	168
+        FM	0x1053	313	193
+        FM	0x107D	351	191
+    }
+
+    FRAME "" // Index = 75, FModules = 3
+    {
+        0x2051
+        FM	0x1043	101	235
+        FM	0x1055	137	247
+        FM	0x107F	179	256
+    }
+
+    FRAME "" // Index = 76, FModules = 3
+    {
+        0x2052
+        FM	0x1043	273	235
+        FM	0x1057	315	259
+        FM	0x1081	350	256
+    }
+
+    FRAME "BUTTON_DEL" // Index = 77, FModules = 2
+    {
+        0x2036
+        FM	0x104B	400	20
+        FM	0x1048	419	34
+    }
+
+    FRAME "BG_DEL" // Index = 78, FModules = 2
+    {
+        0x2037
+        FM	0x104A	395	13
+        FM	0x1049	419	34
+    }
+
+    FRAME "SCORE_UINT" // Index = 79, FModules = 1
+    {
+        0x2028
+        FM	0x1038	0	0
+    }
+
+    FRAME "FRD_DETAIL_LINE" // Index = 80, FModules = 2
+    {
+        0x2029
+        FM	0x103D	0	143
+        FM	0x103C	246	133
+    }
+
+    FRAME "REPUTATION_BLACK" // Index = 81, FModules = 1
+    {
+        0x2027
+        FM	0x1036	0	0
+    }
+
+    FRAME "REPUTATION_NULL" // Index = 82, FModules = 1
+    {
+        0x2021
+        FM	0x1037	0	0
+    }
+
+    FRAME "INPUT_AREA" // Index = 83, FModules = 13
+    {
+        0x2033
+        FM	0x1013	0	0
+        FM	0x1015	30	0
+        FM	0x1015	60	0
+        FM	0x1015	90	0
+        FM	0x1015	120	0
+        FM	0x1015	150	0
+        FM	0x1015	180	0
+        FM	0x1015	210	0
+        FM	0x1015	240	0
+        FM	0x1015	270	0
+        FM	0x1015	300	0
+        FM	0x1014	345	0
+        FM	0x1047	330	0
+    }
+
+    FRAME "BUTTON_SEND" // Index = 84, FModules = 2
+    {
+        0x2035
+        FM	0x1028	406	249
+        FM	0x1045	419	257
+    }
+
+    FRAME "BG_SEND" // Index = 85, FModules = 2
+    {
+        0x2034
+        FM	0x1029	401	245
+        FM	0x1046	419	257
+    }
+
+    FRAME "REPLY_MSG" // Index = 86, FModules = 2
+    {
+        0x20D1
+        FM	0x1028	406	249
+        FM	0x1145	417	265
+    }
+
+    FRAME "" // Index = 87, FModules = 2
+    {
+        0x20D2
+        FM	0x1029	401	245
+        FM	0x1146	417	265
+    }
+
+    FRAME "ADD2FRIENDLIST" // Index = 88, FModules = 2
+    {
+        0x20D3
+        FM	0x1028	406	177
+        FM	0x1147	418	191
+    }
+
+    FRAME "" // Index = 89, FModules = 2
+    {
+        0x20D4
+        FM	0x1029	401	173
+        FM	0x1148	418	191
+    }
+
+    FRAME "OFFLINE" // Index = 90, FModules = 1
+    {
+        0x2038
+        FM	0x104F	0	0
+    }
+
+    FRAME "ONLINE" // Index = 91, FModules = 1
+    {
+        0x2026
+        FM	0x1035	0	0
+    }
+
+    FRAME "PLAYING" // Index = 92, FModules = 1
+    {
+        0x2061
+        FM	0x104F	0	0
+    }
+
+    FRAME "FRIEND_TITLE" // Index = 93, FModules = 4
+    {
+        0x2039
+        FM	0x104C	0	19
+        FM	0x104D	333	9
+        FM	0x104E	430	9
+        FM	0x104E	455	9
+    }
+
+    FRAME "LINE" // Index = 94, FModules = 24
+    {
+        0x203A
+        FM	0x1021	0	0
+        FM	0x1021	20	0
+        FM	0x1021	40	0
+        FM	0x1021	60	0
+        FM	0x1021	80	0
+        FM	0x1021	100	0
+        FM	0x1021	120	0
+        FM	0x1021	140	0
+        FM	0x1021	160	0
+        FM	0x1021	180	0
+        FM	0x1021	200	0
+        FM	0x1021	220	0
+        FM	0x1021	240	0
+        FM	0x1021	260	0
+        FM	0x1021	280	0
+        FM	0x1021	300	0
+        FM	0x1021	320	0
+        FM	0x1021	340	0
+        FM	0x1021	360	0
+        FM	0x1021	380	0
+        FM	0x1021	400	0
+        FM	0x1021	420	0
+        FM	0x1021	440	0
+        FM	0x1021	460	0
+    }
+
+    FRAME "BG_SCROLL" // Index = 95, FModules = 5
+    {
+        0x2010
+        FM	0x1085	0	0
+        FM	0x1088	0	124
+        FM	0x1089	0	31
+        FM	0x1089	0	62
+        FM	0x1089	0	93
+    }
+
+    FRAME "BG_GC" // Index = 96, FModules = 22
+    {
+        0x2011
+        FM	0x1082	15	52
+        FM	0x1083	35	52
+        FM	0x1083	55	52
+        FM	0x1083	75	52
+        FM	0x1083	95	52
+        FM	0x1083	115	52
+        FM	0x1083	135	52
+        FM	0x1083	155	52
+        FM	0x1083	175	52
+        FM	0x1083	195	52
+        FM	0x1083	215	52
+        FM	0x1083	255	52
+        FM	0x1083	235	52
+        FM	0x1083	275	52
+        FM	0x1083	295	52
+        FM	0x1083	315	52
+        FM	0x1083	335	52
+        FM	0x1083	355	52
+        FM	0x1083	375	52
+        FM	0x1083	395	52
+        FM	0x1083	415	52
+        FM	0x1084	435	52
+    }
+
+    FRAME "" // Index = 97, FModules = 1
+    {
+        0x2012
+        FM	0x1087	0	0
+    }
+
+    FRAME "SCROLL_BAR1" // Index = 98, FModules = 1
+    {
+        0x2013
+        FM	0x1086	0	0
+    }
+
+    FRAME "BUTTON_CHANGE_PWD" // Index = 99, FModules = 1
+    {
+        0x2014
+        FM	0x108A	368	277
+    }
+
+    FRAME "" // Index = 100, FModules = 1
+    {
+        0x2030
+        FM	0x108B	362	272
+    }
+
+    FRAME "" // Index = 101, FModules = 1
+    {
+        0x2031
+        FM	0x1016	93	242
+    }
+
+    FRAME "BG_INVITE" // Index = 102, FModules = 15
+    {
+        0x203F
+        FM	0x1091	102	73
+        FM	0x1092	122	73
+        FM	0x1092	142	73
+        FM	0x1092	162	73
+        FM	0x1092	182	73
+        FM	0x1092	202	73
+        FM	0x1092	222	73
+        FM	0x1092	242	73
+        FM	0x1092	262	73
+        FM	0x1092	282	73
+        FM	0x1092	302	73
+        FM	0x1092	322	73
+        FM	0x1092	342	73
+        FM	0x1093	362	73
+        FM	0x1094	153	73
+    }
+
+    FRAME "BG_INVITE2" // Index = 103, FModules = 16
+    {
+        0x2032
+        FM	0x1095	110	145
+        FM	0x1096	110	189
+        FM	0x1098	142	145
+        FM	0x1097	142	189
+        FM	0x1098	174	145
+        FM	0x1097	174	189
+        FM	0x1098	206	145
+        FM	0x1097	206	189
+        FM	0x1098	238	145
+        FM	0x1097	238	189
+        FM	0x1098	270	145
+        FM	0x1097	270	189
+        FM	0x1098	302	145
+        FM	0x1097	302	189
+        FM	0x1099	334	145
+        FM	0x109A	334	189
+    }
+
+    FRAME "BUTTON_CHAT_NO" // Index = 104, FModules = 1
+    {
+        0x203C
+        FM	0x108C	107	223
+    }
+
+    FRAME "" // Index = 105, FModules = 2
+    {
+        0x203D
+        FM	0x1090	103	217
+        FM	0x108F	123	229
+    }
+
+    FRAME "BUTTON_CHAT_YES" // Index = 106, FModules = 1
+    {
+        0x203B
+        FM	0x108D	314	223
+    }
+
+    FRAME "" // Index = 107, FModules = 2
+    {
+        0x203E
+        FM	0x1090	310	217
+        FM	0x108E	329	227
+    }
+
+    FRAME "EDIT_LOGIN" // Index = 108, FModules = 26
+    {
+        0x2040
+        FM	0x1013	58	174
+        FM	0x1014	403	174
+        FM	0x1015	88	174
+        FM	0x1015	118	174
+        FM	0x1015	148	174
+        FM	0x1015	178	174
+        FM	0x1015	208	174
+        FM	0x1015	238	174
+        FM	0x1015	268	174
+        FM	0x1015	298	174
+        FM	0x1015	328	174
+        FM	0x1015	358	174
+        FM	0x1047	388	174
+        FM	0x1013	58	117
+        FM	0x1014	403	117
+        FM	0x1015	88	117
+        FM	0x1015	118	117
+        FM	0x1015	148	117
+        FM	0x1015	178	117
+        FM	0x1015	208	117
+        FM	0x1015	238	117
+        FM	0x1015	268	117
+        FM	0x1015	298	117
+        FM	0x1015	328	117
+        FM	0x1015	358	117
+        FM	0x1047	388	117
+    }
+
+    FRAME "" // Index = 109, FModules = 1
+    {
+        0x2041
+        FM	0x1016	60	209
+    }
+
+    FRAME "main" // Index = 110, FModules = 1
+    {
+        0x202F
+        FM	0x103E	0	174
+    }
+
+    FRAME "NEWS_TITLE" // Index = 111, FModules = 2
+    {
+        0x2042
+        FM	0x109B	162	172
+        FM	0x109C	0	172
+    }
+
+    FRAME "SCORE_UNIT_MID" // Index = 112, FModules = 1
+    {
+        0x2053
+        FM	0x109D	0	0
+    }
+
+    FRAME "REPUTATION" // Index = 113, FModules = 1
+    {
+        0x2054
+        FM	0x10AB	0	0
+    }
+
+    FRAME "BUTTON_MAIN" // Index = 114, FModules = 14
+    {
+        0x2055
+        FM	0x104B	252	10
+        FM	0x104B	326	10
+        FM	0x104B	400	10
+        FM	0x104B	252	96
+        FM	0x104B	326	96
+        FM	0x104B	400	96
+        FM	0x109F	269	28
+        FM	0x10A3	344	32
+        FM	0x10A1	419	28
+        FM	0x10A7	268	117
+        FM	0x10A5	345	115
+        FM	0x10A9	416	118
+        FM	0x109E	362	130
+        FM	0x109E	436	130
+    }
+
+    FRAME "BG_PROFILE" // Index = 115, FModules = 2
+    {
+        0x205B
+        FM	0x104A	247	3
+        FM	0x10A0	269	28
+    }
+
+    FRAME "BG_TROPHY" // Index = 116, FModules = 2
+    {
+        0x205C
+        FM	0x104A	321	3
+        FM	0x10A4	344	32
+    }
+
+    FRAME "BG_LOGOUT" // Index = 117, FModules = 2
+    {
+        0x205D
+        FM	0x104A	395	3
+        FM	0x10A2	419	28
+    }
+
+    FRAME "BG_CHAT" // Index = 118, FModules = 2
+    {
+        0x205E
+        FM	0x104A	247	89
+        FM	0x10A8	268	117
+    }
+
+    FRAME "BG_FRIEND" // Index = 119, FModules = 3
+    {
+        0x205F
+        FM	0x104A	321	89
+        FM	0x10A6	345	115
+        FM	0x1123	361	130
+    }
+
+    FRAME "BG_MESSAGE" // Index = 120, FModules = 3
+    {
+        0x2060
+        FM	0x104A	395	89
+        FM	0x10AA	416	118
+        FM	0x1123	435	130
+    }
+
+    FRAME "MAIN_MSG" // Index = 121, FModules = 1
+    {
+        0x2062
+        FM	0x10AC	210	131
+    }
+
+    FRAME "BG_MAIN_MSG" // Index = 122, FModules = 29
+    {
+        0x2063
+        FM	0x1091	99	64
+        FM	0x1093	359	64
+        FM	0x1092	119	64
+        FM	0x1092	139	64
+        FM	0x1092	159	64
+        FM	0x1092	179	64
+        FM	0x1092	199	64
+        FM	0x1092	219	64
+        FM	0x1092	239	64
+        FM	0x1092	259	64
+        FM	0x1092	279	64
+        FM	0x1092	299	64
+        FM	0x1092	319	64
+        FM	0x1092	339	64
+        FM	0x1023	99	65
+        FM	0x1021	100	108
+        FM	0x1021	120	108
+        FM	0x1021	140	108
+        FM	0x1021	160	108
+        FM	0x1021	180	108
+        FM	0x1021	200	108
+        FM	0x1021	220	108
+        FM	0x1021	240	108
+        FM	0x1021	260	108
+        FM	0x1021	280	108
+        FM	0x1021	300	108
+        FM	0x1021	320	108
+        FM	0x1021	340	108
+        FM	0x1021	360	108
+    }
+
+    FRAME "" // Index = 123, FModules = 2
+    {
+        0x2064
+        FM	0x101B	333	75
+        FM	0x101F	341	79
+    }
+
+    FRAME "" // Index = 124, FModules = 2
+    {
+        0x2066
+        FM	0x101C	330	72
+        FM	0x101D	340	78
+    }
+
+    FRAME "" // Index = 125, FModules = 2
+    {
+        0x2065
+        FM	0x101B	333	75
+        FM	0x1020	339	79
+    }
+
+    FRAME "" // Index = 126, FModules = 2
+    {
+        0x2067
+        FM	0x101C	330	72
+        FM	0x101E	339	78
+    }
+
+    FRAME "MESSAGE_TITLE" // Index = 127, FModules = 2
+    {
+        0x2068
+        FM	0x10AD	0	19
+        FM	0x104D	383	9
+    }
+
+    FRAME "BUTTON_ADD" // Index = 128, FModules = 2
+    {
+        0x2069
+        FM	0x1028	406	33
+        FM	0x10AE	423	50
+    }
+
+    FRAME "BG_ADD" // Index = 129, FModules = 2
+    {
+        0x206A
+        FM	0x1029	401	29
+        FM	0x10AF	423	50
+    }
+
+    FRAME "TO" // Index = 130, FModules = 10
+    {
+        0x206B
+        FM	0x1013	99	64
+        FM	0x1014	354	64
+        FM	0x1015	129	64
+        FM	0x1015	159	64
+        FM	0x1015	189	64
+        FM	0x1015	219	64
+        FM	0x1015	249	64
+        FM	0x1015	279	64
+        FM	0x1015	309	64
+        FM	0x1047	339	64
+    }
+
+    FRAME "CONTENT" // Index = 131, FModules = 15
+    {
+        0x206C
+        FM	0x10B0	90	109
+        FM	0x10B1	110	109
+        FM	0x10B1	130	109
+        FM	0x10B1	150	109
+        FM	0x10B1	170	109
+        FM	0x10B1	190	109
+        FM	0x10B1	210	109
+        FM	0x10B1	230	109
+        FM	0x10B1	250	109
+        FM	0x10B1	270	109
+        FM	0x10B1	290	109
+        FM	0x10B1	310	109
+        FM	0x10B1	330	109
+        FM	0x10B1	350	109
+        FM	0x10B2	370	109
+    }
+
+    FRAME "BG_MSG" // Index = 132, FModules = 30
+    {
+        0x206E
+        FM	0x1031	99	75
+        FM	0x1032	119	75
+        FM	0x1032	139	75
+        FM	0x1032	159	75
+        FM	0x1032	179	75
+        FM	0x1032	199	75
+        FM	0x1032	219	75
+        FM	0x1032	239	75
+        FM	0x1032	259	75
+        FM	0x1032	279	75
+        FM	0x1032	299	75
+        FM	0x1032	319	75
+        FM	0x1032	339	75
+        FM	0x1033	359	75
+        FM	0x1023	100	76
+        FM	0x1022	121	119
+        FM	0x1021	101	119
+        FM	0x1022	160	119
+        FM	0x1021	140	119
+        FM	0x1022	199	119
+        FM	0x1021	179	119
+        FM	0x1022	238	119
+        FM	0x1021	218	119
+        FM	0x1022	277	119
+        FM	0x1021	257	119
+        FM	0x1022	316	119
+        FM	0x1021	296	119
+        FM	0x1022	355	119
+        FM	0x1021	335	119
+        FM	0x1034	374	120
+    }
+
+    FRAME "BUTTON_YES" // Index = 133, FModules = 1
+    {
+        0x206D
+        FM	0x108D	276	182
+    }
+
+    FRAME "" // Index = 134, FModules = 2
+    {
+        0x206F
+        FM	0x1090	272	176
+        FM	0x108E	291	186
+    }
+
+    FRAME "BUTTON_NO" // Index = 135, FModules = 1
+    {
+        0x2070
+        FM	0x108C	141	182
+    }
+
+    FRAME "" // Index = 136, FModules = 2
+    {
+        0x2071
+        FM	0x1090	137	176
+        FM	0x108F	157	188
+    }
+
+    FRAME "BUTTON_CHANGE" // Index = 137, FModules = 3
+    {
+        0x2072
+        FM	0x10B5	0	0
+        FM	0x1008	10	3
+        FM	0x112A	29	6
+    }
+
+    FRAME "" // Index = 138, FModules = 3
+    {
+        0x20BE
+        FM	0x10B5	0	0
+        FM	0x1008	10	3
+        FM	0x112B	30	4
+    }
+
+    FRAME "" // Index = 139, FModules = 3
+    {
+        0x20BF
+        FM	0x10B5	0	0
+        FM	0x1008	10	3
+        FM	0x112C	31	6
+    }
+
+    FRAME "" // Index = 140, FModules = 3
+    {
+        0x20C0
+        FM	0x10B5	0	0
+        FM	0x1008	10	3
+        FM	0x112D	29	6
+    }
+
+    FRAME "" // Index = 141, FModules = 3
+    {
+        0x20C4
+        FM	0x10B5	0	0
+        FM	0x1008	10	3
+        FM	0x112D	29	6
+    }
+
+    FRAME "BG_CHANGE" // Index = 142, FModules = 3
+    {
+        0x2073
+        FM	0x10B6	0	0
+        FM	0x10B4	16	10
+        FM	0x112E	34	13
+    }
+
+    FRAME "" // Index = 143, FModules = 3
+    {
+        0x20C1
+        FM	0x10B6	0	0
+        FM	0x10B4	16	10
+        FM	0x112F	35	11
+    }
+
+    FRAME "" // Index = 144, FModules = 3
+    {
+        0x20C2
+        FM	0x10B6	0	0
+        FM	0x10B4	16	10
+        FM	0x1130	36	13
+    }
+
+    FRAME "" // Index = 145, FModules = 3
+    {
+        0x20C3
+        FM	0x10B6	0	0
+        FM	0x10B4	16	10
+        FM	0x1131	34	13
+    }
+
+    FRAME "" // Index = 146, FModules = 3
+    {
+        0x20C5
+        FM	0x10B6	0	0
+        FM	0x10B4	16	10
+        FM	0x1131	34	13
+    }
+
+    FRAME "TROPHY_BG" // Index = 147, FModules = 54
+    {
+        0x2074
+        FM	0x10CC	0	0
+        FM	0x10CE	305	0
+        FM	0x10CD	25	0
+        FM	0x10CD	45	0
+        FM	0x10CD	65	0
+        FM	0x10CD	85	0
+        FM	0x10CD	105	0
+        FM	0x10CD	125	0
+        FM	0x10CD	145	0
+        FM	0x10CD	165	0
+        FM	0x10CD	185	0
+        FM	0x10CD	205	0
+        FM	0x10CD	225	0
+        FM	0x10CD	245	0
+        FM	0x10CD	265	0
+        FM	0x10CD	285	0
+        FM	0x1094	56	0
+        FM	0x10DC	285	0
+        FM	0x10DC	303	0
+        FM	0x10DF	321	0
+        FM	0x1022	22	101
+        FM	0x1021	2	101
+        FM	0x1022	61	101
+        FM	0x1021	41	101
+        FM	0x1022	100	101
+        FM	0x1021	80	101
+        FM	0x1022	139	101
+        FM	0x1021	119	101
+        FM	0x1022	178	101
+        FM	0x1021	158	101
+        FM	0x1022	217	101
+        FM	0x1021	197	101
+        FM	0x1022	256	101
+        FM	0x1021	236	101
+        FM	0x1022	295	101
+        FM	0x1021	275	101
+        FM	0x116E	314	101
+        FM	0x1022	22	69
+        FM	0x1021	2	69
+        FM	0x1022	61	69
+        FM	0x1021	41	69
+        FM	0x1022	100	69
+        FM	0x1021	80	69
+        FM	0x1022	139	69
+        FM	0x1021	119	69
+        FM	0x1022	178	69
+        FM	0x1021	158	69
+        FM	0x1022	217	69
+        FM	0x1021	197	69
+        FM	0x1022	256	69
+        FM	0x1021	236	69
+        FM	0x1022	295	69
+        FM	0x1021	275	69
+        FM	0x116E	314	69
+    }
+
+    FRAME "TROPHY_SELECTED" // Index = 148, FModules = 1
+    {
+        0x2075
+        FM	0x10DB	0	0
+    }
+
+    FRAME "TROPHY_SCROLL_BAR" // Index = 149, FModules = 5
+    {
+        0x2076
+        FM	0x1085	0	0
+        FM	0x1089	0	31
+        FM	0x1089	0	62
+        FM	0x1089	0	93
+        FM	0x10E0	0	124
+    }
+
+    FRAME "READED_MSG" // Index = 150, FModules = 1
+    {
+        0x2077
+        FM	0x10D6	0	0
+    }
+
+    FRAME "UNREAD_MSG" // Index = 151, FModules = 1
+    {
+        0x2078
+        FM	0x10DE	0	0
+    }
+
+    FRAME "UP" // Index = 152, FModules = 1
+    {
+        0x2079
+        FM	0x10D8	379	44	+FLIP_Y
+    }
+
+    FRAME "" // Index = 153, FModules = 1
+    {
+        0x207A
+        FM	0x10D9	379	44
+    }
+
+    FRAME "DOWN" // Index = 154, FModules = 1
+    {
+        0x20F7
+        FM	0x10D8	379	238
+    }
+
+    FRAME "" // Index = 155, FModules = 1
+    {
+        0x20F8
+        FM	0x10D9	379	238	+FLIP_Y
+    }
+
+    FRAME "NEW_MSG" // Index = 156, FModules = 2
+    {
+        0x207C
+        FM	0x1001	253	250
+        FM	0x10D5	269	263
+    }
+
+    FRAME "" // Index = 157, FModules = 2
+    {
+        0x207B
+        FM	0x1029	248	245
+        FM	0x10DD	269	263
+    }
+
+    FRAME "DEL_MSG" // Index = 158, FModules = 2
+    {
+        0x2080
+        FM	0x1028	330	249
+        FM	0x1048	345	260
+    }
+
+    FRAME "" // Index = 159, FModules = 2
+    {
+        0x207F
+        FM	0x1029	325	245
+        FM	0x1049	345	260
+    }
+
+    FRAME "SEND_MSG" // Index = 160, FModules = 2
+    {
+        0x207E
+        FM	0x1028	406	249
+        FM	0x10D0	420	269
+    }
+
+    FRAME "" // Index = 161, FModules = 2
+    {
+        0x2081
+        FM	0x1029	401	245
+        FM	0x10D1	420	269
+    }
+
+    FRAME "REFRESH" // Index = 162, FModules = 2
+    {
+        0x2082
+        FM	0x10E9	405	19
+        FM	0x10E7	427	26
+    }
+
+    FRAME "" // Index = 163, FModules = 2
+    {
+        0x2083
+        FM	0x10E6	399	10
+        FM	0x10E8	427	26
+    }
+
+    FRAME "" // Index = 164, FModules = 1
+    {
+        0x2084
+        FM	0x10F0	410	10
+    }
+
+    FRAME "" // Index = 165, FModules = 1
+    {
+        0x2085
+        FM	0x10F1	404	0
+    }
+
+    FRAME "BUTTON_COLOR" // Index = 166, FModules = 2
+    {
+        0x2086
+        FM	0x10F3	11	272
+        FM	0x10D4	20	285
+    }
+
+    FRAME "BG_COLOR" // Index = 167, FModules = 2
+    {
+        0x2087
+        FM	0x10F4	7	269
+        FM	0x10D4	20	285
+    }
+
+    FRAME "ROOM_SEPARATOR" // Index = 168, FModules = 2
+    {
+        0x2088
+        FM	0x10B7	0	0
+        FM	0x10B8	18	18
+    }
+
+    FRAME "BUTTON_INVITE_ROOM" // Index = 169, FModules = 2
+    {
+        0x2089
+        FM	0x10F3	11	80
+        FM	0x10EC	22	91
+    }
+
+    FRAME "BG_INVITE_ROOM" // Index = 170, FModules = 2
+    {
+        0x208F
+        FM	0x10F4	7	76
+        FM	0x10EB	22	91
+    }
+
+    FRAME "BUTTON_NEW_CHAT" // Index = 171, FModules = 3
+    {
+        0x2096
+        FM	0x10F3	11	128
+        FM	0x1024	18	141
+        FM	0x115A	34	136
+    }
+
+    FRAME "BG_NEW_CHAT" // Index = 172, FModules = 3
+    {
+        0x20DF
+        FM	0x10F4	7	125
+        FM	0x1025	18	141
+        FM	0x1159	34	136
+    }
+
+    FRAME "BUTTON_EXIT_CHAT" // Index = 173, FModules = 3
+    {
+        0x208A
+        FM	0x10F3	11	176
+        FM	0x1024	18	188
+        FM	0x1002	34	182
+    }
+
+    FRAME "BG_EXIT_CHAT" // Index = 174, FModules = 3
+    {
+        0x2090
+        FM	0x10F4	7	171
+        FM	0x1025	18	188
+        FM	0x101F	34	182
+    }
+
+    FRAME "BUTTON_QUIT_ROOM" // Index = 175, FModules = 2
+    {
+        0x2124
+        FM	0x10F3	11	224
+        FM	0x103F	20	233
+    }
+
+    FRAME "BG_QUIT_ROOM" // Index = 176, FModules = 2
+    {
+        0x2125
+        FM	0x10F4	7	220
+        FM	0x1040	20	233
+    }
+
+    FRAME "INPUT_INDICATOR" // Index = 177, FModules = 1
+    {
+        0x208C
+        FM	0x10DA	0	0
+    }
+
+    FRAME "EDIT_CHAT" // Index = 178, FModules = 12
+    {
+        0x208D
+        FM	0x1013	64	277
+        FM	0x1015	94	277
+        FM	0x1015	124	277
+        FM	0x1015	154	277
+        FM	0x1015	184	277
+        FM	0x1015	214	277
+        FM	0x1015	244	277
+        FM	0x1015	274	277
+        FM	0x1015	304	277
+        FM	0x1015	334	277
+        FM	0x1014	379	277
+        FM	0x1047	364	277
+    }
+
+    FRAME "" // Index = 179, FModules = 31
+    {
+        0x208E
+        FM	0x10C3	81	107
+        FM	0x10C4	91	107
+        FM	0x10C4	101	107
+        FM	0x10C4	111	107
+        FM	0x10C4	121	107
+        FM	0x10C4	131	107
+        FM	0x10C4	141	107
+        FM	0x10C4	151	107
+        FM	0x10C4	161	107
+        FM	0x10C4	171	107
+        FM	0x10C4	181	107
+        FM	0x10C4	191	107
+        FM	0x10C4	201	107
+        FM	0x10C4	211	107
+        FM	0x10C4	221	107
+        FM	0x10C4	231	107
+        FM	0x10C4	241	107
+        FM	0x10C4	251	107
+        FM	0x10C4	261	107
+        FM	0x10C4	271	107
+        FM	0x10C4	281	107
+        FM	0x10C4	291	107
+        FM	0x10C4	301	107
+        FM	0x10C4	311	107
+        FM	0x10C4	321	107
+        FM	0x10C4	331	107
+        FM	0x10C4	341	107
+        FM	0x10C4	351	107
+        FM	0x10C5	364	107
+        FM	0x1108	361	107
+        FM	0x1109	373	112
+    }
+
+    FRAME "" // Index = 180, FModules = 31
+    {
+        0x2093
+        FM	0x10C6	80	74
+        FM	0x10C7	90	74
+        FM	0x10C7	100	74
+        FM	0x10C7	110	74
+        FM	0x10C7	120	74
+        FM	0x10C7	130	74
+        FM	0x10C7	140	74
+        FM	0x10C7	150	74
+        FM	0x10C7	160	74
+        FM	0x10C7	170	74
+        FM	0x10C7	180	74
+        FM	0x10C7	190	74
+        FM	0x10C7	200	74
+        FM	0x10C7	210	74
+        FM	0x10C7	220	74
+        FM	0x10C7	230	74
+        FM	0x10C7	240	74
+        FM	0x10C7	254	74
+        FM	0x10C7	264	74
+        FM	0x10C7	274	74
+        FM	0x10C7	284	74
+        FM	0x10C7	294	74
+        FM	0x10C7	304	74
+        FM	0x10C7	314	74
+        FM	0x10C7	324	74
+        FM	0x10C7	334	74
+        FM	0x10C7	344	74
+        FM	0x10C7	354	74
+        FM	0x10C8	364	74
+        FM	0x110A	68	79
+        FM	0x110F	250	74
+    }
+
+    FRAME "BG_CHAT_ROOM" // Index = 181, FModules = 68
+    {
+        0x2092
+        FM	0x10F8	62	65
+        FM	0x10F9	62	231
+        FM	0x10FA	62	125
+        FM	0x10FA	62	178
+        FM	0x10FC	369	231
+        FM	0x10FB	369	65
+        FM	0x10FD	379	125
+        FM	0x10FD	379	178
+        FM	0x10FD	82	125
+        FM	0x10FD	82	178
+        FM	0x10FF	82	65
+        FM	0x10FE	82	231
+        FM	0x10FD	102	125
+        FM	0x10FD	102	178
+        FM	0x10FF	102	65
+        FM	0x10FE	102	231
+        FM	0x10FD	122	125
+        FM	0x10FD	122	178
+        FM	0x10FF	122	65
+        FM	0x10FE	122	231
+        FM	0x10FD	142	125
+        FM	0x10FD	142	178
+        FM	0x10FF	142	65
+        FM	0x10FE	142	231
+        FM	0x10FD	162	125
+        FM	0x10FD	162	178
+        FM	0x10FF	162	65
+        FM	0x10FE	162	231
+        FM	0x10FD	182	125
+        FM	0x10FD	182	178
+        FM	0x10FF	182	65
+        FM	0x10FE	182	231
+        FM	0x10FD	202	125
+        FM	0x10FD	202	178
+        FM	0x10FF	202	65
+        FM	0x10FE	202	231
+        FM	0x10FD	222	125
+        FM	0x10FD	222	178
+        FM	0x10FF	222	65
+        FM	0x10FE	222	231
+        FM	0x10FD	242	125
+        FM	0x10FD	242	178
+        FM	0x10FF	242	65
+        FM	0x10FE	242	231
+        FM	0x10FD	262	125
+        FM	0x10FD	262	178
+        FM	0x10FF	262	65
+        FM	0x10FE	262	231
+        FM	0x10FD	282	125
+        FM	0x10FD	282	178
+        FM	0x10FF	282	65
+        FM	0x10FE	282	231
+        FM	0x10FD	302	125
+        FM	0x10FD	302	178
+        FM	0x10FF	302	65
+        FM	0x10FE	302	231
+        FM	0x10FD	322	125
+        FM	0x10FD	322	178
+        FM	0x10FF	322	65
+        FM	0x10FE	322	231
+        FM	0x10FD	342	125
+        FM	0x10FD	342	178
+        FM	0x10FF	342	65
+        FM	0x10FE	342	231
+        FM	0x1100	362	125
+        FM	0x1100	362	178
+        FM	0x1102	362	231
+        FM	0x1103	362	65
+    }
+
+    FRAME "SCROLL_CHAT" // Index = 182, FModules = 6
+    {
+        0x2094
+        FM	0x1085	0	0
+        FM	0x1088	0	155
+        FM	0x1089	0	31
+        FM	0x1089	0	62
+        FM	0x1089	0	93
+        FM	0x1089	0	124
+    }
+
+    FRAME "CHAT_MSG_BG0" // Index = 183, FModules = 30
+    {
+        0x2097
+        FM	0x1153	0	0
+        FM	0x1153	283	0	+FLIP_X
+        FM	0x1154	10	0
+        FM	0x1154	20	0
+        FM	0x1154	30	0
+        FM	0x1154	40	0
+        FM	0x1154	50	0
+        FM	0x1154	60	0
+        FM	0x1154	70	0
+        FM	0x1154	80	0
+        FM	0x1154	90	0
+        FM	0x1154	100	0
+        FM	0x1154	110	0
+        FM	0x1154	120	0
+        FM	0x1154	130	0
+        FM	0x1154	140	0
+        FM	0x1154	150	0
+        FM	0x1154	160	0
+        FM	0x1154	170	0
+        FM	0x1154	180	0
+        FM	0x1154	190	0
+        FM	0x1154	200	0
+        FM	0x1154	210	0
+        FM	0x1154	220	0
+        FM	0x1154	230	0
+        FM	0x1154	240	0
+        FM	0x1154	250	0
+        FM	0x1154	260	0
+        FM	0x1154	270	0
+        FM	0x1155	280	0
+    }
+
+    FRAME "" // Index = 184, FModules = 30
+    {
+        0x2095
+        FM	0x1156	0	0
+        FM	0x1156	283	0	+FLIP_X
+        FM	0x1157	10	0
+        FM	0x1157	20	0
+        FM	0x1157	30	0
+        FM	0x1157	40	0
+        FM	0x1157	50	0
+        FM	0x1157	60	0
+        FM	0x1157	70	0
+        FM	0x1157	80	0
+        FM	0x1157	90	0
+        FM	0x1157	100	0
+        FM	0x1157	110	0
+        FM	0x1157	120	0
+        FM	0x1157	130	0
+        FM	0x1157	140	0
+        FM	0x1157	150	0
+        FM	0x1157	160	0
+        FM	0x1157	170	0
+        FM	0x1157	180	0
+        FM	0x1157	190	0
+        FM	0x1157	200	0
+        FM	0x1157	210	0
+        FM	0x1157	220	0
+        FM	0x1157	230	0
+        FM	0x1157	240	0
+        FM	0x1157	250	0
+        FM	0x1157	260	0
+        FM	0x1157	270	0
+        FM	0x1158	280	0
+    }
+
+    FRAME "" // Index = 185, FModules = 30
+    {
+        0x2098
+        FM	0x1150	0	0
+        FM	0x1150	283	0	+FLIP_X
+        FM	0x1151	30	0
+        FM	0x1151	40	0
+        FM	0x1151	10	0
+        FM	0x1151	20	0
+        FM	0x1151	50	0
+        FM	0x1151	60	0
+        FM	0x1151	80	0
+        FM	0x1151	90	0
+        FM	0x1151	70	0
+        FM	0x1151	100	0
+        FM	0x1151	110	0
+        FM	0x1151	130	0
+        FM	0x1151	140	0
+        FM	0x1151	120	0
+        FM	0x1151	150	0
+        FM	0x1151	160	0
+        FM	0x1151	180	0
+        FM	0x1151	190	0
+        FM	0x1151	170	0
+        FM	0x1151	200	0
+        FM	0x1151	210	0
+        FM	0x1151	220	0
+        FM	0x1151	240	0
+        FM	0x1151	250	0
+        FM	0x1151	230	0
+        FM	0x1151	260	0
+        FM	0x1151	270	0
+        FM	0x1152	280	0
+    }
+
+    FRAME "" // Index = 186, FModules = 30
+    {
+        0x2099
+        FM	0x10CA	10	0
+        FM	0x10CA	20	0
+        FM	0x10CA	30	0
+        FM	0x10CA	40	0
+        FM	0x10CA	50	0
+        FM	0x10CA	60	0
+        FM	0x10CA	70	0
+        FM	0x10CA	80	0
+        FM	0x10CA	90	0
+        FM	0x10CA	100	0
+        FM	0x10CA	110	0
+        FM	0x10CA	120	0
+        FM	0x10CA	130	0
+        FM	0x10CA	140	0
+        FM	0x10CA	150	0
+        FM	0x10CA	160	0
+        FM	0x10CA	170	0
+        FM	0x10CA	180	0
+        FM	0x10CA	190	0
+        FM	0x10CA	200	0
+        FM	0x10CA	210	0
+        FM	0x10CA	220	0
+        FM	0x10CA	230	0
+        FM	0x10CA	240	0
+        FM	0x10CA	250	0
+        FM	0x10CA	260	0
+        FM	0x10CA	270	0
+        FM	0x1112	280	0
+        FM	0x114F	0	0
+        FM	0x114F	283	0	+FLIP_X
+    }
+
+    FRAME "" // Index = 187, FModules = 30
+    {
+        0x20E1
+        FM	0x115C	0	0
+        FM	0x115C	283	0	+FLIP_X
+        FM	0x115D	10	0
+        FM	0x115D	20	0
+        FM	0x115D	30	0
+        FM	0x115D	40	0
+        FM	0x115D	50	0
+        FM	0x115D	60	0
+        FM	0x115D	70	0
+        FM	0x115D	80	0
+        FM	0x115D	90	0
+        FM	0x115D	100	0
+        FM	0x115D	110	0
+        FM	0x115D	120	0
+        FM	0x115D	130	0
+        FM	0x115D	140	0
+        FM	0x115D	150	0
+        FM	0x115D	160	0
+        FM	0x115D	170	0
+        FM	0x115D	180	0
+        FM	0x115D	190	0
+        FM	0x115D	200	0
+        FM	0x115D	210	0
+        FM	0x115D	220	0
+        FM	0x115D	230	0
+        FM	0x115D	240	0
+        FM	0x115D	250	0
+        FM	0x115D	260	0
+        FM	0x115D	270	0
+        FM	0x115E	280	0
+    }
+
+    FRAME "" // Index = 188, FModules = 30
+    {
+        0x20E2
+        FM	0x115F	0	0
+        FM	0x115F	283	0	+FLIP_X
+        FM	0x1160	10	0
+        FM	0x1160	20	0
+        FM	0x1160	30	0
+        FM	0x1160	40	0
+        FM	0x1160	50	0
+        FM	0x1160	60	0
+        FM	0x1160	70	0
+        FM	0x1160	80	0
+        FM	0x1160	90	0
+        FM	0x1160	100	0
+        FM	0x1160	110	0
+        FM	0x1160	120	0
+        FM	0x1160	130	0
+        FM	0x1160	140	0
+        FM	0x1160	150	0
+        FM	0x1160	160	0
+        FM	0x1160	170	0
+        FM	0x1160	180	0
+        FM	0x1160	190	0
+        FM	0x1160	200	0
+        FM	0x1160	210	0
+        FM	0x1160	220	0
+        FM	0x1160	230	0
+        FM	0x1160	240	0
+        FM	0x1160	250	0
+        FM	0x1160	260	0
+        FM	0x1160	270	0
+        FM	0x1161	280	0
+    }
+
+    FRAME "" // Index = 189, FModules = 30
+    {
+        0x20E3
+        FM	0x1162	0	0
+        FM	0x1162	283	0	+FLIP_X
+        FM	0x1163	10	0
+        FM	0x1163	23	0
+        FM	0x1163	33	0
+        FM	0x1163	43	0
+        FM	0x1163	53	0
+        FM	0x1163	63	0
+        FM	0x1163	73	0
+        FM	0x1163	83	0
+        FM	0x1163	93	0
+        FM	0x1163	103	0
+        FM	0x1163	113	0
+        FM	0x1163	123	0
+        FM	0x1163	133	0
+        FM	0x1163	143	0
+        FM	0x1163	153	0
+        FM	0x1163	163	0
+        FM	0x1163	173	0
+        FM	0x1163	183	0
+        FM	0x1163	193	0
+        FM	0x1163	203	0
+        FM	0x1163	213	0
+        FM	0x1163	223	0
+        FM	0x1163	233	0
+        FM	0x1163	243	0
+        FM	0x1163	253	0
+        FM	0x1163	263	0
+        FM	0x1163	273	0
+        FM	0x1164	20	0
+    }
+
+    FRAME "" // Index = 190, FModules = 30
+    {
+        0x20E4
+        FM	0x1165	0	0
+        FM	0x1165	283	0	+FLIP_X
+        FM	0x1166	13	0
+        FM	0x1166	23	0
+        FM	0x1166	33	0
+        FM	0x1166	43	0
+        FM	0x1166	53	0
+        FM	0x1166	63	0
+        FM	0x1166	73	0
+        FM	0x1166	83	0
+        FM	0x1166	93	0
+        FM	0x1166	103	0
+        FM	0x1166	113	0
+        FM	0x1166	123	0
+        FM	0x1166	133	0
+        FM	0x1166	143	0
+        FM	0x1166	153	0
+        FM	0x1166	163	0
+        FM	0x1166	173	0
+        FM	0x1166	183	0
+        FM	0x1166	193	0
+        FM	0x1166	203	0
+        FM	0x1166	213	0
+        FM	0x1166	223	0
+        FM	0x1166	233	0
+        FM	0x1166	243	0
+        FM	0x1166	253	0
+        FM	0x1166	263	0
+        FM	0x1166	273	0
+        FM	0x1167	10	0
+    }
+
+    FRAME "COMPARE_BG" // Index = 191, FModules = 1
+    {
+        0x209A
+        FM	0x1113	32	0
+    }
+
+    FRAME "COMPARE_DETAIL_BG" // Index = 192, FModules = 1
+    {
+        0x209B
+        FM	0x10E1	32	0
+    }
+
+    FRAME "ACHIEVED" // Index = 193, FModules = 1
+    {
+        0x209C
+        FM	0x1114	0	0
+    }
+
+    FRAME "UNACHIEVED" // Index = 194, FModules = 1
+    {
+        0x209D
+        FM	0x1115	0	0
+    }
+
+    FRAME "LOADING_BG" // Index = 195, FModules = 12
+    {
+        0x209E
+        FM	0x10C1	233	128
+        FM	0x10C2	224	137
+        FM	0x10BC	244	126
+        FM	0x10BD	244	162
+        FM	0x10BE	251	160
+        FM	0x10BF	233	160
+        FM	0x10C0	224	155
+        FM	0x10B9	222	148
+        FM	0x10C1	251	128	+FLIP_X
+        FM	0x10C2	257	137	+FLIP_X
+        FM	0x10C0	256	155	+FLIP_X
+        FM	0x10B9	258	148	+FLIP_X
+    }
+
+    FRAME "LOADING_1" // Index = 196, FModules = 1
+    {
+        0x209F
+        FM	0x10BC	244	126
+    }
+
+    FRAME "LOADING_2" // Index = 197, FModules = 1
+    {
+        0x20A0
+        FM	0x10C1	251	128	+FLIP_X
+    }
+
+    FRAME "LOADING_3" // Index = 198, FModules = 1
+    {
+        0x20A1
+        FM	0x10C2	257	137	+FLIP_X
+    }
+
+    FRAME "LOADING_4" // Index = 199, FModules = 1
+    {
+        0x20A2
+        FM	0x10B9	258	148	+FLIP_X
+    }
+
+    FRAME "LOADING_5" // Index = 200, FModules = 1
+    {
+        0x20A3
+        FM	0x10C0	256	155	+FLIP_X
+    }
+
+    FRAME "LOADING_6" // Index = 201, FModules = 1
+    {
+        0x20A4
+        FM	0x10BE	251	160
+    }
+
+    FRAME "LOADING_7" // Index = 202, FModules = 1
+    {
+        0x20A5
+        FM	0x10BD	244	162
+    }
+
+    FRAME "LOADING_8" // Index = 203, FModules = 1
+    {
+        0x20A6
+        FM	0x10BF	233	160
+    }
+
+    FRAME "LOADING_9" // Index = 204, FModules = 1
+    {
+        0x20A7
+        FM	0x10C0	224	155
+    }
+
+    FRAME "LOADING_10" // Index = 205, FModules = 1
+    {
+        0x20A8
+        FM	0x10B9	222	148
+    }
+
+    FRAME "LOADING_11" // Index = 206, FModules = 1
+    {
+        0x20A9
+        FM	0x10C2	224	137
+    }
+
+    FRAME "LOADING_12" // Index = 207, FModules = 1
+    {
+        0x20AA
+        FM	0x10C1	233	128
+    }
+
+    FRAME "CHAT_SEPARATOR" // Index = 208, FModules = 1
+    {
+        0x20AB
+        FM	0x10CF	0	0
+    }
+
+    FRAME "BUTTON_CONTINUE" // Index = 209, FModules = 2
+    {
+        0x20AC
+        FM	0x108A	355	276
+        FM	0x1116	375	285
+    }
+
+    FRAME "" // Index = 210, FModules = 2
+    {
+        0x20F0
+        FM	0x108B	350	270
+        FM	0x1116	375	285
+    }
+
+    FRAME "BUTTON_CONTINUE2" // Index = 211, FModules = 2
+    {
+        0x20AD
+        FM	0x10F2	355	277
+        FM	0x1117	375	285
+    }
+
+    FRAME "" // Index = 212, FModules = 2
+    {
+        0x20AE
+        FM	0x108A	355	276
+        FM	0x1118	386	285
+    }
+
+    FRAME "" // Index = 213, FModules = 2
+    {
+        0x210A
+        FM	0x108B	350	270
+        FM	0x1118	386	285
+    }
+
+    FRAME "" // Index = 214, FModules = 2
+    {
+        0x20AF
+        FM	0x10F2	355	277
+        FM	0x1119	386	285
+    }
+
+    FRAME "" // Index = 215, FModules = 2
+    {
+        0x20B0
+        FM	0x108A	355	276
+        FM	0x111A	373	285
+    }
+
+    FRAME "" // Index = 216, FModules = 2
+    {
+        0x210B
+        FM	0x108B	350	270
+        FM	0x111A	373	285
+    }
+
+    FRAME "" // Index = 217, FModules = 2
+    {
+        0x20B1
+        FM	0x10F2	355	277
+        FM	0x111B	373	285
+    }
+
+    FRAME "" // Index = 218, FModules = 2
+    {
+        0x20B2
+        FM	0x108A	355	276
+        FM	0x111C	373	285
+    }
+
+    FRAME "" // Index = 219, FModules = 2
+    {
+        0x210C
+        FM	0x108B	350	270
+        FM	0x111C	373	285
+    }
+
+    FRAME "" // Index = 220, FModules = 2
+    {
+        0x20B3
+        FM	0x10F2	355	277
+        FM	0x111D	373	285
+    }
+
+    FRAME "" // Index = 221, FModules = 2
+    {
+        0x20B4
+        FM	0x108A	355	276
+        FM	0x111E	375	285
+    }
+
+    FRAME "" // Index = 222, FModules = 2
+    {
+        0x210D
+        FM	0x108B	350	270
+        FM	0x111E	375	285
+    }
+
+    FRAME "" // Index = 223, FModules = 2
+    {
+        0x20B5
+        FM	0x10F2	355	277
+        FM	0x111F	375	285
+    }
+
+    FRAME "AVATAR_NULL" // Index = 224, FModules = 1
+    {
+        0x20B6
+        FM	0x1144	0	0
+    }
+
+    FRAME "BUTTON_AVATAR" // Index = 225, FModules = 2
+    {
+        0x20B7
+        FM	0x1129	0	0
+        FM	0x1128	19	67
+    }
+
+    FRAME "" // Index = 226, FModules = 2
+    {
+        0x20B8
+        FM	0x1129	0	0
+        FM	0x1124	18	67
+    }
+
+    FRAME "" // Index = 227, FModules = 2
+    {
+        0x20B9
+        FM	0x1129	0	0
+        FM	0x1125	14	67
+    }
+
+    FRAME "" // Index = 228, FModules = 2
+    {
+        0x20BA
+        FM	0x1129	0	0
+        FM	0x1126	24	67
+    }
+
+    FRAME "" // Index = 229, FModules = 2
+    {
+        0x20BB
+        FM	0x1129	0	0
+        FM	0x1127	19	67
+    }
+
+    FRAME "Leaderboard" // Index = 230, FModules = 1
+    {
+        0x20BC
+        FM	0x1120	341	277
+    }
+
+    FRAME "" // Index = 231, FModules = 1
+    {
+        0x20BD
+        FM	0x1121	333	267
+    }
+
+    FRAME "AVATAR_LOADING0" // Index = 232, FModules = 4
+    {
+        0x20C9
+        FM	0x1122	0	0
+        FM	0x113C	12	12
+        FM	0x113B	28	12
+        FM	0x113E	34	15
+    }
+
+    FRAME "" // Index = 233, FModules = 4
+    {
+        0x20CD
+        FM	0x1122	0	0
+        FM	0x113C	12	12
+        FM	0x113E	34	15
+        FM	0x113F	38	28
+    }
+
+    FRAME "" // Index = 234, FModules = 4
+    {
+        0x20CA
+        FM	0x1122	0	0
+        FM	0x113C	12	12
+        FM	0x113F	38	28
+        FM	0x1142	34	34
+    }
+
+    FRAME "" // Index = 235, FModules = 4
+    {
+        0x20CE
+        FM	0x1122	0	0
+        FM	0x113C	12	12
+        FM	0x1142	34	34
+        FM	0x1143	28	38
+    }
+
+    FRAME "" // Index = 236, FModules = 4
+    {
+        0x20CB
+        FM	0x1122	0	0
+        FM	0x113C	12	12
+        FM	0x1143	28	38
+        FM	0x1141	15	34
+    }
+
+    FRAME "" // Index = 237, FModules = 4
+    {
+        0x20CF
+        FM	0x1122	0	0
+        FM	0x113C	12	12
+        FM	0x1141	15	34
+        FM	0x113F	12	28
+    }
+
+    FRAME "" // Index = 238, FModules = 4
+    {
+        0x20CC
+        FM	0x1122	0	0
+        FM	0x113C	12	12
+        FM	0x113F	12	28
+        FM	0x113D	15	15
+    }
+
+    FRAME "" // Index = 239, FModules = 4
+    {
+        0x20D0
+        FM	0x1122	0	0
+        FM	0x113C	12	12
+        FM	0x113D	15	15
+        FM	0x113B	28	12
+    }
+
+    FRAME "DEL_AVATAR" // Index = 240, FModules = 1
+    {
+        0x20D5
+        FM	0x1149	0	0
+    }
+
+    FRAME "CHAT_ADD_FRIEND" // Index = 241, FModules = 1
+    {
+        0x20D6
+        FM	0x114A	0	0
+    }
+
+    FRAME "CHAT_POINT_RIGHT0" // Index = 242, FModules = 1
+    {
+        0x20D7
+        FM	0x114B	0	0
+    }
+
+    FRAME "CHAT_POINT_LEFT0" // Index = 243, FModules = 1
+    {
+        0x20D8
+        FM	0x114B	0	0	+FLIP_X
+    }
+
+    FRAME "" // Index = 244, FModules = 1
+    {
+        0x20DE
+        FM	0x114E	0	0	+FLIP_X
+    }
+
+    FRAME "" // Index = 245, FModules = 1
+    {
+        0x20DD
+        FM	0x114E	0	0
+    }
+
+    FRAME "" // Index = 246, FModules = 1
+    {
+        0x20DB
+        FM	0x114D	0	0
+    }
+
+    FRAME "" // Index = 247, FModules = 1
+    {
+        0x20DC
+        FM	0x114D	0	0	+FLIP_X
+    }
+
+    FRAME "" // Index = 248, FModules = 1
+    {
+        0x20D9
+        FM	0x114C	0	0
+    }
+
+    FRAME "" // Index = 249, FModules = 1
+    {
+        0x20DA
+        FM	0x114C	0	0	+FLIP_X
+    }
+
+    FRAME "" // Index = 250, FModules = 1
+    {
+        0x20E5
+        FM	0x1169	0	0
+    }
+
+    FRAME "" // Index = 251, FModules = 1
+    {
+        0x20E6
+        FM	0x1169	0	0	+FLIP_X
+    }
+
+    FRAME "" // Index = 252, FModules = 1
+    {
+        0x20E7
+        FM	0x1168	0	0
+    }
+
+    FRAME "" // Index = 253, FModules = 1
+    {
+        0x20E8
+        FM	0x1168	0	0	+FLIP_X
+    }
+
+    FRAME "" // Index = 254, FModules = 1
+    {
+        0x20E9
+        FM	0x116B	0	0
+    }
+
+    FRAME "" // Index = 255, FModules = 1
+    {
+        0x20EA
+        FM	0x116B	0	0	+FLIP_X
+    }
+
+    FRAME "" // Index = 256, FModules = 1
+    {
+        0x20EB
+        FM	0x116A	0	0
+    }
+
+    FRAME "" // Index = 257, FModules = 0
+    {
+        0x20EC
+    }
+
+    FRAME "TROPHY_UNLOCK" // Index = 258, FModules = 1
+    {
+        0x20E0
+        FM	0x115B	0	0
+    }
+
+    FRAME "CHAT_COLOR_SELECT" // Index = 259, FModules = 1
+    {
+        0x20ED
+        FM	0x116D	0	0
+    }
+
+    FRAME "CHAT_COLOR0" // Index = 260, FModules = 1
+    {
+        0x20F6
+        FM	0x116F	0	0
+    }
+
+    FRAME "" // Index = 261, FModules = 1
+    {
+        0x20EF
+        FM	0x1176	0	0
+    }
+
+    FRAME "" // Index = 262, FModules = 1
+    {
+        0x20EE
+        FM	0x1175	0	0
+    }
+
+    FRAME "" // Index = 263, FModules = 1
+    {
+        0x20F5
+        FM	0x1174	0	0
+    }
+
+    FRAME "" // Index = 264, FModules = 1
+    {
+        0x20F4
+        FM	0x1173	0	0
+    }
+
+    FRAME "" // Index = 265, FModules = 1
+    {
+        0x20F3
+        FM	0x1172	0	0
+    }
+
+    FRAME "" // Index = 266, FModules = 1
+    {
+        0x20F2
+        FM	0x1171	0	0
+    }
+
+    FRAME "" // Index = 267, FModules = 1
+    {
+        0x20F1
+        FM	0x1170	0	0
+    }
+
+    FRAME "SCORE_UNIT_SMALL" // Index = 268, FModules = 1
+    {
+        0x20F9
+        FM	0x1177	0	0
+    }
+
+    FRAME "REPUTATION_SMALL" // Index = 269, FModules = 1
+    {
+        0x20FA
+        FM	0x1178	0	0
+    }
+
+    FRAME "REPUTATION_NULL_SMALL" // Index = 270, FModules = 1
+    {
+        0x20FB
+        FM	0x1179	0	0
+    }
+
+    FRAME "MSG_SELECT" // Index = 271, FModules = 1
+    {
+        0x20FC
+        FM	0x117A	0	0
+    }
+
+    FRAME "BG_GAME_SET" // Index = 272, FModules = 40
+    {
+        0x20FD
+        FM	0x117D	89	75
+        FM	0x117D	380	75
+        FM	0x1031	69	75
+        FM	0x1032	120	75
+        FM	0x1032	100	75
+        FM	0x1032	360	75
+        FM	0x1032	140	75
+        FM	0x1032	160	75
+        FM	0x1032	180	75
+        FM	0x1032	200	75
+        FM	0x1032	220	75
+        FM	0x1032	240	75
+        FM	0x1032	260	75
+        FM	0x1032	280	75
+        FM	0x1032	300	75
+        FM	0x1032	320	75
+        FM	0x1032	340	75
+        FM	0x1033	391	75
+        FM	0x1022	111	119
+        FM	0x1021	91	119
+        FM	0x1021	71	119
+        FM	0x1021	364	119
+        FM	0x1021	384	119
+        FM	0x1022	150	119
+        FM	0x1021	130	119
+        FM	0x1022	189	119
+        FM	0x1021	169	119
+        FM	0x1022	228	119
+        FM	0x1021	208	119
+        FM	0x1022	267	119
+        FM	0x1021	247	119
+        FM	0x1022	306	119
+        FM	0x1021	286	119
+        FM	0x1022	345	119
+        FM	0x1021	325	119
+        FM	0x1034	404	120
+        FM	0x117E	409	120
+        FM	0x1180	113	76
+        FM	0x117F	93	82
+        FM	0x1181	70	82
+    }
+
+    FRAME "QUICK_PLAY" // Index = 273, FModules = 1
+    {
+        0x20FE
+        FM	0x117C	78	187
+    }
+
+    FRAME "" // Index = 274, FModules = 1
+    {
+        0x2108
+        FM	0x117B	70	180
+    }
+
+    FRAME "CUSTOM_PLAY" // Index = 275, FModules = 1
+    {
+        0x20FF
+        FM	0x117C	244	187
+    }
+
+    FRAME "" // Index = 276, FModules = 1
+    {
+        0x2109
+        FM	0x117B	236	180
+    }
+
+    FRAME "AVATAR_FORBID" // Index = 277, FModules = 1
+    {
+        0x2100
+        FM	0x1182	0	0
+    }
+
+    FRAME "AVATAR_CHECK" // Index = 278, FModules = 1
+    {
+        0x2101
+        FM	0x1183	0	0
+    }
+
+    FRAME "BG_REPLACE" // Index = 279, FModules = 44
+    {
+        0x2102
+        FM	0x1091	37	48
+        FM	0x1092	57	48
+        FM	0x1092	77	48
+        FM	0x1092	97	48
+        FM	0x1092	117	48
+        FM	0x1092	137	48
+        FM	0x1092	157	48
+        FM	0x1092	177	48
+        FM	0x1092	197	48
+        FM	0x1092	217	48
+        FM	0x1092	237	48
+        FM	0x1092	257	48
+        FM	0x1092	277	48
+        FM	0x1092	297	48
+        FM	0x1092	317	48
+        FM	0x1092	337	48
+        FM	0x1092	357	48
+        FM	0x1092	377	48
+        FM	0x1092	397	48
+        FM	0x1093	423	48
+        FM	0x1184	417	48
+        FM	0x1022	58	86
+        FM	0x1021	38	86
+        FM	0x1022	97	86
+        FM	0x1021	77	86
+        FM	0x1022	136	86
+        FM	0x1021	116	86
+        FM	0x1022	175	86
+        FM	0x1021	155	86
+        FM	0x1022	214	86
+        FM	0x1021	194	86
+        FM	0x1022	253	86
+        FM	0x1021	233	86
+        FM	0x1022	292	86
+        FM	0x1021	272	86
+        FM	0x1022	336	86
+        FM	0x1021	316	86
+        FM	0x1022	375	86
+        FM	0x1021	355	86
+        FM	0x1022	414	86
+        FM	0x1021	394	86
+        FM	0x1034	311	87
+        FM	0x1034	433	87
+        FM	0x1034	438	87
+    }
+
+    FRAME "COMPARE_DETAIL_RECT" // Index = 280, FModules = 66
+    {
+        0x2103
+        FM	0x118B	45	184
+        FM	0x1187	45	121
+        FM	0x1186	25	234
+        FM	0x118C	25	184
+        FM	0x1186	436	234	+FLIP_X
+        FM	0x118C	436	184	+FLIP_X
+        FM	0x1187	65	121
+        FM	0x1188	45	234
+        FM	0x118B	65	184
+        FM	0x1188	65	234
+        FM	0x118B	85	184
+        FM	0x1187	85	121
+        FM	0x1187	105	121
+        FM	0x1188	85	234
+        FM	0x118B	105	184
+        FM	0x1188	105	234
+        FM	0x118B	125	184
+        FM	0x1187	125	121
+        FM	0x1187	145	121
+        FM	0x1188	125	234
+        FM	0x118B	145	184
+        FM	0x1188	145	234
+        FM	0x118B	165	184
+        FM	0x1187	165	121
+        FM	0x1187	185	121
+        FM	0x1188	165	234
+        FM	0x118B	185	184
+        FM	0x1188	185	234
+        FM	0x118B	205	184
+        FM	0x1187	205	121
+        FM	0x1187	225	121
+        FM	0x1188	205	234
+        FM	0x118B	225	184
+        FM	0x1188	225	234
+        FM	0x118B	245	184
+        FM	0x1187	245	121
+        FM	0x1187	265	121
+        FM	0x1188	245	234
+        FM	0x118B	265	184
+        FM	0x1188	265	234
+        FM	0x118B	285	184
+        FM	0x1187	285	121
+        FM	0x1187	305	121
+        FM	0x1188	285	234
+        FM	0x118B	305	184
+        FM	0x1188	305	234
+        FM	0x118B	325	184
+        FM	0x1187	325	121
+        FM	0x1187	345	121
+        FM	0x1188	325	234
+        FM	0x118B	345	184
+        FM	0x1188	345	234
+        FM	0x118B	365	184
+        FM	0x1187	365	121
+        FM	0x1187	385	121
+        FM	0x1188	365	234
+        FM	0x118B	385	184
+        FM	0x1188	385	234
+        FM	0x1187	405	121
+        FM	0x118B	405	184
+        FM	0x1188	405	234
+        FM	0x1185	25	121
+        FM	0x1185	436	121	+FLIP_X
+        FM	0x1191	425	234
+        FM	0x118F	425	121
+        FM	0x1190	425	184
+    }
+
+    FRAME "COMPARE_RECT" // Index = 281, FModules = 52
+    {
+        0x2104
+        FM	0x118A	24	157
+        FM	0x1189	24	220
+        FM	0x118A	438	157	+FLIP_X
+        FM	0x1189	438	220	+FLIP_X
+        FM	0x1193	41	157
+        FM	0x1192	41	220
+        FM	0x1193	58	157
+        FM	0x1192	58	220
+        FM	0x1193	75	157
+        FM	0x1192	75	220
+        FM	0x1193	92	157
+        FM	0x1192	92	220
+        FM	0x1193	109	157
+        FM	0x1192	109	220
+        FM	0x1193	126	157
+        FM	0x1192	126	220
+        FM	0x1193	143	157
+        FM	0x1192	143	220
+        FM	0x1193	160	157
+        FM	0x1192	160	220
+        FM	0x1193	177	157
+        FM	0x1192	177	220
+        FM	0x1193	194	157
+        FM	0x1192	194	220
+        FM	0x1193	211	157
+        FM	0x1192	211	220
+        FM	0x1193	228	157
+        FM	0x1192	228	220
+        FM	0x1193	245	157
+        FM	0x1192	245	220
+        FM	0x1193	262	157
+        FM	0x1192	262	220
+        FM	0x1193	279	157
+        FM	0x1192	279	220
+        FM	0x1193	296	157
+        FM	0x1192	296	220
+        FM	0x1193	313	157
+        FM	0x1192	313	220
+        FM	0x1193	330	157
+        FM	0x1192	330	220
+        FM	0x1193	347	157
+        FM	0x1192	347	220
+        FM	0x1193	364	157
+        FM	0x1192	364	220
+        FM	0x1193	381	157
+        FM	0x1192	381	220
+        FM	0x1193	398	157
+        FM	0x1192	398	220
+        FM	0x1193	415	157
+        FM	0x1192	415	220
+        FM	0x1194	431	157
+        FM	0x1195	431	220
+    }
+
+    FRAME "COMPARE_SCROLL_BAR" // Index = 282, FModules = 4
+    {
+        0x2105
+        FM	0x1085	439	165
+        FM	0x1088	439	258
+        FM	0x1089	439	196
+        FM	0x1089	439	227
+    }
+
+    FRAME "COMPARE_DETAIL_SCROLL_BAR" // Index = 283, FModules = 5
+    {
+        0x2106
+        FM	0x1085	440	132
+        FM	0x1088	440	256
+        FM	0x1089	440	163
+        FM	0x1089	440	194
+        FM	0x1089	440	225
+    }
+
+    FRAME "BG_CHAT_COLOR" // Index = 284, FModules = 61
+    {
+        0x2107
+        FM	0x1091	100	59
+        FM	0x1092	120	59
+        FM	0x1092	140	59
+        FM	0x1092	160	59
+        FM	0x1092	180	59
+        FM	0x1092	200	59
+        FM	0x1092	220	59
+        FM	0x1092	240	59
+        FM	0x1092	260	59
+        FM	0x1092	280	59
+        FM	0x1092	300	59
+        FM	0x1092	320	59
+        FM	0x1092	340	59
+        FM	0x1093	360	59
+        FM	0x118A	110	111
+        FM	0x1189	110	170
+        FM	0x118A	353	111	+FLIP_X
+        FM	0x1189	353	170	+FLIP_X
+        FM	0x1193	127	111
+        FM	0x1192	127	170
+        FM	0x1193	144	111
+        FM	0x1192	144	170
+        FM	0x1193	161	111
+        FM	0x1192	161	170
+        FM	0x1193	178	111
+        FM	0x1192	178	170
+        FM	0x1193	195	111
+        FM	0x1192	195	170
+        FM	0x1193	212	111
+        FM	0x1192	212	170
+        FM	0x1193	229	111
+        FM	0x1192	229	170
+        FM	0x1193	246	111
+        FM	0x1192	246	170
+        FM	0x1193	263	111
+        FM	0x1192	263	170
+        FM	0x1193	280	111
+        FM	0x1192	280	170
+        FM	0x1193	297	111
+        FM	0x1193	314	111
+        FM	0x1193	329	111
+        FM	0x1192	297	170
+        FM	0x1192	314	170
+        FM	0x1192	330	170
+        FM	0x1194	346	111
+        FM	0x1195	346	170
+        FM	0x1023	101	60
+        FM	0x1022	102	101
+        FM	0x1022	361	101
+        FM	0x1021	121	101
+        FM	0x1021	141	101
+        FM	0x1021	161	101
+        FM	0x1021	181	101
+        FM	0x1021	201	101
+        FM	0x1021	221	101
+        FM	0x1021	241	101
+        FM	0x1021	261	101
+        FM	0x1021	281	101
+        FM	0x1021	301	101
+        FM	0x1021	321	101
+        FM	0x1021	341	101
+    }
+
+    FRAME "CHAT_LEFT_CORNER" // Index = 285, FModules = 1
+    {
+        0x211F
+        FM	0x119C	68	0	+FLIP_X
+    }
+
+    FRAME "CHAT_RIGHT_CORNER" // Index = 286, FModules = 1
+    {
+        0x211E
+        FM	0x119C	80	0
+    }
+
+    FRAME "CHAT_LEFT_BOTTOM" // Index = 287, FModules = 1
+    {
+        0x2126
+        FM	0x119B	80	19	+FLIP_X
+    }
+
+    FRAME "CHAT_RIGHT_BOTTOM" // Index = 288, FModules = 1
+    {
+        0x2120
+        FM	0x119B	80	19
+    }
+
+    FRAME "CHAT_LEFT_LINE" // Index = 289, FModules = 2
+    {
+        0x211D
+        FM	0x119F	374	19	+FLIP_X
+        FM	0x119E	80	19	+FLIP_X
+    }
+
+    FRAME "CHAT_RIGHT_LINE" // Index = 290, FModules = 2
+    {
+        0x2121
+        FM	0x119F	80	19
+        FM	0x119E	374	19
+    }
+
+    FRAME "" // Index = 291, FModules = 1
+    {
+        0x2122
+        FM	0x103A	0	0
+    }
+
+    FRAME "AD_COVER" // Index = 292, FModules = 1
+    {
+        0x2123
+        FM	0x103B	160	0
+    }
+
+    SPRITE_END
+
+} // SPRITE
+////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,244 @@
+// saved by AuroraGT v0.1.0.2 (SpriteEditor v0.1.0.5)
+////////////////////////////////////////////////////////////////////////////////
+/*SPRITE*/ {
+
+    VERSION 0001
+
+    // Images:  1
+    // Modules: 19
+    // Frames:  18
+    // Anims:   2
+
+////////////////////////////////////////////////////////////////////////////////
+// Images...
+// <Image> := IMAGE [id] "file" [ALPHA "alpha_file"] [TRANSP transp_color]
+
+    IMAGE 0x0000 ".\dead01.tga" TRANSP 0x00FF00FF // 0  size: 256 x 256  palettes: 1
+
+////////////////////////////////////////////////////////////////////////////////
+// Modules...
+// <Modules> := MODULES { <MD1> <MD2> ... }
+// <MDi>     := MD id Type [params] ["desc"]
+// Type      := MD_IMAGE | MD_RECT | ...
+// [params]  := if (Type == MD_IMAGE)     -> image x y width height
+//              if (Type == MD_RECT)      -> color width height
+//              if (Type == MD_FILL_RECT) -> color width height
+//              if (Type == MD_ARC)       -> color width height startAngle arcAngle
+//              if (Type == MD_FILL_ARC)  -> color width height startAngle arcAngle
+//              if (Type == MD_MARKER)    -> color width height
+//              if (Type == MD_TRIANGLE)  -> color p2X p2Y p3X p3Y
+//              if (Type == MD_FILL_TRIANGLE)  -> color p2X p2Y p3X p3Y
+
+    MODULES
+    {
+        MD	0x1000	MD_IMAGE	0	6	0	53	116
+        MD	0x1006	MD_IMAGE	0	59	0	53	116
+        MD	0x1001	MD_IMAGE	0	115	0	47	98
+        MD	0x1002	MD_IMAGE	0	162	0	54	52
+        MD	0x1003	MD_IMAGE	0	216	0	39	51
+        MD	0x1004	MD_IMAGE	0	168	52	37	76
+        MD	0x1005	MD_IMAGE	0	205	52	49	84
+        MD	0x1007	MD_IMAGE	0	117	98	51	100
+        MD	0x1008	MD_IMAGE	0	175	136	41	96
+        MD	0x1009	MD_IMAGE	0	216	136	39	76
+        MD	0x100A	MD_IMAGE	0	84	116	33	40
+        MD	0x100B	MD_IMAGE	0	2	120	78	51
+        MD	0x100C	MD_IMAGE	0	1	173	82	54
+        MD	0x100D	MD_IMAGE	0	87	200	88	56
+        MD	0x100E	MD_IMAGE	0	1	227	86	29
+        MD	0x100F	MD_IMAGE	0	201	242	5	5
+        MD	0x1010	MD_IMAGE	0	188	238	12	14
+        MD	0x1011	MD_IMAGE	0	180	242	8	7
+        MD	0x1012	MD_IMAGE	0	208	242	8	7
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+// Frames...
+// <Frame> := FRAME ["desc"] { id <RC1> [<RC2> ...] <FM1> [<FM2> ...] }
+// <RCi>   := RC x1 y1 x2 y2
+// <FMi>   := FM module_or_frame_id ox oy [FLAGS hex_flags] [+Flags]
+// Flags   := HYPER_FM | FLIP_X | FLIP_Y | ROT_90 | FREE_ROT
+
+    FRAME "" // Index = 0, FModules = 1
+    {
+        0x2000
+        FM	0x1002	-23	-37
+    }
+
+    FRAME "" // Index = 1, FModules = 2
+    {
+        0x2001
+        FM	0x1002	-23	-37	+FLIP_X
+        FM	0x1003	-20	-41
+    }
+
+    FRAME "" // Index = 2, FModules = 2
+    {
+        0x2002
+        FM	0x1001	-32	-91
+        FM	0x1004	-22	-60
+    }
+
+    FRAME "" // Index = 3, FModules = 2
+    {
+        0x2003
+        FM	0x1000	-28	-105
+        FM	0x1005	-33	-72
+    }
+
+    FRAME "" // Index = 4, FModules = 2
+    {
+        0x2004
+        FM	0x1000	-28	-105
+        FM	0x1007	-22	-108
+    }
+
+    FRAME "" // Index = 5, FModules = 2
+    {
+        0x2005
+        FM	0x1006	-28	-105
+        FM	0x1008	-16	-133
+    }
+
+    FRAME "" // Index = 6, FModules = 2
+    {
+        0x2006
+        FM	0x1001	-27	-90
+        FM	0x1009	-21	-143
+    }
+
+    FRAME "" // Index = 7, FModules = 1
+    {
+        0x2007
+        FM	0x100A	-33	-156
+    }
+
+    FRAME "" // Index = 8, FModules = 4
+    {
+        0x200E
+        FM	0x1002	-14	-13	+FLIP_X
+        FM	0x1010	29	-2
+        FM	0x1011	25	11
+        FM	0x100F	31	-18
+    }
+
+    FRAME "" // Index = 9, FModules = 5
+    {
+        0x200F
+        FM	0x1001	-14	-68
+        FM	0x1003	-6	-9	+FLIP_X
+        FM	0x100F	24	-29
+        FM	0x1011	33	-23
+        FM	0x1011	37	-14
+    }
+
+    FRAME "" // Index = 10, FModules = 5
+    {
+        0x200B
+        FM	0x1006	-11	-82
+        FM	0x1004	-2	-36	+FLIP_X
+        FM	0x100F	32	-36
+        FM	0x100F	36	-26
+        FM	0x100F	23	-39
+    }
+
+    FRAME "" // Index = 11, FModules = 5
+    {
+        0x200C
+        FM	0x1001	-14	-68
+        FM	0x1009	-8	-41
+        FM	0x1011	15	-47
+        FM	0x1011	24	-55
+        FM	0x1010	34	-50
+    }
+
+    FRAME "" // Index = 12, FModules = 5
+    {
+        0x200D
+        FM	0x1002	-8	-33	+FLIP_X
+        FM	0x100E	-44	-32
+        FM	0x1011	36	-59
+        FM	0x100F	16	-57
+        FM	0x100F	25	-64
+    }
+
+    FRAME "" // Index = 13, FModules = 1
+    {
+        0x2011
+        FM	0x100C	-42	-40
+    }
+
+    FRAME "" // Index = 14, FModules = 1
+    {
+        0x2008
+        FM	0x100B	-49	-36
+    }
+
+    FRAME "" // Index = 15, FModules = 1
+    {
+        0x2009
+        FM	0x100C	-48	-36
+    }
+
+    FRAME "" // Index = 16, FModules = 1
+    {
+        0x200A
+        FM	0x100D	-52	-39
+    }
+
+    FRAME "" // Index = 17, FModules = 1
+    {
+        0x2010
+        FM	0x1012	0	0
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+// Animations...
+// <Anim> := ANIM ["desc"] { id [<AF1> <AF2> ...] }
+// <AFi>  := AF frame_id time ox oy [FLAGS hex_flags] [+Flags]
+// Flags  := FLIP_X | FLIP_Y | ROT_90
+
+    ANIM "UNIT_DIE" // Index = 0, AFrames = 9
+    {
+        0x3000
+        AF	0x2000	2	0	0
+        AF	0x2001	3	0	0
+        AF	0x2002	3	0	0
+        AF	0x2003	3	0	0
+        AF	0x2004	3	0	0
+        AF	0x2005	3	0	0
+        AF	0x2006	2	0	0
+        AF	0x2007	2	0	0
+        AF	0x2010	2	0	0
+    }
+
+    ANIM "HYDRA_TAKE_SOUL" // Index = 1, AFrames = 21
+    {
+        0x3002
+        AF	0x200E	2	0	0
+        AF	0x200F	3	0	0
+        AF	0x200B	3	0	0
+        AF	0x200C	3	0	0
+        AF	0x200D	3	0	0
+        AF	0x2011	3	0	0
+        AF	0x2008	2	0	0
+        AF	0x2009	2	0	0
+        AF	0x200A	2	1	0
+        AF	0x2008	2	0	0
+        AF	0x2009	2	0	0
+        AF	0x200A	2	1	0
+        AF	0x2008	2	0	0
+        AF	0x2009	2	0	0
+        AF	0x200A	2	1	0
+        AF	0x2008	2	0	0
+        AF	0x2009	2	0	0
+        AF	0x200A	2	1	0
+        AF	0x2008	2	0	0
+        AF	0x2009	2	0	0
+        AF	0x200A	2	0	0
+    }
+
+    SPRITE_END
+
+} // SPRITE
+////////////////////////////////////////////////////////////////////////////////

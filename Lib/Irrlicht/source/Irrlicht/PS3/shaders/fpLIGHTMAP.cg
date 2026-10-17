@@ -1,0 +1,12 @@
+uniform sampler2D texture0, texture1;
+struct v2fConnector {
+    float4 color     : COLOR;
+    float2 texCoord0 : TEXCOORD0;
+    float2 texCoord1 : TEXCOORD1;
+};
+
+float4 main(v2fConnector v2f): COLOR
+{
+    float4 tex = tex2D(texture0, v2f.texCoord0);
+    return (tex * tex2D(texture1, v2f.texCoord1));
+}

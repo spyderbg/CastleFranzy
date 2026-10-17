@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ColladaConverter", "ColladaConverter_2005.vcproj", "{B79C246D-99D4-4E93-962E-78FD30B2D1AC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8BCC0E27-AE3B-459A-8AD3-D804BC83FC9C} = {8BCC0E27-AE3B-459A-8AD3-D804BC83FC9C}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ResFile", "..\..\ResFile\src\ResFile_2005.vcproj", "{8BCC0E27-AE3B-459A-8AD3-D804BC83FC9C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestProject1", "TestProject1\TestProject1.vcproj", "{377E7E09-726B-4443-BFB2-9DB58C24FFE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5CEEF1A4-5989-4A5B-BFB4-FE371517ECAE}"
+	ProjectSection(SolutionItems) = preProject
+		ColladaConverter_2005.vsmdi = ColladaConverter_2005.vsmdi
+		localtestrun.testrunconfig = localtestrun.testrunconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ColladaConverter_2005.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B79C246D-99D4-4E93-962E-78FD30B2D1AC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B79C246D-99D4-4E93-962E-78FD30B2D1AC}.Debug|Win32.Build.0 = Debug|Win32
+		{B79C246D-99D4-4E93-962E-78FD30B2D1AC}.Release|Win32.ActiveCfg = Release|Win32
+		{B79C246D-99D4-4E93-962E-78FD30B2D1AC}.Release|Win32.Build.0 = Release|Win32
+		{8BCC0E27-AE3B-459A-8AD3-D804BC83FC9C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8BCC0E27-AE3B-459A-8AD3-D804BC83FC9C}.Debug|Win32.Build.0 = Debug|Win32
+		{8BCC0E27-AE3B-459A-8AD3-D804BC83FC9C}.Release|Win32.ActiveCfg = Release|Win32
+		{8BCC0E27-AE3B-459A-8AD3-D804BC83FC9C}.Release|Win32.Build.0 = Release|Win32
+		{377E7E09-726B-4443-BFB2-9DB58C24FFE4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{377E7E09-726B-4443-BFB2-9DB58C24FFE4}.Debug|Win32.Build.0 = Debug|Win32
+		{377E7E09-726B-4443-BFB2-9DB58C24FFE4}.Release|Win32.ActiveCfg = Release|Win32
+		{377E7E09-726B-4443-BFB2-9DB58C24FFE4}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

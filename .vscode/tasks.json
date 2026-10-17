@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Configure Ubuntu Debug",
+            "type": "process",
+            "command": "cmake",
+            "args": ["--preset", "linux-debug"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Ubuntu Debug",
+            "type": "process",
+            "command": "cmake",
+            "args": ["--build", "--preset", "linux-debug"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "dependsOn": "Configure Ubuntu Debug",
+            "problemMatcher": ["$gcc"],
+            "group": { "kind": "build", "isDefault": true }
+        },
+        {
+            "label": "Run Castle Frenzy (Ubuntu)",
+            "type": "process",
+            "command": "${workspaceFolder}/build/linux-debug/bin/FortressDefender",
+            "options": { "cwd": "${workspaceFolder}/Build" },
+            "dependsOn": "Build Ubuntu Debug",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+// saved by AuroraGT v0.1.0.2 (SpriteEditor v0.1.0.5)
+////////////////////////////////////////////////////////////////////////////////
+/*SPRITE*/ {
+
+    VERSION 0001
+
+    // Images:  1
+    // Modules: 6
+    // Frames:  4
+    // Anims:   0
+
+////////////////////////////////////////////////////////////////////////////////
+// Images...
+// <Image> := IMAGE [id] "file" [ALPHA "alpha_file"] [TRANSP transp_color]
+
+    IMAGE 0x0000 ".\menu_bg.tga" TRANSP 0x00FF00FF // 0  size: 512 x 512  palettes: 1
+
+////////////////////////////////////////////////////////////////////////////////
+// Modules...
+// <Modules> := MODULES { <MD1> <MD2> ... }
+// <MDi>     := MD id Type [params] ["desc"]
+// Type      := MD_IMAGE | MD_RECT | ...
+// [params]  := if (Type == MD_IMAGE)     -> image x y width height
+//              if (Type == MD_RECT)      -> color width height
+//              if (Type == MD_FILL_RECT) -> color width height
+//              if (Type == MD_ARC)       -> color width height startAngle arcAngle
+//              if (Type == MD_FILL_ARC)  -> color width height startAngle arcAngle
+//              if (Type == MD_MARKER)    -> color width height
+//              if (Type == MD_TRIANGLE)  -> color p2X p2Y p3X p3Y
+//              if (Type == MD_FILL_TRIANGLE)  -> color p2X p2Y p3X p3Y
+
+    MODULES
+    {
+        MD	0x1000	MD_IMAGE	0	4	3	480	320
+        MD	0x101C	MD_IMAGE	0	19	334	19	30
+        MD	0x101D	MD_IMAGE	0	88	333	18	30
+        MD	0x101E	MD_IMAGE	0	111	334	13	30
+        MD	0x1020	MD_IMAGE	0	127	340	19	13
+        MD	0x1001	MD_IMAGE	0	251	323	218	188
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+// Frames...
+// <Frame> := FRAME ["desc"] { id <RC1> [<RC2> ...] <FM1> [<FM2> ...] }
+// <RCi>   := RC x1 y1 x2 y2
+// <FMi>   := FM module_or_frame_id ox oy [FLAGS hex_flags] [+Flags]
+// Flags   := HYPER_FM | FLIP_X | FLIP_Y | ROT_90 | FREE_ROT
+
+    FRAME "menu_bg" // Index = 0, FModules = 1
+    {
+        0x2000
+        FM	0x1000	-240	-160
+    }
+
+    FRAME "menu_bg_logo" // Index = 1, FModules = 2
+    {
+        0x2001
+        FM	0x1000	-240	-160
+        FM	0x1001	-247	-158
+    }
+
+    FRAME "slider_empty" // Index = 2, FModules = 15
+    {
+        0x2015
+        FM	0x101E	-136	-12
+        FM	0x101C	-123	-11
+        FM	0x101C	-104	-11
+        FM	0x101C	-85	-11
+        FM	0x101C	-66	-11
+        FM	0x101C	-47	-11
+        FM	0x101C	-28	-11
+        FM	0x101C	-9	-11
+        FM	0x101C	10	-11
+        FM	0x101C	29	-11
+        FM	0x101C	48	-11
+        FM	0x101C	67	-11
+        FM	0x101C	86	-11
+        FM	0x101C	105	-11
+        FM	0x101D	124	-12
+    }
+
+    FRAME "slider_fill" // Index = 3, FModules = 13
+    {
+        0x2016
+        RC	-123	-5	124	8
+        FM	0x1020	-123	-6
+        FM	0x1020	-104	-6
+        FM	0x1020	-85	-6
+        FM	0x1020	-66	-6
+        FM	0x1020	-47	-6
+        FM	0x1020	-28	-6
+        FM	0x1020	-9	-6
+        FM	0x1020	10	-6
+        FM	0x1020	29	-6
+        FM	0x1020	48	-6
+        FM	0x1020	67	-6
+        FM	0x1020	86	-6
+        FM	0x1020	105	-6
+    }
+
+    SPRITE_END
+
+} // SPRITE
+////////////////////////////////////////////////////////////////////////////////

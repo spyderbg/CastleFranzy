@@ -1,0 +1,106 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_2008", "Demo_2008.vcproj", "{6F076455-D955-45D4-9C68-4AD4E45F2D47}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E08E042A-6C45-411B-92BE-3CC31331019F} = {E08E042A-6C45-411B-92BE-3CC31331019F}
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B} = {78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Irrlicht", "..\..\source\Irrlicht\Irrlicht2008.vcproj", "{E08E042A-6C45-411B-92BE-3CC31331019F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freetype", "..\..\source\Irrlicht\freetype\builds\win32\visualc\freetype_2008.vcproj", "{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug - WiiEmulation|Win32 = Debug - WiiEmulation|Win32
+		Debug Multithreaded|Win32 = Debug Multithreaded|Win32
+		Debug Singlethreaded|Win32 = Debug Singlethreaded|Win32
+		Debug StaticLib - WiiEmulation|Win32 = Debug StaticLib - WiiEmulation|Win32
+		Debug StaticLib|Win32 = Debug StaticLib|Win32
+		Debug|Win32 = Debug|Win32
+		Release - Fast FPU|Win32 = Release - Fast FPU|Win32
+		Release Multithreaded|Win32 = Release Multithreaded|Win32
+		Release Singlethreaded|Win32 = Release Singlethreaded|Win32
+		Release StaticLib - WiiEmulation|Win32 = Release StaticLib - WiiEmulation|Win32
+		Release StaticLib|Win32 = Release StaticLib|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug - WiiEmulation|Win32.ActiveCfg = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug - WiiEmulation|Win32.Build.0 = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug Multithreaded|Win32.ActiveCfg = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug Multithreaded|Win32.Build.0 = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug Singlethreaded|Win32.ActiveCfg = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug Singlethreaded|Win32.Build.0 = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug StaticLib - WiiEmulation|Win32.ActiveCfg = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug StaticLib - WiiEmulation|Win32.Build.0 = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug StaticLib|Win32.ActiveCfg = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug StaticLib|Win32.Build.0 = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Debug|Win32.Build.0 = Debug|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release - Fast FPU|Win32.ActiveCfg = Release|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release - Fast FPU|Win32.Build.0 = Release|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release Multithreaded|Win32.ActiveCfg = Release|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release Multithreaded|Win32.Build.0 = Release|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release Singlethreaded|Win32.ActiveCfg = Release|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release Singlethreaded|Win32.Build.0 = Release|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release StaticLib - WiiEmulation|Win32.ActiveCfg = Release|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release StaticLib - WiiEmulation|Win32.Build.0 = Release|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release StaticLib|Win32.ActiveCfg = Release|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release StaticLib|Win32.Build.0 = Release|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release|Win32.ActiveCfg = Release|Win32
+		{6F076455-D955-45D4-9C68-4AD4E45F2D47}.Release|Win32.Build.0 = Release|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug - WiiEmulation|Win32.ActiveCfg = Debug - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug - WiiEmulation|Win32.Build.0 = Debug - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug Multithreaded|Win32.ActiveCfg = Debug StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug Multithreaded|Win32.Build.0 = Debug StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug Singlethreaded|Win32.ActiveCfg = Debug StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug Singlethreaded|Win32.Build.0 = Debug StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug StaticLib - WiiEmulation|Win32.ActiveCfg = Debug StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug StaticLib - WiiEmulation|Win32.Build.0 = Debug StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug StaticLib|Win32.ActiveCfg = Debug StaticLib|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug StaticLib|Win32.Build.0 = Debug StaticLib|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Debug|Win32.Build.0 = Debug|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release - Fast FPU|Win32.ActiveCfg = Release - Fast FPU|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release - Fast FPU|Win32.Build.0 = Release - Fast FPU|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release Multithreaded|Win32.ActiveCfg = Release StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release Multithreaded|Win32.Build.0 = Release StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release Singlethreaded|Win32.ActiveCfg = Release StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release Singlethreaded|Win32.Build.0 = Release StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release StaticLib - WiiEmulation|Win32.ActiveCfg = Release StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release StaticLib - WiiEmulation|Win32.Build.0 = Release StaticLib - WiiEmulation|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release StaticLib|Win32.ActiveCfg = Release StaticLib|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release StaticLib|Win32.Build.0 = Release StaticLib|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release|Win32.ActiveCfg = Release|Win32
+		{E08E042A-6C45-411B-92BE-3CC31331019F}.Release|Win32.Build.0 = Release|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug - WiiEmulation|Win32.ActiveCfg = Debug Multithreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug - WiiEmulation|Win32.Build.0 = Debug Multithreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug Multithreaded|Win32.ActiveCfg = Debug Multithreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug Multithreaded|Win32.Build.0 = Debug Multithreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug Singlethreaded|Win32.ActiveCfg = Debug Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug Singlethreaded|Win32.Build.0 = Debug Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug StaticLib - WiiEmulation|Win32.ActiveCfg = Debug Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug StaticLib - WiiEmulation|Win32.Build.0 = Debug Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug StaticLib|Win32.ActiveCfg = Debug Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug StaticLib|Win32.Build.0 = Debug Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Debug|Win32.Build.0 = Debug|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release - Fast FPU|Win32.ActiveCfg = Release Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release - Fast FPU|Win32.Build.0 = Release Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release Multithreaded|Win32.ActiveCfg = Release Multithreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release Multithreaded|Win32.Build.0 = Release Multithreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release Singlethreaded|Win32.ActiveCfg = Release Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release Singlethreaded|Win32.Build.0 = Release Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release StaticLib - WiiEmulation|Win32.ActiveCfg = Release Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release StaticLib - WiiEmulation|Win32.Build.0 = Release Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release StaticLib|Win32.ActiveCfg = Release Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release StaticLib|Win32.Build.0 = Release Singlethreaded|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release|Win32.ActiveCfg = Release|Win32
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

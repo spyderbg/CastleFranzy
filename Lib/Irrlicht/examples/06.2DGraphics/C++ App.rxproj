@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<project-file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.radixlive.com/public/schemas/radix/1.0/Project.xsd">
+	<project uuid="{54BA3075-B86A-4DB9-9D0E-75AF859A0039}">
+		<version>1</version>
+		<display-name>Wii C++ Application</display-name>
+		<aliases>
+			<alias uuid="{C7041DD1-9E80-4343-9A85-B512EFB67837}">UUID_ProjectFilesGroup</alias>
+			<alias uuid="{B97971CD-429D-412B-AA96-1C450A21E53D}">CATID_PromotedFiles</alias>
+			<alias uuid="{101B1F51-64F4-4F61-8325-B79F0341E732}">Templates</alias>
+			<alias uuid="{4C245B36-11F1-4f8d-B335-9D0D3796FC1F}">PLATFORM_RevolutionSettings</alias>
+			<alias uuid="{69AC1A2A-F39A-4f4c-838A-E63496F95758}">UUID_TargetCommon</alias>
+			<alias uuid="{b6fbe68c-b39d-11da-a3c8-00c04f28d986}">UUID_BuildAllLinkerCommon</alias>
+			<alias uuid="{69fd0c97-a3f4-11da-882e-00c04f28d986}">BuildFslCompilerCommon40</alias>
+			<alias uuid="{121E6F7E-B39E-11DA-9B03-00C04F28D986}">Dictionary</alias>
+		</aliases>
+		<settings>
+			<setting entry="toolChain" uuid-alias="PLATFORM_RevolutionSettings">
+				<simple>application.static</simple>
+			</setting>
+			<setting entry="dynamicTargetsPicklist" uuid-alias="UUID_TargetCommon">
+				<simple>{B2968A78-4023-4093-A4CE-A21147F39630}</simple>
+			</setting>
+			<!-- C++ specific settings -->
+			<setting entry="forceC99Extensions" uuid-alias="BuildFslCompilerCommon40">
+				<simple>false</simple>
+			</setting>
+			<setting entry="booleans" uuid-alias="BuildFslCompilerCommon40">
+				<simple>true</simple>
+			</setting>
+			<setting entry="wchar_t" uuid-alias="BuildFslCompilerCommon40">
+				<simple>true</simple>
+			</setting>
+			<!-- End of C++ specific settings -->
+			<setting entry="systemIncludes" uuid-alias="Dictionary">
+				<array>
+					<simple>@{auto}</simple>
+					<simple>${Project}\..\..\include</simple>
+				</array>
+			</setting>
+			<setting entry="libraryFiles" uuid-alias="UUID_BuildAllLinkerCommon">
+				<array>
+					<simple>irrlicht.a</simple>
+					<simple>libnw4r_g3d.a</simple>
+					<simple>libnw4r_db.a</simple>
+					<simple>libnw4r_math.a</simple>
+					<simple>libnw4r_ut.a</simple>
+				</array>
+			</setting>
+			<setting entry="libraryPaths" uuid-alias="UUID_BuildAllLinkerCommon">
+				<array>
+					<simple>@{auto}</simple>
+					<simple>${project}/../../source/Irrlicht/Wii/bin/irrlicht - Debug</simple>
+					<simple>${env-var:NW4R_ROOT}/Library/lib/RVL/Release</simple>
+				</array>
+			</setting>
+			<setting entry="userCompileSwitches" uuid-alias="Dictionary">
+				<simple>-D_WII</simple>
+			</setting>
+		</settings>
+		<files>
+			<file file-tag="main.cpp:1">
+				<path>${project}/main.cpp</path>
+			</file>
+			<file file-tag="fsl-4.x.Nintendo-Wii-3.1.x.rxtpo:1">
+				<path>${ProductInstallRoot}/Nintendo Revolution/Templates/Settings/fsl-4.x.Nintendo-Wii-3.1.x.rxtpo</path>
+			</file>
+			<file file-tag="eppc.RVL.lcf:1">
+				<path>${REVOLUTION_SDK_ROOT}/include/revolution/eppc.RVL.lcf</path>
+			</file>
+		</files>
+		<group-roots>
+			<group-root category-alias="UUID_ProjectFilesGroup" depth="0" root-group-tag="UUID_ProjectFilesGroup:1">
+				<group-items>
+					<file-ref>main.cpp:1</file-ref>
+					<file-ref>eppc.RVL.lcf:1</file-ref>
+				</group-items>
+			</group-root>
+			<group-root category-alias="CATID_PromotedFiles" depth="1" instance-alias="Templates" root-group-tag="CATID_PromotedFiles:1">
+				<file-refs>
+					<file-ref>fsl-4.x.Nintendo-Wii-3.1.x.rxtpo:1</file-ref>
+				</file-refs>
+			</group-root>
+		</group-roots>
+		<targets>
+			<target>
+				<name>Debug</name>
+			</target>
+			<target>
+				<name>Release</name>
+			</target>
+		</targets>
+		<extensions/>
+		<cached-files/>
+	</project>
+</project-file>

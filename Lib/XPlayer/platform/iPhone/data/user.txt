@@ -1,0 +1,3 @@
+username:hyhy8
+password:12345
+score:200

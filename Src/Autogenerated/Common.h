@@ -1,0 +1,11 @@
+
+////////////////////////////////////////////////////////////////////////////////
+// Sprite Frames
+
+	#define COMMON_F_LOADING_BAR_LOADING_BLUE_EMPTY	0
+	#define COMMON_F_LOADING_BAR_LOADING_BLUE_FILL	1
+	#define COMMON_F_LOADING_BAR_LOADING_RED_EMPTY	2
+	#define COMMON_F_LOADING_BAR_LOADING_RED_FILL	3
+	#define COMMON_F_LOADING_BAR_LOADING_GRADIENT	4
+	#define COMMON_F_LOADING_BAR_BOX_LOADING_GOOD	5
+	#define COMMON_F_LOADING_BAR_BOX_LOADING_EVIL	6
