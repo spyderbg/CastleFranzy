@@ -1,6 +1,7 @@
 # Local Ubuntu dependencies and porting backups
 /.deps/
 /.linux-port-backup/
+/.auroramx/
 
 # Generated build directories (Build/bin contains required game assets)
 build/

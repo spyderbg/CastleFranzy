@@ -23,7 +23,9 @@ a ZIP in build/packages. Release is the default; --debug selects linux-debug.
 Set RESOURCE_TEXTURE_FORMAT at the top of this script to png or pvr, or run:
     RESOURCE_TEXTURE_FORMAT=pvr ./rebuild_Linux.sh
 
-Requires the Linux build dependencies (see readme.txt). PNG mode also requires
+Requires Node.js 22.12+, npm, and the Linux build dependencies (see readme.txt).
+AuroraMX regenerates sprite binaries and ID headers from Sprites.sprcmd.
+PNG mode also requires
 Python Pillow: sudo apt install python3-pil
 EOF
 }
@@ -42,7 +44,7 @@ case "$RESOURCE_TEXTURE_FORMAT" in
     png|pvr) ;;
     *) printf 'RESOURCE_TEXTURE_FORMAT must be png or pvr.\n' >&2; exit 2 ;;
 esac
-for tool in cmake python3; do
+for tool in cmake python3 node npm; do
     command -v "$tool" >/dev/null || { printf 'Missing tool: %s\n' "$tool" >&2; exit 1; }
 done
 if [[ $RESOURCE_TEXTURE_FORMAT == png ]]; then
@@ -65,6 +67,16 @@ version=$(python3 "$project_dir/tools/linux/build_resources.py" --version)
 printf 'Version: %s; textures: %s\n' "$version" "$RESOURCE_TEXTURE_FORMAT"
 
 cmake --preset "$preset" -DCASTLE_ASSET_DIR="$asset_dir"
+
+printf '\nExport sprites with AuroraMX\n'
+auroramx_dir="$project_dir/Tools/AuroraMX"
+if [[ ! -x "$auroramx_dir/node_modules/.bin/esbuild" ]]; then
+    npm ci --prefix "$auroramx_dir" --no-audit --no-fund
+fi
+npm run build:cli --prefix "$auroramx_dir"
+node "$auroramx_dir/build/cli.cjs" batch "$project_dir/Data/Sprites/Sprites.sprcmd" \
+    --output "$build_dir/auroramx"
+
 decoder_args=()
 if [[ $RESOURCE_TEXTURE_FORMAT == png ]]; then
     cmake --build --preset "$preset" --target PvrDecode
@@ -73,7 +85,8 @@ fi
 
 printf '\nRebuild project data\n'
 python3 "$project_dir/tools/linux/build_resources.py" \
-    --output "$asset_dir" --texture-format "$RESOURCE_TEXTURE_FORMAT" "${decoder_args[@]}"
+    --output "$asset_dir" --texture-format "$RESOURCE_TEXTURE_FORMAT" \
+    --sprite-exports "$build_dir/auroramx/bin" "${decoder_args[@]}"
 if $resources_only; then
     printf '\nResources ready: %s\n' "$asset_dir"
     exit 0

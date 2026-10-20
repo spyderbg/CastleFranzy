@@ -1,0 +1,8 @@
+{
+  "port": 5180,
+  "spriteDirectory": "Data/Sprites",
+  "initialSprite": "Data/Sprites/Menu/menu.sprite",
+  "commandFile": "Data/Sprites/Sprites.sprcmd",
+  "batchOutput": "build/auroramx-export",
+  "animationFps": 25
+}

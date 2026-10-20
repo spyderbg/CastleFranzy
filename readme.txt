@@ -65,11 +65,15 @@ ready to use; the old Windows/Java asset tools are not needed.
    Build/bin and the source images are preserved. Logs are in the preset's
    build directory as rebuild.log. Run the ZIP's run.sh after extracting it.
 
-   The resource step reuses checked-in .bsprite/.bdae exports, string tables,
-   generated sprite/string IDs, and configuration XML. It rebuilds texture
-   files and WAV sound packs natively. Changes to .sprite/.dae or spreadsheet
-   layouts still require the legacy exporters and matching generated headers;
-   this script does not run AuroraGT or ColladaConverter through Wine.
+   Node.js 22.12+ and npm are required for the AuroraMX sprite exporter.
+   The resource step runs Data/Sprites/Sprites.sprcmd through AuroraMX to
+   regenerate all 29 .bsprite files and frame/animation ID headers. Its npm
+   dependencies are installed automatically on the first rebuild. Generated
+   sprites are staged in the preset's auroramx/bin directory, then copied into
+   its assets directory; original Data/Sprites/bin exports are preserved.
+   The step reuses checked-in .bdae models, string tables and configuration
+   XML, and rebuilds textures and WAV sound packs natively. Changes to .dae or
+   spreadsheet layouts still require their legacy exporters and headers.
    Packages built with the rootless .deps setup retain absolute dependency
    paths to this project. Use system-installed dependencies when building
    packages for other machines.
@@ -86,6 +90,17 @@ another touch. Escape exits. F2 halves game speed; F3 doubles game speed.
 For a bounded smoke run: ./build/linux-debug/bin/FortressDefender --frames 600
 
 The Windows and iPhone projects remain under Projects/Win32 and Projects/IPhone.
+
+AuroraMX sprite editor:
+
+   ./Tools/AuroraMX/auroramx.sh
+
+   This opens the TypeScript/Vue 3 editor in a browser at localhost:5180.
+   It follows AuroraGT's module/frame/animation layout and supports source
+   editing, undo/redo, PNG/TGA/BMP atlas previews, collision rectangles,
+   animation playback, .bsprite export, and batch .sprcmd execution.
+   Tools > Build game data runs the Linux resource build with AuroraMX.
+   See Tools/AuroraMX/README.md for launch, development and format details.
 
 
 
