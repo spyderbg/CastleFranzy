@@ -150,6 +150,7 @@ public:
 private:
 	bool Load(byte * rawdata);
 	bool LoadSprite(const char * spriteName);
+	bool LoadYamlSprite(const char * spriteName);
 
 public:
 	bool Load(const char * name);
@@ -312,7 +313,9 @@ public:
 			return -1;
 
 		s32 off = (_anims_af_start[anim] + aframe) * 5;
-		return _aframes[off]&0xFF;
+		s32 frame = _aframes[off] & 0xFF;
+		if (USE_INDEX_EX_AFRAMES) frame |= ((_aframes[off + 4] & FLAG_INDEX_EX_MASK) << INDEX_EX_SHIFT);
+		return frame;
 		//USE_SINGLE_ARRAY_FOR_FM_AF
 		//USE_SINGLE_ARRAY_FOR_FM_AF
 	}

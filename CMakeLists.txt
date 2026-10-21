@@ -24,6 +24,7 @@ else()
     find_library(XXF86VM_LIBRARY Xxf86vm REQUIRED)
 endif()
 find_package(OpenGL REQUIRED)
+include(cmake/sprite_yaml.cmake)
 
 set(IRR_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/Lib/Irrlicht")
 set(IRR_SRC "${IRR_ROOT}/source/Irrlicht")
@@ -63,6 +64,7 @@ target_link_libraries(SoundLib PUBLIC Irrlicht ${OPENAL_LIBRARY})
 
 file(GLOB_RECURSE GAME_SOURCES CONFIGURE_DEPENDS "Src/*.cpp")
 list(FILTER GAME_SOURCES EXCLUDE REGEX "/PlatformSpecifics/(Linux|Win32|IPhone)/|AccelerometerWin32\\.cpp$|MediaPlayerWin32\\.cpp$")
+list(FILTER GAME_SOURCES EXCLUDE REGEX "/Sprites/SpriteYaml\\.cpp$")
 add_executable(FortressDefender ${GAME_SOURCES}
     Src/PlatformSpecifics/Win32/CImageLoaderPVR.cpp
     Src/PlatformSpecifics/Win32/PVRTDecompress.cpp)
@@ -81,7 +83,7 @@ else()
     target_sources(FortressDefender PRIVATE Src/PlatformSpecifics/Linux/main.cpp)
     target_compile_definitions(FortressDefender PRIVATE OS_LINUX)
 endif()
-target_link_libraries(FortressDefender PRIVATE SoundLib)
+target_link_libraries(FortressDefender PRIVATE SoundLib SpriteYaml)
 set_target_properties(FortressDefender PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 # The default asset location works regardless of the process working directory.
 target_compile_definitions(FortressDefender PRIVATE CASTLE_ASSET_DIR="${CASTLE_ASSET_DIR}")
@@ -98,6 +100,12 @@ add_custom_target(run
 
 include(CTest)
 if(BUILD_TESTING)
+    add_executable(SpriteYamlCheck tests/linux/sprite_yaml.cpp)
+    target_link_libraries(SpriteYamlCheck PRIVATE SpriteYaml)
+    add_test(NAME sprite_yaml COMMAND SpriteYamlCheck
+        "${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/sprites/dizzy_effect.yaml"
+        "${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/sprites/dizzy_effect.bsprite")
+
     add_executable(XmlRoundtripCheck tests/linux/xml_roundtrip.cpp)
     target_link_libraries(XmlRoundtripCheck PRIVATE Irrlicht)
     add_test(NAME xml_roundtrip COMMAND XmlRoundtripCheck)
@@ -123,6 +131,7 @@ if(WIN32)
     install(DIRECTORY "${CASTLE_ASSET_DIR}/" DESTINATION assets)
     # OpenAL Soft is distributed under the LGPL; preserve its license and source URL.
     install(FILES "${openal_soft_SOURCE_DIR}/COPYING" DESTINATION licenses RENAME OpenAL-Soft.txt)
+    install(FILES Lib/yaml-cpp.LICENSE DESTINATION licenses RENAME yaml-cpp.txt)
     install(FILES tools/windows/README.txt DESTINATION .)
     set(CPACK_GENERATOR ZIP)
     set(CPACK_PACKAGE_FILE_NAME CastleFrenzy_Windows_x64)
@@ -130,7 +139,7 @@ if(WIN32)
 endif()
 
 if(WIN32 AND MINGW)
-    foreach(target FortressDefender PvrDecode BdaeCheck Resource64Check PvrCodecCheck GamePvrCodecCheck XmlRoundtripCheck)
+    foreach(target FortressDefender PvrDecode BdaeCheck Resource64Check PvrCodecCheck GamePvrCodecCheck XmlRoundtripCheck SpriteYamlCheck)
         if(TARGET ${target})
             add_custom_command(TARGET ${target} POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CASTLE_MINGW_RUNTIME_DLLS}

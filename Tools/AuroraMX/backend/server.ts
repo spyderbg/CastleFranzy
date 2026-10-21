@@ -5,7 +5,7 @@ import { spawn } from "node:child_process";
 import path from "node:path";
 import { Workspace } from "./workspace";
 import { compileSprite } from "./compiler";
-import { parseSprite } from "./format";
+import { parseSpriteAny } from "./format";
 import { previewImage } from "./image";
 import { atomicWrite, batchExport } from "./batch";
 import { embeddedFiles } from "./embedded";
@@ -114,7 +114,7 @@ export function createServer(
     ),
   );
   app.post<{ Body: { source: string } }>("/api/parse", async (req) => ({
-    document: parseSprite(req.body.source),
+    document: parseSpriteAny(req.body.source),
   }));
   app.get<{
     Querystring: {
@@ -156,7 +156,7 @@ export function createServer(
       .type("application/octet-stream")
       .header(
         "Content-Disposition",
-        `attachment; filename="${path.basename(req.body.path, ".sprite")}.bsprite"`,
+        `attachment; filename="${path.basename(req.body.path).replace(/\.(sprite|ya?ml)$/i, "")}.bsprite"`,
       )
       .send(bytes);
   });

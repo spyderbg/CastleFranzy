@@ -1,7 +1,12 @@
 import { readFile, readdir, realpath, copyFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { createHash } from "node:crypto";
-import { parseSprite, serializeSprite, decodeText } from "./format";
+import {
+  parseSpriteAny,
+  serializeSpriteFor,
+  isSpritePath,
+  decodeText,
+} from "./format";
 import { validateSprite, type SpriteDocument } from "../shared/sprite";
 import { atomicWrite } from "./batch";
 
@@ -50,7 +55,7 @@ export class Workspace {
         (e) =>
           !e.isSymbolicLink() &&
           (e.isDirectory() ||
-            /\.(sprite|sprcmd|png|tga|bmp|fft)$/i.test(e.name)),
+            /\.(sprite|ya?ml|sprcmd|png|tga|bmp|fft)$/i.test(e.name)),
       )
       .map((e) => ({
         name: e.name,
@@ -67,14 +72,14 @@ export class Workspace {
       );
   }
   async open(relative: string) {
-    if (!relative.toLowerCase().endsWith(".sprite"))
-      throw new Error("Choose a .sprite file");
+    if (!isSpritePath(relative))
+      throw new Error("Choose a .sprite or .yaml file");
     const file = await this.file(relative);
     const bytes = await readFile(file);
     const source = decodeText(bytes);
     return {
       path: path.relative(this.root, file).split(path.sep).join("/"),
-      document: parseSprite(source),
+      document: parseSpriteAny(source),
       revision: hash(bytes),
       source,
     };
@@ -119,13 +124,13 @@ export class Workspace {
     if (errors.length) throw new Error(errors.join("\n"));
     if (
       rawSource !== undefined &&
-      JSON.stringify(parseSprite(rawSource)) !== JSON.stringify(document)
+      JSON.stringify(parseSpriteAny(rawSource)) !== JSON.stringify(document)
     )
       throw new Error(
         "Source and document differ. Apply the source before saving.",
       );
-    if (!relative.toLowerCase().endsWith(".sprite"))
-      throw new Error("Save as a .sprite file");
+    if (!isSpritePath(relative))
+      throw new Error("Save as a .sprite or .yaml file");
     const file = await this.file(relative, !saveAs);
     if (
       saveAs &&
@@ -163,7 +168,7 @@ export class Workspace {
       if (hash(previous) !== revision)
         throw new Error("The sprite changed on disk. Reload before saving.");
       if (
-        JSON.stringify(parseSprite(decodeText(previous))) ===
+        JSON.stringify(parseSpriteAny(decodeText(previous))) ===
           JSON.stringify(document) &&
         (rawSource === undefined || rawSource === decodeText(previous))
       )
@@ -179,7 +184,7 @@ export class Workspace {
       await mkdir(path.dirname(backup), { recursive: true });
       await copyFile(file, backup);
     }
-    await atomicWrite(file, rawSource ?? serializeSprite(document));
+    await atomicWrite(file, rawSource ?? serializeSpriteFor(file, document));
     return this.open(relative);
   }
   async imagePath(spritePath: string, file: string) {

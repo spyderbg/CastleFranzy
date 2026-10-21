@@ -4,6 +4,7 @@
 #include "Core/irrlicht.h"
 
 #include "Sprites/ASprite.h"
+#include "Sprites/SpriteYaml.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -54,6 +55,9 @@ s32 ASprite::off[MAX_LINES_PER_PAGE];
 ASprite::ASprite()
 {
 	_nModules = 0;
+	_nFrames = 0;
+	_nAnims = 0;
+	_nAFrames = 0;
 	_modules_x = NULL;
 	_modules_y = NULL;
 	_modules_w = NULL;
@@ -151,6 +155,28 @@ ASprite::~ASprite()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+static stringc FindSpriteTexture(stringc image)
+{
+	image.replace('\\', '/');
+	const s32 dot = image.findLast('.');
+	const s32 slash = image.findLast('/');
+	const stringc base = dot > slash ? image.subString(0, dot) : image;
+	for (const char* extension : {".png", ".pvr", ".tga", ".bmp"})
+	{
+		const stringc candidate = base + extension;
+		if (__IRR_FILE_SYSTEM()->existFile(candidate.c_str())) return candidate;
+	}
+	return __IRR_FILE_SYSTEM()->existFile(image.c_str()) ? image : stringc("");
+}
+
+static stringc SpriteImagePath(const char* spriteName, const std::string& image)
+{
+	stringc path(image.c_str());
+	path.replace('\\', '/');
+	if (path.size() && (path[0] == '/' || (path.size() > 1 && path[1] == ':'))) return path;
+	return __IRR_FILE_SYSTEM()->getFileDir(spriteName) + "/" + path;
+}
+
 bool ASprite::Load( const char *name )
 {
 	if( name == NULL )
@@ -158,25 +184,88 @@ bool ASprite::Load( const char *name )
 
 	stringc file_base = SPRITE_DIR_PATH;
 	file_base += name;
-	stringc fileName;
+	if (file_base.size() >= 5 && file_base.subString(file_base.size() - 5, 5) == ".yaml")
+		return LoadYamlSprite(file_base.c_str());
+	if (file_base.size() >= 4 && file_base.subString(file_base.size() - 4, 4) == ".yml")
+		return LoadYamlSprite(file_base.c_str());
+	if (file_base.size() >= 8 && file_base.subString(file_base.size() - 8, 8) == ".bsprite")
+	{
+		if (!LoadSprite(file_base.c_str())) return false;
+		file_base = file_base.subString(0, file_base.size() - 8);
+	}
+	else
+	{
+		// Editable YAML overrides an older binary export beside it.
+		for (const char* extension : {".yaml", ".yml"})
+		{
+			const stringc yamlName = file_base + extension;
+			if (__IRR_FILE_SYSTEM()->existFile(yamlName.c_str())) return LoadYamlSprite(yamlName.c_str());
+		}
+		if (!LoadSprite((file_base + ".bsprite").c_str())) return false;
+	}
+	const stringc texture = FindSpriteTexture(file_base);
+	return texture.size() && LoadTexture(texture.c_str());
+}
 
-	fileName = file_base + ".bsprite";
-	if (!LoadSprite(fileName.c_str()))
+bool ASprite::LoadYamlSprite(const char* spriteName)
+{
+	IReadFile* file = __IRR_FILE_SYSTEM()->createAndOpenFile(spriteName);
+	if (!file) return false;
+	const long size = file->getSize();
+	if (size <= 0 || size > 16 * 1024 * 1024) { file->drop(); return false; }
+	std::string source(size, '\0');
+	const bool read = file->read(&source[0], size) == size;
+	file->drop();
+	if (!read) return false;
+	SpriteYamlData data;
+	std::string error;
+	if (!CompileSpriteYaml(source, data, error))
+	{
+		Logs::error("Invalid sprite YAML %s: %s\n", spriteName, error.c_str());
 		return false;
-
-	fileName = file_base + ".png";
-	if (__IRR_FILE_SYSTEM()->existFile(fileName.c_str()))
-		return LoadTexture(fileName.c_str());
-
-	fileName = file_base + ".pvr";
-	if (__IRR_FILE_SYSTEM()->existFile(fileName.c_str()))
-		return LoadTexture(fileName.c_str());
-
-	fileName = file_base + ".tga";
-	if (__IRR_FILE_SYSTEM()->existFile(fileName.c_str()))
-		return LoadTexture(fileName.c_str());
-
-	return false;
+	}
+	const stringc texture = FindSpriteTexture(SpriteImagePath(spriteName, data.image));
+	if (!texture.size())
+	{
+		Logs::error("Missing image for sprite YAML %s: %s\n", spriteName, data.image.c_str());
+		return false;
+	}
+	const bool authoringAlpha = data.hasTransparent || !data.alphaImage.empty();
+	const stringc textureName = authoringAlpha ? stringc(spriteName) + "#yaml-atlas" : texture;
+	if (authoringAlpha && !__IRR_DRIVER()->findTexture(textureName.c_str()))
+	{
+		// Apply authoring transparency to a separate texture, preserving shared atlases.
+		IVideoDriver* driver = __IRR_DRIVER();
+		IImage* image = driver->createImageFromFile(texture.c_str());
+		IImage* alpha = NULL;
+		if (!data.alphaImage.empty())
+		{
+			const stringc mask = FindSpriteTexture(SpriteImagePath(spriteName, data.alphaImage));
+			if (mask.size()) alpha = driver->createImageFromFile(mask.c_str());
+		}
+		if (!image || (!data.alphaImage.empty() && (!alpha || alpha->getDimension() != image->getDimension())))
+		{
+			if (image) image->drop();
+			if (alpha) alpha->drop();
+			Logs::error("Could not load sprite YAML image/alpha mask: %s\n", spriteName);
+			return false;
+		}
+		IImage* rgba = driver->createImage(ECF_A8R8G8B8, image->getDimension());
+		if (!rgba) { image->drop(); if (alpha) alpha->drop(); return false; }
+		for (s32 y = 0; y < image->getDimension().Height; ++y)
+			for (s32 x = 0; x < image->getDimension().Width; ++x)
+			{
+				SColor color = image->getPixel(x, y);
+				if (alpha) color.A = alpha->getPixel(x, y).R;
+				const u32 rgb = (color.R << 16) | (color.G << 8) | color.B;
+				if (data.hasTransparent && rgb == (data.transparent & 0xffffff)) color.A = 0;
+				rgba->setPixel(x, y, color);
+			}
+		ITexture* prepared = driver->addTexture(textureName.c_str(), rgba);
+		rgba->drop(); image->drop(); if (alpha) alpha->drop();
+		if (!prepared) return false;
+	}
+	return Load(data.binary.data()) && LoadTexture(textureName.c_str());
 }
 
 bool ASprite::LoadSprite(const char * spriteName)
@@ -192,13 +281,9 @@ bool ASprite::LoadSprite(const char * spriteName)
 	
 	file->drop();
 
-	if( read_size != file_size )
-		return false;
-
-	Load( rawData );
+	const bool loaded = read_size == file_size && file_size >= 8 && Load(rawData);
 	SAFE_DEL_ARRAY( rawData );
-
-	return true;
+	return loaded;
 }
 
 bool ASprite::LoadTexture(const char * textureName)
@@ -588,8 +673,8 @@ void ASprite::PaintAFrame(s32 anim, s32 aframe, s32 posX, s32 posY, s32 flags, s
 	if (USE_INDEX_EX_AFRAMES) {
 		frame |= ((_aframes[off + 4] & FLAG_INDEX_EX_MASK) << INDEX_EX_SHIFT);
 	}
-	s32 temp_hx = _aframes[off + 2];
-	s32 temp_hy = _aframes[off + 3];
+	s32 temp_hx = static_cast<s8>(_aframes[off + 2]);
+	s32 temp_hy = static_cast<s8>(_aframes[off + 3]);
 
 	if ((flags & FLAG_FLIP_X) != 0) hx += temp_hx;
 	else hx -= temp_hx;

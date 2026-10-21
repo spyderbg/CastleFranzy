@@ -1,3 +1,4 @@
+import { parse as parseYamlText, stringify as stringifyYaml } from "yaml";
 import {
   emptySprite,
   FLAGS,
@@ -262,4 +263,195 @@ export function decodeText(buffer: Buffer): string {
   } catch {
     return new TextDecoder("windows-1252").decode(buffer);
   }
+}
+
+const MODULE_FIELDS: Record<string, string[]> = {
+  MD_IMAGE: ["image", "x", "y", "w", "h"],
+  MD_RECT: ["color", "w", "h"],
+  MD_FILL_RECT: ["color", "w", "h"],
+  MD_MARKER: ["w", "h"],
+  MD_ARC: ["color", "w", "h", "startAngle", "arcAngle"],
+  MD_FILL_ARC: ["color", "w", "h", "startAngle", "arcAngle"],
+  MD_TRIANGLE: ["color", "p2X", "p2Y", "p3X", "p3Y"],
+  MD_FILL_TRIANGLE: ["color", "p2X", "p2Y", "p3X", "p3Y"],
+};
+const HEX_FIELDS = new Set(["image", "color"]);
+const FLAG_NAMES = Object.entries(FLAGS) as [string, number][];
+
+export const isYamlPath = (file: string) => /\.ya?ml$/i.test(file);
+export const isSpritePath = (file: string) => /\.(sprite|ya?ml)$/i.test(file);
+
+export function looksLikeYaml(text: string) {
+  return /^sprite\s*:/m.test(text) && !/^\s*\/\*\s*SPRITE\s*\*\//m.test(text);
+}
+export function parseSpriteAny(text: string): SpriteDocument {
+  return looksLikeYaml(text) ? parseSpriteYaml(text) : parseSprite(text);
+}
+export function serializeSpriteFor(file: string, s: SpriteDocument) {
+  return isYamlPath(file) ? serializeSpriteYaml(s) : serializeSprite(s);
+}
+
+const hex8 = (n: number) =>
+  "0x" + (n >>> 0).toString(16).toUpperCase().padStart(8, "0");
+function flagList(flags: number) {
+  const names = FLAG_NAMES.filter(([, bit]) => flags & bit).map(([n]) => n);
+  const rest = flags & ~FLAG_NAMES.reduce((a, [, bit]) => a | bit, 0);
+  return { flags: names.length ? names : undefined, extraFlags: rest || undefined };
+}
+function placementOut(p: Placement) {
+  const { flags, extraFlags } = flagList(p.flags);
+  return { x: p.x, y: p.y, flags, extraFlags };
+}
+export function serializeSpriteYaml(s: SpriteDocument): string {
+  const doc = {
+    sprite: {
+      version: s.version,
+      images: s.images.map((i) => ({
+        id: hex(i.id),
+        file: i.file,
+        alphaFile: i.alphaFile,
+        transparent:
+          i.transparent !== undefined ? hex8(i.transparent) : undefined,
+      })),
+      modules: s.modules.map((m) => {
+        const fields = MODULE_FIELDS[m.type];
+        if (!fields) throw new Error(`Unknown module type ${m.type}`);
+        const out: Record<string, unknown> = { id: hex(m.id), type: m.type };
+        fields.forEach((f, i) => {
+          out[f] =
+            HEX_FIELDS.has(f) && m.values[i] >= 0 ? hex(m.values[i]) : m.values[i];
+        });
+        if (m.name) out.name = m.name;
+        return out;
+      }),
+      frames: s.frames.map((f) => ({
+        id: hex(f.id),
+        name: f.name,
+        rects: f.rects.length ? f.rects : undefined,
+        parts: f.parts.map((p) => ({
+          [p.flags & FLAGS.HYPER_FM ? "frame" : "module"]: hex(p.target),
+          ...placementOut(p),
+        })),
+      })),
+      animations: s.animations.map((a) => ({
+        id: hex(a.id),
+        name: a.name,
+        frames: a.frames.map((p) => ({
+          frame: hex(p.target),
+          time: p.time,
+          ...placementOut(p),
+        })),
+      })),
+      extensions: s.extras.length ? s.extras : undefined,
+    },
+  };
+  return stringifyYaml(doc, { lineWidth: 0, defaultStringType: "PLAIN" })
+    .replace(/^(\s+- )?(id|image|color): ('?)(0x[0-9A-Fa-f]+)\3$/gm, '$1$2: "$4"')
+    .replace(/^(\s+(?:- )?)(module|frame|transparent): ('?)(0x[0-9A-Fa-f]+)\3$/gm, '$1$2: "$4"');
+}
+
+type Obj = Record<string, unknown>;
+export function parseSpriteYaml(text: string): SpriteDocument {
+  let root: unknown;
+  try {
+    root = parseYamlText(text, { intAsBigInt: false });
+  } catch (e) {
+    throw new Error(`Invalid YAML: ${(e as Error).message}`);
+  }
+  const sprite = (root as Obj | null)?.sprite as Obj | undefined;
+  if (!sprite || typeof sprite !== "object")
+    throw new Error("YAML sprite files need a top-level 'sprite' mapping");
+  const num = (v: unknown, what: string) => {
+    const n = typeof v === "string" && v.trim() ? Number(v) : v;
+    if (typeof n !== "number" || !Number.isInteger(n))
+      throw new Error(`Expected an integer for ${what}, found ${String(v)}`);
+    return n;
+  };
+  const list = (v: unknown, what: string): Obj[] => {
+    if (v === undefined || v === null) return [];
+    if (!Array.isArray(v)) throw new Error(`'${what}' must be a list`);
+    return v.map((item, i) => {
+      if (!item || typeof item !== "object" || Array.isArray(item))
+        throw new Error(`${what}[${i}] must be a mapping`);
+      return item as Obj;
+    });
+  };
+  const str = (v: unknown, what: string) => {
+    if (typeof v !== "string") throw new Error(`Expected text for ${what}`);
+    return v;
+  };
+  const placement = (o: Obj, target: unknown, what: string, hyper = false) => {
+    let flags = hyper ? FLAGS.HYPER_FM : 0;
+    const names = o.flags ?? [];
+    if (!Array.isArray(names)) throw new Error(`${what}.flags must be a list`);
+    for (const n of names) {
+      if (!(n in FLAGS)) throw new Error(`${what}: unknown flag ${n}`);
+      flags |= FLAGS[n as keyof typeof FLAGS];
+    }
+    if (o.extraFlags !== undefined) flags |= num(o.extraFlags, `${what}.extraFlags`);
+    return {
+      target: num(target, `${what} target`),
+      x: num(o.x ?? 0, `${what}.x`),
+      y: num(o.y ?? 0, `${what}.y`),
+      flags,
+    };
+  };
+  const s = emptySprite();
+  if (sprite.version !== undefined) s.version = String(sprite.version);
+  list(sprite.images, "images").forEach((o, i) => {
+    const image: SpriteDocument["images"][number] = {
+      id: num(o.id, `images[${i}].id`),
+      file: str(o.file, `images[${i}].file`),
+    };
+    if (o.alphaFile !== undefined) image.alphaFile = str(o.alphaFile, "alphaFile");
+    if (o.transparent !== undefined)
+      image.transparent = num(o.transparent, `images[${i}].transparent`);
+    s.images.push(image);
+  });
+  list(sprite.modules, "modules").forEach((o, i) => {
+    const type = str(o.type, `modules[${i}].type`);
+    const fields = MODULE_FIELDS[type];
+    if (!fields) throw new Error(`Unknown module type ${type}`);
+    s.modules.push({
+      id: num(o.id, `modules[${i}].id`),
+      type,
+      values: fields.map((f) => num(o[f], `modules[${i}].${f}`)),
+      name: o.name === undefined ? "" : str(o.name, "module name"),
+    });
+  });
+  list(sprite.frames, "frames").forEach((o, i) => {
+    const what = `frames[${i}]`;
+    s.frames.push({
+      id: num(o.id, `${what}.id`),
+      name: o.name === undefined ? "" : str(o.name, `${what}.name`),
+      rects: list(o.rects, `${what}.rects`).map((r) => ({
+        x1: num(r.x1, "rect x1"),
+        y1: num(r.y1, "rect y1"),
+        x2: num(r.x2, "rect x2"),
+        y2: num(r.y2, "rect y2"),
+      })),
+      parts: list(o.parts, `${what}.parts`).map((p) =>
+        p.frame !== undefined
+          ? placement(p, p.frame, `${what}.parts`, true)
+          : placement(p, p.module, `${what}.parts`),
+      ),
+    });
+  });
+  list(sprite.animations, "animations").forEach((o, i) => {
+    const what = `animations[${i}]`;
+    s.animations.push({
+      id: num(o.id, `${what}.id`),
+      name: o.name === undefined ? "" : str(o.name, `${what}.name`),
+      frames: list(o.frames, `${what}.frames`).map((p) => {
+        const { target, x, y, flags } = placement(p, p.frame, `${what}.frames`);
+        return { target, time: num(p.time, `${what}.time`), x, y, flags };
+      }),
+    });
+  });
+  if (sprite.extensions !== undefined) {
+    if (!Array.isArray(sprite.extensions))
+      throw new Error("'extensions' must be a list of text blocks");
+    s.extras = sprite.extensions.map((e) => str(e, "extension"));
+  }
+  return s;
 }

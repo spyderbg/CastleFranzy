@@ -2,13 +2,13 @@ import path from "node:path";
 import { readFile } from "node:fs/promises";
 import { batchExport, atomicWrite } from "./batch";
 import { compileSprite } from "./compiler";
-import { decodeText, parseSprite } from "./format";
+import { decodeText, parseSpriteAny, serializeSpriteFor } from "./format";
 
 async function main() {
   const [command, input, ...args] = process.argv.slice(2);
-  if (!input || !["batch", "export", "validate"].includes(command)) {
+  if (!input || !["batch", "export", "validate", "convert"].includes(command)) {
     console.log(
-      "AuroraMX\nUsage:\n  auroramx-cli batch file.sprcmd [--output directory]\n  auroramx-cli export file.sprite output.bsprite\n  auroramx-cli validate file.sprite",
+      "AuroraMX\nUsage:\n  auroramx-cli batch file.sprcmd [--output directory]\n  auroramx-cli export file.sprite|yaml output.bsprite\n  auroramx-cli validate file.sprite|yaml\n  auroramx-cli convert input.sprite|yaml output.yaml|sprite",
     );
     process.exitCode = 2;
     return;
@@ -29,8 +29,13 @@ async function main() {
     console.log(
       `AuroraMX exported ${report.sprites.length} sprites and ${report.files.length - report.sprites.length} ID headers.`,
     );
+  } else if (command === "convert") {
+    if (!args[0]) throw new Error("Convert requires an output filename");
+    const sprite = parseSpriteAny(decodeText(await readFile(input)));
+    await atomicWrite(args[0], serializeSpriteFor(args[0], sprite));
+    console.log(`${input} -> ${args[0]}`);
   } else {
-    const sprite = parseSprite(decodeText(await readFile(input)));
+    const sprite = parseSpriteAny(decodeText(await readFile(input)));
     const bytes = compileSprite(sprite);
     if (command === "export") {
       if (!args[0]) throw new Error("Export requires an output filename");

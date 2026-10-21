@@ -116,6 +116,28 @@ project remains archived under Projects/IPhone.
 
 AuroraMX sprite editor:
 
+   The C++ runtime loads both .bsprite and AuroraMX .yaml/.yml metadata.
+   ASprite::Load("Ingame/dizzy_effect") prefers YAML beside the binary export;
+   an invalid YAML file reports an error instead of using a stale .bsprite.
+   An explicit .bsprite or .yaml extension selects that format directly.
+   rebuild_Linux.sh stages source YAML files from Data/Sprites into assets/Sprites.
+   For a direct CMake run with Build/bin, put YAML in Build/bin/Sprites instead.
+
+   Use Data/Sprites/Ingame/dizzy_effect.yaml as the schema example. IDs are
+   hexadecimal strings; document order determines runtime module/frame/animation
+   indices, as with binary exports. Parts reference module IDs (or frame IDs
+   with HYPER_FM); animation steps reference frame IDs. Flags are name lists:
+   FLIP_X, FLIP_Y, ROT_90, and HYPER_FM for frame parts. Frame rects use
+   x1/y1/x2/y2. Bounds are computed automatically, including hyperframes.
+   The existing GP_Data runtime supports MD_IMAGE modules in one image atlas
+   per sprite. Other module types and multiple used atlases report an error.
+   Image paths are relative to YAML; PNG/PVR/TGA/BMP variants are resolved like
+   existing resources. transparent is an RGB color key; optional alphaFile uses
+   the mask's red channel for alpha, matching AuroraMX previews.
+
+   CMake builds a pinned static yaml-cpp 0.8.0 dependency on first configure.
+   Its MIT license is in Lib/yaml-cpp.LICENSE and included in game packages.
+
    ./Tools/AuroraMX/auroramx.sh
 
    This opens the TypeScript/Vue 3 editor in a browser at localhost:5180.

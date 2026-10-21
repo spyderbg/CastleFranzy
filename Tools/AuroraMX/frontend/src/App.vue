@@ -44,7 +44,7 @@ import {
   type SpriteDocument,
   type SpriteRect,
 } from "../../shared/sprite";
-import { serializeSprite } from "../../backend/format";
+import { serializeSpriteFor } from "../../backend/format";
 import PreviewCanvas from "./PreviewCanvas.vue";
 import Thumbnail from "./Thumbnail.vue";
 import { useImages, type EditorMode } from "./preview";
@@ -193,7 +193,7 @@ function restore(direction: "undo" | "redo") {
   const text =
     JSON.stringify(next) === saved.value
       ? current.source
-      : serializeSprite(next);
+      : serializeSpriteFor(current.path, next);
   appliedSource.value = { text, document: JSON.stringify(next) };
   publish({ ...current, document: next });
   source.value = text;
@@ -341,7 +341,7 @@ async function switchMode(next: EditorMode) {
     const text =
       appliedSource.value?.document === JSON.stringify(current.document)
         ? appliedSource.value.text
-        : serializeSprite(current.document);
+        : serializeSpriteFor(current.path, current.document);
     appliedSource.value = {
       text,
       document: JSON.stringify(current.document),
@@ -795,7 +795,7 @@ const menus = computed(
         "",
         () => {
           dialogPath.value =
-            opened.value?.path.replace(/\.sprite$/i, ".bsprite") || "";
+            opened.value?.path.replace(/\.(sprite|ya?ml)$/i, ".bsprite") || "";
           modal.value = "export";
         },
       ],
@@ -1116,7 +1116,7 @@ const previewOptions = computed(() => [
         :disabled="!doc || busy"
         @click="
           () => {
-            dialogPath = opened!.path.replace(/\.sprite$/i, '.bsprite');
+            dialogPath = opened!.path.replace(/\.(sprite|ya?ml)$/i, '.bsprite');
             modal = 'export';
           }
         "
@@ -2030,7 +2030,7 @@ const previewOptions = computed(() => [
                     "
                     @dblclick="
                       () => {
-                        if (!e.directory && e.name.endsWith('.sprite'))
+                        if (!e.directory && /\.(sprite|ya?ml)$/i.test(e.name))
                           void run(() => openFile(e.path));
                       }
                     "
@@ -2064,11 +2064,11 @@ const previewOptions = computed(() => [
                 />
               </label>
               <div class="dialog-actions">
-                <span>Sprite files (*.sprite)</span>
+                <span>Sprite files (*.sprite, *.yaml)</span>
                 <button @click="() => (modal = null)">Cancel</button>
                 <button
                   class="default"
-                  :disabled="busy || !dialogPath.endsWith('.sprite')"
+                  :disabled="busy || !/\.(sprite|ya?ml)$/i.test(dialogPath)"
                   @click="() => void run(() => openFile(dialogPath))"
                 >
                   Open
@@ -2076,7 +2076,7 @@ const previewOptions = computed(() => [
               </div>
             </template>
             <template v-if="modal === 'new' || modal === 'saveAs'">
-              <p>Choose a .sprite path relative to the workspace.</p>
+              <p>Choose a .sprite or .yaml path relative to the workspace.</p>
               <label class="dialog-field">
                 File name
                 <input
@@ -2092,7 +2092,7 @@ const previewOptions = computed(() => [
                 <button @click="() => (modal = null)">Cancel</button>
                 <button
                   class="default"
-                  :disabled="busy || !dialogPath.endsWith('.sprite')"
+                  :disabled="busy || !/\.(sprite|ya?ml)$/i.test(dialogPath)"
                   @click="
                     () =>
                       void run(async () => {
@@ -2101,7 +2101,7 @@ const previewOptions = computed(() => [
                           install({
                             path: dialogPath,
                             document,
-                            source: serializeSprite(document),
+                            source: serializeSpriteFor(dialogPath, document),
                             revision: '',
                           });
                           saved = '';

@@ -2,7 +2,11 @@ import { readFile, mkdir, writeFile, rename, unlink } from "node:fs/promises";
 import path from "node:path";
 import { createHash, randomUUID } from "node:crypto";
 import { compileSprite, exportIds } from "./compiler";
-import { parseSprite, decodeText, serializeSprite } from "./format";
+import {
+  parseSpriteAny,
+  decodeText,
+  serializeSpriteFor,
+} from "./format";
 
 export async function atomicWrite(file: string, data: string | Buffer) {
   await mkdir(path.dirname(file), { recursive: true });
@@ -26,7 +30,7 @@ export async function batchExport(commandFile: string, outputRoot?: string) {
     "",
   );
   const commands = [...source.matchAll(/(\w+)\s*\(([^)]*)\)/g)];
-  let sprite: ReturnType<typeof parseSprite> | undefined;
+  let sprite: ReturnType<typeof parseSpriteAny> | undefined;
   let initialized = false;
   const outputs = new Map<string, Buffer | string>();
   const report: { source: string; output: string; bytes: number }[] = [];
@@ -67,7 +71,7 @@ export async function batchExport(commandFile: string, outputRoot?: string) {
     }
     if (name === "Load") {
       currentSource = resolve(args[0]);
-      sprite = parseSprite(decodeText(await readFile(currentSource)));
+      sprite = parseSpriteAny(decodeText(await readFile(currentSource)));
       continue;
     }
     if (!sprite) throw new Error(`${name} requires Load first`);
@@ -108,7 +112,7 @@ export async function batchExport(commandFile: string, outputRoot?: string) {
         (args[2]?.includes("APPEND") ? outputs.get(target) || "" : "") + value,
       );
     } else if (name === "Save")
-      outputs.set(out(args[0]), serializeSprite(sprite));
+      outputs.set(out(args[0]), serializeSpriteFor(out(args[0]), sprite));
     else throw new Error(`Unsupported sprite command ${name}`);
   }
   if (!report.length)

@@ -21,7 +21,7 @@ The launcher opens the browser at **http://127.0.0.1:5180**. It uses the standal
 
 ## Edit sprites
 
-- **File → Open** browses the project and opens `.sprite` files. The current game's inputs are in `Data/Sprites/`, as listed in `Sprites.sprcmd`.
+- **File → Open** browses the project and opens `.sprite` and `.yaml` files. The YAML format (top-level `sprite:` mapping with named fields, see `Data/Sprites/Ingame/dizzy_effect.yaml`) is chosen by extension on save and detected from content on open, and works everywhere a `.sprite` does (export, `Load` in `.sprcmd`). Convert with `node build/cli.cjs convert in.sprite out.yaml` (or the reverse). YAML comments are not preserved on save.  The current game's inputs are in `Data/Sprites/`, as listed in `Sprites.sprcmd`.
 - **Module Editor:** insert/clone/delete/reorder modules and images; edit IDs, descriptions, coordinates, sizes and image paths. Enable **All modules** to see the atlas. Use **Draw module on atlas** to create a rectangle by dragging. Drag an existing module to move its atlas rectangle.
 - **Frame Editor:** insert frames, then double-click modules in the selection bank to add placements. Select a placement to edit its target, offsets, flags or hyperframe reference. Drag placements in the preview. Up/Down changes layer order. Add/edit/delete collision rectangles numerically, or use **Draw collision rectangle**.
 - **Animation Editor:** create animations and double-click frames in the bank to append steps. Edit time, offsets and transforms; play/pause, scrub, step, loop and preview onion skin. The default is the game's 25 ticks per second; zero-duration steps hold the animation.
