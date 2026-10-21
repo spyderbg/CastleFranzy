@@ -1,24 +1,82 @@
 {
     "version": 3,
-    "cmakeMinimumRequired": { "major": 3, "minor": 20, "patch": 0 },
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 24,
+        "patch": 0
+    },
     "configurePresets": [
         {
             "name": "linux-debug",
-            "displayName": "Ubuntu Debug (32-bit assets)",
+            "displayName": "Ubuntu Debug (64-bit)",
             "generator": "Unix Makefiles",
             "binaryDir": "${sourceDir}/build/linux-debug",
-            "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
         },
         {
             "name": "linux-release",
-            "displayName": "Ubuntu Release (32-bit assets)",
+            "displayName": "Ubuntu Release (64-bit)",
             "inherits": "linux-debug",
             "binaryDir": "${sourceDir}/build/linux-release",
-            "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "windows-x64",
+            "displayName": "Windows x64 (Visual Studio 2022)",
+            "generator": "Visual Studio 17 2022",
+            "architecture": "x64",
+            "binaryDir": "${sourceDir}/build/windows-x64",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            }
         }
     ],
     "buildPresets": [
-        { "name": "linux-debug", "configurePreset": "linux-debug", "jobs": 8 },
-        { "name": "linux-release", "configurePreset": "linux-release", "jobs": 8 }
+        {
+            "name": "linux-debug",
+            "configurePreset": "linux-debug",
+            "jobs": 8
+        },
+        {
+            "name": "linux-release",
+            "configurePreset": "linux-release",
+            "jobs": 8
+        },
+        {
+            "name": "windows-debug",
+            "configurePreset": "windows-x64",
+            "configuration": "Debug",
+            "jobs": 8
+        },
+        {
+            "name": "windows-release",
+            "configurePreset": "windows-x64",
+            "configuration": "Release",
+            "jobs": 8
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "windows-debug",
+            "configurePreset": "windows-x64",
+            "configuration": "Debug",
+            "output": {
+                "outputOnFailure": true
+            }
+        },
+        {
+            "name": "windows-release",
+            "configurePreset": "windows-x64",
+            "configuration": "Release",
+            "output": {
+                "outputOnFailure": true
+            }
+        }
     ]
 }

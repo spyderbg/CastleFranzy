@@ -46,7 +46,7 @@ int ConvertMAX2BDAE(const char *pSourceFile, const char *pTargetFile)
 #ifndef _IRR_WINDOWS_API_
 	return -1;
 #else
-	STARTUPINFO si;
+	STARTUPINFOA si;
 	
 	PROCESS_INFORMATION pi;
 	ZeroMemory( &pi, sizeof(pi) );
@@ -67,7 +67,7 @@ int ConvertMAX2BDAE(const char *pSourceFile, const char *pTargetFile)
    }
 	
 	char szPath[MAX_PATH];
-	if (RegQueryValueEx(hk,             // subkey handle 
+	if (RegQueryValueExA(hk,             // subkey handle
           "Path",					// value name 
           NULL, NULL, 
           (LPBYTE) szPath,				// pointer to value data 
@@ -90,7 +90,7 @@ int ConvertMAX2BDAE(const char *pSourceFile, const char *pTargetFile)
 	
 	char maxPath[MAX_PATH];
 	dwBufLen = MAX_PATH;
-	if (RegQueryValueEx(hk,             // subkey handle 
+	if (RegQueryValueExA(hk,             // subkey handle
           "InfoPath",					// value name 
           NULL, NULL, 
           (LPBYTE) maxPath,				// pointer to value data 
@@ -113,7 +113,7 @@ int ConvertMAX2BDAE(const char *pSourceFile, const char *pTargetFile)
 	std::string maxRoot;
 	maxRoot = maxPath;
 	maxRoot += "3dsmax.exe";
-	if(!CreateProcess(maxRoot.c_str(), commandLine, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi))
+	if(!CreateProcessA(maxRoot.c_str(), commandLine, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi))
 	{
 		printf( "MAX Convertion failed (%d)\n", GetLastError() );
 		_IRR_DEBUG_BREAK_IF("Converter may not be in the current directory");
@@ -141,7 +141,7 @@ int ConvertDAE2BDAE(const char *pSourceFile, const char *pTargetFile)
 #ifndef _IRR_WINDOWS_API_
 	return -1;
 #else
-	STARTUPINFO si;
+	STARTUPINFOA si;
 	PROCESS_INFORMATION pi;
 	ZeroMemory( &pi, sizeof(pi) );
 	ZeroMemory( &si, sizeof(si) );
@@ -163,7 +163,7 @@ int ConvertDAE2BDAE(const char *pSourceFile, const char *pTargetFile)
 	
 	char szPath[MAX_PATH];
 	DWORD dwBufLen = MAX_PATH;
-	if (RegQueryValueEx(hk,             // subkey handle 
+	if (RegQueryValueExA(hk,             // subkey handle
           "Path",					// value name 
           NULL, NULL, 
           (LPBYTE) szPath,				// pointer to value data 
@@ -176,7 +176,7 @@ int ConvertDAE2BDAE(const char *pSourceFile, const char *pTargetFile)
 
 	RegCloseKey(hk);
 
-	if(!CreateProcess(szPath, commandLine, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi))
+	if(!CreateProcessA(szPath, commandLine, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi))
 	{
 		printf( "DAE Convertion failed (%d)\n", GetLastError() );
 		_IRR_DEBUG_BREAK_IF("Converter may not be in the current directory");

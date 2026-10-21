@@ -1,6 +1,4 @@
 // Decode the base level of the legacy PVR v2 textures shipped with this game.
-// The bundled PVRTC decoder uses unsigned long for 32-bit words, so this tool
-// is built with the same 32-bit CMake toolchain as the game.
 #include "PVRT/PVRTDecompress.h"
 #include <algorithm>
 #include <cstdint>
@@ -8,7 +6,6 @@
 #include <stdexcept>
 #include <vector>
 
-static_assert(sizeof(unsigned long) == 4, "PVRTC decoding requires a 32-bit build");
 
 int main(int argc, char** argv)
 {

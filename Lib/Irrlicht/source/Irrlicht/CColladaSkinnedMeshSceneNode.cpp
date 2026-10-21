@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <cstdint>
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_COLLADA_BINARY_LOADER_
 
@@ -107,7 +108,7 @@ void CSkinnedMeshSceneNode::render(void* renderData)
 	if (renderData)
 #endif
 	{
-		u32 i = (u32)renderData - 1;
+		u32 i = static_cast<u32>(reinterpret_cast<std::uintptr_t>(renderData) - 1);
 		_IRR_DEBUG_BREAK_IF(i >= Mesh->getMeshBufferCount());
 		scene::IMeshBuffer* mb = Mesh->getMeshBuffer(i);
 		if (mb)

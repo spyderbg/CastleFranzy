@@ -1,3 +1,4 @@
+#include <cstdint>
 #include "stdafx.h"
 // Copyright (C) 2002-2008 Nikolaus Gebhardt
 // This file is part of the "Irrlicht Engine".
@@ -171,7 +172,7 @@ void CSkyBoxSceneNode::render(void* renderData)
 
 		driver->setTransform(video::ETS_WORLD, mat);
 
-		u32 i = (u32)renderData - 1;
+		u32 i = static_cast<u32>(reinterpret_cast<std::uintptr_t>(renderData) - 1);
 		_IRR_DEBUG_BREAK_IF(i >= 6);
 		//for (s32 i=0; i<6; ++i)
 		{
@@ -247,7 +248,7 @@ void CSkyBoxSceneNode::OnRegisterSceneNode()
 	if (IsVisible)
 	{
 		for(u32 i=1;i<=6;++i)
-			SceneManager->registerNodeForRendering(this, 0, (void*)i, ESNRP_SKY_BOX);
+			SceneManager->registerNodeForRendering(this, 0, reinterpret_cast<void*>(static_cast<std::uintptr_t>(i)), ESNRP_SKY_BOX);
 	}
 
 	ISceneNode::OnRegisterSceneNode();

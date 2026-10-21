@@ -39,7 +39,7 @@ struct FactHeader
 {
 	char               chunkId[4];     // "fact"
 	unsigned int       chunkDataSize;  // for IMA ADPCM this is the # of samples
-	unsigned long      factData;
+	unsigned int       factData;
 };
 
 struct DataHeader

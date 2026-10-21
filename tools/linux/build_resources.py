@@ -237,8 +237,8 @@ def package(output, binary, texture_format):
                          'game_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)\n'
                          'exec "$game_dir/bin/FortressDefender" --assets "$game_dir/assets" "$@"\n')
         archive.writestr(f"{name}/README.txt", "Run ./run.sh from a graphical Linux desktop.\n"
-                         "This is a 32-bit build; install the runtime dependencies in the project readme.\n"
-                         "Builds using the rootless .deps bootstrap retain absolute loader/library paths\n"
+                         "This is a 64-bit build; install the runtime dependencies in the project readme.\n"
+                         "Builds using the rootless .deps bootstrap retain absolute library paths\n"
                          "to the project directory and require those dependencies at that location.\n"
                          "For distribution to other machines, build with system-installed dependencies.\n")
     temporary.replace(destination)

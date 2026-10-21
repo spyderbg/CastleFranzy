@@ -16,8 +16,8 @@ pushd %OUTPUT_PATH%
     del /Q %ARCHIVE_NAME%
   )
 
-  %SEVEN_ZIP% a %ARCHIVE_NAME% -tzip -x!*.* -scsWIN -mx=5
-  %SEVEN_ZIP% d %ARCHIVE_NAME% .svn -r -tzip -scsWIN
+  python "%PROJECT_TOOLS_PATH%\zip_directory.py" %ARCHIVE_NAME% "."
+  if errorlevel 1 exit /b 1
   
 popd
 

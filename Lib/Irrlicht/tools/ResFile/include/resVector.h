@@ -2,6 +2,7 @@
 #define __RES_VECTOR_H__
 
 #include "resUtils.h"
+#include "resPointer.h"
 
 namespace irr
 {
@@ -60,10 +61,7 @@ struct vector {
 	inline int size() const { return m_size; }
 private:
 	int m_size;
-	union {
-		int m_offset;
-		T* m_ptr;
-	};
+	res::Ptr<T> m_ptr;
 };
 }; // namespace res
 }; // namespace irr

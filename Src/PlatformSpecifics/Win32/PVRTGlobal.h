@@ -81,7 +81,7 @@
 	#include <string.h>
 	#define BYTE unsigned char
 	#define WORD unsigned short
-	#define DWORD unsigned long
+	#define DWORD unsigned int
 	typedef struct tagRGBQUAD {
 	BYTE    rgbBlue;
 	BYTE    rgbGreen;

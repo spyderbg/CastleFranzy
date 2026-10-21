@@ -9,6 +9,10 @@
 #include "Core/irrlicht.h"
 
 #include <windows.h>
+#include <direct.h>
+#include <shlobj.h>
+#include <cstdlib>
+#include <string>
 
 #include "Core/Application.h"
 
@@ -75,7 +79,8 @@ public:
 		HWND w = FindWindowW(NULL, WINDOW_TITLE);
 		if(w)
 		{
-			WINDOWPLACEMENT p;
+			WINDOWPLACEMENT p = {};
+			p.length = sizeof(p);
 			GetWindowPlacement(w, &p);
 
 			if(m_wide)	{MoveWindow(w, p.rcNormalPosition.left, p.rcNormalPosition.top, 480+X_PADDING, 320+Y_PADDING, TRUE);}
@@ -117,7 +122,7 @@ public:
 			}
 			else if(ev.KeyInput.Key == VK_ESCAPE && !ev.KeyInput.PressedDown)
 			{
-//				Application::GetInstance()->GetDevice()->closeDevice();
+				Application::GetInstance()->GetDevice()->closeDevice();
 			}
 			else if(ev.KeyInput.Key == VK_F1 && !ev.KeyInput.PressedDown)
 			{
@@ -241,13 +246,43 @@ public:
 //int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 int main(int argc, char* argv[])
 {
+    char executable[MAX_PATH];
+    const DWORD length = GetModuleFileNameA(NULL, executable, MAX_PATH);
+    if (!length || length >= MAX_PATH) return 1;
+    std::string directory(executable, length);
+    directory.resize(directory.find_last_of("/\\") + 1);
+    std::string assets = CASTLE_ASSET_DIR;
+    const std::string packaged = directory + "../assets";
+    if (GetFileAttributesA(packaged.c_str()) != INVALID_FILE_ATTRIBUTES) assets = packaged;
+    int frames = 0;
+    for (int i = 1; i < argc; ++i) {
+        if (!strcmp(argv[i], "--assets") && i + 1 < argc) assets = argv[++i];
+        else if (!strcmp(argv[i], "--frames") && i + 1 < argc) frames = atoi(argv[++i]);
+        else { fprintf(stderr, "Usage: %s [--assets directory] [--frames count]\n", argv[0]); return 2; }
+    }
+    if (_chdir(assets.c_str()) != 0) {
+        fprintf(stderr, "Could not open asset directory: %s\n", assets.c_str());
+        return 1;
+    }
+    const char* localData = getenv("LOCALAPPDATA");
+    const std::string save = std::string(localData && *localData ? localData : directory.c_str()) + "\\CastleFrenzy\\";
+    if (SHCreateDirectoryExA(NULL, (save + "profiles").c_str(), NULL) != ERROR_SUCCESS &&
+        GetFileAttributesA((save + "profiles").c_str()) == INVALID_FILE_ATTRIBUTES) {
+        fprintf(stderr, "Could not create save directory: %s\n", save.c_str());
+        return 1;
+    }
+
 	IrrlichtDevice *device = createDevice(video::EDT_OPENGL, dimension2d<s32>(480, 320), 16, false, false, false, 0);
+	if (!device) { fprintf(stderr, "Could not create an OpenGL window.\n"); return 1; }
 	device->setWindowCaption(WINDOW_TITLE);
 	device->setResizeAble(true);
 
-	device->getVideoDriver()->addExternalImageLoader(new CImageLoaderPVR());
+	CImageLoaderPVR* loader = new CImageLoaderPVR();
+	device->getVideoDriver()->addExternalImageLoader(loader);
+	loader->drop();
 
 	Application* app = __APP();
+	app->setFilePaths("", "./", save.c_str());
 	app->InitWin32(device);
 	app->RegisterForIrrlichtEvents(ResizingWindow::inst());
 
@@ -258,7 +293,8 @@ int main(int argc, char* argv[])
 	HWND w = FindWindowW(NULL, WINDOW_TITLE);
 	if(w)
 	{
-		WINDOWPLACEMENT p;
+		WINDOWPLACEMENT p = {};
+		p.length = sizeof(p);
 		MoveWindow( w, -1100, 70, 960+ResizingWindow::X_PADDING, 640+ResizingWindow::Y_PADDING, TRUE );		
 	}
 
@@ -268,6 +304,7 @@ int main(int argc, char* argv[])
 
 	GS_Editor::GetInstance()->init();
 
+	int frameCount = 0;
 	while(device->run())
 	{
 		if( !app->isPaused() )
@@ -304,6 +341,7 @@ int main(int argc, char* argv[])
 			}
 		}
 		Sleep(20);
+		if (frames > 0 && ++frameCount >= frames) device->closeDevice();
 	}
 
 	app->Quit();

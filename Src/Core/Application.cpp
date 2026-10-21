@@ -1192,10 +1192,10 @@ void Application::dumpMonitoredPointers()
 
 	for(; iter != __monitoredPointers.end(); ++iter)
 	{
-		fprintf(f, "  @ %08x : %s\n", iter->first, iter->second);
+		fprintf(f, "  @ %p : %s\n", iter->first, iter->second);
 	}
 
-	fprintf(f, "%d monitored pointers\n", __monitoredPointers.size());
+	fprintf(f, "%zu monitored pointers\n", __monitoredPointers.size());
 	fclose(f);
 #endif
 }

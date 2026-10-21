@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <cstdint>
 // Copyright (C) 2002-2008 Nikolaus Gebhardt
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
@@ -91,16 +92,16 @@ const u32 IndexTypeSize[] =
 
 // small helper function to create vertex buffer object adress offsets
 static inline u8*
-buffer_offset(const long offset)
+buffer_offset(const std::uintptr_t offset)
 {
-	return ((u8*)0 + offset);
+	return reinterpret_cast<u8*>(offset);
 }
 
 // small helper function to create vertex buffer object adress offsets
 static inline u8*
 buffer_offset(const void* p1, const void* p2)
 {
-	long int offset = (long)p2 - (long)p1;
+	const std::uintptr_t offset = reinterpret_cast<std::uintptr_t>(p2) - reinterpret_cast<std::uintptr_t>(p1);
 
 	return buffer_offset(offset);
 }

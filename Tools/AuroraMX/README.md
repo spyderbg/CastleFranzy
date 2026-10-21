@@ -1,6 +1,6 @@
 # AuroraMX
 
-A local browser sprite editor for Castle Frenzy, implemented in TypeScript with a Vue 3 frontend and Fastify backend. Its module/frame/animation lists, composition lists, preview, selection bank, menus and bottom editor tabs follow AuroraGT's SpriteEditor layout. Reference screenshots were inspected from the original `Tools/AuroraGT/AuroraGT.chm` help file.
+A local browser sprite editor for Castle Frenzy, implemented in TypeScript with a Vue 3 frontend and Fastify backend. Its module/frame/animation lists, composition lists, preview, selection bank, menus and bottom editor tabs follow AuroraGT's SpriteEditor layout. The original AuroraGT help informed this layout; its executable bundle has been retired.
 
 ## Launch
 
@@ -55,7 +55,7 @@ node build/cli.cjs validate ../../Data/Sprites/Menu/menu_bg.sprite
 ./rebuild_Linux.sh --debug --incremental --no-package
 ```
 
-The existing `RESOURCE_TEXTURE_FORMAT` constant still selects PNG or PVR resources. Keep the game's external atlas names/dimensions consistent with its texture bindings. The GP_Data binary does not encode image paths or transparency settings; texture alpha belongs in the PNG/TGA/PVR asset. `Build/bin` and the original AuroraGT executables are preserved.
+The existing `RESOURCE_TEXTURE_FORMAT` constant still selects PNG or PVR resources. Keep the game's external atlas names/dimensions consistent with its texture bindings. The GP_Data binary does not encode image paths or transparency settings; texture alpha belongs in the PNG/TGA/PVR asset. `Build/bin` is preserved. AuroraGT is no longer required or bundled.
 
 ### Compatibility
 

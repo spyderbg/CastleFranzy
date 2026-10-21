@@ -36,10 +36,10 @@ CSkinnedMesh2::skin()
 
 	IMeshBuffer * pMB = m_pWorkingMeshBuffer;
 	core::vector3df *posIt = &pMB->getPosition(0);
-	s32 posStride = (s32)&pMB->getPosition(1) - (s32)posIt;
+	s32 posStride = static_cast<s32>(reinterpret_cast<char*>(&pMB->getPosition(1)) - reinterpret_cast<char*>(posIt));
 
 	core::vector3df *vertexPtr = &pMeshBuffer->getPosition(0);
-	s32 vertexStride = (s32)&pMeshBuffer->getPosition(1) - (s32)vertexPtr;
+	s32 vertexStride = static_cast<s32>(reinterpret_cast<char*>(&pMeshBuffer->getPosition(1)) - reinterpret_cast<char*>(vertexPtr));
 
 	UNIMPLEMENTED("Normal animation");
 	/*core::vector3df *normalPtr = &pMeshBuffer->getNormal(0);

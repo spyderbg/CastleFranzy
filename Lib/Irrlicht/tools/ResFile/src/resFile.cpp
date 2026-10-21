@@ -1,108 +1,132 @@
-#include "stdafx.h"
 #include "resFile.h"
+#include <cstring>
+#include <limits>
+#include <map>
+#include <stdexcept>
+#include <unordered_map>
+#include <vector>
 
-namespace irr
-{
-namespace res
-{
+namespace irr { namespace res {
+namespace {
+struct PointerOwner {
+    std::uintptr_t end;
+    std::unordered_map<const void*, std::uint32_t> handles;
+};
+alignas(std::uint32_t) char emptyString[5] = {}; // Four-byte length followed by the terminating zero.
+struct PointerTable {
+    std::vector<void*> pointers = {nullptr, emptyString + 4};
+    std::vector<std::uint32_t> freeHandles;
+    std::map<std::uintptr_t, PointerOwner> owners;
+};
+PointerTable& table() { static PointerTable value; return value; }
 
-int File::Init(FileReader *pFile)
-{
-	// Get File Size and header size
-	int iSize = pFile->getSize();
-	int iHeaderSize = sizeof(struct FileHeaderData);
-
-	// Read the data header to find the size of the OffsetTable
-	struct FileHeaderData *pHeader = new FileHeaderData;
-	pFile->read(pHeader, iHeaderSize);
-	int iSizeOffsetTable =  pHeader->numOffsets * sizeof(int);
-
-	// Allocate the buffers (file and offsetTable)
-	char *pOffsetBuffer = new char[iSizeOffsetTable];
-	char *pBuffer = new char[iSize-iSizeOffsetTable];
-
-	// Copy the file header to the buffer
-	memcpy(pBuffer,pHeader,iHeaderSize);
-	// Read the rest of the file in our buffer placing the offset table in a second buffer
-	pFile->read( pOffsetBuffer, iSizeOffsetTable );
-	pFile->read( &pBuffer[iHeaderSize], iSize - iSizeOffsetTable - iHeaderSize );
-	
-	// delete the old header as it's not needed anymore
-	delete pHeader;
-
-	// Run the real init
-	*this = File(pBuffer,pOffsetBuffer);
-
-	// offset correction done, discard the offset table
-	delete pOffsetBuffer;
-	OffsetTable = NULL;
-
-	return IsValid != 1;
+void release(void* buffer) {
+    PointerTable& t = table();
+    const auto owner = t.owners.find(reinterpret_cast<std::uintptr_t>(buffer));
+    if (owner == t.owners.end()) return;
+    for (const auto& entry : owner->second.handles) {
+        t.pointers[entry.second] = nullptr;
+        t.freeHandles.push_back(entry.second);
+    }
+    t.owners.erase(owner);
+}
+std::uint32_t word(const char* bytes) {
+    std::uint32_t value;
+    std::memcpy(&value, bytes, sizeof(value));
+    return value;
+}
 }
 
-int File::Init()
-{
-	res::FileHeaderData* p = ptr();
-
-	if((((char*)&p->signature)[0] != 'B')
-		|| (((char*)&p->signature)[1] != 'R')
-		|| (((char*)&p->signature)[2] != 'E')
-		|| (((char*)&p->signature)[3] != 'S'))
-	{
-		return -1;
-	}
-
-	if(p && (p->version & 0x8000) == 0)
-	{
-		p->version |= 0x8000;
-
-		// Check if we used a deletable buffer for the offset table
-		if(OffsetTable)
-		{
-			//replace the adress of the offset table in the struct to point to our deletable offsetTable buffer
-			(&p->offsets)[0] = OffsetTable;
-			int offsetTableLength = p->numOffsets * sizeof(int);
-			int offsetTableEnd = offsetTableLength + p->sizeOfHeader;
-
-			for(size_t i = 0; i < p->numOffsets; ++i)
-			{
-				res::Access<res::Access<int> >& offset = p->offsets[i];
-
-				// if the location befor the normal offset table location, don't apply the location correction.
-				if(reinterpret_cast<int>(offset.ptr()) >= offsetTableEnd)
-					offset.OffsetToPtr(reinterpret_cast<char*>(p)-offsetTableLength);
-				else
-					offset.OffsetToPtr(p);
-
-				if(i > 0)
-				{
-					// Ignore the offset table's length as it's already been extracted
-					// if the location befor the normal offset table location, don't apply the location correction.
-					if(reinterpret_cast<int>(offset.ptr()->ptr()) >= offsetTableEnd)
-						offset.ptr()->OffsetToPtr(reinterpret_cast<char*>(p)-offsetTableLength);
-					else
-						offset.ptr()->OffsetToPtr(p);
-				}
-			}
-		}
-		else
-		{
-			// Offset table is included in the memory chunk and can't be deleted...
-			p->offsets.OffsetToPtr(p);
-
-			for(size_t i = 0; i < p->numOffsets; ++i)
-			{
-				res::Access<res::Access<int> >& offset = p->offsets[i];
-
-				offset.OffsetToPtr(p);
-
-				if(i > 0) offset.ptr()->OffsetToPtr(p);
-			}
-		}
-	}
-
-	return 0;
+std::uint32_t StorePointer(const void* field, const void* pointer) {
+    if (!pointer) return 0;
+    PointerTable& t = table();
+    const std::uintptr_t address = reinterpret_cast<std::uintptr_t>(field);
+    auto owner = t.owners.upper_bound(address);
+    if (owner == t.owners.begin() || address >= (--owner)->second.end)
+        throw std::runtime_error("BRES pointer assignment outside a loaded resource");
+    auto& handles = owner->second.handles;
+    const auto existing = handles.find(pointer);
+    if (existing != handles.end()) return existing->second;
+    std::uint32_t handle;
+    if (!t.freeHandles.empty()) {
+        handle = t.freeHandles.back();
+        t.freeHandles.pop_back();
+        t.pointers[handle] = const_cast<void*>(pointer);
+    } else {
+        if (t.pointers.size() >= std::numeric_limits<std::uint32_t>::max())
+            throw std::runtime_error("BRES pointer handle table exhausted");
+        handle = static_cast<std::uint32_t>(t.pointers.size());
+        t.pointers.push_back(const_cast<void*>(pointer));
+    }
+    handles.emplace(pointer, handle);
+    return handle;
 }
 
-};
-};
+void* ResolvePointer(std::uint32_t handle) {
+    return table().pointers.at(handle);
+}
+
+String String::Empty() {
+    String value;
+    value.ptr.handle = 1;
+    return value;
+}
+
+File::~File() { release(ptr()); }
+
+int File::Init(FileReader* file) {
+    const long size = file->getSize();
+    if (size < static_cast<long>(sizeof(FileHeaderData)) ||
+        static_cast<unsigned long>(size) > std::numeric_limits<std::uint32_t>::max())
+        return 1;
+    char* buffer = new char[size];
+    if (file->read(buffer, static_cast<unsigned int>(size)) != size ||
+        word(buffer + 12) != static_cast<std::uint32_t>(size) || Init(buffer)) {
+        delete[] buffer;
+        return 1;
+    }
+    return 0;
+}
+
+int File::Init(void* buffer) {
+    IsValid = false;
+    if (!buffer) return 1;
+    char* bytes = static_cast<char*>(buffer);
+    FileHeaderData header;
+    std::memcpy(&header, buffer, sizeof(header));
+    if (std::memcmp(bytes, "BRES\xfe\xff\0\0", 8) != 0 ||
+        header.sizeOfHeader != sizeof(header) || header.sizeOfFile < sizeof(header))
+        return 1;
+    const std::uint32_t offsetTable = word(bytes + 20);
+    if (offsetTable < sizeof(header) || offsetTable > header.sizeOfFile ||
+        header.numOffsets > (header.sizeOfFile - offsetTable) / 4)
+        return 1;
+    // Validate before rewriting anything. The table itself remains file offsets.
+    std::vector<std::pair<std::uint32_t, std::uint32_t>> relocations;
+    for (std::uint32_t i = 0; i < header.numOffsets; ++i) {
+        const std::uint32_t field = word(bytes + offsetTable + i * 4);
+        if (field > header.sizeOfFile - 4 || field % 4) return 1;
+        const std::uint32_t target = word(bytes + field);
+        if (!target || target >= header.sizeOfFile) return 1;
+        relocations.emplace_back(field, target);
+    }
+    const std::uintptr_t start = reinterpret_cast<std::uintptr_t>(buffer);
+    if (table().owners.count(start)) return 1;
+    release(ptr());
+    table().owners.emplace(start, PointerOwner{start + header.sizeOfFile, {}});
+    try {
+        for (const auto& relocation : relocations) {
+            const std::uint32_t handle = StorePointer(bytes + relocation.first, bytes + relocation.second);
+            std::memcpy(bytes + relocation.first, &handle, sizeof(handle));
+        }
+    } catch (...) {
+        release(buffer);
+        throw;
+    }
+    res::Access<FileHeaderData>::operator=(res::Access<FileHeaderData>(buffer));
+    ptr()->version |= 0x8000;
+    IsValid = true;
+    return 0;
+}
+
+} }

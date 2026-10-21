@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
                 if (file) { std::fclose(file); image = device->getVideoDriver()->createImageFromFile(candidates[k].c_str()); }
             }
             if (!image) { std::fprintf(stderr, "Image decoding failed\n"); return 1; }
-            std::printf("TEXTURE %s %u %u\n", data.libraryImages.images[i].path.ptr,
+            std::printf("TEXTURE %s %u %u\n", data.libraryImages.images[i].path.ptr.ptr(),
                         image->getDimension().Width, image->getDimension().Height);
             image->drop();
         }
@@ -76,7 +76,7 @@ int main(int argc, char** argv) {
                 animator->applyAnimationValues(0);
                 root->updateAbsolutePosition(true);
             }
-            std::printf("CLIP %s %d %d\n", clip->id.ptr, clip->start, clip->end);
+            std::printf("CLIP %s %d %d\n", clip->id.ptr.ptr(), clip->start, clip->end);
         }
         for (int i = 0; i < database.getGeometryCount(); ++i) {
             const irr::collada::SGeometry* geometry = database.getGeometry(i);
@@ -84,7 +84,7 @@ int main(int argc, char** argv) {
             int triangles = 0;
             for (int b = 0; b < geometry->pMesh->meshBuffers.size(); ++b)
                 triangles += geometry->pMesh->meshBuffers[b].count;
-            std::printf("MESH %s %d vertices %d triangles\n", geometry->name.ptr,
+            std::printf("MESH %s %d vertices %d triangles\n", geometry->name.ptr.ptr(),
                         geometry->pMesh->getVertexCount(), triangles);
         }
         std::printf("BDAE_NATIVE_OK %d tracks %d clips %d events\n", database.getAnimationCount(),

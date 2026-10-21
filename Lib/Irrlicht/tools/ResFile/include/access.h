@@ -8,6 +8,7 @@ namespace irr
 namespace res
 {
 
+// Native in-memory access; serialized BRES pointer slots use res::Ptr.
 template<typename T>
 struct Access {
 	Access(){}
@@ -65,22 +66,9 @@ struct Access {
 		return ptr() != a.ptr();
 	}  
 
-	void OffsetToPtr(void* ref)
-	{
-		m_ptr = reinterpret_cast<T*>(reinterpret_cast<char*>(ref) + m_offset);
-	}
 
-	void PtrToOffset(void* ref)
-	{
-		m_offset = static_cast<char*>(m_ptr) - static_cast<char*>(ref);
-	}
-
-	
 private:
-	union {
-		int m_offset;
-		T* m_ptr;
-	};
+	T* m_ptr;
 };
 
 }; // namespace res

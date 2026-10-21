@@ -1,81 +1,41 @@
 @echo off
-@echo MAKE STARTS AT %DATE% %TIME% > %~dp0FULL_REBUILD_TIME.LOG
-
-rem ////////////////////////////////////////
-rem 		Rebuild Win32 version
-rem ///////////////////////////////////////
-
-cls
-
-rem /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-call %~dp0\config.bat
-call %~dp0\setenv.bat
-
-rem /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-set LOG_FILE=%PROJECT_PATH%CastleDefence.log
-set PACK_NAME=CastleFrenzy_Apple_iPhone_iPodTouch_ML_IGP_MS_TS_Online_Gameloft_Windows_v%BUILD_VERSION%.zip
-set PACK_FILE=%PROJECT_PATH%%PACK_NAME%
-
-if exist %LOG_FILE% (
-	del /Q %LOG_FILE%
+setlocal EnableExtensions
+rem Compatibility filename: this builds Windows x64 only.
+pushd "%~dp0"
+set "BUILD_CONFIG=Release"
+set "BUILD_PRESET=windows-release"
+set "PACKAGE_BUILD=1"
+set "CLEAN_BUILD=--clean-first"
+:args
+if "%~1"=="" goto build
+if /i "%~1"=="--debug" (
+    set "BUILD_CONFIG=Debug"
+    set "BUILD_PRESET=windows-debug"
+) else if /i "%~1"=="--no-package" (
+    set "PACKAGE_BUILD=0"
+) else if /i "%~1"=="--incremental" (
+    set "CLEAN_BUILD="
+) else (
+    echo Usage: rebuild_Win32.bat [--debug] [--no-package] [--incremental]
+    popd
+    exit /b 2
 )
-
-if exist %PACK_FILE% (
-	del /Q %PACK_FILE%
-)
-
-rem /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-echo.
-echo ///////////////////////////////////////
-echo	Generate project version file
-echo ///////////////////////////////////////
-echo.
-
-echo #pragma once > %HEADERS_OUT_PATH%\version.h
-echo const wchar_t g_castle_frenzy_version_str[] = L"%VERSION_MAJOR%.%VERSION_MINOR%.%VERSION_BUILD%"; >> %HEADERS_OUT_PATH%\version.h
-
-rem /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-echo.
-echo ///////////////////////////////////////
-echo	Rebuild project data
-echo ///////////////////////////////////////
-echo.
-
-pushd %PROJECT_DATA_PATH%
-
-rem call rebuild_data.bat > %LOG_FILE%
-
+shift
+goto args
+:build
+cmake --preset windows-x64
+if errorlevel 1 goto failed
+cmake --build --preset %BUILD_PRESET% %CLEAN_BUILD%
+if errorlevel 1 goto failed
+ctest --preset %BUILD_PRESET%
+if errorlevel 1 goto failed
+if "%PACKAGE_BUILD%"=="0" goto done
+cpack --config "build/windows-x64/CPackConfig.cmake" -C %BUILD_CONFIG% -B "build/packages"
+if errorlevel 1 goto failed
+:done
+echo Ready: build\windows-x64\bin\%BUILD_CONFIG%\FortressDefender.exe
 popd
-
-rem /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-echo.
-echo ///////////////////////////////////////
-echo	Rebuild project source
-echo ///////////////////////////////////////
-echo.
-
-rem call %VSBuilder_EXE% /logfile:%LOG_FILE% /platform:Win32 /r %PROJECT_PRJ_PATH%\Win32\FortressDefender.vcproj
-
-rem /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-echo.
-echo ///////////////////////////////////////
-echo	Pack project version
-echo ///////////////////////////////////////
-echo.
-
-%SEVEN_ZIP% a -tzip -scsWIN -mx=1 %PACK_FILE% %PROJECT_BUILD_PATH% %PROJECT_BUILD_PATH%\..\*.dll %PROJECT_BUILD_PATH%\..\*.exe	>> %LOG_FILE%
-%SEVEN_ZIP% d -r -tzip -scsWIN %PACK_FILE% .svn 																				>> %LOG_FILE%
-%SEVEN_ZIP% d -r -tzip -scsWIN %PACK_FILE% user_profile.xml																		>> %LOG_FILE%
-%SEVEN_ZIP% d -r -tzip -scsWIN %PACK_FILE% resources.pack																		>> %LOG_FILE%
-
-rem /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-@echo MAKE ENDS AT %DATE% %TIME% >> %~dp0FULL_REBUILD_TIME.LOG
-
-pause
+exit /b 0
+:failed
+popd
+exit /b 1

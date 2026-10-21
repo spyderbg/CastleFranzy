@@ -1,3 +1,4 @@
+#include <cstdint>
 #include "stdafx.h"
 #include "IBatchSceneNode.h"
 
@@ -162,7 +163,7 @@ IBatchSceneNode::render(void* renderData)
 
 	if (renderData)
 	{
-		u32 batch = reinterpret_cast<u32>(renderData);
+		u32 batch = reinterpret_cast<std::uintptr_t>(renderData);
 		if (batch > u32(u16(-1)))
 		{
 			_IRR_DEBUG_BREAK_IF(

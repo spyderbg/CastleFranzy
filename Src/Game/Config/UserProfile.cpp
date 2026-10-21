@@ -305,6 +305,8 @@ bool CUserProfile::Save( bool defaultProfile )
 	}
 	else
 	{
+		// The temporary export map drops its entries; retain the config-owned value.
+		srcAttr->grab();
 		attrMap[profileName] = srcAttr;
 	}
 

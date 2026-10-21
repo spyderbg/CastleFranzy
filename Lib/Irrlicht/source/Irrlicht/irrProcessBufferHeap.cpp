@@ -346,20 +346,18 @@ CProcessBufferHeap::dump(ILogger* dumpLogger, ELOG_LEVEL logLvl) const
 		s32 size = buffer[0];
 		if (size > 0)
 		{
-			// TODO: %08x should be %016x on 64 bits system, but this is a
-			// lesser problem for now
 #ifdef _DEBUG
 			sprintf(tmp,
-					"0x%08x: %8d @ %s:%d",
-					buffer + 1 + IRR_DEBUG_INFO_SIZE,
+					"%p: %8zu @ %s:%d",
+					static_cast<void*>(buffer + 1 + IRR_DEBUG_INFO_SIZE),
 					(size - 2 - IRR_DEBUG_INFO_SIZE) * sizeof(s32),
 					reinterpret_cast<const char**>(&buffer[2])[0],
 					buffer[1]
 			);
 #else
 			sprintf(tmp,
-					"0x%08x: %8d",
-					buffer + 1,
+					"%p: %8zu",
+					static_cast<void*>(buffer + 1),
 					(size - 2) * sizeof(s32)
 			);
 #endif

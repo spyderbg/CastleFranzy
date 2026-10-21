@@ -77,8 +77,8 @@ namespace os
 #if !defined (_WIN32_WCE )
 		c8* tmp = irrnew c8[strlen(message) + 2];
 		sprintf(tmp, "%s\n", message);
-		OutputDebugString(tmp);
-		printf(tmp);
+		OutputDebugStringA(tmp);
+		printf("%s", tmp);
 		delete [] tmp;
 #endif
 	}
@@ -140,8 +140,8 @@ namespace os
 	{
 		c8* tmp = irrnew c8[strlen(message) + 2];
 		sprintf(tmp, "%s\n", message);
-		//OutputDebugString(tmp);
-		printf(tmp);
+		//OutputDebugStringA(tmp);
+		printf("%s", tmp);
 		delete [] tmp;
 	}
 

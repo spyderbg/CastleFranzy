@@ -1,3 +1,4 @@
+#include <cstdint>
 #include "stdafx.h"
 #include "SProcessBufferBindingBase.h"
 
@@ -105,14 +106,14 @@ assignPointers(u8* buffer,
 			{
 				components.Normal
 					= core::stepPointer(reinterpret_cast<core::vector3df*>(buffer),
-										reinterpret_cast<u32>(components.Normal));
+										reinterpret_cast<std::uintptr_t>(components.Normal));
 				components.NormalStride = stride;
 			}
 			if (attributes & EVA_COLOR0)
 			{
 				components.Color0
 					= core::stepPointer(reinterpret_cast<SColor*>(buffer),
-										reinterpret_cast<u32>(components.Color0));
+										reinterpret_cast<std::uintptr_t>(components.Color0));
 				components.Color0Stride = stride;
 			}
 			u32 texMask = attributes & EVA_TEXCOORDS_MASK;
@@ -125,7 +126,7 @@ assignPointers(u8* buffer,
 					components.TexCoord[i].Coord
 						= core::stepPointer(
 							reinterpret_cast<core::vector2df*>(buffer),
-							reinterpret_cast<u32>(components.TexCoord[i].Coord)
+							reinterpret_cast<std::uintptr_t>(components.TexCoord[i].Coord)
 						);
 					components.TexCoord[i].Stride = stride;
 				}

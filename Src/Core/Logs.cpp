@@ -147,7 +147,7 @@ void Logs::newPointer(void* ptr, const char* clsname, const char* filename, int 
 #if defined(WIN32)
 	FILE* f;
 	fopen_s(&f, "__new.log", s_newSession ? "w" : "a");
-	fprintf(f, " @ %08x : %s (%s:%d)\n", ptr, clsname, filename, lineNumber);
+	fprintf(f, " @ %p : %s (%s:%d)\n", ptr, clsname, filename, lineNumber);
 	fclose(f);
 
 	s_newSession = false;

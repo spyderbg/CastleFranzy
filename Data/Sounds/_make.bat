@@ -71,9 +71,8 @@ if not "%1"=="no_bar" (
 		
 		cd bin
 		
-		%SEVEN_ZIP% a %OUTPUT_PATH%\"audio_%%d.pack" -tzip -scsWIN -mx=0
-rem		copy %OUTPUT_PATH%\"audio_%%d.pack" %OUTPUT_PATH%\"audio_%%d.pack2"
-rem		%SEVEN_ZIP% d %OUTPUT_PATH%\"audio_%%d.pack" .svn -r -tzip -scsWIN
+		python "%PROJECT_TOOLS_PATH%\zip_directory.py" "%OUTPUT_PATH%\audio_%%d.pack" "." --stored
+		if errorlevel 1 exit /b 1
 
 		cd ..
 		

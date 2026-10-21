@@ -1,4 +1,6 @@
 @echo off
+setlocal EnableExtensions
+pushd "%~dp0"
 
 rem ////////////////////////////////////////
 rem 		Init pack
@@ -6,8 +8,7 @@ rem ///////////////////////////////////////
 
 set PACK_NAME=Sprites
 
-call %~dp0\..\..\config.bat
-call %~dp0\..\..\setenv.bat
+set "OUTPUT_PATH=%~dp0..\..\Build\bin"
 
 rem ///////////////////////////////////////
 
@@ -29,7 +30,10 @@ if exist bin (
 	rmdir /S /Q bin
 )
 
-if exist %OUTPUT_PATH%\%PACK_NAME% (
-	rd /s /q %OUTPUT_PATH%\%PACK_NAME%
+if exist "%OUTPUT_PATH%\%PACK_NAME%" (
+	rd /s /q "%OUTPUT_PATH%\%PACK_NAME%"
 )
 
+
+popd
+endlocal

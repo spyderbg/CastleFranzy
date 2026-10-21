@@ -1,3 +1,4 @@
+#include <cstdint>
 /******************************************************************************
 
  @File         PVRTDecompress.cpp
@@ -35,7 +36,7 @@
 
 #define WRAP_COORD(Val, Size) ((Val) & ((Size)-1))
 
-#define POWER_OF_2(X)   util_number_is_power_2(X)
+#define POWER_OF_2(X)   ((X) != 0 && ((X) & ((X) - 1)) == 0)
 
 /*
 	Define an expression to either wrap or clamp large or small vals to the
@@ -47,7 +48,7 @@
 /*****************************************************************************
  * Useful typedefs
  *****************************************************************************/
-typedef unsigned long U32;
+typedef uint32_t U32;
 typedef unsigned char U8;
 
 /***********************************************************
@@ -98,7 +99,7 @@ void PVRTDecompressPVRTC(const void *pCompressedData,
              	1, 2, 4, 8, ... etc.
 				Returns FALSE for zero.
 *************************************************************************/
-int util_number_is_power_2( unsigned  input );
+
 /*{
   unsigned minus1;
 
@@ -741,10 +742,10 @@ const int mod[8][4]={{2, 8,-2,-8},
  @Returns		Returns actual pixel colour
  @Description	Used by ETCTextureDecompress
 *************************************************************************/
-unsigned long modifyPixel(int red, int green, int blue, int x, int y, unsigned long modBlock, int modTable)
+uint32_t modifyPixel(int red, int green, int blue, int x, int y, uint32_t modBlock, int modTable)
 {
 	int index = x*4+y, pixelMod;
-	unsigned long mostSig = modBlock<<1;
+	uint32_t mostSig = modBlock<<1;
 
 	if (index<8)
 		pixelMod = mod[modTable][((modBlock>>(index+24))&0x1)+((mostSig>>(index+8))&0x2)];
@@ -770,8 +771,8 @@ unsigned long modifyPixel(int red, int green, int blue, int x, int y, unsigned l
 *************************************************************************/
 int ETCTextureDecompress(const void * const pSrcData, const int &x, const int &y, const void *pDestData,const int &/*nMode*/)
 {
-	unsigned long blockTop, blockBot, *input = (unsigned long*)pSrcData, *output;
-	//unsigned long alphaTop, alphaBot, alphaValue[8];
+	uint32_t blockTop, blockBot, *input = (uint32_t*)pSrcData, *output;
+	//uint32_t alphaTop, alphaBot, alphaValue[8];
 	unsigned char red1, green1, blue1, red2, green2, blue2;
 	bool bFlip, bDiff;
 	int modtable1,modtable2;
@@ -783,7 +784,7 @@ int ETCTextureDecompress(const void * const pSrcData, const int &x, const int &y
 				blockTop = *(input++);
 				blockBot = *(input++);
 
-			output = (unsigned long*)pDestData + i*x +m;
+			output = (uint32_t*)pDestData + i*x +m;
 
 			// check flipbit
 			bFlip = (blockTop & ETC_FLIP) != 0;

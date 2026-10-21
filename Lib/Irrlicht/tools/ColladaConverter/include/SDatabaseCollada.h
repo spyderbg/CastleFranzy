@@ -62,15 +62,15 @@ struct SInstance
 
 	union
 	{
-		void					*pData;
-		SInstanceGeometry		*pGeometry;
-		SInstanceController		*pController;
-		SInstanceCamera			*pCamera;
-		SInstanceLight			*pLight;
-		SInstanceVisualScene	*pVisualScene;
-		SInstanceEmitter		*pEmitter;
-		SInstanceForce			*pForce;
-		SInstanceModularSkin	*pModularSkin;
+		res::Ptr<void> pData;
+		res::Ptr<SInstanceGeometry> pGeometry;
+		res::Ptr<SInstanceController> pController;
+		res::Ptr<SInstanceCamera> pCamera;
+		res::Ptr<SInstanceLight> pLight;
+		res::Ptr<SInstanceVisualScene> pVisualScene;
+		res::Ptr<SInstanceEmitter> pEmitter;
+		res::Ptr<SInstanceForce> pForce;
+		res::Ptr<SInstanceModularSkin> pModularSkin;
 	};
 };
 
@@ -81,7 +81,7 @@ struct SInstanceMaterial
 	union
 	{
 		int					iMaterial;
-		SMaterial *			pMaterial;
+		res::Ptr<SMaterial> pMaterial;
 	};
 	int						iEffectComponent;
 	int						iGeometryComponent;
@@ -96,7 +96,7 @@ struct SInstanceController
 {
 	res::String					filename;
 	res::String					url;
-	SController					*pController;
+	res::Ptr<SController> pController;
 	SBindMaterial				bindMaterial;
 	int							drawLayer;
 	res::vector<res::String>	skeletons;
@@ -119,7 +119,7 @@ struct SInstanceGeometry
 {
 	res::String				filename;
 	res::String				url;
-	SGeometry				*pGeometry;
+	res::Ptr<SGeometry> pGeometry;
 	SBindMaterial			bindMaterial;
 	int						drawLayer;
 };
@@ -127,7 +127,7 @@ struct SInstanceGeometry
 struct SSetParam
 {
 	res::String				ref;
-	void *					value;
+	res::Ptr<void> value;
 };
 
 struct SInstanceEffect
@@ -138,7 +138,7 @@ struct SInstanceEffect
 	union
 	{
 		int effectId;
-		SEffect *pEffect;
+		res::Ptr<SEffect> pEffect;
 	};
 };
 
@@ -155,7 +155,7 @@ struct SInstanceLight
 	union
 	{
 		int lightId;
-		SLight *pLight;
+		res::Ptr<SLight> pLight;
 	};
 };
 
@@ -166,7 +166,7 @@ struct SInstanceCamera
 	union
 	{
 		int cameraId;
-		SEffect *pCamera;
+		res::Ptr<SEffect> pCamera;
 	};
 };
 
@@ -225,8 +225,8 @@ struct SLight
 	float			intensity;
 	union
 	{
-		SSpotLight	*pSpot;
-		SPointLight *pPoint;
+		res::Ptr<SSpotLight> pSpot;
+		res::Ptr<SPointLight> pPoint;
 	};
 };
 
@@ -242,7 +242,7 @@ struct SSurface
 	union
 	{
 		int				image;
-		SImage			*pImage;
+		res::Ptr<SImage> pImage;
 	};
 };
 
@@ -251,7 +251,7 @@ struct SSampler2D
 	union
 	{
 		int				surface;
-		SSurface		*pSurface;
+		res::Ptr<SSurface> pSurface;
 	};
 };
 
@@ -260,7 +260,7 @@ struct STexture
 	union
 	{
 		int				texture; //samplerId
-		SSampler2D*		sampler;
+		res::Ptr<SSampler2D> sampler;
 	};
 	
 	res::String		texcoord;
@@ -289,8 +289,8 @@ struct SCommonColorOrTexture
 	u8	 reserved[3];
 	union
 	{
-		res::vector<STexture> *pTexture;
-		SColor	 *pColor;
+		res::Ptr<res::vector<STexture>> pTexture;
+		res::Ptr<SColor> pColor;
 	};
 };
 /*
@@ -390,8 +390,8 @@ struct STexturePipeline
 		int iType;
 		union
 		{
-			STexCombiner *pCombiner;
-			STexEnv *pTexEnv;
+			res::Ptr<STexCombiner> pCombiner;
+			res::Ptr<STexEnv> pTexEnv;
 		};
 	};
 
@@ -401,14 +401,14 @@ struct STexturePipeline
 
 struct SPass
 {
-	void *colorTarget;
-	void *depthTarget;
-	void *stencilTarget;
-	void *colorClear;
-	void *depthClear;
-	void *stencilClear;
-	void *draw;
-	void *renderStates;
+	res::Ptr<void> colorTarget;
+	res::Ptr<void> depthTarget;
+	res::Ptr<void> stencilTarget;
+	res::Ptr<void> colorClear;
+	res::Ptr<void> depthClear;
+	res::Ptr<void> stencilClear;
+	res::Ptr<void> draw;
+	res::Ptr<void> renderStates;
 };
 
 struct SProfileGLES
@@ -454,12 +454,12 @@ struct SMaterial
 	union
 	{
 		int				iDiffuseSurface;
-		SImage			*pDiffuseSurface;
+		res::Ptr<SImage> pDiffuseSurface;
 	};
 	union
 	{
 		int				iEnvmapSurface;
-		SImage			*pEnvmapSurface;
+		res::Ptr<SImage> pEnvmapSurface;
 	};
 	float		envmapIntensity;
 	int			renderSet;			// 0 - Solid, 1 - Translucent, 2 - Solid with Alpha Test
@@ -624,25 +624,25 @@ struct SSampler
 	union
 	{
 		int iInput;
-		SSource *pInput;
+		res::Ptr<SSource> pInput;
 	};
 
 	union
 	{
 		int iOutput;
-		SSource *pOutput;
+		res::Ptr<SSource> pOutput;
 	};
 
 	union
 	{
 		int iInTangent;
-		SSource *pInTangent;
+		res::Ptr<SSource> pInTangent;
 	};
 
 	union
 	{
 		int iOutTangent;
-		SSource *pOutTangent;
+		res::Ptr<SSource> pOutTangent;
 	};
 };
 
@@ -712,7 +712,7 @@ struct SSource
 	union
 	{	
 		res::vector<res::String>		sData;
-		res::vector<void *>				pData;
+		res::vector<res::Ptr<void> >				pData;
 		res::vector<float>				fData;
 		res::vector<int>				iData;
 		res::vector<u8>					bData;
@@ -727,8 +727,8 @@ struct SAnimation
 	res::vector<SSource>		sources;
 	res::vector<SSampler>		samplers;
 	res::vector<SChannel>		channels;
-	void						*pAnimator;
-	void						*pAnimationExtra;
+	res::Ptr<void> pAnimator;
+	res::Ptr<void> pAnimationExtra;
 
 	const res::vector<float> &getOutput(int index = 0) const { return samplers[index].pOutput->fData; }
 	const res::vector<int>	&getKeyTime(int index = 0) const { return samplers[index].pInput->iData; }
@@ -811,7 +811,7 @@ struct SEventsTrack
 struct SLibraryAnimations
 {
 	res::vector<SAnimation>		animations;
-	SEventsTrack				*eventsTrack;
+	res::Ptr<SEventsTrack> eventsTrack;
 };
 
 struct SMeshBuffer
@@ -873,8 +873,8 @@ struct SMesh
 		int					stride;
 		res::vector<int>	offsets;
 		res::vector<int>	types;
-		res::vector<ScaleAndOffset *>	pScaleOffsets;
-		void				*data;
+		res::vector<res::Ptr<ScaleAndOffset> >	pScaleOffsets;
+		res::Ptr<void> data;
 	};
 
 	enum VertexComponents
@@ -891,7 +891,7 @@ struct SMesh
 		struct
 		{
 			int							iInterleaved;
-			InterleavedData				*pInterleaved;
+			res::Ptr<InterleavedData> pInterleaved;
 		};		
 		res::vector<SSource>		pSources;
 	};
@@ -916,7 +916,7 @@ struct SMesh
 	{
 		if(bInterleaved)
 		{
-			return ((char *)pInterleaved->data) + pInterleaved->offsets[i];
+			return (static_cast<char*>(static_cast<void*>(pInterleaved->data))) + pInterleaved->offsets[i];
 		}
 		else
 		{
@@ -963,8 +963,8 @@ struct SGeometry
 
 	union
 	{
-		SMesh				*pMesh;
-		SSpline				*pSpline;
+		res::Ptr<SMesh> pMesh;
+		res::Ptr<SSpline> pSpline;
 	};
 
 	//core::aabbox3df			boundingBox;
@@ -983,15 +983,15 @@ struct SMorph
 	/*union
 	{
 		int					iSource;
-		SGeometry			*pGeometry;
-		SController			*pController;
+		res::Ptr<SGeometry> pGeometry;
+		res::Ptr<SController> pController;
 	};*/
 
 	res::vector<res::String>		targets;
 	union
 	{
 		res::vector<int>		iTargets;
-		res::vector<SGeometry*>	pTargets;
+		res::vector<res::Ptr<SGeometry> >	pTargets;
 	};
 	res::vector<float>			weights;
 };
@@ -1027,10 +1027,10 @@ struct SController
 
 	union
 	{
-		void				*pData;
-		SMorph				*pMorph;
-		SSkin				*pSkin;
-		SModularSkin		*pModularSkin;
+		res::Ptr<void> pData;
+		res::Ptr<SMorph> pMorph;
+		res::Ptr<SSkin> pSkin;
+		res::Ptr<SModularSkin> pModularSkin;
 	};
 };
 
@@ -1083,14 +1083,14 @@ struct SNode
 	res::vector<SInstance>		instances;
 	union
 	{
-		void					*pUserProperty;
-		res::String				*pUserPropertyStr;
+		res::Ptr<void> pUserProperty;
+		res::Ptr<res::String> pUserPropertyStr;
 	};
 
 	union
 	{
-		void					*pExtraTypeData;
-		SBillboard				*pBillboard;
+		res::Ptr<void> pExtraTypeData;
+		res::Ptr<SBillboard> pBillboard;
 	};
 };
 
@@ -1118,7 +1118,7 @@ struct SImageIFL
 	SAnimation						animation;
 
 	int getCount() { return animation.sources[0].pData.size(); }
-	video::ITexture *& getTexture(int i) { return (video::ITexture *&)animation.sources[1].pData[i]; }
+	res::Ptr<video::ITexture>& getTexture(int i) { return reinterpret_cast<res::Ptr<video::ITexture>&>(animation.sources[1].pData[i]); }
 	const res::String & getFilename(int i) { return animation.sources[2].sData[i]; }
 };
 
@@ -1137,8 +1137,8 @@ struct SImage
 	
 	union
 	{
-		video::ITexture *pTexture;
-		SImageIFL		*pIFL;
+		res::Ptr<video::ITexture> pTexture;
+		res::Ptr<SImageIFL> pIFL;
 	};
 };
 
@@ -1183,10 +1183,10 @@ struct SShapeElement
 	int iType;
 	union
 	{
-		SBox		*pBox;
-		SSphere		*pSphere;
-		SCylinder	*pCylinder;
-		STarget		*pTarget;
+		res::Ptr<SBox> pBox;
+		res::Ptr<SSphere> pSphere;
+		res::Ptr<SCylinder> pCylinder;
+		res::Ptr<STarget> pTarget;
 	};
 };
 
@@ -1263,8 +1263,8 @@ struct SDirection
 	int			type;
 	union
 	{
-		SVariableVector		*pVariableVector;
-		SDirectionTarget	*pDirectionTarget;
+		res::Ptr<SVariableVector> pVariableVector;
+		res::Ptr<SDirectionTarget> pDirectionTarget;
 	};
 };
 
@@ -1294,12 +1294,12 @@ struct SStandardParticle
 
 struct SMetaParticle
 {
-	void *to_be_determined;
+	res::Ptr<void> to_be_determined;
 };
 
 struct SInstancedGeometryParticle
 {
-	void *to_be_determined;
+	res::Ptr<void> to_be_determined;
 };
 
 struct SParticleType
@@ -1314,9 +1314,9 @@ struct SParticleType
 	int			type;
 	union
 	{
-		SStandardParticle			*pStandardParticle;
-		SMetaParticle				*pMetaParticle;
-		SInstancedGeometryParticle	*pInstancedGeometryParticle;
+		res::Ptr<SStandardParticle> pStandardParticle;
+		res::Ptr<SMetaParticle> pMetaParticle;
+		res::Ptr<SInstancedGeometryParticle> pInstancedGeometryParticle;
 	};
 };
 
@@ -1341,8 +1341,8 @@ struct SAxis
 	int			type;
 	union
 	{
-		SVariableVector		*pVariableVector;
-		STravelOrMBlurDir	*pTravelOrMBlurDir;
+		res::Ptr<SVariableVector> pVariableVector;
+		res::Ptr<STravelOrMBlurDir> pTravelOrMBlurDir;
 	};
 };
 
@@ -1397,9 +1397,9 @@ struct SForce
 	int					type;
 	union
 	{
-		SWind				*pWind;
-		SGravity			*pGravity;
-		SDeflector			*pDeflector;
+		res::Ptr<SWind> pWind;
+		res::Ptr<SGravity> pGravity;
+		res::Ptr<SDeflector> pDeflector;
 	};
 };
 
@@ -1412,7 +1412,7 @@ struct SInstanceForce
 {
 	res::String				filename;
 	res::String				url;
-	SForce					*pForce;
+	res::Ptr<SForce> pForce;
 };
 
 struct SParticleAnimationOffset
@@ -1465,7 +1465,7 @@ struct SInstanceEmitter
 {
 	res::String					filename;
 	res::String					url;
-	SEmitter					*pEmitter;
+	res::Ptr<SEmitter> pEmitter;
 	SBindMaterial				bindMaterial;
 	int							drawLayer;
 	res::vector<res::String>	forceNodes;
@@ -1492,7 +1492,7 @@ struct SConfig
 
 struct SCollada
 {
-	const char *			version;
+	res::Ptr<const char> version;
 	SConfig					configurations;
 	SLibraryAnimations		libraryAnimations;
 	SLibraryAnimationClips	libraryAnimationClips;
@@ -1509,6 +1509,13 @@ struct SCollada
 	SScene					scene;
 };
 
+
+// These are serialized BRES layouts, independent of the process pointer width.
+static_assert(sizeof(SCollada) == 124, "BRES Collada root layout changed");
+static_assert(sizeof(SNode) == 80, "BRES node layout changed");
+static_assert(sizeof(SAnimation) == 36, "BRES animation layout changed");
+static_assert(sizeof(SImage) == 20, "BRES image layout changed");
+static_assert(sizeof(SMeshBuffer) == 60, "BRES mesh buffer layout changed");
 
 //! Multiply by another matrix.
 template <class T>

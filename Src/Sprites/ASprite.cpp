@@ -1,5 +1,6 @@
 
 #include "stdafx.h"
+#include <cstdint>
 #include "Core/irrlicht.h"
 
 #include "Sprites/ASprite.h"
@@ -12,14 +13,14 @@
 
 #if DEBUG_SYSTEM
 
-array<s32>		g_SpriteList;
+array<std::uintptr_t>		g_SpriteList;
 
-void SpriteList_Add( u32 ptr )
+void SpriteList_Add( std::uintptr_t ptr )
 {
 	g_SpriteList.push_back( ptr );
 }
 
-void SpriteList_Remove( u32 ptr )
+void SpriteList_Remove( std::uintptr_t ptr )
 {	
 	s32 idx = g_SpriteList.binary_search( ptr );
 	if( idx != -1 )
@@ -98,7 +99,7 @@ ASprite::ASprite()
 
 #if DEBUG_SYSTEM
 	
-	SpriteList_Add( (u32)this );
+	SpriteList_Add( reinterpret_cast<std::uintptr_t>(this) );
 
 #endif
 }
@@ -143,7 +144,7 @@ ASprite::~ASprite()
 
 #if DEBUG_SYSTEM
 	
-	SpriteList_Remove( (u32)this );
+	SpriteList_Remove( reinterpret_cast<std::uintptr_t>(this) );
 
 #endif
 }

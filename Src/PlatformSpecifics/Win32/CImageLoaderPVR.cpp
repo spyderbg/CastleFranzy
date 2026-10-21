@@ -1,3 +1,4 @@
+#include <cstdint>
 // Copyright (C) 2002-2008 Nikolaus Gebhardt
 // This file is part of the "Irrlicht Engine".
 
@@ -66,16 +67,16 @@ IImage* CImageLoaderPVR::loadImage(io::IReadFile* file) const
 	/// PVR Header
 	PVR_Texture_Header PVRHeader;
 	PVR_Texture_Header* psPVRHeader;
-	unsigned long* pData;
+	uint32_t* pData;
 	if(!PVRTIsLittleEndian())
 	{
 		PVRHeader = *((PVR_Texture_Header*)buffer);
 		psPVRHeader = (PVR_Texture_Header*) &PVRHeader;
-		pData = (unsigned long*) psPVRHeader;
-		unsigned int ui32HeaderSize = sizeof(PVRHeader) / sizeof(unsigned long);
+		pData = (uint32_t*) psPVRHeader;
+		unsigned int ui32HeaderSize = sizeof(PVRHeader) / sizeof(uint32_t);
 
 		for(unsigned int i = 0; i < ui32HeaderSize; ++i)
-			PVRTByteSwap((unsigned char*) &pData[i], sizeof(unsigned long));
+			PVRTByteSwap((unsigned char*) &pData[i], sizeof(uint32_t));
 	}
 	else
 	{

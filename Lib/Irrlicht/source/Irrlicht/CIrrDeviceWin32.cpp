@@ -378,11 +378,11 @@ CIrrDeviceWin32::CIrrDeviceWin32(const SIrrlichtCreationParameters& params)
 	// create the window if we need to and we do not use the null device
 	if (!CreationParams.WindowId && CreationParams.DriverType != video::EDT_NULL)
 	{
-		const c8* ClassName = "CIrrDeviceWin32";
+		const wchar_t* ClassName = L"CIrrDeviceWin32";
 
 		// Register Class
-		WNDCLASSEX wcex;
-		wcex.cbSize		= sizeof(WNDCLASSEX);
+		WNDCLASSEXW wcex;
+		wcex.cbSize		= sizeof(WNDCLASSEXW);
 		wcex.style		= CS_HREDRAW | CS_VREDRAW;
 		wcex.lpfnWndProc	= (WNDPROC)WndProc;
 		wcex.cbClsExtra		= 0;
@@ -396,9 +396,9 @@ CIrrDeviceWin32::CIrrDeviceWin32(const SIrrlichtCreationParameters& params)
 		wcex.hIconSm		= 0;
 
 		// if there is an icon, load it
-		wcex.hIcon = (HICON)LoadImage(hInstance, "irrlicht.ico", IMAGE_ICON, 0,0, LR_LOADFROMFILE); 
+		wcex.hIcon = (HICON)LoadImageW(hInstance, L"irrlicht.ico", IMAGE_ICON, 0,0, LR_LOADFROMFILE);
 
-		RegisterClassEx(&wcex);
+		RegisterClassExW(&wcex);
 
 		// calculate client size
 
@@ -435,7 +435,7 @@ CIrrDeviceWin32::CIrrDeviceWin32(const SIrrlichtCreationParameters& params)
 
 		// create window
 
-		HWnd = CreateWindow( ClassName, "", style, windowLeft, windowTop,
+		HWnd = CreateWindowW( ClassName, L"", style, windowLeft, windowTop,
 					realWidth, realHeight, NULL, NULL, hInstance, NULL);
 
 		ShowWindow(HWnd, SW_SHOW);
@@ -671,7 +671,7 @@ void CIrrDeviceWin32::resizeIfNecessary()
 //! sets the caption of the window
 void CIrrDeviceWin32::setWindowCaption(const wchar_t* text)
 {
-	DWORD dwResult;
+	DWORD_PTR dwResult;
 	if (IsNonNTWindows)
 	{
 		const core::stringc s = text;
@@ -865,16 +865,16 @@ video::IVideoModeList* CIrrDeviceWin32::getVideoModeList()
 
 void CIrrDeviceWin32::getWindowsVersion(core::stringc& out)
 {
-	OSVERSIONINFOEX osvi;
+	OSVERSIONINFOEXA osvi;
 	BOOL bOsVersionInfoEx;
 
-	ZeroMemory(&osvi, sizeof(OSVERSIONINFOEX));
-	osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEX);
+	ZeroMemory(&osvi, sizeof(OSVERSIONINFOEXA));
+	osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEXA);
 
-	if (!(bOsVersionInfoEx = GetVersionEx((OSVERSIONINFO*) &osvi)))
+	if (!(bOsVersionInfoEx = GetVersionExA((OSVERSIONINFOA*) &osvi)))
 	{
-		osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
-		if (! GetVersionEx((OSVERSIONINFO *) &osvi))
+		osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFOA);
+		if (! GetVersionExA((OSVERSIONINFOA *) &osvi))
 			return;
 	}
 
@@ -922,18 +922,18 @@ void CIrrDeviceWin32::getWindowsVersion(core::stringc& out)
 			char szProductType[80];
 			DWORD dwBufLen;
 
-			RegOpenKeyEx( HKEY_LOCAL_MACHINE,
+			RegOpenKeyExA( HKEY_LOCAL_MACHINE,
 				"SYSTEM\\CurrentControlSet\\Control\\ProductOptions",
 				0, KEY_QUERY_VALUE, &hKey );
-			RegQueryValueEx( hKey, "ProductType", NULL, NULL,
+			RegQueryValueExA( hKey, "ProductType", NULL, NULL,
 				(LPBYTE) szProductType, &dwBufLen);
 			RegCloseKey( hKey );
 
-			if (lstrcmpi( "WINNT", szProductType) == 0 )
+			if (lstrcmpiA( "WINNT", szProductType) == 0 )
 				out.append("Professional ");
-			if (lstrcmpi( "LANMANNT", szProductType) == 0)
+			if (lstrcmpiA( "LANMANNT", szProductType) == 0)
 				out.append("Server ");
-			if (lstrcmpi( "SERVERNT", szProductType) == 0)
+			if (lstrcmpiA( "SERVERNT", szProductType) == 0)
 				out.append("Advanced Server ");
 		}
 

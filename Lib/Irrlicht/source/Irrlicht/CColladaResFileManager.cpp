@@ -48,13 +48,14 @@ CResFile::~CResFile()
 		memFile->drop();
 		memFile = 0;
 	} else {
-		delete[] resFile.ptr();
+		delete[] reinterpret_cast<char*>(resFile.ptr());
 	}
 }
 
 void
 CResFile::releaseTextures()
 {
+	if (!isValid()) return;
 	collada::SCollada &refCollada = *(collada::SCollada *)getDataPtr();
 	collada::CColladaDatabase colladaDB(this);
 
@@ -140,7 +141,7 @@ CResFileManager::updateExternalResources(CResFile* resFile, irr::io::IReadFile* 
 		{
 			irr::ELOG_LEVEL ll = os::Printer::getLogLevel();
 			irr::os::Printer::setLogLevel(irr::ELL_ERROR);
-			image.pTexture = m_pDevice->getVideoDriver()->getTexture(fileDir + "/" + image.path.ptr);
+			image.pTexture = m_pDevice->getVideoDriver()->getTexture(fileDir + "/" + image.path.ptr.ptr());
 			if(image.pTexture == 0)
 				image.pTexture = m_pDevice->getVideoDriver()->getTexture(image.path.ptr);
 			irr::os::Printer::setLogLevel(ll);
@@ -149,7 +150,7 @@ CResFileManager::updateExternalResources(CResFile* resFile, irr::io::IReadFile* 
 				long size;
 				void* buffer = pReader->getExternalBuffer(image.path.ptr, &size);
 				if(buffer) {
-					core::stringc fullpath = fileDir + "/" + image.path.ptr;
+					core::stringc fullpath = fileDir + "/" + image.path.ptr.ptr();
 					irr::io::CMemoryReadFile mrf(buffer, size, fullpath.c_str(), false);
 					image.pTexture = m_pDevice->getVideoDriver()->getTexture(&mrf);
 				}
@@ -278,7 +279,7 @@ CResFileManager::postLoadProcess(CResFile* resFile, irr::io::IReadFile* pReader)
 			_IRR_DEBUG_BREAK_IF(image.pTexture != 0);
 			irr::ELOG_LEVEL ll = os::Printer::getLogLevel();
 			irr::os::Printer::setLogLevel(irr::ELL_ERROR);
-			image.pTexture = m_pDevice->getVideoDriver()->getTexture(fileDir + "/" + image.path.ptr);
+			image.pTexture = m_pDevice->getVideoDriver()->getTexture(fileDir + "/" + image.path.ptr.ptr());
 			if(image.pTexture == 0)
 				image.pTexture = m_pDevice->getVideoDriver()->getTexture(image.path.ptr);
 			irr::os::Printer::setLogLevel(ll);
@@ -288,7 +289,7 @@ CResFileManager::postLoadProcess(CResFile* resFile, irr::io::IReadFile* pReader)
 				long size;
 				void* buffer = pReader->getExternalBuffer(image.path.ptr, &size);
 				if(buffer) {
-					core::stringc fullpath = fileDir + "/" + image.path.ptr;
+					core::stringc fullpath = fileDir + "/" + image.path.ptr.ptr();
 					irr::io::CMemoryReadFile mrf(buffer, size, fullpath.c_str(), false);
 					image.pTexture = m_pDevice->getVideoDriver()->getTexture(&mrf);
 				}
@@ -493,6 +494,7 @@ CResFileManager::get(const char *pFilename, bool load)
 			pResFile = irrnew CResFile(absPath.c_str(), pFile);
 			// Free the accessor
 			pFile->drop();
+			if (pResFile && !pResFile->isValid()) { pResFile->drop(); return 0; }
 			if (pResFile)
 			{
 				// Store the res::File
@@ -537,6 +539,7 @@ CResFileManager::get(io::IReadFile *pReader, bool load, bool refData)
 		{
 			// Allocate the res::File
 			pResFile = irrnew CResFile(absPath.c_str(), pReader, refData);
+			if (!pResFile->isValid()) { pResFile->drop(); return 0; }
 			// Store the res::File
 			m_pFileMap[absPath.c_str()] = pResFile;
 			// Post load process

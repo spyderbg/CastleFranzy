@@ -29,7 +29,7 @@ rem **************************************************************
 rem			Tools
 rem **************************************************************
 
-set SEVEN_ZIP=%PROJECT_TOOLS_PATH%\7Zip\7z.exe
+rem ZIP archives are created by Python (tools\zip_directory.py).
 
 set LIST_SOUND_FILES=%PROJECT_TOOLS_PATH%\ListSoundFiles.exe
 
@@ -55,11 +55,6 @@ if not exist %JAVA_PATH% (
 	set SETENV_ERROR=JAVA NOT INSTALLED
 ) 
 
-rem **************************************************************
-rem 	VS builder path ( used only in 'rebuild_Win32.bat' )
-rem **************************************************************
-
-set VSBuilder_EXE="C:\Program Files\Microsoft Visual Studio 9.0\VC\vcpackages\vcbuild.exe"
 
 rem **************************************************************
 rem 				Cygwin

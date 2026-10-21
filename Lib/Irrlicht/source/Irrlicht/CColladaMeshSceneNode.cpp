@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <cstdint>
 #include "IrrCompileConfig.h"
 #ifdef _IRR_COMPILE_WITH_COLLADA_BINARY_LOADER_
 
@@ -291,7 +292,7 @@ void CColladaMeshSceneNode::OnRegisterSceneNode()
 						SceneManager->registerNodeForRendering(
 							this,
 							&material,
-							(void*)(i + 1),
+							reinterpret_cast<void*>(static_cast<std::uintptr_t>(i) + 1),
 							(MaterialsRenderSet[i] == ERS_SOLID
 							 ? scene::ESNRP_SOLID
 							 : scene::ESNRP_TRANSPARENT)
@@ -353,7 +354,7 @@ void CColladaMeshSceneNode::notifyMaterialChanged()
 
 int CColladaMeshSceneNode::getRenderVertexCount(void* renderData) 
 {
-	u32 i = (u32)renderData - 1;
+	u32 i = static_cast<u32>(reinterpret_cast<std::uintptr_t>(renderData) - 1);
 	IMeshBuffer* mb = Mesh->getMeshBuffer(i);
 	return mb->getVertexCount();
 }
@@ -372,7 +373,7 @@ void CColladaMeshSceneNode::render(void* renderData)
 	if (renderData)
 #endif
 	{
-		u32 i = (u32)renderData - 1;
+		u32 i = static_cast<u32>(reinterpret_cast<std::uintptr_t>(renderData) - 1);
 		_IRR_DEBUG_BREAK_IF(i >= Mesh->getMeshBufferCount());
 		IMeshBuffer* mb = Mesh->getMeshBuffer(i);
 		if (mb)

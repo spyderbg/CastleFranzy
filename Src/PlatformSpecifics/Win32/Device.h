@@ -23,9 +23,9 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <io.h>
-#include <gl/GL.h>
+#include <GL/gl.h>
 //#include <gl/GLAux.h>
-#include <gl/GLU.h>
+#include <GL/glu.h>
 
 ///////////////////////////////////////////////////////////////////////
 

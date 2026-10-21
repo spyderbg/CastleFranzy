@@ -1,3 +1,4 @@
+#include <cstdint>
 #include "stdafx.h"
 // Copyright (C) 2002-2008 Nikolaus Gebhardt
 // This file is part of the "Irrlicht Engine".
@@ -328,7 +329,7 @@ void CBillboardTextSceneNode::OnRegisterSceneNode()
 	{
 		SceneManager->registerNodeForRendering(this,
 											   &Mesh->getMeshBuffer(i)->getMaterial(),
-											   (void*)(i + 1),
+											   reinterpret_cast<void*>(static_cast<std::uintptr_t>(i) + 1),
 											   ESNRP_TRANSPARENT);
 	}
 	ISceneNode::OnRegisterSceneNode();
@@ -346,7 +347,7 @@ void CBillboardTextSceneNode::render(void* renderData)
 		core::matrix4 mat;
 		driver->setTransform(video::ETS_WORLD, mat);
 
-		u32 i = (u32)renderData - 1;
+		u32 i = static_cast<u32>(reinterpret_cast<std::uintptr_t>(renderData) - 1);
 		_IRR_DEBUG_BREAK_IF(i >= Mesh->getMeshBufferCount());
 		driver->setMaterial(Mesh->getMeshBuffer(i)->getMaterial());
 		driver->drawMeshBuffer(Mesh->getMeshBuffer(i));

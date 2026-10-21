@@ -1,35 +1,35 @@
 Ubuntu / Linux build (tested on Ubuntu 24.04 x86_64):
 
-The game and its bundled Irrlicht fork must be compiled as 32-bit programs.
-BRES model resources contain 32-bit pointers and cannot be loaded by a 64-bit
-build without changing the asset format. The existing Build/bin assets are
-ready to use; the old Windows/Java asset tools are not needed.
+The Linux game, bundled Irrlicht fork and asset utilities require a 64-bit
+compiler. Existing BRES assets retain their portable four-byte offsets; the
+loader resolves them to full-width native pointers in a resource-owned handle
+table. No 32-bit compiler, multilib packages or asset conversion is needed.
 
-1. Install CMake, GCC/G++, make, Python 3 and GDB, then prepare dependencies:
+1. Install CMake 3.24+, GCC/G++, make, Python 3 and GDB, then prepare dependencies:
 
    bash tools/linux/bootstrap.sh
 
-   This downloads Ubuntu development/runtime packages into .deps/root without
-   sudo. It includes Mesa software rendering for machines without a 32-bit GPU
-   driver. The bootstrap uses the Ubuntu repositories and the installed GCC
-   major version. Re-run it after moving the project, then configure in a new
-   build directory (the local loader/library paths are absolute).
+   This downloads native amd64 Ubuntu development/runtime packages into
+   .deps/linux64/root without sudo, including Mesa software rendering.
+   It uses the Ubuntu repositories. The former .deps/root 32-bit dependencies
+   are ignored. Re-run CMake with --fresh after moving the project because
+   local library paths are absolute.
 
    Alternatively, install dependencies system-wide and omit the bootstrap:
 
-   sudo dpkg --add-architecture i386
    sudo apt update
-   sudo apt install build-essential cmake gdb g++-multilib libgl-dev:i386 \
-       libglu1-mesa-dev:i386 libopenal-dev:i386 libx11-dev:i386 \
-       libxxf86vm-dev:i386 libgl1-mesa-dri:i386 libpulse0:i386
+   sudo apt install build-essential cmake gdb libgl-dev libglu1-mesa-dev \
+       libopenal-dev libx11-dev libxxf86vm-dev libgl1-mesa-dri libpulse0
 
 2. From the project root:
 
-   cmake --preset linux-debug
+   cmake --fresh --preset linux-debug
    cmake --build --preset linux-debug
    ./build/linux-debug/bin/FortressDefender
 
    For an optimized build, use the linux-release configure/build presets.
+   Use --fresh for the first configure of an existing build folder to discard
+   cached 32-bit compiler flags. rebuild_Linux.sh does this automatically.
    Launch from a graphical desktop with DISPLAY available (X11 or XWayland).
    The executable locates Build/bin automatically, independent of the current
    working directory. Override with --assets /path/to/assets if needed.
@@ -84,7 +84,7 @@ ready to use; the old Windows/Java asset tools are not needed.
    Camera-only data, string tables and configuration XML use existing exports.
    Textures and WAV sound packs rebuild natively. Unregistered .dae assets and
    spreadsheet layouts still require their legacy exporters and headers.
-   Packages built with the rootless .deps setup retain absolute dependency
+   Packages built with the rootless .deps/linux64 setup retain absolute dependency
    paths to this project. Use system-installed dependencies when building
    packages for other machines.
 
@@ -99,7 +99,8 @@ Controls: left mouse button/drag emulates touch; right mouse button emulates
 another touch. Escape exits. F2 halves game speed; F3 doubles game speed.
 For a bounded smoke run: ./build/linux-debug/bin/FortressDefender --frames 600
 
-The Windows and iPhone projects remain under Projects/Win32 and Projects/IPhone.
+The desktop CMake build supports Linux and Windows x64. The old iPhone
+project remains archived under Projects/IPhone.
 
 AuroraMX sprite editor:
 
@@ -114,12 +115,44 @@ AuroraMX sprite editor:
 
 
 
-Win32 build:
+Windows x64 build (Visual Studio 2022):
 
-1. Set 'JAVA_PATH' and 'VSBuilder_EXE' paths in 'setenv.bat' file.
-2. Set version number in 'config.bat' file.
-3. Call 'rebuild_Win32.bat'
-4. If no errors occure the game shoul be in 'Build' directory.
+1. Install Visual Studio 2022 with Desktop development with C++, the Windows
+   SDK and CMake 3.24+. Configure from the project root:
+
+   cmake --preset windows-x64
+   cmake --build --preset windows-release
+   ctest --preset windows-release
+   build\windows-x64\bin\Release\FortressDefender.exe
+
+   Use windows-debug for Debug. The first configure downloads the pinned
+   OpenAL Soft source; it is compiled for x64 together with the game.
+   The matching OpenAL32.dll is copied beside the executable. Desktop OpenGL
+   uses Windows system libraries; the old x86 emulator DLLs are not used.
+   Existing Build/bin assets are ready to use, with no Java or asset rebuild.
+
+2. Alternatively, open Projects/Win32/FortressDefender.sln in Visual Studio
+   2022 and select Debug|x64 or Release|x64. The solution delegates to the same
+   CMake build, including Irrlicht and SoundLib built from source. The Win32
+   directory and rebuild_Win32.bat filenames are kept for compatibility;
+   only 64-bit compilation is supported. Old .vcproj files are historical.
+
+3. Full source rebuild, tests and ZIP packaging:
+
+   rebuild_Win32.bat
+
+   Use --debug, --incremental or --no-package as needed. The ZIP is written to
+   build/packages/CastleFrenzy_Windows_x64.zip. Extract it and run
+   bin/FortressDefender.exe. CMake packages only the native executable, its
+   matching audio DLL, assets and license; legacy Build/*.dll files are excluded.
+   The Visual C++ 2015-2022 Redistributable (x64) is required on other machines.
+   Saves go under %LOCALAPPDATA%/CastleFrenzy/profiles. --assets overrides the
+   resource directory; --frames limits a smoke run. Escape exits the game.
+
+AuroraGT and bundled 7Zip have been retired. AuroraMX exports sprites; Python
+and CMake create ZIP/resource archives. The legacy Data/Sprites/_make.bat uses
+AuroraMX and requires Node.js 22.12+ and npm. Sprite format references live in
+Tools/AuroraMX/docs/legacy-bsprite-format.txt and legacy-sprcmd.txt.
 
 
 iPhone build:

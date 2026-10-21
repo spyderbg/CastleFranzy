@@ -25,9 +25,7 @@ public:
 	IObject(const CColladaDatabase &database)
 		: Collada(database)
 	{
-		// Extra zeros for 64 bits architecture
-		static char nullId[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-		UID.ptr = &nullId[0] + sizeof(size_t);
+		UID = res::String::Empty();
 	}
 
 	// Same as ISceneNode uid ... should be generalized later

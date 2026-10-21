@@ -1,26 +1,29 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.24)
 
-# The BRES resources contain 32-bit pointers and structure layouts.
-if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
-    include(cmake/linux32.cmake)
-endif()
 project(FortressDefender LANGUAGES C CXX)
 
-if(NOT CMAKE_SYSTEM_NAME STREQUAL "Linux")
-    message(FATAL_ERROR "Use Projects/Win32 for Windows or Projects/IPhone for iOS.")
+if(NOT CMAKE_SYSTEM_NAME STREQUAL "Linux" AND NOT WIN32)
+    message(FATAL_ERROR "The supported CMake build targets 64-bit Linux and Windows.")
 endif()
-if(NOT CMAKE_SIZEOF_VOID_P EQUAL 4)
-    message(FATAL_ERROR "The bundled binary assets require a 32-bit build. Install g++-multilib.")
+if(NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
+    message(FATAL_ERROR "Castle Frenzy requires a 64-bit compiler. Remove cached -m32 flags and configure with --fresh.")
 endif()
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CASTLE_ASSET_DIR "${CMAKE_CURRENT_SOURCE_DIR}/Build/bin" CACHE PATH "Game resource directory")
 
+if(WIN32)
+    add_compile_definitions(WIN32 _WINDOWS NOMINMAX UNICODE _UNICODE _CRT_SECURE_NO_WARNINGS
+        "$<$<CONFIG:Debug>:_DEBUG>")
+    include(cmake/windows64.cmake)
+else()
+    include(cmake/linux64.cmake)
+    find_package(OpenAL REQUIRED)
+    find_package(X11 REQUIRED)
+    find_library(XXF86VM_LIBRARY Xxf86vm REQUIRED)
+endif()
 find_package(OpenGL REQUIRED)
-find_package(OpenAL REQUIRED)
-find_package(X11 REQUIRED)
-find_library(XXF86VM_LIBRARY Xxf86vm REQUIRED)
 
 set(IRR_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/Lib/Irrlicht")
 set(IRR_SRC "${IRR_ROOT}/source/Irrlicht")
@@ -42,7 +45,12 @@ target_include_directories(Irrlicht PUBLIC
     "${IRR_SRC}/particlesystem/include" ${X11_INCLUDE_DIR})
 target_compile_definitions(Irrlicht PUBLIC _IRR_STATIC_LIB_ PRIVATE
     PNG_NO_MMX_CODE PNG_NO_MNG_FEATURES PNG_THREAD_UNSAFE_OK)
-target_link_libraries(Irrlicht PUBLIC OpenGL::GL OpenGL::GLU ${X11_LIBRARIES} ${XXF86VM_LIBRARY} ${CMAKE_DL_LIBS})
+target_link_libraries(Irrlicht PUBLIC OpenGL::GL OpenGL::GLU)
+if(WIN32)
+    target_link_libraries(Irrlicht PUBLIC winmm user32 gdi32 shell32 advapi32)
+else()
+    target_link_libraries(Irrlicht PUBLIC ${X11_LIBRARIES} ${XXF86VM_LIBRARY} ${CMAKE_DL_LIBS})
+endif()
 
 add_executable(BdaeCheck EXCLUDE_FROM_ALL tools/linux/bdae_check.cpp)
 target_link_libraries(BdaeCheck PRIVATE Irrlicht)
@@ -54,23 +62,77 @@ target_include_directories(SoundLib PUBLIC "Lib/SoundLib/include" ${OPENAL_INCLU
 target_link_libraries(SoundLib PUBLIC Irrlicht ${OPENAL_LIBRARY})
 
 file(GLOB_RECURSE GAME_SOURCES CONFIGURE_DEPENDS "Src/*.cpp")
-list(FILTER GAME_SOURCES EXCLUDE REGEX "/PlatformSpecifics/(Win32|IPhone)/|AccelerometerWin32\\.cpp$|MediaPlayerWin32\\.cpp$")
+list(FILTER GAME_SOURCES EXCLUDE REGEX "/PlatformSpecifics/(Linux|Win32|IPhone)/|AccelerometerWin32\\.cpp$|MediaPlayerWin32\\.cpp$")
 add_executable(FortressDefender ${GAME_SOURCES}
     Src/PlatformSpecifics/Win32/CImageLoaderPVR.cpp
     Src/PlatformSpecifics/Win32/PVRTDecompress.cpp)
 target_include_directories(FortressDefender PRIVATE Src)
-target_compile_definitions(FortressDefender PRIVATE OS_LINUX)
+if(WIN32)
+    target_sources(FortressDefender PRIVATE Src/PlatformSpecifics/Win32/main.cpp
+        Src/IO/Accelerometer/AccelerometerWin32.cpp)
+    target_compile_definitions(FortressDefender PRIVATE OS_WIN32)
+    add_custom_command(TARGET FortressDefender POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "$<TARGET_FILE:OpenAL>" "$<TARGET_FILE_DIR:FortressDefender>"
+        VERBATIM)
+    set_property(TARGET FortressDefender PROPERTY VS_DEBUGGER_WORKING_DIRECTORY
+        "$<TARGET_FILE_DIR:FortressDefender>")
+else()
+    target_sources(FortressDefender PRIVATE Src/PlatformSpecifics/Linux/main.cpp)
+    target_compile_definitions(FortressDefender PRIVATE OS_LINUX)
+endif()
 target_link_libraries(FortressDefender PRIVATE SoundLib)
 set_target_properties(FortressDefender PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 # The default asset location works regardless of the process working directory.
 target_compile_definitions(FortressDefender PRIVATE CASTLE_ASSET_DIR="${CASTLE_ASSET_DIR}")
-if(EXISTS "${CASTLE_DEPS}/usr/lib/i386-linux-gnu/dri")
+if(EXISTS "${CASTLE_DEPS}/usr/lib/x86_64-linux-gnu/dri")
     target_compile_definitions(FortressDefender PRIVATE
-        CASTLE_LOCAL_DRI_DIR="${CASTLE_DEPS}/usr/lib/i386-linux-gnu/dri"
-        CASTLE_LOCAL_LIBRARY_DIR="${CASTLE_DEPS}/usr/lib/i386-linux-gnu:${CASTLE_DEPS}/usr/lib/i386-linux-gnu/pulseaudio:${CASTLE_DEPS}/usr/lib32")
+        CASTLE_LOCAL_DRI_DIR="${CASTLE_DEPS}/usr/lib/x86_64-linux-gnu/dri"
+        CASTLE_LOCAL_LIBRARY_DIR="${CASTLE_DEPS}/usr/lib/x86_64-linux-gnu:${CASTLE_DEPS}/usr/lib/x86_64-linux-gnu/pulseaudio")
 endif()
 
 add_custom_target(run
     COMMAND "$<TARGET_FILE:FortressDefender>"
     DEPENDS FortressDefender WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Build"
     USES_TERMINAL)
+
+include(CTest)
+if(BUILD_TESTING)
+    add_executable(Resource64Check tests/linux/resource64.cpp
+        "${IRR_ROOT}/tools/ResFile/src/resFile.cpp")
+    target_include_directories(Resource64Check PRIVATE "${IRR_ROOT}/tools/ResFile/include")
+    add_test(NAME resource64 COMMAND Resource64Check)
+
+    add_executable(PvrCodecCheck tests/linux/pvr_codec.cpp "${IRR_SRC}/PVRT/PVRTDecompress.cpp")
+    target_include_directories(PvrCodecCheck PRIVATE "${IRR_SRC}/PVRT" "${IRR_SRC}" "${IRR_ROOT}/include")
+    add_test(NAME pvr_codec64 COMMAND PvrCodecCheck)
+
+    add_executable(GamePvrCodecCheck tests/linux/pvr_codec.cpp
+        Src/PlatformSpecifics/Win32/PVRTDecompress.cpp)
+    target_include_directories(GamePvrCodecCheck PRIVATE Src/PlatformSpecifics/Win32)
+    target_compile_definitions(GamePvrCodecCheck PRIVATE GAME_CODEC)
+    add_test(NAME game_pvr_codec64 COMMAND GamePvrCodecCheck)
+endif()
+
+if(WIN32)
+    install(TARGETS FortressDefender OpenAL RUNTIME DESTINATION bin)
+    install(DIRECTORY "${CASTLE_ASSET_DIR}/" DESTINATION assets)
+    # OpenAL Soft is distributed under the LGPL; preserve its license and source URL.
+    install(FILES "${openal_soft_SOURCE_DIR}/COPYING" DESTINATION licenses RENAME OpenAL-Soft.txt)
+    install(FILES tools/windows/README.txt DESTINATION .)
+    set(CPACK_GENERATOR ZIP)
+    set(CPACK_PACKAGE_FILE_NAME CastleFrenzy_Windows_x64)
+    include(CPack)
+endif()
+
+if(WIN32 AND MINGW)
+    foreach(target FortressDefender PvrDecode BdaeCheck Resource64Check PvrCodecCheck GamePvrCodecCheck)
+        if(TARGET ${target})
+            add_custom_command(TARGET ${target} POST_BUILD
+                COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CASTLE_MINGW_RUNTIME_DLLS}
+                    "$<TARGET_FILE_DIR:${target}>"
+                VERBATIM)
+        endif()
+    endforeach()
+    install(FILES ${CASTLE_MINGW_RUNTIME_DLLS} DESTINATION bin)
+endif()

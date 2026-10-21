@@ -33,9 +33,12 @@ copy "%PROJECT_PATH%%BUILD_PATH%%BUILD_1%\%APP_NAME%.zip" %PROJECT_PATH%%ARCHIVE
 copy "%PROJECT_PATH%%BUILD_PATH%%BUILD_2%\%APP_NAME%.zip" %PROJECT_PATH%%ARCHIVE_2%.zip
 copy "%PROJECT_PATH%%BUILD_PATH%%BUILD_3%\%APP_NAME%.zip" %PROJECT_PATH%%ARCHIVE_3%.zip
 
-%SEVEN_ZIP% a -tzip -scsWIN -mx=1 %PROJECT_PATH%%ARCHIVE_1%.dSYM.zip "%PROJECT_PATH%%BUILD_PATH%%BUILD_1%\%APP_NAME%.app.dSYM"
-%SEVEN_ZIP% a -tzip -scsWIN -mx=1 %PROJECT_PATH%%ARCHIVE_2%.dSYM.zip "%PROJECT_PATH%%BUILD_PATH%%BUILD_2%\%APP_NAME%.app.dSYM"
-%SEVEN_ZIP% a -tzip -scsWIN -mx=1 %PROJECT_PATH%%ARCHIVE_3%.dSYM.zip "%PROJECT_PATH%%BUILD_PATH%%BUILD_3%\%APP_NAME%.app.dSYM"
+python "%PROJECT_TOOLS_PATH%\zip_directory.py" "%PROJECT_PATH%%ARCHIVE_1%.dSYM.zip" "%PROJECT_PATH%%BUILD_PATH%%BUILD_1%\%APP_NAME%.app.dSYM" --include-root
+if errorlevel 1 exit /b 1
+python "%PROJECT_TOOLS_PATH%\zip_directory.py" "%PROJECT_PATH%%ARCHIVE_2%.dSYM.zip" "%PROJECT_PATH%%BUILD_PATH%%BUILD_2%\%APP_NAME%.app.dSYM" --include-root
+if errorlevel 1 exit /b 1
+python "%PROJECT_TOOLS_PATH%\zip_directory.py" "%PROJECT_PATH%%ARCHIVE_3%.dSYM.zip" "%PROJECT_PATH%%BUILD_PATH%%BUILD_3%\%APP_NAME%.app.dSYM" --include-root
+if errorlevel 1 exit /b 1
 
 echo.
 echo ///////////////////////////////////////

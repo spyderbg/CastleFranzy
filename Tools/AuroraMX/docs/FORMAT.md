@@ -1,6 +1,6 @@
 # Castle Frenzy sprite format
 
-The authoritative inputs are the original `.sprite` documents, `Data/Sprites/GP_export.fft`, `Tools/AuroraGT/bsprite_format.txt`, and the game's `ASprite::Load` implementation. AuroraMX implements the GP_Data export independently; it never reads an existing `.bsprite` to generate a new one.
+The authoritative inputs are the original `.sprite` documents, `Data/Sprites/GP_export.fft`, `legacy-bsprite-format.txt` in this directory, and the game's `ASprite::Load` implementation. AuroraMX implements the GP_Data export independently; it never reads an existing `.bsprite` to generate a new one.
 
 The textual format stores image records, ordered modules, ordered frames containing collision rectangles and module/hyperframe placements, and ordered animations containing timed frame placements. Source IDs remain stable when rows move; export resolves IDs to the current zero-based row indices. Module image references are image **indices**, not image IDs. Legacy files include nonzero image IDs even when all modules reference image index zero.
 

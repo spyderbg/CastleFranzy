@@ -69,7 +69,7 @@ printf '\nGenerate project version file\n'
 version=$(python3 "$project_dir/tools/linux/build_resources.py" --version)
 printf 'Version: %s; textures: %s\n' "$version" "$RESOURCE_TEXTURE_FORMAT"
 
-cmake --preset "$preset" -DCASTLE_ASSET_DIR="$asset_dir"
+cmake --fresh --preset "$preset" -DCASTLE_ASSET_DIR="$asset_dir"
 
 printf '\nExport sprites with AuroraMX\n'
 auroramx_dir="$project_dir/Tools/AuroraMX"

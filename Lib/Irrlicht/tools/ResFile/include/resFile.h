@@ -2,6 +2,7 @@
 #define __RESFILE_H_INCLUDED__
 
 #include "access.h"
+#include "resPointer.h"
 #include <string.h>
 
 namespace irr
@@ -11,10 +12,10 @@ namespace res
 
 template<typename T>
 struct Data {
-	T* ptr;
+	res::Ptr<T> ptr;
 	
 	size_t GetSize() const {
-		size_t s = *(reinterpret_cast<const size_t*>(ptr) - 1);
+		size_t s = *(reinterpret_cast<const std::uint32_t*>(static_cast<const T*>(ptr)) - 1);
 		return s;
 	}
 
@@ -25,6 +26,7 @@ struct Data {
 struct String
 	: public Data<char>
 {
+    static String Empty();
 	bool
 	operator ==(const String &str2) const
 	{
@@ -40,7 +42,7 @@ struct String
 
 template<typename T>
 struct Buffer {
-	size_t size;
+	std::uint32_t size;
 	T data[1];
 
 	T& operator[](int idx) {
@@ -59,9 +61,9 @@ struct FileHeaderData {
 	unsigned int sizeOfFile;
 	unsigned int numOffsets;
 	
-	res::Access<res::Access<res::Access<int> > > offsets;
-	res::Access<int> stringData;
-	res::Access<char> data;
+	res::Ptr<std::uint32_t> offsets;
+	res::Ptr<int> stringData;
+	res::Ptr<char> data;
 };
 
 struct NodeData
@@ -71,8 +73,8 @@ struct NodeData
 	
 	struct ResNodeDicData {
 		int ref;
-		res::Access<const char> name;
-		res::Access<char> ptr;
+		res::Ptr<const char> name;
+		res::Ptr<char> ptr;
 	} data[1];
 };
 
@@ -93,40 +95,22 @@ public:
 };
 
 
+static_assert(sizeof(FileHeaderData) == 32, "BRES header layout changed");
+
 struct File : public res::Access<res::FileHeaderData>
 {
-	File():
-		IsValid(false),
-		OffsetTable(NULL)
-	{
-
-	}
-
-	File(void* ptr, void* offsetTable = NULL) : 
-		res::Access<res::FileHeaderData>(ptr),
-		IsValid(false),
-		OffsetTable(offsetTable)
-	{
-		if(ptr)
-		{
-			IsValid = (Init() == 0);
-		}
-	}
-
-	int Init(void *ptr)
-	{
-		*this = File(ptr,NULL);
-		return IsValid != 1;
-	}
-
-	int Init(FileReader *pFile);
-
-	int Init();
-
-	bool isValid() const { return IsValid; }
-protected:
-	bool IsValid;
-	void *OffsetTable;
+    File() : res::Access<res::FileHeaderData>(NULL), IsValid(false) {}
+    explicit File(void* buffer) : res::Access<res::FileHeaderData>(NULL), IsValid(false) {
+        if (buffer) Init(buffer);
+    }
+    ~File();
+    File(const File&) = delete;
+    File& operator=(const File&) = delete;
+    int Init(void* buffer);
+    int Init(FileReader* file);
+    bool isValid() const { return IsValid; }
+private:
+    bool IsValid;
 };
 
 }; // namespace res
