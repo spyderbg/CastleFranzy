@@ -1,0 +1,231 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Hydra/hydra.bdae",
+  "source_sha256": "1c896c380f4014cab49fcd456d6fe54c92359e7c0acc113a41b4c454f904da0b",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Hydra/hydra_smooth.blend",
+  "meshes": [
+    {
+      "id": "hydra-mesh",
+      "name": "hydra",
+      "method": "Catmull-Clark",
+      "original_vertices": 130,
+      "vertices": 2026,
+      "original_triangles": 166,
+      "triangles": 3888
+    }
+  ],
+  "clips": [
+    {
+      "name": "argue",
+      "start_ms": 17833,
+      "end_ms": 22200
+    },
+    {
+      "name": "attack_fail",
+      "start_ms": 15733,
+      "end_ms": 16700
+    },
+    {
+      "name": "attack_idle",
+      "start_ms": 2666,
+      "end_ms": 5199
+    },
+    {
+      "name": "attack_idle_to_idle",
+      "start_ms": 5199,
+      "end_ms": 6000
+    },
+    {
+      "name": "attack_success",
+      "start_ms": 14199,
+      "end_ms": 15000
+    },
+    {
+      "name": "down",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "name": "feed_end",
+      "start_ms": 13000,
+      "end_ms": 14000
+    },
+    {
+      "name": "feed_end_low",
+      "start_ms": 35033,
+      "end_ms": 36000
+    },
+    {
+      "name": "feed_from_hand",
+      "start_ms": 16700,
+      "end_ms": 17799
+    },
+    {
+      "name": "feed_hand_attack",
+      "start_ms": 37333,
+      "end_ms": 37599
+    },
+    {
+      "name": "feed_hand_end_side",
+      "start_ms": 38433,
+      "end_ms": 38933
+    },
+    {
+      "name": "feed_hand_fail",
+      "start_ms": 37900,
+      "end_ms": 38400
+    },
+    {
+      "name": "feed_hand_need_help",
+      "start_ms": 40633,
+      "end_ms": 41166
+    },
+    {
+      "name": "feed_help_end",
+      "start_ms": 43799,
+      "end_ms": 44666
+    },
+    {
+      "name": "feed_help_idle",
+      "start_ms": 42533,
+      "end_ms": 43766
+    },
+    {
+      "name": "feed_help_start",
+      "start_ms": 42200,
+      "end_ms": 42500
+    },
+    {
+      "name": "feed_idle",
+      "start_ms": 11333,
+      "end_ms": 12966
+    },
+    {
+      "name": "feed_idle_low",
+      "start_ms": 33766,
+      "end_ms": 35000
+    },
+    {
+      "name": "feed_need_help_end",
+      "start_ms": 41200,
+      "end_ms": 42166
+    },
+    {
+      "name": "feed_need_help_idle",
+      "start_ms": 38966,
+      "end_ms": 40599
+    },
+    {
+      "name": "feed_start",
+      "start_ms": 10699,
+      "end_ms": 11333
+    },
+    {
+      "name": "feed_straight",
+      "start_ms": 36033,
+      "end_ms": 37000
+    },
+    {
+      "name": "idle",
+      "start_ms": 6000,
+      "end_ms": 10666
+    },
+    {
+      "name": "idle_low",
+      "start_ms": 29066,
+      "end_ms": 33733
+    },
+    {
+      "name": "idle_low_to_idle",
+      "start_ms": 44700,
+      "end_ms": 46000
+    },
+    {
+      "name": "idle_to_attack_idle",
+      "start_ms": 2000,
+      "end_ms": 2666
+    },
+    {
+      "name": "plaing",
+      "start_ms": 22200,
+      "end_ms": 27000
+    },
+    {
+      "name": "playing_left",
+      "start_ms": 46033,
+      "end_ms": 50833
+    },
+    {
+      "name": "playing_right",
+      "start_ms": 50866,
+      "end_ms": 55666
+    },
+    {
+      "name": "refuse",
+      "start_ms": 55700,
+      "end_ms": 57366
+    },
+    {
+      "name": "up",
+      "start_ms": 0,
+      "end_ms": 2000
+    },
+    {
+      "name": "up_low",
+      "start_ms": 27033,
+      "end_ms": 29033
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 14533,
+      "names": [
+        "grab"
+      ]
+    },
+    {
+      "time_ms": 14600,
+      "names": [
+        "attack"
+      ]
+    },
+    {
+      "time_ms": 14933,
+      "names": [
+        "drop"
+      ]
+    },
+    {
+      "time_ms": 16866,
+      "names": [
+        "feed"
+      ]
+    },
+    {
+      "time_ms": 25966,
+      "names": [
+        "eat_lightball"
+      ]
+    },
+    {
+      "time_ms": 43900,
+      "names": [
+        "help_done"
+      ]
+    }
+  ],
+  "verification": {
+    "skin_samples": 1750,
+    "max_skin_error": 4.921534426368835e-05,
+    "skin_vertices_checked": 2026
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

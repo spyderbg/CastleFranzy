@@ -1,0 +1,38 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Dark_elf/arrow.bdae",
+  "source_sha256": "a03486f16bdd7e272b5c0a0f20cf05ad23993764a44fa043ab9e0abe7501c28d",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Dark_elf/arrow_smooth.blend",
+  "meshes": [
+    {
+      "id": "arrow-mesh",
+      "name": "arrow",
+      "method": "Simple",
+      "original_vertices": 3,
+      "vertices": 19,
+      "original_triangles": 1,
+      "triangles": 24
+    }
+  ],
+  "clips": [
+    {
+      "name": "AUTO_Current_Range",
+      "start_ms": -433,
+      "end_ms": 2000
+    }
+  ],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

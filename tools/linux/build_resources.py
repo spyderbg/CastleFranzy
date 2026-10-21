@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Prepare Linux resources with AuroraMX sprites and editable textures.
+"""Prepare Linux resources with AuroraMX sprites, Blender models and editable textures.
 
 rebuild_Linux.sh supplies freshly compiled sprite data with --sprite-exports.
-Collada .bdae and string/config exports are reused. Source PNGs override images.
+Registered Blender exports arrive through --scene-exports. Other .bdae models
+and string/config exports are reused. Source PNGs override legacy images.
 """
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -94,7 +96,7 @@ def rebuild_audio(stage):
     print(f"Rebuilt sound packs: {len(names)} WAV files")
 
 
-def build(output, texture_format, decoder, sprite_exports=None):
+def build(output, texture_format, decoder, sprite_exports=None, scene_exports=None):
     seed = ROOT / "Build/bin"
     output = output.resolve()
     if not output.is_relative_to(ROOT / "build"):
@@ -128,6 +130,25 @@ def build(output, texture_format, decoder, sprite_exports=None):
                     target.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy2(header, target)
         copy_exports(ROOT / "Data/Scenes/bin", stage / "Scenes", IMAGE_EXTENSIONS | {".bdae", ".ifl"})
+        scene_files = set()
+        model_assets = []
+        if scene_exports:
+            index = json.loads((scene_exports / "blender-models.json").read_text())
+            if index.get("version") != 1 or index.get("exporter") != "Blender BDAE":
+                raise ValueError("Invalid Blender export manifest")
+            for relative, expected in index["files"].items():
+                source = (scene_exports / relative).resolve()
+                target = (stage / "Scenes" / relative).resolve()
+                if not source.is_relative_to(scene_exports.resolve()) or not target.is_relative_to(stage / "Scenes"):
+                    raise ValueError("Blender export path leaves the scene directory")
+                if source.suffix.lower() not in {".bdae", ".png", ".tga"}:
+                    raise ValueError("Unsupported Blender export file")
+                if hashlib.sha256(source.read_bytes()).hexdigest() != expected:
+                    raise ValueError(f"Blender export changed after validation: {relative}")
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(source, target)
+                scene_files.add(Path("Scenes") / relative)
+            model_assets = index["assets"]
         for path in (ROOT / "Data/Fonts").glob("*.txt"):
             (stage / "Fonts").mkdir(exist_ok=True)
             shutil.copy2(path, stage / "Fonts" / path.name)
@@ -139,7 +160,8 @@ def build(output, texture_format, decoder, sprite_exports=None):
                 if "bin" not in path.relative_to(source).parts:
                     target = stage / group / path.relative_to(source)
                     target.parent.mkdir(parents=True, exist_ok=True)
-                    shutil.copy2(path, target)
+                    if target.relative_to(stage) not in scene_files:
+                        shutil.copy2(path, target)
 
         groups = {}
         for path in sorted(stage.rglob("*")):
@@ -159,7 +181,8 @@ def build(output, texture_format, decoder, sprite_exports=None):
             # Preserve exported PVR dimensions, alpha and orientation exactly.
             # Editable source PNGs take precedence, so a new PNG atlas needs no
             # PVR tool. Other images use their source TGA/BMP where available.
-            source = source_image(relative, ".png") or images.get(".png") or images.get(".pvr")
+            native = next((p for e, p in images.items() if relative.with_suffix(e) in scene_files), None)
+            source = native or source_image(relative, ".png") or images.get(".png") or images.get(".pvr")
             if not source:
                 source = source_image(relative, ".tga") or images.get(".tga") or images.get(".bmp")
             image = png_image(source, decoder)
@@ -181,6 +204,8 @@ def build(output, texture_format, decoder, sprite_exports=None):
         rebuild_audio(stage)
         manifest = {"version": version(), "texture_format": texture_format,
                     "sprite_exporter": "AuroraMX" if sprite_exports else "existing exports",
+                    "model_exporter": "Blender BDAE" if scene_exports else "existing exports",
+                    "blend_models": [{k: a[k] for k in ("blend", "output", "vertices", "triangles", "clips")} for a in model_assets],
                     "png_textures": converted, "files": sorted(str(p.relative_to(stage))
                     for p in stage.rglob("*") if p.is_file())}
         (stage / MANIFEST).write_text(json.dumps(manifest, indent=2) + "\n")
@@ -188,8 +213,9 @@ def build(output, texture_format, decoder, sprite_exports=None):
             shutil.rmtree(output)
         shutil.move(str(stage), output)
     print(f"Resources ready: {output} ({len(manifest['files'])} files, {converted} PNG textures)")
-    print("Rebuilt sprites with AuroraMX; reused .bdae and string/config exports; rebuilt textures and sound packs."
-          if sprite_exports else "Reused exported .bsprite/.bdae files and string/config exports; rebuilt textures and sound packs.")
+    print(f"Sprites: {'AuroraMX' if sprite_exports else 'existing exports'}; "
+          f"models: {len(model_assets)} Blender export(s), other models from existing exports; "
+          "reused string/config exports; rebuilt textures and sound packs.")
 
 
 def package(output, binary, texture_format):
@@ -226,6 +252,7 @@ def main():
     parser.add_argument("--texture-format", choices=("png", "pvr"), default="png")
     parser.add_argument("--pvr-decoder", type=Path)
     parser.add_argument("--sprite-exports", type=Path, help="AuroraMX batch output bin/ directory")
+    parser.add_argument("--scene-exports", type=Path, help="Validated Blender model export directory")
     parser.add_argument("--package", type=Path, metavar="EXECUTABLE")
     args = parser.parse_args()
     if args.version:
@@ -235,7 +262,7 @@ def main():
     elif args.package:
         package(args.output, args.package, args.texture_format)
     else:
-        build(args.output, args.texture_format, args.pvr_decoder, args.sprite_exports)
+        build(args.output, args.texture_format, args.pvr_decoder, args.sprite_exports, args.scene_exports)
 
 
 if __name__ == "__main__":

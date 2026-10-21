@@ -1,0 +1,23 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Goblin/goblin_edit.blend",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Goblin/goblin_smooth.blend",
+  "before": {
+    "vertices": 167,
+    "edges": 435,
+    "faces": 280,
+    "triangles": 280
+  },
+  "after": {
+    "vertices": 3432,
+    "edges": 6780,
+    "faces": 3360,
+    "triangles": 6720
+  },
+  "subdivision_levels_applied": 2,
+  "relaxed_body_edges": 166,
+  "protected_weapon_edges": 29,
+  "actions_preserved": 13,
+  "animation_sha256": "7499bb700a0420a288fa808bb9de6ecb17dca026306066dbe1a4d8860cd29640",
+  "bones": 25,
+  "weighted_joints": 23
+}

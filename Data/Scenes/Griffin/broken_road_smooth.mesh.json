@@ -1,0 +1,61 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Griffin/broken_road.bdae",
+  "source_sha256": "036d2335c1576680955f321c972a52293e40bee8756d7f1e846828d9c5cb5687",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Griffin/broken_road_smooth.blend",
+  "meshes": [
+    {
+      "id": "Plane01-mesh",
+      "name": "Plane01",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane02-mesh",
+      "name": "Plane02",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane03-mesh",
+      "name": "Plane03",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    }
+  ],
+  "clips": [
+    {
+      "name": "broken01",
+      "start_ms": 0,
+      "end_ms": 159
+    },
+    {
+      "name": "broken02",
+      "start_ms": 159,
+      "end_ms": 400
+    }
+  ],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

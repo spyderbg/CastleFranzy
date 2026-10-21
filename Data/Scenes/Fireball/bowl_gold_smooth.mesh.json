@@ -1,0 +1,32 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Fireball/bowl_gold.bdae",
+  "source_sha256": "737e2639ee106074b32e81728d7ead2676c90f604e1ac7301f3d28776d56b241",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Fireball/bowl_gold_smooth.blend",
+  "meshes": [
+    {
+      "id": "GeoSphere01-mesh",
+      "name": "GeoSphere01",
+      "method": "Simple",
+      "original_vertices": 89,
+      "vertices": 1066,
+      "original_triangles": 74,
+      "triangles": 1776
+    }
+  ],
+  "clips": [],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

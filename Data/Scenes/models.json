@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "blend": "Castle/castle_smooth.blend",
+      "template": "bin/Castle/castle.bdae",
+      "output": "Castle/castle.bdae"
+    },
+    {
+      "blend": "Dark_elf/arrow_smooth.blend",
+      "template": "bin/Dark_elf/arrow.bdae",
+      "output": "Dark_elf/arrow.bdae"
+    },
+    {
+      "blend": "Dark_elf/elf_smooth.blend",
+      "template": "bin/Dark_elf/elf.bdae",
+      "output": "Dark_elf/elf.bdae"
+    },
+    {
+      "blend": "Fireball/bowl_gold_smooth.blend",
+      "template": "bin/Fireball/bowl_gold.bdae",
+      "output": "Fireball/bowl_gold.bdae"
+    },
+    {
+      "blend": "Fireball/bowl_ice_smooth.blend",
+      "template": "bin/Fireball/bowl_ice.bdae",
+      "output": "Fireball/bowl_ice.bdae"
+    },
+    {
+      "blend": "Fireball/burned_ground_smooth.blend",
+      "template": "bin/Fireball/burned_ground.bdae",
+      "output": "Fireball/burned_ground.bdae"
+    },
+    {
+      "blend": "Fireball/fireball_light_smooth.blend",
+      "template": "bin/Fireball/fireball_light.bdae",
+      "output": "Fireball/fireball_light.bdae"
+    },
+    {
+      "blend": "Fireball/ice_smooth.blend",
+      "template": "bin/Fireball/ice.bdae",
+      "output": "Fireball/ice.bdae"
+    },
+    {
+      "blend": "Gates/arch_smooth.blend",
+      "template": "bin/Gates/arch.bdae",
+      "output": "Gates/arch.bdae"
+    },
+    {
+      "blend": "Gates/gate_01_smooth.blend",
+      "template": "bin/Gates/gate_01.bdae",
+      "output": "Gates/gate_01.bdae"
+    },
+    {
+      "blend": "Gates/gate_02_smooth.blend",
+      "template": "bin/Gates/gate_02.bdae",
+      "output": "Gates/gate_02.bdae"
+    },
+    {
+      "blend": "Gates/gate_03_smooth.blend",
+      "template": "bin/Gates/gate_03.bdae",
+      "output": "Gates/gate_03.bdae"
+    },
+    {
+      "blend": "Gates/gate_04_smooth.blend",
+      "template": "bin/Gates/gate_04.bdae",
+      "output": "Gates/gate_04.bdae"
+    },
+    {
+      "blend": "Goblin/goblin_smooth.blend",
+      "template": "bin/Goblin/goblin.bdae",
+      "output": "Goblin/goblin.bdae",
+      "rig": "Goblin_Rig"
+    },
+    {
+      "blend": "Goblin/shadow_smooth.blend",
+      "template": "bin/Goblin/shadow.bdae",
+      "output": "Goblin/shadow.bdae"
+    },
+    {
+      "blend": "Goblin_bomb/bomb_smooth.blend",
+      "template": "bin/Goblin_bomb/bomb.bdae",
+      "output": "Goblin_bomb/bomb.bdae"
+    },
+    {
+      "blend": "Goblin_bomb/goblin_bomb_smooth.blend",
+      "template": "bin/Goblin_bomb/goblin_bomb.bdae",
+      "output": "Goblin_bomb/goblin_bomb.bdae"
+    },
+    {
+      "blend": "Griffin/broken_road_smooth.blend",
+      "template": "bin/Griffin/broken_road.bdae",
+      "output": "Griffin/broken_road.bdae"
+    },
+    {
+      "blend": "Griffin/griffin_smooth.blend",
+      "template": "bin/Griffin/griffin.bdae",
+      "output": "Griffin/griffin.bdae"
+    },
+    {
+      "blend": "Griffin/griffin_wave_smooth.blend",
+      "template": "bin/Griffin/griffin_wave.bdae",
+      "output": "Griffin/griffin_wave.bdae"
+    },
+    {
+      "blend": "Hydra/hydra_smooth.blend",
+      "template": "bin/Hydra/hydra.bdae",
+      "output": "Hydra/hydra.bdae"
+    },
+    {
+      "blend": "Hydra/hydra_pool_smooth.blend",
+      "template": "bin/Hydra/hydra_pool.bdae",
+      "output": "Hydra/hydra_pool.bdae"
+    },
+    {
+      "blend": "MenuShop/shop_floor_smooth.blend",
+      "template": "bin/MenuShop/shop_floor.bdae",
+      "output": "MenuShop/shop_floor.bdae"
+    },
+    {
+      "blend": "Shaman/shaman_smooth.blend",
+      "template": "bin/Shaman/shaman.bdae",
+      "output": "Shaman/shaman.bdae"
+    },
+    {
+      "blend": "Shaman/wave_blast_smooth.blend",
+      "template": "bin/Shaman/wave_blast.bdae",
+      "output": "Shaman/wave_blast.bdae"
+    },
+    {
+      "blend": "Skeleton/skeleton_smooth.blend",
+      "template": "bin/Skeleton/skeleton.bdae",
+      "output": "Skeleton/skeleton.bdae"
+    },
+    {
+      "blend": "Spells/boulder_smooth.blend",
+      "template": "bin/Spells/boulder.bdae",
+      "output": "Spells/boulder.bdae"
+    },
+    {
+      "blend": "Spells/spell_shield_smooth.blend",
+      "template": "bin/Spells/spell_shield.bdae",
+      "output": "Spells/spell_shield.bdae"
+    },
+    {
+      "blend": "Spells/strike_plane_smooth.blend",
+      "template": "bin/Spells/strike_plane.bdae",
+      "output": "Spells/strike_plane.bdae"
+    },
+    {
+      "blend": "Tornado/tornado_smooth.blend",
+      "template": "bin/Tornado/tornado.bdae",
+      "output": "Tornado/tornado.bdae"
+    },
+    {
+      "blend": "Troll/troll_smooth.blend",
+      "template": "bin/Troll/troll.bdae",
+      "output": "Troll/troll.bdae"
+    },
+    {
+      "blend": "Wild_boar/boar_smooth.blend",
+      "template": "bin/Wild_boar/boar.bdae",
+      "output": "Wild_boar/boar.bdae"
+    },
+    {
+      "blend": "Wild_boar/boar_rider_smooth.blend",
+      "template": "bin/Wild_boar/boar_rider.bdae",
+      "output": "Wild_boar/boar_rider.bdae"
+    }
+  ]
+}

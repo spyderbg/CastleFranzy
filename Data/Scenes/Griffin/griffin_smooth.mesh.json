@@ -1,0 +1,128 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Griffin/griffin.bdae",
+  "source_sha256": "007ab26c9e9444b2f860155488c48e5b8370848f7bc300be7fd12e6142a73aac",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Griffin/griffin_smooth.blend",
+  "meshes": [
+    {
+      "id": "base00-mesh",
+      "name": "base00",
+      "method": "Simple",
+      "original_vertices": 139,
+      "vertices": 1440,
+      "original_triangles": 95,
+      "triangles": 2280
+    },
+    {
+      "id": "base01-mesh",
+      "name": "base01",
+      "method": "Simple",
+      "original_vertices": 139,
+      "vertices": 1440,
+      "original_triangles": 95,
+      "triangles": 2280
+    },
+    {
+      "id": "base02-mesh",
+      "name": "base02",
+      "method": "Simple",
+      "original_vertices": 148,
+      "vertices": 1497,
+      "original_triangles": 98,
+      "triangles": 2352
+    },
+    {
+      "id": "griffin-mesh",
+      "name": "griffin",
+      "method": "Catmull-Clark",
+      "original_vertices": 574,
+      "vertices": 5138,
+      "original_triangles": 428,
+      "triangles": 10272
+    }
+  ],
+  "clips": [
+    {
+      "name": "activate",
+      "start_ms": 0,
+      "end_ms": 2666
+    },
+    {
+      "name": "active",
+      "start_ms": 2666,
+      "end_ms": 2666
+    },
+    {
+      "name": "argue",
+      "start_ms": 6666,
+      "end_ms": 11000
+    },
+    {
+      "name": "fireball",
+      "start_ms": 15033,
+      "end_ms": 18333
+    },
+    {
+      "name": "fly",
+      "start_ms": 4333,
+      "end_ms": 5000
+    },
+    {
+      "name": "fly_off",
+      "start_ms": 3599,
+      "end_ms": 4333
+    },
+    {
+      "name": "freeze",
+      "start_ms": 18366,
+      "end_ms": 20000
+    },
+    {
+      "name": "freeze_to_idle",
+      "start_ms": 20033,
+      "end_ms": 20500
+    },
+    {
+      "name": "idle",
+      "start_ms": 5033,
+      "end_ms": 6666
+    },
+    {
+      "name": "intro",
+      "start_ms": 11033,
+      "end_ms": 15000
+    },
+    {
+      "name": "unactivate",
+      "start_ms": 2700,
+      "end_ms": 3566
+    },
+    {
+      "name": "unactive",
+      "start_ms": 0,
+      "end_ms": 0
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 1000,
+      "names": [
+        "scream"
+      ]
+    }
+  ],
+  "verification": {
+    "skin_samples": 616,
+    "max_skin_error": 7.28858816524227e-06,
+    "skin_vertices_checked": 5138
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

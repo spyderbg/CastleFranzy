@@ -1,0 +1,47 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Griffin/griffin_wave.bdae",
+  "source_sha256": "86cf63db29016c87e5f2abdce2a3fd6db39d69dd82015370d047d123b0e40c7d",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Griffin/griffin_wave_smooth.blend",
+  "meshes": [
+    {
+      "id": "smoke01_light-mesh",
+      "name": "smoke01_light",
+      "method": "Simple",
+      "original_vertices": 40,
+      "vertices": 468,
+      "original_triangles": 32,
+      "triangles": 768
+    },
+    {
+      "id": "smoke02_light-mesh",
+      "name": "smoke02_light",
+      "method": "Simple",
+      "original_vertices": 40,
+      "vertices": 468,
+      "original_triangles": 32,
+      "triangles": 768
+    }
+  ],
+  "clips": [
+    {
+      "name": "blast",
+      "start_ms": 0,
+      "end_ms": 833
+    }
+  ],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

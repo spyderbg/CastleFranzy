@@ -1,0 +1,443 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Castle/castle.bdae",
+  "source_sha256": "82a6d987682e200b913a7629e7eb36d0f1ddf81926c03c213a53618cf977d742",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Castle/castle_smooth.blend",
+  "meshes": [
+    {
+      "id": "Object01-mesh",
+      "name": "Object01",
+      "method": "Simple",
+      "original_vertices": 22,
+      "vertices": 203,
+      "original_triangles": 13,
+      "triangles": 312
+    },
+    {
+      "id": "Object02-mesh",
+      "name": "Object02",
+      "method": "Simple",
+      "original_vertices": 13,
+      "vertices": 179,
+      "original_triangles": 13,
+      "triangles": 312
+    },
+    {
+      "id": "Object04-mesh",
+      "name": "Object04",
+      "method": "Simple",
+      "original_vertices": 14,
+      "vertices": 173,
+      "original_triangles": 12,
+      "triangles": 288
+    },
+    {
+      "id": "Object05-mesh",
+      "name": "Object05",
+      "method": "Simple",
+      "original_vertices": 32,
+      "vertices": 435,
+      "original_triangles": 31,
+      "triangles": 744
+    },
+    {
+      "id": "Object06-mesh",
+      "name": "Object06",
+      "method": "Simple",
+      "original_vertices": 25,
+      "vertices": 397,
+      "original_triangles": 30,
+      "triangles": 720
+    },
+    {
+      "id": "Object08-mesh",
+      "name": "Object08",
+      "method": "Simple",
+      "original_vertices": 62,
+      "vertices": 776,
+      "original_triangles": 54,
+      "triangles": 1296
+    },
+    {
+      "id": "Object09-mesh",
+      "name": "Object09",
+      "method": "Simple",
+      "original_vertices": 39,
+      "vertices": 610,
+      "original_triangles": 46,
+      "triangles": 1104
+    },
+    {
+      "id": "Object11-mesh",
+      "name": "Object11",
+      "method": "Simple",
+      "original_vertices": 44,
+      "vertices": 511,
+      "original_triangles": 35,
+      "triangles": 840
+    },
+    {
+      "id": "Plane01-mesh",
+      "name": "Plane01",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane01-mesh1",
+      "name": "Plane01",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane01-mesh2",
+      "name": "Plane01",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "arch3D-mesh",
+      "name": "arch3D",
+      "method": "Simple",
+      "original_vertices": 70,
+      "vertices": 658,
+      "original_triangles": 42,
+      "triangles": 1008
+    },
+    {
+      "id": "background-mesh",
+      "name": "background",
+      "method": "Simple",
+      "original_vertices": 8,
+      "vertices": 89,
+      "original_triangles": 6,
+      "triangles": 144
+    },
+    {
+      "id": "chains-mesh",
+      "name": "chains",
+      "method": "Simple",
+      "original_vertices": 8,
+      "vertices": 66,
+      "original_triangles": 4,
+      "triangles": 96
+    },
+    {
+      "id": "clouds-mesh",
+      "name": "clouds",
+      "method": "Simple",
+      "original_vertices": 10,
+      "vertices": 117,
+      "original_triangles": 8,
+      "triangles": 192
+    },
+    {
+      "id": "clouds2-mesh",
+      "name": "clouds2",
+      "method": "Simple",
+      "original_vertices": 10,
+      "vertices": 117,
+      "original_triangles": 8,
+      "triangles": 192
+    },
+    {
+      "id": "door-mesh",
+      "name": "door",
+      "method": "Simple",
+      "original_vertices": 80,
+      "vertices": 953,
+      "original_triangles": 66,
+      "triangles": 1584
+    },
+    {
+      "id": "grass00-mesh",
+      "name": "grass00",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "grass01-mesh",
+      "name": "grass01",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "grass02-mesh",
+      "name": "grass02",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "grass03-mesh",
+      "name": "grass03",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "grass04-mesh",
+      "name": "grass04",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "grass05-mesh",
+      "name": "grass05",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "grass06-mesh",
+      "name": "grass06",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "grass07-mesh",
+      "name": "grass07",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "grass100-mesh",
+      "name": "grass100",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "grass67-mesh",
+      "name": "grass67",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "ground00-mesh",
+      "name": "ground00",
+      "method": "Simple",
+      "original_vertices": 28,
+      "vertices": 479,
+      "original_triangles": 37,
+      "triangles": 888
+    },
+    {
+      "id": "main_tower-mesh",
+      "name": "main_tower",
+      "method": "Simple",
+      "original_vertices": 885,
+      "vertices": 8285,
+      "original_triangles": 527,
+      "triangles": 12648
+    },
+    {
+      "id": "river-mesh",
+      "name": "river",
+      "method": "Simple",
+      "original_vertices": 28,
+      "vertices": 369,
+      "original_triangles": 26,
+      "triangles": 624
+    },
+    {
+      "id": "road-mesh",
+      "name": "road",
+      "method": "Simple",
+      "original_vertices": 44,
+      "vertices": 713,
+      "original_triangles": 54,
+      "triangles": 1296
+    },
+    {
+      "id": "rocks00-mesh",
+      "name": "rocks00",
+      "method": "Catmull-Clark",
+      "original_vertices": 12,
+      "vertices": 142,
+      "original_triangles": 10,
+      "triangles": 240
+    },
+    {
+      "id": "rocks01-mesh",
+      "name": "rocks01",
+      "method": "Catmull-Clark",
+      "original_vertices": 6,
+      "vertices": 71,
+      "original_triangles": 5,
+      "triangles": 120
+    },
+    {
+      "id": "rocks02-mesh",
+      "name": "rocks02",
+      "method": "Catmull-Clark",
+      "original_vertices": 5,
+      "vertices": 57,
+      "original_triangles": 4,
+      "triangles": 96
+    },
+    {
+      "id": "rocks03-mesh",
+      "name": "rocks03",
+      "method": "Catmull-Clark",
+      "original_vertices": 10,
+      "vertices": 104,
+      "original_triangles": 7,
+      "triangles": 168
+    },
+    {
+      "id": "rocks04-mesh",
+      "name": "rocks04",
+      "method": "Catmull-Clark",
+      "original_vertices": 25,
+      "vertices": 265,
+      "original_triangles": 18,
+      "triangles": 432
+    },
+    {
+      "id": "rocks05-mesh",
+      "name": "rocks05",
+      "method": "Catmull-Clark",
+      "original_vertices": 10,
+      "vertices": 104,
+      "original_triangles": 7,
+      "triangles": 168
+    },
+    {
+      "id": "rocks06-mesh",
+      "name": "rocks06",
+      "method": "Catmull-Clark",
+      "original_vertices": 20,
+      "vertices": 208,
+      "original_triangles": 14,
+      "triangles": 336
+    },
+    {
+      "id": "rocks07-mesh",
+      "name": "rocks07",
+      "method": "Catmull-Clark",
+      "original_vertices": 12,
+      "vertices": 142,
+      "original_triangles": 10,
+      "triangles": 240
+    },
+    {
+      "id": "rocks08-mesh",
+      "name": "rocks08",
+      "method": "Catmull-Clark",
+      "original_vertices": 12,
+      "vertices": 142,
+      "original_triangles": 10,
+      "triangles": 240
+    },
+    {
+      "id": "wall_back-mesh",
+      "name": "wall_back",
+      "method": "Simple",
+      "original_vertices": 6,
+      "vertices": 61,
+      "original_triangles": 4,
+      "triangles": 96
+    }
+  ],
+  "clips": [
+    {
+      "name": "caste_intro",
+      "start_ms": 0,
+      "end_ms": 3299
+    },
+    {
+      "name": "defeat_outro",
+      "start_ms": 73333,
+      "end_ms": 76666
+    },
+    {
+      "name": "griffin_fireball_intro",
+      "start_ms": 76699,
+      "end_ms": 81666
+    },
+    {
+      "name": "griffin_intro",
+      "start_ms": 63333,
+      "end_ms": 69966
+    },
+    {
+      "name": "hydra_griffin_intro",
+      "start_ms": 70000,
+      "end_ms": 73300
+    },
+    {
+      "name": "hydra_intro",
+      "start_ms": 56733,
+      "end_ms": 63299
+    },
+    {
+      "name": "sceneloop",
+      "start_ms": 3333,
+      "end_ms": 56666
+    },
+    {
+      "name": "victory_outro",
+      "start_ms": 85699,
+      "end_ms": 89033
+    },
+    {
+      "name": "zoom_in",
+      "start_ms": 81699,
+      "end_ms": 84666
+    },
+    {
+      "name": "zoom_out",
+      "start_ms": 84666,
+      "end_ms": 85666
+    }
+  ],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

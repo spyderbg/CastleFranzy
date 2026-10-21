@@ -1,0 +1,47 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Shaman/wave_blast.bdae",
+  "source_sha256": "8d00c1b77d35bb9a387fffc23868822b6c59c7990ba60ddc3f0b91fd6b1c2c48",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Shaman/wave_blast_smooth.blend",
+  "meshes": [
+    {
+      "id": "Plane01_light-mesh",
+      "name": "Plane01_light",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane02_light-mesh",
+      "name": "Plane02_light",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    }
+  ],
+  "clips": [
+    {
+      "name": "wave",
+      "start_ms": 0,
+      "end_ms": 333
+    }
+  ],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

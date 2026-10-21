@@ -1,0 +1,117 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Troll/troll.bdae",
+  "source_sha256": "d0475ca1ae45f8a44b5468d87f34b3a9c513cd29a36af481a3b364354f76b420",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Troll/troll_smooth.blend",
+  "meshes": [
+    {
+      "id": "Troll-mesh",
+      "name": "Troll",
+      "method": "Catmull-Clark",
+      "original_vertices": 283,
+      "vertices": 4197,
+      "original_triangles": 339,
+      "triangles": 8136
+    }
+  ],
+  "clips": [
+    {
+      "name": "troll_charge",
+      "start_ms": 0,
+      "end_ms": 533
+    },
+    {
+      "name": "troll_cheer",
+      "start_ms": 699,
+      "end_ms": 1633
+    },
+    {
+      "name": "troll_explode",
+      "start_ms": 1799,
+      "end_ms": 2200
+    },
+    {
+      "name": "troll_fall_ground_die",
+      "start_ms": 2366,
+      "end_ms": 2833
+    },
+    {
+      "name": "troll_fall_ground_get_hurt",
+      "start_ms": 3000,
+      "end_ms": 5133
+    },
+    {
+      "name": "troll_fall_to_smash_ground_die",
+      "start_ms": 5300,
+      "end_ms": 5433
+    },
+    {
+      "name": "troll_fly_to_fall_ground_die",
+      "start_ms": 5599,
+      "end_ms": 6000
+    },
+    {
+      "name": "troll_hanging_01",
+      "start_ms": 6166,
+      "end_ms": 8166
+    },
+    {
+      "name": "troll_hit_door",
+      "start_ms": 8333,
+      "end_ms": 8866
+    },
+    {
+      "name": "troll_slow",
+      "start_ms": 9033,
+      "end_ms": 10699
+    },
+    {
+      "name": "troll_smash_ground_die",
+      "start_ms": 10866,
+      "end_ms": 11399
+    },
+    {
+      "name": "troll_smash_wall",
+      "start_ms": 11566,
+      "end_ms": 12500
+    },
+    {
+      "name": "troll_stumble",
+      "start_ms": 12666,
+      "end_ms": 14333
+    },
+    {
+      "name": "troll_walk_01",
+      "start_ms": 14500,
+      "end_ms": 15566
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 8766,
+      "names": [
+        "hit"
+      ]
+    },
+    {
+      "time_ms": 13300,
+      "names": [
+        "troll_stun"
+      ]
+    }
+  ],
+  "verification": {
+    "skin_samples": 468,
+    "max_skin_error": 5.2270277570675635e-06,
+    "skin_vertices_checked": 4197
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

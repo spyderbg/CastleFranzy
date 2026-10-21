@@ -1,0 +1,152 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Tornado/tornado.bdae",
+  "source_sha256": "627d72d1f8d29bf7f44a40e96cd552609b9c60a8666eeb62f34755a991c510a3",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Tornado/tornado_smooth.blend",
+  "meshes": [
+    {
+      "id": "Box01-mesh",
+      "name": "Box01",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 198,
+      "original_triangles": 12,
+      "triangles": 288
+    },
+    {
+      "id": "Box02-mesh",
+      "name": "Box02",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 198,
+      "original_triangles": 12,
+      "triangles": 288
+    },
+    {
+      "id": "Box03-mesh",
+      "name": "Box03",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 198,
+      "original_triangles": 12,
+      "triangles": 288
+    },
+    {
+      "id": "Box04-mesh",
+      "name": "Box04",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 198,
+      "original_triangles": 12,
+      "triangles": 288
+    },
+    {
+      "id": "Box05-mesh",
+      "name": "Box05",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 198,
+      "original_triangles": 12,
+      "triangles": 288
+    },
+    {
+      "id": "Box06-mesh",
+      "name": "Box06",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 198,
+      "original_triangles": 12,
+      "triangles": 288
+    },
+    {
+      "id": "Box07-mesh",
+      "name": "Box07",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 198,
+      "original_triangles": 12,
+      "triangles": 288
+    },
+    {
+      "id": "Box08-mesh",
+      "name": "Box08",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 198,
+      "original_triangles": 12,
+      "triangles": 288
+    },
+    {
+      "id": "Box09-mesh",
+      "name": "Box09",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 198,
+      "original_triangles": 12,
+      "triangles": 288
+    },
+    {
+      "id": "Box10-mesh",
+      "name": "Box10",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 198,
+      "original_triangles": 12,
+      "triangles": 288
+    },
+    {
+      "id": "tornato-mesh",
+      "name": "tornato",
+      "method": "Simple",
+      "original_vertices": 45,
+      "vertices": 817,
+      "original_triangles": 64,
+      "triangles": 1536
+    }
+  ],
+  "clips": [
+    {
+      "name": "tornado_down",
+      "start_ms": 0,
+      "end_ms": 1666
+    },
+    {
+      "name": "tornado_loop",
+      "start_ms": 1833,
+      "end_ms": 2833
+    },
+    {
+      "name": "tornado_up",
+      "start_ms": 3000,
+      "end_ms": 4333
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 866,
+      "names": [
+        "on_ground"
+      ]
+    },
+    {
+      "time_ms": 3700,
+      "names": [
+        "from_ground"
+      ]
+    }
+  ],
+  "verification": {
+    "skin_samples": 131,
+    "max_skin_error": 8.738360090406658e-05,
+    "skin_vertices_checked": 817
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

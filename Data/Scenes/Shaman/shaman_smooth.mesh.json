@@ -1,0 +1,116 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Shaman/shaman.bdae",
+  "source_sha256": "3c88e6a97dbb4c73d08de4749813850b925b9c8cfe7113f53bc231c9ebf801da",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Shaman/shaman_smooth.blend",
+  "meshes": [
+    {
+      "id": "shaman01-mesh",
+      "name": "shaman01",
+      "method": "Catmull-Clark",
+      "original_vertices": 249,
+      "vertices": 3139,
+      "original_triangles": 258,
+      "triangles": 6192
+    }
+  ],
+  "clips": [
+    {
+      "name": "sha_cast_energyball_01",
+      "start_ms": 0,
+      "end_ms": 2666
+    },
+    {
+      "name": "sha_die_01",
+      "start_ms": 2833,
+      "end_ms": 4666
+    },
+    {
+      "name": "sha_die_02_smash",
+      "start_ms": 4833,
+      "end_ms": 6000
+    },
+    {
+      "name": "sha_die_03_wall",
+      "start_ms": 6166,
+      "end_ms": 7166
+    },
+    {
+      "name": "sha_die_04_squash",
+      "start_ms": 7333,
+      "end_ms": 8000
+    },
+    {
+      "name": "sha_falling_01",
+      "start_ms": 8166,
+      "end_ms": 8666
+    },
+    {
+      "name": "sha_falling_03",
+      "start_ms": 8833,
+      "end_ms": 10166
+    },
+    {
+      "name": "sha_fly_01",
+      "start_ms": 10333,
+      "end_ms": 11000
+    },
+    {
+      "name": "sha_fly_02",
+      "start_ms": 11166,
+      "end_ms": 12500
+    },
+    {
+      "name": "sha_hang_01",
+      "start_ms": 12666,
+      "end_ms": 14066
+    },
+    {
+      "name": "sha_hang_mcontrol_01",
+      "start_ms": 14233,
+      "end_ms": 15633
+    },
+    {
+      "name": "sha_land_01",
+      "start_ms": 15800,
+      "end_ms": 17299
+    },
+    {
+      "name": "sha_mcontrol_01",
+      "start_ms": 17466,
+      "end_ms": 18466
+    },
+    {
+      "name": "sha_raiseskel_01",
+      "start_ms": 18633,
+      "end_ms": 20633
+    },
+    {
+      "name": "sha_walk_01",
+      "start_ms": 20799,
+      "end_ms": 22799
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 1500,
+      "names": [
+        "throw"
+      ]
+    }
+  ],
+  "verification": {
+    "skin_samples": 685,
+    "max_skin_error": 5.725205605346333e-06,
+    "skin_vertices_checked": 3139
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

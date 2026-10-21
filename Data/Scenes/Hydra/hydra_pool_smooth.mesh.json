@@ -1,0 +1,56 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Hydra/hydra_pool.bdae",
+  "source_sha256": "b8496ae3b712f36297399c74d57adc37a63f4108b5c3fbb07c39263421df8011",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Hydra/hydra_pool_smooth.blend",
+  "meshes": [
+    {
+      "id": "Cylinder02-mesh",
+      "name": "Cylinder02",
+      "method": "Simple",
+      "original_vertices": 186,
+      "vertices": 1751,
+      "original_triangles": 110,
+      "triangles": 2640
+    },
+    {
+      "id": "Plane03-mesh",
+      "name": "Plane03",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane04-mesh",
+      "name": "Plane04",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    }
+  ],
+  "clips": [
+    {
+      "name": "water",
+      "start_ms": 0,
+      "end_ms": 6666
+    }
+  ],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

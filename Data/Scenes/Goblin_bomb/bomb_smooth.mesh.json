@@ -1,0 +1,71 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Goblin_bomb/bomb.bdae",
+  "source_sha256": "65077e9235f58bf8a355c83a8da34ddfb4deb3067167fd423104055c9cf81660",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Goblin_bomb/bomb_smooth.blend",
+  "meshes": [
+    {
+      "id": "bomb-mesh",
+      "name": "bomb",
+      "method": "Catmull-Clark",
+      "original_vertices": 54,
+      "vertices": 669,
+      "original_triangles": 55,
+      "triangles": 1320
+    },
+    {
+      "id": "fuse-mesh",
+      "name": "fuse",
+      "method": "Simple",
+      "original_vertices": 8,
+      "vertices": 89,
+      "original_triangles": 6,
+      "triangles": 144
+    },
+    {
+      "id": "sparkle00-mesh",
+      "name": "sparkle00",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    }
+  ],
+  "clips": [
+    {
+      "name": "burn_idle",
+      "start_ms": 0,
+      "end_ms": 333
+    },
+    {
+      "name": "drop",
+      "start_ms": 2599,
+      "end_ms": 3666
+    },
+    {
+      "name": "explode",
+      "start_ms": 1399,
+      "end_ms": 2566
+    },
+    {
+      "name": "pulse",
+      "start_ms": 366,
+      "end_ms": 1366
+    }
+  ],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

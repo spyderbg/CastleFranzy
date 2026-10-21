@@ -1,0 +1,32 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Fireball/ice.bdae",
+  "source_sha256": "1161e35f5ad8caf02acea200f3012f9837fe0d37d2d27f2da88649fa2652e1ea",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Fireball/ice_smooth.blend",
+  "meshes": [
+    {
+      "id": "ice00-mesh",
+      "name": "ice00",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    }
+  ],
+  "clips": [],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Wild_boar/boar_rider.bdae",
+  "source_sha256": "f86c4b3bd8ce706a5997b0b63c1a65ea2f84b87579fc3a0a44c3571d40e3a2bc",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Wild_boar/boar_rider_smooth.blend",
+  "meshes": [
+    {
+      "id": "BOAR-mesh",
+      "name": "BOAR",
+      "method": "Catmull-Clark",
+      "original_vertices": 212,
+      "vertices": 2621,
+      "original_triangles": 212,
+      "triangles": 5088
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack",
+      "start_ms": 0,
+      "end_ms": 1000
+    },
+    {
+      "name": "attack_a",
+      "start_ms": 1166,
+      "end_ms": 2166
+    },
+    {
+      "name": "drop_a",
+      "start_ms": 2333,
+      "end_ms": 3000
+    },
+    {
+      "name": "falling_a",
+      "start_ms": 3166,
+      "end_ms": 3833
+    },
+    {
+      "name": "flying_01_a",
+      "start_ms": 4000,
+      "end_ms": 4500
+    },
+    {
+      "name": "hang_die",
+      "start_ms": 4666,
+      "end_ms": 6066
+    },
+    {
+      "name": "hang_die_a",
+      "start_ms": 6233,
+      "end_ms": 7166
+    },
+    {
+      "name": "hang_drop",
+      "start_ms": 7333,
+      "end_ms": 8133
+    },
+    {
+      "name": "hang_hit_castle_a",
+      "start_ms": 8300,
+      "end_ms": 9133
+    },
+    {
+      "name": "hang_loop",
+      "start_ms": 9300,
+      "end_ms": 10100
+    },
+    {
+      "name": "hang_loop_a",
+      "start_ms": 10266,
+      "end_ms": 11266
+    },
+    {
+      "name": "hang_smash_a",
+      "start_ms": 11433,
+      "end_ms": 12199
+    },
+    {
+      "name": "stumble_a",
+      "start_ms": 12366,
+      "end_ms": 14066
+    },
+    {
+      "name": "stunned_01",
+      "start_ms": 14233,
+      "end_ms": 15233
+    },
+    {
+      "name": "stunned_01_a",
+      "start_ms": 15399,
+      "end_ms": 17533
+    },
+    {
+      "name": "walk",
+      "start_ms": 17700,
+      "end_ms": 18500
+    },
+    {
+      "name": "walk_a",
+      "start_ms": 18666,
+      "end_ms": 19666
+    },
+    {
+      "name": "walk_cheer_01",
+      "start_ms": 19833,
+      "end_ms": 20633
+    },
+    {
+      "name": "walk_cheer_01_a",
+      "start_ms": 20799,
+      "end_ms": 21866
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 133,
+      "names": [
+        "hit"
+      ]
+    },
+    {
+      "time_ms": 1600,
+      "names": [
+        "hit"
+      ]
+    }
+  ],
+  "verification": {
+    "skin_samples": 657,
+    "max_skin_error": 1.8083610354412774e-06,
+    "skin_vertices_checked": 2621
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

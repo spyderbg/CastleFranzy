@@ -1,0 +1,110 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Spells/strike_plane.bdae",
+  "source_sha256": "66fba75c2c28313bceb8ee63e224c5c6ca5074eff4c7b4908f24ca8e42f7752d",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Spells/strike_plane_smooth.blend",
+  "meshes": [
+    {
+      "id": "Plane05-mesh",
+      "name": "Plane05",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane06-mesh",
+      "name": "Plane06",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane07-mesh",
+      "name": "Plane07",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane08-mesh",
+      "name": "Plane08",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane09-mesh",
+      "name": "Plane09",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane10-mesh",
+      "name": "Plane10",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane11-mesh",
+      "name": "Plane11",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane12-mesh",
+      "name": "Plane12",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Sphere01-mesh",
+      "name": "Sphere01",
+      "method": "Simple",
+      "original_vertices": 41,
+      "vertices": 555,
+      "original_triangles": 40,
+      "triangles": 960
+    }
+  ],
+  "clips": [
+    {
+      "name": "strike",
+      "start_ms": 0,
+      "end_ms": 666
+    }
+  ],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

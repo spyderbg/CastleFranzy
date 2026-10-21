@@ -1,0 +1,81 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Gates/gate_01.bdae",
+  "source_sha256": "75222596b242c8ff2c270ca5b0319d4019a7aa6a16ffeb828a966d98d52efe4c",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Gates/gate_01_smooth.blend",
+  "meshes": [
+    {
+      "id": "gate00-mesh",
+      "name": "gate00",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 152,
+      "original_triangles": 8,
+      "triangles": 192
+    },
+    {
+      "id": "gate01-mesh",
+      "name": "gate01",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 152,
+      "original_triangles": 8,
+      "triangles": 192
+    },
+    {
+      "id": "gate02-mesh",
+      "name": "gate02",
+      "method": "Simple",
+      "original_vertices": 24,
+      "vertices": 152,
+      "original_triangles": 8,
+      "triangles": 192
+    }
+  ],
+  "clips": [
+    {
+      "name": "deform",
+      "start_ms": 166,
+      "end_ms": 333
+    },
+    {
+      "name": "deform_hit",
+      "start_ms": 1200,
+      "end_ms": 1833
+    },
+    {
+      "name": "fall",
+      "start_ms": 333,
+      "end_ms": 500
+    },
+    {
+      "name": "fallen",
+      "start_ms": 500,
+      "end_ms": 500
+    },
+    {
+      "name": "stand",
+      "start_ms": 0,
+      "end_ms": 166
+    },
+    {
+      "name": "stand_hit",
+      "start_ms": 699,
+      "end_ms": 1166
+    }
+  ],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

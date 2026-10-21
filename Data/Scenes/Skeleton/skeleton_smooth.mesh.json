@@ -1,0 +1,159 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Skeleton/skeleton.bdae",
+  "source_sha256": "409a6614a6be39d63fc3596b7c8b283a969003249dd72fa2ed5a1aaceb599cb9",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Skeleton/skeleton_smooth.blend",
+  "meshes": [
+    {
+      "id": "fire-mesh",
+      "name": "fire",
+      "method": "Simple",
+      "original_vertices": 18,
+      "vertices": 140,
+      "original_triangles": 8,
+      "triangles": 192
+    },
+    {
+      "id": "fire_head-mesh",
+      "name": "fire_head",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "fire_left-mesh",
+      "name": "fire_left",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "fire_right-mesh",
+      "name": "fire_right",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "fire_spine-mesh",
+      "name": "fire_spine",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "seal-mesh",
+      "name": "seal",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "skeleton-mesh",
+      "name": "skeleton",
+      "method": "Catmull-Clark",
+      "original_vertices": 218,
+      "vertices": 2887,
+      "original_triangles": 224,
+      "triangles": 5376
+    },
+    {
+      "id": "sword-mesh",
+      "name": "sword",
+      "method": "Simple",
+      "original_vertices": 28,
+      "vertices": 287,
+      "original_triangles": 19,
+      "triangles": 456
+    }
+  ],
+  "clips": [
+    {
+      "name": "sk_appear",
+      "start_ms": 600,
+      "end_ms": 1666
+    },
+    {
+      "name": "sk_attack_door",
+      "start_ms": 1833,
+      "end_ms": 2633
+    },
+    {
+      "name": "sk_cheer",
+      "start_ms": 2799,
+      "end_ms": 3200
+    },
+    {
+      "name": "sk_fall",
+      "start_ms": 3366,
+      "end_ms": 3900
+    },
+    {
+      "name": "sk_fly_to_castle",
+      "start_ms": 4066,
+      "end_ms": 4266
+    },
+    {
+      "name": "sk_hang",
+      "start_ms": 4433,
+      "end_ms": 4966
+    },
+    {
+      "name": "sk_land_damage",
+      "start_ms": 5133,
+      "end_ms": 6599
+    },
+    {
+      "name": "sk_land_die",
+      "start_ms": 6766,
+      "end_ms": 7900
+    },
+    {
+      "name": "sk_land_uharmed",
+      "start_ms": 8066,
+      "end_ms": 8733
+    },
+    {
+      "name": "sk_move",
+      "start_ms": 8899,
+      "end_ms": 9633
+    },
+    {
+      "name": "sk_smash_castle",
+      "start_ms": 0,
+      "end_ms": 433
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 2066,
+      "names": [
+        "hit"
+      ]
+    }
+  ],
+  "verification": {
+    "skin_samples": 290,
+    "max_skin_error": 2.754738101309263e-06,
+    "skin_vertices_checked": 3479
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

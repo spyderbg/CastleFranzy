@@ -44,6 +44,10 @@ target_compile_definitions(Irrlicht PUBLIC _IRR_STATIC_LIB_ PRIVATE
     PNG_NO_MMX_CODE PNG_NO_MNG_FEATURES PNG_THREAD_UNSAFE_OK)
 target_link_libraries(Irrlicht PUBLIC OpenGL::GL OpenGL::GLU ${X11_LIBRARIES} ${XXF86VM_LIBRARY} ${CMAKE_DL_LIBS})
 
+add_executable(BdaeCheck EXCLUDE_FROM_ALL tools/linux/bdae_check.cpp)
+target_link_libraries(BdaeCheck PRIVATE Irrlicht)
+set_target_properties(BdaeCheck PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+
 file(GLOB SOUND_SOURCES CONFIGURE_DEPENDS "Lib/SoundLib/src/*.cpp")
 add_library(SoundLib STATIC ${SOUND_SOURCES})
 target_include_directories(SoundLib PUBLIC "Lib/SoundLib/include" ${OPENAL_INCLUDE_DIR})

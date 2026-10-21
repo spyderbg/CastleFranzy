@@ -1,0 +1,243 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Build/bin/Scenes/Goblin/goblin.bdae",
+  "sha256": "405a4701c509de724521437812c6b24b3da0deb8e26fb6e2d75d58bb4a37fa29",
+  "layout": "0,0,0,325",
+  "fps": 30,
+  "nodes": 27,
+  "animation_tracks": 35,
+  "clips": [
+    {
+      "name": "gob_attack_01",
+      "start_ms": 0,
+      "end_ms": 1000
+    },
+    {
+      "name": "gob_die_01_z_up",
+      "start_ms": 1166,
+      "end_ms": 2633
+    },
+    {
+      "name": "gob_die_02",
+      "start_ms": 2799,
+      "end_ms": 4633
+    },
+    {
+      "name": "gob_die_03_land",
+      "start_ms": 4800,
+      "end_ms": 6633
+    },
+    {
+      "name": "gob_drag_to_fall",
+      "start_ms": 8300,
+      "end_ms": 8500
+    },
+    {
+      "name": "gob_dragging_01",
+      "start_ms": 6800,
+      "end_ms": 8133
+    },
+    {
+      "name": "gob_falling_01",
+      "start_ms": 8666,
+      "end_ms": 9333
+    },
+    {
+      "name": "gob_flying_01",
+      "start_ms": 9500,
+      "end_ms": 10166
+    },
+    {
+      "name": "gob_stumble_01",
+      "start_ms": 10333,
+      "end_ms": 12033
+    },
+    {
+      "name": "gob_stunned_01",
+      "start_ms": 12199,
+      "end_ms": 14333
+    },
+    {
+      "name": "gob_vihren_walk_03",
+      "start_ms": 14500,
+      "end_ms": 15500
+    },
+    {
+      "name": "gob_walk_cheer_01",
+      "start_ms": 15666,
+      "end_ms": 16666
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 666,
+      "names": [
+        "hit"
+      ]
+    },
+    {
+      "time_ms": 3000,
+      "names": [
+        "blood"
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "goblin",
+      "vertices": 257,
+      "triangles": 282
+    }
+  ],
+  "skin_joints": [
+    23
+  ],
+  "blender_version": "5.2.2 LTS",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Goblin/goblin.blend",
+  "actions": [
+    {
+      "name": "Goblin__ALL_SOURCE_ANIMATION",
+      "samples": 501,
+      "start_ms": 0,
+      "end_ms": 16666,
+      "frame_end": 500.98,
+      "events": [
+        {
+          "time_ms": 666,
+          "names": [
+            "hit"
+          ],
+          "frame": 20.98
+        },
+        {
+          "time_ms": 3000,
+          "names": [
+            "blood"
+          ],
+          "frame": 91.0
+        }
+      ]
+    },
+    {
+      "name": "gob_attack_01",
+      "samples": 31,
+      "start_ms": 0,
+      "end_ms": 1000,
+      "frame_end": 31.0,
+      "events": [
+        {
+          "time_ms": 666,
+          "names": [
+            "hit"
+          ],
+          "frame": 20.98
+        }
+      ]
+    },
+    {
+      "name": "gob_die_01_z_up",
+      "samples": 45,
+      "start_ms": 1166,
+      "end_ms": 2633,
+      "frame_end": 45.01,
+      "events": []
+    },
+    {
+      "name": "gob_die_02",
+      "samples": 56,
+      "start_ms": 2799,
+      "end_ms": 4633,
+      "frame_end": 56.02,
+      "events": [
+        {
+          "time_ms": 3000,
+          "names": [
+            "blood"
+          ],
+          "frame": 7.03
+        }
+      ]
+    },
+    {
+      "name": "gob_die_03_land",
+      "samples": 56,
+      "start_ms": 4800,
+      "end_ms": 6633,
+      "frame_end": 55.99,
+      "events": []
+    },
+    {
+      "name": "gob_drag_to_fall",
+      "samples": 7,
+      "start_ms": 8300,
+      "end_ms": 8500,
+      "frame_end": 7.0,
+      "events": []
+    },
+    {
+      "name": "gob_dragging_01",
+      "samples": 41,
+      "start_ms": 6800,
+      "end_ms": 8133,
+      "frame_end": 40.99,
+      "events": []
+    },
+    {
+      "name": "gob_falling_01",
+      "samples": 21,
+      "start_ms": 8666,
+      "end_ms": 9333,
+      "frame_end": 21.01,
+      "events": []
+    },
+    {
+      "name": "gob_flying_01",
+      "samples": 21,
+      "start_ms": 9500,
+      "end_ms": 10166,
+      "frame_end": 20.98,
+      "events": []
+    },
+    {
+      "name": "gob_stumble_01",
+      "samples": 52,
+      "start_ms": 10333,
+      "end_ms": 12033,
+      "frame_end": 52.0,
+      "events": []
+    },
+    {
+      "name": "gob_stunned_01",
+      "samples": 65,
+      "start_ms": 12199,
+      "end_ms": 14333,
+      "frame_end": 65.02,
+      "events": []
+    },
+    {
+      "name": "gob_vihren_walk_03",
+      "samples": 31,
+      "start_ms": 14500,
+      "end_ms": 15500,
+      "frame_end": 31.0,
+      "events": []
+    },
+    {
+      "name": "gob_walk_cheer_01",
+      "samples": 31,
+      "start_ms": 15666,
+      "end_ms": 16666,
+      "frame_end": 31.0,
+      "events": []
+    }
+  ],
+  "texture": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Build/bin/Scenes/Goblin/goblin_128.tga",
+  "verification": {
+    "samples_checked": 958,
+    "all_bones_checked": 25,
+    "all_vertices_checked": 257,
+    "max_pose_matrix_error": 1.9073486328125e-06,
+    "max_skinned_vertex_error": 5.741899074685445e-06,
+    "tolerance": 0.0002,
+    "verified_at": "All original key times and clip boundaries"
+  }
+}

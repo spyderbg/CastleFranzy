@@ -1,0 +1,32 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Gates/arch.bdae",
+  "source_sha256": "4fb754a7a5917556c36bd3a31ecf70006430414dab45129015ed50ed249c4773",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Gates/arch_smooth.blend",
+  "meshes": [
+    {
+      "id": "arch3D-mesh",
+      "name": "arch3D",
+      "method": "Simple",
+      "original_vertices": 78,
+      "vertices": 678,
+      "original_triangles": 42,
+      "triangles": 1008
+    }
+  ],
+  "clips": [],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Resource textures: "png" or "pvr". The environment can override this default.
 readonly RESOURCE_TEXTURE_FORMAT="${RESOURCE_TEXTURE_FORMAT:-png}"
+readonly BLENDER_BIN="${BLENDER_BIN:-blender}"
 
 set -Eeuo pipefail
 
@@ -25,6 +26,8 @@ Set RESOURCE_TEXTURE_FORMAT at the top of this script to png or pvr, or run:
 
 Requires Node.js 22.12+, npm, and the Linux build dependencies (see readme.txt).
 AuroraMX regenerates sprite binaries and ID headers from Sprites.sprcmd.
+Blender 5.2+ exports the .blend sources registered in Data/Scenes/models.json.
+Set BLENDER_BIN to use a particular Blender executable.
 PNG mode also requires
 Python Pillow: sudo apt install python3-pil
 EOF
@@ -84,9 +87,20 @@ if [[ $RESOURCE_TEXTURE_FORMAT == png ]]; then
 fi
 
 printf '\nRebuild project data\n'
+printf '\nExport Blender models\n'
+cmake --build --preset "$preset" --target BdaeCheck
+model_texture_format=png
+if [[ $RESOURCE_TEXTURE_FORMAT == pvr ]]; then model_texture_format=tga; fi
+python3 "$project_dir/tools/blender/build_models.py" \
+    --output "$build_dir/blender" --blender "$BLENDER_BIN" \
+    --texture-format "$model_texture_format" --validator "$build_dir/bin/BdaeCheck"
+
 python3 "$project_dir/tools/linux/build_resources.py" \
     --output "$asset_dir" --texture-format "$RESOURCE_TEXTURE_FORMAT" \
-    --sprite-exports "$build_dir/auroramx/bin" "${decoder_args[@]}"
+    --sprite-exports "$build_dir/auroramx/bin" --scene-exports "$build_dir/blender" "${decoder_args[@]}"
+python3 "$project_dir/tools/blender/build_models.py" --output "$build_dir/blender" \
+    --validate-staged "$asset_dir/Scenes" --validator "$build_dir/bin/BdaeCheck" \
+    --texture-format "$model_texture_format"
 if $resources_only; then
     printf '\nResources ready: %s\n' "$asset_dir"
     exit 0

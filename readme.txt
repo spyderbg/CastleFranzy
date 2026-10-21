@@ -71,8 +71,18 @@ ready to use; the old Windows/Java asset tools are not needed.
    dependencies are installed automatically on the first rebuild. Generated
    sprites are staged in the preset's auroramx/bin directory, then copied into
    its assets directory; original Data/Sprites/bin exports are preserved.
-   The step reuses checked-in .bdae models, string tables and configuration
-   XML, and rebuilds textures and WAV sound packs natively. Changes to .dae or
+   Blender 5.2+ exports the .blend models registered in Data/Scenes/models.json.
+   Start with Data/Scenes/Goblin/goblin_smooth.blend: save edits, then rebuild.
+   All 33 mesh scenes now have *_smooth.blend projects. Data/Scenes/README.md
+   lists them with geometry counts. Organic bodies are rounded; architecture,
+   gates and effect planes keep their shapes with denser editable geometry.
+   Other scenes use mesh export mode, retaining original animation/materials
+   and engine metadata. The Goblin supports the full animation exporter.
+   Set BLENDER_BIN to select a Blender executable. Unchanged model exports are
+   cached; the native engine checks each export before it is staged. See
+   tools/blender/README.md for the exporter add-on, CLI and editing constraints.
+   Camera-only data, string tables and configuration XML use existing exports.
+   Textures and WAV sound packs rebuild natively. Unregistered .dae assets and
    spreadsheet layouts still require their legacy exporters and headers.
    Packages built with the rootless .deps setup retain absolute dependency
    paths to this project. Use system-installed dependencies when building

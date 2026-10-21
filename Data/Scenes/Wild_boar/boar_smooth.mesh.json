@@ -1,0 +1,101 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Wild_boar/boar.bdae",
+  "source_sha256": "969da94280dc08beb6f822be5950963e0af48668c4a62dfc1a8d0a83fac2be4f",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Wild_boar/boar_smooth.blend",
+  "meshes": [
+    {
+      "id": "boar-mesh",
+      "name": "boar",
+      "method": "Catmull-Clark",
+      "original_vertices": 171,
+      "vertices": 2638,
+      "original_triangles": 212,
+      "triangles": 5088
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack",
+      "start_ms": 0,
+      "end_ms": 1000
+    },
+    {
+      "name": "die_smash_wall",
+      "start_ms": 1166,
+      "end_ms": 2500
+    },
+    {
+      "name": "falling",
+      "start_ms": 2666,
+      "end_ms": 3500
+    },
+    {
+      "name": "hang_die",
+      "start_ms": 3666,
+      "end_ms": 4666
+    },
+    {
+      "name": "hang_drop",
+      "start_ms": 4833,
+      "end_ms": 5633
+    },
+    {
+      "name": "hang_loop",
+      "start_ms": 5800,
+      "end_ms": 6599
+    },
+    {
+      "name": "hit_front",
+      "start_ms": 6766,
+      "end_ms": 7566
+    },
+    {
+      "name": "run_attack",
+      "start_ms": 7733,
+      "end_ms": 8933
+    },
+    {
+      "name": "stumble",
+      "start_ms": 9100,
+      "end_ms": 10766
+    },
+    {
+      "name": "stunned",
+      "start_ms": 10933,
+      "end_ms": 12933
+    },
+    {
+      "name": "turn",
+      "start_ms": 13100,
+      "end_ms": 13833
+    },
+    {
+      "name": "walk",
+      "start_ms": 14000,
+      "end_ms": 14800
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 466,
+      "names": [
+        "hit"
+      ]
+    }
+  ],
+  "verification": {
+    "skin_samples": 445,
+    "max_skin_error": 1.4363169437555526e-06,
+    "skin_vertices_checked": 2638
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

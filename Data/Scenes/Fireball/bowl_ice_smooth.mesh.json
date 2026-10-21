@@ -1,0 +1,32 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Fireball/bowl_ice.bdae",
+  "source_sha256": "6a9c47780a0386cf85036ee774aead13ee1a3f49f5edc7197ec0b2f895ebba9c",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Fireball/bowl_ice_smooth.blend",
+  "meshes": [
+    {
+      "id": "GeoSphere01-mesh",
+      "name": "GeoSphere01",
+      "method": "Simple",
+      "original_vertices": 89,
+      "vertices": 1066,
+      "original_triangles": 74,
+      "triangles": 1776
+    }
+  ],
+  "clips": [],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}

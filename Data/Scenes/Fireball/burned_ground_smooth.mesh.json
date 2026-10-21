@@ -1,0 +1,61 @@
+{
+  "source": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/bin/Fireball/burned_ground.bdae",
+  "source_sha256": "df0ba8d6e602990b645c86449e63a5290910979ec254c04deff8458b3dd71d4d",
+  "output": "/media/spyder/_Projects/Gameloft/CastleFranzy_Ubuntu/Data/Scenes/Fireball/burned_ground_smooth.blend",
+  "meshes": [
+    {
+      "id": "Plane01-mesh",
+      "name": "Plane01",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane02-mesh",
+      "name": "Plane02",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    },
+    {
+      "id": "Plane03-mesh",
+      "name": "Plane03",
+      "method": "Simple",
+      "original_vertices": 4,
+      "vertices": 33,
+      "original_triangles": 2,
+      "triangles": 48
+    }
+  ],
+  "clips": [
+    {
+      "name": "broken01",
+      "start_ms": 0,
+      "end_ms": 159
+    },
+    {
+      "name": "broken02",
+      "start_ms": 159,
+      "end_ms": 400
+    }
+  ],
+  "events": [],
+  "verification": {
+    "skin_samples": 0,
+    "max_skin_error": 0
+  },
+  "preserved_features": [
+    "original animations",
+    "morph controllers",
+    "materials",
+    "textures",
+    "scene nodes",
+    "cameras",
+    "splines",
+    "engine extensions"
+  ]
+}
