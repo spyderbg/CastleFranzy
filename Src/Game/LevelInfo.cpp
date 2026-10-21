@@ -114,8 +114,57 @@ void writeEndElement ()
 	s_xmlStack.pop();
 }
 
+static bool sameDay(const Day& a, const Day& b)
+{
+	if (a.dayEndTime != b.dayEndTime || a.challenge != b.challenge ||
+		a.difficulty != b.difficulty || a.waves.size() != b.waves.size())
+		return false;
+	for (u32 i = 0; i < a.waves.size(); ++i)
+	{
+		const Wave& x = *a.waves[i];
+		const Wave& y = *b.waves[i];
+		if (x.name != y.name || x.timeStart != y.timeStart || x.timeInterval != y.timeInterval ||
+			x.repeatInterval != y.repeatInterval || x.repeatCount != y.repeatCount ||
+			x.packed != y.packed || x.variants.size() != y.variants.size())
+			return false;
+		for (u32 j = 0; j < x.variants.size(); ++j)
+		{
+			const Variant& v = *x.variants[j];
+			const Variant& w = *y.variants[j];
+			if (v.intro != w.intro || v.enemyTypes.size() != w.enemyTypes.size())
+				return false;
+			for (u32 k = 0; k < v.enemyTypes.size(); ++k)
+			{
+				const EnemyType& e = *v.enemyTypes[k];
+				const EnemyType& f = *w.enemyTypes[k];
+				if (e.unitType != f.unitType || e.minCount != f.minCount || e.maxCount != f.maxCount)
+					return false;
+			}
+		}
+	}
+	return true;
+}
+
+static bool sameLevel(const Level& a, const Level& b)
+{
+	if (a.spellAvailableInShop != b.spellAvailableInShop || a.spellBought != b.spellBought)
+		return false;
+	for (int i = 0; i < WT_Count - 1; ++i)
+		if (a.weaponStartingLevel[i] != b.weaponStartingLevel[i] ||
+			a.weaponAvailableInShop[i] != b.weaponAvailableInShop[i])
+			return false;
+	return true;
+}
+
 void saveDayInfo (const char* path, Day* level)
 {
+	// Compare data, not serialized bytes: the source XML may have another
+	// encoding, whitespace or line endings. Leave unchanged files untouched.
+	Day* saved = loadDayInfo(path);
+	const bool unchanged = saved && sameDay(*saved, *level);
+	delete saved;
+	if (unchanged) return;
+
 	while (!s_xmlStack.empty()) s_xmlStack.pop();
 
 	s_writer = __IRR_DEVICE()->getFileSystem()->createXMLWriter(path);
@@ -224,6 +273,14 @@ Day* loadDayInfo (const char* path)
 
 void saveLevelInfo (const char* path, Level* level)
 {
+	if (__IRR_DEVICE()->getFileSystem()->existFile(path))
+	{
+		Level* saved = loadLevelInfo(path);
+		const bool unchanged = sameLevel(*saved, *level);
+		delete saved;
+		if (unchanged) return;
+	}
+
 	while (!s_xmlStack.empty()) s_xmlStack.pop();
 
 	s_writer = __IRR_DEVICE()->getFileSystem()->createXMLWriter(path);
@@ -379,6 +436,12 @@ array<int> loadNumberOfDaysPerLevel ()
 void saveNumberOfDaysPerLevel (const array<int>& arr)
 {
 	s_numberOfDaysPerLevel = arr;
+	const array<int> saved = loadNumberOfDaysPerLevel();
+	bool unchanged = arr.size() == saved.size();
+	for (u32 i = 0; unchanged && i < arr.size(); ++i)
+		unchanged = arr[i] == saved[i];
+	if (unchanged && __IRR_DEVICE()->getFileSystem()->existFile(k_numberOfDaysPerLevelPath))
+		return;
 
 	while (!s_xmlStack.empty()) s_xmlStack.pop();
 

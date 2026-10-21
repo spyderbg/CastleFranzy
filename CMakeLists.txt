@@ -98,6 +98,10 @@ add_custom_target(run
 
 include(CTest)
 if(BUILD_TESTING)
+    add_executable(XmlRoundtripCheck tests/linux/xml_roundtrip.cpp)
+    target_link_libraries(XmlRoundtripCheck PRIVATE Irrlicht)
+    add_test(NAME xml_roundtrip COMMAND XmlRoundtripCheck)
+
     add_executable(Resource64Check tests/linux/resource64.cpp
         "${IRR_ROOT}/tools/ResFile/src/resFile.cpp")
     target_include_directories(Resource64Check PRIVATE "${IRR_ROOT}/tools/ResFile/include")
@@ -126,7 +130,7 @@ if(WIN32)
 endif()
 
 if(WIN32 AND MINGW)
-    foreach(target FortressDefender PvrDecode BdaeCheck Resource64Check PvrCodecCheck GamePvrCodecCheck)
+    foreach(target FortressDefender PvrDecode BdaeCheck Resource64Check PvrCodecCheck GamePvrCodecCheck XmlRoundtripCheck)
         if(TARGET ${target})
             add_custom_command(TARGET ${target} POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CASTLE_MINGW_RUNTIME_DLLS}

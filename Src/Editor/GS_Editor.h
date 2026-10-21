@@ -33,7 +33,7 @@ public:
 	virtual ~GS_Editor();
 
 public:
-	void init ();
+	bool init ();
 
 	void enter ();
 	void exit ();

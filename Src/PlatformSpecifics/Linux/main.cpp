@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "Core/irrlicht.h"
+#include "Editor/GS_Editor.h"
+#include "Game/Playfield.h"
 #include "IO/TouchScreen/TouchPad.h"
 #include "PlatformSpecifics/Win32/CImageLoaderPVR.h"
 #include "CCommonGLDriver.h"
@@ -19,8 +21,47 @@ public:
 
     bool OnEvent(const SEvent& event)
     {
+        if (g_editor)
+        {
+            if (event.EventType == EET_KEY_INPUT_EVENT &&
+                event.KeyInput.Key == KEY_ESCAPE && !event.KeyInput.PressedDown)
+            {
+                g_editor->exit();
+                driver->setLogicalScreenSize(dimension2d<s32>(OS_SCREEN_W, OS_SCREEN_H));
+                return true;
+            }
+            // Application consumes raw keyboard/mouse events, so deliver them
+            // to the editor GUI explicitly. GUI notifications return here too.
+            if (event.EventType == EET_KEY_INPUT_EVENT || event.EventType == EET_MOUSE_INPUT_EVENT)
+                __IRR_GUI()->postEventFromUser(event);
+            g_editor->OnEvent(event);
+            // Returning true for GUI focus notifications would veto focus changes.
+            return event.EventType == EET_KEY_INPUT_EVENT || event.EventType == EET_MOUSE_INPUT_EVENT;
+        }
         if (event.EventType == EET_KEY_INPUT_EVENT && !event.KeyInput.PressedDown)
         {
+            if (event.KeyInput.Key == KEY_KEY_E || event.KeyInput.Key == KEY_KEY_R ||
+                event.KeyInput.Key == KEY_F9)
+            {
+                // Unit definitions and level data become available during the splash.
+                if (g_unitTypes.empty() || !GS_Editor::GetInstance()->init()) return true;
+                if (event.KeyInput.Key == KEY_F9)
+                {
+                    g_visualizeWaves = !g_visualizeWaves;
+                }
+                else
+                {
+                    for (int i = 0; i < 2; ++i)
+                    {
+                        if (down[i]) CTouchPad::EventTouchUp(i, -1, -1);
+                        down[i] = false;
+                    }
+                    // Use desktop pixels for editor widgets and raw GUI input.
+                    driver->setLogicalScreenSize(driver->getPhysicalScreenSize());
+                    GS_Editor::GetInstance()->enter();
+                }
+                return true;
+            }
             if (event.KeyInput.Key == KEY_ESCAPE) __IRR_DEVICE()->closeDevice();
             if (event.KeyInput.Key == KEY_F2) os::Timer::setSpeed(os::Timer::getSpeed() * 0.5f);
             if (event.KeyInput.Key == KEY_F3) os::Timer::setSpeed(os::Timer::getSpeed() * 2.0f);
@@ -103,7 +144,40 @@ int main(int argc, char** argv)
     int count = 0;
     while (device->run())
     {
-        if (!app->isPaused()) app->Update();
+        if (!app->isPaused())
+        {
+            if (g_editor)
+            {
+                g_editor->update();
+                if (g_editor)
+                {
+                    g_editor->draw();
+                    driver->swapBuffers(0);
+                }
+                else
+                {
+                    // The editor's Play/Exit buttons also return to the game.
+                    driver->setLogicalScreenSize(gameSize);
+                }
+            }
+            else
+            {
+                if (GS_Editor::GetInstance()->m_icons)
+                {
+                    // Updating this even when hidden removes old overlay widgets.
+                    uiBegin(__IRR_GUI()->getRootGUIElement());
+                    CPlayfield* playfield = CPlayfield::GetInstance();
+                    if (g_visualizeWaves && canVisualizeWaves(
+                            playfield->m_CurrentLevel, playfield->m_CurrentDay))
+                    {
+                        uiVisualizeWaves(playfield->getWaves().getLast().time + 2.0f,
+                            r2i(0, uiParentHeight() - 120, uiParentWidth(), uiParentHeight()));
+                    }
+                    uiEnd();
+                }
+                app->Update();
+            }
+        }
         device->sleep(10);
         if (frames > 0 && ++count >= frames) device->closeDevice();
     }

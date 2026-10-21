@@ -881,6 +881,9 @@ bool Application::OnEvent(const SEvent& ev)
 		handled |= (*iter)->OnEvent(ev);
 	}
 
+	// Editor input must not accumulate in the paused game's event queue.
+	if (handled) return true;
+
 	if(ev.EventType == EET_KEY_INPUT_EVENT)
 	{
 		GetEventManager()->raise(

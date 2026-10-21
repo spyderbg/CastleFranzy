@@ -374,7 +374,8 @@ namespace io
 	//! defines the utf-32 type.
 	/** Not using wchar_t for this because
 	wchar_t has 16 bit on windows and 32 bit on other operating systems. */
-	typedef unsigned long char32;
+	// unsigned long is 64 bits on LP64 Linux; UTF-32 code units are four bytes.
+	typedef char32_t char32;
 
 	//! A UTF-8 or ASCII character xml parser.
 	/** This means that all character data will be returned in 8 bit ASCII or UTF-8 by this parser.

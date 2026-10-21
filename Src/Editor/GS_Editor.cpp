@@ -48,11 +48,20 @@ IGUISpriteBank* uiCreateSprites ()
 	return 0;
 }
 
-void GS_Editor::init ()
+bool GS_Editor::init ()
 {
-	m_icons = __IRR_DRIVER()->getTexture("icons.tga");
+	if (m_icons) return true;
+
+	const char* icons = __IRR_FILE_SYSTEM()->existFile("icons.png") ? "icons.png" : "icons.tga";
+	m_icons = __IRR_DRIVER()->getTexture(icons);
+	if (!m_icons)
+	{
+		Logs::error("Could not load editor icons: %s\n", icons);
+		return false;
+	}
 	m_icons->grab();
 	m_waveEditId = uiGenId();
+	return true;
 }
 
 void GS_Editor::enter ()

@@ -97,6 +97,18 @@ table. No 32-bit compiler, multilib packages or asset conversion is needed.
 
 Controls: left mouse button/drag emulates touch; right mouse button emulates
 another touch. Escape exits. F2 halves game speed; F3 doubles game speed.
+After loading, E or R opens the built-in editor (waves, weapons and models).
+The game stops updating while the editor is open. Select a level/day in the
+waves tab, edit its waves, and use Play to test it. Save writes changes; Exit
+or Escape saves and returns to the game. Editor controls use the window's
+full resolution. E/R remain normal text input while editing a field.
+Saving rewrites only files whose level data changed. Opening/closing the
+editor, browsing, or saving without edits preserves the original XML bytes.
+F9 toggles the wave timeline overlay during gameplay.
+Edits are saved to Levels/ inside the active asset directory: Build/bin by
+default, or build/linux-{debug,release}/assets for rebuild_Linux.sh output.
+For generated assets, copy edited XML files back to Build/bin/Levels to retain
+them across asset rebuilds.
 For a bounded smoke run: ./build/linux-debug/bin/FortressDefender --frames 600
 
 The desktop CMake build supports Linux and Windows x64. The old iPhone
