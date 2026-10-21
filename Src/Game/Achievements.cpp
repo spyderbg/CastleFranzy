@@ -86,6 +86,8 @@ const s32	g_AchievementsListSize = ARRAY_SIZE( g_AchievementsList );
 ///////////////////////////////////////////////////////////////////////
 
 CAchievements::CAchievements()
+	: m_sprite( NULL ), m_eventMsgState( EMS_Wait ),
+	  m_eventMsgViewTime( 0 ), m_eventMsgBgOffset( 0 )
 {
 	GX_ASSERT( ((u32)(WT_Count) * (u32)(WL_Count)) < 32 ); // too many weapons upgrades
 
@@ -113,13 +115,13 @@ int CAchievements::getDrawingLayer() const
 
 void CAchievements::draw() const
 {
-	if( hasEventMsgInList() )
+	if( m_sprite != NULL && hasEventMsgInList() )
 		eventMsgDraw();	
 }
 
 void CAchievements::update( TimeStamp timestamp )
 {
-	if( hasEventMsgInList() )
+	if( m_sprite != NULL && hasEventMsgInList() )
 		eventMsgUpdate( timestamp );
 }
 
@@ -130,10 +132,20 @@ void CAchievements::update( TimeStamp timestamp )
 
 void CAchievements::init()
 {
-	m_sprite = NEW ASprite();
-	m_sprite->Load( "Menu/Menu" );
+	release();
+	m_eventMsgState = EMS_Wait;
+	m_eventMsgViewTime = 0;
+	m_eventMsgBgOffset = 0;
 
-	m_eventMsgList.clear();
+	m_sprite = NEW ASprite();
+	if( !m_sprite->Load( "Menu/menu" ) )
+	{
+		Logs::error( "Could not load achievements sprite: Menu/menu\n" );
+		SAFE_DEL( m_sprite );
+		return;
+	}
+
+	eventMsgUpdatePos( 0.0f );
 }
 
 void CAchievements::release()
@@ -155,7 +167,8 @@ void CAchievements::eventMsgErase()
 
 void CAchievements::eventMsgUpdatePos( f32 percent )
 {
-	s32 h = m_sprite->GetFrameHeight( MENU_F_MENU_CHALLENGE_BG );
+	// Use the same background frame as eventMsgDraw().
+	s32 h = m_sprite->GetFrameHeight( MENU_F_MENU_ACHIEVEMENTS_BG );
 
 	m_eventMsgBgOffset = ((s32)(percent * h)) - h;
 }
