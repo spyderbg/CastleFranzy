@@ -14,6 +14,7 @@ export function createServer(
     frontendPort?: number;
     executable?: string;
     onShutdown?: () => void;
+    onExit?: () => void;
   } = {},
 ) {
   const app = Fastify({
@@ -22,14 +23,13 @@ export function createServer(
   });
   const token = randomBytes(24).toString("hex"),
     game = new Game(workspace, options.executable);
-  const autoShutdown = !!options.onShutdown && !options.dev;
+  const autoShutdown = !!options.onShutdown;
   let busy = 0;
-  const lifetime = new PageLifetime(
-    () => options.onShutdown?.(),
-    () => busy > 0 || workspace.saving,
-  );
+  const lifetime = options.onShutdown
+    ? new PageLifetime(options.onShutdown, () => busy > 0 || workspace.saving)
+    : undefined;
   app.addHook("preClose", async () => {
-    lifetime.dispose();
+    lifetime?.dispose();
     await game.stop();
   });
   app.addHook("onRequest", async (req, reply) => {
@@ -72,7 +72,7 @@ export function createServer(
     };
   });
   app.get("/api/lifecycle", async (req, reply) => {
-    if (!autoShutdown)
+    if (!lifetime)
       return reply.code(503).send({ error: "Auto shutdown disabled" });
     if (
       !req.headers.cookie
@@ -133,7 +133,7 @@ export function createServer(
   app.post("/api/exit", async (_req, reply) => {
     await game.detach();
     reply.send({ ok: true });
-    setImmediate(() => options.onShutdown?.());
+    setImmediate(() => (options.onExit ?? options.onShutdown)?.());
   });
   app.setNotFoundHandler((req, reply) => {
     if (req.url === "/api" || req.url.startsWith("/api/"))

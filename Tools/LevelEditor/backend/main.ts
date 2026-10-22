@@ -20,6 +20,9 @@ function openBrowser(url: string) {
   child.unref();
 }
 async function main() {
+  const STOP_ON_PAGE_CLOSE = process.env.STOP_ON_PAGE_CLOSE ?? "false";
+  if (STOP_ON_PAGE_CLOSE !== "true" && STOP_ON_PAGE_CLOSE !== "false")
+    throw new Error("STOP_ON_PAGE_CLOSE must be 'true' or 'false'");
   const args = process.argv.slice(2);
   if (args.includes("--help") || args.includes("-h")) {
     console.log(
@@ -75,7 +78,10 @@ async function main() {
     dev,
     frontendPort: port + 1,
     executable: executableArg,
-    onShutdown: () => void close(),
+    ...(STOP_ON_PAGE_CLOSE === "true"
+      ? { onShutdown: () => void close() }
+      : {}),
+    onExit: () => void close(),
   });
   const close = async () => {
     if (stopping) return;
@@ -95,7 +101,8 @@ async function main() {
       existing?.app !== "CastleFrenzyLevelEditor" ||
       existing.root !== root ||
       existing.assets !== (assetsArg || defaults.assets) ||
-      existing.development !== dev
+      existing.development !== dev ||
+      existing.autoShutdownOnClose !== (STOP_ON_PAGE_CLOSE === "true")
     )
       throw new Error(
         `Port ${port} is already in use. Choose another with --port.`,

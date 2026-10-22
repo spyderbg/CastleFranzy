@@ -8,7 +8,19 @@ Launch from the project root:
 ./Tools/LevelEditor/level-editor.sh
 ```
 
-Opens **http://127.0.0.1:5190**. The launcher uses `dist/level-editor` when packaged; otherwise it installs locked npm dependencies and builds with Node.js 22.12+ and npm. Launching again opens the existing instance for the same workspace and asset directory. Closing the last tab shuts down the backend after a two-second refresh grace period and stops its test game. **Save & exit** (or Escape outside a field) saves, resumes the test game, and leaves that game running. A browser may keep a manually opened tab visible after exit; the server is closed.
+Opens **http://127.0.0.1:5190**. The launcher uses `dist/level-editor` when packaged; otherwise it installs locked npm dependencies and builds with Node.js 22.12+ and npm. Launching again opens the existing instance for the same workspace, asset directory and page-close setting. **Save & exit** (or Escape outside a field) always saves and stops the backend, resumes the test game, and leaves that game running. A browser may keep a manually opened tab visible after exit; the server is closed.
+
+Page-close shutdown follows `project_structure.md` and is controlled by `STOP_ON_PAGE_CLOSE`:
+
+- Plain Node, `npm start`, development, and the launcher's Node fallback default to `'false'`: closing a tab leaves the backend running. Set `STOP_ON_PAGE_CLOSE=true` to enable shutdown in these modes; only `'true'` and `'false'` are accepted.
+- Packaged `dist/level-editor` and `dist/level-editor.exe` always use `'true'`, baked into a separate backend bundle by `scripts/package.ts`. Runtime environment variables cannot override it. Packaging leaves the ordinary `build/server.cjs` configurable with its default of `'false'`.
+- When enabled, each tab holds an authenticated SSE connection. Closing the **last** tab stops the backend and its test game after a two-second grace period. Refreshes and other open tabs keep it alive; saves and game commands finish before shutdown. Before the first tab connects, it waits indefinitely.
+
+```bash
+cd Tools/LevelEditor
+STOP_ON_PAGE_CLOSE=true npm start -- --no-open
+STOP_ON_PAGE_CLOSE=true npm run dev
+```
 
 ```bash
 ./Tools/LevelEditor/level-editor.sh --no-open
@@ -58,8 +70,9 @@ npm run test:e2e            # copied asset fixture; edits no shipping levels
 LEVEL_EDITOR_GAME_TEST=1 npm test  # native bridge smoke test; requires DISPLAY
 npm run package:linux       # dist/level-editor
 npm run package:windows     # dist/level-editor.exe (Windows x64)
+LEVEL_EDITOR_PACKAGE_TEST=1 npm test  # verify packaged lifetime on Linux after packaging
 ```
 
-`npm run package` creates both targets on Linux, verifying the official Windows Node runtime checksum. Standalone executables include Node, frontend and backend, but use the chosen project's assets and game executable. Windows game bridge source is included; native game/browser verification is performed on Ubuntu. `LEVEL_EDITOR_WORKSPACE`, `PORT`, `LEVEL_EDITOR_NO_OPEN=1` override launch defaults. Development disables automatic tab-close shutdown. Tests can use `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` for an installed browser.
+`npm run package` creates both targets on Linux, verifying the official Windows Node runtime checksum. Standalone executables include Node, frontend and backend, but use the chosen project's assets and game executable. Windows game bridge source is included; native game/browser verification is performed on Ubuntu. `LEVEL_EDITOR_WORKSPACE`, `PORT`, `LEVEL_EDITOR_NO_OPEN=1` override launch defaults. Development honors `STOP_ON_PAGE_CLOSE`, with the same `'false'` default as ordinary Node runs. Tests can use `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` for an installed browser.
 
 See [feature coverage](docs/FEATURES.md) for the mapping to the original editor.

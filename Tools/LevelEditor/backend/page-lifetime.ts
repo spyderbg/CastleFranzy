@@ -42,7 +42,7 @@ export class PageLifetime {
     clearTimeout(this.timer);
     this.timer = setTimeout(() => {
       if (this.disposed || this.connections.size) return;
-      // Closing the browser must not interrupt an in-flight resource build.
+      // Closing the browser must not interrupt a save or game command.
       if (this.busy()) this.scheduleClose();
       else this.onLastPageClose();
     }, this.graceMs);

@@ -10,6 +10,7 @@ import {
 } from "node:fs/promises";
 import path from "node:path";
 import { inject } from "postject";
+import { bundleBackend } from "./backend-build";
 import {
   packageTargets,
   stripWindowsSignature,
@@ -19,10 +20,13 @@ import {
 const targets = packageTargets(process.argv.slice(2));
 await mkdir("dist", { recursive: true });
 await mkdir("build", { recursive: true });
+// A separate bundle leaves `node build/server.cjs` at its persistent default.
+// esbuild replaces the env lookup, so runtime env cannot disable SEA shutdown.
+await bundleBackend("build/desktop-server.cjs", "true");
 await writeFile(
   "build/sea-config.json",
   JSON.stringify({
-    main: "build/server.cjs",
+    main: "build/desktop-server.cjs",
     output: "build/level-editor.blob",
     disableExperimentalSEAWarning: true,
     useSnapshot: false,

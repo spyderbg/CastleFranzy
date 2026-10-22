@@ -1,5 +1,5 @@
 import { build as viteBuild } from "vite";
-import { build } from "esbuild";
+import { bundleBackend } from "./backend-build";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 await viteBuild();
@@ -32,22 +32,5 @@ await writeFile(
   "build/embedded.ts",
   `export const embeddedFiles = ${JSON.stringify(files)};`,
 );
-await build({
-  entryPoints: ["backend/main.ts"],
-  outfile: "build/server.cjs",
-  bundle: true,
-  platform: "node",
-  target: "node22",
-  format: "cjs",
-  plugins: [
-    {
-      name: "embedded-frontend",
-      setup(b) {
-        b.onResolve({ filter: /^\.\/embedded$/ }, () => ({
-          path: path.resolve("build/embedded.ts"),
-        }));
-      },
-    },
-  ],
-});
+await bundleBackend("build/server.cjs");
 console.log("Built Level Editor frontend and backend.");
