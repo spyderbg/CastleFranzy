@@ -35,33 +35,32 @@ Unchanged files retain their original bytes and encoding. Changed saves use UTF-
 
 ## Export and build game data
 
-Use **File → Export binary sprite** for the current document (including unsaved structured edits). The output extension is `.bsprite`. The export profile is the game's `GP_Data` layout from `Data/Sprites/GP_export.fft`: v5 module/frame/animation metadata, with an external atlas.
+The game uses YAML directly; save edits to the `.yaml` source and rebuild resources. **File → Export binary sprite** remains a legacy compatibility option for the current document (including unsaved structured edits). The output extension is `.bsprite`. The export profile is the game's `GP_Data` layout from `Data/Sprites/GP_export.fft`: v5 module/frame/animation metadata, with an external atlas.
 
-Use **File → Run sprite commands** to run `Data/Sprites/Sprites.sprcmd`. Its 29 loads generate 29 binary sprites and the `Fonts.h`, `Ingame.h`, and `Menu.h` frame/animation ID headers. The default output is `build/auroramx-export/bin/`. The command-line equivalent is:
+Use **File → Run sprite commands** to run `Data/Sprites/Sprites.sprcmd`. Its 29 loads copy 29 YAML sprites byte for byte (including comments and formatting) and generate the `Fonts.h`, `Ingame.h`, and `Menu.h` frame/animation ID headers. The default output is `build/auroramx-export/bin/`. The command-line equivalent is:
 
 ```bash
 cd Tools/AuroraMX
 npm ci
 npm run build:cli
 node build/cli.cjs batch ../../Data/Sprites/Sprites.sprcmd --output ../../build/auroramx-export
-node build/cli.cjs export ../../Data/Sprites/Menu/menu_bg.sprite ../../build/menu_bg.bsprite
-node build/cli.cjs validate ../../Data/Sprites/Menu/menu_bg.sprite
+node build/cli.cjs validate ../../Data/Sprites/Menu/menu_bg.yaml
 ```
 
-**Tools → Build game data** runs `rebuild_Linux.sh --resources-only` and shows the live build log. That script now builds/runs the AuroraMX CLI on `Sprites.sprcmd`, stages the new binaries in the selected preset's assets directory, and updates generated headers when their IDs change. It no longer uses pre-exported `.bsprite` files for this build path. For a complete game rebuild, from the project root:
+**Tools → Build game data** runs `rebuild_Linux.sh --resources-only` and shows the live build log. That script now builds/runs the AuroraMX CLI on `Sprites.sprcmd`, stages the unchanged YAML copies in the selected preset's assets directory, and updates generated headers when their IDs change. The resource build does not export binary sprites. Packages contain YAML metadata and atlases; stale `.sprite`/`.bsprite` files are removed during staging. For a complete game rebuild, from the project root:
 
 ```bash
 ./rebuild_Linux.sh
 ./rebuild_Linux.sh --debug --incremental --no-package
 ```
 
-The existing `RESOURCE_TEXTURE_FORMAT` constant still selects PNG or PVR resources. Keep the game's external atlas names/dimensions consistent with its texture bindings. The GP_Data binary does not encode image paths or transparency settings; texture alpha belongs in the PNG/TGA/PVR asset. `Build/bin` is preserved. AuroraGT is no longer required or bundled.
+The existing `RESOURCE_TEXTURE_FORMAT` constant still selects PNG or PVR resources. Keep the game's external atlas names/dimensions consistent with its texture bindings. The runtime reads atlas names, transparency keys and optional alpha masks from YAML. `Build/bin` is preserved. AuroraGT is no longer required or bundled.
 
 ### Compatibility
 
-All 29 current project sprites are supported. All game-visible binary metadata matches the committed AuroraGT output byte for byte, and all generated frame/animation ID values match. Twenty-three binaries match in full. Six legacy binaries append unused embedded image payloads; AuroraMX omits these because the game loads its textures separately and the GP flags do not enable embedded images.
+All 29 current project YAML sprites are supported, and generated frame/animation ID values remain unchanged. Legacy compiler tests retain immutable hashes of the original AuroraGT metadata; those binaries are no longer game resources.
 
-The supported command set is `InitBSpriteFFT`, `Load`, `Save`, `ExportBSpriteFFT`, `ExportFramesID`, `ExportAnimsID`, and `ExportModulesID`, with the project's APPEND/TOUPPER options. The selected FFT must match the bundled GP_Data profile; different layouts are rejected. This is not a generic FFT interpreter or a replacement for AuroraGT's GameEditor/MapEditor, bitmap painting, palette optimization, or tileset authoring. Primitive shape modules can be edited/previewed in `.sprite` documents, but the game's export profile supports image modules in a single external atlas. Out-of-range fields and invalid/cyclic references are rejected.
+The supported command set is `InitBSpriteFFT`, `Load`, `Copy`, `Save`, `ExportBSpriteFFT`, `ExportFramesID`, `ExportAnimsID`, and `ExportModulesID`, with the project's APPEND/TOUPPER options. `Copy` requires YAML input/output and preserves the original bytes, without serialization or binary compilation. The game batch uses `Load`, `Copy` and ID commands only. For legacy binary export, the selected FFT must match the bundled GP_Data profile; different layouts are rejected. This is not a generic FFT interpreter or a replacement for AuroraGT's GameEditor/MapEditor, bitmap painting, palette optimization, or tileset authoring. Primitive shape modules can be edited/previewed in `.sprite` documents, but the game's export profile supports image modules in a single external atlas. Out-of-range fields and invalid/cyclic references are rejected.
 
 ## Development
 

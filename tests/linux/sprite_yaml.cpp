@@ -46,6 +46,15 @@ int main(int argc, char** argv)
 {
     try
     {
+        if (argc > 2 && std::string(argv[1]) == "--validate")
+        {
+            for (int i = 2; i < argc; ++i)
+            {
+                compile(read(argv[i]));
+                std::printf("Valid sprite YAML: %s\n", argv[i]);
+            }
+            return 0;
+        }
         check(argc == 3, "Expected YAML example and legacy binary paths");
         const auto sample = compile(read(argv[1]));
         const std::string legacy = read(argv[2]);

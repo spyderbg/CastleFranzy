@@ -27,7 +27,7 @@ async function main() {
         `${sprite.source} -> ${sprite.output} (${sprite.bytes} bytes)`,
       );
     console.log(
-      `AuroraMX exported ${report.sprites.length} sprites and ${report.files.length - report.sprites.length} ID headers.`,
+      `AuroraMX prepared ${report.sprites.length} sprites and ${report.files.length - report.sprites.length} ID headers.`,
     );
   } else if (command === "convert") {
     if (!args[0]) throw new Error("Convert requires an output filename");

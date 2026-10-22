@@ -10,6 +10,7 @@ import {
 } from "node:fs/promises";
 import path from "node:path";
 import os from "node:os";
+import { createHash } from "node:crypto";
 import { parseSprite, decodeText, serializeSprite } from "../backend/format";
 import { compileSprite } from "../backend/compiler";
 import { batchExport } from "../backend/batch";
@@ -29,19 +30,6 @@ test("unknown named extension blocks survive edits and malformed trailing data i
     /unexpected content/,
   );
 });
-function metadataLength(b: Buffer) {
-  let p = 6;
-  const u16 = () => {
-    const n = b.readUInt16LE(p);
-    p += 2;
-    return n;
-  };
-  for (const bytes of [9, 7, 8, 13, 5, 4]) {
-    const count = u16();
-    p += count * bytes;
-  }
-  return p;
-}
 const macros = (text: string) =>
   Object.fromEntries(
     [...text.matchAll(/^\s*#define\s+(\w+)\s+(\d+)/gm)].map((m) => [
@@ -50,6 +38,10 @@ const macros = (text: string) =>
     ]),
   );
 test("all 29 project sprites round-trip and compile to the original game metadata", async () => {
+  // Immutable hashes of the retired AuroraGT exports, before replacing game
+  // resources with YAML. The legacy compiler remains available in the editor.
+  const references = JSON.parse(await readFile(path.join(root,
+    "tests/fixtures/sprites/legacy-metadata.json"), "utf8"));
   let count = 0,
     exact = 0,
     externalPayload = 0;
@@ -68,23 +60,12 @@ test("all 29 project sprites round-trip and compile to the original game metadat
         sprite,
         name + " text round-trip",
       );
-      const actual = compileSprite(sprite),
-        reference = await readFile(
-          path.join(
-            root,
-            "Data/Sprites/bin",
-            group,
-            name.replace(".sprite", ".bsprite"),
-          ),
-        );
-      const end = metadataLength(reference);
-      assert.equal(actual.length, end, name + " metadata length");
-      assert.deepEqual(
-        actual,
-        reference.subarray(0, end),
-        name + " binary bytes",
-      );
-      if (end === reference.length) exact++;
+      const actual = compileSprite(sprite);
+      const reference = references[group + "/" + name];
+      assert.equal(actual.length, reference.bytes, name + " metadata length");
+      assert.equal(createHash("sha256").update(actual).digest("hex"), reference.sha256,
+        name + " original binary bytes");
+      if (reference.bytes === reference.exportBytes) exact++;
       else externalPayload++;
       count++;
     }
@@ -92,7 +73,7 @@ test("all 29 project sprites round-trip and compile to the original game metadat
   assert.equal(exact, 23);
   assert.equal(externalPayload, 6);
 });
-test("Sprites.sprcmd exports all 29 binaries and exactly the original frame/animation ID values", async () => {
+test("Sprites.sprcmd copies all 29 YAML files unchanged and preserves original ID values", async () => {
   const temp = await mkdtemp(path.join(os.tmpdir(), "auroramx-batch-"));
   try {
     const report = await batchExport(
@@ -101,6 +82,12 @@ test("Sprites.sprcmd exports all 29 binaries and exactly the original frame/anim
     );
     assert.equal(report.sprites.length, 29);
     assert.equal(report.files.length, 32);
+    for (const sprite of report.sprites) {
+      assert.match(sprite.source, /\.yaml$/);
+      assert.match(sprite.output, /\.yaml$/);
+      assert.deepEqual(await readFile(sprite.output), await readFile(sprite.source));
+    }
+    assert.equal(report.files.some((p) => /\.(?:b)?sprite$/.test(p)), false);
     for (const group of ["Fonts", "Ingame", "Menu"])
       assert.deepEqual(
         macros(await readFile(path.join(temp, "bin", group + ".h"), "utf8")),
@@ -112,6 +99,26 @@ test("Sprites.sprcmd exports all 29 binaries and exactly the original frame/anim
         ),
         group + " IDs",
       );
+  } finally {
+    await rm(temp, { recursive: true, force: true });
+  }
+});
+test("YAML copy rejects binary output and path escapes before replacing any files", async () => {
+  const temp = await mkdtemp(path.join(os.tmpdir(), "auroramx-copy-"));
+  try {
+    await writeFile(path.join(temp, "source.yaml"), await readFile(
+      path.join(root, "tests/fixtures/sprites/dizzy_effect.yaml")));
+    await mkdir(path.join(temp, "out"));
+    const existing = path.join(temp, "out", "sprite.yaml");
+    await writeFile(existing, "previous valid copy");
+    for (const [target, error] of [["bad.bsprite", /YAML source and output/],
+      ["../escape.yaml", /leaves the output directory/]] as const) {
+      await writeFile(path.join(temp, "copy.sprcmd"),
+        `Load("source.yaml")\nCopy("sprite.yaml")\nCopy("${target}")`);
+      await assert.rejects(batchExport(path.join(temp, "copy.sprcmd"), path.join(temp, "out")), error);
+      assert.equal(await readFile(existing, "utf8"), "previous valid copy");
+      assert.deepEqual(await readdir(path.join(temp, "out")), ["sprite.yaml"]);
+    }
   } finally {
     await rm(temp, { recursive: true, force: true });
   }

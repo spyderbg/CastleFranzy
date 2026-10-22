@@ -1,0 +1,147 @@
+{
+  "Fonts/ArialSmall.sprite": {
+    "bytes": 4775,
+    "sha256": "3e57a963b464e79871ae06e65ecf79b3bbe747373831aa924914709c583eb60b",
+    "exportBytes": 87098
+  },
+  "Fonts/BerlinSansFB.sprite": {
+    "bytes": 2903,
+    "sha256": "0fc55c51f5301b742d6d6732c1b334926b9861eeb90c936b7a9490cb25bcbbbc",
+    "exportBytes": 2903
+  },
+  "Fonts/ChineseBig.sprite": {
+    "bytes": 9375,
+    "sha256": "f07e51d8a9f0ab6f9a395d561bc0a363871eef0026654aa3bc80950fa99a483e",
+    "exportBytes": 399533
+  },
+  "Fonts/JapaneseBig.sprite": {
+    "bytes": 8799,
+    "sha256": "402496096ad1f9f1fd35a3207a7f91dbe05cc597108dedf1c0a5bf9e4baebc97",
+    "exportBytes": 356508
+  },
+  "Fonts/day_font.sprite": {
+    "bytes": 1389,
+    "sha256": "e667e663fe320ffac0e59d8597571a3bb095170b53915de2d6ea864b2dd02f29",
+    "exportBytes": 1389
+  },
+  "Fonts/money_souls_big_font.sprite": {
+    "bytes": 247,
+    "sha256": "74fd24e090f0520348c68d79e1567fc9997c6896ffee871acd23f321ae404dbf",
+    "exportBytes": 247
+  },
+  "Fonts/money_souls_font.sprite": {
+    "bytes": 1495,
+    "sha256": "03c24a1a855525e36a6e5e8eb81a27238ad3905a4051c2579deb37e7f0dbaf0c",
+    "exportBytes": 1495
+  },
+  "Ingame/dead.sprite": {
+    "bytes": 408,
+    "sha256": "9c28bf375e4b9a4a14290b613558f3f6d23609df72721b847862fd2d698036ae",
+    "exportBytes": 408
+  },
+  "Ingame/dead01.sprite": {
+    "bytes": 882,
+    "sha256": "5311d599eff5ae34b6f309b0cd596aae91c164a6097e069dd4d52aa53239042c",
+    "exportBytes": 882
+  },
+  "Ingame/dizzy_effect.sprite": {
+    "bytes": 335,
+    "sha256": "a6ac4a8c68aaa8717aa4cb5a9288dfb715400b4e7a121d118c5a3412156b6177",
+    "exportBytes": 1006
+  },
+  "Ingame/effects.sprite": {
+    "bytes": 774,
+    "sha256": "c0ba8e6cee1f1d0e0403de305258d3b0e0de96b82d8913e559accdf8517daa21",
+    "exportBytes": 774
+  },
+  "Ingame/fireball.sprite": {
+    "bytes": 1124,
+    "sha256": "bace8c2af46005702069d8763717060abe528a028b0b969cfef4c16e87541057",
+    "exportBytes": 1124
+  },
+  "Ingame/fireball_glow.sprite": {
+    "bytes": 47,
+    "sha256": "7486af38ee30011f57a150a10b8e7cbd60a8d5238ce9e952e2017fa58ce4012e",
+    "exportBytes": 17463
+  },
+  "Ingame/ghost_army.sprite": {
+    "bytes": 226,
+    "sha256": "69b2f58aa629d49b77d7a7f1a48288172caa3bcb187bce7680d2cedb10c4fae1",
+    "exportBytes": 226
+  },
+  "Ingame/griffin_flash_contour.sprite": {
+    "bytes": 47,
+    "sha256": "57f856a7644bb1f960b0544b151eaff670ceb3aae0e4a62d0b19d5fdeb6444ce",
+    "exportBytes": 47
+  },
+  "Ingame/hit.sprite": {
+    "bytes": 226,
+    "sha256": "426d4a25c64cf083cf5b0197e0103fec17b5ffe4eb92aa7eedc533388e43c340",
+    "exportBytes": 226
+  },
+  "Ingame/iceball.sprite": {
+    "bytes": 537,
+    "sha256": "2c0ae1cde46f0c56afce3620939076a3d7ea553fb35482168f4675520f2808b3",
+    "exportBytes": 537
+  },
+  "Ingame/iceball_glow.sprite": {
+    "bytes": 47,
+    "sha256": "7486af38ee30011f57a150a10b8e7cbd60a8d5238ce9e952e2017fa58ce4012e",
+    "exportBytes": 17463
+  },
+  "Ingame/iced_units.sprite": {
+    "bytes": 1783,
+    "sha256": "38e80d68a54b0f69bca95a49447460a65b61153495700b20bf9c91b720e7bb1d",
+    "exportBytes": 1783
+  },
+  "Ingame/lightning.sprite": {
+    "bytes": 2502,
+    "sha256": "5425ecdc4c71dcb72ac46b160e02acb96bcbb6f8ef750af0f15b985002760773",
+    "exportBytes": 2502
+  },
+  "Ingame/stoned_units.sprite": {
+    "bytes": 1784,
+    "sha256": "9d075246705d25081df216920d9c6c97ecea09610c6a8cd1fab753cf8bd686c5",
+    "exportBytes": 1784
+  },
+  "Ingame/walk_dust.sprite": {
+    "bytes": 352,
+    "sha256": "43c4eb49158ff862429d1d0ac3a3563500aaaa365583dcfd47e1dabe0d631f1a",
+    "exportBytes": 352
+  },
+  "Menu/achievements.sprite": {
+    "bytes": 9385,
+    "sha256": "7e28e4f2a816770b7e3b7f59ddc4b019c4652cf2a841562a958fdf7ebb71a731",
+    "exportBytes": 9385
+  },
+  "Menu/fullversion.sprite": {
+    "bytes": 105,
+    "sha256": "214d3c50ea23ca78b81eee73aed3fb36fd7511b9e91d64b088c6ddcc2a1cc5e0",
+    "exportBytes": 105
+  },
+  "Menu/help_images.sprite": {
+    "bytes": 389,
+    "sha256": "487a31d4f6300251416b397e2baccbd8f719ef38b78f52a84555b6d1bc85149d",
+    "exportBytes": 389
+  },
+  "Menu/high_score_icone.sprite": {
+    "bytes": 322,
+    "sha256": "6f726b40f8e548caa213d1e597ce2bd461eca063d254f57246d2e7e6ec2d6a13",
+    "exportBytes": 322
+  },
+  "Menu/menu.sprite": {
+    "bytes": 5019,
+    "sha256": "f0c2bf3284f8f6daab79fbf18f94dc2a6616f2e8ace73d8db1fd5c5154181431",
+    "exportBytes": 5019
+  },
+  "Menu/menu_bg.sprite": {
+    "bytes": 349,
+    "sha256": "a21cf34d863da7c38a2d9328c9ac3e0b533e10990e8700d9f99bdffd0a5c9bf0",
+    "exportBytes": 349
+  },
+  "Menu/shop.sprite": {
+    "bytes": 1366,
+    "sha256": "390830e32a0b95b5f515162d02107bbbeb7973a56110eb1ee833837ac074ea72",
+    "exportBytes": 1366
+  }
+}

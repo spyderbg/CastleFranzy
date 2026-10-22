@@ -149,7 +149,6 @@ public:
 	//USE_EXTERN_IMAGE
 private:
 	bool Load(byte * rawdata);
-	bool LoadSprite(const char * spriteName);
 	bool LoadYamlSprite(const char * spriteName);
 
 public:

@@ -40,7 +40,7 @@ if exist "bin\*.h" (
 )
 
 rem Create 'sprcmd' file for AuroraMX
-echo InitBSpriteFFT( ^"GP_export.fft^", WRITE_LOG ) > %SPRCMD_NAME%
+echo // Copy YAML metadata unchanged and generate runtime ID headers. > %SPRCMD_NAME%
 
 rem Remove all bkp files
 echo.
@@ -60,18 +60,22 @@ for /D %%d in (*.) do (
 		echo.																			>> %SPRCMD_NAME%				
 		echo.																			>> %SPRCMD_NAME%				
 		echo //---------------------------------------------------						>> %SPRCMD_NAME%						
-		echo // Export %%d																>> %SPRCMD_NAME%				
+		echo // Copy %%d YAML and generate IDs																>> %SPRCMD_NAME%
 		echo //---------------------------------------------------						>> %SPRCMD_NAME%						
 		echo.																			>> %SPRCMD_NAME%				
 				
 		rem Generate sprite command file for current dir
-		for %%f in (%%d\*.sprite) do (
-			echo Load(^"%%f^"^) 														>> %SPRCMD_NAME%
-rem			echo ExportModulesID(^"bin\%%d_m.h^", ^"%%d_M_%%~nf_^", APPEND^|TOUPPER^)	>> %SPRCMD_NAME%
-			echo ExportFramesID(^"bin\%%d.h^", ^"%%d_F_%%~nf_^", APPEND^|TOUPPER^)	>> %SPRCMD_NAME%
-			echo ExportAnimsID(^"bin\%%d.h^", ^"%%d_A_%%~nf_^", APPEND^|TOUPPER^)		>> %SPRCMD_NAME%			
-rem			echo ExportBSpriteEx(^"bin\%%d_%%~nf.bsprite^",GLOBAL, I256, _8888^)							>> %SPRCMD_NAME%	
-			echo ExportBSpriteFFT(^"bin\%%d\%%~nf.bsprite^"^)							>> %SPRCMD_NAME%
+		for %%f in (%%d\*.yaml) do (
+			if exist "%%f" (
+				echo Load(^"%%f^"^) >> %SPRCMD_NAME%
+				echo ExportFramesID(^"bin\%%d.h^", ^"%%d_F_%%~nf_^", APPEND^|TOUPPER^) >> %SPRCMD_NAME%
+				echo ExportAnimsID(^"bin\%%d.h^", ^"%%d_A_%%~nf_^", APPEND^|TOUPPER^) >> %SPRCMD_NAME%
+				echo Copy(^"bin\%%d\%%~nf.yaml^"^) >> %SPRCMD_NAME%
+			)
+		)
+
+		for %%f in (%%d\*.png) do (
+			if exist "%%f" copy /Y "%%f" "bin\%%d" > NUL
 		)
 
 		rem Copy all .pvr files to 'bin' dir
@@ -134,6 +138,8 @@ if not "%1"=="no_bar" (
 	if not exist %OUTPUT_PATH%\%PACK_NAME% (
 		mkdir %OUTPUT_PATH%\%PACK_NAME%
 	)
+	rem Remove obsolete sprite metadata from previous builds.
+	del /S /Q "%OUTPUT_PATH%\%PACK_NAME%\*.bsprite" "%OUTPUT_PATH%\%PACK_NAME%\*.sprite" 2>NUL
 	xcopy /S /Y bin %OUTPUT_PATH%\%PACK_NAME%
 	rmdir bin	
 

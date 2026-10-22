@@ -2137,7 +2137,7 @@ const previewOptions = computed(() => [
             </template>
             <template v-if="modal === 'export'">
               <p>
-                Export a game-compatible binary sprite using the GP_Data
+                Export a legacy binary sprite using the GP_Data
                 profile. The texture atlas stays separate.
               </p>
               <label class="dialog-field">
@@ -2177,8 +2177,8 @@ const previewOptions = computed(() => [
             </template>
             <template v-if="modal === 'batch'">
               <p>
-                Run the project's sprite command file to export binary sprites
-                and C/C++ frame and animation IDs.
+                Run the project's sprite command file to copy YAML sprites
+                and generate C/C++ frame and animation IDs.
               </p>
               <label class="dialog-field">
                 Command file
@@ -2222,8 +2222,8 @@ const previewOptions = computed(() => [
                                 s.output + ' (' + s.bytes + ' bytes)',
                             )
                             .join('\n') +
-                          `\nExported ${result.sprites.length} sprites.`;
-                        notify(`Exported ${result.sprites.length} sprites.`);
+                          `\nPrepared ${result.sprites.length} sprites.`;
+                        notify(`Prepared ${result.sprites.length} sprites.`);
                       })
                   "
                 >
@@ -2282,7 +2282,7 @@ const previewOptions = computed(() => [
                   .auroramx/backups.
                 </p>
                 <p>
-                  <b>Export:</b> GP_Data .bsprite output, or run Sprites.sprcmd
+                  <b>Game data:</b> run Sprites.sprcmd to copy YAML and generate IDs
                   for all sprites and headers. Build game data runs the Linux
                   resource pipeline.
                 </p>

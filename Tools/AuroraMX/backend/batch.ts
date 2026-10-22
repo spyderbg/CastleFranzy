@@ -6,7 +6,9 @@ import {
   parseSpriteAny,
   decodeText,
   serializeSpriteFor,
+  isYamlPath,
 } from "./format";
+import { validateSprite } from "../shared/sprite";
 
 export async function atomicWrite(file: string, data: string | Buffer) {
   await mkdir(path.dirname(file), { recursive: true });
@@ -35,6 +37,7 @@ export async function batchExport(commandFile: string, outputRoot?: string) {
   const outputs = new Map<string, Buffer | string>();
   const report: { source: string; output: string; bytes: number }[] = [];
   let currentSource = "";
+  let currentBytes: Buffer | undefined;
   const resolve = (p: string) => path.resolve(base, p.replace(/\\/g, "/"));
   const out = (p: string) => {
     const result = outputRoot
@@ -71,7 +74,8 @@ export async function batchExport(commandFile: string, outputRoot?: string) {
     }
     if (name === "Load") {
       currentSource = resolve(args[0]);
-      sprite = parseSpriteAny(decodeText(await readFile(currentSource)));
+      currentBytes = await readFile(currentSource);
+      sprite = parseSpriteAny(decodeText(currentBytes));
       continue;
     }
     if (!sprite) throw new Error(`${name} requires Load first`);
@@ -91,6 +95,15 @@ export async function batchExport(commandFile: string, outputRoot?: string) {
         output: target,
         bytes: data.length,
       });
+    } else if (name === "Copy") {
+      const target = out(args[0]);
+      if (!isYamlPath(currentSource) || !isYamlPath(target))
+        throw new Error("Copy requires YAML source and output filenames");
+      const errors = validateSprite(sprite);
+      if (errors.length) throw new Error(errors.join("\n"));
+      // Keep comments, formatting and IDs exactly as authored; no binary export.
+      outputs.set(target, currentBytes!);
+      report.push({ source: currentSource, output: target, bytes: currentBytes!.length });
     } else if (
       ["ExportFramesID", "ExportAnimsID", "ExportModulesID"].includes(name)
     ) {

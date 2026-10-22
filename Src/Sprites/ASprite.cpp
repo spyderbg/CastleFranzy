@@ -188,23 +188,14 @@ bool ASprite::Load( const char *name )
 		return LoadYamlSprite(file_base.c_str());
 	if (file_base.size() >= 4 && file_base.subString(file_base.size() - 4, 4) == ".yml")
 		return LoadYamlSprite(file_base.c_str());
-	if (file_base.size() >= 8 && file_base.subString(file_base.size() - 8, 8) == ".bsprite")
+	// Call sites may supply a stem or an explicit YAML filename.
+	for (const char* extension : {".yaml", ".yml"})
 	{
-		if (!LoadSprite(file_base.c_str())) return false;
-		file_base = file_base.subString(0, file_base.size() - 8);
+		const stringc yamlName = file_base + extension;
+		if (__IRR_FILE_SYSTEM()->existFile(yamlName.c_str())) return LoadYamlSprite(yamlName.c_str());
 	}
-	else
-	{
-		// Editable YAML overrides an older binary export beside it.
-		for (const char* extension : {".yaml", ".yml"})
-		{
-			const stringc yamlName = file_base + extension;
-			if (__IRR_FILE_SYSTEM()->existFile(yamlName.c_str())) return LoadYamlSprite(yamlName.c_str());
-		}
-		if (!LoadSprite((file_base + ".bsprite").c_str())) return false;
-	}
-	const stringc texture = FindSpriteTexture(file_base);
-	return texture.size() && LoadTexture(texture.c_str());
+	Logs::error("Missing sprite YAML: %s.yaml\n", file_base.c_str());
+	return false;
 }
 
 bool ASprite::LoadYamlSprite(const char* spriteName)
@@ -266,24 +257,6 @@ bool ASprite::LoadYamlSprite(const char* spriteName)
 		if (!prepared) return false;
 	}
 	return Load(data.binary.data()) && LoadTexture(textureName.c_str());
-}
-
-bool ASprite::LoadSprite(const char * spriteName)
-{
-	/// Load sprite
-	IReadFile* file = __IRR_FILE_SYSTEM()->createAndOpenFile(spriteName);
-	if( file == NULL )
-		return false;
-
-	u32 file_size = file->getSize();
-	byte* rawData = NEW byte[file_size];
-	s32 read_size = file->read( rawData, file_size );
-	
-	file->drop();
-
-	const bool loaded = read_size == file_size && file_size >= 8 && Load(rawData);
-	SAFE_DEL_ARRAY( rawData );
-	return loaded;
 }
 
 bool ASprite::LoadTexture(const char * textureName)

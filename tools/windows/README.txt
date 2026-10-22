@@ -9,4 +9,5 @@ reports a missing VCRUNTIME140.dll or MSVCP140.dll.
 
 OpenAL Soft 1.24.3 is licensed under the LGPL; see licenses/OpenAL-Soft.txt.
 Source: https://github.com/kcat/openal-soft/tree/1.24.3
+Sprite metadata is YAML; edit the .yaml sources and rebuild resources.
 Build with CMake and a 64-bit compiler (see the project readme.txt).

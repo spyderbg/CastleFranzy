@@ -105,6 +105,8 @@ if(BUILD_TESTING)
     add_test(NAME sprite_yaml COMMAND SpriteYamlCheck
         "${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/sprites/dizzy_effect.yaml"
         "${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/sprites/dizzy_effect.bsprite")
+    file(GLOB GAME_SPRITE_YAML CONFIGURE_DEPENDS "Data/Sprites/*/*.yaml" "Data/Sprites/*/*.yml")
+    add_test(NAME sprite_yaml_assets COMMAND SpriteYamlCheck --validate ${GAME_SPRITE_YAML})
 
     add_executable(XmlRoundtripCheck tests/linux/xml_roundtrip.cpp)
     target_link_libraries(XmlRoundtripCheck PRIVATE Irrlicht)
@@ -128,7 +130,9 @@ endif()
 
 if(WIN32)
     install(TARGETS FortressDefender OpenAL RUNTIME DESTINATION bin)
-    install(DIRECTORY "${CASTLE_ASSET_DIR}/" DESTINATION assets)
+    install(DIRECTORY "${CASTLE_ASSET_DIR}/" DESTINATION assets
+        PATTERN "*.sprite" EXCLUDE PATTERN "*.bsprite" EXCLUDE
+        PATTERN "resources.pack" EXCLUDE PATTERN ".svn" EXCLUDE)
     # OpenAL Soft is distributed under the LGPL; preserve its license and source URL.
     install(FILES "${openal_soft_SOURCE_DIR}/COPYING" DESTINATION licenses RENAME OpenAL-Soft.txt)
     install(FILES Lib/yaml-cpp.LICENSE DESTINATION licenses RENAME yaml-cpp.txt)

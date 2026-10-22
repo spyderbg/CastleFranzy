@@ -25,7 +25,7 @@ Set RESOURCE_TEXTURE_FORMAT at the top of this script to png or pvr, or run:
     RESOURCE_TEXTURE_FORMAT=pvr ./rebuild_Linux.sh
 
 Requires Node.js 22.12+, npm, and the Linux build dependencies (see readme.txt).
-AuroraMX regenerates sprite binaries and ID headers from Sprites.sprcmd.
+AuroraMX copies YAML sprites unchanged and generates their ID headers.
 Blender 5.2+ exports the .blend sources registered in Data/Scenes/models.json.
 Set BLENDER_BIN to use a particular Blender executable.
 PNG mode also requires
@@ -71,12 +71,13 @@ printf 'Version: %s; textures: %s\n' "$version" "$RESOURCE_TEXTURE_FORMAT"
 
 cmake --fresh --preset "$preset" -DCASTLE_ASSET_DIR="$asset_dir"
 
-printf '\nExport sprites with AuroraMX\n'
+printf '\nCopy YAML sprites and generate ID headers with AuroraMX\n'
 auroramx_dir="$project_dir/Tools/AuroraMX"
 if [[ ! -x "$auroramx_dir/node_modules/.bin/esbuild" ]]; then
     npm ci --prefix "$auroramx_dir" --no-audit --no-fund
 fi
 npm run build:cli --prefix "$auroramx_dir"
+cmake -E rm -rf "$build_dir/auroramx/bin"
 node "$auroramx_dir/build/cli.cjs" batch "$project_dir/Data/Sprites/Sprites.sprcmd" \
     --output "$build_dir/auroramx"
 

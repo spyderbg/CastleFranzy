@@ -51,7 +51,7 @@ table. No 32-bit compiler, multilib packages or asset conversion is needed.
    PNG mode requires Pillow (sudo apt install python3-pil). It prefers matching
    PNGs in Data/Sprites, Data/Fonts, Data/Scenes and Data/Effects; otherwise it
    decodes exported PVR textures or converts TGA/BMP images. PNG atlases must
-   retain the dimensions used by their exported .bsprite files. The PNG output
+   retain the dimensions used by their YAML module coordinates. The PNG output
    contains no PVR/TGA/BMP textures. Existing model/effect texture references
    resolve to the corresponding PNGs at runtime. PVR mode retains the original
    PVR textures and TGA fallbacks, as in the Windows build.
@@ -67,10 +67,10 @@ table. No 32-bit compiler, multilib packages or asset conversion is needed.
 
    Node.js 22.12+ and npm are required for the AuroraMX sprite exporter.
    The resource step runs Data/Sprites/Sprites.sprcmd through AuroraMX to
-   regenerate all 29 .bsprite files and frame/animation ID headers. Its npm
+   copy all 29 .yaml files unchanged and generate frame/animation ID headers. Its npm
    dependencies are installed automatically on the first rebuild. Generated
-   sprites are staged in the preset's auroramx/bin directory, then copied into
-   its assets directory; original Data/Sprites/bin exports are preserved.
+   YAML files are staged in the preset's auroramx/bin directory, then copied
+   into its assets directory. No .sprite or .bsprite files are packaged.
    Blender 5.2+ exports the .blend models registered in Data/Scenes/models.json.
    Start with Data/Scenes/Goblin/goblin_smooth.blend: save edits, then rebuild.
    All 33 mesh scenes now have *_smooth.blend projects. Data/Scenes/README.md
@@ -116,12 +116,13 @@ project remains archived under Projects/IPhone.
 
 AuroraMX sprite editor:
 
-   The C++ runtime loads both .bsprite and AuroraMX .yaml/.yml metadata.
-   ASprite::Load("Ingame/dizzy_effect") prefers YAML beside the binary export;
-   an invalid YAML file reports an error instead of using a stale .bsprite.
-   An explicit .bsprite or .yaml extension selects that format directly.
-   rebuild_Linux.sh stages source YAML files from Data/Sprites into assets/Sprites.
-   For a direct CMake run with Build/bin, put YAML in Build/bin/Sprites instead.
+   The C++ runtime loads AuroraMX .yaml/.yml metadata directly.
+   ASprite::Load("Ingame/dizzy_effect") resolves the matching YAML file.
+   Explicit .yaml/.yml filenames also work. Missing or invalid YAML reports
+   failure. The game does not load .sprite or .bsprite files.
+   Resource builds copy YAML byte for byte, preserving comments and formatting,
+   and generate the ID headers from the same YAML sources. Build/bin/Sprites
+   also contains YAML, so a direct CMake build needs no sprite conversion.
 
    Use Data/Sprites/Ingame/dizzy_effect.yaml as the schema example. IDs are
    hexadecimal strings; document order determines runtime module/frame/animation
@@ -143,7 +144,7 @@ AuroraMX sprite editor:
    This opens the TypeScript/Vue 3 editor in a browser at localhost:5180.
    It follows AuroraGT's module/frame/animation layout and supports source
    editing, undo/redo, PNG/TGA/BMP atlas previews, collision rectangles,
-   animation playback, .bsprite export, and batch .sprcmd execution.
+   animation playback, YAML authoring, and batch .sprcmd execution.
    Tools > Build game data runs the Linux resource build with AuroraMX.
    See Tools/AuroraMX/README.md for launch, development and format details.
 
@@ -175,6 +176,8 @@ Windows x64 build (Visual Studio 2022):
 
    rebuild_Win32.bat
 
+   Requires Node.js 22.12+, npm and Python 3.10+. The script copies YAML and
+   regenerates sprite ID headers into build/windows-x64/assets before compiling.
    Use --debug, --incremental or --no-package as needed. The ZIP is written to
    build/packages/CastleFrenzy_Windows_x64.zip. Extract it and run
    bin/FortressDefender.exe. CMake packages only the native executable, its
