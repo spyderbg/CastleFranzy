@@ -22,6 +22,7 @@
 #include "PlatformSpecifics/Win32/CImageLoaderPVR.h"
 
 #include "Editor/GS_Editor.h"
+#include "Editor/ExternalEditor.h"
 #include "Fonts/FontManager.h"
 
 #include "Game/Playfield.h"
@@ -255,17 +256,20 @@ int main(int argc, char* argv[])
     const std::string packaged = directory + "../assets";
     if (GetFileAttributesA(packaged.c_str()) != INVALID_FILE_ATTRIBUTES) assets = packaged;
     int frames = 0;
+    std::string editorBridge, saveDirectory;
     for (int i = 1; i < argc; ++i) {
         if (!strcmp(argv[i], "--assets") && i + 1 < argc) assets = argv[++i];
+        else if (!strcmp(argv[i], "--editor-bridge") && i + 1 < argc) editorBridge = argv[++i];
+        else if (!strcmp(argv[i], "--save-dir") && i + 1 < argc) saveDirectory = argv[++i];
         else if (!strcmp(argv[i], "--frames") && i + 1 < argc) frames = atoi(argv[++i]);
-        else { fprintf(stderr, "Usage: %s [--assets directory] [--frames count]\n", argv[0]); return 2; }
+        else { fprintf(stderr, "Usage: %s [--assets directory] [--frames count] [--editor-bridge directory] [--save-dir directory]\n", argv[0]); return 2; }
     }
     if (_chdir(assets.c_str()) != 0) {
         fprintf(stderr, "Could not open asset directory: %s\n", assets.c_str());
         return 1;
     }
     const char* localData = getenv("LOCALAPPDATA");
-    const std::string save = std::string(localData && *localData ? localData : directory.c_str()) + "\\CastleFrenzy\\";
+    const std::string save = !saveDirectory.empty() ? saveDirectory + "\\" : std::string(localData && *localData ? localData : directory.c_str()) + "\\CastleFrenzy\\";
     if (SHCreateDirectoryExA(NULL, (save + "profiles").c_str(), NULL) != ERROR_SUCCESS &&
         GetFileAttributesA((save + "profiles").c_str()) == INVALID_FILE_ATTRIBUTES) {
         fprintf(stderr, "Could not create save directory: %s\n", save.c_str());
@@ -305,9 +309,11 @@ int main(int argc, char* argv[])
 	GS_Editor::GetInstance()->init();
 
 	int frameCount = 0;
+    ExternalEditor externalEditor(editorBridge);
 	while(device->run())
 	{
-		if( !app->isPaused() )
+        externalEditor.update();
+		if( !app->isPaused() && !externalEditor.paused() )
 		{
 			if (!g_editor)
 			{

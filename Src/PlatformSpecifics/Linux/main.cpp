@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Core/irrlicht.h"
 #include "Editor/GS_Editor.h"
+#include "Editor/ExternalEditor.h"
 #include "Game/Playfield.h"
 #include "IO/TouchScreen/TouchPad.h"
 #include "PlatformSpecifics/Win32/CImageLoaderPVR.h"
@@ -109,14 +110,18 @@ int main(int argc, char** argv)
     const char* assets = CASTLE_ASSET_DIR;
     int frames = 0;
     int scale = 2;
+    std::string editorBridge;
+    std::string saveDirectory;
     for (int i=1; i<argc; ++i)
     {
         if (!strcmp(argv[i], "--assets") && i+1<argc) assets = argv[++i];
         else if (!strcmp(argv[i], "--frames") && i+1<argc) frames = atoi(argv[++i]);
+        else if (!strcmp(argv[i], "--editor-bridge") && i+1<argc) editorBridge = argv[++i];
+        else if (!strcmp(argv[i], "--save-dir") && i+1<argc) saveDirectory = argv[++i];
         else if (!strcmp(argv[i], "--scale") && i+1<argc &&
                  argv[i+1][0] >= '1' && argv[i+1][0] <= '4' && argv[i+1][1] == '\0')
             scale = argv[++i][0] - '0';
-        else { fprintf(stderr, "Usage: %s [--assets directory] [--frames count] [--scale 1|2|3|4]\n", argv[0]); return 2; }
+        else { fprintf(stderr, "Usage: %s [--assets directory] [--frames count] [--scale 1|2|3|4] [--editor-bridge directory] [--save-dir directory]\n", argv[0]); return 2; }
     }
     if (chdir(assets) != 0) { perror(assets); return 1; }
     const char* dataHome = getenv("XDG_DATA_HOME");
@@ -124,6 +129,7 @@ int main(int argc, char** argv)
     std::string save = dataHome && *dataHome ? dataHome : std::string(home ? home : ".") + "/.local/share";
     // Create parents without invoking a shell; XDG_DATA_HOME may contain spaces.
     save += "/castle-frenzy/";
+    if (!saveDirectory.empty()) save = saveDirectory + "/";
     for (size_t i=1; i<save.size(); ++i) if (save[i]=='/') mkdir(save.substr(0,i).c_str(),0700);
 
     const dimension2d<s32> gameSize(OS_SCREEN_W, OS_SCREEN_H);
@@ -142,9 +148,11 @@ int main(int argc, char** argv)
     DesktopInput input(driver);
     app->RegisterForIrrlichtEvents(&input);
     int count = 0;
+    ExternalEditor externalEditor(editorBridge);
     while (device->run())
     {
-        if (!app->isPaused())
+        externalEditor.update();
+        if (!app->isPaused() && !externalEditor.paused())
         {
             if (g_editor)
             {

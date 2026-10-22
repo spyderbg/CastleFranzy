@@ -98,6 +98,16 @@ table. No 32-bit compiler, multilib packages or asset conversion is needed.
 Controls: left mouse button/drag emulates touch; right mouse button emulates
 another touch. Escape exits. F2 halves game speed; F3 doubles game speed.
 After loading, E or R opens the built-in editor (waves, weapons and models).
+The same features are available in a standalone browser editor:
+
+   ./Tools/LevelEditor/level-editor.sh
+
+It follows AuroraMX's Vue frontend/Fastify backend application structure and
+opens http://127.0.0.1:5190. It edits Build/bin/Levels by default, with backups,
+and offers wave timelines, weapons/spells, animated model previews, and native
+Play/pause/DIE/live-spawn controls. Rebuild the game once for Play support:
+cmake --build --preset linux-debug. See Tools/LevelEditor/README.md.
+
 The game stops updating while the editor is open. Select a level/day in the
 waves tab, edit its waves, and use Play to test it. Save writes changes; Exit
 or Escape saves and returns to the game. Editor controls use the window's
