@@ -13,6 +13,10 @@ The format is a small block language::
 
 Comments start with ``//`` or are written as ``/* ... */`` blocks.  Numbers
 are decimal or hexadecimal, and file names are quoted strings.
+
+A string is written between double quotes.  A name that holds a double quote
+is written between single quotes, and only the delimiter is escaped: a
+backslash is a plain character, as in the paths and in the glyph names.
 """
 
 from __future__ import annotations
@@ -37,7 +41,10 @@ from sprite_model import (
 _TOKEN = re.compile(
     r"//[^\r\n]*"                          # line comment
     r"|/\*[\s\S]*?\*/"                     # block comment
-    r"|\"(?:\\.|[^\"\\\r\n])*\""           # quoted string
+    r"|\"(?:[^\"\\\r\n]|\\.)*\""           # double quoted string
+    r"|\"[^\"\r\n]*\""                     # double quoted string, no escapes
+    r"|'(?:[^'\\\r\n]|\\.)*'"              # single quoted string
+    r"|'[^'\r\n]*'"                        # single quoted string, no escapes
     r"|[{}]"                               # braces
     r"|[^\s{}\"]+",                        # word
     re.ASCII,
@@ -78,6 +85,26 @@ def decode_text(data: bytes) -> str:
         raise SpriteError("the text is neither UTF-8, UTF-16 nor Windows-1252: %s" % error) from None
 
 
+def _unescape(value: str, quote: str) -> str:
+    """Read a quoted string.
+
+    The editor escapes the delimiter and nothing else, so a backslash in a
+    path or in a name is a plain character.  A backslash in front of the
+    delimiter is the escape of that delimiter.
+    """
+    out = []
+    index = 0
+    while index < len(value):
+        char = value[index]
+        if char == "\\" and index + 1 < len(value) and value[index + 1] == quote:
+            out.append(quote)
+            index += 2
+            continue
+        out.append(char)
+        index += 1
+    return "".join(out)
+
+
 def _tokenize(text: str) -> list[_Token]:
     tokens = []
     line = 1
@@ -88,8 +115,8 @@ def _tokenize(text: str) -> list[_Token]:
         raw = match.group(0)
         if raw.startswith("//") or raw.startswith("/*"):
             continue
-        quoted = raw.startswith('"')
-        value = raw[1:-1].replace('\\"', '"') if quoted else raw
+        quoted = raw[0] in "\"'"
+        value = _unescape(raw[1:-1], raw[0]) if quoted else raw
         tokens.append(_Token(value, line, match.start(), match.end(), quoted))
     return tokens
 
@@ -280,8 +307,12 @@ def _quote(value: str) -> str:
     """Write a quoted string.
 
     The legacy format uses the backslash as a path separator and does not
-    escape it, so only the quote character itself is escaped.
+    escape it, so only the delimiter is escaped.  A name that holds a double
+    quote is written between single quotes, the way the editor wrote the
+    glyph of the double quote.
     """
+    if '"' in value and "'" not in value:
+        return "'" + value + "'"
     return '"' + value.replace('"', '\\"') + '"'
 
 

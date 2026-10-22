@@ -16,19 +16,19 @@ installed. The editor check needs the AuroraMX command line tool (see below).
 
 ```bash
 # one file, written next to the source
-python3 tools/sprites_opencode/convert.py convert Data/Sprites/Ingame/effects.sprite
+python3 tools/sprites_conver/convert.py convert Data/Sprites/Ingame/effects.sprite
 
 # a whole tree, written into another directory
-python3 tools/sprites_opencode/convert.py convert Data/Sprites --output build/yaml
+python3 tools/sprites_conver/convert.py convert Data/Sprites --output build/yaml
 
 # back to the legacy format
-python3 tools/sprites_opencode/convert.py reverse build/yaml --output build/sprite
+python3 tools/sprites_conver/convert.py reverse build/yaml --output build/sprite
 
 # read a document and report what is wrong with it
-python3 tools/sprites_opencode/convert.py verify Data/Sprites/Menu/menu.sprite
+python3 tools/sprites_conver/convert.py verify Data/Sprites/Menu/menu.sprite
 
 # a short summary of a document
-python3 tools/sprites_opencode/convert.py info Data/Sprites/Menu/menu.sprite
+python3 tools/sprites_conver/convert.py info Data/Sprites/Menu/menu.sprite
 ```
 
 Options of `convert` and `reverse`:
@@ -131,6 +131,19 @@ resolves them and prints a note for each change that matters.
 * **Everything else is kept**: names, collision rectangles, module positions,
   animation times and the order of all lists.
 
+## The strings of the legacy format
+
+The legacy format writes a name between double quotes and escapes only the
+delimiter, so a backslash is a plain character. The font sprites of the
+GameloftLive SDK show both corner cases:
+
+* the glyph of the backslash is written `"\"`, with the backslash as the last
+  character of the name;
+* the glyph of the double quote is written `'"'`, between single quotes.
+
+The reader knows both forms, and the writer uses the single quotes for a name
+that holds a double quote, the way the editor did.
+
 ## Publishing the result
 
 The game prefers a `.yaml` over the binary export of the same sprite, so a
@@ -139,7 +152,7 @@ review folder first, check the sprites in the game, and copy the files over
 afterwards:
 
 ```bash
-python3 tools/sprites_opencode/convert.py convert Data/Sprites --output build/yaml
+python3 tools/sprites_conver/convert.py convert Data/Sprites --output build/yaml
 ```
 
 Do not convert in place with `--overwrite` on `Data/Sprites`:
@@ -165,7 +178,7 @@ document is known to load:
 ## Verification
 
 ```bash
-python3 tools/sprites_opencode/test_convert.py
+python3 tools/sprites_conver/test_convert.py
 ```
 
 The suite covers the legacy reader and writer, the YAML reader and writer, the
@@ -175,6 +188,10 @@ AuroraMX bundle is built, it also loads every converted sprite with that tool.
 
 To compare with the hand-written reference, convert `dizzy_effect.sprite` and
 diff the result. The differences are comments and column alignment only.
+
+Every sprite of `Data/Sprites` also compiles into the same binary as its
+`.bsprite` export when the game loads it, which is checked by
+`tests/linux/sprite_yaml.cpp`.
 
 ## The files
 

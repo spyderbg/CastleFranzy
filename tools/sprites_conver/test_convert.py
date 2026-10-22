@@ -1,4 +1,4 @@
-"""Run with: python3 tools/sprites_opencode/test_convert.py
+"""Run with: python3 tools/sprites_conver/test_convert.py
 
 The tests cover the legacy reader, the YAML reader and writer, the conversion
 of every sprite of the project and the rules the game applies to YAML sprites.
@@ -71,6 +71,41 @@ LEGACY = """// saved by AuroraGT v0.1.0.2 (SpriteEditor v0.1.0.5)
 }
 """
 
+# The editor does not escape the backslash, so the glyph of the backslash is
+# written as it is.
+LEGACY_BACKSLASH = """/*SPRITE*/ {
+    VERSION 0001
+    IMAGE 0x0000 ".\\font.bmp"
+    MODULES
+    {
+        MD\t0x1000\tMD_IMAGE\t0\t255\t-9\t0\t0\t"\\"
+    }
+    FRAME ""
+    {
+        0x2000
+        FM 0x1000 0 0
+    }
+    SPRITE_END
+}
+"""
+
+# A name that holds a double quote is written between single quotes.
+LEGACY_SINGLE_QUOTES = """/*SPRITE*/ {
+    VERSION 0001
+    IMAGE 0x0000 ".\\font.bmp"
+    MODULES
+    {
+        MD\t0x1000\tMD_IMAGE\t0\t322\t402\t17\t14\t'"'
+    }
+    FRAME ""
+    {
+        0x2000
+        FM 0x1000 0 0
+    }
+    SPRITE_END
+}
+"""
+
 
 class LegacyReaderTests(unittest.TestCase):
     def setUp(self):
@@ -115,9 +150,29 @@ class LegacyReaderTests(unittest.TestCase):
         with self.assertRaises(SpriteError):
             decode_text(b"IMAGE 0x0000 \"caf\x81.tga\"")
 
+    def test_reads_a_backslash_in_a_name(self):
+        document = parse_sprite(LEGACY_BACKSLASH)
+        self.assertEqual(document.modules[0].name, "\\")
+
+    def test_reads_a_name_between_single_quotes(self):
+        document = parse_sprite(LEGACY_SINGLE_QUOTES)
+        self.assertEqual(document.modules[0].name, '"')
+
+    def test_writes_a_name_with_a_quote_between_single_quotes(self):
+        document = parse_sprite(LEGACY_SINGLE_QUOTES)
+        self.assertIn("'\"'", dump_sprite(document))
+
     def test_writes_a_document_the_reader_accepts(self):
         restored = parse_sprite(dump_sprite(self.document))
         self.assertEqual(restored, self.document)
+
+    def test_a_document_with_a_backslash_survives_the_round_trip(self):
+        document = parse_sprite(LEGACY_BACKSLASH)
+        self.assertEqual(parse_sprite(dump_sprite(document)), document)
+
+    def test_a_document_with_a_quote_survives_the_round_trip(self):
+        document = parse_sprite(LEGACY_SINGLE_QUOTES)
+        self.assertEqual(parse_sprite(dump_sprite(document)), document)
 
 
 class YamlReaderTests(unittest.TestCase):

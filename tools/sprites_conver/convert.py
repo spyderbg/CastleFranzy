@@ -8,11 +8,11 @@ satisfy both readers.
 
 Usage::
 
-    python3 tools/sprites_opencode/convert.py convert Data/Sprites/Ingame/effects.sprite
-    python3 tools/sprites_opencode/convert.py convert Data/Sprites --output build/yaml
-    python3 tools/sprites_opencode/convert.py reverse build/yaml/Ingame/effects.yaml
-    python3 tools/sprites_opencode/convert.py verify Data/Sprites/Menu/menu.sprite
-    python3 tools/sprites_opencode/convert.py info Data/Sprites/Menu/menu.sprite
+    python3 tools/sprites_conver/convert.py convert Data/Sprites/Ingame/effects.sprite
+    python3 tools/sprites_conver/convert.py convert Data/Sprites --output build/yaml
+    python3 tools/sprites_conver/convert.py reverse build/yaml/Ingame/effects.yaml
+    python3 tools/sprites_conver/convert.py verify Data/Sprites/Menu/menu.sprite
+    python3 tools/sprites_conver/convert.py info Data/Sprites/Menu/menu.sprite
 
 Every conversion is checked: the written YAML is read back and compared with
 the source document, and the result is validated against the rules of the
@@ -129,7 +129,7 @@ def convert_document(source: Path, target: Path, options) -> list[str]:
     document = parse_sprite(decode_text(source.read_bytes()))
     notes = normalize_document(document)
     header = [
-        "Converted from %s by tools/sprites_opencode." % source.name,
+        "Converted from %s by tools/sprites_conver." % source.name,
         "Edit with AuroraMX (Tools/AuroraMX); the game reads this file directly.",
     ]
     text = dump_yaml(document, header=header)
@@ -155,7 +155,7 @@ def reverse_document(source: Path, target: Path, options) -> list[str]:
     document = parse_yaml(decode_text(source.read_bytes()))
     text = dump_sprite(
         document,
-        header="Restored from %s by tools/sprites_opencode." % source.name,
+        header="Restored from %s by tools/sprites_conver." % source.name,
     )
     if options.verify:
         restored = parse_sprite(text)
@@ -259,7 +259,7 @@ def command_info(options) -> int:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="sprites_opencode",
+        prog="sprites_conver",
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -332,7 +332,7 @@ def main(argv=None) -> int:
     try:
         return options.handler(options)
     except SpriteError as error:
-        print("sprites_opencode: %s" % error, file=sys.stderr)
+        print("sprites_conver: %s" % error, file=sys.stderr)
         return 1
 
 
