@@ -182,10 +182,16 @@ def command_convert(options) -> int:
                 print("%s: %s" % (source, error), file=sys.stderr)
                 failures += 1
                 continue
+            warnings = [note for note in notes if note.startswith("warning:")]
             if not options.quiet:
                 print("%s -> %s  (%s)" % (source, target, describe(read_document(target))))
                 for note in notes:
                     print("  %s" % note)
+            else:
+                for note in warnings:
+                    print("%s: %s" % (source, note))
+            if warnings:
+                failures += 1
     return 1 if failures else 0
 
 
@@ -280,7 +286,9 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="load the result with the AuroraMX command line tool as well",
     )
-    convert.add_argument("-q", "--quiet", action="store_true", help="only report problems")
+    convert.add_argument(
+        "-q", "--quiet", action="store_true", help="hide the progress; problems are still reported"
+    )
     convert.set_defaults(handler=command_convert, verify=True)
 
     reverse = commands.add_parser(

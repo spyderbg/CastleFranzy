@@ -250,12 +250,23 @@ class GameRuleTests(unittest.TestCase):
         problems = validate_game_rules(document)
         self.assertTrue(any("0x20" in problem and "ignores" in problem for problem in problems))
 
-    def test_warns_about_a_module_without_an_image(self):
+    def test_warns_when_a_frame_uses_a_module_without_an_image(self):
         document = parse_sprite(LEGACY)
         document.modules[0].values[0] = -1
         notes = normalize_document(document)
-        self.assertTrue(any(note.startswith("warning: module") for note in notes))
+        self.assertTrue(any(note.startswith("warning:") and "0x1000" in note for note in notes))
         self.assertEqual(document.modules[0].values[0], 0)
+
+    def test_notes_an_unused_module_without_an_image(self):
+        document = parse_sprite(LEGACY)
+        document.modules[2].values[0] = -1
+        notes = normalize_document(document)
+        matched = [note for note in notes if "0x1002" in note]
+        self.assertEqual(matched, [
+            "module 0x1002 has no image and no frame uses it; "
+            "image 0x0000 is used so the game can load the sprite"
+        ])
+        self.assertEqual(document.modules[2].values[0], 0)
 
 
 class ConversionTests(unittest.TestCase):
@@ -326,9 +337,18 @@ class CommandLineTests(unittest.TestCase):
         return code, output.getvalue()
 
     def test_converts_a_file_next_to_the_source(self):
-        code, _ = self.run_tool("convert", str(self.source), "-q")
-        self.assertEqual(code, 0)
+        code, output = self.run_tool("convert", str(self.source), "-q")
+        self.assertEqual(code, 1)
+        self.assertIn("warning:", output)
         self.assertTrue((self.directory / "sample.yaml").is_file())
+
+    def test_a_clean_sprite_converts_without_output(self):
+        source = self.directory / "clean.sprite"
+        source.write_text(SIMPLE, encoding="utf-8")
+        code, output = self.run_tool("convert", str(source), "-q")
+        self.assertEqual(code, 0)
+        self.assertEqual(output, "")
+        self.assertTrue((self.directory / "clean.yaml").is_file())
 
     def test_refuses_to_replace_a_file(self):
         self.run_tool("convert", str(self.source), "-q")
@@ -339,12 +359,14 @@ class CommandLineTests(unittest.TestCase):
     def test_replaces_a_file_when_asked(self):
         self.run_tool("convert", str(self.source), "-q")
         code, _ = self.run_tool("convert", str(self.source), "-q", "--overwrite")
-        self.assertEqual(code, 0)
+        self.assertEqual(code, 1)
+        self.assertIn("sprite:", (self.directory / "sample.yaml").read_text(encoding="utf-8"))
 
     def test_writes_into_another_directory(self):
         target = self.directory / "out"
-        code, _ = self.run_tool("convert", str(self.source), "-o", str(target), "-q")
-        self.assertEqual(code, 0)
+        code, output = self.run_tool("convert", str(self.source), "-o", str(target), "-q")
+        self.assertEqual(code, 1)
+        self.assertIn("warning:", output)
         self.assertTrue((target / "sample.yaml").is_file())
 
     def test_reverses_a_yaml_file(self):

@@ -188,37 +188,52 @@ def resolve_module_images(document: SpriteDocument) -> list[str]:
     """Point modules that have no image at the first image of the sprite.
 
     The legacy documents mark a module without an image with the index ``-1``.
-    The game needs an image for every ``MD_IMAGE`` module, so the converter
-    uses the atlas.  This changes what is drawn, so the result is reported as a
-    warning that asks for a check in the game.
+    The game's YAML loader rejects such a module, so the converter names the
+    first image.  The editor's binary export does not store the image index.
+    A module that no frame uses therefore draws nothing different, and the
+    note says so.  A module that a frame does use is a warning, because the
+    picture can change.
     """
     notes = []
     if not document.images:
         return notes
+    used = {
+        part.target
+        for frame in document.frames
+        for part in frame.parts
+        if not (part.flags & YAML_FLAGS["HYPER_FM"])
+    }
+    image = hex_id(document.images[0].id)
     for module in document.modules:
         if module.type != "MD_IMAGE" or not module.values:
             continue
         index = module.values[0]
         if 0 <= index < len(document.images):
             continue
-        notes.append(
-            "warning: module %s has no image; the atlas %s is used instead, "
-            "check how it is drawn in the game"
-            % (hex_id(module.id), hex_id(document.images[0].id))
-        )
         module.values[0] = 0
+        if module.id in used:
+            notes.append(
+                "warning: module %s has no image and a frame uses it; "
+                "image %s is used so the game can load the sprite" % (hex_id(module.id), image)
+            )
+        else:
+            notes.append(
+                "module %s has no image and no frame uses it; "
+                "image %s is used so the game can load the sprite" % (hex_id(module.id), image)
+            )
     return notes
 
 
 def normalize_document(document: SpriteDocument) -> list[str]:
     """Apply every normalisation a legacy document needs.
 
-    Returns the notes that are worth showing to the user: the changes that
-    alter what is drawn, and the renumbered image IDs.
+    Image IDs are renumbered before modules are repaired, so a note names the
+    image ID the written file actually contains.  A note that starts with
+    ``warning:`` is a problem the caller should report even in quiet mode.
     """
     normalize_image_paths(document)
-    notes = resolve_module_images(document)
-    notes.extend(normalize_image_ids(document))
+    notes = normalize_image_ids(document)
+    notes.extend(resolve_module_images(document))
     return notes
 
 

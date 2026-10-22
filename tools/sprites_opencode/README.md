@@ -39,11 +39,13 @@ Options of `convert` and `reverse`:
 | `--overwrite` | replace files that already exist (by default they are never touched) |
 | `--no-verify` | skip the read back check of the written file |
 | `--auroramx` | load the result with the AuroraMX command line tool as well |
-| `-q`, `--quiet` | only report problems |
+| `-q`, `--quiet` | hide the progress and the notes; problems are still reported |
 
 Every conversion is checked: the written YAML is read back and compared with the
 source document, and the document is validated against the rules of the game's
-YAML loader. A conversion that does not survive the round trip is an error.
+YAML loader. A conversion that does not survive the round trip is an error. A
+problem is reported even with `--quiet`, and the command fails. The file is
+still written.
 
 `verify` reports the document as it is, so it also reports problems that
 `convert` resolves, such as the module without an image in `fireball.sprite`.
@@ -119,10 +121,11 @@ resolves them and prints a note for each change that matters.
   image by index, the game by *ID*. Numbering the images after their index makes
   both agree. The notes list every renumbered image.
 * **A module without an image uses the first image.** `fireball.sprite` contains
-  the module `0x101A` with the image index `-1`. The game needs an image for every
-  `MD_IMAGE` module, so the converter points it at the first image and prints a
-  warning. This changes what is drawn: check the fireball in the game before
-  publishing.
+  the module `0x101A` with the image index `-1`, and no frame uses it. The game's
+  YAML loader rejects a module whose image does not exist, so the converter points
+  it at the first image and prints a note. The editor's binary export does not
+  store the image index, so the picture does not change. A module that a frame
+  does use is reported as a problem, because the picture can change.
 * **Image paths use forward slashes.** The legacy documents store Windows paths
   such as `.\effects.tga`, the YAML files use `./effects.tga`.
 * **Everything else is kept**: names, collision rectangles, module positions,
