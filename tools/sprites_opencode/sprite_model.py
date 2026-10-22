@@ -170,30 +170,27 @@ def normalize_image_ids(document: SpriteDocument) -> list[str]:
     return notes
 
 
-def normalize_image_paths(document: SpriteDocument) -> list[str]:
+def normalize_image_paths(document: SpriteDocument) -> None:
     """Write the image paths with forward slashes.
 
     The legacy documents store Windows paths such as ``.\\effects.tga``.  The
     editor and the game both understand forward slashes on every platform, and
     a backslash inside a YAML string would have to be escaped.
     """
-    notes = []
     for image in document.images:
         for attribute in ("file", "alpha_file"):
             value = getattr(image, attribute)
             if value and "\\" in value:
                 setattr(image, attribute, value.replace("\\", "/"))
-                notes.append("image path %s rewritten with forward slashes" % value)
-    return notes
 
 
 def resolve_module_images(document: SpriteDocument) -> list[str]:
-    """Point modules that have no image at the atlas.
+    """Point modules that have no image at the first image of the sprite.
 
     The legacy documents mark a module without an image with the index ``-1``.
-    The binary export of the game stores no image reference at all, so such a
-    module ends up as a rectangle of the atlas.  Naming the atlas keeps the
-    converted document loadable and matches what the game draws.
+    The game needs an image for every ``MD_IMAGE`` module, so the converter
+    uses the atlas.  This changes what is drawn, so the result is reported as a
+    warning that asks for a check in the game.
     """
     notes = []
     if not document.images:
@@ -205,32 +202,23 @@ def resolve_module_images(document: SpriteDocument) -> list[str]:
         if 0 <= index < len(document.images):
             continue
         notes.append(
-            "module %s has no image; the atlas %s is used instead"
+            "warning: module %s has no image; the atlas %s is used instead, "
+            "check how it is drawn in the game"
             % (hex_id(module.id), hex_id(document.images[0].id))
         )
         module.values[0] = 0
     return notes
 
 
-def normalize_document(document: SpriteDocument, image_ids: str = "normalize") -> list[str]:
-    """Apply every normalisation a legacy document needs and describe the changes.
+def normalize_document(document: SpriteDocument) -> list[str]:
+    """Apply every normalisation a legacy document needs.
 
-    The notes are meant to be shown to the user, they explain what the
-    converter had to change to make the document readable by both the editor
-    and the game.
+    Returns the notes that are worth showing to the user: the changes that
+    alter what is drawn, and the renumbered image IDs.
     """
-    notes = []
-    notes.extend(normalize_image_paths(document))
-    notes.extend(resolve_module_images(document))
-    if image_ids == "normalize":
-        notes.extend(normalize_image_ids(document))
-    else:
-        for index, image in enumerate(document.images):
-            if image.id != index:
-                notes.append(
-                    "image %s keeps its legacy ID; the editor, which resolves images "
-                    "by index, will show the wrong picture" % hex_id(image.id)
-                )
+    normalize_image_paths(document)
+    notes = resolve_module_images(document)
+    notes.extend(normalize_image_ids(document))
     return notes
 
 
@@ -366,6 +354,11 @@ def validate_game_rules(document: SpriteDocument) -> list[str]:
         for part in frame.parts:
             if not -32768 <= part.x <= 32767 or not -32768 <= part.y <= 32767:
                 problems.append("%s has a placement offset outside runtime limits" % hex_id(frame.id))
+            if extra_flag_bits(part.flags):
+                problems.append(
+                    "%s uses flag bits 0x%02X that the game ignores (extraFlags)"
+                    % (hex_id(frame.id), extra_flag_bits(part.flags))
+                )
             hyper = part.flags & YAML_FLAGS["HYPER_FM"]
             known = frame_ids if hyper else module_ids
             if part.target not in known:
@@ -393,6 +386,11 @@ def validate_game_rules(document: SpriteDocument) -> list[str]:
         if not animation.frames:
             problems.append("%s needs at least one frame" % hex_id(animation.id))
         for step in animation.frames:
+            if extra_flag_bits(step.flags):
+                problems.append(
+                    "%s uses flag bits 0x%02X that the game ignores (extraFlags)"
+                    % (hex_id(animation.id), extra_flag_bits(step.flags))
+                )
             if step.target not in frame_ids:
                 problems.append(
                     "%s references the unknown frame %s"

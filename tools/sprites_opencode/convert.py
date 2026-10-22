@@ -42,13 +42,26 @@ ROOT = Path(__file__).resolve().parents[2]
 AURORAMX_CLI = ROOT / "Tools" / "AuroraMX" / "build" / "cli.cjs"
 
 
-def collect(inputs, pattern: str) -> list[Path]:
-    """Expand the command line inputs into the list of files to convert."""
+SPRITE_SUFFIXES = (".sprite",)
+YAML_SUFFIXES = (".yaml", ".yml")
+DOCUMENT_SUFFIXES = SPRITE_SUFFIXES + YAML_SUFFIXES
+
+
+def collect(inputs, suffixes: tuple[str, ...]) -> list[Path]:
+    """Expand the command line inputs into the files with one of the suffixes.
+
+    A file given explicitly is always taken; directories are searched.
+    """
     files = []
     for item in inputs:
         path = Path(item)
         if path.is_dir():
-            files.extend(sorted(p for p in path.rglob(pattern) if p.is_file()))
+            files.extend(
+                sorted(
+                    p for p in path.rglob("*")
+                    if p.is_file() and p.suffix.lower() in suffixes
+                )
+            )
         elif path.is_file():
             files.append(path)
         else:
@@ -114,7 +127,7 @@ def check_with_auroramx(path: Path) -> str | None:
 def convert_document(source: Path, target: Path, options) -> list[str]:
     """Convert one legacy document and write the YAML result."""
     document = parse_sprite(decode_text(source.read_bytes()))
-    notes = normalize_document(document, options.image_ids)
+    notes = normalize_document(document)
     header = [
         "Converted from %s by tools/sprites_opencode." % source.name,
         "Edit with AuroraMX (Tools/AuroraMX); the game reads this file directly.",
@@ -161,7 +174,7 @@ def command_convert(options) -> int:
     for item in options.inputs:
         path = Path(item)
         root = path if path.is_dir() else path.parent
-        for source in collect([item], "*.sprite"):
+        for source in collect([item], SPRITE_SUFFIXES):
             target = target_path(source, options.output, ".yaml", root)
             try:
                 notes = convert_document(source, target, options)
@@ -182,7 +195,7 @@ def command_reverse(options) -> int:
     for item in options.inputs:
         path = Path(item)
         root = path if path.is_dir() else path.parent
-        for source in collect([item], "*.yaml"):
+        for source in collect([item], YAML_SUFFIXES):
             target = target_path(source, options.output, ".sprite", root)
             try:
                 reverse_document(source, target, options)
@@ -199,9 +212,7 @@ def command_verify(options) -> int:
     """Read documents and report what they contain and what is wrong with them."""
     failures = 0
     for item in options.inputs:
-        for source in collect([item], "*"):
-            if source.suffix.lower() not in (".sprite", ".yaml", ".yml"):
-                continue
+        for source in collect([item], DOCUMENT_SUFFIXES):
             try:
                 document = read_document(source)
             except SpriteError as error:
@@ -224,16 +235,20 @@ def command_verify(options) -> int:
 
 def command_info(options) -> int:
     """Print a summary of every document."""
+    failures = 0
     for item in options.inputs:
-        for source in collect([item], "*"):
-            if source.suffix.lower() not in (".sprite", ".yaml", ".yml"):
+        for source in collect([item], DOCUMENT_SUFFIXES):
+            try:
+                document = read_document(source)
+            except SpriteError as error:
+                print("%s: %s" % (source, error), file=sys.stderr)
+                failures += 1
                 continue
-            document = read_document(source)
             print("%s: %s" % (source, describe(document)))
             print("  version %s" % document.version)
             for image in document.images:
                 print("  image %s %s" % (hex_id(image.id), image.file))
-    return 0
+    return 1 if failures else 0
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -253,12 +268,6 @@ def build_parser() -> argparse.ArgumentParser:
     )
     convert.add_argument(
         "--overwrite", action="store_true", help="replace files that already exist"
-    )
-    convert.add_argument(
-        "--image-ids",
-        choices=("normalize", "keep"),
-        default="normalize",
-        help="number the images after their index (default) or keep the legacy IDs",
     )
     convert.add_argument(
         "--no-verify",

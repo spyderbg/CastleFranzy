@@ -59,15 +59,23 @@ class _Token:
 
 
 def decode_text(data: bytes) -> str:
-    """Decode sprite text, accepting the encodings the editor supports."""
-    if data[:2] == b"\xff\xfe":
-        return data[2:].decode("utf-16-le", errors="replace")
-    if data[:2] == b"\xfe\xff":
-        return data[2:].decode("utf-16-be", errors="replace")
+    """Decode sprite text, accepting the encodings the editor supports.
+
+    Decoding is strict: a file that is none of them is reported as an error
+    instead of being guessed at, because a guessed file name would be written
+    back into the converted document.
+    """
     try:
-        return data.decode("utf-8")
-    except UnicodeDecodeError:
-        return data.decode("windows-1252")
+        if data[:2] == b"\xff\xfe":
+            return data[2:].decode("utf-16-le")
+        if data[:2] == b"\xfe\xff":
+            return data[2:].decode("utf-16-be")
+        try:
+            return data.decode("utf-8")
+        except UnicodeDecodeError:
+            return data.decode("windows-1252")
+    except UnicodeDecodeError as error:
+        raise SpriteError("the text is neither UTF-8, UTF-16 nor Windows-1252: %s" % error) from None
 
 
 def _tokenize(text: str) -> list[_Token]:

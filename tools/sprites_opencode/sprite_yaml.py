@@ -45,6 +45,7 @@ from sprite_model import (
     flag_names,
     hex_color,
     hex_id,
+    parse_number,
 )
 
 
@@ -202,8 +203,6 @@ def _number(value, what: str) -> int:
     if isinstance(value, float) and value.is_integer():
         return int(value)
     if isinstance(value, str):
-        from sprite_model import parse_number
-
         try:
             return parse_number(value)
         except SpriteError:
@@ -214,8 +213,6 @@ def _number(value, what: str) -> int:
 def _identifier(value, what: str) -> int:
     """Read an ID: a quoted hexadecimal string or a plain integer."""
     if isinstance(value, str):
-        from sprite_model import parse_number
-
         try:
             return parse_number(value)
         except SpriteError:
@@ -277,8 +274,6 @@ def parse_yaml(text: str) -> SpriteDocument:
                 if identifier not in image_indexes:
                     raise SpriteError("%s references the unknown image %s" % (what, hex_id(identifier)))
                 values.append(image_indexes[identifier])
-            elif name == "image":
-                values.append(_number(value, what))
             else:
                 values.append(_number(value, what))
         name = entry.get("name")

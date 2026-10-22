@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtemp, readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
+import { parse } from "yaml";
 import {
   parseSprite,
   parseSpriteAny,
@@ -48,6 +49,16 @@ test("sprite YAML round-trips the document model", () => {
   assert.equal(JSON.stringify(parseSpriteAny(yaml)), JSON.stringify(doc));
   assert.deepEqual(parseSprite(serializeSprite(parseSpriteAny(yaml))), doc);
   assert.deepEqual(validateSprite(parseSpriteAny(yaml)), []);
+});
+
+test("hyperframe parts are written with the module key the game reads", () => {
+  const doc = parseSprite(legacy);
+  const yaml = serializeSpriteYaml(doc);
+  const part = parse(yaml).sprite.frames[1].parts[0];
+  assert.equal(part.module, "0x2000");
+  assert.equal("frame" in part, false);
+  assert.deepEqual(part.flags, ["HYPER_FM"]);
+  assert.equal(parseSpriteAny(yaml).frames[1].parts[0].flags, 16);
 });
 
 test("workspace opens and saves .yaml sprites", async () => {

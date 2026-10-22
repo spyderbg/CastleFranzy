@@ -328,8 +328,10 @@ export function serializeSpriteYaml(s: SpriteDocument): string {
         id: hex(f.id),
         name: f.name,
         rects: f.rects.length ? f.rects : undefined,
+        // Hyperframes are a `module` placement with the HYPER_FM flag: the game
+        // reads `module` for every frame part and selects the target by flag.
         parts: f.parts.map((p) => ({
-          [p.flags & FLAGS.HYPER_FM ? "frame" : "module"]: hex(p.target),
+          module: hex(p.target),
           ...placementOut(p),
         })),
       })),

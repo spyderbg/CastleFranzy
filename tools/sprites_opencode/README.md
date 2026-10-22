@@ -1,16 +1,16 @@
 # Converting the legacy sprites to YAML
 
 The sprite editor in `Tools/AuroraMX` reads the old AuroraGT `*.sprite` documents
-of the game and saves them as YAML. The game loads both formats: `Src/Sprites/ASprite.cpp`
-prefers a `*.yaml` next to the `*.sprite` file, and `Src/Sprites/SpriteYaml.cpp`
-compiles it into the same binary sprite the old format produced.
+and saves them as YAML. The game loads both formats: `Src/Sprites/ASprite.cpp`
+prefers a `.yaml` (or `.yml`) next to the `.sprite` file, and
+`Src/Sprites/SpriteYaml.cpp` compiles it into the same binary sprite.
 
-This tool performs that conversion outside the editor. It reads the legacy format,
-writes the AuroraMX YAML format and checks the result against the rules of both
-readers, so a converted file can be opened in AuroraMX and loaded by the game.
+This tool converts the files outside the editor. It reads the legacy format,
+writes the YAML format and checks the result against the rules of the game and
+of the editor.
 
-Only Python 3 is needed; there are no third party packages. PyYAML is used by the
-test suite when it happens to be installed, but the tool itself does not need it.
+Python 3 is enough for the tool. PyYAML is used by the test suite when it is
+installed. The editor check needs the AuroraMX command line tool (see below).
 
 ## Usage
 
@@ -37,24 +37,35 @@ Options of `convert` and `reverse`:
 | --- | --- |
 | `-o`, `--output DIR` | write the results into `DIR` instead of next to the source |
 | `--overwrite` | replace files that already exist (by default they are never touched) |
-| `--image-ids normalize\|keep` | number the images after their index (default) or keep the legacy IDs |
 | `--no-verify` | skip the read back check of the written file |
 | `--auroramx` | load the result with the AuroraMX command line tool as well |
 | `-q`, `--quiet` | only report problems |
 
 Every conversion is checked: the written YAML is read back and compared with the
 source document, and the document is validated against the rules of the game's
-YAML loader. A conversion that does not survive the round trip is an error, not a
-warning.
+YAML loader. A conversion that does not survive the round trip is an error.
 
-The `--auroramx` option asks `Tools/AuroraMX/build/cli.cjs` to load the result.
-The bundle in the repository is older than the YAML support of the editor; when it
-cannot read YAML the tool says so and asks for `npm run build:cli` in
-`Tools/AuroraMX`. The check is optional, the conversion does not depend on it.
+`verify` reports the document as it is, so it also reports problems that
+`convert` resolves, such as the module without an image in `fireball.sprite`.
+
+## The editor check
+
+`--auroramx` loads the result with `Tools/AuroraMX/build/cli.cjs`. The bundle is
+a build artifact that is not committed, so build it once:
+
+```bash
+cd Tools/AuroraMX
+npm ci
+npm run build:cli
+```
+
+If the bundle is missing or older than the YAML support of the editor, the tool
+says so. The test suite loads every project sprite with the bundle when it is
+built.
 
 ## The format
 
-The output is the mapping under a top level `sprite` key that AuroraMX writes:
+The output is the mapping under a top level `sprite` key, as AuroraMX writes it:
 
 ```yaml
 sprite:
@@ -90,53 +101,46 @@ sprite:
 Three details are worth knowing:
 
 * **IDs are quoted hexadecimal strings** such as `"0x1000"`. The game only accepts
-  IDs of that shape (`Src/Sprites/SpriteYaml.cpp`), the editor accepts plain
-  numbers as well.
+  IDs of that shape (`Src/Sprites/SpriteYaml.cpp`).
 * **A placement always uses the `module` key.** A hyperframe is a placement with
-  the `HYPER_FM` flag, so it is written as `{ module: "0x2000", x: 0, y: 0, flags: [HYPER_FM] }`.
-  The editor writes the `frame` key for hyperframes, but the game reads `p["module"]`
-  and would reject the `frame` form.
+  the `HYPER_FM` flag: `{ module: "0x2000", x: 0, y: 0, flags: [HYPER_FM] }`. The
+  game reads `module` for every frame part. The editor writes the same form.
 * **Flags are names.** `FLIP_X`, `FLIP_Y`, `ROT_90` and `HYPER_FM` are written as a
-  list. Bits the editor has no name for, such as the legacy `FREE_ROT`, are kept
-  as `extraFlags`.
+  list. Bits without a name, such as the legacy `FREE_ROT`, are written as
+  `extraFlags`. The game ignores that key, so such bits are reported as problems.
 
 ## What the converter changes
 
 The legacy format and the YAML format disagree in a few places. The converter
-resolves them and reports every change it makes.
+resolves them and prints a note for each change that matters.
 
-* **Image IDs are renumbered.** The legacy documents number their images freely
-  (`fireball_glow`, `iceball_glow`, `menu` and `shop` start at `0x0001`), the
-  modules refer to an image by its *index*. AuroraMX resolves the image of a
-  module by index, the game resolves it by *ID*. Numbering the images after their
-  index makes both readers agree. `--image-ids keep` keeps the legacy IDs, which
-  only works in the editor as long as the IDs match the indexes.
-* **Modules without an image get the atlas.** `fireball.sprite` contains the
-  module `0x101A` with the image index `-1`. The binary export of the game stores
-  no image for it either, so the module is pointed at the first image and a note
-  is printed.
+* **Image IDs are renumbered.** The legacy documents number their images freely,
+  but the modules refer to an image by its *index*. The editor resolves a module's
+  image by index, the game by *ID*. Numbering the images after their index makes
+  both agree. The notes list every renumbered image.
+* **A module without an image uses the first image.** `fireball.sprite` contains
+  the module `0x101A` with the image index `-1`. The game needs an image for every
+  `MD_IMAGE` module, so the converter points it at the first image and prints a
+  warning. This changes what is drawn: check the fireball in the game before
+  publishing.
 * **Image paths use forward slashes.** The legacy documents store Windows paths
   such as `.\effects.tga`, the YAML files use `./effects.tga`.
-* **Everything else is kept as it is**: names, collision rectangles, module
-  positions, animation times and the order of all lists.
+* **Everything else is kept**: names, collision rectangles, module positions,
+  animation times and the order of all lists.
 
 ## Publishing the result
 
-The resource build copies every `*.yaml` of `Data/Sprites` into the build and the
-game prefers such a file over the binary export of the same sprite
-(`Src/Sprites/ASprite.cpp`, `tools/linux/build_resources.py`). A converted file
-therefore becomes live as soon as it is placed next to the `*.sprite` file it
-belongs to:
+The game prefers a `.yaml` over the binary export of the same sprite, so a
+converted file goes live as soon as it sits next to its `.sprite`. Convert into a
+review folder first, check the sprites in the game, and copy the files over
+afterwards:
 
 ```bash
-python3 tools/sprites_opencode/convert.py convert Data/Sprites --output Data/Sprites --overwrite
+python3 tools/sprites_opencode/convert.py convert Data/Sprites --output build/yaml
 ```
 
-`--overwrite` is needed for `Data/Sprites/Ingame/dizzy_effect.yaml`, which was
-written by hand; the converted file describes the same sprite.
-
-The image of a module is resolved relative to the sprite file, so the path of an
-image keeps pointing at the `.tga` next to it (`./effects.tga`).
+Do not convert in place with `--overwrite` on `Data/Sprites`:
+`Data/Sprites/Ingame/dizzy_effect.yaml` is a hand-written, tracked file.
 
 ## The rules of the game
 
@@ -152,11 +156,8 @@ document is known to load:
   runtime limits;
 * an animation step refers to one of the first 1024 frames, its time is between
   0 and 255 and its offset between -128 and 127. The `HYPER_FM` flag is not
-  allowed in an animation.
-
-The rules of the editor are checked as well: the result is read back with the
-same rules as `parseSpriteYaml` of `Tools/AuroraMX/backend/format.ts` and
-compared with the source document.
+  allowed in an animation;
+* placements and steps carry no flag bits the game does not read.
 
 ## Verification
 
@@ -166,18 +167,11 @@ python3 tools/sprites_opencode/test_convert.py
 
 The suite covers the legacy reader and writer, the YAML reader and writer, the
 game rules and the conversion of every sprite of the project. It checks that all
-29 documents of `Data/Sprites` convert, that the result is valid YAML, that it
-survives the round trip and that the editor reads it the same way.
+29 documents of `Data/Sprites` convert and survive the round trip. When the
+AuroraMX bundle is built, it also loads every converted sprite with that tool.
 
-The converted documents of the project can be compared with the reference file
-`Data/Sprites/Ingame/dizzy_effect.yaml`, which was written by hand in the same
-format:
-
-```bash
-python3 tools/sprites_opencode/convert.py convert Data/Sprites/Ingame/dizzy_effect.sprite \
-    --output build/yaml
-diff build/yaml/dizzy_effect.yaml Data/Sprites/Ingame/dizzy_effect.yaml
-```
+To compare with the hand-written reference, convert `dizzy_effect.sprite` and
+diff the result. The differences are comments and column alignment only.
 
 ## The files
 

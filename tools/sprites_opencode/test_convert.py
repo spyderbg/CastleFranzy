@@ -111,6 +111,10 @@ class LegacyReaderTests(unittest.TestCase):
         with self.assertRaises(SpriteError):
             parse_sprite("/*SPRITE*/ { VERSION 0001 FRAME \"\" { 0x2000 FM 0x1000 } }")
 
+    def test_rejects_text_in_no_known_encoding(self):
+        with self.assertRaises(SpriteError):
+            decode_text(b"IMAGE 0x0000 \"caf\x81.tga\"")
+
     def test_writes_a_document_the_reader_accepts(self):
         restored = parse_sprite(dump_sprite(self.document))
         self.assertEqual(restored, self.document)
@@ -241,6 +245,18 @@ class GameRuleTests(unittest.TestCase):
         problems = validate_game_rules(document)
         self.assertTrue(any("cyclic" in problem for problem in problems))
 
+    def test_reports_flag_bits_the_game_ignores(self):
+        document = parse_sprite(LEGACY)
+        problems = validate_game_rules(document)
+        self.assertTrue(any("0x20" in problem and "ignores" in problem for problem in problems))
+
+    def test_warns_about_a_module_without_an_image(self):
+        document = parse_sprite(LEGACY)
+        document.modules[0].values[0] = -1
+        notes = normalize_document(document)
+        self.assertTrue(any(note.startswith("warning: module") for note in notes))
+        self.assertEqual(document.modules[0].values[0], 0)
+
 
 class ConversionTests(unittest.TestCase):
     def setUp(self):
@@ -254,7 +270,6 @@ class ConversionTests(unittest.TestCase):
 
     def options(self, **overrides):
         options = type("Options", (), {})()
-        options.image_ids = "normalize"
         options.verify = True
         options.overwrite = False
         options.auroramx = False
@@ -357,6 +372,26 @@ class CommandLineTests(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertIn("2 images", output)
 
+    def test_reverses_a_yml_file(self):
+        self.run_tool("convert", str(self.source), "-q")
+        (self.directory / "sample.yaml").rename(self.directory / "sample.yml")
+        target = self.directory / "back"
+        code, _ = self.run_tool("reverse", str(self.directory / "sample.yml"), "-o", str(target), "-q")
+        self.assertEqual(code, 0)
+        self.assertTrue((target / "sample.sprite").is_file())
+
+    def test_info_reports_a_broken_file_and_continues(self):
+        (self.directory / "broken.sprite").write_text("not a sprite", encoding="utf-8")
+        code, output = self.run_tool("info", str(self.directory))
+        self.assertEqual(code, 1)
+        self.assertIn("broken.sprite", output)
+        self.assertIn("sample.sprite", output)
+
+    def test_verify_reports_flag_bits_the_game_ignores(self):
+        code, output = self.run_tool("verify", str(self.source))
+        self.assertEqual(code, 1)
+        self.assertIn("extraFlags", output)
+
 
 class ProjectSpriteTests(unittest.TestCase):
     """Every sprite of the project has to survive the conversion."""
@@ -393,6 +428,19 @@ class ProjectSpriteTests(unittest.TestCase):
                 normalize_document(document)
                 data = yaml.safe_load(dump_yaml(document))
                 self.assertIn("sprite", data)
+
+    def test_the_auroramx_cli_accepts_every_project_sprite(self):
+        """Load every converted sprite with the real AuroraMX command line tool."""
+        if not convert.AURORAMX_CLI.is_file():
+            self.skipTest("the AuroraMX command line tool is not built")
+        with tempfile.TemporaryDirectory() as temporary:
+            for path in self.sprites():
+                with self.subTest(sprite=path.name):
+                    document = parse_sprite(decode_text(path.read_bytes()))
+                    normalize_document(document)
+                    target = Path(temporary) / (path.stem + ".yaml")
+                    target.write_text(dump_yaml(document), encoding="utf-8")
+                    self.assertIsNone(convert.check_with_auroramx(target))
 
     def test_every_sprite_is_read_the_way_auroramx_reads_it(self):
         """Read the result with PyYAML and with the rules of the editor."""
