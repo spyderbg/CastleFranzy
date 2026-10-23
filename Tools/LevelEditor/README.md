@@ -73,6 +73,8 @@ npm run package:windows     # dist/level-editor.exe (Windows x64)
 LEVEL_EDITOR_PACKAGE_TEST=1 npm test  # verify packaged lifetime on Linux after packaging
 ```
 
+The runnable entry scripts (`scripts/dev.ts`, `scripts/build.ts`, `scripts/package.ts`) carry a `#!/usr/bin/env -S npx tsx` shebang and the executable bit, so from the `Tools/LevelEditor` directory they can also be run directly, for example `./scripts/dev.ts` or `./scripts/package.ts --target linux`. They rely on the `tsx` dev dependency, so run `npm ci` first. On Windows, use the `npm run` forms; the shebang is ignored there.
+
 `npm run package` creates both targets on Linux, verifying the official Windows Node runtime checksum. Standalone executables include Node, frontend and backend, but use the chosen project's assets and game executable. Windows game bridge source is included; native game/browser verification is performed on Ubuntu. `LEVEL_EDITOR_WORKSPACE`, `PORT`, `LEVEL_EDITOR_NO_OPEN=1` override launch defaults. Development honors `STOP_ON_PAGE_CLOSE`, with the same `'false'` default as ordinary Node runs. Tests can use `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` for an installed browser.
 
 See [feature coverage](docs/FEATURES.md) for the mapping to the original editor.

@@ -1,3 +1,4 @@
+#!/usr/bin/env -S npx tsx
 import { execFileSync } from "node:child_process";
 import {
   copyFile,

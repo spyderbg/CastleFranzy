@@ -1,3 +1,4 @@
+#!/usr/bin/env -S npx tsx
 import { build as viteBuild } from "vite";
 import { bundleBackend } from "./backend-build";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";

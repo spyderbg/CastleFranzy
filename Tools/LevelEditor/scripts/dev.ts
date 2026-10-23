@@ -1,3 +1,4 @@
+#!/usr/bin/env -S npx tsx
 import { spawn } from "node:child_process";
 import { createServer } from "vite";
 const frontend = await createServer({
