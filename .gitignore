@@ -48,6 +48,8 @@ ipch/
 *.VC.db-wal
 *.user
 UpgradeLog*.htm
+_UpgradeReport_Files/
+/Projects/Win32/Backup/
 
 # Xcode user settings and derived data
 DerivedData/
