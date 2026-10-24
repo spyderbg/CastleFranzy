@@ -37,8 +37,6 @@
 		3584F2450FF8B4B200F45D45 /* VisualControlButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3584F2190FF8B4B200F45D45 /* VisualControlButton.cpp */; };
 		3584F2460FF8B4B200F45D45 /* VisualControlSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3584F21C0FF8B4B200F45D45 /* VisualControlSlider.cpp */; };
 		3584F2470FF8B4B200F45D45 /* VisualControlSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3584F21E0FF8B4B200F45D45 /* VisualControlSwitch.cpp */; };
-		548371B01090AF300033588D /* XPlayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 548371AE1090AF300033588D /* XPlayerManager.cpp */; };
-		548371B41090AF820033588D /* libGLXPlayerRelease.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 548371B31090AF820033588D /* libGLXPlayerRelease.a */; };
 		7D186D24107F4AF800A7978A /* GS_Cheat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D186D20107F4AF800A7978A /* GS_Cheat.cpp */; };
 		7D186D25107F4AF800A7978A /* GS_Splash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D186D22107F4AF800A7978A /* GS_Splash.cpp */; };
 		7D1CEFF010036DEF0081361C /* libSoundLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1CEFEF10036DEF0081361C /* libSoundLib.a */; };
@@ -91,11 +89,9 @@
 		BF5152AD1090699B000FAFBA /* intro_2500.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF5152AC1090699B000FAFBA /* intro_2500.mp4 */; };
 		CC121F24104FEF27004F6AB1 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC121F23104FEF27004F6AB1 /* main.mm */; };
 		CC4A442B104BDBC8009FF79D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4A442A104BDBC8009FF79D /* CoreGraphics.framework */; };
-		F0173ADC108F335100BFA2F4 /* Menu_Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0173ADA108F335100BFA2F4 /* Menu_Score.cpp */; };
 		F0173ADF108F336000BFA2F4 /* VisualControlContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0173ADD108F336000BFA2F4 /* VisualControlContainer.cpp */; };
 		F0175EF8106D0019009245B5 /* VisualControlMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0175EF4106D0019009245B5 /* VisualControlMesh.cpp */; };
 		F0175EF9106D0019009245B5 /* VisualControlSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0175EF6106D0019009245B5 /* VisualControlSprite.cpp */; };
-		F080B3F9108DF3D00035D1DE /* Menu_Login.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F080B3F7108DF3D00035D1DE /* Menu_Login.cpp */; };
 		F080B3FC108DF3DC0035D1DE /* VisualControlEditBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F080B3FA108DF3DC0035D1DE /* VisualControlEditBox.cpp */; };
 		F34CD1D8106A6D6400F55CDC /* VisualControlPane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34CD1D6106A6D6400F55CDC /* VisualControlPane.cpp */; };
 		F34CD24B106BBF1200F55CDC /* CastleGate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34CD23D106BBF1200F55CDC /* CastleGate.cpp */; };
@@ -115,7 +111,6 @@
 		F38C4EFD10971D1300AF1331 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F38C4EF610971D1300AF1331 /* InfoPlist.strings */; };
 		F38DB4F3105E664300DD95D5 /* VisualControlText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F38DB4EF105E664300DD95D5 /* VisualControlText.cpp */; };
 		F39504BC1083ADA50049D95B /* FortressDefender-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F39504BB1083ADA50049D95B /* FortressDefender-Info.plist */; };
-		F395050A10849CC20049D95B /* oconf.bar in Resources */ = {isa = PBXBuildFile; fileRef = F395050410849CC20049D95B /* oconf.bar */; };
 		F3A3F07210614FBA0046C83B /* Achievements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A3F06E10614FBA0046C83B /* Achievements.cpp */; };
 		F3A3F07310614FBA0046C83B /* Cheats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A3F07010614FBA0046C83B /* Cheats.cpp */; };
 		F3A3F0E0106271080046C83B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F0DF106271080046C83B /* Default.png */; };
@@ -207,10 +202,6 @@
 		3584F21E0FF8B4B200F45D45 /* VisualControlSwitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlSwitch.cpp; sourceTree = "<group>"; };
 		3584F21F0FF8B4B200F45D45 /* VisualControlSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlSwitch.h; sourceTree = "<group>"; };
 		3584F2520FF8B64600F45D45 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
-		548370BB109088D30033588D /* Menu_ScoreInputType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu_ScoreInputType.h; sourceTree = "<group>"; };
-		548371AE1090AF300033588D /* XPlayerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XPlayerManager.cpp; sourceTree = "<group>"; };
-		548371AF1090AF300033588D /* XPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPlayerManager.h; sourceTree = "<group>"; };
-		548371B31090AF820033588D /* libGLXPlayerRelease.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLXPlayerRelease.a; path = ../../Lib/XPlayer/lib/IPhone/libGLXPlayerRelease.a; sourceTree = SOURCE_ROOT; };
 		7D186D20107F4AF800A7978A /* GS_Cheat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GS_Cheat.cpp; sourceTree = "<group>"; };
 		7D186D21107F4AF800A7978A /* GS_Cheat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GS_Cheat.h; sourceTree = "<group>"; };
 		7D186D22107F4AF800A7978A /* GS_Splash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GS_Splash.cpp; sourceTree = "<group>"; };
@@ -321,16 +312,12 @@
 		BF5152AC1090699B000FAFBA /* intro_2500.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro_2500.mp4; path = ../../Build/bin/intro_2500.mp4; sourceTree = SOURCE_ROOT; };
 		CC121F23104FEF27004F6AB1 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		CC4A442A104BDBC8009FF79D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F0173ADA108F335100BFA2F4 /* Menu_Score.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu_Score.cpp; sourceTree = "<group>"; };
-		F0173ADB108F335100BFA2F4 /* Menu_Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu_Score.h; sourceTree = "<group>"; };
 		F0173ADD108F336000BFA2F4 /* VisualControlContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlContainer.cpp; sourceTree = "<group>"; };
 		F0173ADE108F336000BFA2F4 /* VisualControlContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlContainer.h; sourceTree = "<group>"; };
 		F0175EF4106D0019009245B5 /* VisualControlMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlMesh.cpp; sourceTree = "<group>"; };
 		F0175EF5106D0019009245B5 /* VisualControlMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlMesh.h; sourceTree = "<group>"; };
 		F0175EF6106D0019009245B5 /* VisualControlSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlSprite.cpp; sourceTree = "<group>"; };
 		F0175EF7106D0019009245B5 /* VisualControlSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlSprite.h; sourceTree = "<group>"; };
-		F080B3F7108DF3D00035D1DE /* Menu_Login.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu_Login.cpp; sourceTree = "<group>"; };
-		F080B3F8108DF3D00035D1DE /* Menu_Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu_Login.h; sourceTree = "<group>"; };
 		F080B3FA108DF3DC0035D1DE /* VisualControlEditBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlEditBox.cpp; sourceTree = "<group>"; };
 		F080B3FB108DF3DC0035D1DE /* VisualControlEditBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlEditBox.h; sourceTree = "<group>"; };
 		F34CD1D6106A6D6400F55CDC /* VisualControlPane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlPane.cpp; sourceTree = "<group>"; };
@@ -373,7 +360,6 @@
 		F38DB4EF105E664300DD95D5 /* VisualControlText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlText.cpp; sourceTree = "<group>"; };
 		F38DB4F0105E664300DD95D5 /* VisualControlText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlText.h; sourceTree = "<group>"; };
 		F39504BB1083ADA50049D95B /* FortressDefender-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FortressDefender-Info.plist"; sourceTree = "<group>"; };
-		F395050410849CC20049D95B /* oconf.bar */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = oconf.bar; path = ../../Lib/GLLive_Res/oconf.bar; sourceTree = SOURCE_ROOT; };
 		F3A3F06E10614FBA0046C83B /* Achievements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Achievements.cpp; sourceTree = "<group>"; };
 		F3A3F06F10614FBA0046C83B /* Achievements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Achievements.h; sourceTree = "<group>"; };
 		F3A3F07010614FBA0046C83B /* Cheats.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cheats.cpp; sourceTree = "<group>"; };
@@ -425,7 +411,6 @@
 				CC4A442B104BDBC8009FF79D /* CoreGraphics.framework in Frameworks */,
 				F3A7D08B105A78D900A86AC2 /* MediaPlayer.framework in Frameworks */,
 				F3A7D08C105A78D900A86AC2 /* SystemConfiguration.framework in Frameworks */,
-				548371B41090AF820033588D /* libGLXPlayerRelease.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +443,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				548371B31090AF820033588D /* libGLXPlayerRelease.a */,
 				F3613A0A103ECE0200A6FFAD /* libIrrlicht.a */,
 				7D1CEFEF10036DEF0081361C /* libSoundLib.a */,
 				3584F25C0FF8B6E100F45D45 /* Sources */,
@@ -484,7 +468,6 @@
 			children = (
 				F38C4EF610971D1300AF1331 /* InfoPlist.strings */,
 				BF5152AC1090699B000FAFBA /* intro_2500.mp4 */,
-				F395050410849CC20049D95B /* oconf.bar */,
 				F39504BB1083ADA50049D95B /* FortressDefender-Info.plist */,
 				7DCD3AE0106CEDE0006143E6 /* resources.pack */,
 				7DCD3AD5106CEB03006143E6 /* audio_Music.pack */,
@@ -717,11 +700,6 @@
 		3584F1F40FF8B4B200F45D45 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
-				548370BB109088D30033588D /* Menu_ScoreInputType.h */,
-				F0173ADA108F335100BFA2F4 /* Menu_Score.cpp */,
-				F0173ADB108F335100BFA2F4 /* Menu_Score.h */,
-				F080B3F7108DF3D00035D1DE /* Menu_Login.cpp */,
-				F080B3F8108DF3D00035D1DE /* Menu_Login.h */,
 				7D9C5AED108B5E61004B2E4D /* Menu_About.cpp */,
 				7D9C5AEE108B5E61004B2E4D /* Menu_About.h */,
 				7D9C5AEF108B5E61004B2E4D /* Menu_Achievements.cpp */,
@@ -847,7 +825,6 @@
 		3584F25C0FF8B6E100F45D45 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				548371AD1090AF300033588D /* Network */,
 				7DE3207010204806004F3D5D /* Autogenerated */,
 				3584F19A0FF8B4B200F45D45 /* Common */,
 				3584F1A10FF8B4B200F45D45 /* Core */,
@@ -870,16 +847,6 @@
 			);
 			name = Sources;
 			sourceTree = "<group>";
-		};
-		548371AD1090AF300033588D /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				548371AE1090AF300033588D /* XPlayerManager.cpp */,
-				548371AF1090AF300033588D /* XPlayerManager.h */,
-			);
-			name = Network;
-			path = ../../Src/Network;
-			sourceTree = SOURCE_ROOT;
 		};
 		7D25CFC110446DEA0017C27A /* ParticleSystem */ = {
 			isa = PBXGroup;
@@ -1051,7 +1018,6 @@
 				7DCD3AD9106CEB03006143E6 /* audio_SFX.pack in Resources */,
 				7DCD3AE1106CEDE0006143E6 /* resources.pack in Resources */,
 				F39504BC1083ADA50049D95B /* FortressDefender-Info.plist in Resources */,
-				F395050A10849CC20049D95B /* oconf.bar in Resources */,
 				BF5152AD1090699B000FAFBA /* intro_2500.mp4 in Resources */,
 				F38C4EFD10971D1300AF1331 /* InfoPlist.strings in Resources */,
 			);
@@ -1161,12 +1127,9 @@
 				7D9C5B26108B5E62004B2E4D /* Menu_Shop.cpp in Sources */,
 				7D9C5B27108B5E62004B2E4D /* Menu_SoundOptions.cpp in Sources */,
 				7D9C5B28108B5E62004B2E4D /* MenuMain.cpp in Sources */,
-				F080B3F9108DF3D00035D1DE /* Menu_Login.cpp in Sources */,
 				F080B3FC108DF3DC0035D1DE /* VisualControlEditBox.cpp in Sources */,
 				F35574D5108E23C600B526E2 /* TextInput.mm in Sources */,
-				F0173ADC108F335100BFA2F4 /* Menu_Score.cpp in Sources */,
 				F0173ADF108F336000BFA2F4 /* VisualControlContainer.cpp in Sources */,
-				548371B01090AF300033588D /* XPlayerManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1209,7 +1172,6 @@
 					"\"$(SRCROOT)/../../Lib/Irrlicht/source/Irrlicht/IPhoneOS/build/Release-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../../Lib/XPlayer/lib/IPhone\"",
 				);
 				PROVISIONING_PROFILE = "389A2970-FBE4-44B3-8675-90525A7BE28F";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "389A2970-FBE4-44B3-8675-90525A7BE28F";
@@ -1236,7 +1198,6 @@
 					"\"$(SRCROOT)/../../Lib/Irrlicht/source/Irrlicht/IPhoneOS/build/Release-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../../Lib/XPlayer/lib/IPhone\"",
 				);
 				PROVISIONING_PROFILE = "4A96A766-68D0-482A-A4F0-45D658F80375";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4A96A766-68D0-482A-A4F0-45D658F80375";
@@ -1259,7 +1220,6 @@
 					../../Lib/Irrlicht/include,
 					../../Src,
 					../../Lib/SoundLib/include,
-					../../Lib/XPlayer/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
 				PRODUCT_NAME = CastleFrenzy;
@@ -1287,7 +1247,6 @@
 					"\"$(SRCROOT)/../../Lib/Irrlicht/source/Irrlicht/IPhoneOS/build/Release-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../../Lib/XPlayer/lib/IPhone\"",
 				);
 				PROVISIONING_PROFILE = "CF7D81B2-D1D5-4E1B-AFFF-BA662AB1D042";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CF7D81B2-D1D5-4E1B-AFFF-BA662AB1D042";
@@ -1310,7 +1269,6 @@
 					../../Lib/Irrlicht/include,
 					../../Src,
 					../../Lib/SoundLib/include,
-					../../Lib/XPlayer/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
 				PRODUCT_NAME = CastleFrenzy;
@@ -1338,7 +1296,6 @@
 					"\"$(SRCROOT)/../../Lib/Irrlicht/source/Irrlicht/IPhoneOS/build/Release-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../../Lib/XPlayer/lib/IPhone\"",
 				);
 				PROVISIONING_PROFILE = "ACD67CB9-554F-44D3-A9BC-87D3907F57A1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ACD67CB9-554F-44D3-A9BC-87D3907F57A1";
@@ -1400,7 +1357,6 @@
 					../../Lib/Irrlicht/include,
 					../../Src,
 					../../Lib/SoundLib/include,
-					../../Lib/XPlayer/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
 				PRODUCT_NAME = CastleFrenzy;

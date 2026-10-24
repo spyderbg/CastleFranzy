@@ -43,8 +43,6 @@
 
 #include "Utils/profiler.h"
 
-#include "Network/xplayermanager.h"
-
 /// Platform specific includes
 #if defined(TARGET_IPHONE_SIMULATOR) || defined(TARGET_OS_IPHONE)
 
@@ -645,7 +643,6 @@ void Application::Update()
 	UpdateOrientationChanges();
 	_Update(deltaTime);
 	Draw();
-	CXPlayerManager::GetInstance()->Update();
 }
 
 
@@ -976,8 +973,5 @@ void Application::dumpMonitoredPointers()
 
 
 void autoStartGame(int type, const char* name = "")
-{
-}
-void enterLeaderBoard()
 {
 }

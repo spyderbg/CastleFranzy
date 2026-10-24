@@ -36,7 +36,6 @@ public:
 	void Draw();
 	void Update( float dt );
 
-	void GainFocus();
 	void LoseFocus();
 
 	void ChangeCurrentMenu(IMenu* menu, bool gain_focus = true);
@@ -55,6 +54,4 @@ private:
 private:
 	static bool m_endless;
 	static int m_level;
-
-	VisualControlButton		*m_submit_button;
 };

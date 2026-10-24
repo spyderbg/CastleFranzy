@@ -27,8 +27,6 @@
 #include "IO/TouchScreen/TouchPad.h"
 
 #include <irrlicht.h>
-// required by XPlayerLib
-unsigned int GetMSTime() { return os::Timer::getTime();};
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 #define k_splash_sprite				( "Menu/menu_bg" )

@@ -5,9 +5,9 @@
     VERSION 0001
 
     // Images:  1
-    // Modules: 93
-    // Frames:  85
-    // Anims:   56
+    // Modules: 90
+    // Frames:  79
+    // Anims:   48
 
 ////////////////////////////////////////////////////////////////////////////////
 // Images...
@@ -121,9 +121,6 @@
         MD	0x1037	MD_IMAGE	0	363	229	92	16
         MD	0x1038	MD_IMAGE	0	363	247	92	16
         MD	0x103A	MD_IMAGE	0	363	265	92	16
-        MD	0x105F	MD_IMAGE	0	480	112	23	20
-        MD	0x1060	MD_IMAGE	0	295	381	199	36
-        MD	0x1061	MD_IMAGE	0	144	510	325	1
     }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -794,46 +791,7 @@
         FM	0x1059	-129	0	+FLIP_X
     }
 
-    FRAME "password" // Index = 78, FModules = 1
-    {
-        0x203D
-        RC	-99	-15	90	12
-        FM	0x1060	-103	-19
-    }
-
-    FRAME "remember_checked" // Index = 79, FModules = 2
-    {
-        0x203C
-        FM	0x104F	-13	-14
-        FM	0x105F	-9	-18
-    }
-
-    FRAME "remember_blink_checked" // Index = 80, FModules = 2
-    {
-        0x203F
-        FM	0x1050	-16	-20
-        FM	0x105F	-9	-18
-    }
-
-    FRAME "remember_notchecked" // Index = 81, FModules = 1
-    {
-        0x203E
-        FM	0x104F	-13	-14
-    }
-
-    FRAME "remember_blink_notchecked" // Index = 82, FModules = 1
-    {
-        0x2040
-        FM	0x1050	-16	-20
-    }
-
-    FRAME "score_line" // Index = 83, FModules = 1
-    {
-        0x201C
-        FM	0x1061	-162	0
-    }
-
-    FRAME "fullversion" // Index = 84, FModules = 8
+    FRAME "fullversion" // Index = 78, FModules = 8
     {
         0x201D
         FM	0x1062	-121	0
@@ -1138,54 +1096,6 @@
     {
         0x3037
         AF	0x2036	1	0	0
-    }
-
-    ANIM "remember_notchecked" // Index = 48, AFrames = 1
-    {
-        0x3039
-        AF	0x203E	1	0	0
-    }
-
-    ANIM "remember_notchecked_pressed" // Index = 49, AFrames = 1
-    {
-        0x303E
-        AF	0x203E	1	0	0
-    }
-
-    ANIM "remember_blink_notchecked" // Index = 50, AFrames = 1
-    {
-        0x303D
-        AF	0x2040	1	0	0
-    }
-
-    ANIM "remember_checked" // Index = 51, AFrames = 1
-    {
-        0x303F
-        AF	0x203C	1	0	0
-    }
-
-    ANIM "remember_checked_pressed" // Index = 52, AFrames = 1
-    {
-        0x303A
-        AF	0x203C	1	0	0
-    }
-
-    ANIM "remember_blink_cheked" // Index = 53, AFrames = 1
-    {
-        0x303B
-        AF	0x203F	1	0	0
-    }
-
-    ANIM "password" // Index = 54, AFrames = 1
-    {
-        0x303C
-        AF	0x203D	1	0	0
-    }
-
-    ANIM "score_line" // Index = 55, AFrames = 1
-    {
-        0x3040
-        AF	0x201C	1	0	0
     }
 
     SPRITE_END

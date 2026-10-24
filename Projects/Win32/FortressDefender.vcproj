@@ -1029,14 +1029,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\Src\Menus\Menu_Login.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\..\Src\Menus\Menu_Login.h"
-				>
-			</File>
-			<File
 				RelativePath="..\..\Src\Menus\Menu_NewGame.cpp"
 				>
 			</File>
@@ -1050,18 +1042,6 @@
 			</File>
 			<File
 				RelativePath="..\..\Src\Menus\Menu_Options.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\Src\Menus\Menu_Score.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\..\Src\Menus\Menu_Score.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\Src\Menus\Menu_ScoreInputType.h"
 				>
 			</File>
 			<File
@@ -1306,18 +1286,6 @@
 			</File>
 			<File
 				RelativePath="..\..\Src\Utils\StringUtils.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="Network"
-			>
-			<File
-				RelativePath="..\..\Src\Network\XPlayerManager.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\..\Src\Network\XPlayerManager.h"
 				>
 			</File>
 		</Filter>

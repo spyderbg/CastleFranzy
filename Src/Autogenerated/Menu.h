@@ -399,13 +399,7 @@
 	#define MENU_F_MENU_AROW_UP					75
 	#define MENU_F_MENU_CHALLENGE_BG			76
 	#define MENU_F_MENU_ACHIEVEMENTS_BG			77
-	#define MENU_F_MENU_PASSWORD				78
-	#define MENU_F_MENU_REMEMBER_CHECKED		79
-	#define MENU_F_MENU_REMEMBER_BLINK_CHECKED	80
-	#define MENU_F_MENU_REMEMBER_NOTCHECKED		81
-	#define MENU_F_MENU_REMEMBER_BLINK_NOTCHECKED	82
-	#define MENU_F_MENU_SCORE_LINE				83
-	#define MENU_F_MENU_FULLVERSION				84
+	#define MENU_F_MENU_FULLVERSION				78
 
 ////////////////////////////////////////////////////////////////////////////////
 // Sprite Anims
@@ -458,14 +452,6 @@
 	#define MENU_A_MENU_ARROW_DOWN_NORMAL		45
 	#define MENU_A_MENU_ARROW_DOWN_PRESSED		46
 	#define MENU_A_MENU_ARROW_DOWN_BLINK		47
-	#define MENU_A_MENU_REMEMBER_NOTCHECKED		48
-	#define MENU_A_MENU_REMEMBER_NOTCHECKED_PRESSED	49
-	#define MENU_A_MENU_REMEMBER_BLINK_NOTCHECKED	50
-	#define MENU_A_MENU_REMEMBER_CHECKED		51
-	#define MENU_A_MENU_REMEMBER_CHECKED_PRESSED	52
-	#define MENU_A_MENU_REMEMBER_BLINK_CHEKED	53
-	#define MENU_A_MENU_PASSWORD				54
-	#define MENU_A_MENU_SCORE_LINE				55
 
 ////////////////////////////////////////////////////////////////////////////////
 // Sprite Frames

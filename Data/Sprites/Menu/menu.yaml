@@ -639,27 +639,6 @@ sprite:
       y: 265
       w: 92
       h: 16
-    - id: "0x105F"
-      type: MD_IMAGE
-      image: "0x0000"
-      x: 480
-      y: 112
-      w: 23
-      h: 20
-    - id: "0x1060"
-      type: MD_IMAGE
-      image: "0x0000"
-      x: 295
-      y: 381
-      w: 199
-      h: 36
-    - id: "0x1061"
-      type: MD_IMAGE
-      image: "0x0000"
-      x: 144
-      y: 510
-      w: 325
-      h: 1
 
   frames:
     - id: "0x2067"
@@ -1189,34 +1168,6 @@ sprite:
       parts:
         - { module: "0x1059", x: 1, y: 0 }
         - { module: "0x1059", x: -129, y: 0, flags: [FLIP_X] }
-    - id: "0x203D"
-      name: "password"
-      rects:
-        - { x1: -99, y1: -15, x2: 90, y2: 12 }
-      parts:
-        - { module: "0x1060", x: -103, y: -19 }
-    - id: "0x203C"
-      name: "remember_checked"
-      parts:
-        - { module: "0x104F", x: -13, y: -14 }
-        - { module: "0x105F", x: -9, y: -18 }
-    - id: "0x203F"
-      name: "remember_blink_checked"
-      parts:
-        - { module: "0x1050", x: -16, y: -20 }
-        - { module: "0x105F", x: -9, y: -18 }
-    - id: "0x203E"
-      name: "remember_notchecked"
-      parts:
-        - { module: "0x104F", x: -13, y: -14 }
-    - id: "0x2040"
-      name: "remember_blink_notchecked"
-      parts:
-        - { module: "0x1050", x: -16, y: -20 }
-    - id: "0x201C"
-      name: "score_line"
-      parts:
-        - { module: "0x1061", x: -162, y: 0 }
     - id: "0x201D"
       name: "fullversion"
       parts:
@@ -1422,35 +1373,3 @@ sprite:
       name: "arrow_down_blink"
       frames:
         - { frame: "0x2036", time: 1, x: 0, y: 0 }
-    - id: "0x3039"
-      name: "remember_notchecked"
-      frames:
-        - { frame: "0x203E", time: 1, x: 0, y: 0 }
-    - id: "0x303E"
-      name: "remember_notchecked_pressed"
-      frames:
-        - { frame: "0x203E", time: 1, x: 0, y: 0 }
-    - id: "0x303D"
-      name: "remember_blink_notchecked"
-      frames:
-        - { frame: "0x2040", time: 1, x: 0, y: 0 }
-    - id: "0x303F"
-      name: "remember_checked"
-      frames:
-        - { frame: "0x203C", time: 1, x: 0, y: 0 }
-    - id: "0x303A"
-      name: "remember_checked_pressed"
-      frames:
-        - { frame: "0x203C", time: 1, x: 0, y: 0 }
-    - id: "0x303B"
-      name: "remember_blink_cheked"
-      frames:
-        - { frame: "0x203F", time: 1, x: 0, y: 0 }
-    - id: "0x303C"
-      name: "password"
-      frames:
-        - { frame: "0x203D", time: 1, x: 0, y: 0 }
-    - id: "0x3040"
-      name: "score_line"
-      frames:
-        - { frame: "0x201C", time: 1, x: 0, y: 0 }

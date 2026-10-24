@@ -46,7 +46,7 @@ public:
 
 	void			Load();
 
-	void			GoToLogin ();
+	void			GoToHighScore ();
 	void			GoToSelectLevel ();
 
 private:
@@ -57,7 +57,7 @@ private:
 
 	CTouchElement	m_TE;   
 
-	bool			m_goToLogin;
+	bool			m_goToHighScore;
 	bool			m_goToSelectLevel;
 };
 

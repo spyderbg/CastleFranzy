@@ -14,7 +14,6 @@
 
 #include "Menus/Menu_HighScore.h"
 #include "Menus/MenuMain.h"
-#include "Menus/Menu_Score.h"
 
 #include "GameStates/GSLevel.h"
 
@@ -40,9 +39,6 @@ typedef enum
 	action_back = MENU_HIGHSCORES_BASE,
 	action_back_trans,
 
-	action_login, 
-	action_login_trans,
-
 	action_vpane,
 
 } MenuActions;
@@ -59,20 +55,6 @@ typedef enum
 #define k_highscores_box_y							 ( 67 )
 #define k_highscores_box_w							 ( 445 )
 #define k_highscores_box_h							 ( 270 )
-
-//button login
-#define k_button_login_frame						 ( MENU_F_MENU_BASE_BUTTON )
-#define k_button_login_x							 ( k_highscores_box_x + k_highscores_box_w/2 - 15 )
-#define k_button_login_y							 ( k_highscores_box_y + k_highscores_box_h - 45 )
-#define k_button_login_w						     ( m_sprite->GetFrameWidth ( k_button_login_frame ) )
-#define k_button_login_h							 ( m_sprite->GetFrameHeight( k_button_login_frame ) )
-#define k_button_login_anim_normal					 ( MENU_A_MENU_BASE_BUTTON_NORMAL )
-#define k_button_login_anim_pressed				     ( MENU_A_MENU_BASE_BUTTON_PRESSED )
-#define k_button_login_anim_blink					 ( MENU_A_MENU_BASE_BUTTON_BLINK )
-#define k_button_login_anim_disabled				 ( MENU_A_MENU_BASE_BUTTON_LOCK )
-#define	k_button_login_text							 ( STRING_IDS::MENU_SCORE_SUBMIT )
-#define	k_button_login_font1						 ( "MM_Normal" )
-#define	k_button_login_font2						 ( "MM_Pressed" )
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -107,16 +89,6 @@ void Menu_HighScore::Initialize()
 
 	SetMenuName( k_score_title );
 
-
-	
-	//login button
-	m_submit_button = NEW VisualControlButton( action_login, -1, k_back_button_sfx );
-	m_submit_button->SetAnimations( m_sprite, 3, k_button_login_anim_normal, 
-		k_button_login_anim_pressed, k_button_login_anim_blink );
-	m_submit_button->SetArea( k_button_login_x, k_button_login_y,
-		k_button_login_w, k_button_login_h );	
-	m_submit_button->SetText1( k_button_login_text, k_button_login_font1, k_button_login_font2 );
-	VisualControlAdd( m_submit_button );
 
 	//back button
 	VisualControlButton *visual_control  = NEW VisualControlButton( action_back, -1, k_back_button_sfx );
@@ -253,22 +225,6 @@ void Menu_HighScore::Update( float dt )
 //---------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------
 
-void Menu_HighScore::GainFocus()
-{
-	IMenu::GainFocus();
-
-	if ( m_endless )
-	{
-		m_submit_button->SetEnabled( true );
-		m_submit_button->SetVisible( true );		
-	}
-	else
-	{
-		m_submit_button->SetEnabled( false );
-		m_submit_button->SetVisible( false );	
-	}
-}
-
 void Menu_HighScore::LoseFocus()
 {
 	IMenu::LoseFocus();
@@ -281,18 +237,6 @@ void Menu_HighScore::VisualControlDoAction( IVisualControl* visual_control, int 
 {
 	switch ( action_id ) 
 	{
-
-	case action_login:
-		{
-			Transition_Start( transition_hide, action_login_trans );
-		}
-		break;
-	case action_login_trans:
-		{
-			Menu_Score::SetBackGoesToSurvivalScore();
-			GetParent()->SubMenu_Change( "Menu_Login" );
-		}
-		break;
 
 	case action_back:
 		{
