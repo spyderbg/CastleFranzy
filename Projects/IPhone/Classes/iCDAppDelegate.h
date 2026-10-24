@@ -25,10 +25,6 @@
 {
     UIWindow*	window;
     EAGLView*	glView;
-	
-	/// TWITTER
-	UIActivityIndicatorView* 	_activity;
-	NSMutableData* 				receivedData;
 }
 
 
@@ -57,13 +53,6 @@ extern UIAccelerationValue	m_accelerometer[3];
 
 -(void)removeTextField:(TextInput*)params;
 -(void)initTextInput:(TextInputInitParams*)params;
-
-/// TWITTER
-- (void)buttonEventGet;
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 
 @end
 

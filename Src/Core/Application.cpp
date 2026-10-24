@@ -243,9 +243,6 @@ extern bool		paintGLLive();
 extern void		releaseGLLive();
 extern void NotifyTrophy(int);
 
-extern bool		g_twitter;
-extern void		MP_launchTwitter();
-
 extern void		activateAccelerometer(bool enable);
 
 #ifdef OS_IPHONE
@@ -276,9 +273,6 @@ extern void		activateAccelerometer(bool enable);
 	void	NotifyTrophy(int trophy)		{}
 	bool 	paintGLLive()					{ return true; }
 	void 	releaseGLLive()					{}
-
-	bool	g_twitter;
-	void	MP_launchTwitter()				{}
 
 	void activateAccelerometer(bool enable) {}
 
@@ -1053,28 +1047,6 @@ bool Application::IsInGLLive()
 //#if USE_GLLIVE
 #ifdef OS_IPHONE
 	return (_launchGLLiveLang != -1);
-#else
-	return false;
-#endif
-}
-
-
-///////////////////////////////////////////////////////////////////////
-/// Twitter
-///////////////////////////////////////////////////////////////////////
-
-void Application::GoToTwitter()
-{
-#ifdef OS_IPHONE
-	//launchTwitter();
-	MP_launchTwitter();
-#endif
-}
-
-bool Application::IsInTwitter()
-{
-#ifdef OS_IPHONE
-	return g_twitter;
 #else
 	return false;
 #endif

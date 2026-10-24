@@ -44,8 +44,6 @@ extern int 			_launchIGPLang;
 extern CGLLive* 	glLive;
 extern int 			_launchGLLiveLang;
 
-extern "C++" void 	launchTwitter();
-
 ///////////////////////////////////////////////////////////////////////
 
 #if USE_PRESENT_RENDER_BUFFER_ON_DIFFERENT_THREAD
@@ -59,7 +57,6 @@ NSString* g_movieURL = nil;
 pthread_mutex_t g_movieURLMutex;
 id g_eaglView = nil;
 
-bool 			g_twitter		= false;
 bool 			g_gameIsRunning	= false;
 volatile bool 	g_enableRender	= true;
 volatile bool g_movieIsPlaying = false;
@@ -158,17 +155,6 @@ void SetResourcePathASCII(char* cBuffer, int iLength)
 		[self playMovie:g_movieURL];	
 	}
 	pthread_mutex_unlock(&g_movieURLMutex);				
-	
-	if( g_twitter )
-	{
-		IGP_MUTEX_LOCK
-		
-		launchTwitter();
-		
-		IGP_MUTEX_UNLOCK
-		
-		g_twitter = false;
-	}
 	
 	is_update = _launchIGPLang != -1 || _launchGLLiveLang != -1;
 	
@@ -914,12 +900,4 @@ extern "C" void MP_updateRoutineCallback()
 #endif	
 }
 
-extern "C++" void MP_launchTwitter()
-{	
-#if USE_PRESENT_RENDER_BUFFER_ON_DIFFERENT_THREAD
-	g_twitter = true;
-#else
-	launchTwitter();
-#endif
-}
 	

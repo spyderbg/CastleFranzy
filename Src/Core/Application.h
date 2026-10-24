@@ -239,7 +239,7 @@ private:
 
 
 ///////////////////////////////////////////////////////////////////////
-/// IGP, Gameloft Live, Twitter
+/// IGP, Gameloft Live
 ///////////////////////////////////////////////////////////////////////
 
 public:
@@ -253,9 +253,6 @@ public:
 	void	GoToGLLive();
 	void	PerformLoadGLLive();
 	bool	IsInGLLive();
-
-	void	GoToTwitter();
-	bool	IsInTwitter();
 
 public:
 	static IGPSendInfo* s_igpInfo;
