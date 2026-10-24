@@ -11,7 +11,6 @@
 #include <string>
 
 bool g_visualizeWaves = false;
-extern "C" void startGLLive() {}
 
 class DesktopInput : public IEventReceiver
 {

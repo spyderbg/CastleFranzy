@@ -821,14 +821,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\Src\GameStates\GS_SwitchToExternal.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\..\Src\GameStates\GS_SwitchToExternal.h"
-				>
-			</File>
-			<File
 				RelativePath="..\..\Src\GameStates\GSLevel.cpp"
 				>
 			</File>

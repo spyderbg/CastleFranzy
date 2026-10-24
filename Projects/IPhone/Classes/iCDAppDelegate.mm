@@ -15,12 +15,6 @@
 #import "IO/TouchScreen/TouchPad.h"
 #import "IO/Accelerometer/AccelerometerBase.h"
 
-IGP*				igp;
-int					_launchIGPLang;
-
-CGLLive*			glLive;
-int					_launchGLLiveLang;
-
 iCDAppDelegate*		appDelegatePtr;
 UIApplication*		_application;
 UIWindow*			_window;
@@ -30,8 +24,6 @@ UIAccelerationValue	m_accelerometer[3];
 
 
 static int s_deviceType = -1; 
-
-char devTokenStr[128] = {0};
 
 int g_nAppExit = 0;
 
@@ -53,11 +45,8 @@ extern "C++" void SetCurrentDeviceModel(char *modelString);
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
-	glLive				= NULL;
 	appDelegatePtr		= self;
 	_application		= application;
-	_launchIGPLang		= -1;
-	_launchGLLiveLang	= -1;
 	_window				= window;
 	_glView				= glView;
 	
@@ -90,49 +79,24 @@ extern "C++" void SetCurrentDeviceModel(char *modelString);
 
 -(void)applicationWillResignActive:(UIApplication *)application
 {	
-	IGP_MUTEX_LOCK
+	RENDER_MUTEX_LOCK
 	
 	glView.animationInterval = 1.0 / 5.0;
 	
 	[glView pause];
 
-	IGP_MUTEX_UNLOCK	
+	RENDER_MUTEX_UNLOCK	
 }
 
 -(void)applicationDidBecomeActive:(UIApplication *)application
 {
-	IGP_MUTEX_LOCK
+	RENDER_MUTEX_LOCK
 	
 	glView.animationInterval = 1.0 / 60.0;
 	
 	[glView resume];
 	
-	IGP_MUTEX_UNLOCK	
-}
-
-///////////////////////////////////////////////////////////////////////
-
-extern char devTokenStr[128];
-void convertBufferToStr( const void * buffer, int size, char* str)
-{	
-	char map[16]={'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};
-	
-	int i = 0;
-	for(; i < size; ++i)
-	{
-		char ch = ((char*)buffer)[i];
-		
-		str[i*2] = map[(ch>>4)&0x0f] ;
-		str[i*2+1] = map[ch&0x0f];
-	}
-	str[i*2] = '\0';
-}
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
-	NSLog(@"deviceToken: %@", deviceToken); 
-	
-	convertBufferToStr([deviceToken bytes], [deviceToken length], devTokenStr);
+	RENDER_MUTEX_UNLOCK	
 }
 
 - (void)dealloc {
@@ -326,95 +290,5 @@ extern "C++" void native_StatusBar_UpdateOrientation( )
 //------------------------------------------------------------------------------------
 
 
-
-/////////////////////////////////////////////////////////////////////// 
-/// IGP
-///////////////////////////////////////////////////////////////////////
-
-extern "C++" void launchIGP(int langID)
-{	
-	_launchIGPLang = langID;
-};
-
-extern "C++" void createIGP(int langID)
-{	
-	igp = new IGP(_application, _window, _glView, langID);
-};
-
-extern "C++" bool paintIGP()
-{
-	bool return_value = false;
-	if (igp && igp->MustRender())
-	{
-		return_value = igp->PaintIGP();
-	}
-	return return_value;
-};
-
-extern "C++" void releaseIGP()
-{
-	if (igp)
-	{
-		delete(igp);
-		igp = 0;
-	}
-};
-
-
-///////////////////////////////////////////////////////////////////////
-/// Gameloft live
-///////////////////////////////////////////////////////////////////////
-
-extern "C++" void launchGLLive(int langID)
-{	
-	_launchGLLiveLang = langID;
-};
-
-extern "C++" void createGLLive(int langID)
-{	
-	switch( langID )
-	{
-		case 0: langID = 0; break;
-		case 1:	langID = 3; break;
-		case 2: langID = 5; break;
-		case 3: langID = 2; break;
-		case 4: langID = 4; break;
-		case 5: langID = 1; break;			
-	}
-	
-	glLive = new CGLLive([UIApplication sharedApplication], _window, _glView, langID, devTokenStr, false);
-	glLive->SetInviteToPlay( false );
-	if ( CTouchPad::s_currentDeviceOrientation == EOO_90 ) 
-		glLive->SetOrientation( 1 );
-	else 
-		glLive->SetOrientation( 0 ) ;
-};
-
-extern "C++" bool paintGLLive()
-{
-	bool return_value = glLive->Update();
-	
-	if ( CTouchPad::s_currentDeviceOrientation == EOO_90 ) 
-		glLive->SetOrientation( 1 );
-	else 
-		glLive->SetOrientation( 0 ) ;
-	
-	return return_value;
-};
-
-extern "C++" void releaseGLLive()
-{
-	if (glLive)
-	{
-		delete(glLive);
-		glLive = 0;
-	}
-};
-
-extern "C++" void NotifyTrophy( int trophy )
-{
-	if (glLive)
-		glLive->NotifyTrophy( trophy );
-}
 
 @end

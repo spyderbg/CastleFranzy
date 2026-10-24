@@ -97,16 +97,6 @@ void GS_Splash::ctor()
 		m_loadingStepMax = 9;
 
 	} 
-	else if ( m_splashType == GS_SplashType_MenuLoad ) 
-	{
-		m_nextState = NULL;
-		m_state = GSSplashState_Initializing;
-		m_loadingStep = 6;
-
-		m_loadingStepMin = 6; 
-		m_loadingStepMax = 9;
-
-	}
 	else 
 	{
 		//must not goto here
@@ -210,12 +200,7 @@ void GS_Splash::update( float dt )
 			break; 
 		case 9: 
 			{
-				if ( m_splashType == GS_SplashType_MenuLoad )
-				{
-					__MGR_STATES()->switchState( m_nextState );
-				}
-				else
-					m_state = GSSplashState_LoadingDone;			
+				m_state = GSSplashState_LoadingDone;			
 			}
 			break;
 

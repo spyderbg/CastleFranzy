@@ -23,8 +23,7 @@ class VisualControlSlider;
 class Menu_LanguageSelection;
 
 enum GS_SplashType { 
-	GS_SplashType_FirstLoad = 0, 
-	GS_SplashType_MenuLoad
+	GS_SplashType_FirstLoad = 0
 };
 
 enum GSSplashStates {

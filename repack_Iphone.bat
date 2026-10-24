@@ -15,9 +15,9 @@ set BUILD_1=Distribution-iphoneos
 set BUILD_2=Release Gameloft-iphoneos
 set BUILD_3=Release Ludigames-iphoneos
 
-set ARCHIVE_1=%APP_NAME%_Apple_iPhone_iPodTouch_ML_IGP_MS_TS_Online_Gameloft_Distribution_v%BUILD_VERSION%
-set ARCHIVE_2=%APP_NAME%_Apple_iPhone_iPodTouch_ML_IGP_MS_TS_Online_Gameloft_Final_v%BUILD_VERSION%
-set ARCHIVE_3=%APP_NAME%_Apple_iPhone_iPodTouch_ML_IGP_MS_TS_Online_Ludigames_Final_v%BUILD_VERSION%
+set ARCHIVE_1=%APP_NAME%_Apple_iPhone_iPodTouch_ML_MS_TS_Online_Gameloft_Distribution_v%BUILD_VERSION%
+set ARCHIVE_2=%APP_NAME%_Apple_iPhone_iPodTouch_ML_MS_TS_Online_Gameloft_Final_v%BUILD_VERSION%
+set ARCHIVE_3=%APP_NAME%_Apple_iPhone_iPodTouch_ML_MS_TS_Online_Ludigames_Final_v%BUILD_VERSION%
 
 if exist %PROJECT_PATH%%ARCHIVE_1% del /Q %PROJECT_PATH%%ARCHIVE_1%
 if exist %PROJECT_PATH%%ARCHIVE_2% del /Q %PROJECT_PATH%%ARCHIVE_2%

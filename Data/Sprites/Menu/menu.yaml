@@ -142,48 +142,6 @@ sprite:
       y: 152
       w: 5
       h: 52
-    - id: "0x100C"
-      type: MD_IMAGE
-      image: "0x0000"
-      x: 66
-      y: 468
-      w: 42
-      h: 35
-    - id: "0x1046"
-      type: MD_IMAGE
-      image: "0x0000"
-      x: 66
-      y: 429
-      w: 42
-      h: 35
-    - id: "0x1041"
-      type: MD_IMAGE
-      image: "0x0000"
-      x: 94
-      y: 468
-      w: 88
-      h: 35
-    - id: "0x1045"
-      type: MD_IMAGE
-      image: "0x0000"
-      x: 6
-      y: 468
-      w: 88
-      h: 35
-    - id: "0x100D"
-      type: MD_IMAGE
-      image: "0x0000"
-      x: 6
-      y: 429
-      w: 88
-      h: 35
-    - id: "0x1047"
-      type: MD_IMAGE
-      image: "0x0000"
-      x: 94
-      y: 429
-      w: 88
-      h: 35
     - id: "0x100E"
       type: MD_IMAGE
       image: "0x0000"
@@ -749,22 +707,6 @@ sprite:
         - { module: "0x1001", x: -40, y: -18 }
         - { module: "0x1001", x: 40, y: -18 }
         - { module: "0x1001", x: 120, y: -18 }
-    - id: "0x2004"
-      name: "BUTTON_MOREGAMES"
-      rects:
-        - { x1: -65, y1: -12, x2: 65, y2: 12 }
-      parts:
-        - { module: "0x100C", x: -21, y: -17 }
-        - { module: "0x1045", x: -109, y: -17 }
-        - { module: "0x1041", x: 21, y: -17 }
-    - id: "0x2005"
-      name: ""
-      rects:
-        - { x1: -65, y1: -12, x2: 65, y2: 12 }
-      parts:
-        - { module: "0x100D", x: -109, y: -17 }
-        - { module: "0x1046", x: -21, y: -17 }
-        - { module: "0x1047", x: 21, y: -17 }
     - id: "0x2006"
       name: "BUTTON_INFO"
       parts:
@@ -777,15 +719,6 @@ sprite:
       name: "BUTTON_INFO_BLINK"
       parts:
         - { module: "0x1010", x: -29, y: -27 }
-    - id: "0x200A"
-      name: ""
-      parts:
-        - { module: "0x1021", x: -162, y: -22 }
-        - { module: "0x1022", x: 131, y: -22 }
-        - { module: "0x1023", x: -129, y: -22 }
-        - { module: "0x1023", x: -64, y: -22 }
-        - { module: "0x1023", x: 1, y: -22 }
-        - { module: "0x1023", x: 66, y: -22 }
     - id: "0x200C"
       name: "horizontal_line"
       parts:
@@ -1317,18 +1250,6 @@ sprite:
       name: "base_button_lock"
       frames:
         - { frame: "0x2022", time: 1, x: 0, y: 0 }
-    - id: "0x3004"
-      name: "moregames_normal"
-      frames:
-        - { frame: "0x2004", time: 1, x: 0, y: 0 }
-    - id: "0x3005"
-      name: "moregames_pressed"
-      frames:
-        - { frame: "0x2005", time: 1, x: 0, y: 0 }
-    - id: "0x3038"
-      name: "moregames_blink"
-      frames:
-        - { frame: "0x2005", time: 1, x: 0, y: 0 }
     - id: "0x3006"
       name: "info_button_normal"
       frames:
@@ -1341,10 +1262,6 @@ sprite:
       name: "info_button_blink"
       frames:
         - { frame: "0x2008", time: 1, x: 0, y: 0 }
-    - id: "0x300A"
-      name: "shop_button_normal"
-      frames:
-        - { frame: "0x200A", time: 1, x: 0, y: 0 }
     - id: "0x300D"
       name: "back_button_normal"
       frames:

@@ -176,10 +176,6 @@
   <color name="Color" value="0xFFFFFF" />
 </font>
 
-<font id="MM_MoreGamesPressed" extends="Arial">
-  <color name="Color" value="0xFFFFFF" />
-</font>
-
 <font id="MM_Achievements" >
 	<string name="FileName" value="ArialSmall" />
 	

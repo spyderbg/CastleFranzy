@@ -249,9 +249,6 @@
     <ClCompile Include="..\..\Src\GameStates\GS_Splash.cpp">
       <Filter>GameStates</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Src\GameStates\GS_SwitchToExternal.cpp">
-      <Filter>GameStates</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Src\GameStates\GSLevel.cpp">
       <Filter>GameStates</Filter>
     </ClCompile>
@@ -661,9 +658,6 @@
       <Filter>GameStates</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Src\GameStates\GS_Splash.h">
-      <Filter>GameStates</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\GameStates\GS_SwitchToExternal.h">
       <Filter>GameStates</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Src\GameStates\GSLevel.h">

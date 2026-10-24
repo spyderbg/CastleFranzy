@@ -331,11 +331,11 @@ void WTextInput::Remove()
 	}
 	else
 	{
-		IGP_MUTEX_UNLOCK
+		RENDER_MUTEX_UNLOCK
 				
 		[[iCDAppDelegate sharedInstance] performSelectorOnMainThread:@selector(removeTextField:) withObject:m_textInputInstance waitUntilDone:YES];
 		
-		IGP_MUTEX_LOCK
+		RENDER_MUTEX_LOCK
 	}		
 }
 
@@ -361,11 +361,11 @@ void WTextInput::Init( char* textBuf, unsigned int bufSize, int x, int y, int w,
 	}
 	else
 	{
-		IGP_MUTEX_UNLOCK
+		RENDER_MUTEX_UNLOCK
 		
 		[[iCDAppDelegate sharedInstance] performSelectorOnMainThread:@selector(initTextInput:) withObject:p waitUntilDone:YES];
 		
-		IGP_MUTEX_LOCK
+		RENDER_MUTEX_LOCK
 	}
 	
 	[p release];
