@@ -24,7 +24,6 @@
 #include "Events/EvMouse.h"
 
 #include "GameStates/GS_Splash.h"
-#include "GameStates/GS_SwitchToExternal.h"
 
 #include "Sprites/ASprite.h"
 
@@ -44,8 +43,6 @@
 
 #include "Utils/profiler.h"
 
-#include "Network/xplayermanager.h"
-
 /// Platform specific includes
 #if defined(TARGET_IPHONE_SIMULATOR) || defined(TARGET_OS_IPHONE)
 
@@ -53,8 +50,6 @@
 	#include "MediaPlayer/MediaPlayerIPhone.h"
 
 	#include <sys/time.h>
-
-	#import "IGPSendInfo.h"
 
 #elif defined(OS_LINUX)
 
@@ -221,30 +216,8 @@ void IrrFree(void* p)
 //}
 
 ///////////////////////////////////////////////////////////////////////
-/// Gameloft Live and IGP
+/// Platform hooks
 ///////////////////////////////////////////////////////////////////////
-
-IGPSendInfo*	Application::s_igpInfo = NULL;
-
-extern void*	igp;
-extern int		_launchIGPLang;
-
-extern void 	launchIGP(int langID);
-extern void 	createIGP(int langID);
-extern bool 	paintIGP();
-extern void 	releaseIGP();
-
-extern void*	glLive;
-extern int		_launchGLLiveLang;
-
-extern void		launchGLLive(int langID);
-extern void		createGLLive(int langID);
-extern bool		paintGLLive();
-extern void		releaseGLLive();
-extern void NotifyTrophy(int);
-
-extern bool		g_twitter;
-extern void		MP_launchTwitter();
 
 extern void		activateAccelerometer(bool enable);
 
@@ -260,33 +233,7 @@ extern void		activateAccelerometer(bool enable);
 
 #if defined(OS_WIN32) || defined(OS_LINUX)
 
-	void*	igp;
-	int		_launchIGPLang;
-
-	void 	launchIGP(int langID)			{}
-	void 	createIGP(int langID)			{}
-	bool 	paintIGP()						{ return true; }
-	void 	releaseIGP()					{}
-
-	void*	glLive;
-	int		_launchGLLiveLang;
-
-	void 	launchGLLive(int langID)		{}
-	void 	createGLLive(int langID)		{}
-	void	NotifyTrophy(int trophy)		{}
-	bool 	paintGLLive()					{ return true; }
-	void 	releaseGLLive()					{}
-
-	bool	g_twitter;
-	void	MP_launchTwitter()				{}
-
 	void activateAccelerometer(bool enable) {}
-
-	class IGPSendInfo
-	{
-	public:
-		void IGPSendGameInfo( s32 lang, char* num ) {}
-	};
 
 #endif
 
@@ -345,7 +292,6 @@ void Application::Quit()
 
 	// Bug Fixed ['2796673'] - Upon resuming the game after being interrupted the AUT will crash on Gameloft logo.
 	//__ACHIEVEMENTS()->release();
-	//SAFE_DEL( s_igpInfo );
 	//SAFE_DEL( m_accelerometer );
 	//SAFE_DEL( m_mediaPlayer );
 	//GetDevice()->drop();
@@ -554,15 +500,6 @@ void Application::InitIPhone(IrrlichtDevice* device, float screenLeft, float scr
 	byte* fake=0;
 	*fake = 1;
 #endif
-
-	/// IGP
-	char version_num[16] = { 0 };
-	wcstombs( version_num, g_castle_frenzy_version_str, wcslen( g_castle_frenzy_version_str ) );
-
-	s32 language = __MGR_STRINGS()->GetLanguage();
-
-	s_igpInfo = NEW IGPSendInfo();
-	s_igpInfo->IGPSendGameInfo( language, version_num );
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -687,86 +624,6 @@ void Application::_Update(int ticksPerFrame)
 	FrameEnded(ticksPerFrame);
 }
 
-bool Application::UpdateIGP()
-{
-	if( IsInIGP() )
-	{
-		if( !igp )
-		{
-			__MGR_STATES()->sleep();
-
-			createIGP(_launchIGPLang);
-		}
-
-#ifdef OS_IPHONE
-
-		setStatusBarOrientation(STATUS_BAR_ORIENTATION_PORTRAIT);
-
-#endif
-
-		bool result = paintIGP();
-		if( result )
-		{
-			releaseIGP();
-			
-			__IRR_DRIVER()->setViewPort( rect<s32>(0,0,320,480 ) );
-
-			glMatrixMode(GL_MODELVIEW);
-			glEnableClientState(GL_VERTEX_ARRAY);
-			glEnableClientState(GL_COLOR_ARRAY);		
-
-			NativeStatusBar_UpdateOrientation();
-
-			_launchIGPLang = -1;
-
-			__MGR_STATES()->wakeup();
-		}
-		return true;
-	}
-
-	return false;
-}
-
-bool Application::UpdateGLLive()
-{
-	if( IsInGLLive() )
-	{
-		if( !glLive )
-		{
-			__MGR_STATES()->sleep();
-			createGLLive(_launchGLLiveLang);
-			for( int i=0; i < g_AchievementsListSize; i++ )
-			{
-				if( CAchievements::GetInstance()->isAchieved( g_AchievementsList[i].name ) )
-					NotifyTrophy( i );
-			}
-		}
-		glDisableClientState(GL_COLOR_ARRAY);	// To properly display GLLive loading screens
-		bool result = paintGLLive();
-		glEnableClientState(GL_COLOR_ARRAY);	// To properly display GLLive loading screens
-
-		if( result )
-		{
-			releaseGLLive();
-			
-			glMatrixMode(GL_MODELVIEW);
-			glEnableClientState(GL_VERTEX_ARRAY);
-			glEnableClientState(GL_COLOR_ARRAY);
-			glViewport(0, 0, 320, 480);
-
-			NativeStatusBar_UpdateOrientation();
-
-			_launchGLLiveLang = -1;
-
-			__MGR_STATES()->wakeup();
-		}
-
-		return true;
-	}
-
-	return false;
-}
-
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Methods (Game Loop)
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -784,16 +641,8 @@ void Application::Update()
 
 	
 	UpdateOrientationChanges();
-#ifdef OS_IPHONE
-	if( UpdateIGP() )
-		return;
-		
-	if( UpdateGLLive() )
-		return;
-#endif
 	_Update(deltaTime);
 	Draw();
-	CXPlayerManager::GetInstance()->Update();
 }
 
 
@@ -998,89 +847,6 @@ const char*	Application::getFileSavePath()	const
 }
 
 
-///////////////////////////////////////////////////////////////////////
-/// IGP
-///////////////////////////////////////////////////////////////////////
-
-void Application::GoToIGP()
-{	
-	GS_SwitchToExternal *external = NEW GS_SwitchToExternal( SwitchToIGP );
-	__MGR_STATES()->switchState( external );
-}
-
-void Application::PerformLoadIGP() 
-{
-#ifdef OS_IPHONE
-
-	setStatusBarOrientation(STATUS_BAR_ORIENTATION_PORTRAIT);
-	int language = __MGR_STRINGS()->GetLanguage();
-	launchIGP(language);
-#endif
-}
-
-bool Application::IsInIGP()
-{
-#ifdef OS_IPHONE
-	return (_launchIGPLang != -1);
-#else
-	return false;
-#endif
-}
-
-
-///////////////////////////////////////////////////////////////////////
-/// Gameloft Live
-///////////////////////////////////////////////////////////////////////
-
-void Application::GoToGLLive()
-{
-
-	GS_SwitchToExternal *external = NEW GS_SwitchToExternal( SwitchToGLLive );
-	__MGR_STATES()->switchState( external );
-}
-
-void Application::PerformLoadGLLive()
-{
-#ifdef OS_IPHONE
-	setStatusBarOrientation(STATUS_BAR_ORIENTATION_PORTRAIT);
-	int language = __MGR_STRINGS()->GetLanguage();
-	launchGLLive( language );
-#endif
-}
-
-bool Application::IsInGLLive()
-{
-//#if USE_GLLIVE
-#ifdef OS_IPHONE
-	return (_launchGLLiveLang != -1);
-#else
-	return false;
-#endif
-}
-
-
-///////////////////////////////////////////////////////////////////////
-/// Twitter
-///////////////////////////////////////////////////////////////////////
-
-void Application::GoToTwitter()
-{
-#ifdef OS_IPHONE
-	//launchTwitter();
-	MP_launchTwitter();
-#endif
-}
-
-bool Application::IsInTwitter()
-{
-#ifdef OS_IPHONE
-	return g_twitter;
-#else
-	return false;
-#endif
-}
-
-
 //////////////////////////////////////////////////////////////////////////
 /// Orientations
 //////////////////////////////////////////////////////////////////////////
@@ -1207,8 +973,5 @@ void Application::dumpMonitoredPointers()
 
 
 void autoStartGame(int type, const char* name = "")
-{
-}
-void enterLeaderBoard()
 {
 }

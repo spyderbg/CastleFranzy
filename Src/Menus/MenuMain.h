@@ -28,8 +28,6 @@ class Menu_Help;
 class Menu_LanguageSelection;
 class Menu_HighScoresLevelList;
 class Menu_HighScore;
-class Menu_Login;
-class Menu_Score;
 
 class VisualControlButton;
 class VisualControlSlider;
@@ -54,10 +52,8 @@ class VisualControlSwitch;
 #define MENU_HELP_ACTION_BASE			( 600 )
 #define MENU_INGAME_HELP_ACTION_BASE	( 700 )
 #define MENU_LANGUAGE_SELECT			( 750 )
-#define MENU_LOGIN_BASE					( 800 )
 #define MENU_HIGHSCORES_BASE			( 850 )
 #define MENU_HIGHSCORESLIST_BASE		( 900 )
-#define MENU_SCORE_BASE					( 950 ) 
 
 
 #define MENU_ABOUT_ACTION_BASE			( 1000 )
@@ -120,7 +116,6 @@ public:
 	VisualControlButton *GetBackButton( ) { return m_back; }
 	VisualControlButton *GetTitle( )	  { return m_title; }
 	Menu_Help			*GetHelpMenu()	  { return m_menuHelp; }
-	Menu_Score			*GetMenuScore()   { return m_menuScore; }
 
 private:
 	void DrawBackground();
@@ -141,8 +136,6 @@ private:
 	Menu_LanguageSelection		*m_menuLanguageSelect;
 	Menu_HighScoresLevelList	*m_menuHighScoresLevelList;
 	Menu_HighScore				*m_menuHighScore;
-	Menu_Login					*m_menuLogin;
-	Menu_Score					*m_menuScore;
 
 	IMenu					*m_LastSubMenuPtr;
 	/// Visual constorls

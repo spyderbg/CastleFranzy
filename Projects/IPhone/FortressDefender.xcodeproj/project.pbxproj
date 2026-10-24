@@ -37,8 +37,6 @@
 		3584F2450FF8B4B200F45D45 /* VisualControlButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3584F2190FF8B4B200F45D45 /* VisualControlButton.cpp */; };
 		3584F2460FF8B4B200F45D45 /* VisualControlSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3584F21C0FF8B4B200F45D45 /* VisualControlSlider.cpp */; };
 		3584F2470FF8B4B200F45D45 /* VisualControlSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3584F21E0FF8B4B200F45D45 /* VisualControlSwitch.cpp */; };
-		548371B01090AF300033588D /* XPlayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 548371AE1090AF300033588D /* XPlayerManager.cpp */; };
-		548371B41090AF820033588D /* libGLXPlayerRelease.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 548371B31090AF820033588D /* libGLXPlayerRelease.a */; };
 		7D186D24107F4AF800A7978A /* GS_Cheat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D186D20107F4AF800A7978A /* GS_Cheat.cpp */; };
 		7D186D25107F4AF800A7978A /* GS_Splash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D186D22107F4AF800A7978A /* GS_Splash.cpp */; };
 		7D1CEFF010036DEF0081361C /* libSoundLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1CEFEF10036DEF0081361C /* libSoundLib.a */; };
@@ -91,33 +89,10 @@
 		BF5152AD1090699B000FAFBA /* intro_2500.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF5152AC1090699B000FAFBA /* intro_2500.mp4 */; };
 		CC121F24104FEF27004F6AB1 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC121F23104FEF27004F6AB1 /* main.mm */; };
 		CC4A442B104BDBC8009FF79D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4A442A104BDBC8009FF79D /* CoreGraphics.framework */; };
-		F0173ADC108F335100BFA2F4 /* Menu_Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0173ADA108F335100BFA2F4 /* Menu_Score.cpp */; };
 		F0173ADF108F336000BFA2F4 /* VisualControlContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0173ADD108F336000BFA2F4 /* VisualControlContainer.cpp */; };
 		F0175EF8106D0019009245B5 /* VisualControlMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0175EF4106D0019009245B5 /* VisualControlMesh.cpp */; };
 		F0175EF9106D0019009245B5 /* VisualControlSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0175EF6106D0019009245B5 /* VisualControlSprite.cpp */; };
-		F06351071090C83F00D285CF /* GS_SwitchToExternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F06351051090C83F00D285CF /* GS_SwitchToExternal.cpp */; };
-		F080B3F9108DF3D00035D1DE /* Menu_Login.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F080B3F7108DF3D00035D1DE /* Menu_Login.cpp */; };
 		F080B3FC108DF3DC0035D1DE /* VisualControlEditBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F080B3FA108DF3DC0035D1DE /* VisualControlEditBox.cpp */; };
-		F341E2BF105A356100864AF1 /* CatalogIconsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E294105A356000864AF1 /* CatalogIconsViewController.mm */; };
-		F341E2C0105A356100864AF1 /* CatalogViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E296105A356000864AF1 /* CatalogViewController.mm */; };
-		F341E2C1105A356100864AF1 /* GameInformationViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E298105A356000864AF1 /* GameInformationViewController.mm */; };
-		F341E2C2105A356100864AF1 /* GameTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E29A105A356000864AF1 /* GameTableViewController.mm */; };
-		F341E2C3105A356100864AF1 /* IGP.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E29C105A356000864AF1 /* IGP.mm */; };
-		F341E2C5105A356100864AF1 /* IGPFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F341E2A0105A356000864AF1 /* IGPFile.cpp */; };
-		F341E2C6105A356100864AF1 /* IGPGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F341E2A2105A356000864AF1 /* IGPGame.cpp */; };
-		F341E2C7105A356100864AF1 /* IGPInfoSender.m in Sources */ = {isa = PBXBuildFile; fileRef = F341E2A5105A356100864AF1 /* IGPInfoSender.m */; };
-		F341E2C8105A356100864AF1 /* IGPLinkGrabber.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E2A7105A356100864AF1 /* IGPLinkGrabber.mm */; };
-		F341E2C9105A356100864AF1 /* IGPLZMAFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F341E2A8105A356100864AF1 /* IGPLZMAFile.cpp */; };
-		F341E2CA105A356100864AF1 /* IGPResLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F341E2AA105A356100864AF1 /* IGPResLib.cpp */; };
-		F341E2CB105A356100864AF1 /* IGPSendInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F341E2AC105A356100864AF1 /* IGPSendInfo.cpp */; };
-		F341E2CC105A356100864AF1 /* IGPTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E2AF105A356100864AF1 /* IGPTexture.mm */; };
-		F341E2CD105A356100864AF1 /* IGPUpdater.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E2B1105A356100864AF1 /* IGPUpdater.mm */; };
-		F341E2CE105A356100864AF1 /* IGPUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E2B3105A356100864AF1 /* IGPUtil.mm */; };
-		F341E2CF105A356100864AF1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F341E2B5105A356100864AF1 /* Reachability.m */; };
-		F341E2D0105A356100864AF1 /* ReviewWriteViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E2B7105A356100864AF1 /* ReviewWriteViewController.mm */; };
-		F341E2D1105A356100864AF1 /* ScreenshotView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E2B9105A356100864AF1 /* ScreenshotView.mm */; };
-		F341E2D2105A356100864AF1 /* UIIconButton.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E2BC105A356100864AF1 /* UIIconButton.mm */; };
-		F341E2D3105A356100864AF1 /* WhatsNewViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F341E2BE105A356100864AF1 /* WhatsNewViewController.mm */; };
 		F34CD1D8106A6D6400F55CDC /* VisualControlPane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34CD1D6106A6D6400F55CDC /* VisualControlPane.cpp */; };
 		F34CD24B106BBF1200F55CDC /* CastleGate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34CD23D106BBF1200F55CDC /* CastleGate.cpp */; };
 		F34CD24C106BBF1200F55CDC /* Fireball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F34CD23F106BBF1200F55CDC /* Fireball.cpp */; };
@@ -131,20 +106,11 @@
 		F3613887103EC62E00A6FFAD /* Challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3613885103EC62E00A6FFAD /* Challenge.cpp */; };
 		F3613893103EC6F900A6FFAD /* UnitKind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3613891103EC6F900A6FFAD /* UnitKind.cpp */; };
 		F3613A0B103ECE0200A6FFAD /* libIrrlicht.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3613A0A103ECE0200A6FFAD /* libIrrlicht.a */; };
-		F385F897105A887600BAEF16 /* IGPcStr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F385F896105A887600BAEF16 /* IGPcStr.cpp */; };
-		F385F929105A9AF600BAEF16 /* badge.png in Resources */ = {isa = PBXBuildFile; fileRef = F385F923105A9AF600BAEF16 /* badge.png */; };
-		F385F92A105A9AF600BAEF16 /* IGPConfig in Resources */ = {isa = PBXBuildFile; fileRef = F385F924105A9AF600BAEF16 /* IGPConfig */; };
-		F385F92B105A9AF600BAEF16 /* igpdata in Resources */ = {isa = PBXBuildFile; fileRef = F385F925105A9AF600BAEF16 /* igpdata */; };
-		F385F92C105A9AF600BAEF16 /* strings.bar in Resources */ = {isa = PBXBuildFile; fileRef = F385F926105A9AF600BAEF16 /* strings.bar */; };
-		F385F92D105A9AF600BAEF16 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = F385F927105A9AF600BAEF16 /* textures */; };
-		F385F92E105A9AF600BAEF16 /* window in Resources */ = {isa = PBXBuildFile; fileRef = F385F928105A9AF600BAEF16 /* window */; };
 		F386E96410343F170066831B /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F386E96210343F170066831B /* Misc.cpp */; };
 		F386E96810343F280066831B /* ShamanAura.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F386E96610343F280066831B /* ShamanAura.cpp */; };
 		F38C4EFD10971D1300AF1331 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F38C4EF610971D1300AF1331 /* InfoPlist.strings */; };
 		F38DB4F3105E664300DD95D5 /* VisualControlText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F38DB4EF105E664300DD95D5 /* VisualControlText.cpp */; };
 		F39504BC1083ADA50049D95B /* FortressDefender-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F39504BB1083ADA50049D95B /* FortressDefender-Info.plist */; };
-		F395050A10849CC20049D95B /* oconf.bar in Resources */ = {isa = PBXBuildFile; fileRef = F395050410849CC20049D95B /* oconf.bar */; };
-		F395050B10849CC20049D95B /* version.txt in Resources */ = {isa = PBXBuildFile; fileRef = F395050510849CC20049D95B /* version.txt */; };
 		F3A3F07210614FBA0046C83B /* Achievements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A3F06E10614FBA0046C83B /* Achievements.cpp */; };
 		F3A3F07310614FBA0046C83B /* Cheats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A3F07010614FBA0046C83B /* Cheats.cpp */; };
 		F3A3F0E0106271080046C83B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F3A3F0DF106271080046C83B /* Default.png */; };
@@ -157,11 +123,6 @@
 		F3C621AA10032309005D2326 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C621A910032309005D2326 /* OpenAL.framework */; };
 		F3C621B210032377005D2326 /* SoundFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3C621AE10032377005D2326 /* SoundFileManager.cpp */; };
 		F3C621B310032377005D2326 /* SoundManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3C621B010032377005D2326 /* SoundManager.cpp */; };
-		F3E25BD2109F604100A33E00 /* libGLLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E25BD1109F604100A33E00 /* libGLLive.a */; };
-		F3E25BD6109F605200A33E00 /* gll_font.pak in Resources */ = {isa = PBXBuildFile; fileRef = F3E25BD3109F605200A33E00 /* gll_font.pak */; };
-		F3E25BD7109F605200A33E00 /* gll_res.pak in Resources */ = {isa = PBXBuildFile; fileRef = F3E25BD4109F605200A33E00 /* gll_res.pak */; };
-		F3E25BD8109F605200A33E00 /* gll_str.pak in Resources */ = {isa = PBXBuildFile; fileRef = F3E25BD5109F605200A33E00 /* gll_str.pak */; };
-		F3E25BDE109F627300A33E00 /* ad.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E25BDD109F627300A33E00 /* ad.png */; };
 		F3E40946100F1FBE00DBBCE9 /* EventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3E40944100F1FBE00DBBCE9 /* EventManager.cpp */; };
 		F3EAD0EA107B2EE2001A6B1E /* StringUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3EAD0E7107B2EE2001A6B1E /* StringUtils.cpp */; };
 		F3ECF091101740AB00DDA1AC /* Projectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3ECF08F101740AB00DDA1AC /* Projectile.cpp */; };
@@ -241,10 +202,6 @@
 		3584F21E0FF8B4B200F45D45 /* VisualControlSwitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlSwitch.cpp; sourceTree = "<group>"; };
 		3584F21F0FF8B4B200F45D45 /* VisualControlSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlSwitch.h; sourceTree = "<group>"; };
 		3584F2520FF8B64600F45D45 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
-		548370BB109088D30033588D /* Menu_ScoreInputType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu_ScoreInputType.h; sourceTree = "<group>"; };
-		548371AE1090AF300033588D /* XPlayerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XPlayerManager.cpp; sourceTree = "<group>"; };
-		548371AF1090AF300033588D /* XPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPlayerManager.h; sourceTree = "<group>"; };
-		548371B31090AF820033588D /* libGLXPlayerRelease.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLXPlayerRelease.a; path = ../../Lib/XPlayer/lib/IPhone/libGLXPlayerRelease.a; sourceTree = SOURCE_ROOT; };
 		7D186D20107F4AF800A7978A /* GS_Cheat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GS_Cheat.cpp; sourceTree = "<group>"; };
 		7D186D21107F4AF800A7978A /* GS_Cheat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GS_Cheat.h; sourceTree = "<group>"; };
 		7D186D22107F4AF800A7978A /* GS_Splash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GS_Splash.cpp; sourceTree = "<group>"; };
@@ -355,62 +312,14 @@
 		BF5152AC1090699B000FAFBA /* intro_2500.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro_2500.mp4; path = ../../Build/bin/intro_2500.mp4; sourceTree = SOURCE_ROOT; };
 		CC121F23104FEF27004F6AB1 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		CC4A442A104BDBC8009FF79D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F0173ADA108F335100BFA2F4 /* Menu_Score.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu_Score.cpp; sourceTree = "<group>"; };
-		F0173ADB108F335100BFA2F4 /* Menu_Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu_Score.h; sourceTree = "<group>"; };
 		F0173ADD108F336000BFA2F4 /* VisualControlContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlContainer.cpp; sourceTree = "<group>"; };
 		F0173ADE108F336000BFA2F4 /* VisualControlContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlContainer.h; sourceTree = "<group>"; };
 		F0175EF4106D0019009245B5 /* VisualControlMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlMesh.cpp; sourceTree = "<group>"; };
 		F0175EF5106D0019009245B5 /* VisualControlMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlMesh.h; sourceTree = "<group>"; };
 		F0175EF6106D0019009245B5 /* VisualControlSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlSprite.cpp; sourceTree = "<group>"; };
 		F0175EF7106D0019009245B5 /* VisualControlSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlSprite.h; sourceTree = "<group>"; };
-		F06351051090C83F00D285CF /* GS_SwitchToExternal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GS_SwitchToExternal.cpp; path = ../../src/GameStates/GS_SwitchToExternal.cpp; sourceTree = SOURCE_ROOT; };
-		F06351061090C83F00D285CF /* GS_SwitchToExternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GS_SwitchToExternal.h; path = ../../src/GameStates/GS_SwitchToExternal.h; sourceTree = SOURCE_ROOT; };
-		F080B3F7108DF3D00035D1DE /* Menu_Login.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu_Login.cpp; sourceTree = "<group>"; };
-		F080B3F8108DF3D00035D1DE /* Menu_Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu_Login.h; sourceTree = "<group>"; };
 		F080B3FA108DF3DC0035D1DE /* VisualControlEditBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlEditBox.cpp; sourceTree = "<group>"; };
 		F080B3FB108DF3DC0035D1DE /* VisualControlEditBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlEditBox.h; sourceTree = "<group>"; };
-		F341E293105A356000864AF1 /* CatalogIconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CatalogIconsViewController.h; path = ../../Lib/IGP/sources/classesToAdd/CatalogIconsViewController.h; sourceTree = SOURCE_ROOT; };
-		F341E294105A356000864AF1 /* CatalogIconsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CatalogIconsViewController.mm; path = ../../Lib/IGP/sources/classesToAdd/CatalogIconsViewController.mm; sourceTree = SOURCE_ROOT; };
-		F341E295105A356000864AF1 /* CatalogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CatalogViewController.h; path = ../../Lib/IGP/sources/classesToAdd/CatalogViewController.h; sourceTree = SOURCE_ROOT; };
-		F341E296105A356000864AF1 /* CatalogViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CatalogViewController.mm; path = ../../Lib/IGP/sources/classesToAdd/CatalogViewController.mm; sourceTree = SOURCE_ROOT; };
-		F341E297105A356000864AF1 /* GameInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameInformationViewController.h; path = ../../Lib/IGP/sources/classesToAdd/GameInformationViewController.h; sourceTree = SOURCE_ROOT; };
-		F341E298105A356000864AF1 /* GameInformationViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GameInformationViewController.mm; path = ../../Lib/IGP/sources/classesToAdd/GameInformationViewController.mm; sourceTree = SOURCE_ROOT; };
-		F341E299105A356000864AF1 /* GameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameTableViewController.h; path = ../../Lib/IGP/sources/classesToAdd/GameTableViewController.h; sourceTree = SOURCE_ROOT; };
-		F341E29A105A356000864AF1 /* GameTableViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GameTableViewController.mm; path = ../../Lib/IGP/sources/classesToAdd/GameTableViewController.mm; sourceTree = SOURCE_ROOT; };
-		F341E29B105A356000864AF1 /* IGP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGP.h; path = ../../Lib/IGP/sources/classesToAdd/IGP.h; sourceTree = SOURCE_ROOT; };
-		F341E29C105A356000864AF1 /* IGP.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IGP.mm; path = ../../Lib/IGP/sources/classesToAdd/IGP.mm; sourceTree = SOURCE_ROOT; };
-		F341E29E105A356000864AF1 /* IGPcStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPcStr.h; path = ../../Lib/IGP/sources/classesToAdd/IGPcStr.h; sourceTree = SOURCE_ROOT; };
-		F341E29F105A356000864AF1 /* IGPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPDefines.h; path = ../../Lib/IGP/sources/classesToAdd/IGPDefines.h; sourceTree = SOURCE_ROOT; };
-		F341E2A0105A356000864AF1 /* IGPFile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = IGPFile.cpp; path = ../../Lib/IGP/sources/classesToAdd/IGPFile.cpp; sourceTree = SOURCE_ROOT; };
-		F341E2A1105A356000864AF1 /* IGPFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPFile.h; path = ../../Lib/IGP/sources/classesToAdd/IGPFile.h; sourceTree = SOURCE_ROOT; };
-		F341E2A2105A356000864AF1 /* IGPGame.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = IGPGame.cpp; path = ../../Lib/IGP/sources/classesToAdd/IGPGame.cpp; sourceTree = SOURCE_ROOT; };
-		F341E2A3105A356000864AF1 /* IGPGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPGame.h; path = ../../Lib/IGP/sources/classesToAdd/IGPGame.h; sourceTree = SOURCE_ROOT; };
-		F341E2A4105A356100864AF1 /* IGPInfoSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPInfoSender.h; path = ../../Lib/IGP/sources/classesToAdd/IGPInfoSender.h; sourceTree = SOURCE_ROOT; };
-		F341E2A5105A356100864AF1 /* IGPInfoSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGPInfoSender.m; path = ../../Lib/IGP/sources/classesToAdd/IGPInfoSender.m; sourceTree = SOURCE_ROOT; };
-		F341E2A6105A356100864AF1 /* IGPLinkGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPLinkGrabber.h; path = ../../Lib/IGP/sources/classesToAdd/IGPLinkGrabber.h; sourceTree = SOURCE_ROOT; };
-		F341E2A7105A356100864AF1 /* IGPLinkGrabber.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IGPLinkGrabber.mm; path = ../../Lib/IGP/sources/classesToAdd/IGPLinkGrabber.mm; sourceTree = SOURCE_ROOT; };
-		F341E2A8105A356100864AF1 /* IGPLZMAFile.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = IGPLZMAFile.cpp; path = ../../Lib/IGP/sources/classesToAdd/IGPLZMAFile.cpp; sourceTree = SOURCE_ROOT; };
-		F341E2A9105A356100864AF1 /* IGPLZMAFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPLZMAFile.h; path = ../../Lib/IGP/sources/classesToAdd/IGPLZMAFile.h; sourceTree = SOURCE_ROOT; };
-		F341E2AA105A356100864AF1 /* IGPResLib.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = IGPResLib.cpp; path = ../../Lib/IGP/sources/classesToAdd/IGPResLib.cpp; sourceTree = SOURCE_ROOT; };
-		F341E2AB105A356100864AF1 /* IGPResLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPResLib.h; path = ../../Lib/IGP/sources/classesToAdd/IGPResLib.h; sourceTree = SOURCE_ROOT; };
-		F341E2AC105A356100864AF1 /* IGPSendInfo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = IGPSendInfo.cpp; path = ../../Lib/IGP/sources/classesToAdd/IGPSendInfo.cpp; sourceTree = SOURCE_ROOT; };
-		F341E2AD105A356100864AF1 /* IGPSendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPSendInfo.h; path = ../../Lib/IGP/sources/classesToAdd/IGPSendInfo.h; sourceTree = SOURCE_ROOT; };
-		F341E2AE105A356100864AF1 /* IGPTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPTexture.h; path = ../../Lib/IGP/sources/classesToAdd/IGPTexture.h; sourceTree = SOURCE_ROOT; };
-		F341E2AF105A356100864AF1 /* IGPTexture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IGPTexture.mm; path = ../../Lib/IGP/sources/classesToAdd/IGPTexture.mm; sourceTree = SOURCE_ROOT; };
-		F341E2B0105A356100864AF1 /* IGPUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPUpdater.h; path = ../../Lib/IGP/sources/classesToAdd/IGPUpdater.h; sourceTree = SOURCE_ROOT; };
-		F341E2B1105A356100864AF1 /* IGPUpdater.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IGPUpdater.mm; path = ../../Lib/IGP/sources/classesToAdd/IGPUpdater.mm; sourceTree = SOURCE_ROOT; };
-		F341E2B2105A356100864AF1 /* IGPUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGPUtil.h; path = ../../Lib/IGP/sources/classesToAdd/IGPUtil.h; sourceTree = SOURCE_ROOT; };
-		F341E2B3105A356100864AF1 /* IGPUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IGPUtil.mm; path = ../../Lib/IGP/sources/classesToAdd/IGPUtil.mm; sourceTree = SOURCE_ROOT; };
-		F341E2B4105A356100864AF1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../Lib/IGP/sources/classesToAdd/Reachability.h; sourceTree = SOURCE_ROOT; };
-		F341E2B5105A356100864AF1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../Lib/IGP/sources/classesToAdd/Reachability.m; sourceTree = SOURCE_ROOT; };
-		F341E2B6105A356100864AF1 /* ReviewWriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewWriteViewController.h; path = ../../Lib/IGP/sources/classesToAdd/ReviewWriteViewController.h; sourceTree = SOURCE_ROOT; };
-		F341E2B7105A356100864AF1 /* ReviewWriteViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ReviewWriteViewController.mm; path = ../../Lib/IGP/sources/classesToAdd/ReviewWriteViewController.mm; sourceTree = SOURCE_ROOT; };
-		F341E2B8105A356100864AF1 /* ScreenshotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenshotView.h; path = ../../Lib/IGP/sources/classesToAdd/ScreenshotView.h; sourceTree = SOURCE_ROOT; };
-		F341E2B9105A356100864AF1 /* ScreenshotView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ScreenshotView.mm; path = ../../Lib/IGP/sources/classesToAdd/ScreenshotView.mm; sourceTree = SOURCE_ROOT; };
-		F341E2BB105A356100864AF1 /* UIIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIIconButton.h; path = ../../Lib/IGP/sources/classesToAdd/UIIconButton.h; sourceTree = SOURCE_ROOT; };
-		F341E2BC105A356100864AF1 /* UIIconButton.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = UIIconButton.mm; path = ../../Lib/IGP/sources/classesToAdd/UIIconButton.mm; sourceTree = SOURCE_ROOT; };
-		F341E2BD105A356100864AF1 /* WhatsNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhatsNewViewController.h; path = ../../Lib/IGP/sources/classesToAdd/WhatsNewViewController.h; sourceTree = SOURCE_ROOT; };
-		F341E2BE105A356100864AF1 /* WhatsNewViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = WhatsNewViewController.mm; path = ../../Lib/IGP/sources/classesToAdd/WhatsNewViewController.mm; sourceTree = SOURCE_ROOT; };
 		F34CD1D6106A6D6400F55CDC /* VisualControlPane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlPane.cpp; sourceTree = "<group>"; };
 		F34CD1D7106A6D6400F55CDC /* VisualControlPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlPane.h; sourceTree = "<group>"; };
 		F34CD23D106BBF1200F55CDC /* CastleGate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CastleGate.cpp; path = Weapons/CastleGate.cpp; sourceTree = "<group>"; };
@@ -438,14 +347,6 @@
 		F3613891103EC6F900A6FFAD /* UnitKind.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnitKind.cpp; sourceTree = "<group>"; };
 		F3613892103EC6F900A6FFAD /* UnitKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitKind.h; sourceTree = "<group>"; };
 		F3613A0A103ECE0200A6FFAD /* libIrrlicht.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIrrlicht.a; path = "../../Lib/Irrlicht/source/Irrlicht/IPhoneOS/build/Release-iphoneos/libIrrlicht.a"; sourceTree = SOURCE_ROOT; };
-		F385F896105A887600BAEF16 /* IGPcStr.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = IGPcStr.cpp; path = ../../Lib/IGP/sources/classesToAdd/IGPcStr.cpp; sourceTree = SOURCE_ROOT; };
-		F385F923105A9AF600BAEF16 /* badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = badge.png; path = ../../Lib/IGP_Res/badge.png; sourceTree = SOURCE_ROOT; };
-		F385F924105A9AF600BAEF16 /* IGPConfig */ = {isa = PBXFileReference; lastKnownFileType = file; name = IGPConfig; path = ../../Lib/IGP_Res/IGPConfig; sourceTree = SOURCE_ROOT; };
-		F385F925105A9AF600BAEF16 /* igpdata */ = {isa = PBXFileReference; lastKnownFileType = file; name = igpdata; path = ../../Lib/IGP_Res/igpdata; sourceTree = SOURCE_ROOT; };
-		F385F926105A9AF600BAEF16 /* strings.bar */ = {isa = PBXFileReference; lastKnownFileType = file; name = strings.bar; path = ../../Lib/IGP_Res/strings.bar; sourceTree = SOURCE_ROOT; };
-		F385F927105A9AF600BAEF16 /* textures */ = {isa = PBXFileReference; lastKnownFileType = file; name = textures; path = ../../Lib/IGP_Res/textures; sourceTree = SOURCE_ROOT; };
-		F385F928105A9AF600BAEF16 /* window */ = {isa = PBXFileReference; lastKnownFileType = file; name = window; path = ../../Lib/IGP_Res/window; sourceTree = SOURCE_ROOT; };
-		F385F930105A9B4200BAEF16 /* string_headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = string_headers; path = ../../Lib/IGP_Res/string_headers; sourceTree = SOURCE_ROOT; };
 		F386E96210343F170066831B /* Misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Misc.cpp; sourceTree = "<group>"; };
 		F386E96310343F170066831B /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Misc.h; sourceTree = "<group>"; };
 		F386E96610343F280066831B /* ShamanAura.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShamanAura.cpp; sourceTree = "<group>"; };
@@ -459,8 +360,6 @@
 		F38DB4EF105E664300DD95D5 /* VisualControlText.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualControlText.cpp; sourceTree = "<group>"; };
 		F38DB4F0105E664300DD95D5 /* VisualControlText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualControlText.h; sourceTree = "<group>"; };
 		F39504BB1083ADA50049D95B /* FortressDefender-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FortressDefender-Info.plist"; sourceTree = "<group>"; };
-		F395050410849CC20049D95B /* oconf.bar */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = oconf.bar; path = ../../Lib/GLLive_Res/oconf.bar; sourceTree = SOURCE_ROOT; };
-		F395050510849CC20049D95B /* version.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = version.txt; path = ../../Lib/GLLive_Res/version.txt; sourceTree = SOURCE_ROOT; };
 		F3A3F06E10614FBA0046C83B /* Achievements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Achievements.cpp; sourceTree = "<group>"; };
 		F3A3F06F10614FBA0046C83B /* Achievements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Achievements.h; sourceTree = "<group>"; };
 		F3A3F07010614FBA0046C83B /* Cheats.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cheats.cpp; sourceTree = "<group>"; };
@@ -479,11 +378,6 @@
 		F3C621AF10032377005D2326 /* SoundFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundFileManager.h; path = Audio/SoundFileManager.h; sourceTree = "<group>"; };
 		F3C621B010032377005D2326 /* SoundManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoundManager.cpp; path = Audio/SoundManager.cpp; sourceTree = "<group>"; };
 		F3C621B110032377005D2326 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = Audio/SoundManager.h; sourceTree = "<group>"; };
-		F3E25BD1109F604100A33E00 /* libGLLive.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLLive.a; path = ../../Lib/GLLive_Res/libGLLive.a; sourceTree = SOURCE_ROOT; };
-		F3E25BD3109F605200A33E00 /* gll_font.pak */ = {isa = PBXFileReference; lastKnownFileType = file; name = gll_font.pak; path = ../../Lib/GLLive_Res/gll_font.pak; sourceTree = SOURCE_ROOT; };
-		F3E25BD4109F605200A33E00 /* gll_res.pak */ = {isa = PBXFileReference; lastKnownFileType = file; name = gll_res.pak; path = ../../Lib/GLLive_Res/gll_res.pak; sourceTree = SOURCE_ROOT; };
-		F3E25BD5109F605200A33E00 /* gll_str.pak */ = {isa = PBXFileReference; lastKnownFileType = file; name = gll_str.pak; path = ../../Lib/GLLive_Res/gll_str.pak; sourceTree = SOURCE_ROOT; };
-		F3E25BDD109F627300A33E00 /* ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ad.png; path = ../../Lib/GLLive_Res/ad.png; sourceTree = SOURCE_ROOT; };
 		F3E4093F100F1FA200DBBCE9 /* EvAcceleration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvAcceleration.h; sourceTree = "<group>"; };
 		F3E40940100F1FA200DBBCE9 /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
 		F3E40941100F1FA200DBBCE9 /* EvKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvKeyboard.h; sourceTree = "<group>"; };
@@ -517,8 +411,6 @@
 				CC4A442B104BDBC8009FF79D /* CoreGraphics.framework in Frameworks */,
 				F3A7D08B105A78D900A86AC2 /* MediaPlayer.framework in Frameworks */,
 				F3A7D08C105A78D900A86AC2 /* SystemConfiguration.framework in Frameworks */,
-				548371B41090AF820033588D /* libGLXPlayerRelease.a in Frameworks */,
-				F3E25BD2109F604100A33E00 /* libGLLive.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,11 +443,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				F3E25BD1109F604100A33E00 /* libGLLive.a */,
-				548371B31090AF820033588D /* libGLXPlayerRelease.a */,
 				F3613A0A103ECE0200A6FFAD /* libIrrlicht.a */,
 				7D1CEFEF10036DEF0081361C /* libSoundLib.a */,
-				F341E292105A352300864AF1 /* IGP */,
 				3584F25C0FF8B6E100F45D45 /* Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -577,26 +466,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F3E25BDD109F627300A33E00 /* ad.png */,
-				F3E25BD3109F605200A33E00 /* gll_font.pak */,
-				F3E25BD4109F605200A33E00 /* gll_res.pak */,
-				F3E25BD5109F605200A33E00 /* gll_str.pak */,
 				F38C4EF610971D1300AF1331 /* InfoPlist.strings */,
 				BF5152AC1090699B000FAFBA /* intro_2500.mp4 */,
-				F395050410849CC20049D95B /* oconf.bar */,
-				F395050510849CC20049D95B /* version.txt */,
 				F39504BB1083ADA50049D95B /* FortressDefender-Info.plist */,
 				7DCD3AE0106CEDE0006143E6 /* resources.pack */,
 				7DCD3AD5106CEB03006143E6 /* audio_Music.pack */,
 				7DCD3AD6106CEB03006143E6 /* audio_SFX.pack */,
 				F3A3F0DF106271080046C83B /* Default.png */,
 				F3A3F2FD106382330046C83B /* icon.png */,
-				F385F923105A9AF600BAEF16 /* badge.png */,
-				F385F924105A9AF600BAEF16 /* IGPConfig */,
-				F385F925105A9AF600BAEF16 /* igpdata */,
-				F385F926105A9AF600BAEF16 /* strings.bar */,
-				F385F927105A9AF600BAEF16 /* textures */,
-				F385F928105A9AF600BAEF16 /* window */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 			);
 			name = Resources;
@@ -823,11 +700,6 @@
 		3584F1F40FF8B4B200F45D45 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
-				548370BB109088D30033588D /* Menu_ScoreInputType.h */,
-				F0173ADA108F335100BFA2F4 /* Menu_Score.cpp */,
-				F0173ADB108F335100BFA2F4 /* Menu_Score.h */,
-				F080B3F7108DF3D00035D1DE /* Menu_Login.cpp */,
-				F080B3F8108DF3D00035D1DE /* Menu_Login.h */,
 				7D9C5AED108B5E61004B2E4D /* Menu_About.cpp */,
 				7D9C5AEE108B5E61004B2E4D /* Menu_About.h */,
 				7D9C5AEF108B5E61004B2E4D /* Menu_Achievements.cpp */,
@@ -953,7 +825,6 @@
 		3584F25C0FF8B6E100F45D45 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				548371AD1090AF300033588D /* Network */,
 				7DE3207010204806004F3D5D /* Autogenerated */,
 				3584F19A0FF8B4B200F45D45 /* Common */,
 				3584F1A10FF8B4B200F45D45 /* Core */,
@@ -976,16 +847,6 @@
 			);
 			name = Sources;
 			sourceTree = "<group>";
-		};
-		548371AD1090AF300033588D /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				548371AE1090AF300033588D /* XPlayerManager.cpp */,
-				548371AF1090AF300033588D /* XPlayerManager.h */,
-			);
-			name = Network;
-			path = ../../Src/Network;
-			sourceTree = SOURCE_ROOT;
 		};
 		7D25CFC110446DEA0017C27A /* ParticleSystem */ = {
 			isa = PBXGroup;
@@ -1024,8 +885,6 @@
 		7D8B979D10039D9C004D5ABD /* GameStates */ = {
 			isa = PBXGroup;
 			children = (
-				F06351051090C83F00D285CF /* GS_SwitchToExternal.cpp */,
-				F06351061090C83F00D285CF /* GS_SwitchToExternal.h */,
 				7D186D20107F4AF800A7978A /* GS_Cheat.cpp */,
 				7D186D21107F4AF800A7978A /* GS_Cheat.h */,
 				7D8B97A210039D9C004D5ABD /* GS_Menu.cpp */,
@@ -1060,57 +919,6 @@
 				F34CD24A106BBF1200F55CDC /* WeaponObject.h */,
 			);
 			name = Weapons;
-			sourceTree = "<group>";
-		};
-		F341E292105A352300864AF1 /* IGP */ = {
-			isa = PBXGroup;
-			children = (
-				F385F930105A9B4200BAEF16 /* string_headers */,
-				F341E293105A356000864AF1 /* CatalogIconsViewController.h */,
-				F341E294105A356000864AF1 /* CatalogIconsViewController.mm */,
-				F341E295105A356000864AF1 /* CatalogViewController.h */,
-				F341E296105A356000864AF1 /* CatalogViewController.mm */,
-				F341E297105A356000864AF1 /* GameInformationViewController.h */,
-				F341E298105A356000864AF1 /* GameInformationViewController.mm */,
-				F341E299105A356000864AF1 /* GameTableViewController.h */,
-				F341E29A105A356000864AF1 /* GameTableViewController.mm */,
-				F341E29B105A356000864AF1 /* IGP.h */,
-				F341E29C105A356000864AF1 /* IGP.mm */,
-				F341E29E105A356000864AF1 /* IGPcStr.h */,
-				F385F896105A887600BAEF16 /* IGPcStr.cpp */,
-				F341E29F105A356000864AF1 /* IGPDefines.h */,
-				F341E2A0105A356000864AF1 /* IGPFile.cpp */,
-				F341E2A1105A356000864AF1 /* IGPFile.h */,
-				F341E2A2105A356000864AF1 /* IGPGame.cpp */,
-				F341E2A3105A356000864AF1 /* IGPGame.h */,
-				F341E2A4105A356100864AF1 /* IGPInfoSender.h */,
-				F341E2A5105A356100864AF1 /* IGPInfoSender.m */,
-				F341E2A6105A356100864AF1 /* IGPLinkGrabber.h */,
-				F341E2A7105A356100864AF1 /* IGPLinkGrabber.mm */,
-				F341E2A8105A356100864AF1 /* IGPLZMAFile.cpp */,
-				F341E2A9105A356100864AF1 /* IGPLZMAFile.h */,
-				F341E2AA105A356100864AF1 /* IGPResLib.cpp */,
-				F341E2AB105A356100864AF1 /* IGPResLib.h */,
-				F341E2AC105A356100864AF1 /* IGPSendInfo.cpp */,
-				F341E2AD105A356100864AF1 /* IGPSendInfo.h */,
-				F341E2AE105A356100864AF1 /* IGPTexture.h */,
-				F341E2AF105A356100864AF1 /* IGPTexture.mm */,
-				F341E2B0105A356100864AF1 /* IGPUpdater.h */,
-				F341E2B1105A356100864AF1 /* IGPUpdater.mm */,
-				F341E2B2105A356100864AF1 /* IGPUtil.h */,
-				F341E2B3105A356100864AF1 /* IGPUtil.mm */,
-				F341E2B4105A356100864AF1 /* Reachability.h */,
-				F341E2B5105A356100864AF1 /* Reachability.m */,
-				F341E2B6105A356100864AF1 /* ReviewWriteViewController.h */,
-				F341E2B7105A356100864AF1 /* ReviewWriteViewController.mm */,
-				F341E2B8105A356100864AF1 /* ScreenshotView.h */,
-				F341E2B9105A356100864AF1 /* ScreenshotView.mm */,
-				F341E2BB105A356100864AF1 /* UIIconButton.h */,
-				F341E2BC105A356100864AF1 /* UIIconButton.mm */,
-				F341E2BD105A356100864AF1 /* WhatsNewViewController.h */,
-				F341E2BE105A356100864AF1 /* WhatsNewViewController.mm */,
-			);
-			name = IGP;
 			sourceTree = "<group>";
 		};
 		F3613884103EC5DC00A6FFAD /* PlayfieldParts */ = {
@@ -1204,26 +1012,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				F385F929105A9AF600BAEF16 /* badge.png in Resources */,
-				F385F92A105A9AF600BAEF16 /* IGPConfig in Resources */,
-				F385F92B105A9AF600BAEF16 /* igpdata in Resources */,
-				F385F92C105A9AF600BAEF16 /* strings.bar in Resources */,
-				F385F92D105A9AF600BAEF16 /* textures in Resources */,
-				F385F92E105A9AF600BAEF16 /* window in Resources */,
 				F3A3F0E0106271080046C83B /* Default.png in Resources */,
 				F3A3F2FE106382330046C83B /* icon.png in Resources */,
 				7DCD3AD8106CEB03006143E6 /* audio_Music.pack in Resources */,
 				7DCD3AD9106CEB03006143E6 /* audio_SFX.pack in Resources */,
 				7DCD3AE1106CEDE0006143E6 /* resources.pack in Resources */,
 				F39504BC1083ADA50049D95B /* FortressDefender-Info.plist in Resources */,
-				F395050A10849CC20049D95B /* oconf.bar in Resources */,
-				F395050B10849CC20049D95B /* version.txt in Resources */,
 				BF5152AD1090699B000FAFBA /* intro_2500.mp4 in Resources */,
 				F38C4EFD10971D1300AF1331 /* InfoPlist.strings in Resources */,
-				F3E25BD6109F605200A33E00 /* gll_font.pak in Resources */,
-				F3E25BD7109F605200A33E00 /* gll_res.pak in Resources */,
-				F3E25BD8109F605200A33E00 /* gll_str.pak in Resources */,
-				F3E25BDE109F627300A33E00 /* ad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1289,27 +1085,6 @@
 				7D90DF2810456B1F009795BB /* Gestures.cpp in Sources */,
 				CC121F24104FEF27004F6AB1 /* main.mm in Sources */,
 				F361028C1055618E007A87E8 /* iCDAppDelegate.mm in Sources */,
-				F341E2BF105A356100864AF1 /* CatalogIconsViewController.mm in Sources */,
-				F341E2C0105A356100864AF1 /* CatalogViewController.mm in Sources */,
-				F341E2C1105A356100864AF1 /* GameInformationViewController.mm in Sources */,
-				F341E2C2105A356100864AF1 /* GameTableViewController.mm in Sources */,
-				F341E2C3105A356100864AF1 /* IGP.mm in Sources */,
-				F341E2C5105A356100864AF1 /* IGPFile.cpp in Sources */,
-				F341E2C6105A356100864AF1 /* IGPGame.cpp in Sources */,
-				F341E2C7105A356100864AF1 /* IGPInfoSender.m in Sources */,
-				F341E2C8105A356100864AF1 /* IGPLinkGrabber.mm in Sources */,
-				F341E2C9105A356100864AF1 /* IGPLZMAFile.cpp in Sources */,
-				F341E2CA105A356100864AF1 /* IGPResLib.cpp in Sources */,
-				F341E2CB105A356100864AF1 /* IGPSendInfo.cpp in Sources */,
-				F341E2CC105A356100864AF1 /* IGPTexture.mm in Sources */,
-				F341E2CD105A356100864AF1 /* IGPUpdater.mm in Sources */,
-				F341E2CE105A356100864AF1 /* IGPUtil.mm in Sources */,
-				F341E2CF105A356100864AF1 /* Reachability.m in Sources */,
-				F341E2D0105A356100864AF1 /* ReviewWriteViewController.mm in Sources */,
-				F341E2D1105A356100864AF1 /* ScreenshotView.mm in Sources */,
-				F341E2D2105A356100864AF1 /* UIIconButton.mm in Sources */,
-				F341E2D3105A356100864AF1 /* WhatsNewViewController.mm in Sources */,
-				F385F897105A887600BAEF16 /* IGPcStr.cpp in Sources */,
 				F38DB4F3105E664300DD95D5 /* VisualControlText.cpp in Sources */,
 				F3A3F07210614FBA0046C83B /* Achievements.cpp in Sources */,
 				F3A3F07310614FBA0046C83B /* Cheats.cpp in Sources */,
@@ -1352,13 +1127,9 @@
 				7D9C5B26108B5E62004B2E4D /* Menu_Shop.cpp in Sources */,
 				7D9C5B27108B5E62004B2E4D /* Menu_SoundOptions.cpp in Sources */,
 				7D9C5B28108B5E62004B2E4D /* MenuMain.cpp in Sources */,
-				F080B3F9108DF3D00035D1DE /* Menu_Login.cpp in Sources */,
 				F080B3FC108DF3DC0035D1DE /* VisualControlEditBox.cpp in Sources */,
 				F35574D5108E23C600B526E2 /* TextInput.mm in Sources */,
-				F0173ADC108F335100BFA2F4 /* Menu_Score.cpp in Sources */,
 				F0173ADF108F336000BFA2F4 /* VisualControlContainer.cpp in Sources */,
-				F06351071090C83F00D285CF /* GS_SwitchToExternal.cpp in Sources */,
-				548371B01090AF300033588D /* XPlayerManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1401,12 +1172,6 @@
 					"\"$(SRCROOT)/../../Lib/Irrlicht/source/Irrlicht/IPhoneOS/build/Release-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../../Lib/GameloftLive/RES_For_Integrate/ForDevice\"",
-					"\"$(SRCROOT)/../../Lib/GameloftLive/MakeGLLiveLib/build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../Lib/GameloftLive/RES_For_Integrate/ForSimulator\"",
-					"\"$(SRCROOT)/../../Lib/GameloftLive/RES_For_Integrate/Old_Style/ForDevice\"",
-					"\"$(SRCROOT)/../../Lib/GLLive_Res\"",
-					"\"$(SRCROOT)/../../Lib/XPlayer/lib/IPhone\"",
 				);
 				PROVISIONING_PROFILE = "389A2970-FBE4-44B3-8675-90525A7BE28F";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "389A2970-FBE4-44B3-8675-90525A7BE28F";
@@ -1433,8 +1198,6 @@
 					"\"$(SRCROOT)/../../Lib/Irrlicht/source/Irrlicht/IPhoneOS/build/Release-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../../Lib/GLLive_Res\"",
-					"\"$(SRCROOT)/../../Lib/XPlayer/lib/IPhone\"",
 				);
 				PROVISIONING_PROFILE = "4A96A766-68D0-482A-A4F0-45D658F80375";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4A96A766-68D0-482A-A4F0-45D658F80375";
@@ -1457,10 +1220,6 @@
 					../../Lib/Irrlicht/include,
 					../../Src,
 					../../Lib/SoundLib/include,
-					../../Lib/GLLive_Res,
-					../../Lib/IGP/sources/classesToAdd,
-					../../Lib/IGP_Res/string_headers,
-					../../Lib/XPlayer/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
 				PRODUCT_NAME = CastleFrenzy;
@@ -1488,8 +1247,6 @@
 					"\"$(SRCROOT)/../../Lib/Irrlicht/source/Irrlicht/IPhoneOS/build/Release-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../../Lib/GLLive_Res\"",
-					"\"$(SRCROOT)/../../Lib/XPlayer/lib/IPhone\"",
 				);
 				PROVISIONING_PROFILE = "CF7D81B2-D1D5-4E1B-AFFF-BA662AB1D042";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CF7D81B2-D1D5-4E1B-AFFF-BA662AB1D042";
@@ -1512,10 +1269,6 @@
 					../../Lib/Irrlicht/include,
 					../../Src,
 					../../Lib/SoundLib/include,
-					../../Lib/GLLive_Res,
-					../../Lib/IGP/sources/classesToAdd,
-					../../Lib/IGP_Res/string_headers,
-					../../Lib/XPlayer/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
 				PRODUCT_NAME = CastleFrenzy;
@@ -1543,8 +1296,6 @@
 					"\"$(SRCROOT)/../../Lib/Irrlicht/source/Irrlicht/IPhoneOS/build/Release-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../Lib/SoundLib/prj/SoundLib/build/Release-iphoneos\"",
-					"\"$(SRCROOT)/../../Lib/GLLive_Res\"",
-					"\"$(SRCROOT)/../../Lib/XPlayer/lib/IPhone\"",
 				);
 				PROVISIONING_PROFILE = "ACD67CB9-554F-44D3-A9BC-87D3907F57A1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ACD67CB9-554F-44D3-A9BC-87D3907F57A1";
@@ -1606,10 +1357,6 @@
 					../../Lib/Irrlicht/include,
 					../../Src,
 					../../Lib/SoundLib/include,
-					../../Lib/GLLive_Res,
-					../../Lib/IGP/sources/classesToAdd,
-					../../Lib/IGP_Res/string_headers,
-					../../Lib/XPlayer/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 2.2.1;
 				PRODUCT_NAME = CastleFrenzy;

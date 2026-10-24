@@ -21,15 +21,15 @@
 	extern "C" void* 	gameUpdateRoutine(void* p);
 	
 	extern pthread_t 			gameUpdateThread;
-	extern pthread_mutex_t 		g_igpMutex;
+	extern pthread_mutex_t 		g_renderMutex;
 
-	#define IGP_MUTEX_LOCK		pthread_mutex_lock(&g_igpMutex);
-	#define IGP_MUTEX_UNLOCK	pthread_mutex_unlock(&g_igpMutex);
+	#define RENDER_MUTEX_LOCK		pthread_mutex_lock(&g_renderMutex);
+	#define RENDER_MUTEX_UNLOCK	pthread_mutex_unlock(&g_renderMutex);
 
 #else
 
-	#define IGP_MUTEX_LOCK		
-	#define IGP_MUTEX_UNLOCK	
+	#define RENDER_MUTEX_LOCK		
+	#define RENDER_MUTEX_UNLOCK	
 
 #endif
 
@@ -82,7 +82,6 @@ Note that setting the view non-opaque will only work if the EAGL surface has an 
 - (int) addTouch: (UITouch*) touch;
 - (int) getTouchIndex: (UITouch*) touch;
 - (int) removeTouch: (UITouch*) touch;
-- (void)handleTouch:(UITouch *)touch;
 
 - (CGPoint)ConvertCoordP:(CGPoint)p;
 

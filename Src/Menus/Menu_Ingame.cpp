@@ -473,13 +473,13 @@ void Menu_Ingame::Update( float dt )
 	/// Cheat codes
 	UpdateCheats();
 
-	bool goToLogin = false;
+	bool goToHighScore = false;
 	bool goToSelectLevel = false;
 
 	if (m_menuType == IngameMenuHighScore && m_time > 1.0f && m_touch.IsActive())
 	{
 		m_exit = true;
-		goToLogin = CPlayfield::GetInstance()->m_isEndless && LastScoreWasHighScore();
+		goToHighScore = CPlayfield::GetInstance()->m_isEndless && LastScoreWasHighScore();
 		goToSelectLevel = !CPlayfield::GetInstance()->m_isEndless;
 	}
 
@@ -489,8 +489,8 @@ void Menu_Ingame::Update( float dt )
 
 		__ACHIEVEMENTS()->saveAchievementsByProfile( "Player1" );
 
-		if( goToLogin )
-			__MGR_STATES()->switchState<GS_Menu>()->GoToLogin();
+		if( goToHighScore )
+			__MGR_STATES()->switchState<GS_Menu>()->GoToHighScore();
 		else if( goToSelectLevel )
 			__MGR_STATES()->switchState<GS_Menu>()->GoToSelectLevel();
 		else

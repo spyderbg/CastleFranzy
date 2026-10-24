@@ -16,7 +16,6 @@
 
 #include "Menus/MenuMain.h"
 #include "Menus/Menu_HighScore.h"
-#include "Menus/Menu_Score.h"
 
 #include "Sprites/ASprite.h"
 
@@ -33,7 +32,7 @@
 GS_Menu::GS_Menu() :
 	m_pMenuMain( NULL )
 {
-	m_goToLogin = false;
+	m_goToHighScore = false;
 	m_goToSelectLevel = false;
 }
 
@@ -41,16 +40,16 @@ GS_Menu::~GS_Menu()
 {
 }
 
-void GS_Menu::GoToLogin ()
+void GS_Menu::GoToHighScore ()
 {
-	m_goToLogin = true;
+	m_goToHighScore = true;
 	m_goToSelectLevel = false;
 	Menu_HighScore::SetEndless();
 }
 
 void GS_Menu::GoToSelectLevel ()
 {
-	m_goToLogin = false;
+	m_goToHighScore = false;
 	m_goToSelectLevel = true;
 }
 
@@ -93,10 +92,9 @@ void GS_Menu::Load()
 		m_pMenuMain->SubMenu_Change( "Menu_LanguageSelection" );
 	else if (goToAbout)
 		m_pMenuMain->SubMenu_Change( "Menu_About" );
-	else if (m_goToLogin)
+	else if (m_goToHighScore)
 	{
-		Menu_Score::SetBackGoesToSurvivalScore();
-		m_pMenuMain->SubMenu_Change( "Menu_Login" );
+		m_pMenuMain->SubMenu_Change( "Menu_HighScore" );
 	}
 	else if (m_goToSelectLevel)
 	{

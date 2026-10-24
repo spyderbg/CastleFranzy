@@ -30,8 +30,6 @@
 #include "Menus/Menu_LanguageSelection.h"
 #include "Menus/Menu_HighScoresLevelList.h"
 #include "Menus/Menu_HighScore.h"
-#include "Menus/Menu_Login.h"
-#include "Menus/Menu_Score.h"
 
 #include "GameStates/GSLevel.h"
 
@@ -95,12 +93,6 @@ MenuMain::MenuMain(IMenu* parent) : IMenu(parent)
 
 	m_menuHighScore = NEW Menu_HighScore( this );
 	SubMenu_Register( "Menu_HighScore", m_menuHighScore );	
-
-	m_menuLogin = NEW Menu_Login( this ); 
-	SubMenu_Register( "Menu_Login", m_menuLogin );
-
-	m_menuScore = NEW Menu_Score( this );
-	SubMenu_Register( "Menu_Score", m_menuScore );
 }
 
 

@@ -40,12 +40,6 @@ typedef enum
 	action_options, 
 	action_options_trans, 
 
-	action_gameloft_live, 
-	action_gameloft_live_trans,
-
-	action_igp, 
-	action_igp_trans,
-
 	action_info, 
 	action_info_trans,
 
@@ -106,20 +100,6 @@ typedef enum
 #define	k_button_options_font1						( "MM_Normal" )
 #define	k_button_options_font2						( "MM_Pressed" )
 
-#define k_button_live_frame							( MENU_F_MENU_BASE_BUTTON )
-#define k_button_live_game_x						( GAME_SCREEN_W2 )
-#define k_button_live_game_y						( k_button_main_base_offset_y + 3 * k_button_main_offset_y )
-#define k_button_live_game_y1						( GAME_SCREEN_H2 + k_buttons_offset )
-#define k_button_live_game_w						( m_sprite->GetFrameWidth ( k_button_live_frame ) )
-#define k_button_live_game_h						( m_sprite->GetFrameHeight( k_button_live_frame ) )
-#define k_button_live_game_str_id					( COMMAND_SELECT )
-#define k_button_live_game_anim_normal				( MENU_A_MENU_SHOP_BUTTON_NORMAL )
-#define k_button_live_game_anim_pressed				( MENU_A_MENU_BASE_BUTTON_PRESSED )
-#define k_button_live_game_anim_blink				( MENU_A_MENU_BASE_BUTTON_BLINK )
-#define	k_button_live_text							( STRING_IDS::MENU_ENGAGE_GAMELOFT_LIVE )
-#define	k_button_live_font1							( "MM_Normal" )
-#define	k_button_live_font2							( "MM_Pressed" )
-
 #define k_button_info_frame							( MENU_F_MENU_BUTTON_INFO)
 #define k_button_info_game_x						( 40 )
 #define k_button_info_game_y						( 292 )
@@ -132,19 +112,6 @@ typedef enum
 #define	k_button_info_text							( "" )
 #define	k_button_info_font1							( "MM_Normal" )
 #define	k_button_info_font2							( "MM_Pressed" )
-
-#define k_button_igp_frame							( MENU_F_MENU_BUTTON_MOREGAMES )
-#define k_button_igp_game_w							( m_sprite->GetFrameWidth ( k_button_igp_frame ) )
-#define k_button_igp_game_h							( m_sprite->GetFrameHeight( k_button_igp_frame ) )
-#define k_button_igp_game_x							( GAME_SCREEN_W - (k_button_igp_game_w / 2) )
-#define k_button_igp_game_y							( 303 )
-#define k_button_igp_game_str_id					( COMMAND_SELECT )
-#define k_button_igp_game_anim_normal				( MENU_A_MENU_MOREGAMES_NORMAL )
-#define k_button_igp_game_anim_pressed				( MENU_A_MENU_MOREGAMES_PRESSED )
-#define k_button_igp_game_anim_blink				( MENU_A_MENU_MOREGAMES_BLINK )
-#define	k_button_igp_text							( STRING_IDS::MENU_ENGAGE_MORE_GAMES )
-#define	k_button_igp_font1							( "MM_MoreGamesNormal" )
-#define	k_button_igp_font2							( "MM_MoreGamesPressed" )
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -200,24 +167,6 @@ void Menu_Engage::Initialize()
 	visual_control->SetText1( k_button_options_text, k_button_options_font1, k_button_options_font2 );
 	VisualControlAdd( visual_control );	
 
-	// Button Live
-	visual_control  = NEW VisualControlButton( action_gameloft_live );
-	visual_control->SetAnimations(m_sprite, 3, k_button_live_game_anim_normal, 
-		k_button_live_game_anim_pressed, k_button_live_game_anim_blink);
-	visual_control->SetArea( k_button_live_game_x, k_button_live_game_y,
-		k_button_live_game_w, k_button_live_game_h );
-	visual_control->SetText1( k_button_live_text, k_button_live_font1, k_button_live_font2 );
-	VisualControlAdd( visual_control );	
-
-	//Button IGP
-	visual_control  = NEW VisualControlButton( action_igp );
-	visual_control->SetAnimations( m_sprite, 3, k_button_igp_game_anim_normal, 
-		k_button_igp_game_anim_pressed, k_button_igp_game_anim_blink );
-	visual_control->SetArea( k_button_igp_game_x, k_button_igp_game_y,
-		k_button_igp_game_w, k_button_igp_game_h );
-	visual_control->SetText1( k_button_igp_text, k_button_igp_font1, k_button_igp_font2 );
-	VisualControlAdd( visual_control );	
-
 	//Button Info
 	visual_control  = NEW VisualControlButton( action_info );
 	visual_control->SetAnimations(m_sprite, 3, k_button_info_game_anim_normal, 
@@ -269,7 +218,6 @@ void Menu_Engage::GainFocus()
 		VisualControlGetByActionId( action_continue )->SetVisible( false );
 		VisualControlGetByActionId( action_new_game )->SetPos( p2i( k_button_new_game_x, k_button_new_game_y1 ) );
 		VisualControlGetByActionId( action_options )->SetPos( p2i( k_button_options_game_x, k_button_options_game_y1 ) );
-		VisualControlGetByActionId( action_gameloft_live )->SetPos( p2i( k_button_live_game_x, k_button_live_game_y1 ) );
 	}
 	else
 	{
@@ -277,7 +225,6 @@ void Menu_Engage::GainFocus()
 		VisualControlGetByActionId( action_continue )->SetVisible( true );
 		VisualControlGetByActionId( action_new_game )->SetPos( p2i( k_button_new_game_x, k_button_new_game_y ) );
 		VisualControlGetByActionId( action_options )->SetPos( p2i( k_button_options_game_x, k_button_options_game_y ) );
-		VisualControlGetByActionId( action_gameloft_live )->SetPos( p2i( k_button_live_game_x, k_button_live_game_y ) );
 	}
 
 	//SaveFrameStats();
@@ -328,30 +275,6 @@ void Menu_Engage::VisualControlDoAction( IVisualControl* visual_control, int act
 				__MGR_STATES()->switchState<GS_Shop>();	
 			else
 				__MGR_STATES()->switchState<GSLevel>();
-		}
-		break;
-
-	case action_igp:
-		{
-			//Transition_Start( transition_hide, action_igp_trans );
-			__APP()->GoToIGP();
-		}
-		break;
-	case action_igp_trans:
-		{
-			//__APP()->GoToIGP();
-		}
-		break;
-
-	case action_gameloft_live:
-		{
-			//Transition_Start( transition_hide, action_gameloft_live_trans );
-			__APP()->GoToGLLive();
-		}
-		break;
-	case action_gameloft_live_trans:
-		{
-			//__APP()->GoToGLLive();
 		}
 		break;
 

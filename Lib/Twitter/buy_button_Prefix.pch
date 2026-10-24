@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'buy_button' target in the 'buy_button' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <UIKit/UIKit.h>
-#endif

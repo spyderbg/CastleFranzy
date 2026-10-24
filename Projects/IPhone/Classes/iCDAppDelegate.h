@@ -9,8 +9,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "IGP.h"
-#import "GLLiveGame.h"
 #import "TextInput.h" 
 
 #import "Core/Application.h"
@@ -25,18 +23,8 @@
 {
     UIWindow*	window;
     EAGLView*	glView;
-	
-	/// TWITTER
-	UIActivityIndicatorView* 	_activity;
-	NSMutableData* 				receivedData;
 }
 
-
-extern IGP*					igp;
-extern int					_launchIGPLang;
-
-extern CGLLive*				glLive;
-extern int					_launchGLLiveLang;
 
 extern iCDAppDelegate*		appDelegatePtr;
 extern UIApplication*		_application;
@@ -57,13 +45,6 @@ extern UIAccelerationValue	m_accelerometer[3];
 
 -(void)removeTextField:(TextInput*)params;
 -(void)initTextInput:(TextInputInitParams*)params;
-
-/// TWITTER
-- (void)buttonEventGet;
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 
 @end
 

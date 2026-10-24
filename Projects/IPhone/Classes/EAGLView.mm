@@ -11,8 +11,6 @@
 #import <OpenGLES/EAGLDrawable.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import "EAGLView.h"
-#import "IGP.h"
-#import "GLLiveGame.h"
 
 #import "Core/Application.h"
 #import "IO/TouchScreen/TouchPad.h"
@@ -38,20 +36,12 @@ using namespace gui;
 
 ///////////////////////////////////////////////////////////////////////
 
-extern IGP* 		igp;
-extern int 			_launchIGPLang;
-
-extern CGLLive* 	glLive;
-extern int 			_launchGLLiveLang;
-
-extern "C++" void 	launchTwitter();
-
 ///////////////////////////////////////////////////////////////////////
 
 #if USE_PRESENT_RENDER_BUFFER_ON_DIFFERENT_THREAD
 
 	pthread_t 			gameUpdateThread = 0;
-	pthread_mutex_t 	g_igpMutex;
+	pthread_mutex_t 	g_renderMutex;
 
 #endif
 
@@ -59,7 +49,6 @@ NSString* g_movieURL = nil;
 pthread_mutex_t g_movieURLMutex;
 id g_eaglView = nil;
 
-bool 			g_twitter		= false;
 bool 			g_gameIsRunning	= false;
 volatile bool 	g_enableRender	= true;
 volatile bool g_movieIsPlaying = false;
@@ -136,7 +125,7 @@ void SetResourcePathASCII(char* cBuffer, int iLength)
 #if USE_PRESENT_RENDER_BUFFER_ON_DIFFERENT_THREAD	
 		
 		pthread_mutex_init(&g_movieURLMutex, NULL);
-		pthread_mutex_init(&g_igpMutex, NULL);				
+		pthread_mutex_init(&g_renderMutex, NULL);				
 		
 #endif	
 	}
@@ -159,41 +148,24 @@ void SetResourcePathASCII(char* cBuffer, int iLength)
 	}
 	pthread_mutex_unlock(&g_movieURLMutex);				
 	
-	if( g_twitter )
-	{
-		IGP_MUTEX_LOCK
-		
-		launchTwitter();
-		
-		IGP_MUTEX_UNLOCK
-		
-		g_twitter = false;
-	}
-	
-	is_update = _launchIGPLang != -1 || _launchGLLiveLang != -1;
+	is_update = false;	// frames are rendered on gameUpdateThread
 	
 #endif
 	
 	if( is_update )
 	{	
-		IGP_MUTEX_LOCK		
+		RENDER_MUTEX_LOCK		
 
 		if( __IRR_DEVICE()->run() && g_enableRender )
 		{
-			if( !igp || igp->MustRender() )
-			{
-				[self setRenderbuffer];
-			}
+			[self setRenderbuffer];
 			
 			__APP()->Update();
 		
-			if( !igp || igp->MustRender() )
-			{
-				[self presentRenderbuffer];
-			}
+			[self presentRenderbuffer];
 		}		
 		
-		IGP_MUTEX_UNLOCK
+		RENDER_MUTEX_UNLOCK
 		
 		/// Update timer
 //		int dt = __IRR_DEVICE()->getTimer()->getRealTime() - time;
@@ -220,13 +192,13 @@ void SetResourcePathASCII(char* cBuffer, int iLength)
 
 - (void)layoutSubviews
 {
-	IGP_MUTEX_LOCK
+	RENDER_MUTEX_LOCK
 
     [EAGLContext setCurrentContext:context];
     [self destroyFramebuffer];
     [self createFramebuffer];
 	
-	IGP_MUTEX_UNLOCK		
+	RENDER_MUTEX_UNLOCK		
 
 	[self startAnimation];	
 }
@@ -366,7 +338,7 @@ void SetResourcePathASCII(char* cBuffer, int iLength)
 #if USE_PRESENT_RENDER_BUFFER_ON_DIFFERENT_THREAD
     
 	pthread_mutex_destroy(&g_movieURLMutex);		
-	pthread_mutex_destroy(&g_igpMutex);		
+	pthread_mutex_destroy(&g_renderMutex);		
 	
 #endif	
 	
@@ -378,10 +350,6 @@ void SetResourcePathASCII(char* cBuffer, int iLength)
 	[g_mpMoviePlayer release];
     [super dealloc];
 	
-	if( igp ) 
-		delete igp;
-	if( glLive )
-		delete glLive;
 	
 	delete __APP();
 }
@@ -580,96 +548,28 @@ extern void HandleTouch(NSSet *touches);
 	}
 }
 
-- (void)handleTouch:(UITouch *)touch
-{
-	if( igp )
-	{
-		IGP_MUTEX_LOCK
-		
-		Touch t;
-		t.phase = touch.phase;
-		t.curLocation = [touch locationInView:self];
-		t.prevLocation = [touch previousLocationInView:self];
-		t.tapCount = [touch tapCount];
-		igp->handleTouch(t);
-		
-		IGP_MUTEX_UNLOCK
-	}
-	
-	if( glLive )
-	{
-		IGP_MUTEX_LOCK
-		
-		CGPoint iPoint = [touch locationInView:self];
-		glLive->handleTouch(iPoint.x, iPoint.y, touch.phase != UITouchPhaseEnded && touch.phase != UITouchPhaseCancelled);
-
-		IGP_MUTEX_UNLOCK		
-	}
-}
-
 // Handles the start of a touch
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	if( glLive || igp )
-	{
-		for (UITouch *touch in touches) 
-		{
-			[self handleTouch:touch];
-		}
-	}
-			
-	else
-	{
-		[self touchesChangedWithEvent:event];		
-	}
+	[self touchesChangedWithEvent:event];
 }
 
 // Handles the continuation of a touch.
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	if( glLive || igp )
-	{
-		for (UITouch *touch in touches) 
-		{
-			[self handleTouch:touch];
-		}
-	}
-	else
-	{
-		[self touchesChangedWithEvent:event];
-	}
+	[self touchesChangedWithEvent:event];
 }
 
 // Handles the end of a touch event.
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	if( glLive || igp )
-	{
-		for (UITouch *touch in touches) 	
-		{
-			[self handleTouch:touch];
-		}
-	}
-	else
-	{
-		[self touchesChangedWithEvent:event];
-	}
+	[self touchesChangedWithEvent:event];
 }
 
 // Cancel the touch event.
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	if( glLive || igp )
-	{
-		for (UITouch *touch in touches)
-		{
-			[self handleTouch:touch];
-		}
-	}
-	else
-	{
-		[self touchesChangedWithEvent:event];		
-	}
+	[self touchesChangedWithEvent:event];
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -678,36 +578,14 @@ extern void HandleTouch(NSSet *touches);
 {
 	g_enableRender = false;	
 
-	if( igp )
-	{		
-   		igp->HideNotify();		
-	}
-	else if( glLive )
-	{
-//		glLive->Pause();
-	}		
-	else
-	{
-		__APP()->Pause();
-	}	
+	__APP()->Pause();
 }
 
 - (void)resume
 {
 	g_enableRender = true;	
 	
-	if( igp )
-	{
-   		igp->ShowNotify();
-	}
-	else if( glLive )
-	{
-//		glLive->Resume();
-	}	
-	else
-	{
-		__APP()->Resume();
-	}	
+	__APP()->Resume();
 }
 
 - (void)movieFinishedCallback:(NSNotification*)aNotification
@@ -868,18 +746,15 @@ extern "C" void* gameUpdateRoutine(void* p)
 		
 		if( g_enableRender )
 		{
-			if( _launchIGPLang == -1 && _launchGLLiveLang == -1 )
-			{
-				IGP_MUTEX_LOCK			
-				
-				[eaglView setRenderbuffer];
-				
-				__APP()->Update();		
-		
-				[eaglView presentRenderbuffer];
-				
-				IGP_MUTEX_UNLOCK				
-			}
+			RENDER_MUTEX_LOCK			
+			
+			[eaglView setRenderbuffer];
+			
+			__APP()->Update();		
+	
+			[eaglView presentRenderbuffer];
+			
+			RENDER_MUTEX_UNLOCK				
 				
 		}	
 		
@@ -898,28 +773,20 @@ extern "C" void MP_updateRoutineCallback()
 	// manage game quit while loading
 	if( !g_gameIsRunning )
 	{
-		IGP_MUTEX_UNLOCK		
+		RENDER_MUTEX_UNLOCK		
 		
 		pthread_exit(0);
 		return;
 	}
 	
 	// prevent interrupts from freezing while loading
-	IGP_MUTEX_UNLOCK
+	RENDER_MUTEX_UNLOCK
 	
 	sched_yield();
 	
-	IGP_MUTEX_LOCK
+	RENDER_MUTEX_LOCK
 	
 #endif	
 }
 
-extern "C++" void MP_launchTwitter()
-{	
-#if USE_PRESENT_RENDER_BUFFER_ON_DIFFERENT_THREAD
-	g_twitter = true;
-#else
-	launchTwitter();
-#endif
-}
 	

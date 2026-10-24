@@ -1,2 +1,0 @@
-Usage:
-	XMLStringManager -xls ParisHilton_LocalisationText_2006_04_05.xls -row_start 3 -col_id 1 -col_strings 3 -strings en.strings -java -h -off -bin

@@ -176,10 +176,6 @@
   <color name="Color" value="0xFFFFFF" />
 </font>
 
-<font id="MM_MoreGamesPressed" extends="Arial">
-  <color name="Color" value="0xFFFFFF" />
-</font>
-
 <font id="MM_Achievements" >
 	<string name="FileName" value="ArialSmall" />
 	
@@ -223,69 +219,4 @@
 <font id="TotalHighScore" extends="BerlinSansFB">
   <color name="Color1" value="0xFFFFFF" />
   <color name="Color2" value="0x000000" />
-</font>
-
-<font id="MM_LoginText" >
-	<string name="FileName" value="ArialSmall" />
-	
-	<string name="JapaneseEquivalent" value="JapaneseBig" />
-	<string name="ChineseEquivalent" value="ChineseBig" />
-
-	<int name="CharSpacing" value="-1" />
-	<int name="LineSpacing" value="2" />
-	<color name="Color1" value="0xFFFFFF" />
-	<color name="Color2" value="0x001439" />
-</font>
-
-<font id="MM_LoginStatus" >
-	<string name="FileName" value="ArialSmall" />
-	
-	<string name="JapaneseEquivalent" value="JapaneseBig" />
-	<string name="ChineseEquivalent" value="ChineseBig" />
-
-	<int name="CharSpacing" value="-1" />
-	<int name="LineSpacing" value="2" />
-	<color name="Color1" value="0xFF0000" />
-	<color name="Color2" value="0x000000" />
-</font>
-
-<font id="MM_LoginRemember" >
-	<string name="FileName" value="ArialSmall" />
-	
-	<string name="JapaneseEquivalent" value="JapaneseBig" />
-	<string name="ChineseEquivalent" value="ChineseBig" />
-
-	<int name="CharSpacing" value="-1" />
-	<int name="LineSpacing" value="2" />
-	<color name="Color1" value="0x00FF00" />
-	<color name="Color2" value="0x000000" />
-</font>
-
-
-<font id="MM_HighScoreNormal" >
-	<string name="FileName" value="ArialSmall" />
-	
-	<string name="JapaneseEquivalent" value="JapaneseBigRed" />
-	<string name="ChineseEquivalent" value="ChineseBig" />
-
-	<int name="CharSpacing" value="-1" />
-	<int name="LineSpacing" value="2" />
-	<float name="FontSize" value="15" />
-	
-	<color name="Color1" value="0xFFFFFF" />
-	<color name="Color2" value="0x001439" />
-</font>
-
-<font id="MM_HighScoreHighlighted" >
-	<string name="FileName" value="ArialSmall" />
-	
-	<string name="JapaneseEquivalent" value="JapaneseBig" />
-	<string name="ChineseEquivalent" value="ChineseBig" />
-
-	<int name="CharSpacing" value="-1" />
-	<int name="LineSpacing" value="2" />
-	<float name="FontSize" value="15" />
-	
-	<color name="Color1" value="0x00FF00" />
-	<color name="Color2" value="0x000000" />
 </font>

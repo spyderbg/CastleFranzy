@@ -41,8 +41,6 @@ typedef enum
 	action_achievements,
 	action_achievements_trans,
 
-	action_twitter,
-
 	action_back,
 	action_back_trans
 
@@ -116,18 +114,6 @@ typedef enum
 #define	k_button_scores_text						( STRING_IDS::MENU_HIGH_SCORE_BUTTON )
 #define	k_button_scores_font1						( "MM_Normal" )
 #define	k_button_scores_font2					    ( "MM_Pressed" )
-
-#define k_button_twitter_frame						( MENU_F_MENU_BUTTON_TWITTER )
-#define k_button_twitter_x							( GAME_SCREEN_W2 )
-#define k_button_twitter_y							( k_button_main_base_offset_y + 5 * k_button_main_offset_y )
-#define k_button_twitter_w							( m_sprite->GetFrameWidth ( k_button_twitter_frame ) )
-#define k_button_twitter_h							( m_sprite->GetFrameHeight( k_button_twitter_frame ) )
-#define k_button_twitter_anim_normal				( MENU_A_MENU_BUTTON_TWITTER_NORMAL )
-#define k_button_twitter_anim_pressed				( MENU_A_MENU_BUTTON_TWITTER_PRESSED )
-#define k_button_twitter_anim_blink					( MENU_A_MENU_BUTTON_TWITTER_BLINK )
-#define	k_button_twitter_text						( STRING_IDS::MENU_INFO_TWITTER )
-#define	k_button_twitter_font1						( "MM_Normal" )
-#define	k_button_twitter_font2						( "MM_Pressed" )
 
 //---------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------
@@ -205,15 +191,6 @@ void Menu_Info::Initialize()
 	visual_control->SetArea( k_button_scores_x, k_button_scores_y,
 							 k_button_scores_w, k_button_scores_h );
 	visual_control->SetText1( k_button_scores_text, k_button_scores_font1, k_button_scores_font2 );
-	VisualControlAdd( visual_control );	
-		
-	//Button twitter
-	visual_control  = NEW VisualControlButton( action_twitter );
-	visual_control->SetAnimations(m_sprite, 3, k_button_twitter_anim_normal, 
-								  k_button_twitter_anim_pressed, k_button_twitter_anim_blink);
-	visual_control->SetArea( k_button_twitter_x, k_button_twitter_y,
-							 k_button_twitter_w, k_button_twitter_h );
-//	visual_control->SetText1( k_button_twitter_text, k_button_twitter_font1, k_button_twitter_font2 );
 	VisualControlAdd( visual_control );
 
 	//back button
@@ -343,12 +320,6 @@ void Menu_Info::VisualControlDoAction( IVisualControl* visual_control, int actio
 	case action_achievements_trans:
 		{
 			GetParent()->SubMenu_Change( "Menu_Achievements" );
-		}
-		break;
-
-	case action_twitter:
-		{
-			__APP()->GoToTwitter();
 		}
 		break;
 

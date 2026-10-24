@@ -1,1 +1,0 @@
-StringManager.exe StringManager.ini [java_package]

@@ -8,7 +8,6 @@
 #include "Menus/Menu_HighScore.h"
 #include "Menus/MenuMain.h"
 #include "Menus/Menu_Confirmation.h"
-#include "Menus/Menu_Score.h"
 
 #include "Common/StringTable.h"
 
@@ -45,9 +44,6 @@ typedef enum
 	action_up,
 	action_down,
 	action_transition,
-
-	action_submit = k_buttons_base_action + 20, 
-	action_submit_trans,
 
 } MenuActions;
 
@@ -111,20 +107,6 @@ typedef enum
 #define	k_button_down_text							( "" )
 #define	k_button_down_font1							( "MM_Normal" )
 #define	k_button_down_font2							( "MM_Pressed" )
-
-//button login
-#define k_button_login_frame						 ( MENU_F_MENU_BASE_BUTTON )
-#define k_button_login_x							 ( 0 )
-#define k_button_login_y							 ( 0 )
-#define k_button_login_w						     ( m_sprite->GetFrameWidth ( k_button_login_frame ) )
-#define k_button_login_h							 ( m_sprite->GetFrameHeight( k_button_login_frame ) )
-#define k_button_login_anim_normal					 ( MENU_A_MENU_BASE_BUTTON_NORMAL )
-#define k_button_login_anim_pressed				     ( MENU_A_MENU_BASE_BUTTON_PRESSED )
-#define k_button_login_anim_blink					 ( MENU_A_MENU_BASE_BUTTON_BLINK )
-#define k_button_login_anim_disabled				 ( MENU_A_MENU_BASE_BUTTON_LOCK )
-#define	k_button_login_text							 ( STRING_IDS::MENU_SCORE_LEADERBOARDS )
-#define	k_button_login_font1						 ( "MM_Normal" )
-#define	k_button_login_font2						 ( "MM_Pressed" )
 
 //---------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------
@@ -219,38 +201,30 @@ void Menu_HighScoresLevelList::CreateLevelButtons()
 
 	/// Pane control
 	r2i screenArea = r2i(k_buttons_screen_x1, k_buttons_screen_y1, k_buttons_screen_x2, k_buttons_screen_y2);
-	d2i scrollSize = d2i(k_button_level_w, k_buttons_spacing_y * (levelCount + 2));
+	d2i scrollSize = d2i(k_button_level_w, k_buttons_spacing_y * (levelCount + 1));
 
 	m_vpane = NEW VisualControlPane( action_vpane );
 	m_vpane->SetArea( screenArea );
 	m_vpane->SetScrollSize( scrollSize );
-	m_vpane->SetRows( levelCount + 2 );
+	m_vpane->SetRows( levelCount + 1 );
 
 	for ( int i = 0; i < levelCount; i++ )
 	{		
 		visual_control = NEW VisualControlButton( k_buttons_base_action + i,k_buttons_base_control_id + i, SFX_MENU_VALIDATE );
 		visual_control->SetAnimations(m_sprite, 3, k_button_level_anim_normal, k_button_level_anim_pressed, k_button_level_anim_blink, k_button_level_anim_disabled);
-		visual_control->SetArea( k_buttons_screen_x, k_buttons_screen_y + (i + 2) * k_buttons_spacing_y, k_button_level_w, k_button_level_h );
+		visual_control->SetArea( k_buttons_screen_x, k_buttons_screen_y + (i + 1) * k_buttons_spacing_y, k_button_level_w, k_button_level_h );
 		visual_control->SetText1( k_buttons_base_text_id + i,k_button_level_font1, k_button_level_font2 );
 
 		m_vpane->AddControl( visual_control );
 		VisualControlAdd( visual_control );	
 	}
 
-	visual_control = NEW VisualControlButton( action_submit, -1, k_back_button_sfx );
-	visual_control->SetAnimations(m_sprite, 3, k_button_level_anim_normal, k_button_level_anim_pressed, k_button_level_anim_blink, k_button_level_anim_disabled);
-	visual_control->SetArea( k_buttons_screen_x, k_buttons_screen_y + 0 * k_buttons_spacing_y, k_button_level_w, k_button_level_h  );	
-	visual_control->SetText1( k_button_login_text, k_button_level_font1, k_button_level_font2 );	
-	VisualControlAdd( visual_control );
-
-	m_vpane->AddControl( visual_control );
-
 	VisualControlAdd( m_vpane );
 
 	// Endless
 	visual_control = NEW VisualControlButton( k_buttons_base_action + levelCount, k_buttons_base_control_id + levelCount, SFX_MENU_VALIDATE );
 	visual_control->SetAnimations(m_sprite, 3, k_button_level_anim_normal, k_button_level_anim_pressed, k_button_level_anim_blink, k_button_level_anim_disabled);
-	visual_control->SetArea( k_buttons_screen_x, k_buttons_screen_y + 1 * k_buttons_spacing_y, k_button_level_w, k_button_level_h );
+	visual_control->SetArea( k_buttons_screen_x, k_buttons_screen_y + 0 * k_buttons_spacing_y, k_button_level_w, k_button_level_h );
 	visual_control->SetText1( STRING_IDS::MENU_NEW_GAME_ENDLESS,k_button_level_font1, k_button_level_font2 );
 	m_vpane->AddControl( visual_control );
 	VisualControlAdd( visual_control );	
@@ -384,17 +358,6 @@ void Menu_HighScoresLevelList::VisualControlDoAction( IVisualControl* visual_con
 		}
 		break;
 
-	case action_submit:
-		{
-			Menu_Score::SetBackGoesToHighScoreList();
-			Transition_Start( transition_hide, action_submit_trans );
-		}
-		break;
-	case action_submit_trans:
-		{
-			GetParent()->SubMenu_Change( "Menu_Login" );
-		}
-		break;
 	};
 
 	//handle level buttons

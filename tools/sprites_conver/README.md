@@ -135,7 +135,7 @@ resolves them and prints a note for each change that matters.
 
 The legacy format writes a name between double quotes and escapes only the
 delimiter, so a backslash is a plain character. The font sprites of the
-GameloftLive SDK show both corner cases:
+GameloftLive SDK (since removed from this repository) showed both corner cases:
 
 * the glyph of the backslash is written `"\"`, with the backslash as the last
   character of the name;

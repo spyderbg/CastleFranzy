@@ -5,9 +5,9 @@
     VERSION 0001
 
     // Images:  1
-    // Modules: 100
-    // Frames:  92
-    // Anims:   65
+    // Modules: 90
+    // Frames:  79
+    // Anims:   48
 
 ////////////////////////////////////////////////////////////////////////////////
 // Images...
@@ -50,12 +50,6 @@
         MD	0x1053	MD_IMAGE	0	34	99	5	46
         MD	0x1009	MD_IMAGE	0	36	152	65	52
         MD	0x1054	MD_IMAGE	0	36	152	5	52
-        MD	0x100C	MD_IMAGE	0	66	468	42	35
-        MD	0x1046	MD_IMAGE	0	66	429	42	35
-        MD	0x1041	MD_IMAGE	0	94	468	88	35
-        MD	0x1045	MD_IMAGE	0	6	468	88	35
-        MD	0x100D	MD_IMAGE	0	6	429	88	35
-        MD	0x1047	MD_IMAGE	0	94	429	88	35
         MD	0x100E	MD_IMAGE	0	140	322	49	48
         MD	0x100F	MD_IMAGE	0	191	322	50	48
         MD	0x1010	MD_IMAGE	0	243	317	60	55
@@ -96,7 +90,6 @@
         MD	0x1031	MD_IMAGE	0	35	312	65	52
         MD	0x1032	MD_IMAGE	0	224	382	30	53
         MD	0x105A	MD_IMAGE	0	264	383	30	53
-        MD	0x1033	MD_IMAGE	0	297	48	97	28
         MD	0x1039	MD_IMAGE	0	413	2	26	38
         MD	0x103D	MD_IMAGE	0	440	81	19	28
         MD	0x103E	MD_IMAGE	0	408	81	27	28
@@ -128,9 +121,6 @@
         MD	0x1037	MD_IMAGE	0	363	229	92	16
         MD	0x1038	MD_IMAGE	0	363	247	92	16
         MD	0x103A	MD_IMAGE	0	363	265	92	16
-        MD	0x105F	MD_IMAGE	0	480	112	23	20
-        MD	0x1060	MD_IMAGE	0	295	381	199	36
-        MD	0x1061	MD_IMAGE	0	144	510	325	1
     }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -140,46 +130,7 @@
 // <FMi>   := FM module_or_frame_id ox oy [FLAGS hex_flags] [+Flags]
 // Flags   := HYPER_FM | FLIP_X | FLIP_Y | ROT_90 | FREE_ROT
 
-    FRAME "BUTTON_TWITTER" // Index = 0, FModules = 7
-    {
-        0x2000
-        RC	-137	-13	137	13
-        FM	0x1004	-159	-21
-        FM	0x1003	-130	-21
-        FM	0x1003	-65	-21
-        FM	0x1003	0	-21
-        FM	0x1003	65	-21
-        FM	0x1005	130	-21
-        FM	0x1033	-40	-14
-    }
-
-    FRAME "BUTTON_TWITTER_PRESSED" // Index = 1, FModules = 7
-    {
-        0x2001
-        RC	-137	-13	137	13
-        FM	0x1007	-160	-21
-        FM	0x1008	129	-21
-        FM	0x1006	-131	-21
-        FM	0x1006	-66	-21
-        FM	0x1006	64	-21
-        FM	0x1006	-1	-21
-        FM	0x1033	-40	-14
-    }
-
-    FRAME "BUTTON_TWITTER_BLINK" // Index = 2, FModules = 7
-    {
-        0x2002
-        RC	-138	-13	136	13
-        FM	0x100A	-164	-26
-        FM	0x1009	-131	-26
-        FM	0x1009	-66	-26
-        FM	0x1009	-1	-26
-        FM	0x1009	64	-26
-        FM	0x100B	129	-26
-        FM	0x1033	-40	-14
-    }
-
-    FRAME "BASE_BUTTON" // Index = 3, FModules = 6
+    FRAME "BASE_BUTTON" // Index = 0, FModules = 6
     {
         0x2067
         RC	-137	-11	137	15
@@ -191,7 +142,7 @@
         FM	0x1005	130	-20
     }
 
-    FRAME "BASE_BUTTON_PRESSED" // Index = 4, FModules = 6
+    FRAME "BASE_BUTTON_PRESSED" // Index = 1, FModules = 6
     {
         0x2068
         RC	-137	-12	137	15
@@ -203,7 +154,7 @@
         FM	0x1006	-1	-20
     }
 
-    FRAME "BASE_BUTTON_BLINK" // Index = 5, FModules = 6
+    FRAME "BASE_BUTTON_BLINK" // Index = 2, FModules = 6
     {
         0x206A
         RC	-138	-11	136	15
@@ -215,7 +166,7 @@
         FM	0x100B	129	-25
     }
 
-    FRAME "" // Index = 6, FModules = 7
+    FRAME "" // Index = 3, FModules = 7
     {
         0x2003
         RC	-180	-9	231	12
@@ -228,60 +179,31 @@
         FM	0x1001	120	-18
     }
 
-    FRAME "BUTTON_MOREGAMES" // Index = 7, FModules = 3
-    {
-        0x2004
-        RC	-65	-12	65	12
-        FM	0x100C	-21	-17
-        FM	0x1045	-109	-17
-        FM	0x1041	21	-17
-    }
-
-    FRAME "" // Index = 8, FModules = 3
-    {
-        0x2005
-        RC	-65	-12	65	12
-        FM	0x100D	-109	-17
-        FM	0x1046	-21	-17
-        FM	0x1047	21	-17
-    }
-
-    FRAME "BUTTON_INFO" // Index = 9, FModules = 1
+    FRAME "BUTTON_INFO" // Index = 4, FModules = 1
     {
         0x2006
         FM	0x100E	-24	-21
     }
 
-    FRAME "BUTTON_INFO_PRESSED" // Index = 10, FModules = 1
+    FRAME "BUTTON_INFO_PRESSED" // Index = 5, FModules = 1
     {
         0x2007
         FM	0x100F	-23	-21
     }
 
-    FRAME "BUTTON_INFO_BLINK" // Index = 11, FModules = 1
+    FRAME "BUTTON_INFO_BLINK" // Index = 6, FModules = 1
     {
         0x2008
         FM	0x1010	-29	-27
     }
 
-    FRAME "" // Index = 12, FModules = 6
-    {
-        0x200A
-        FM	0x1021	-162	-22
-        FM	0x1022	131	-22
-        FM	0x1023	-129	-22
-        FM	0x1023	-64	-22
-        FM	0x1023	1	-22
-        FM	0x1023	66	-22
-    }
-
-    FRAME "horizontal_line" // Index = 13, FModules = 1
+    FRAME "horizontal_line" // Index = 7, FModules = 1
     {
         0x200C
         FM	0x1025	-165	-1
     }
 
-    FRAME "help_menu_horizontal_line" // Index = 14, FModules = 3
+    FRAME "help_menu_horizontal_line" // Index = 8, FModules = 3
     {
         0x2065
         FM	0x1025	-165	-1
@@ -289,83 +211,83 @@
         FM	0x1051	165	-1
     }
 
-    FRAME "vertical_line_main_menu" // Index = 15, FModules = 1
+    FRAME "vertical_line_main_menu" // Index = 9, FModules = 1
     {
         0x200D
         FM	0x1026	0	-116
     }
 
-    FRAME "vertical_line_ingame_menu" // Index = 16, FModules = 1
+    FRAME "vertical_line_ingame_menu" // Index = 10, FModules = 1
     {
         0x205E
         FM	0x104A	0	-100
     }
 
-    FRAME "BACK_BUTTON" // Index = 17, FModules = 1
+    FRAME "BACK_BUTTON" // Index = 11, FModules = 1
     {
         0x200E
         FM	0x1012	-29	-20
     }
 
-    FRAME "BACK_BUTTON_PRESSED" // Index = 18, FModules = 1
+    FRAME "BACK_BUTTON_PRESSED" // Index = 12, FModules = 1
     {
         0x200F
         FM	0x1013	-30	-21
     }
 
-    FRAME "BACK_BUTTON_BLINK" // Index = 19, FModules = 1
+    FRAME "BACK_BUTTON_BLINK" // Index = 13, FModules = 1
     {
         0x2010
         FM	0x1014	-33	-22
     }
 
-    FRAME "BACK_BUTTON_R" // Index = 20, FModules = 1
+    FRAME "BACK_BUTTON_R" // Index = 14, FModules = 1
     {
         0x206B
         FM	0x1012	-29	-20	+FLIP_X
     }
 
-    FRAME "BACK_BUTTON_R_PRESSED" // Index = 21, FModules = 1
+    FRAME "BACK_BUTTON_R_PRESSED" // Index = 15, FModules = 1
     {
         0x206C
         FM	0x1013	-30	-21	+FLIP_X
     }
 
-    FRAME "BACK_BUTTON_R_BLINK" // Index = 22, FModules = 1
+    FRAME "BACK_BUTTON_R_BLINK" // Index = 16, FModules = 1
     {
         0x206D
         FM	0x1014	-33	-22	+FLIP_X
     }
 
-    FRAME "slider_sfx_normal" // Index = 23, FModules = 2
+    FRAME "slider_sfx_normal" // Index = 17, FModules = 2
     {
         0x2011
         FM	0x1015	-37	-29
         FM	0x1018	-15	-18
     }
 
-    FRAME "slider_sfx_pressed" // Index = 24, FModules = 2
+    FRAME "slider_sfx_pressed" // Index = 18, FModules = 2
     {
         0x2012
         FM	0x1016	-41	-35
         FM	0x101A	-18	-21
     }
 
-    FRAME "slider_music_normal" // Index = 25, FModules = 2
+    FRAME "slider_music_normal" // Index = 19, FModules = 2
     {
         0x2013
         FM	0x1015	-38	-28
         FM	0x1017	-11	-17
     }
 
-    FRAME "slider_music_pressed" // Index = 26, FModules = 2
+    FRAME "slider_music_pressed" // Index = 20, FModules = 2
     {
         0x2014
         FM	0x1016	-42	-34
         FM	0x1019	-16	-19
     }
 
-    FRAME "slider_empty" // Index = 27, FModules = 15
+    FRAME "slider_empty" // Index = 21, FModules = 15
     {
         0x2015
         FM	0x101E	-136	-12
@@ -385,7 +307,7 @@
         FM	0x101D	124	-12
     }
 
-    FRAME "slider_fill" // Index = 28, FModules = 13
+    FRAME "slider_fill" // Index = 22, FModules = 13
     {
         0x2016
         RC	-123	-5	124	8
@@ -404,7 +326,7 @@
         FM	0x1020	105	-6
     }
 
-    FRAME "ingame_title" // Index = 29, FModules = 5
+    FRAME "ingame_title" // Index = 23, FModules = 5
     {
         0x2017
         FM	0x1027	-179	-21
@@ -414,7 +336,7 @@
         FM	0x1028	39	-22
     }
 
-    FRAME "ingame_title_score" // Index = 30, FModules = 9
+    FRAME "ingame_title_score" // Index = 24, FModules = 9
     {
         0x203B
         FM	0x1029	154	-21
@@ -428,7 +350,7 @@
         FM	0x1027	-226	-21
     }
 
-    FRAME "BASE_BUTTON_SMALL" // Index = 31, FModules = 3
+    FRAME "BASE_BUTTON_SMALL" // Index = 25, FModules = 3
     {
         0x2018
         RC	-40	-13	39	13
@@ -437,7 +359,7 @@
         FM	0x1005	33	-22
     }
 
-    FRAME "BASE_BUTTON_SMALL_GREEN" // Index = 32, FModules = 3
+    FRAME "BASE_BUTTON_SMALL_GREEN" // Index = 26, FModules = 3
     {
         0x201B
         RC	-40	-13	40	13
@@ -446,7 +368,7 @@
         FM	0x1021	-63	-22
     }
 
-    FRAME "" // Index = 33, FModules = 3
+    FRAME "" // Index = 27, FModules = 3
     {
         0x2033
         RC	-40	-13	40	13
@@ -455,7 +377,7 @@
         FM	0x1031	-30	-21
     }
 
-    FRAME "" // Index = 34, FModules = 3
+    FRAME "" // Index = 28, FModules = 3
     {
         0x2019
         RC	-40	-13	40	13
@@ -464,7 +386,7 @@
         FM	0x1006	-32	-22
     }
 
-    FRAME "" // Index = 35, FModules = 3
+    FRAME "" // Index = 29, FModules = 3
     {
         0x201A
         RC	-40	-13	40	13
@@ -473,7 +395,7 @@
         FM	0x100B	33	-27
     }
 
-    FRAME "BASE_BUTTON_SMALL_shop" // Index = 36, FModules = 4
+    FRAME "BASE_BUTTON_SMALL_shop" // Index = 30, FModules = 4
     {
         0x2037
         RC	-36	-13	41	13
@@ -483,7 +405,7 @@
         FM	0x105B	16	-22
     }
 
-    FRAME "" // Index = 37, FModules = 4
+    FRAME "" // Index = 31, FModules = 4
     {
         0x2038
         RC	-36	-13	41	13
@@ -493,7 +415,7 @@
         FM	0x105E	-48	-20
     }
 
-    FRAME "" // Index = 38, FModules = 4
+    FRAME "" // Index = 32, FModules = 4
     {
         0x2039
         RC	-36	-13	41	13
@@ -503,7 +425,7 @@
         FM	0x105C	-49	-20
     }
 
-    FRAME "" // Index = 39, FModules = 4
+    FRAME "" // Index = 33, FModules = 4
     {
         0x203A
         RC	-38	-11	40	15
@@ -513,7 +435,7 @@
         FM	0x105D	-49	-27
     }
 
-    FRAME "LOCK_BUTTON_ON" // Index = 40, FModules = 14
+    FRAME "LOCK_BUTTON_ON" // Index = 34, FModules = 14
     {
         0x2042
         RC	-207	-13	100	13
@@ -534,7 +456,7 @@
         FM	0x1021	101	-22
     }
 
-    FRAME "LOCK_BUTTON_OFF" // Index = 41, FModules = 14
+    FRAME "LOCK_BUTTON_OFF" // Index = 35, FModules = 14
     {
         0x2041
         RC	-207	-13	100	13
@@ -555,7 +477,7 @@
         FM	0x102D	101	-21
     }
 
-    FRAME "LOCK_BUTTON_BLINK" // Index = 42, FModules = 14
+    FRAME "LOCK_BUTTON_BLINK" // Index = 36, FModules = 14
     {
         0x201E
         RC	-207	-13	100	13
@@ -576,7 +498,7 @@
         FM	0x100B	197	-27
     }
 
-    FRAME "DIFFICULTY_BUTTON" // Index = 43, FModules = 4
+    FRAME "DIFFICULTY_BUTTON" // Index = 37, FModules = 4
     {
         0x206E
         RC	-71	-11	73	14
@@ -586,7 +508,7 @@
         FM	0x1005	67	-22
     }
 
-    FRAME "DIFFICULTY_PRESSED" // Index = 44, FModules = 4
+    FRAME "DIFFICULTY_PRESSED" // Index = 38, FModules = 4
     {
         0x206F
         RC	-72	-11	73	14
@@ -596,7 +518,7 @@
         FM	0x1006	1	-22
     }
 
-    FRAME "DIFFICULTY_BLINK" // Index = 45, FModules = 4
+    FRAME "DIFFICULTY_BLINK" // Index = 39, FModules = 4
     {
         0x2070
         RC	-71	-11	73	14
@@ -606,31 +528,31 @@
         FM	0x100B	66	-27
     }
 
-    FRAME "upper_left_arrow" // Index = 46, FModules = 1
+    FRAME "upper_left_arrow" // Index = 40, FModules = 1
     {
         0x200B
         FM	0x1024	-14	-15	+FLIP_X	+FLIP_Y
     }
 
-    FRAME "upper_right_arrow" // Index = 47, FModules = 1
+    FRAME "upper_right_arrow" // Index = 41, FModules = 1
     {
         0x201F
         FM	0x1024	-12	-12	+FLIP_Y
     }
 
-    FRAME "bottom_right_arrow" // Index = 48, FModules = 1
+    FRAME "bottom_right_arrow" // Index = 42, FModules = 1
     {
         0x2020
         FM	0x1024	-12	-12
     }
 
-    FRAME "bottom_left_arrow" // Index = 49, FModules = 1
+    FRAME "bottom_left_arrow" // Index = 43, FModules = 1
     {
         0x2021
         FM	0x1024	-12	-14	+FLIP_X
     }
 
-    FRAME "" // Index = 50, FModules = 6
+    FRAME "" // Index = 44, FModules = 6
     {
         0x2022
         RC	-137	-13	137	13
@@ -642,61 +564,55 @@
         FM	0x1031	67	-21
     }
 
-    FRAME "big_arrow_up" // Index = 51, FModules = 1
+    FRAME "big_arrow_up" // Index = 45, FModules = 1
     {
         0x2073
         FM	0x1032	-12	-25
     }
 
-    FRAME "big_arrow_up_pressed" // Index = 52, FModules = 1
+    FRAME "big_arrow_up_pressed" // Index = 46, FModules = 1
     {
         0x2035
         FM	0x105A	-12	-25
     }
 
-    FRAME "big_arrow_down" // Index = 53, FModules = 1
+    FRAME "big_arrow_down" // Index = 47, FModules = 1
     {
         0x2023
         FM	0x1032	-12	-25	+FLIP_Y
     }
 
-    FRAME "big_arrow_down_pressed" // Index = 54, FModules = 1
+    FRAME "big_arrow_down_pressed" // Index = 48, FModules = 1
     {
         0x2036
         FM	0x105A	-12	-25	+FLIP_Y
     }
 
-    FRAME "twitter" // Index = 55, FModules = 1
-    {
-        0x2024
-        FM	0x1033	-48	-18
-    }
-
-    FRAME "arow_right" // Index = 56, FModules = 1
+    FRAME "arow_right" // Index = 49, FModules = 1
     {
         0x202A
         FM	0x1039	-14	-19
     }
 
-    FRAME "arrow_left" // Index = 57, FModules = 1
+    FRAME "arrow_left" // Index = 50, FModules = 1
     {
         0x202B
         FM	0x1039	-14	-19	+FLIP_X
     }
 
-    FRAME "souls" // Index = 58, FModules = 1
+    FRAME "souls" // Index = 51, FModules = 1
     {
         0x2030
         FM	0x103D	-9	-11
     }
 
-    FRAME "gold" // Index = 59, FModules = 1
+    FRAME "gold" // Index = 52, FModules = 1
     {
         0x2031
         FM	0x103E	-12	-17
     }
 
-    FRAME "coin_bar" // Index = 60, FModules = 3
+    FRAME "coin_bar" // Index = 53, FModules = 3
     {
         0x2032
         FM	0x1011	-92	-11
@@ -704,96 +620,96 @@
         FM	0x103D	-84	-10
     }
 
-    FRAME "soul_bar_normal" // Index = 61, FModules = 2
+    FRAME "soul_bar_normal" // Index = 54, FModules = 2
     {
         0x2025
         FM	0x1042	-41	-12
         FM	0x103D	-41	-13
     }
 
-    FRAME "soul_bar_glow" // Index = 62, FModules = 2
+    FRAME "soul_bar_glow" // Index = 55, FModules = 2
     {
         0x205D
         FM	0x103B	-41	-12
         FM	0x103D	-37	-11
     }
 
-    FRAME "money_bar_normal" // Index = 63, FModules = 2
+    FRAME "money_bar_normal" // Index = 56, FModules = 2
     {
         0x205C
         FM	0x1042	-48	-10
         FM	0x103E	-47	-12
     }
 
-    FRAME "money_bar_glow" // Index = 64, FModules = 2
+    FRAME "money_bar_glow" // Index = 57, FModules = 2
     {
         0x2009
         FM	0x103B	-48	-13
         FM	0x103E	-48	-14
     }
 
-    FRAME "play" // Index = 65, FModules = 1
+    FRAME "play" // Index = 58, FModules = 1
     {
         0x2026
         FM	0x103F	-16	-16
     }
 
-    FRAME "pause" // Index = 66, FModules = 1
+    FRAME "pause" // Index = 59, FModules = 1
     {
         0x2027
         FM	0x103C	-16	-16
     }
 
-    FRAME "health_bar_background" // Index = 67, FModules = 1
+    FRAME "health_bar_background" // Index = 60, FModules = 1
     {
         0x2028
         FM	0x1042	-50	-10
     }
 
-    FRAME "bar_green" // Index = 68, FModules = 1
+    FRAME "bar_green" // Index = 61, FModules = 1
     {
         0x2029
         FM	0x1035	-46	-8
     }
 
-    FRAME "bar_yellow" // Index = 69, FModules = 1
+    FRAME "bar_yellow" // Index = 62, FModules = 1
     {
         0x202C
         FM	0x1036	-46	-8
     }
 
-    FRAME "bar_red" // Index = 70, FModules = 1
+    FRAME "bar_red" // Index = 63, FModules = 1
     {
         0x202D
         FM	0x1037	-46	-8
     }
 
-    FRAME "bar_slow" // Index = 71, FModules = 1
+    FRAME "bar_slow" // Index = 64, FModules = 1
     {
         0x202E
         FM	0x103A	-46	-8
     }
 
-    FRAME "bar_white" // Index = 72, FModules = 1
+    FRAME "bar_white" // Index = 65, FModules = 1
     {
         0x202F
         FM	0x1038	-46	-8
     }
 
-    FRAME "cooldown_bg" // Index = 73, FModules = 1
+    FRAME "cooldown_bg" // Index = 66, FModules = 1
     {
         0x204C
         FM	0x1040	-19	-4
     }
 
-    FRAME "cooldown_fill" // Index = 74, FModules = 1
+    FRAME "cooldown_fill" // Index = 67, FModules = 1
     {
         0x205B
         RC	-16	-1	16	2
         FM	0x1034	-16	-1
     }
 
-    FRAME "shop_title" // Index = 75, FModules = 4
+    FRAME "shop_title" // Index = 68, FModules = 4
     {
         0x2060
         FM	0x1027	-128	-21
@@ -802,7 +718,7 @@
         FM	0x104B	17	-22
     }
 
-    FRAME "confirmation_bkg" // Index = 76, FModules = 3
+    FRAME "confirmation_bkg" // Index = 69, FModules = 3
     {
         0x2034
         FM	0x104C	-145	-62
@@ -810,7 +726,7 @@
         FM	0x104D	-1	-62
     }
 
-    FRAME "diff_confirmation_bkg" // Index = 77, FModules = 8
+    FRAME "diff_confirmation_bkg" // Index = 70, FModules = 8
     {
         0x2061
         FM	0x104C	-199	-62
@@ -823,19 +739,19 @@
         FM	0x1048	45	-62
     }
 
-    FRAME "page_inactive" // Index = 78, FModules = 1
+    FRAME "page_inactive" // Index = 71, FModules = 1
     {
         0x2063
         FM	0x104F	-13	-14
     }
 
-    FRAME "page_active" // Index = 79, FModules = 1
+    FRAME "page_active" // Index = 72, FModules = 1
     {
         0x2064
         FM	0x1050	-17	-19
     }
 
-    FRAME "achiev_window" // Index = 80, FModules = 10
+    FRAME "achiev_window" // Index = 73, FModules = 10
     {
         0x2069
         FM	0x1055	-87	-100
@@ -850,71 +766,32 @@
         FM	0x1024	-100	84	+FLIP_X
     }
 
-    FRAME "arrow_down" // Index = 81, FModules = 1
+    FRAME "arrow_down" // Index = 74, FModules = 1
     {
         0x2072
         FM	0x104E	-12	-10	+FLIP_Y
     }
 
-    FRAME "arow_up" // Index = 82, FModules = 1
+    FRAME "arow_up" // Index = 75, FModules = 1
     {
         0x2062
         FM	0x104E	-12	-9
     }
 
-    FRAME "challenge_bg" // Index = 83, FModules = 1
+    FRAME "challenge_bg" // Index = 76, FModules = 1
     {
         0x2066
         FM	0x1058	0	0
     }
 
-    FRAME "achievements_bg" // Index = 84, FModules = 2
+    FRAME "achievements_bg" // Index = 77, FModules = 2
     {
         0x2071
         FM	0x1059	1	0
         FM	0x1059	-129	0	+FLIP_X
     }
 
-    FRAME "password" // Index = 85, FModules = 1
-    {
-        0x203D
-        RC	-99	-15	90	12
-        FM	0x1060	-103	-19
-    }
-
-    FRAME "remember_checked" // Index = 86, FModules = 2
-    {
-        0x203C
-        FM	0x104F	-13	-14
-        FM	0x105F	-9	-18
-    }
-
-    FRAME "remember_blink_checked" // Index = 87, FModules = 2
-    {
-        0x203F
-        FM	0x1050	-16	-20
-        FM	0x105F	-9	-18
-    }
-
-    FRAME "remember_notchecked" // Index = 88, FModules = 1
-    {
-        0x203E
-        FM	0x104F	-13	-14
-    }
-
-    FRAME "remember_blink_notchecked" // Index = 89, FModules = 1
-    {
-        0x2040
-        FM	0x1050	-16	-20
-    }
-
-    FRAME "score_line" // Index = 90, FModules = 1
-    {
-        0x201C
-        FM	0x1061	-162	0
-    }
-
-    FRAME "fullversion" // Index = 91, FModules = 8
+    FRAME "fullversion" // Index = 78, FModules = 8
     {
         0x201D
         FM	0x1062	-121	0
@@ -939,388 +816,286 @@
         AF	0x2003	1	0	0
     }
 
-    ANIM "button_twitter_normal" // Index = 1, AFrames = 1
-    {
-        0x3001
-        AF	0x2000	1	0	0
-    }
-
-    ANIM "button_twitter_pressed" // Index = 2, AFrames = 1
-    {
-        0x3002
-        AF	0x2001	1	0	0
-    }
-
-    ANIM "button_twitter_blink" // Index = 3, AFrames = 1
-    {
-        0x3003
-        AF	0x2002	1	0	0
-    }
-
-    ANIM "base_button_normal" // Index = 4, AFrames = 1
+    ANIM "base_button_normal" // Index = 1, AFrames = 1
     {
         0x302A
         AF	0x2067	1	0	0
     }
 
-    ANIM "base_button_pressed" // Index = 5, AFrames = 1
+    ANIM "base_button_pressed" // Index = 2, AFrames = 1
     {
         0x302B
         AF	0x2068	1	0	0
     }
 
-    ANIM "base_button_blink" // Index = 6, AFrames = 1
+    ANIM "base_button_blink" // Index = 3, AFrames = 1
     {
         0x302C
         AF	0x206A	1	0	0
     }
 
-    ANIM "base_button_lock" // Index = 7, AFrames = 1
+    ANIM "base_button_lock" // Index = 4, AFrames = 1
     {
         0x301B
         AF	0x2022	1	0	0
     }
 
-    ANIM "moregames_normal" // Index = 8, AFrames = 1
-    {
-        0x3004
-        AF	0x2004	1	0	0
-    }
-
-    ANIM "moregames_pressed" // Index = 9, AFrames = 1
-    {
-        0x3005
-        AF	0x2005	1	0	0
-    }
-
-    ANIM "moregames_blink" // Index = 10, AFrames = 1
-    {
-        0x3038
-        AF	0x2005	1	0	0
-    }
-
-    ANIM "info_button_normal" // Index = 11, AFrames = 1
+    ANIM "info_button_normal" // Index = 5, AFrames = 1
     {
         0x3006
         AF	0x2006	1	0	0
     }
 
-    ANIM "info_button_pressed" // Index = 12, AFrames = 1
+    ANIM "info_button_pressed" // Index = 6, AFrames = 1
     {
         0x3007
         AF	0x2007	1	0	0
     }
 
-    ANIM "info_button_blink" // Index = 13, AFrames = 1
+    ANIM "info_button_blink" // Index = 7, AFrames = 1
     {
         0x3008
         AF	0x2008	1	0	0
     }
 
-    ANIM "shop_button_normal" // Index = 14, AFrames = 1
-    {
-        0x300A
-        AF	0x200A	1	0	0
-    }
-
-    ANIM "shop_button_pressed" // Index = 15, AFrames = 1
-    {
-        0x300B
-        AF	0x2001	1	0	0
-    }
-
-    ANIM "shop_button_blink" // Index = 16, AFrames = 1
-    {
-        0x300C
-        AF	0x2002	1	0	0
-    }
-
-    ANIM "back_button_normal" // Index = 17, AFrames = 1
+    ANIM "back_button_normal" // Index = 8, AFrames = 1
     {
         0x300D
         AF	0x200E	1	0	0
     }
 
-    ANIM "back_button_pressed" // Index = 18, AFrames = 1
+    ANIM "back_button_pressed" // Index = 9, AFrames = 1
     {
         0x300E
         AF	0x200F	1	0	0
     }
 
-    ANIM "back_button_blink" // Index = 19, AFrames = 1
+    ANIM "back_button_blink" // Index = 10, AFrames = 1
     {
         0x300F
         AF	0x2010	1	0	0
     }
 
-    ANIM "back_button_r_normal" // Index = 20, AFrames = 1
+    ANIM "back_button_r_normal" // Index = 11, AFrames = 1
     {
         0x302D
         AF	0x206B	1	0	0
     }
 
-    ANIM "back_button_r_pressed" // Index = 21, AFrames = 1
+    ANIM "back_button_r_pressed" // Index = 12, AFrames = 1
     {
         0x302E
         AF	0x206C	1	0	0
     }
 
-    ANIM "back_button_r_blink" // Index = 22, AFrames = 1
+    ANIM "back_button_r_blink" // Index = 13, AFrames = 1
     {
         0x302F
         AF	0x206D	1	0	0
     }
 
-    ANIM "sfx_button_normal" // Index = 23, AFrames = 1
+    ANIM "sfx_button_normal" // Index = 14, AFrames = 1
     {
         0x3010
         AF	0x2011	1	0	0
     }
 
-    ANIM "sfx_button_pressed" // Index = 24, AFrames = 1
+    ANIM "sfx_button_pressed" // Index = 15, AFrames = 1
     {
         0x3011
         AF	0x2012	1	0	0
     }
 
-    ANIM "music_button_normal" // Index = 25, AFrames = 1
+    ANIM "music_button_normal" // Index = 16, AFrames = 1
     {
         0x3012
         AF	0x2013	1	0	0
     }
 
-    ANIM "music_button_pressed" // Index = 26, AFrames = 1
+    ANIM "music_button_pressed" // Index = 17, AFrames = 1
     {
         0x3013
         AF	0x2014	1	0	0
     }
 
-    ANIM "confirmation_button_normal" // Index = 27, AFrames = 1
+    ANIM "confirmation_button_normal" // Index = 18, AFrames = 1
     {
         0x3014
         AF	0x2018	1	0	0
     }
 
-    ANIM "confirmation_button_pressed" // Index = 28, AFrames = 1
+    ANIM "confirmation_button_pressed" // Index = 19, AFrames = 1
     {
         0x3015
         AF	0x2019	1	0	0
     }
 
-    ANIM "confirmation_button_blink" // Index = 29, AFrames = 1
+    ANIM "confirmation_button_blink" // Index = 20, AFrames = 1
     {
         0x3016
         AF	0x201A	1	0	0
     }
 
-    ANIM "lock_button_off_normal" // Index = 30, AFrames = 1
+    ANIM "lock_button_off_normal" // Index = 21, AFrames = 1
     {
         0x3017
         AF	0x2041	1	0	0
     }
 
-    ANIM "lock_button_off_pressed" // Index = 31, AFrames = 1
+    ANIM "lock_button_off_pressed" // Index = 22, AFrames = 1
     {
         0x3009
         AF	0x201E	1	0	0
     }
 
-    ANIM "lock_button_off_blink" // Index = 32, AFrames = 1
+    ANIM "lock_button_off_blink" // Index = 23, AFrames = 1
     {
         0x3018
         AF	0x201E	1	0	0
     }
 
-    ANIM "lock_button_on_normal" // Index = 33, AFrames = 1
+    ANIM "lock_button_on_normal" // Index = 24, AFrames = 1
     {
         0x3019
         AF	0x2042	1	0	0
     }
 
-    ANIM "lock_button_on_pressed" // Index = 34, AFrames = 1
+    ANIM "lock_button_on_pressed" // Index = 25, AFrames = 1
     {
         0x301D
         AF	0x201E	1	0	0
     }
 
-    ANIM "lock_button_on_blink" // Index = 35, AFrames = 1
+    ANIM "lock_button_on_blink" // Index = 26, AFrames = 1
     {
         0x3023
         AF	0x201E	1	0	0
     }
 
-    ANIM "buy_button_normal" // Index = 36, AFrames = 1
+    ANIM "buy_button_normal" // Index = 27, AFrames = 1
     {
         0x301F
         AF	0x2037	1	5	0
     }
 
-    ANIM "buy_button_pressed" // Index = 37, AFrames = 1
+    ANIM "buy_button_pressed" // Index = 28, AFrames = 1
     {
         0x3020
         AF	0x2039	1	5	0
     }
 
-    ANIM "buy_button_blink" // Index = 38, AFrames = 1
+    ANIM "buy_button_blink" // Index = 29, AFrames = 1
     {
         0x3021
         AF	0x203A	1	5	0
     }
 
-    ANIM "buy_button_disabled" // Index = 39, AFrames = 1
+    ANIM "buy_button_disabled" // Index = 30, AFrames = 1
     {
         0x3022
         AF	0x2038	1	5	0
     }
 
-    ANIM "play" // Index = 40, AFrames = 1
+    ANIM "play" // Index = 31, AFrames = 1
     {
         0x301C
         AF	0x2026	1	0	0
     }
 
-    ANIM "pause_play" // Index = 41, AFrames = 1
+    ANIM "pause_play" // Index = 32, AFrames = 1
     {
         0x301E
         AF	0x2027	1	0	0
     }
 
-    ANIM "coin_bar" // Index = 42, AFrames = 1
+    ANIM "coin_bar" // Index = 33, AFrames = 1
     {
         0x3025
         AF	0x2032	1	0	0
     }
 
-    ANIM "shop_button_back_normal" // Index = 43, AFrames = 1
+    ANIM "shop_button_back_normal" // Index = 34, AFrames = 1
     {
         0x301A
         AF	0x201B	1	0	0
     }
 
-    ANIM "shop_button_back_pressed" // Index = 44, AFrames = 1
+    ANIM "shop_button_back_pressed" // Index = 35, AFrames = 1
     {
         0x3026
         AF	0x2019	1	0	0
     }
 
-    ANIM "shop_button_back_blink" // Index = 45, AFrames = 1
+    ANIM "shop_button_back_blink" // Index = 36, AFrames = 1
     {
         0x3027
         AF	0x2019	1	0	0
     }
 
-    ANIM "arrow_left_normal" // Index = 46, AFrames = 1
+    ANIM "arrow_left_normal" // Index = 37, AFrames = 1
     {
         0x3028
         AF	0x202B	1	0	0
     }
 
-    ANIM "arrow_right_normal" // Index = 47, AFrames = 1
+    ANIM "arrow_right_normal" // Index = 38, AFrames = 1
     {
         0x3029
         AF	0x202A	1	0	0
     }
 
-    ANIM "difficulty_normal" // Index = 48, AFrames = 1
+    ANIM "difficulty_normal" // Index = 39, AFrames = 1
     {
         0x3030
         AF	0x206E	1	0	0
     }
 
-    ANIM "difficulty_pressed" // Index = 49, AFrames = 1
+    ANIM "difficulty_pressed" // Index = 40, AFrames = 1
     {
         0x3031
         AF	0x206F	1	0	0
     }
 
-    ANIM "difficulty_blink" // Index = 50, AFrames = 1
+    ANIM "difficulty_blink" // Index = 41, AFrames = 1
     {
         0x3032
         AF	0x2070	1	0	0
     }
 
-    ANIM "arrow_up_normal" // Index = 51, AFrames = 1
+    ANIM "arrow_up_normal" // Index = 42, AFrames = 1
     {
         0x3024
         AF	0x2073	1	0	0
     }
 
-    ANIM "arrow_up_pressed" // Index = 52, AFrames = 1
+    ANIM "arrow_up_pressed" // Index = 43, AFrames = 1
     {
         0x3033
         AF	0x2035	1	0	0
     }
 
-    ANIM "arrow_up_blink" // Index = 53, AFrames = 1
+    ANIM "arrow_up_blink" // Index = 44, AFrames = 1
     {
         0x3034
         AF	0x2035	1	0	0
     }
 
-    ANIM "arrow_down_normal" // Index = 54, AFrames = 1
+    ANIM "arrow_down_normal" // Index = 45, AFrames = 1
     {
         0x3035
         AF	0x2023	1	0	0
     }
 
-    ANIM "arrow_down_pressed" // Index = 55, AFrames = 1
+    ANIM "arrow_down_pressed" // Index = 46, AFrames = 1
     {
         0x3036
         AF	0x2036	1	0	0
     }
 
-    ANIM "arrow_down_blink" // Index = 56, AFrames = 1
+    ANIM "arrow_down_blink" // Index = 47, AFrames = 1
     {
         0x3037
         AF	0x2036	1	0	0
-    }
-
-    ANIM "remember_notchecked" // Index = 57, AFrames = 1
-    {
-        0x3039
-        AF	0x203E	1	0	0
-    }
-
-    ANIM "remember_notchecked_pressed" // Index = 58, AFrames = 1
-    {
-        0x303E
-        AF	0x203E	1	0	0
-    }
-
-    ANIM "remember_blink_notchecked" // Index = 59, AFrames = 1
-    {
-        0x303D
-        AF	0x2040	1	0	0
-    }
-
-    ANIM "remember_checked" // Index = 60, AFrames = 1
-    {
-        0x303F
-        AF	0x203C	1	0	0
-    }
-
-    ANIM "remember_checked_pressed" // Index = 61, AFrames = 1
-    {
-        0x303A
-        AF	0x203C	1	0	0
-    }
-
-    ANIM "remember_blink_cheked" // Index = 62, AFrames = 1
-    {
-        0x303B
-        AF	0x203F	1	0	0
-    }
-
-    ANIM "password" // Index = 63, AFrames = 1
-    {
-        0x303C
-        AF	0x203D	1	0	0
-    }
-
-    ANIM "score_line" // Index = 64, AFrames = 1
-    {
-        0x3040
-        AF	0x201C	1	0	0
     }
 
     SPRITE_END

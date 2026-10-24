@@ -88,9 +88,6 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{eb826522-20a7-4f34-8a2e-f156024ad5ee}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Network">
-      <UniqueIdentifier>{e006e93b-888b-4141-a4ec-b2ce159004b3}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Src\Core\Application.cpp">
@@ -249,9 +246,6 @@
     <ClCompile Include="..\..\Src\GameStates\GS_Splash.cpp">
       <Filter>GameStates</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Src\GameStates\GS_SwitchToExternal.cpp">
-      <Filter>GameStates</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Src\GameStates\GSLevel.cpp">
       <Filter>GameStates</Filter>
     </ClCompile>
@@ -321,16 +315,10 @@
     <ClCompile Include="..\..\Src\Menus\Menu_Loading.cpp">
       <Filter>Menus</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Src\Menus\Menu_Login.cpp">
-      <Filter>Menus</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Src\Menus\Menu_NewGame.cpp">
       <Filter>Menus</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\Menus\Menu_Options.cpp">
-      <Filter>Menus</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Src\Menus\Menu_Score.cpp">
       <Filter>Menus</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\Menus\Menu_Shop.cpp">
@@ -401,9 +389,6 @@
     </ClCompile>
     <ClCompile Include="..\..\Src\Utils\StringUtils.cpp">
       <Filter>Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Src\Network\XPlayerManager.cpp">
-      <Filter>Network</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\stdafx.cpp" />
   </ItemGroup>
@@ -663,9 +648,6 @@
     <ClInclude Include="..\..\Src\GameStates\GS_Splash.h">
       <Filter>GameStates</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Src\GameStates\GS_SwitchToExternal.h">
-      <Filter>GameStates</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Src\GameStates\GSLevel.h">
       <Filter>GameStates</Filter>
     </ClInclude>
@@ -735,19 +717,10 @@
     <ClInclude Include="..\..\Src\Menus\Menu_Loading.h">
       <Filter>Menus</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Src\Menus\Menu_Login.h">
-      <Filter>Menus</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Src\Menus\Menu_NewGame.h">
       <Filter>Menus</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Src\Menus\Menu_Options.h">
-      <Filter>Menus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\Menus\Menu_Score.h">
-      <Filter>Menus</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\Menus\Menu_ScoreInputType.h">
       <Filter>Menus</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Src\Menus\Menu_Shop.h">
@@ -848,9 +821,6 @@
     </ClInclude>
     <ClInclude Include="..\..\Src\Utils\StringUtils.h">
       <Filter>Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\Network\XPlayerManager.h">
-      <Filter>Network</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Src\config_version.h" />
     <ClInclude Include="..\..\Src\GX_Device.h" />
